@@ -69,7 +69,7 @@
   },
   "ai": {
     "enabled": true,
-    "provider": "openai",
+    "provider": "boxapi",
     "model": "gpt-5.4-mini",
     "boxapi_model": "openai/gpt-5.4-mini",
     "reasoning_effort": "low",
@@ -78,7 +78,8 @@
     "min_setup_quality": 5,
     "stop_floor_pct": 0.006,
     "tp_floor_pct": 0.009,
-    "agentic": true
+    "agentic": true,
+    "fallback": true
   },
   "live": {
     "poll_seconds": 10,
@@ -110,7 +111,7 @@
     "baseline_window_min": 180,
     "baseline_min_samples": 240,
     "warmup_minutes": 3,
-    "review_minutes": 20,
+    "review_minutes": 30,
     "max_global_drop_60s": 0.004,
     "max_spread": 0.006,
     "default_policy": {
