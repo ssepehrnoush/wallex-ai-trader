@@ -1,0 +1,20 @@
+spread pct author vs now: {'BTCTMN': (0.0305, 0.0316), 'ETHTMN': (0.1359, 0.1321), 'SOLTMN': (0.156, 0.153), 'XRPTMN': (0.1949, 0.1816), 'DOGETMN': (0.1682, 0.163), 'PEPETMN': (0.1134, 0.1054), 'BNBTMN': (0.1461, 0.1457), 'ARBTMN': (0.4414, 0.4379)}
+V4 IS {'n': 27, 'mean': np.float64(0.218), 'sum': np.float64(5.878), 'win': np.float64(70.4), 'exits': {'target': 18, 'time': 9}} 
+    OOS {'n': 35, 'mean': np.float64(0.297), 'sum': np.float64(10.396), 'win': np.float64(77.1), 'exits': {'target': 22, 'time': 13}}
+    author OOS: 35 10.397  IS: 27 5.878
+V1 IS {'n': 16, 'mean': np.float64(0.529), 'sum': np.float64(8.471), 'win': np.float64(87.5), 'exits': {'target': 13, 'time': 3}} 
+    OOS {'n': 25, 'mean': np.float64(0.398), 'sum': np.float64(9.944), 'win': np.float64(76.0), 'exits': {'target': 17, 'time': 8}}
+    author OOS: 25 9.944  IS: 16 8.472
+V2_k3 IS {'n': 18, 'mean': np.float64(0.453), 'sum': np.float64(8.152), 'win': np.float64(83.3), 'exits': {'target': 14, 'time': 4}} 
+    OOS {'n': 25, 'mean': np.float64(0.343), 'sum': np.float64(8.585), 'win': np.float64(76.0), 'exits': {'target': 17, 'time': 8}}
+    author OOS: 25 8.585  IS: 18 8.153
+V3 IS {'n': 20, 'mean': np.float64(0.298), 'sum': np.float64(5.962), 'win': np.float64(75.0), 'exits': {'target': 15, 'time': 5}} 
+    OOS {'n': 26, 'mean': np.float64(0.273), 'sum': np.float64(7.111), 'win': np.float64(80.8), 'exits': {'target': 18, 'time': 8}}
+    author OOS: 26 7.111  IS: 20 5.962
+
+entries with buy_dev > -0.7%: 0
+overlapping trades in the same market: 0
+same-minute exits (minutes==0): 0
+exit after 1 traded minute: 8 of 62  their sum %: 3.127
+baseline at j equals median of premium strictly up to j-1 (sampled): 1.0
+all baseline windows end before the signal minute: True

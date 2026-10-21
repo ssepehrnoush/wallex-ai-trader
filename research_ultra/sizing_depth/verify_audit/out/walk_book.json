@@ -1,0 +1,418 @@
+{
+ "measurable_offline": false,
+ "why": "ticks.csv stores only the best bid/ask and their quantities; the depth behind the top level at the moment of a dislocation was never recorded, and calling the Wallex API is not allowed in this study.",
+ "analyst_depth_snapshots_random_moments": [
+  {
+   "t": "2026-10-21T16:56:17+00:00",
+   "symbol": "ETHTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.0827,
+   "top_ask_notional": 106872000,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 4623591214,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 4623591214,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 4623591214
+  },
+  {
+   "t": "2026-10-21T16:56:17+00:00",
+   "symbol": "BNBTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.2494,
+   "top_ask_notional": 151608055,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 204028920,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 204028920,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 204139470
+  },
+  {
+   "t": "2026-10-21T17:16:14+00:00",
+   "symbol": "BTCTMN",
+   "levels_visible": 5,
+   "visible_up_to_pct_above_top": 0.0809,
+   "top_ask_notional": 221761,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 15288331285,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 15288331285,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 15288331285
+  },
+  {
+   "t": "2026-10-21T17:16:14+00:00",
+   "symbol": "ETHTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.0833,
+   "top_ask_notional": 10012507,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 4377072727,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 4377072727,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 4377072727
+  },
+  {
+   "t": "2026-10-21T17:36:17+00:00",
+   "symbol": "BTCTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.068,
+   "top_ask_notional": 20033440,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 298592152,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 298592152,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 298592152
+  },
+  {
+   "t": "2026-10-21T17:36:17+00:00",
+   "symbol": "ETHTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.1604,
+   "top_ask_notional": 306345848,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 344161546,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 443449562,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 443449562
+  },
+  {
+   "t": "2026-10-21T17:55:47+00:00",
+   "symbol": "BTCTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.1354,
+   "top_ask_notional": 306780442,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 374187556,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 517877143,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 517877143
+  },
+  {
+   "t": "2026-10-21T17:55:47+00:00",
+   "symbol": "BNBTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.6602,
+   "top_ask_notional": 10029293,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 63520463,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 63631013,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 63631013
+  },
+  {
+   "t": "2026-10-21T17:55:47+00:00",
+   "symbol": "ARBTMN",
+   "levels_visible": 7,
+   "visible_up_to_pct_above_top": 0.5931,
+   "top_ask_notional": 45093060,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 89030482,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 89030482,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 89030482
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "BTCTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.0702,
+   "top_ask_notional": 14771011,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 240213832,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 240213832,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 240213832
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "ETHTMN",
+   "levels_visible": 6,
+   "visible_up_to_pct_above_top": 0.1533,
+   "top_ask_notional": 10007908,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 136303138,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 172545156,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 172545156
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "SOLTMN",
+   "levels_visible": 7,
+   "visible_up_to_pct_above_top": 0.2894,
+   "top_ask_notional": 71462090,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 79880422,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 213256472,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 430535410
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "XRPTMN",
+   "levels_visible": 8,
+   "visible_up_to_pct_above_top": 0.6517,
+   "top_ask_notional": 85766074,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 96235836,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 96869935,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 99635167
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "DOGETMN",
+   "levels_visible": 8,
+   "visible_up_to_pct_above_top": 0.1794,
+   "top_ask_notional": 2229900,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 36411726,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 97311628,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 97311628
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "PEPETMN",
+   "levels_visible": 7,
+   "visible_up_to_pct_above_top": 0.3922,
+   "top_ask_notional": 31894595,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 198869462,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 198869462,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 319276364
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "BNBTMN",
+   "levels_visible": 7,
+   "visible_up_to_pct_above_top": 1.7319,
+   "top_ask_notional": 22964823,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 22964823,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 22964823,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 33174938
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "symbol": "ARBTMN",
+   "levels_visible": 7,
+   "visible_up_to_pct_above_top": 0.421,
+   "top_ask_notional": 5000000,
+   "ask_notional_within_0.1pct_of_top(lower_bound)": 77246792,
+   "ask_notional_within_0.2pct_of_top(lower_bound)": 96019717,
+   "ask_notional_within_0.3pct_of_top(lower_bound)": 294160189
+  }
+ ],
+ "markets_snapshot_depth": [
+  {
+   "symbol": "BTCTMN",
+   "ask_depth_0.5pct_tmn": 23222539343.063274,
+   "ask_depth_1pct_tmn": 23904837201.24762,
+   "bid_depth_0.5pct_tmn": 269061479.44621867,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "PEPETMN",
+   "ask_depth_0.5pct_tmn": 7812368262.6028,
+   "ask_depth_1pct_tmn": 16009870299.4857,
+   "bid_depth_0.5pct_tmn": 524220816.13725,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "ETHTMN",
+   "ask_depth_0.5pct_tmn": 3161524846.219145,
+   "ask_depth_1pct_tmn": 3629170635.99808,
+   "bid_depth_0.5pct_tmn": 521388726.87688,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "XRPTMN",
+   "ask_depth_0.5pct_tmn": 245351655.85,
+   "ask_depth_1pct_tmn": 540088505.75,
+   "bid_depth_0.5pct_tmn": 191019344.75,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "ARBTMN",
+   "ask_depth_0.5pct_tmn": 83790323.0872,
+   "ask_depth_1pct_tmn": 328677283.21375,
+   "bid_depth_0.5pct_tmn": 17378348.10705,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "SOLTMN",
+   "ask_depth_0.5pct_tmn": 283289354.931265,
+   "ask_depth_1pct_tmn": 593940392.690995,
+   "bid_depth_0.5pct_tmn": 170285269.83524996,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "DOGETMN",
+   "ask_depth_0.5pct_tmn": 188320792.45,
+   "ask_depth_1pct_tmn": 230293140.2,
+   "bid_depth_0.5pct_tmn": 137083325.7,
+   "n_snapshots": 20
+  },
+  {
+   "symbol": "BNBTMN",
+   "ask_depth_0.5pct_tmn": 81392592.14657,
+   "ask_depth_1pct_tmn": 84464000.14657,
+   "bid_depth_0.5pct_tmn": 304793571.98201,
+   "n_snapshots": 20
+  }
+ ],
+ "upper_bound": {
+  "0.3%": {
+   "0.4": {
+    "top_ask_fill_pct": 93.8,
+    "shortfall_pct_of_planned": 6.2,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 0.6746,
+     "walk_upper_bound_extra_pp": 0.0446,
+     "walk_upper_bound_extra_tmn": 2230
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.3439,
+     "walk_upper_bound_extra_pp": 0.0227,
+     "walk_upper_bound_extra_tmn": 1136
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.1954,
+     "walk_upper_bound_extra_pp": 0.0129,
+     "walk_upper_bound_extra_tmn": 646
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 0.6745,
+     "walk_upper_bound_extra_pp": 0.0446,
+     "walk_upper_bound_extra_tmn": 2229
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 0.6871,
+     "walk_upper_bound_extra_pp": 0.0454,
+     "walk_upper_bound_extra_tmn": 2271
+    }
+   },
+   "0.7": {
+    "top_ask_fill_pct": 91.4,
+    "shortfall_pct_of_planned": 8.6,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 1.1504,
+     "walk_upper_bound_extra_pp": 0.1082,
+     "walk_upper_bound_extra_tmn": 5412
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.5864,
+     "walk_upper_bound_extra_pp": 0.0552,
+     "walk_upper_bound_extra_tmn": 2759
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.3331,
+     "walk_upper_bound_extra_pp": 0.0313,
+     "walk_upper_bound_extra_tmn": 1567
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 1.1502,
+     "walk_upper_bound_extra_pp": 0.1082,
+     "walk_upper_bound_extra_tmn": 5411
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 1.1898,
+     "walk_upper_bound_extra_pp": 0.112,
+     "walk_upper_bound_extra_tmn": 5598
+    }
+   },
+   "1.0": {
+    "top_ask_fill_pct": 89.9,
+    "shortfall_pct_of_planned": 10.1,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 1.3672,
+     "walk_upper_bound_extra_pp": 0.1536,
+     "walk_upper_bound_extra_tmn": 7680
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.6969,
+     "walk_upper_bound_extra_pp": 0.0783,
+     "walk_upper_bound_extra_tmn": 3915
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.3959,
+     "walk_upper_bound_extra_pp": 0.0445,
+     "walk_upper_bound_extra_tmn": 2224
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 1.367,
+     "walk_upper_bound_extra_pp": 0.1536,
+     "walk_upper_bound_extra_tmn": 7679
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 1.4342,
+     "walk_upper_bound_extra_pp": 0.1611,
+     "walk_upper_bound_extra_tmn": 8056
+    }
+   }
+  },
+  "0.4%": {
+   "0.4": {
+    "top_ask_fill_pct": 87.4,
+    "shortfall_pct_of_planned": 12.6,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 0.6746,
+     "walk_upper_bound_extra_pp": 0.0973,
+     "walk_upper_bound_extra_tmn": 4863
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.3439,
+     "walk_upper_bound_extra_pp": 0.0496,
+     "walk_upper_bound_extra_tmn": 2479
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.1954,
+     "walk_upper_bound_extra_pp": 0.0282,
+     "walk_upper_bound_extra_tmn": 1408
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 0.6745,
+     "walk_upper_bound_extra_pp": 0.0972,
+     "walk_upper_bound_extra_tmn": 4862
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 0.6871,
+     "walk_upper_bound_extra_pp": 0.0991,
+     "walk_upper_bound_extra_tmn": 4953
+    }
+   },
+   "0.7": {
+    "top_ask_fill_pct": 78.5,
+    "shortfall_pct_of_planned": 21.5,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 1.1504,
+     "walk_upper_bound_extra_pp": 0.3151,
+     "walk_upper_bound_extra_tmn": 15754
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.5864,
+     "walk_upper_bound_extra_pp": 0.1606,
+     "walk_upper_bound_extra_tmn": 8030
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.3331,
+     "walk_upper_bound_extra_pp": 0.0912,
+     "walk_upper_bound_extra_tmn": 4562
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 1.1502,
+     "walk_upper_bound_extra_pp": 0.315,
+     "walk_upper_bound_extra_tmn": 15751
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 1.1898,
+     "walk_upper_bound_extra_pp": 0.3259,
+     "walk_upper_bound_extra_tmn": 16294
+    }
+   },
+   "1.0": {
+    "top_ask_fill_pct": 76.5,
+    "shortfall_pct_of_planned": 23.5,
+    "base: live rule, tick spreads": {
+     "expected_45h_pct": 1.3672,
+     "walk_upper_bound_extra_pp": 0.42,
+     "walk_upper_bound_extra_tmn": 21000
+    },
+    "pessimistic entry: full spread on entry": {
+     "expected_45h_pct": 0.6969,
+     "walk_upper_bound_extra_pp": 0.2141,
+     "walk_upper_bound_extra_tmn": 10704
+    },
+    "tick-calibrated rate (x0.28)": {
+     "expected_45h_pct": 0.3959,
+     "walk_upper_bound_extra_pp": 0.1216,
+     "walk_upper_bound_extra_tmn": 6081
+    },
+    "base, pooled mean per trade": {
+     "expected_45h_pct": 1.367,
+     "walk_upper_bound_extra_pp": 0.4199,
+     "walk_upper_bound_extra_tmn": 20996
+    },
+    "base, per-market depth fill": {
+     "expected_45h_pct": 1.4342,
+     "walk_upper_bound_extra_pp": 0.4406,
+     "walk_upper_bound_extra_tmn": 22028
+    }
+   }
+  }
+ },
+ "episodes_behind": {
+  "0.3%": 18,
+  "0.4%": 6
+ }
+}

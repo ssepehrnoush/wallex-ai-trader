@@ -1,0 +1,264 @@
+{
+ "BTCTMN": {
+  "candle_hours": 164.4,
+  "tick_hours": 3.2,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.913,
+   "candle_min_per_hour_full_spread_model": 0.785,
+   "candle_min_per_hour_last2d": 0.833,
+   "candle_min_per_hour_14_18utc": 1.281,
+   "tick_min_per_hour": 0.104,
+   "expected_candle_minutes_in_tick_period": 2.92,
+   "observed_tick_minutes": 0.33
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.122,
+   "candle_min_per_hour_full_spread_model": 0.103,
+   "candle_min_per_hour_last2d": 0.188,
+   "candle_min_per_hour_14_18utc": 0.438,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.39,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.024,
+   "candle_min_per_hour_full_spread_model": 0.024,
+   "candle_min_per_hour_last2d": 0.083,
+   "candle_min_per_hour_14_18utc": 0.062,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.08,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "ETHTMN": {
+  "candle_hours": 164.4,
+  "tick_hours": 3.2,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.347,
+   "candle_min_per_hour_full_spread_model": 0.158,
+   "candle_min_per_hour_last2d": 0.458,
+   "candle_min_per_hour_14_18utc": 0.562,
+   "tick_min_per_hour": 0.495,
+   "expected_candle_minutes_in_tick_period": 1.11,
+   "observed_tick_minutes": 1.58
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.055,
+   "candle_min_per_hour_full_spread_model": 0.037,
+   "candle_min_per_hour_last2d": 0.083,
+   "candle_min_per_hour_14_18utc": 0.125,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.18,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.0,
+   "candle_min_per_hour_full_spread_model": 0.0,
+   "candle_min_per_hour_last2d": 0.0,
+   "candle_min_per_hour_14_18utc": 0.0,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.0,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "SOLTMN": {
+  "candle_hours": 164.2,
+  "tick_hours": 3.2,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.542,
+   "candle_min_per_hour_full_spread_model": 0.237,
+   "candle_min_per_hour_last2d": 0.396,
+   "candle_min_per_hour_14_18utc": 0.438,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 1.73,
+   "observed_tick_minutes": 0.0
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.073,
+   "candle_min_per_hour_full_spread_model": 0.049,
+   "candle_min_per_hour_last2d": 0.083,
+   "candle_min_per_hour_14_18utc": 0.094,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.23,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.018,
+   "candle_min_per_hour_full_spread_model": 0.012,
+   "candle_min_per_hour_last2d": 0.0,
+   "candle_min_per_hour_14_18utc": 0.031,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.06,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "XRPTMN": {
+  "candle_hours": 164.3,
+  "tick_hours": 3.2,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.42,
+   "candle_min_per_hour_full_spread_model": 0.207,
+   "candle_min_per_hour_last2d": 0.458,
+   "candle_min_per_hour_14_18utc": 0.469,
+   "tick_min_per_hour": 0.182,
+   "expected_candle_minutes_in_tick_period": 1.34,
+   "observed_tick_minutes": 0.58
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.079,
+   "candle_min_per_hour_full_spread_model": 0.043,
+   "candle_min_per_hour_last2d": 0.062,
+   "candle_min_per_hour_14_18utc": 0.094,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.25,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.037,
+   "candle_min_per_hour_full_spread_model": 0.024,
+   "candle_min_per_hour_last2d": 0.021,
+   "candle_min_per_hour_14_18utc": 0.031,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.12,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "DOGETMN": {
+  "candle_hours": 164.4,
+  "tick_hours": 3.2,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.31,
+   "candle_min_per_hour_full_spread_model": 0.122,
+   "candle_min_per_hour_last2d": 0.271,
+   "candle_min_per_hour_14_18utc": 0.188,
+   "tick_min_per_hour": 0.078,
+   "expected_candle_minutes_in_tick_period": 0.99,
+   "observed_tick_minutes": 0.25
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.055,
+   "candle_min_per_hour_full_spread_model": 0.012,
+   "candle_min_per_hour_last2d": 0.042,
+   "candle_min_per_hour_14_18utc": 0.031,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.18,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.006,
+   "candle_min_per_hour_full_spread_model": 0.006,
+   "candle_min_per_hour_last2d": 0.0,
+   "candle_min_per_hour_14_18utc": 0.0,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.02,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "PEPETMN": {
+  "candle_hours": 164.4,
+  "tick_hours": 1.63,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 2.719,
+   "candle_min_per_hour_full_spread_model": 1.941,
+   "candle_min_per_hour_last2d": 2.958,
+   "candle_min_per_hour_14_18utc": 4.5,
+   "tick_min_per_hour": 0.511,
+   "expected_candle_minutes_in_tick_period": 4.43,
+   "observed_tick_minutes": 0.83
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.858,
+   "candle_min_per_hour_full_spread_model": 0.578,
+   "candle_min_per_hour_last2d": 0.792,
+   "candle_min_per_hour_14_18utc": 1.594,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 1.4,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.249,
+   "candle_min_per_hour_full_spread_model": 0.195,
+   "candle_min_per_hour_last2d": 0.229,
+   "candle_min_per_hour_14_18utc": 0.562,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.41,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "BNBTMN": {
+  "candle_hours": 164.3,
+  "tick_hours": 1.63,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 0.834,
+   "candle_min_per_hour_full_spread_model": 0.529,
+   "candle_min_per_hour_last2d": 0.5,
+   "candle_min_per_hour_14_18utc": 1.312,
+   "tick_min_per_hour": 0.613,
+   "expected_candle_minutes_in_tick_period": 1.36,
+   "observed_tick_minutes": 1.0
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.286,
+   "candle_min_per_hour_full_spread_model": 0.231,
+   "candle_min_per_hour_last2d": 0.104,
+   "candle_min_per_hour_14_18utc": 0.5,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.47,
+   "observed_tick_minutes": 0.0
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.164,
+   "candle_min_per_hour_full_spread_model": 0.152,
+   "candle_min_per_hour_last2d": 0.062,
+   "candle_min_per_hour_14_18utc": 0.094,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.27,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "ARBTMN": {
+  "candle_hours": 164.3,
+  "tick_hours": 1.63,
+  "0.3%": {
+   "candle_min_per_hour_half_spread_model": 1.254,
+   "candle_min_per_hour_full_spread_model": 0.505,
+   "candle_min_per_hour_last2d": 1.604,
+   "candle_min_per_hour_14_18utc": 1.812,
+   "tick_min_per_hour": 0.026,
+   "expected_candle_minutes_in_tick_period": 2.04,
+   "observed_tick_minutes": 0.04
+  },
+  "0.5%": {
+   "candle_min_per_hour_half_spread_model": 0.529,
+   "candle_min_per_hour_full_spread_model": 0.207,
+   "candle_min_per_hour_last2d": 0.938,
+   "candle_min_per_hour_14_18utc": 0.75,
+   "tick_min_per_hour": 0.026,
+   "expected_candle_minutes_in_tick_period": 0.86,
+   "observed_tick_minutes": 0.04
+  },
+  "0.7%": {
+   "candle_min_per_hour_half_spread_model": 0.225,
+   "candle_min_per_hour_full_spread_model": 0.091,
+   "candle_min_per_hour_last2d": 0.458,
+   "candle_min_per_hour_14_18utc": 0.219,
+   "tick_min_per_hour": 0.0,
+   "expected_candle_minutes_in_tick_period": 0.37,
+   "observed_tick_minutes": 0.0
+  }
+ },
+ "_total": {
+  "0.3%": {
+   "expected_candle_minutes_in_tick_period": 15.92,
+   "observed_tick_minutes": 4.61
+  },
+  "0.5%": {
+   "expected_candle_minutes_in_tick_period": 3.96,
+   "observed_tick_minutes": 0.04
+  },
+  "0.7%": {
+   "expected_candle_minutes_in_tick_period": 1.33,
+   "observed_tick_minutes": 0.0
+  }
+ }
+}

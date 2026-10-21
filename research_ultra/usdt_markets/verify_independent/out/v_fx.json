@@ -1,0 +1,47 @@
+{
+ "1m": {
+  "start": "2026-10-14 14:05:00+00:00",
+  "end": "2026-10-21 14:04:00+00:00",
+  "days": 7.0,
+  "total_change_pct": 0.087,
+  "daily_drift_pct": 0.0125,
+  "n_windows_overlapping": 7380,
+  "independent_windows": 3.73,
+  "mean45": -0.612,
+  "std45": 0.784,
+  "abs_mean45": 0.839,
+  "p05": -1.782,
+  "p50": -0.754,
+  "p95": 0.584,
+  "non_overlapping": [
+   0.095,
+   -1.547,
+   -0.033
+  ],
+  "rv_15min_x_sqrt45_pct": 1.554,
+  "lag1_autocorr_15min": 0.004,
+  "rv_1h_x_sqrt45_pct": 1.711,
+  "lag1_autocorr_1h": -0.1,
+  "rv_4h_x_sqrt45_pct": 1.721,
+  "lag1_autocorr_4h": -0.116
+ },
+ "60m": {
+  "start": "2026-08-22 14:00:00+00:00",
+  "end": "2026-10-21 13:00:00+00:00",
+  "days": 60.0,
+  "total_change_pct": 37.86,
+  "daily_drift_pct": 0.5369,
+  "mean45": 0.953,
+  "std45": 2.118,
+  "p05": -1.738,
+  "p95": 4.827,
+  "rv_1h_x_sqrt45_pct": 2.15
+ },
+ "60m_last14d": {
+  "daily_drift_pct": -0.0127,
+  "mean45": -0.307,
+  "std45": 1.675,
+  "p05": -2.542,
+  "p95": 3.508
+ }
+}

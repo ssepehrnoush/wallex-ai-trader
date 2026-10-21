@@ -1,0 +1,2 @@
+{'ARBTMN': -0.591, 'BNBTMN': -0.335, 'BTCTMN': -0.424, 'DOGETMN': -0.308, 'ETHTMN': -0.488, 'PEPETMN': -0.444, 'SOLTMN': -0.285, 'XRPTMN': -0.384}
+ticks <= -0.7%: 0  rows 32710

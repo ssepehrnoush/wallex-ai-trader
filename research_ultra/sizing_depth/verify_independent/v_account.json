@@ -1,0 +1,141 @@
+{
+ "weights_pct_equity": {
+  "0.4": 16.55,
+  "0.7": 28.97,
+  "1.0": 35.0
+ },
+ "fill_used": {
+  "0.4": 0.909,
+  "0.7": 0.89,
+  "1.0": 0.878
+ },
+ "scen": {
+  "base_ff": {
+   "trades_45h": 18.9,
+   "mean_pct": 0.236,
+   "linear_45h_pct": {
+    "0.4": 0.672,
+    "0.7": 1.151,
+    "1.0": 1.372
+   },
+   "gain_0.7_vs_0.4_pp": 0.479,
+   "P_sum_neg_45h": 0.06,
+   "p5_45h_pct_at_0.7": -0.058
+  },
+  "fullentry_ff": {
+   "trades_45h": 14.0,
+   "mean_pct": 0.165,
+   "linear_45h_pct": {
+    "0.4": 0.347,
+    "0.7": 0.595,
+    "1.0": 0.71
+   },
+   "gain_0.7_vs_0.4_pp": 0.248,
+   "P_sum_neg_45h": 0.16,
+   "p5_45h_pct_at_0.7": -0.341
+  },
+  "fresh5": {
+   "trades_45h": 11.8,
+   "mean_pct": 0.297,
+   "linear_45h_pct": {
+    "0.4": 0.526,
+    "0.7": 0.902,
+    "1.0": 1.075
+   },
+   "gain_0.7_vs_0.4_pp": 0.376,
+   "P_sum_neg_45h": 0.037,
+   "p5_45h_pct_at_0.7": 0.056
+  },
+  "fullentry_fresh5": {
+   "trades_45h": 9.0,
+   "mean_pct": 0.262,
+   "linear_45h_pct": {
+    "0.4": 0.357,
+    "0.7": 0.611,
+    "1.0": 0.729
+   },
+   "gain_0.7_vs_0.4_pp": 0.254,
+   "P_sum_neg_45h": 0.107,
+   "p5_45h_pct_at_0.7": -0.139
+  }
+ },
+ "independent_45h_blocks": {
+  "0": {
+   "n": 15,
+   "sum_pct": 2.88
+  },
+  "1": {
+   "n": 12,
+   "sum_pct": 4.1
+  },
+  "2": {
+   "n": 26,
+   "sum_pct": 0.92
+  },
+  "3": {
+   "n": 16,
+   "sum_pct": 8.41
+  }
+ },
+ "stop_cost_0.015": {
+  "0.4": {
+   "per_stop_pct_eq": 0.248,
+   "three_stops": 0.745,
+   "stops_to_daily_1.5": 7,
+   "stops_to_kill_3": 13
+  },
+  "0.7": {
+   "per_stop_pct_eq": 0.434,
+   "three_stops": 1.303,
+   "stops_to_daily_1.5": 4,
+   "stops_to_kill_3": 7
+  },
+  "1.0": {
+   "per_stop_pct_eq": 0.525,
+   "three_stops": 1.575,
+   "stops_to_daily_1.5": 3,
+   "stops_to_kill_3": 6
+  }
+ },
+ "stop_cost_0.018": {
+  "0.4": {
+   "per_stop_pct_eq": 0.298,
+   "three_stops": 0.894,
+   "stops_to_daily_1.5": 6,
+   "stops_to_kill_3": 11
+  },
+  "0.7": {
+   "per_stop_pct_eq": 0.521,
+   "three_stops": 1.564,
+   "stops_to_daily_1.5": 3,
+   "stops_to_kill_3": 6
+  },
+  "1.0": {
+   "per_stop_pct_eq": 0.63,
+   "three_stops": 1.89,
+   "stops_to_daily_1.5": 3,
+   "stops_to_kill_3": 5
+  }
+ },
+ "stop_cost_0.021": {
+  "0.4": {
+   "per_stop_pct_eq": 0.348,
+   "three_stops": 1.043,
+   "stops_to_daily_1.5": 5,
+   "stops_to_kill_3": 9
+  },
+  "0.7": {
+   "per_stop_pct_eq": 0.608,
+   "three_stops": 1.825,
+   "stops_to_daily_1.5": 3,
+   "stops_to_kill_3": 5
+  },
+  "1.0": {
+   "per_stop_pct_eq": 0.735,
+   "three_stops": 2.205,
+   "stops_to_daily_1.5": 3,
+   "stops_to_kill_3": 5
+  }
+ },
+ "current_ai_notional": 666667
+}

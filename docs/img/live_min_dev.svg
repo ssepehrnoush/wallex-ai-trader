@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="470" viewBox="0 0 820 470" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' role="img" aria-label="Live run, deepest buy_dev per market">
+<title>Live run, deepest buy_dev per market</title>
+<rect width="820" height="470" fill="#ffffff"/>
+<text x="20.0" y="30.0" font-size="17" fill="#0b0b0b" text-anchor="start" font-weight="600">Live run: how close each market came to a buy</text>
+<text x="20.0" y="52.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Deepest buy_dev on 2.5 s ticks, 2026-10-21 16:45 to 18:44 UTC (2.0 h). A buy needs buy_dev at or below the threshold.</text>
+<text x="20.0" y="72.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Ticks at or below -0.7%: 0 in every market. Trades: 0. Equity 5,000,000 TMN.</text>
+<line x1="110.0" x2="110.0" y1="104" y2="400" stroke="#e1e0d9" stroke-width="1"/>
+<text x="110.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-1.0%</text>
+<line x1="244.0" x2="244.0" y1="104" y2="400" stroke="#e1e0d9" stroke-width="1"/>
+<text x="244.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-0.8%</text>
+<line x1="378.0" x2="378.0" y1="104" y2="400" stroke="#e1e0d9" stroke-width="1"/>
+<text x="378.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-0.6%</text>
+<line x1="512.0" x2="512.0" y1="104" y2="400" stroke="#e1e0d9" stroke-width="1"/>
+<text x="512.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-0.4%</text>
+<line x1="646.0" x2="646.0" y1="104" y2="400" stroke="#e1e0d9" stroke-width="1"/>
+<text x="646.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-0.2%</text>
+<line x1="780.0" x2="780.0" y1="104" y2="400" stroke="#c3c2b7" stroke-width="1"/>
+<text x="780.0" y="418.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">0</text>
+<line x1="311.0" x2="311.0" y1="98" y2="400" stroke="#52514e" stroke-width="1.5"/>
+<line x1="244.0" x2="244.0" y1="98" y2="400" stroke="#52514e" stroke-width="1.5"/>
+<text x="316.0" y="96.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600">entry floor -0.7%</text>
+<text x="239.0" y="96.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="600">-0.8% (AI policy for ETH, PEPE, ARB)</text>
+<text x="100.0" y="134.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">BTCTMN</text>
+<path d="M780.0,121.0 H643.3 Q639.3,121.0 639.3,125.0 V135.0 Q639.3,139.0 643.3,139.0 H780.0 Z" fill="#2a78d6"><title>BTCTMN: deepest buy_dev -0.210% at 2026-10-21 18:25:43 UTC; 2836 ticks; median spread 0.031%</title></path>
+<text x="633.3" y="134.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.21%</text>
+<text x="100.0" y="170.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">ETHTMN</text>
+<path d="M780.0,157.0 H512.0 Q508.0,157.0 508.0,161.0 V171.0 Q508.0,175.0 512.0,175.0 H780.0 Z" fill="#2a78d6"><title>ETHTMN: deepest buy_dev -0.406% at 2026-10-21 17:37:26 UTC; 2836 ticks; median spread 0.097%</title></path>
+<text x="502.0" y="170.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.41%</text>
+<text x="100.0" y="206.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">SOLTMN</text>
+<path d="M780.0,193.0 H676.1 Q672.1,193.0 672.1,197.0 V207.0 Q672.1,211.0 676.1,211.0 H780.0 Z" fill="#2a78d6"><title>SOLTMN: deepest buy_dev -0.161% at 2026-10-21 18:25:28 UTC; 2836 ticks; median spread 0.095%</title></path>
+<text x="666.1" y="206.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.16%</text>
+<text x="100.0" y="242.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">XRPTMN</text>
+<path d="M780.0,229.0 H548.2 Q544.2,229.0 544.2,233.0 V243.0 Q544.2,247.0 548.2,247.0 H780.0 Z" fill="#2a78d6"><title>XRPTMN: deepest buy_dev -0.352% at 2026-10-21 18:05:17 UTC; 2836 ticks; median spread 0.115%</title></path>
+<text x="538.2" y="242.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.35%</text>
+<text x="100.0" y="278.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">DOGETMN</text>
+<path d="M780.0,265.0 H577.6 Q573.6,265.0 573.6,269.0 V279.0 Q573.6,283.0 577.6,283.0 H780.0 Z" fill="#2a78d6"><title>DOGETMN: deepest buy_dev -0.308% at 2026-10-21 17:54:21 UTC; 2836 ticks; median spread 0.117%</title></path>
+<text x="567.6" y="278.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.31%</text>
+<text x="100.0" y="314.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">PEPETMN</text>
+<path d="M780.0,301.0 H486.5 Q482.5,301.0 482.5,305.0 V315.0 Q482.5,319.0 486.5,319.0 H780.0 Z" fill="#2a78d6"><title>PEPETMN: deepest buy_dev -0.444% at 2026-10-21 17:16:44 UTC; 2836 ticks; median spread 0.088%</title></path>
+<text x="476.5" y="314.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.44%</text>
+<text x="100.0" y="350.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">BNBTMN</text>
+<path d="M780.0,337.0 H559.5 Q555.5,337.0 555.5,341.0 V351.0 Q555.5,355.0 559.5,355.0 H780.0 Z" fill="#2a78d6"><title>BNBTMN: deepest buy_dev -0.335% at 2026-10-21 18:07:30 UTC; 2836 ticks; median spread 0.138%</title></path>
+<text x="549.5" y="350.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.34% (now disabled by AI)</text>
+<text x="100.0" y="386.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">ARBTMN</text>
+<path d="M780.0,373.0 H388.0 Q384.0,373.0 384.0,377.0 V387.0 Q384.0,391.0 388.0,391.0 H780.0 Z" fill="#2a78d6"><title>ARBTMN: deepest buy_dev -0.591% at 2026-10-21 17:31:43 UTC; 2836 ticks; median spread 0.428%</title></path>
+<text x="378.0" y="386.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">-0.59% (now disabled by AI)</text>
+<text x="20.0" y="456.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">Source: runs/live_main/ticks.csv and state.json (snapshot 2026-10-21 18:44:59 UTC), via scripts/results_stats.py</text>
+</svg>

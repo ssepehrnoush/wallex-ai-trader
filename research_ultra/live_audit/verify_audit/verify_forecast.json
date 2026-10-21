@@ -1,0 +1,919 @@
+{
+ "snapshot_state_t": "2026-10-21T18:33:00+00:00",
+ "remaining_days": 1.97,
+ "days": 6.847,
+ "live_half_spread_pct": {
+  "BTCTMN": 0.0155,
+  "ETHTMN": 0.0498,
+  "SOLTMN": 0.0477,
+  "XRPTMN": 0.0619,
+  "DOGETMN": 0.0563,
+  "PEPETMN": 0.0443,
+  "BNBTMN": 0.0729,
+  "ARBTMN": 0.219
+ },
+ "share_ticks_spread_over_0.6pct": {
+  "BTCTMN": 0.0,
+  "ETHTMN": 0.0,
+  "SOLTMN": 0.0,
+  "XRPTMN": 0.0,
+  "DOGETMN": 0.04,
+  "PEPETMN": 7.33,
+  "BNBTMN": 0.0,
+  "ARBTMN": 24.03
+ },
+ "policy_used": {
+  "BTCTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "ETHTMN": [
+   0.008,
+   0.008,
+   20.0
+  ],
+  "SOLTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "XRPTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "DOGETMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "PEPETMN": [
+   0.008,
+   0.008,
+   20.0
+  ],
+  "BNBTMN": null,
+  "ARBTMN": [
+   0.008,
+   0.008,
+   15.0
+  ]
+ },
+ "variants": {
+  "V0_as_author(no constraints)": {
+   "trades": 46,
+   "per_day": 6.718,
+   "mean_ret_pct": 0.312,
+   "median_ret_pct": 0.252,
+   "sum_ret_pct": 14.33,
+   "win_pct": 76.1,
+   "exits": {
+    "target": 31,
+    "time": 15
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 14,
+     "mean": 0.322,
+     "sum": 4.51,
+     "win": 64.3,
+     "exits": {
+      "time": 8,
+      "target": 6
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.368,
+     "sum": 1.1,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.411,
+     "sum": 0.41,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": 0.27,
+     "sum": 5.13,
+     "win": 68.4,
+     "exits": {
+      "target": 12,
+      "time": 7
+     }
+    },
+    "SOLTMN": {
+     "n": 5,
+     "mean": 0.25,
+     "sum": 1.25,
+     "win": 100.0,
+     "exits": {
+      "target": 5
+     }
+    },
+    "XRPTMN": {
+     "n": 4,
+     "mean": 0.482,
+     "sum": 1.93,
+     "win": 100.0,
+     "exits": {
+      "target": 4
+     }
+    }
+   },
+   "spread_thinned_trades": 41.24,
+   "expected_trades_remaining": 11.87,
+   "expected_account_return_pct": 0.494,
+   "ci": {
+    "clusters": 7,
+    "cluster_ci95": [
+     0.092,
+     0.478
+    ],
+    "iid_ci95": [
+     0.138,
+     0.504
+    ],
+    "p_mean_le_0_cluster": 0.0032
+   },
+   "ci_6h": {
+    "clusters": 16,
+    "cluster_ci95": [
+     0.064,
+     0.492
+    ],
+    "iid_ci95": [
+     0.137,
+     0.504
+    ],
+    "p_mean_le_0_cluster": 0.0077
+   }
+  },
+  "V1_cooldown120": {
+   "trades": 43,
+   "per_day": 6.28,
+   "mean_ret_pct": 0.34,
+   "median_ret_pct": 0.258,
+   "sum_ret_pct": 14.64,
+   "win_pct": 79.1,
+   "exits": {
+    "target": 30,
+    "time": 13
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 11,
+     "mean": 0.437,
+     "sum": 4.81,
+     "win": 72.7,
+     "exits": {
+      "time": 6,
+      "target": 5
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.368,
+     "sum": 1.1,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.411,
+     "sum": 0.41,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": 0.27,
+     "sum": 5.13,
+     "win": 68.4,
+     "exits": {
+      "target": 12,
+      "time": 7
+     }
+    },
+    "SOLTMN": {
+     "n": 5,
+     "mean": 0.25,
+     "sum": 1.25,
+     "win": 100.0,
+     "exits": {
+      "target": 5
+     }
+    },
+    "XRPTMN": {
+     "n": 4,
+     "mean": 0.482,
+     "sum": 1.93,
+     "win": 100.0,
+     "exits": {
+      "target": 4
+     }
+    }
+   },
+   "spread_thinned_trades": 38.96,
+   "expected_trades_remaining": 11.21,
+   "expected_account_return_pct": 0.503,
+   "ci": {
+    "clusters": 7,
+    "cluster_ci95": [
+     0.152,
+     0.478
+    ],
+    "iid_ci95": [
+     0.156,
+     0.544
+    ],
+    "p_mean_le_0_cluster": 0.0002
+   },
+   "ci_6h": {
+    "clusters": 16,
+    "cluster_ci95": [
+     0.107,
+     0.501
+    ],
+    "iid_ci95": [
+     0.16,
+     0.547
+    ],
+    "p_mean_le_0_cluster": 0.0022
+   }
+  },
+  "V2_cooldown+max3+momentum": {
+   "trades": 42,
+   "per_day": 6.134,
+   "mean_ret_pct": 0.341,
+   "median_ret_pct": 0.252,
+   "sum_ret_pct": 14.32,
+   "win_pct": 78.6,
+   "exits": {
+    "target": 29,
+    "time": 13
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 11,
+     "mean": 0.437,
+     "sum": 4.81,
+     "win": 72.7,
+     "exits": {
+      "time": 6,
+      "target": 5
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.368,
+     "sum": 1.1,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.411,
+     "sum": 0.41,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": 0.27,
+     "sum": 5.13,
+     "win": 68.4,
+     "exits": {
+      "target": 12,
+      "time": 7
+     }
+    },
+    "SOLTMN": {
+     "n": 5,
+     "mean": 0.25,
+     "sum": 1.25,
+     "win": 100.0,
+     "exits": {
+      "target": 5
+     }
+    },
+    "XRPTMN": {
+     "n": 3,
+     "mean": 0.538,
+     "sum": 1.61,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    }
+   },
+   "spread_thinned_trades": 37.96,
+   "expected_trades_remaining": 10.92,
+   "expected_account_return_pct": 0.491,
+   "ci": {
+    "clusters": 7,
+    "cluster_ci95": [
+     0.15,
+     0.477
+    ],
+    "iid_ci95": [
+     0.155,
+     0.551
+    ],
+    "p_mean_le_0_cluster": 0.0001
+   },
+   "ci_6h": {
+    "clusters": 16,
+    "cluster_ci95": [
+     0.106,
+     0.502
+    ],
+    "iid_ci95": [
+     0.155,
+     0.546
+    ],
+    "p_mean_le_0_cluster": 0.0026
+   }
+  },
+  "V3_full_spread_fills": {
+   "trades": 48,
+   "per_day": 7.01,
+   "mean_ret_pct": -0.031,
+   "median_ret_pct": 0.121,
+   "sum_ret_pct": -1.5,
+   "win_pct": 62.5,
+   "exits": {
+    "target": 27,
+    "time": 16,
+    "stop": 5
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 16,
+     "mean": -0.505,
+     "sum": -8.09,
+     "win": 31.2,
+     "exits": {
+      "time": 8,
+      "stop": 5,
+      "target": 3
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.337,
+     "sum": 1.01,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.298,
+     "sum": 0.3,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": 0.151,
+     "sum": 2.86,
+     "win": 63.2,
+     "exits": {
+      "target": 11,
+      "time": 8
+     }
+    },
+    "SOLTMN": {
+     "n": 5,
+     "mean": 0.177,
+     "sum": 0.89,
+     "win": 100.0,
+     "exits": {
+      "target": 5
+     }
+    },
+    "XRPTMN": {
+     "n": 4,
+     "mean": 0.381,
+     "sum": 1.52,
+     "win": 100.0,
+     "exits": {
+      "target": 4
+     }
+    }
+   },
+   "spread_thinned_trades": 42.76,
+   "expected_trades_remaining": 12.3,
+   "expected_account_return_pct": 0.009,
+   "ci": {
+    "clusters": 7,
+    "cluster_ci95": [
+     -0.467,
+     0.259
+    ],
+    "iid_ci95": [
+     -0.252,
+     0.199
+    ],
+    "p_mean_le_0_cluster": 0.5377
+   },
+   "ci_6h": {
+    "clusters": 16,
+    "cluster_ci95": [
+     -0.429,
+     0.246
+    ],
+    "iid_ci95": [
+     -0.256,
+     0.2
+    ],
+    "p_mean_le_0_cluster": 0.5638
+   }
+  },
+  "V4_V2+full_spread_fills": {
+   "trades": 40,
+   "per_day": 5.842,
+   "mean_ret_pct": 0.064,
+   "median_ret_pct": 0.142,
+   "sum_ret_pct": 2.55,
+   "win_pct": 67.5,
+   "exits": {
+    "target": 24,
+    "time": 13,
+    "stop": 3
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 10,
+     "mean": -0.435,
+     "sum": -4.35,
+     "win": 30.0,
+     "exits": {
+      "time": 6,
+      "stop": 3,
+      "target": 1
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.337,
+     "sum": 1.01,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.298,
+     "sum": 0.3,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 18,
+     "mean": 0.187,
+     "sum": 3.36,
+     "win": 66.7,
+     "exits": {
+      "target": 11,
+      "time": 7
+     }
+    },
+    "SOLTMN": {
+     "n": 5,
+     "mean": 0.177,
+     "sum": 0.89,
+     "win": 100.0,
+     "exits": {
+      "target": 5
+     }
+    },
+    "XRPTMN": {
+     "n": 3,
+     "mean": 0.445,
+     "sum": 1.34,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    }
+   },
+   "spread_thinned_trades": 36.28,
+   "expected_trades_remaining": 10.44,
+   "expected_account_return_pct": 0.128,
+   "ci": {
+    "clusters": 7,
+    "cluster_ci95": [
+     -0.31,
+     0.282
+    ],
+    "iid_ci95": [
+     -0.178,
+     0.314
+    ],
+    "p_mean_le_0_cluster": 0.339
+   },
+   "ci_6h": {
+    "clusters": 16,
+    "cluster_ci95": [
+     -0.281,
+     0.281
+    ],
+    "iid_ci95": [
+     -0.174,
+     0.315
+    ],
+    "p_mean_le_0_cluster": 0.348
+   }
+  },
+  "V5_persist2min": {
+   "trades": 7,
+   "per_day": 1.022,
+   "mean_ret_pct": 0.1,
+   "median_ret_pct": 0.203,
+   "sum_ret_pct": 0.7,
+   "win_pct": 71.4,
+   "exits": {
+    "target": 5,
+    "time": 2
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 2,
+     "mean": -0.407,
+     "sum": -0.81,
+     "win": 50.0,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "BTCTMN": {
+     "n": 1,
+     "mean": 0.119,
+     "sum": 0.12,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 3,
+     "mean": 0.147,
+     "sum": 0.44,
+     "win": 66.7,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.951,
+     "sum": 0.95,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    }
+   },
+   "spread_thinned_trades": 6.3,
+   "expected_trades_remaining": 1.81,
+   "expected_account_return_pct": 0.033,
+   "ci": {
+    "clusters": 6,
+    "cluster_ci95": [
+     -0.354,
+     0.545
+    ],
+    "iid_ci95": [
+     -0.432,
+     0.571
+    ],
+    "p_mean_le_0_cluster": 0.3096
+   },
+   "ci_6h": {
+    "clusters": 6,
+    "cluster_ci95": [
+     -0.354,
+     0.545
+    ],
+    "iid_ci95": [
+     -0.423,
+     0.574
+    ],
+    "p_mean_le_0_cluster": 0.3101
+   }
+  },
+  "V6_V2+persist2min": {
+   "trades": 7,
+   "per_day": 1.022,
+   "mean_ret_pct": 0.1,
+   "median_ret_pct": 0.203,
+   "sum_ret_pct": 0.7,
+   "win_pct": 71.4,
+   "exits": {
+    "target": 5,
+    "time": 2
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 2,
+     "mean": -0.407,
+     "sum": -0.81,
+     "win": 50.0,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "BTCTMN": {
+     "n": 1,
+     "mean": 0.119,
+     "sum": 0.12,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 3,
+     "mean": 0.147,
+     "sum": 0.44,
+     "win": 66.7,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.951,
+     "sum": 0.95,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    }
+   },
+   "spread_thinned_trades": 6.3,
+   "expected_trades_remaining": 1.81,
+   "expected_account_return_pct": 0.033,
+   "ci": {
+    "clusters": 6,
+    "cluster_ci95": [
+     -0.356,
+     0.545
+    ],
+    "iid_ci95": [
+     -0.418,
+     0.576
+    ],
+    "p_mean_le_0_cluster": 0.3152
+   },
+   "ci_6h": {
+    "clusters": 6,
+    "cluster_ci95": [
+     -0.361,
+     0.545
+    ],
+    "iid_ci95": [
+     -0.423,
+     0.581
+    ],
+    "p_mean_le_0_cluster": 0.3111
+   }
+  }
+ },
+ "V2_split": {
+  "first_4d": {
+   "trades": 14,
+   "per_day": 3.5,
+   "mean_ret_pct": 0.213,
+   "median_ret_pct": 0.233,
+   "sum_ret_pct": 2.98,
+   "win_pct": 71.4,
+   "exits": {
+    "target": 9,
+    "time": 5
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 3,
+     "mean": 0.275,
+     "sum": 0.82,
+     "win": 66.7,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 8,
+     "mean": 0.122,
+     "sum": 0.98,
+     "win": 62.5,
+     "exits": {
+      "target": 5,
+      "time": 3
+     }
+    },
+    "SOLTMN": {
+     "n": 2,
+     "mean": 0.156,
+     "sum": 0.31,
+     "win": 100.0,
+     "exits": {
+      "target": 2
+     }
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.861,
+     "sum": 0.86,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    }
+   }
+  },
+  "last": {
+   "trades": 28,
+   "per_day": 9.834,
+   "mean_ret_pct": 0.405,
+   "median_ret_pct": 0.269,
+   "sum_ret_pct": 11.35,
+   "win_pct": 82.1,
+   "exits": {
+    "target": 20,
+    "time": 8
+   },
+   "by_market": {
+    "ARBTMN": {
+     "n": 8,
+     "mean": 0.498,
+     "sum": 3.99,
+     "win": 75.0,
+     "exits": {
+      "time": 4,
+      "target": 4
+     }
+    },
+    "BTCTMN": {
+     "n": 3,
+     "mean": 0.368,
+     "sum": 1.1,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": 0.411,
+     "sum": 0.41,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 11,
+     "mean": 0.378,
+     "sum": 4.15,
+     "win": 72.7,
+     "exits": {
+      "target": 7,
+      "time": 4
+     }
+    },
+    "SOLTMN": {
+     "n": 3,
+     "mean": 0.313,
+     "sum": 0.94,
+     "win": 100.0,
+     "exits": {
+      "target": 3
+     }
+    },
+    "XRPTMN": {
+     "n": 2,
+     "mean": 0.377,
+     "sum": 0.75,
+     "win": 100.0,
+     "exits": {
+      "target": 2
+     }
+    }
+   }
+  }
+ },
+ "V0_entries_with_1m_drop_over_0.4pct": 0,
+ "calm_check": {
+  "1.83h_majors_any_min_le_-0.5%": {
+   "windows": 9756,
+   "share_zero": 0.6887
+  },
+  "3.6h_majors_any_min_le_-0.5%": {
+   "windows": 9649,
+   "share_zero": 0.5107
+  },
+  "vol_matched": {
+   "BTCTMN": {
+    "today_hourly_std_range_pct": [
+     0.0289,
+     0.0892
+    ],
+    "7d_share_min_le_-0.5_all_pct": 0.355,
+    "7d_share_min_le_-0.5_volmatched_pct": 0.302,
+    "volmatched_minutes": 3643,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.055
+   },
+   "ETHTMN": {
+    "today_hourly_std_range_pct": [
+     0.0468,
+     0.1204
+    ],
+    "7d_share_min_le_-0.5_all_pct": 0.294,
+    "7d_share_min_le_-0.5_volmatched_pct": 0.146,
+    "volmatched_minutes": 2061,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.049
+   },
+   "SOLTMN": {
+    "today_hourly_std_range_pct": [
+     0.0613,
+     0.1442
+    ],
+    "7d_share_min_le_-0.5_all_pct": 0.927,
+    "7d_share_min_le_-0.5_volmatched_pct": 1.32,
+    "volmatched_minutes": 985,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.406
+   },
+   "XRPTMN": {
+    "today_hourly_std_range_pct": [
+     0.0655,
+     0.154
+    ],
+    "7d_share_min_le_-0.5_all_pct": 0.558,
+    "7d_share_min_le_-0.5_volmatched_pct": 0.726,
+    "volmatched_minutes": 1515,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.33
+   },
+   "DOGETMN": {
+    "today_hourly_std_range_pct": [
+     0.0544,
+     0.14
+    ],
+    "7d_share_min_le_-0.5_all_pct": 0.459,
+    "7d_share_min_le_-0.5_volmatched_pct": 0.282,
+    "volmatched_minutes": 1416,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.0
+   },
+   "PEPETMN": {
+    "today_hourly_std_range_pct": [
+     0.1863,
+     0.4019
+    ],
+    "7d_share_min_le_-0.5_all_pct": 3.179,
+    "7d_share_min_le_-0.5_volmatched_pct": 4.089,
+    "volmatched_minutes": 2519,
+    "7d_share_min_le_-0.7_volmatched_pct": 1.151
+   },
+   "ARBTMN": {
+    "today_hourly_std_range_pct": [
+     0.1179,
+     0.2194
+    ],
+    "7d_share_min_le_-0.5_all_pct": 3.003,
+    "7d_share_min_le_-0.5_volmatched_pct": 2.708,
+    "volmatched_minutes": 1883,
+    "7d_share_min_le_-0.7_volmatched_pct": 0.903
+   }
+  }
+ }
+}

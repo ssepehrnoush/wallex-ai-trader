@@ -1,0 +1,569 @@
+{
+ "rows": 33270,
+ "t_min_utc": "2026-10-21 14:19:52.220000029",
+ "t_max_utc": "2026-10-21 18:31:31.230000019",
+ "hours_per_symbol": {
+  "ARBTMN": 1.91,
+  "BNBTMN": 1.91,
+  "BTCTMN": 3.48,
+  "DOGETMN": 3.48,
+  "ETHTMN": 3.48,
+  "PEPETMN": 1.91,
+  "SOLTMN": 3.48,
+  "XRPTMN": 3.48
+ },
+ "planned_notional": {
+  "0.4": 827586,
+  "0.7": 1448276,
+  "1.0": 1750000
+ },
+ "buckets": {
+  "all": {
+   "ticks": 33270,
+   "fill": {
+    "0.4": 0.95,
+    "0.7": 0.929,
+    "1.0": 0.921
+   },
+   "binds": {
+    "0.4": 0.079,
+    "0.7": 0.112,
+    "1.0": 0.122
+   },
+   "by_symbol": {
+    "BTCTMN": 5007,
+    "DOGETMN": 5007,
+    "ETHTMN": 5007,
+    "SOLTMN": 5007,
+    "XRPTMN": 5007,
+    "ARBTMN": 2745,
+    "BNBTMN": 2745,
+    "PEPETMN": 2745
+   }
+  },
+  "buy_dev<=-0.3%": {
+   "ticks": 231,
+   "fill": {
+    "0.4": 0.975,
+    "0.7": 0.965,
+    "1.0": 0.961
+   },
+   "binds": {
+    "0.4": 0.048,
+    "0.7": 0.048,
+    "1.0": 0.061
+   },
+   "by_symbol": {
+    "PEPETMN": 106,
+    "ETHTMN": 38,
+    "ARBTMN": 35,
+    "BNBTMN": 24,
+    "XRPTMN": 14,
+    "BTCTMN": 8,
+    "DOGETMN": 6
+   }
+  },
+  "buy_dev<=-0.4%": {
+   "ticks": 37,
+   "fill": {
+    "0.4": 0.946,
+    "0.7": 0.911,
+    "1.0": 0.903
+   },
+   "binds": {
+    "0.4": 0.135,
+    "0.7": 0.135,
+    "1.0": 0.135
+   },
+   "by_symbol": {
+    "ARBTMN": 23,
+    "ETHTMN": 6,
+    "PEPETMN": 5,
+    "BTCTMN": 3
+   }
+  },
+  "buy_dev<=-0.5%": {
+   "ticks": 10,
+   "fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "binds": {
+    "0.4": 0.0,
+    "0.7": 0.0,
+    "1.0": 0.0
+   },
+   "by_symbol": {
+    "ARBTMN": 10
+   }
+  },
+  "buy_dev<=-0.6%": {
+   "ticks": 0,
+   "fill": null,
+   "binds": null,
+   "by_symbol": {}
+  },
+  "buy_dev<=-0.7%": {
+   "ticks": 0,
+   "fill": null,
+   "binds": null,
+   "by_symbol": {}
+  }
+ },
+ "episodes": {
+  "0.3%": {
+   "n": 22,
+   "fill": {
+    "0.4": 0.909,
+    "0.7": 0.89,
+    "1.0": 0.878
+   },
+   "binds": {
+    "0.4": 0.136,
+    "0.7": 0.136,
+    "1.0": 0.182
+   },
+   "by_symbol": {
+    "PEPETMN": 7,
+    "ETHTMN": 6,
+    "ARBTMN": 3,
+    "DOGETMN": 2,
+    "XRPTMN": 2,
+    "BNBTMN": 1,
+    "BTCTMN": 1
+   },
+   "rows": [
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 17:31:43.829999924",
+     "buy_dev": -0.591,
+     "ask_n": 10394827.0,
+     "spread": 0.056
+    },
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 18:22:26.140000105",
+     "buy_dev": -0.307,
+     "ask_n": 4999997.0,
+     "spread": 0.327
+    },
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 18:24:06.160000086",
+     "buy_dev": -0.388,
+     "ask_n": 199999999.0,
+     "spread": 0.172
+    },
+    {
+     "symbol": "BNBTMN",
+     "t": "2026-10-21 18:07:30.329999924",
+     "buy_dev": -0.335,
+     "ask_n": 1888000.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "BTCTMN",
+     "t": "2026-10-21 14:51:16.779999971",
+     "buy_dev": -0.317,
+     "ask_n": 31220008.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "DOGETMN",
+     "t": "2026-10-21 14:51:24.279999971",
+     "buy_dev": -0.304,
+     "ask_n": 50455.0,
+     "spread": 0.005
+    },
+    {
+     "symbol": "DOGETMN",
+     "t": "2026-10-21 17:54:14.180000067",
+     "buy_dev": -0.308,
+     "ask_n": 363424.0,
+     "spread": 0.036
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 14:48:06.750000000",
+     "buy_dev": -0.305,
+     "ask_n": 1474187.0,
+     "spread": 0.221
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 14:51:24.279999971",
+     "buy_dev": -0.377,
+     "ask_n": 3033492.0,
+     "spread": 0.01
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 15:03:52.630000114",
+     "buy_dev": -0.467,
+     "ask_n": 414238.0,
+     "spread": 0.079
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 16:04:11.130000114",
+     "buy_dev": -0.335,
+     "ask_n": 4831911.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 17:32:13.839999914",
+     "buy_dev": -0.329,
+     "ask_n": 222708672.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 17:37:06.400000095",
+     "buy_dev": -0.386,
+     "ask_n": 114375474.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 17:03:12.859999895",
+     "buy_dev": -0.365,
+     "ask_n": 27454845.0,
+     "spread": 0.024
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 17:16:44.269999981",
+     "buy_dev": -0.444,
+     "ask_n": 46830545.0,
+     "spread": 0.458
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 17:17:31.170000076",
+     "buy_dev": -0.307,
+     "ask_n": 79992000.0,
+     "spread": 0.49
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 17:38:16.420000076",
+     "buy_dev": -0.339,
+     "ask_n": 2135987.0,
+     "spread": 0.024
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 18:14:56.059999943",
+     "buy_dev": -0.3,
+     "ask_n": 36338512.0,
+     "spread": 0.016
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 18:22:46.150000095",
+     "buy_dev": -0.382,
+     "ask_n": 43428172.0,
+     "spread": 0.008
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 18:24:38.670000076",
+     "buy_dev": -0.379,
+     "ask_n": 35093194.0,
+     "spread": 0.008
+    },
+    {
+     "symbol": "XRPTMN",
+     "t": "2026-10-21 14:48:19.250000000",
+     "buy_dev": -0.384,
+     "ask_n": 10579043.0,
+     "spread": 0.036
+    },
+    {
+     "symbol": "XRPTMN",
+     "t": "2026-10-21 18:05:07.359999895",
+     "buy_dev": -0.303,
+     "ask_n": 45849868.0,
+     "spread": 0.0
+    }
+   ]
+  },
+  "0.4%": {
+   "n": 8,
+   "fill": {
+    "0.4": 0.906,
+    "0.7": 0.839,
+    "1.0": 0.824
+   },
+   "binds": {
+    "0.4": 0.25,
+    "0.7": 0.25,
+    "1.0": 0.25
+   },
+   "by_symbol": {
+    "ARBTMN": 3,
+    "BTCTMN": 2,
+    "ETHTMN": 2,
+    "PEPETMN": 1
+   },
+   "rows": [
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 17:31:43.829999924",
+     "buy_dev": -0.591,
+     "ask_n": 10394827.0,
+     "spread": 0.056
+    },
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 18:24:13.660000086",
+     "buy_dev": -0.438,
+     "ask_n": 195026901.0,
+     "spread": 0.17
+    },
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 18:24:46.170000076",
+     "buy_dev": -0.436,
+     "ask_n": 195026901.0,
+     "spread": 0.166
+    },
+    {
+     "symbol": "BTCTMN",
+     "t": "2026-10-21 14:51:24.279999971",
+     "buy_dev": -0.416,
+     "ask_n": 31668871.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "BTCTMN",
+     "t": "2026-10-21 14:51:29.289999962",
+     "buy_dev": -0.424,
+     "ask_n": 615606.0,
+     "spread": 0.005
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 15:03:52.630000114",
+     "buy_dev": -0.467,
+     "ask_n": 414238.0,
+     "spread": 0.079
+    },
+    {
+     "symbol": "ETHTMN",
+     "t": "2026-10-21 17:37:23.910000086",
+     "buy_dev": -0.402,
+     "ask_n": 32703497.0,
+     "spread": 0.0
+    },
+    {
+     "symbol": "PEPETMN",
+     "t": "2026-10-21 17:16:44.269999981",
+     "buy_dev": -0.444,
+     "ask_n": 46830545.0,
+     "spread": 0.458
+    }
+   ]
+  },
+  "0.5%": {
+   "n": 2,
+   "fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "binds": {
+    "0.4": 0.0,
+    "0.7": 0.0,
+    "1.0": 0.0
+   },
+   "by_symbol": {
+    "ARBTMN": 2
+   },
+   "rows": [
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 17:31:43.829999924",
+     "buy_dev": -0.591,
+     "ask_n": 10394827.0,
+     "spread": 0.056
+    },
+    {
+     "symbol": "ARBTMN",
+     "t": "2026-10-21 18:24:51.170000076",
+     "buy_dev": -0.537,
+     "ask_n": 195026901.0,
+     "spread": 0.168
+    }
+   ]
+  }
+ },
+ "per_market": {
+  "ARBTMN": {
+   "ticks": 2745,
+   "median_ask_notional": 14203818,
+   "p10_ask_notional": 2672782,
+   "share_ask_below_0.4": 0.009,
+   "share_ask_below_1.0": 0.079,
+   "median_spread_pct": 0.446,
+   "cheap_ticks_0.3": 35,
+   "cheap_fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "min_buy_dev_pct": -0.591,
+   "minutes_le_0.3": 1.46,
+   "minutes_le_0.5": 0.42,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 444,
+   "target_zone_bid_below_1.0": 0.214
+  },
+  "BNBTMN": {
+   "ticks": 2745,
+   "median_ask_notional": 5321881,
+   "p10_ask_notional": 194529,
+   "share_ask_below_0.4": 0.267,
+   "share_ask_below_1.0": 0.301,
+   "median_spread_pct": 0.146,
+   "cheap_ticks_0.3": 24,
+   "cheap_fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "min_buy_dev_pct": -0.335,
+   "minutes_le_0.3": 1.0,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 237,
+   "target_zone_bid_below_1.0": 0.0
+  },
+  "BTCTMN": {
+   "ticks": 5007,
+   "median_ask_notional": 44537454,
+   "p10_ask_notional": 3232139,
+   "share_ask_below_0.4": 0.058,
+   "share_ask_below_1.0": 0.085,
+   "median_spread_pct": 0.032,
+   "cheap_ticks_0.3": 8,
+   "cheap_fill": {
+    "0.4": 0.936,
+    "0.7": 0.856,
+    "1.0": 0.838
+   },
+   "min_buy_dev_pct": -0.424,
+   "minutes_le_0.3": 0.33,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 3081,
+   "target_zone_bid_below_1.0": 0.121
+  },
+  "DOGETMN": {
+   "ticks": 5007,
+   "median_ask_notional": 54696447,
+   "p10_ask_notional": 563755,
+   "share_ask_below_0.4": 0.104,
+   "share_ask_below_1.0": 0.114,
+   "median_spread_pct": 0.159,
+   "cheap_ticks_0.3": 6,
+   "cheap_fill": {
+    "0.4": 0.376,
+    "0.7": 0.215,
+    "1.0": 0.178
+   },
+   "min_buy_dev_pct": -0.308,
+   "minutes_le_0.3": 0.25,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 1546,
+   "target_zone_bid_below_1.0": 0.363
+  },
+  "ETHTMN": {
+   "ticks": 5007,
+   "median_ask_notional": 66529815,
+   "p10_ask_notional": 3038997,
+   "share_ask_below_0.4": 0.037,
+   "share_ask_below_1.0": 0.088,
+   "median_spread_pct": 0.136,
+   "cheap_ticks_0.3": 38,
+   "cheap_fill": {
+    "0.4": 0.961,
+    "0.7": 0.944,
+    "1.0": 0.927
+   },
+   "min_buy_dev_pct": -0.488,
+   "minutes_le_0.3": 1.58,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 2027,
+   "target_zone_bid_below_1.0": 0.079
+  },
+  "PEPETMN": {
+   "ticks": 2745,
+   "median_ask_notional": 57826086,
+   "p10_ask_notional": 1961533,
+   "share_ask_below_0.4": 0.034,
+   "share_ask_below_1.0": 0.091,
+   "median_spread_pct": 0.104,
+   "cheap_ticks_0.3": 106,
+   "cheap_fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "min_buy_dev_pct": -0.444,
+   "minutes_le_0.3": 4.42,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 1347,
+   "target_zone_bid_below_1.0": 0.255
+  },
+  "SOLTMN": {
+   "ticks": 5007,
+   "median_ask_notional": 45673246,
+   "p10_ask_notional": 843083,
+   "share_ask_below_0.4": 0.091,
+   "share_ask_below_1.0": 0.183,
+   "median_spread_pct": 0.154,
+   "cheap_ticks_0.3": 0,
+   "cheap_fill": null,
+   "min_buy_dev_pct": -0.285,
+   "minutes_le_0.3": 0.0,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 1896,
+   "target_zone_bid_below_1.0": 0.114
+  },
+  "XRPTMN": {
+   "ticks": 5007,
+   "median_ask_notional": 18243558,
+   "p10_ask_notional": 2482998,
+   "share_ask_below_0.4": 0.063,
+   "share_ask_below_1.0": 0.081,
+   "median_spread_pct": 0.181,
+   "cheap_ticks_0.3": 14,
+   "cheap_fill": {
+    "0.4": 1.0,
+    "0.7": 1.0,
+    "1.0": 1.0
+   },
+   "min_buy_dev_pct": -0.384,
+   "minutes_le_0.3": 0.58,
+   "minutes_le_0.5": 0.0,
+   "minutes_le_0.7": 0.0,
+   "target_zone_ticks": 1968,
+   "target_zone_bid_below_1.0": 0.138
+  }
+ },
+ "market_hours_total": 23.1,
+ "cheap_minutes_total": {
+  "0.3": 9.62,
+  "0.4": 1.54,
+  "0.5": 0.42,
+  "0.6": 0.0,
+  "0.7": 0.0
+ }
+}

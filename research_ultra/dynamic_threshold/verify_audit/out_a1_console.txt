@@ -1,0 +1,180 @@
+
+=== author_model {}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 35 mean=0.308 sum=10.763 win=77.1 exits={'target': 22, 'time': 13} | sel n=27 sum=5.994
+    V1   test n= 25 mean=0.401 sum=10.015 win=76.0 exits={'target': 17, 'time': 8} | sel n=16 sum=8.524 diff -0.748 ci90 [-3.435, 2.231] p>0 0.315
+    V2   test n= 25 mean=0.347 sum=8.678 win=76.0 exits={'target': 17, 'time': 8} | sel n=18 sum=8.236 diff -2.085 ci90 [-5.773, 1.458] p>0 0.175
+    V2b  test n= 26 mean=0.32 sum=8.321 win=73.1 exits={'target': 17, 'time': 9} | sel n=19 sum=8.732 diff -2.442 ci90 [-6.207, 1.118] p>0 0.139
+    V3   test n= 26 mean=0.277 sum=7.204 win=80.8 exits={'target': 18, 'time': 8} | sel n=20 sum=6.059 diff -3.559 ci90 [-8.626, 0.999] p>0 0.103
+    global fixed curve on test (n, sum): {'0.7': [35, np.float64(10.763)], '0.8': [27, np.float64(9.903)], '0.9': [15, np.float64(7.633)], '1.0': [9, np.float64(4.915)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 42 mean=0.257 sum=10.791 win=73.8 exits={'target': 26, 'time': 16} | sel n=20 sum=5.966
+    V1   test n= 27 mean=0.419 sum=11.311 win=77.8 exits={'target': 19, 'time': 8} | sel n=14 sum=7.227 diff +0.521 ci90 [-2.745, 4.113] p>0 0.58
+    V2   test n= 28 mean=0.344 sum=9.621 win=75.0 exits={'target': 19, 'time': 9} | sel n=15 sum=7.292 diff -1.169 ci90 [-5.388, 2.927] p>0 0.323
+    V2b  test n= 34 mean=0.291 sum=9.899 win=76.5 exits={'target': 22, 'time': 12} | sel n=15 sum=7.292 diff -0.891 ci90 [-4.844, 2.804] p>0 0.363
+    V3   test n= 32 mean=0.228 sum=7.285 win=78.1 exits={'target': 22, 'time': 10} | sel n=14 sum=5.978 diff -3.506 ci90 [-8.418, 1.051] p>0 0.112
+    global fixed curve on test (n, sum): {'0.7': [42, np.float64(10.791)], '0.8': [31, np.float64(10.397)], '0.9': [16, np.float64(8.433)], '1.0': [10, np.float64(5.715)], '1.2': [3, np.float64(2.142)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 24 mean=0.326 sum=7.819 win=75.0 exits={'target': 15, 'time': 9} | sel n=38 sum=8.937
+    V1   test n= 16 mean=0.389 sum=6.223 win=75.0 exits={'target': 11, 'time': 5} | sel n=25 sum=12.316 diff -1.597 ci90 [-3.562, 0.465] p>0 0.097
+    V2   test n= 16 mean=0.304 sum=4.866 win=75.0 exits={'target': 11, 'time': 5} | sel n=27 sum=12.048 diff -2.954 ci90 [-6.31, -0.368] p>0 0.027
+    V2b  test n= 17 mean=0.265 sum=4.509 win=70.6 exits={'target': 11, 'time': 6} | sel n=28 sum=12.544 diff -3.310 ci90 [-6.695, -0.602] p>0 0.017
+    V3   test n= 17 mean=0.29 sum=4.922 win=76.5 exits={'target': 11, 'time': 6} | sel n=29 sum=8.34 diff -2.897 ci90 [-6.409, -0.051] p>0 0.046
+    global fixed curve on test (n, sum): {'0.7': [24, np.float64(7.819)], '0.8': [18, np.float64(5.827)], '0.9': [9, np.float64(4.122)], '1.0': [4, np.float64(3.51)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 1.0, 'ARBTMN': 0.7000000000000001} k=1.5
+    V4   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763
+    V1   test n= 25 mean=0.195 sum=4.886 win=72.0 exits={'target': 16, 'time': 9} | sel n=31 sum=10.868 diff -1.108 ci90 [-3.287, 0.814] p>0 0.142
+    V2   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V2b  test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=34 sum=11.119 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V3   test n= 20 mean=0.303 sum=6.059 win=75.0 exits={'target': 15, 'time': 5} | sel n=26 sum=7.204 diff +0.065 ci90 [-1.849, 2.246] p>0 0.5
+    global fixed curve on test (n, sum): {'0.7': [27, np.float64(5.994)], '0.8': [18, np.float64(6.853)], '0.9': [12, np.float64(7.188)], '1.0': [8, np.float64(5.282)], '1.2': [6, np.float64(4.847)], '1.5': [0, 0]}
+
+=== entry_next_minute {'delay': 1}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+    V4   test n= 25 mean=-0.299 sum=-7.482 win=40.0 exits={'time': 14, 'target': 9, 'stop': 2} | sel n=17 sum=-10.073
+    V1   test n=  9 mean=-0.147 sum=-1.326 win=55.6 exits={'target': 5, 'time': 3, 'stop': 1} | sel n=5 sum=2.614 diff +6.155 ci90 [0.848, 11.703] p>0 0.973
+    V2   test n= 12 mean=-0.666 sum=-7.997 win=16.7 exits={'time': 8, 'stop': 2, 'target': 2} | sel n=4 sum=-2.875 diff -0.515 ci90 [-4.462, 3.515] p>0 0.407
+    V2b  test n= 12 mean=-0.666 sum=-7.997 win=16.7 exits={'time': 8, 'stop': 2, 'target': 2} | sel n=4 sum=-2.875 diff -0.515 ci90 [-4.462, 3.515] p>0 0.407
+    V3   test n= 18 mean=-0.333 sum=-5.989 win=38.9 exits={'time': 10, 'target': 6, 'stop': 2} | sel n=12 sum=-6.251 diff +1.493 ci90 [-1.843, 5.209] p>0 0.761
+    global fixed curve on test (n, sum): {'0.7': [25, np.float64(-7.482)], '0.8': [19, np.float64(-7.76)], '0.9': [10, np.float64(-6.627)], '1.0': [6, np.float64(-1.757)], '1.2': [2, np.float64(-1.649)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+    V4   test n= 29 mean=-0.256 sum=-7.413 win=41.4 exits={'time': 16, 'target': 11, 'stop': 2} | sel n=13 sum=-10.141
+    V1   test n= 10 mean=-0.044 sum=-0.436 win=60.0 exits={'target': 6, 'time': 3, 'stop': 1} | sel n=4 sum=1.724 diff +6.977 ci90 [1.651, 12.423] p>0 0.987
+    V2   test n= 13 mean=-0.547 sum=-7.106 win=23.1 exits={'time': 8, 'target': 3, 'stop': 2} | sel n=3 sum=-3.765 diff +0.307 ci90 [-3.83, 4.623] p>0 0.552
+    V2b  test n= 13 mean=-0.547 sum=-7.106 win=23.1 exits={'time': 8, 'target': 3, 'stop': 2} | sel n=3 sum=-3.765 diff +0.307 ci90 [-3.83, 4.623] p>0 0.552
+    V3   test n= 21 mean=-0.274 sum=-5.752 win=38.1 exits={'time': 12, 'target': 7, 'stop': 2} | sel n=9 sum=-6.487 diff +1.661 ci90 [-2.06, 5.634] p>0 0.761
+    global fixed curve on test (n, sum): {'0.7': [29, np.float64(-7.413)], '0.8': [22, np.float64(-7.523)], '0.9': [11, np.float64(-5.737)], '1.0': [7, np.float64(-0.866)], '1.2': [3, np.float64(-0.758)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 1.0, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 0.8} k=4.0
+    V4   test n= 18 mean=-0.22 sum=-3.967 win=44.4 exits={'time': 10, 'target': 7, 'stop': 1} | sel n=24 sum=-13.587
+    V1   test n= 10 mean=-0.38 sum=-3.795 win=40.0 exits={'time': 5, 'target': 4, 'stop': 1} | sel n=10 sum=2.471 diff +0.172 ci90 [-2.283, 2.612] p>0 0.549
+    V2   test n=  9 mean=-0.551 sum=-4.961 win=22.2 exits={'time': 6, 'target': 2, 'stop': 1} | sel n=7 sum=-5.91 diff -0.994 ci90 [-4.201, 2.231] p>0 0.302
+    V2b  test n= 10 mean=-0.598 sum=-5.976 win=20.0 exits={'time': 7, 'target': 2, 'stop': 1} | sel n=10 sum=-5.814 diff -2.009 ci90 [-4.758, 0.598] p>0 0.108
+    V3   test n= 14 mean=-0.28 sum=-3.913 win=42.9 exits={'time': 8, 'target': 5, 'stop': 1} | sel n=16 sum=-8.326 diff +0.054 ci90 [-2.358, 2.51] p>0 0.497
+    global fixed curve on test (n, sum): {'0.7': [18, np.float64(-3.967)], '0.8': [14, np.float64(-6.217)], '0.9': [7, np.float64(-4.762)], '1.0': [4, np.float64(-1.518)], '1.2': [2, np.float64(-1.649)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 1.5, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.8, 'DOGETMN': 1.0, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 0.8999999999999999, 'ARBTMN': 1.2} k=2.5
+    V4   test n= 17 mean=-0.593 sum=-10.073 win=23.5 exits={'time': 11, 'target': 4, 'stop': 2} | sel n=25 sum=-7.482
+    V1   test n= 12 mean=-0.636 sum=-7.629 win=33.3 exits={'time': 6, 'target': 4, 'stop': 2} | sel n=11 sum=1.692 diff +2.444 ci90 [0.196, 4.968] p>0 0.982
+    V2   test n= 12 mean=-0.535 sum=-6.425 win=25.0 exits={'time': 7, 'target': 3, 'stop': 2} | sel n=21 sum=-7.184 diff +3.648 ci90 [0.871, 6.833] p>0 0.983
+    V2b  test n= 15 mean=-0.546 sum=-8.184 win=26.7 exits={'time': 9, 'target': 4, 'stop': 2} | sel n=20 sum=-5.989 diff +1.889 ci90 [0.0, 4.07] p>0 0.867
+    V3   test n= 12 mean=-0.521 sum=-6.251 win=25.0 exits={'time': 7, 'target': 3, 'stop': 2} | sel n=18 sum=-5.989 diff +3.822 ci90 [-1.422, 10.607] p>0 0.856
+    global fixed curve on test (n, sum): {'0.7': [17, np.float64(-10.073)], '0.8': [11, np.float64(-3.977)], '0.9': [7, np.float64(-4.031)], '1.0': [5, np.float64(-0.14)], '1.2': [4, np.float64(1.862)], '1.5': [0, 0]}
+
+=== entry_adverse_extra_half_spread {'adverse': 1.0}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 1.0} k=3.0
+    V4   test n= 34 mean=0.165 sum=5.607 win=70.6 exits={'target': 20, 'time': 14} | sel n=27 sum=3.417
+    V1   test n= 21 mean=0.233 sum=4.899 win=71.4 exits={'target': 15, 'time': 6} | sel n=14 sum=6.936 diff -0.708 ci90 [-6.049, 4.008] p>0 0.417
+    V2   test n= 24 mean=0.212 sum=5.076 win=66.7 exits={'target': 15, 'time': 9} | sel n=18 sum=6.723 diff -0.531 ci90 [-4.026, 3.062] p>0 0.39
+    V2b  test n= 23 mean=0.112 sum=2.584 win=60.9 exits={'target': 14, 'time': 9} | sel n=17 sum=7.156 diff -3.022 ci90 [-7.894, 1.326] p>0 0.136
+    V3   test n= 25 mean=0.145 sum=3.631 win=68.0 exits={'target': 15, 'time': 10} | sel n=19 sum=4.649 diff -1.976 ci90 [-7.001, 2.62] p>0 0.244
+    global fixed curve on test (n, sum): {'0.7': [34, np.float64(5.607)], '0.8': [26, np.float64(5.957)], '0.9': [14, np.float64(4.628)], '1.0': [9, np.float64(3.78)], '1.2': [2, np.float64(1.104)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 1.0} k=3.0
+    V4   test n= 41 mean=0.129 sum=5.303 win=68.3 exits={'target': 24, 'time': 17} | sel n=20 sum=3.72
+    V1   test n= 23 mean=0.262 sum=6.030 win=73.9 exits={'target': 17, 'time': 6} | sel n=12 sum=5.805 diff +0.727 ci90 [-4.735, 5.969] p>0 0.598
+    V2   test n= 27 mean=0.216 sum=5.822 win=66.7 exits={'target': 17, 'time': 10} | sel n=15 sum=5.977 diff +0.518 ci90 [-3.602, 4.632] p>0 0.574
+    V2b  test n= 31 mean=0.119 sum=3.681 win=67.7 exits={'target': 19, 'time': 12} | sel n=13 sum=5.987 diff -1.623 ci90 [-6.353, 2.993] p>0 0.298
+    V3   test n= 30 mean=0.118 sum=3.538 win=66.7 exits={'target': 18, 'time': 12} | sel n=14 sum=4.741 diff -1.765 ci90 [-6.693, 3.068] p>0 0.288
+    global fixed curve on test (n, sum): {'0.7': [41, np.float64(5.303)], '0.8': [29, np.float64(6.403)], '0.9': [15, np.float64(5.336)], '1.0': [10, np.float64(4.488)], '1.2': [3, np.float64(1.812)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 23 mean=0.169 sum=3.885 win=65.2 exits={'target': 13, 'time': 10} | sel n=38 sum=5.138
+    V1   test n= 15 mean=0.214 sum=3.216 win=60.0 exits={'target': 9, 'time': 6} | sel n=25 sum=9.769 diff -0.669 ci90 [-2.282, 1.159] p>0 0.259
+    V2   test n= 15 mean=0.148 sum=2.216 win=60.0 exits={'target': 9, 'time': 6} | sel n=27 sum=9.583 diff -1.669 ci90 [-4.616, 0.777] p>0 0.138
+    V2b  test n= 16 mean=0.112 sum=1.787 win=56.2 exits={'target': 9, 'time': 7} | sel n=28 sum=10.007 diff -2.099 ci90 [-5.089, 0.422] p>0 0.085
+    V3   test n= 16 mean=0.141 sum=2.259 win=62.5 exits={'target': 9, 'time': 7} | sel n=28 sum=6.021 diff -1.627 ci90 [-4.762, 1.051] p>0 0.172
+    global fixed curve on test (n, sum): {'0.7': [23, np.float64(3.885)], '0.8': [17, np.float64(2.794)], '0.9': [8, np.float64(1.828)], '1.0': [4, np.float64(2.999)], '1.2': [2, np.float64(1.104)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 1.0, 'ARBTMN': 0.8} k=1.5
+    V4   test n= 27 mean=0.127 sum=3.417 win=70.4 exits={'target': 17, 'time': 10} | sel n=34 sum=5.607
+    V1   test n= 21 mean=0.198 sum=4.150 win=71.4 exits={'target': 14, 'time': 7} | sel n=26 sum=6.799 diff +0.733 ci90 [-2.236, 3.653] p>0 0.666
+    V2   test n= 27 mean=0.127 sum=3.417 win=70.4 exits={'target': 17, 'time': 10} | sel n=34 sum=5.607 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V2b  test n= 23 mean=0.215 sum=4.936 win=73.9 exits={'target': 15, 'time': 8} | sel n=27 sum=6.118 diff +1.519 ci90 [-0.247, 3.878] p>0 0.861
+    V3   test n= 19 mean=0.245 sum=4.649 win=73.7 exits={'target': 13, 'time': 6} | sel n=25 sum=3.631 diff +1.232 ci90 [-1.202, 4.095] p>0 0.77
+    global fixed curve on test (n, sum): {'0.7': [27, np.float64(3.417)], '0.8': [17, np.float64(5.4)], '0.9': [12, np.float64(6.037)], '1.0': [7, np.float64(4.565)], '1.2': [6, np.float64(4.408)], '1.5': [0, 0]}
+
+=== stops_on_candle_low {'lowstop': True}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 35 mean=0.308 sum=10.763 win=77.1 exits={'target': 22, 'time': 13} | sel n=27 sum=5.994
+    V1   test n= 25 mean=0.401 sum=10.015 win=76.0 exits={'target': 17, 'time': 8} | sel n=16 sum=8.524 diff -0.748 ci90 [-3.435, 2.231] p>0 0.315
+    V2   test n= 25 mean=0.347 sum=8.678 win=76.0 exits={'target': 17, 'time': 8} | sel n=18 sum=8.236 diff -2.085 ci90 [-5.773, 1.458] p>0 0.175
+    V2b  test n= 26 mean=0.32 sum=8.321 win=73.1 exits={'target': 17, 'time': 9} | sel n=19 sum=8.732 diff -2.442 ci90 [-6.207, 1.118] p>0 0.139
+    V3   test n= 26 mean=0.277 sum=7.204 win=80.8 exits={'target': 18, 'time': 8} | sel n=20 sum=6.059 diff -3.559 ci90 [-8.626, 0.999] p>0 0.103
+    global fixed curve on test (n, sum): {'0.7': [35, np.float64(10.763)], '0.8': [27, np.float64(9.903)], '0.9': [15, np.float64(7.633)], '1.0': [9, np.float64(4.915)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 42 mean=0.257 sum=10.791 win=73.8 exits={'target': 26, 'time': 16} | sel n=20 sum=5.966
+    V1   test n= 27 mean=0.419 sum=11.311 win=77.8 exits={'target': 19, 'time': 8} | sel n=14 sum=7.227 diff +0.521 ci90 [-2.745, 4.113] p>0 0.58
+    V2   test n= 28 mean=0.344 sum=9.621 win=75.0 exits={'target': 19, 'time': 9} | sel n=15 sum=7.292 diff -1.169 ci90 [-5.388, 2.927] p>0 0.323
+    V2b  test n= 34 mean=0.291 sum=9.899 win=76.5 exits={'target': 22, 'time': 12} | sel n=15 sum=7.292 diff -0.891 ci90 [-4.844, 2.804] p>0 0.363
+    V3   test n= 32 mean=0.228 sum=7.285 win=78.1 exits={'target': 22, 'time': 10} | sel n=14 sum=5.978 diff -3.506 ci90 [-8.418, 1.051] p>0 0.112
+    global fixed curve on test (n, sum): {'0.7': [42, np.float64(10.791)], '0.8': [31, np.float64(10.397)], '0.9': [16, np.float64(8.433)], '1.0': [10, np.float64(5.715)], '1.2': [3, np.float64(2.142)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 24 mean=0.326 sum=7.819 win=75.0 exits={'target': 15, 'time': 9} | sel n=38 sum=8.937
+    V1   test n= 16 mean=0.389 sum=6.223 win=75.0 exits={'target': 11, 'time': 5} | sel n=25 sum=12.316 diff -1.597 ci90 [-3.562, 0.465] p>0 0.097
+    V2   test n= 16 mean=0.304 sum=4.866 win=75.0 exits={'target': 11, 'time': 5} | sel n=27 sum=12.048 diff -2.954 ci90 [-6.31, -0.368] p>0 0.027
+    V2b  test n= 17 mean=0.265 sum=4.509 win=70.6 exits={'target': 11, 'time': 6} | sel n=28 sum=12.544 diff -3.310 ci90 [-6.695, -0.602] p>0 0.017
+    V3   test n= 17 mean=0.29 sum=4.922 win=76.5 exits={'target': 11, 'time': 6} | sel n=29 sum=8.34 diff -2.897 ci90 [-6.409, -0.051] p>0 0.046
+    global fixed curve on test (n, sum): {'0.7': [24, np.float64(7.819)], '0.8': [18, np.float64(5.827)], '0.9': [9, np.float64(4.122)], '1.0': [4, np.float64(3.51)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 1.0, 'ARBTMN': 0.7000000000000001} k=1.5
+    V4   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763
+    V1   test n= 25 mean=0.195 sum=4.886 win=72.0 exits={'target': 16, 'time': 9} | sel n=31 sum=10.868 diff -1.108 ci90 [-3.287, 0.814] p>0 0.142
+    V2   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V2b  test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=34 sum=11.119 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V3   test n= 20 mean=0.303 sum=6.059 win=75.0 exits={'target': 15, 'time': 5} | sel n=26 sum=7.204 diff +0.065 ci90 [-1.849, 2.246] p>0 0.5
+    global fixed curve on test (n, sum): {'0.7': [27, np.float64(5.994)], '0.8': [18, np.float64(6.853)], '0.9': [12, np.float64(7.188)], '1.0': [8, np.float64(5.282)], '1.2': [6, np.float64(4.847)], '1.5': [0, 0]}
+
+=== stops_on_low_fill_at_low {'lowstop': True, 'low_fill': 'low'}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 35 mean=0.308 sum=10.763 win=77.1 exits={'target': 22, 'time': 13} | sel n=27 sum=5.994
+    V1   test n= 25 mean=0.401 sum=10.015 win=76.0 exits={'target': 17, 'time': 8} | sel n=16 sum=8.524 diff -0.748 ci90 [-3.435, 2.231] p>0 0.315
+    V2   test n= 25 mean=0.347 sum=8.678 win=76.0 exits={'target': 17, 'time': 8} | sel n=18 sum=8.236 diff -2.085 ci90 [-5.773, 1.458] p>0 0.175
+    V2b  test n= 26 mean=0.32 sum=8.321 win=73.1 exits={'target': 17, 'time': 9} | sel n=19 sum=8.732 diff -2.442 ci90 [-6.207, 1.118] p>0 0.139
+    V3   test n= 26 mean=0.277 sum=7.204 win=80.8 exits={'target': 18, 'time': 8} | sel n=20 sum=6.059 diff -3.559 ci90 [-8.626, 0.999] p>0 0.103
+    global fixed curve on test (n, sum): {'0.7': [35, np.float64(10.763)], '0.8': [27, np.float64(9.903)], '0.9': [15, np.float64(7.633)], '1.0': [9, np.float64(4.915)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 42 mean=0.257 sum=10.791 win=73.8 exits={'target': 26, 'time': 16} | sel n=20 sum=5.966
+    V1   test n= 27 mean=0.419 sum=11.311 win=77.8 exits={'target': 19, 'time': 8} | sel n=14 sum=7.227 diff +0.521 ci90 [-2.745, 4.113] p>0 0.58
+    V2   test n= 28 mean=0.344 sum=9.621 win=75.0 exits={'target': 19, 'time': 9} | sel n=15 sum=7.292 diff -1.169 ci90 [-5.388, 2.927] p>0 0.323
+    V2b  test n= 34 mean=0.291 sum=9.899 win=76.5 exits={'target': 22, 'time': 12} | sel n=15 sum=7.292 diff -0.891 ci90 [-4.844, 2.804] p>0 0.363
+    V3   test n= 32 mean=0.228 sum=7.285 win=78.1 exits={'target': 22, 'time': 10} | sel n=14 sum=5.978 diff -3.506 ci90 [-8.418, 1.051] p>0 0.112
+    global fixed curve on test (n, sum): {'0.7': [42, np.float64(10.791)], '0.8': [31, np.float64(10.397)], '0.9': [16, np.float64(8.433)], '1.0': [10, np.float64(5.715)], '1.2': [3, np.float64(2.142)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 0.7000000000000001, 'ARBTMN': 0.8} k=3.0
+    V4   test n= 24 mean=0.326 sum=7.819 win=75.0 exits={'target': 15, 'time': 9} | sel n=38 sum=8.937
+    V1   test n= 16 mean=0.389 sum=6.223 win=75.0 exits={'target': 11, 'time': 5} | sel n=25 sum=12.316 diff -1.597 ci90 [-3.562, 0.465] p>0 0.097
+    V2   test n= 16 mean=0.304 sum=4.866 win=75.0 exits={'target': 11, 'time': 5} | sel n=27 sum=12.048 diff -2.954 ci90 [-6.31, -0.368] p>0 0.027
+    V2b  test n= 17 mean=0.265 sum=4.509 win=70.6 exits={'target': 11, 'time': 6} | sel n=28 sum=12.544 diff -3.310 ci90 [-6.695, -0.602] p>0 0.017
+    V3   test n= 17 mean=0.29 sum=4.922 win=76.5 exits={'target': 11, 'time': 6} | sel n=29 sum=8.34 diff -2.897 ci90 [-6.409, -0.051] p>0 0.046
+    global fixed curve on test (n, sum): {'0.7': [24, np.float64(7.819)], '0.8': [18, np.float64(5.827)], '0.9': [9, np.float64(4.122)], '1.0': [4, np.float64(3.51)], '1.2': [2, np.float64(1.342)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.7000000000000001, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 1.0, 'ARBTMN': 0.7000000000000001} k=1.5
+    V4   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763
+    V1   test n= 25 mean=0.195 sum=4.886 win=72.0 exits={'target': 16, 'time': 9} | sel n=31 sum=10.868 diff -1.108 ci90 [-3.287, 0.814] p>0 0.142
+    V2   test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=35 sum=10.763 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V2b  test n= 27 mean=0.222 sum=5.994 win=70.4 exits={'target': 18, 'time': 9} | sel n=34 sum=11.119 diff +0.000 ci90 [0.0, 0.0] p>0 0.0
+    V3   test n= 20 mean=0.303 sum=6.059 win=75.0 exits={'target': 15, 'time': 5} | sel n=26 sum=7.204 diff +0.065 ci90 [-1.849, 2.246] p>0 0.5
+    global fixed curve on test (n, sum): {'0.7': [27, np.float64(5.994)], '0.8': [18, np.float64(6.853)], '0.9': [12, np.float64(7.188)], '1.0': [8, np.float64(5.282)], '1.2': [6, np.float64(4.847)], '1.5': [0, 0]}
+
+=== pessimistic_next_minute+low_stops {'delay': 1, 'lowstop': True}
+  -- split author_4_3: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+    V4   test n= 25 mean=-0.339 sum=-8.475 win=40.0 exits={'time': 12, 'target': 9, 'stop': 4} | sel n=17 sum=-9.422
+    V1   test n=  9 mean=-0.133 sum=-1.194 win=55.6 exits={'target': 5, 'time': 3, 'stop': 1} | sel n=5 sum=2.614 diff +7.282 ci90 [1.448, 13.443] p>0 0.982
+    V2   test n= 12 mean=-0.709 sum=-8.511 win=16.7 exits={'time': 7, 'stop': 3, 'target': 2} | sel n=4 sum=-2.875 diff -0.036 ci90 [-4.294, 4.49] p>0 0.477
+    V2b  test n= 12 mean=-0.709 sum=-8.511 win=16.7 exits={'time': 7, 'stop': 3, 'target': 2} | sel n=4 sum=-2.875 diff -0.036 ci90 [-4.294, 4.49] p>0 0.477
+    V3   test n= 18 mean=-0.361 sum=-6.504 win=38.9 exits={'time': 9, 'target': 6, 'stop': 3} | sel n=12 sum=-7.373 diff +1.971 ci90 [-1.743, 6.211] p>0 0.795
+    global fixed curve on test (n, sum): {'0.7': [25, np.float64(-8.475)], '0.8': [19, np.float64(-8.754)], '0.9': [10, np.float64(-7.142)], '1.0': [6, np.float64(-1.757)], '1.2': [2, np.float64(-1.649)], '1.5': [0, 0]}
+  -- split sel_3_test_4: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7000000000000001, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+    V4   test n= 29 mean=-0.29 sum=-8.406 win=41.4 exits={'time': 14, 'target': 11, 'stop': 4} | sel n=13 sum=-9.491
+    V1   test n= 10 mean=-0.03 sum=-0.303 win=60.0 exits={'target': 6, 'time': 3, 'stop': 1} | sel n=4 sum=1.724 diff +8.103 ci90 [2.241, 14.152] p>0 0.991
+    V2   test n= 13 mean=-0.586 sum=-7.621 win=23.1 exits={'time': 7, 'target': 3, 'stop': 3} | sel n=3 sum=-3.765 diff +0.786 ci90 [-3.597, 5.603] p>0 0.612
+    V2b  test n= 13 mean=-0.586 sum=-7.621 win=23.1 exits={'time': 7, 'target': 3, 'stop': 3} | sel n=3 sum=-3.765 diff +0.786 ci90 [-3.597, 5.603] p>0 0.612
+    V3   test n= 21 mean=-0.298 sum=-6.267 win=38.1 exits={'time': 11, 'target': 7, 'stop': 3} | sel n=9 sum=-7.61 diff +2.140 ci90 [-1.945, 6.567] p>0 0.798
+    global fixed curve on test (n, sum): {'0.7': [29, np.float64(-8.406)], '0.8': [22, np.float64(-8.517)], '0.9': [11, np.float64(-6.252)], '1.0': [7, np.float64(-0.866)], '1.2': [3, np.float64(-0.758)], '1.5': [0, 0]}
+  -- split sel_5_test_2: choices V1={'BTCTMN': 0.7000000000000001, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 1.0, 'PEPETMN': 0.8999999999999999, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+    V4   test n= 18 mean=-0.283 sum=-5.093 win=44.4 exits={'time': 8, 'target': 7, 'stop': 3} | sel n=24 sum=-12.804
+    V1   test n=  6 mean=0.09 sum=0.539 win=66.7 exits={'target': 4, 'time': 2} | sel n=7 sum=2.375 diff +5.632 ci90 [0.152, 11.288] p>0 0.955
+    V2   test n=  9 mean=-0.623 sum=-5.609 win=22.2 exits={'time': 5, 'target': 2, 'stop': 2} | sel n=7 sum=-5.777 diff -0.516 ci90 [-4.092, 3.263] p>0 0.395
+    V2b  test n=  9 mean=-0.623 sum=-5.609 win=22.2 exits={'time': 5, 'target': 2, 'stop': 2} | sel n=7 sum=-5.777 diff -0.516 ci90 [-4.092, 3.263] p>0 0.395
+    V3   test n= 14 mean=-0.326 sum=-4.561 win=42.9 exits={'time': 7, 'target': 5, 'stop': 2} | sel n=16 sum=-9.316 diff +0.532 ci90 [-2.339, 3.706] p>0 0.579
+    global fixed curve on test (n, sum): {'0.7': [18, np.float64(-5.093)], '0.8': [14, np.float64(-7.343)], '0.9': [7, np.float64(-5.409)], '1.0': [4, np.float64(-1.518)], '1.2': [2, np.float64(-1.649)], '1.5': [0, 0]}
+  -- split reverse_sel_5to7_test_1to4: choices V1={'BTCTMN': 1.5, 'ETHTMN': 0.7000000000000001, 'SOLTMN': 0.7000000000000001, 'XRPTMN': 0.8, 'DOGETMN': 1.0, 'PEPETMN': 0.7000000000000001, 'BNBTMN': 0.8999999999999999, 'ARBTMN': 1.2} k=3.0
+    V4   test n= 17 mean=-0.554 sum=-9.422 win=23.5 exits={'time': 10, 'target': 4, 'stop': 3} | sel n=25 sum=-8.475
+    V1   test n= 12 mean=-0.488 sum=-5.856 win=33.3 exits={'time': 6, 'target': 4, 'stop': 2} | sel n=11 sum=1.692 diff +3.566 ci90 [0.196, 7.278] p>0 0.982
+    V2   test n= 12 mean=-0.481 sum=-5.774 win=25.0 exits={'time': 6, 'stop': 3, 'target': 3} | sel n=18 sum=-7.767 diff +3.648 ci90 [0.871, 6.833] p>0 0.983
+    V2b  test n= 15 mean=-0.502 sum=-7.534 win=26.7 exits={'time': 8, 'target': 4, 'stop': 3} | sel n=20 sum=-6.504 diff +1.889 ci90 [0.0, 4.07] p>0 0.867
+    V3   test n= 12 mean=-0.614 sum=-7.373 win=25.0 exits={'time': 6, 'target': 3, 'stop': 3} | sel n=18 sum=-6.504 diff +2.049 ci90 [-1.611, 6.127] p>0 0.81
+    global fixed curve on test (n, sum): {'0.7': [17, np.float64(-9.422)], '0.8': [11, np.float64(-5.099)], '0.9': [7, np.float64(-5.153)], '1.0': [5, np.float64(-0.14)], '1.2': [4, np.float64(1.862)], '1.5': [0, 0]}

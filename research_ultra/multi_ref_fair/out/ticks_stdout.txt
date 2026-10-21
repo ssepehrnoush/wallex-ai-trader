@@ -1,0 +1,189 @@
+{
+ "hours_per_run": {
+  "live_main": 1.67,
+  "shadow_v2": 0.69,
+  "shadow_v3": 0.41,
+  "shadow_v4": 0.31,
+  "shadow_v5": 0.18,
+  "shadow_v6": 0.16
+ },
+ "estimator_calibration_on_shadow": {
+  "0": {
+   "n": 2494,
+   "median_abs_err_pct": 0.051,
+   "p95_abs_err_pct": 0.1744,
+   "p99_abs_err_pct": 0.2701
+  },
+  "20": {
+   "n": 2494,
+   "median_abs_err_pct": 0.0331,
+   "p95_abs_err_pct": 0.117,
+   "p99_abs_err_pct": 0.1646
+  },
+  "37": {
+   "n": 2494,
+   "median_abs_err_pct": 0.006,
+   "p95_abs_err_pct": 0.0397,
+   "p99_abs_err_pct": 0.0602
+  },
+  "38": {
+   "n": 2494,
+   "median_abs_err_pct": 0.0046,
+   "p95_abs_err_pct": 0.03,
+   "p99_abs_err_pct": 0.042
+  },
+  "39": {
+   "n": 2494,
+   "median_abs_err_pct": 0.0007,
+   "p95_abs_err_pct": 0.015,
+   "p99_abs_err_pct": 0.0291
+  },
+  "40": {
+   "n": 2494,
+   "median_abs_err_pct": 0.0018,
+   "p95_abs_err_pct": 0.0168,
+   "p99_abs_err_pct": 0.0325
+  },
+  "41": {
+   "n": 2494,
+   "median_abs_err_pct": 0.0037,
+   "p95_abs_err_pct": 0.03,
+   "p99_abs_err_pct": 0.0443
+  }
+ },
+ "chosen_lag_s": 39,
+ "usdttmn_leg_per_run": {
+  "shadow_v2": {
+   "ticks": 986,
+   "exact": true,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 7.419,
+    "0.1": 2.846,
+    "0.2": 0.0
+   },
+   "max_abs_u_vs_med5_pct": 0.139,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.059
+  },
+  "shadow_v3": {
+   "ticks": 598,
+   "exact": true,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 22.819,
+    "0.1": 11.577,
+    "0.2": 0.0
+   },
+   "max_abs_u_vs_med5_pct": 0.153,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.053
+  },
+  "shadow_v4": {
+   "ticks": 424,
+   "exact": true,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 18.246,
+    "0.1": 14.692,
+    "0.2": 9.242
+   },
+   "max_abs_u_vs_med5_pct": 0.229,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.052
+  },
+  "shadow_v5": {
+   "ticks": 254,
+   "exact": true,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 32.143,
+    "0.1": 18.651,
+    "0.2": 0.0
+   },
+   "max_abs_u_vs_med5_pct": 0.188,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.059
+  },
+  "shadow_v6": {
+   "ticks": 232,
+   "exact": true,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 0.0,
+    "0.1": 0.0,
+    "0.2": 0.0
+   },
+   "max_abs_u_vs_med5_pct": 0.037,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.018
+  },
+  "live_main": {
+   "ticks": 2053,
+   "exact": false,
+   "abs_u_vs_med5_gt_pct": {
+    "0.05": 5.705,
+    "0.1": 0.683,
+    "0.2": 0.0
+   },
+   "max_abs_u_vs_med5_pct": 0.12,
+   "abs_tick_jump_gt_0.1_pct_count": 0,
+   "max_abs_tick_jump_pct": 0.053
+  }
+ },
+ "tick_signal_counts": {
+  "shadow_exact_u": {
+   "ticks_buy_dev_le_0.3": {
+    "recorded": 31,
+    "robust_u": 37
+   },
+   "ticks_buy_dev_le_0.4": {
+    "recorded": 6,
+    "robust_u": 6
+   },
+   "ticks_buy_dev_le_0.5": {
+    "recorded": 0,
+    "robust_u": 0
+   },
+   "ticks_buy_dev_le_0.7": {
+    "recorded": 0,
+    "robust_u": 0
+   },
+   "ticks": 13166,
+   "u_available_ticks": 13166
+  },
+  "live_main_estimated_u": {
+   "ticks_buy_dev_le_0.3": {
+    "recorded": 167,
+    "robust_u": 185
+   },
+   "ticks_buy_dev_le_0.4": {
+    "recorded": 31,
+    "robust_u": 28
+   },
+   "ticks_buy_dev_le_0.5": {
+    "recorded": 10,
+    "robust_u": 15
+   },
+   "ticks_buy_dev_le_0.7": {
+    "recorded": 0,
+    "robust_u": 0
+   },
+   "ticks": 18944,
+   "u_available_ticks": 16424
+  }
+ },
+ "tick_replay_0.7": {
+  "recorded": {
+   "n": 0,
+   "sum_pct": 0,
+   "mean_pct": null,
+   "exits": {},
+   "list": []
+  },
+  "robust_u": {
+   "n": 0,
+   "sum_pct": 0,
+   "mean_pct": null,
+   "exits": {},
+   "list": []
+  }
+ }
+}
+episodes: 1
+{'t0': '2026-10-21 14:51:24.279999971+00:00', 'run': 'shadow_v2', 'ticks': 2, 'markets': ['BTCTMN', 'ETHTMN', 'DOGETMN'], 'n_markets': 3, 'u_dev_pct_at_t0': 0.002, 'min_buy_dev_pct': -0.416, 'binance_vs_median_pct': {'BTCTMN_prev_min': -0.0018, 'BTCTMN_this_min': -0.0045, 'ETHTMN_prev_min': 0.002, 'ETHTMN_this_min': -0.0024, 'DOGETMN_prev_min': 0.0, 'DOGETMN_this_min': 0.0}, 'mid_chg_60s_pct': 0.047, 'fair_chg_60s_pct': -0.366, 'sell_dev_60s_pct': -0.031, 'mid_chg_300s_pct': 0.19, 'fair_chg_300s_pct': -0.134, 'sell_dev_300s_pct': -0.069, 'set': '3plus_le_0.25pct'}

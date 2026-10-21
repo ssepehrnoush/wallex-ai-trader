@@ -1,0 +1,987 @@
+{
+ "idea": "Fair value from the median of Binance, OKX and Bybit instead of Binance alone (Part A), and a robust USDT/TMN leg via a causal 5-minute median of the Wallex USDTTMN price (Part B)",
+ "verdict": "reject",
+ "verdict_per_part": {
+  "A_multi_reference_median": "inconclusive (harmless, no measurable benefit)",
+  "B_robust_usdttmn_leg": "reject"
+ },
+ "one_line_fa": "رد شد: میانهٔ قیمت سه صرافی فقط چند معاملهٔ PEPE و ARB را عوض کرد و بدون یک معاملهٔ استثنایی سودی نداشت (+۰٫۰۸٪ در ۷ روز)، و صاف کردن نرخ تتر به تومان ۲٫۰۷٪ هم بدتر شد.",
+ "summary_md": "**Verdict: reject (do not change the live engine).**\n- **Part A, median of Binance, OKX and Bybit: inconclusive, harmless.** It changes nothing on 6 of 8 markets and only reshuffles about 10 threshold-edge trades on PEPE and ARB. Without one PEPE pump event, the net is +0.08% (bt exits) or -1.47% (live exits) over 7 days.\n- **Part B, 5-min median of USDTTMN: reject.** Entries made during USDTTMN spikes were profitable (9 trades, mean +0.19%). Smoothing removes them and adds losers: -2.07% (bt) or -4.50% (live exits) without the outlier. The live USDTTMN mid never jumped more than 0.06% between ticks.\n\n### Method\n- **Data:** Wallex 1m candles from 2026-10-14 14:05 to 10-21 14:04 UTC (10,080 min), 8 TMN markets, minutes with volume > 0 only. Binance, OKX and Bybit 1m closes were fetched fresh (all reachable, 10,393 rows per base, no gaps). Binance 1s klines cover the tick period.\n- **Backtest:** same logic as bt_fairvalue.py: entry at buy_dev <= -0.7%; exits target (sell_dev >= -0.05% and bid > entry), stop 0.9%, time 25 min (ARB 15); taker 0.3% on each leg; half the median live spread (frozen snapshot); baseline = rolling 180-min median, shift(1). Every run is repeated with the live break-even target guard (bid >= entry x 1.0065). No tuning; the split is the first 4 days vs the last 3 days.\n- **Variants:** A0 = Binance x USDTTMN (current); A1 = median3 x USDTTMN; B1 = Binance x causal 5-min median USDTTMN; AB = both.\n- **Ticks:** shadow_v2..v6 plus live_main, 3.4 h (13,166 + 18,944 TMN rows). The USDTTMN mid is exact on the shadow runs (fair XTMN / fair XUSDT). On live it is estimated from Binance 1s closes, with error p95 0.015% when validated on the shadow runs.\n\n### Part A: Binance vs the 3-exchange median\n| market | 1m close >0.05% | >0.1% | >0.2% | live MID >0.1% (n) | Binance mid step |\n|---|---|---|---|---|---|\n| BTC/ETH/SOL | 0 | 0 | 0 | 0 (377) | 0.003-0.010% |\n| XRP | 0.04% | 0 | 0 | 0.27% | 0.008% |\n| DOGE | 0.38% | 0.02% | 0 | 0.27% | 0.012% |\n| BNB | 0.11% | 0 | 0 | 0 (189) | 0.007% |\n| ARB | 6.6% | 0.26% | 0 | 0.53% (189) | 0.051% |\n| PEPE | 65.1% | 42.5% | 8.5% | 10.6% (189), 0 >0.2% | 0.213% |\n\nBinance's PEPE tick (1e-8) is 0.21% of the price, against 1e-9 on OKX and Bybit, so the live PEPE fair moves in 0.21% steps.\n\n### Backtest, 7 days\n| variant | n | mean % | sum % | win % | exits (target/time) | first 4d sum (n) | last 3d sum (n) | sum with live exits |\n|---|---|---|---|---|---|---|---|---|\n| A0 current | 69 | +0.229 | +15.80 | 62.3 | 54/15 | +6.37 (29) | +9.44 (40) | +15.88 |\n| A1 median3 | 68 | +0.282 | +19.16 | 61.8 | 55/13 | +6.58 (26) | +12.58 (42) | +17.47 |\n| B1 robust u | 65 | +0.262 | +17.04 | 60.0 | 50/15 | +6.07 (26) | +10.96 (39) | +14.48 |\n| AB both | 63 | +0.297 | +18.69 | 60.3 | 50/13 | +6.97 (22) | +11.73 (41) | +16.17 |\n\nA0 per market (n, mean %, sum %): BTC 3, +0.37, +1.11; ETH 0; SOL 3, +0.04, +0.11; XRP 4, +0.25, +1.00; DOGE 1, +0.36, +0.36; PEPE 22, +0.21, +4.53; BNB 13, +0.44, +5.69; ARB 23, +0.13, +3.00.\n\n### Changed sets\n**A0 to A1 (median3).** Only PEPE (net +1.58) and ARB (+1.14) change.\n- Gone: 11 trades, sum +2.99, win 54.5%. New: 10 trades, sum +5.71, win 40%.\n- Net: +3.35 (bt) and +1.60 (live exits). Most of it is one PEPE pump on 10-20 near 14:00: +5.41 at 13:59 appears and +2.78 at 14:02 disappears.\n- **Without |ret| > 2%: +0.08 (bt) and -1.47 (live).** First 4 days: -0.21 (bt) and -0.31 (live).\n- The removed entries where Binance was > 0.1% above the median were winners (6 trades, mean +0.25%), so \"Binance-only creates false signals\" is not supported.\n\n**A0 to B1 (robust u).**\n- Removed: 10 trades, sum +4.02, including 8 u-spike entries (sum +1.36, 62.5% win).\n- Added: 6 trades, sum +4.63, win 16.7%: one +5.45 PEPE pump and 5 small losers.\n- Net: +1.23 (bt) and -1.40 (live). **Without |ret| > 2%: -2.07 (bt) and -4.50 (live).** First 4 days: -0.72 (bt) and -2.89 (live).\n\n### Part B on candles and ticks\n- **1m candles.** USDTTMN traded in only 4,895 of 10,080 minutes. The raw close vs the 5-min median differs by > 0.1% in 2.64% of minutes and > 0.2% in 0.54%; max 1.21%.\n- **A0 entries on a u up-spike:** > 0.1%: 9 trades, mean +0.19%, sum +1.74, 66.7% win (8 target, 1 time). > 0.2%: 8 trades, mean +0.17%.\n- **Simultaneous entries:** 3 minutes had 2 or more markets entering together (7 trades, mean +0.11%, mean u spike 0.78%). They are spike-driven but not losers (small sample).\n- **Live ticks.** The largest tick-to-tick USDTTMN mid jump was 0.059% (shadow, exact) and 0.053% (live, estimated). The largest deviation from the 5-min median was 0.23%, a slow drift, so a median would only add lag.\n- **Signals on ticks.** 0 ticks reached buy_dev <= -0.7% with either fair, so the tick replay has 0 trades in both versions. No timestamp had 2 or more markets <= -0.4% at once.\n- **One wider episode.** The only time 3 or more markets were <= -0.25% (BTC, ETH, DOGE, shadow_v2, 14:51 local) was a real global move: u dev +0.002%, Binance = median within 0.005%. The gap closed because the global price fell back (fair -0.37% in 60 s), not because Wallex rose.",
+ "caveats": "Small samples: 69 trades in 7 days and only 10-20 changed trades per comparison. A 0.01% change in one modelled spread moved Part A's net excluding the outlier from -0.63% to +0.08%, so the differences are noise-level.\nThe 1m backtest uses last-trade closes for Binance and USDTTMN. The live bot uses mids, which agree with the multi-exchange median far more often and have no USDTTMN spikes. The backtest therefore overstates both the problem and the fix.\nSpreads are constant medians, there is no depth, and the 60 s global-drop filter is not modelled (same as bt_fairvalue.py).\nThe tick period is only 3.4 h and had no 0.7% signals at all.\nThe PC clock is about 40 s behind exchange time (local minus Binance server time = -40.15 s, minus OKX = -39.5 s; the tick-to-1s-kline alignment is best at +39 s). For the live bot this only shifts the no-new-entries and flatten moments about 40 s later, still about 74 min before the deadline, so it is harmless. Anyone aligning ticks.csv or decisions.jsonl with exchange data must add about 39 s.\nREPORT.md could not be written: the harness refused report-file writes for this subagent. Its content is in summary_md.",
+ "scripts": [
+  "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/fetch_refs.py",
+  "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/bt_multiref.py",
+  "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/ticks_usdt_leg.py",
+  "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/live_mid_check.py",
+  "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/make_result.py"
+ ],
+ "result_file": "C:/Users/Sadeq/Desktop/agentic-hackathon/wallex-bot-ultra/research_ultra/multi_ref_fair/result.json",
+ "implementation_sketch": "",
+ "live_bot_alert": "",
+ "key_numbers": {
+  "backtest_bt_exits": {
+   "A0": {
+    "n": 69,
+    "mean_pct": 0.229,
+    "sum_pct": 15.8,
+    "win_pct": 62.3,
+    "exits": {
+     "target": 54,
+     "time": 15
+    }
+   },
+   "A1": {
+    "n": 68,
+    "mean_pct": 0.282,
+    "sum_pct": 19.16,
+    "win_pct": 61.8,
+    "exits": {
+     "target": 55,
+     "time": 13
+    }
+   },
+   "B1": {
+    "n": 65,
+    "mean_pct": 0.262,
+    "sum_pct": 17.04,
+    "win_pct": 60.0,
+    "exits": {
+     "target": 50,
+     "time": 15
+    }
+   },
+   "AB": {
+    "n": 63,
+    "mean_pct": 0.297,
+    "sum_pct": 18.69,
+    "win_pct": 60.3,
+    "exits": {
+     "target": 50,
+     "time": 13
+    }
+   }
+  },
+  "backtest_live_exits": {
+   "A0": {
+    "n": 69,
+    "mean_pct": 0.23,
+    "sum_pct": 15.88,
+    "win_pct": 71.0,
+    "exits": {
+     "target": 43,
+     "time": 26
+    }
+   },
+   "A1": {
+    "n": 67,
+    "mean_pct": 0.261,
+    "sum_pct": 17.47,
+    "win_pct": 70.1,
+    "exits": {
+     "target": 38,
+     "time": 29
+    }
+   },
+   "B1": {
+    "n": 65,
+    "mean_pct": 0.223,
+    "sum_pct": 14.48,
+    "win_pct": 66.2,
+    "exits": {
+     "target": 36,
+     "time": 28,
+     "stop": 1
+    }
+   },
+   "AB": {
+    "n": 63,
+    "mean_pct": 0.257,
+    "sum_pct": 16.17,
+    "win_pct": 68.3,
+    "exits": {
+     "target": 36,
+     "time": 27
+    }
+   }
+  },
+  "changes_bt_exits": {
+   "A0->A1": {
+    "disappeared": {
+     "n": 11,
+     "mean_pct": 0.272,
+     "sum_pct": 2.99,
+     "win_pct": 54.5,
+     "exits": {
+      "target": 9,
+      "time": 2
+     }
+    },
+    "appeared": {
+     "n": 10,
+     "mean_pct": 0.571,
+     "sum_pct": 5.71,
+     "win_pct": 40.0,
+     "exits": {
+      "target": 10
+     }
+    },
+    "net_change_sum_pct": 3.35,
+    "net_change_changed_set_pct": 2.72,
+    "net_change_excl_abs_ret_gt_2pct": 0.08,
+    "net_change_first4d": -0.21,
+    "net_change_last3d": 2.94,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 2,
+     "mean_pct": 2.83,
+     "sum_pct": 5.66,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 6,
+     "mean_pct": 0.251,
+     "sum_pct": 1.5,
+     "win_pct": 66.7,
+     "exits": {
+      "target": 6
+     }
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 4,
+     "mean_pct": 0.047,
+     "sum_pct": 0.19,
+     "win_pct": 50.0,
+     "exits": {
+      "target": 4
+     }
+    },
+    "net_by_market": {
+     "BTCTMN": 0.0,
+     "ETHTMN": 0.0,
+     "SOLTMN": 0.0,
+     "XRPTMN": 0.0,
+     "DOGETMN": 0.0,
+     "PEPETMN": 1.58,
+     "BNBTMN": 0.0,
+     "ARBTMN": 1.14
+    }
+   },
+   "A0->B1": {
+    "disappeared": {
+     "n": 10,
+     "mean_pct": 0.402,
+     "sum_pct": 4.02,
+     "win_pct": 60.0,
+     "exits": {
+      "target": 9,
+      "time": 1
+     }
+    },
+    "appeared": {
+     "n": 6,
+     "mean_pct": 0.771,
+     "sum_pct": 4.63,
+     "win_pct": 16.7,
+     "exits": {
+      "target": 6
+     }
+    },
+    "net_change_sum_pct": 1.23,
+    "net_change_changed_set_pct": 0.61,
+    "net_change_excl_abs_ret_gt_2pct": -2.07,
+    "net_change_first4d": -0.72,
+    "net_change_last3d": 1.33,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 8,
+     "mean_pct": 0.17,
+     "sum_pct": 1.36,
+     "win_pct": 62.5,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 4,
+     "mean_pct": 1.291,
+     "sum_pct": 5.16,
+     "win_pct": 25.0,
+     "exits": {
+      "target": 4
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "net_by_market": {
+     "BTCTMN": -0.28,
+     "ETHTMN": -0.22,
+     "SOLTMN": 0.22,
+     "XRPTMN": -0.28,
+     "DOGETMN": -0.07,
+     "PEPETMN": 1.38,
+     "BNBTMN": 0.04,
+     "ARBTMN": -0.18
+    }
+   },
+   "A0->AB": {
+    "disappeared": {
+     "n": 20,
+     "mean_pct": 0.129,
+     "sum_pct": 2.59,
+     "win_pct": 50.0,
+     "exits": {
+      "target": 16,
+      "time": 4
+     }
+    },
+    "appeared": {
+     "n": 14,
+     "mean_pct": 0.359,
+     "sum_pct": 5.03,
+     "win_pct": 35.7,
+     "exits": {
+      "target": 13,
+      "time": 1
+     }
+    },
+    "net_change_sum_pct": 2.89,
+    "net_change_changed_set_pct": 2.44,
+    "net_change_excl_abs_ret_gt_2pct": -0.2,
+    "net_change_first4d": 0.35,
+    "net_change_last3d": 2.09,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 7,
+     "mean_pct": 0.087,
+     "sum_pct": 0.61,
+     "win_pct": 57.1,
+     "exits": {
+      "target": 6,
+      "time": 1
+     }
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 6,
+     "mean_pct": 0.751,
+     "sum_pct": 4.5,
+     "win_pct": 33.3,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 6,
+     "mean_pct": 0.251,
+     "sum_pct": 1.5,
+     "win_pct": 66.7,
+     "exits": {
+      "target": 6
+     }
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 4,
+     "mean_pct": -0.151,
+     "sum_pct": -0.6,
+     "win_pct": 50.0,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "net_by_market": {
+     "BTCTMN": -0.28,
+     "ETHTMN": -0.22,
+     "SOLTMN": 0.22,
+     "XRPTMN": -0.28,
+     "DOGETMN": -0.07,
+     "PEPETMN": 2.05,
+     "BNBTMN": 0.04,
+     "ARBTMN": 0.98
+    }
+   }
+  },
+  "changes_live_exits": {
+   "A0->A1": {
+    "disappeared": {
+     "n": 11,
+     "mean_pct": 0.291,
+     "sum_pct": 3.2,
+     "win_pct": 63.6,
+     "exits": {
+      "target": 7,
+      "time": 4
+     }
+    },
+    "appeared": {
+     "n": 9,
+     "mean_pct": 0.486,
+     "sum_pct": 4.37,
+     "win_pct": 55.6,
+     "exits": {
+      "time": 6,
+      "target": 3
+     }
+    },
+    "net_change_sum_pct": 1.6,
+    "net_change_changed_set_pct": 1.17,
+    "net_change_excl_abs_ret_gt_2pct": -1.47,
+    "net_change_first4d": -0.31,
+    "net_change_last3d": 1.48,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 2,
+     "mean_pct": 2.83,
+     "sum_pct": 5.66,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 6,
+     "mean_pct": 0.326,
+     "sum_pct": 1.95,
+     "win_pct": 83.3,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 4,
+     "mean_pct": -0.098,
+     "sum_pct": -0.39,
+     "win_pct": 75.0,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "net_by_market": {
+     "BTCTMN": 0.0,
+     "ETHTMN": 0.0,
+     "SOLTMN": 0.0,
+     "XRPTMN": 0.0,
+     "DOGETMN": 0.0,
+     "PEPETMN": -0.04,
+     "BNBTMN": 0.0,
+     "ARBTMN": 1.21
+    }
+   },
+   "A0->B1": {
+    "disappeared": {
+     "n": 10,
+     "mean_pct": 0.47,
+     "sum_pct": 4.7,
+     "win_pct": 80.0,
+     "exits": {
+      "target": 8,
+      "time": 2
+     }
+    },
+    "appeared": {
+     "n": 6,
+     "mean_pct": 0.479,
+     "sum_pct": 2.88,
+     "win_pct": 33.3,
+     "exits": {
+      "time": 3,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "net_change_sum_pct": -1.4,
+    "net_change_changed_set_pct": -1.83,
+    "net_change_excl_abs_ret_gt_2pct": -4.5,
+    "net_change_first4d": -2.89,
+    "net_change_last3d": 1.06,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 8,
+     "mean_pct": 0.286,
+     "sum_pct": 2.29,
+     "win_pct": 87.5,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 4,
+     "mean_pct": 1.165,
+     "sum_pct": 4.66,
+     "win_pct": 50.0,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 0,
+     "mean_pct": null,
+     "sum_pct": 0.0,
+     "win_pct": null,
+     "exits": {}
+    },
+    "net_by_market": {
+     "BTCTMN": -0.28,
+     "ETHTMN": -0.85,
+     "SOLTMN": -0.18,
+     "XRPTMN": -0.81,
+     "DOGETMN": 0.07,
+     "PEPETMN": 0.14,
+     "BNBTMN": 0.27,
+     "ARBTMN": -0.18
+    }
+   },
+   "A0->AB": {
+    "disappeared": {
+     "n": 20,
+     "mean_pct": 0.174,
+     "sum_pct": 3.49,
+     "win_pct": 65.0,
+     "exits": {
+      "target": 13,
+      "time": 7
+     }
+    },
+    "appeared": {
+     "n": 14,
+     "mean_pct": 0.235,
+     "sum_pct": 3.29,
+     "win_pct": 50.0,
+     "exits": {
+      "time": 8,
+      "target": 6
+     }
+    },
+    "net_change_sum_pct": 0.29,
+    "net_change_changed_set_pct": -0.2,
+    "net_change_excl_abs_ret_gt_2pct": -2.84,
+    "net_change_first4d": -0.67,
+    "net_change_last3d": 0.47,
+    "disappeared_with_u_up_spike_gt_0.1": {
+     "n": 7,
+     "mean_pct": 0.219,
+     "sum_pct": 1.53,
+     "win_pct": 85.7,
+     "exits": {
+      "target": 6,
+      "time": 1
+     }
+    },
+    "appeared_with_u_below_med5_lt_-0.05": {
+     "n": 6,
+     "mean_pct": 0.667,
+     "sum_pct": 4.0,
+     "win_pct": 50.0,
+     "exits": {
+      "time": 3,
+      "target": 3
+     }
+    },
+    "disappeared_binance_above_median_gt_0.1": {
+     "n": 6,
+     "mean_pct": 0.326,
+     "sum_pct": 1.95,
+     "win_pct": 83.3,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "appeared_binance_below_median_lt_-0.1": {
+     "n": 4,
+     "mean_pct": -0.37,
+     "sum_pct": -1.48,
+     "win_pct": 50.0,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "net_by_market": {
+     "BTCTMN": -0.28,
+     "ETHTMN": -0.85,
+     "SOLTMN": -0.18,
+     "XRPTMN": -0.81,
+     "DOGETMN": 0.07,
+     "PEPETMN": 0.54,
+     "BNBTMN": 0.27,
+     "ARBTMN": 1.04
+    }
+   }
+  },
+  "partA_reference_divergence_1m": {
+   "BTCTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.014,
+    "max_abs_pct": 0.027,
+    "okx_vs_median_abs_gt_0.1_pct": 0.0,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.0
+   },
+   "ETHTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.016,
+    "max_abs_pct": 0.029,
+    "okx_vs_median_abs_gt_0.1_pct": 0.0,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.0
+   },
+   "SOLTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.019,
+    "max_abs_pct": 0.038,
+    "okx_vs_median_abs_gt_0.1_pct": 0.0,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.01
+   },
+   "XRPTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.04,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.023,
+    "max_abs_pct": 0.06,
+    "okx_vs_median_abs_gt_0.1_pct": 0.01,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.0
+   },
+   "DOGETMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.377,
+     "0.1": 0.02,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.038,
+    "max_abs_pct": 0.128,
+    "okx_vs_median_abs_gt_0.1_pct": 0.0,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.437
+   },
+   "PEPETMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 65.069,
+     "0.1": 42.49,
+     "0.2": 8.462
+    },
+    "binance_above_median_gt_0.1_pct": 29.355,
+    "p99_abs_pct": 0.26,
+    "max_abs_pct": 0.391,
+    "okx_vs_median_abs_gt_0.1_pct": 1.488,
+    "bybit_vs_median_abs_gt_0.1_pct": 2.401
+   },
+   "BNBTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 0.109,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.0,
+    "p99_abs_pct": 0.034,
+    "max_abs_pct": 0.089,
+    "okx_vs_median_abs_gt_0.1_pct": 0.01,
+    "bybit_vs_median_abs_gt_0.1_pct": 0.05
+   },
+   "ARBTMN": {
+    "minutes": 10080,
+    "exchanges": [
+     "binance",
+     "okx",
+     "bybit"
+    ],
+    "binance_vs_median_abs_gt_pct": {
+     "0.05": 6.637,
+     "0.1": 0.258,
+     "0.2": 0.0
+    },
+    "binance_above_median_gt_0.1_pct": 0.06,
+    "p99_abs_pct": 0.078,
+    "max_abs_pct": 0.154,
+    "okx_vs_median_abs_gt_0.1_pct": 0.367,
+    "bybit_vs_median_abs_gt_0.1_pct": 2.698
+   }
+  },
+  "partA_live_mid_check": {
+   "ARBTMN": {
+    "ticks_compared": 189,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 2.65,
+     "0.1": 0.53,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0407,
+    "binance_mid_typical_step_pct": 0.051
+   },
+   "BNBTMN": {
+    "ticks_compared": 189,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0283,
+    "binance_mid_typical_step_pct": 0.007
+   },
+   "BTCTMN": {
+    "ticks_compared": 377,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0169,
+    "binance_mid_typical_step_pct": 0.003
+   },
+   "DOGETMN": {
+    "ticks_compared": 377,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 1.33,
+     "0.1": 0.27,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0299,
+    "binance_mid_typical_step_pct": 0.012
+   },
+   "ETHTMN": {
+    "ticks_compared": 377,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 0.8,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0229,
+    "binance_mid_typical_step_pct": 0.0055
+   },
+   "PEPETMN": {
+    "ticks_compared": 189,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 38.1,
+     "0.1": 10.58,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.1076,
+    "binance_mid_typical_step_pct": 0.2132
+   },
+   "SOLTMN": {
+    "ticks_compared": 377,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0232,
+    "binance_mid_typical_step_pct": 0.01
+   },
+   "XRPTMN": {
+    "ticks_compared": 377,
+    "binance_mid_vs_median_abs_gt_pct": {
+     "0.05": 0.53,
+     "0.1": 0.27,
+     "0.2": 0.0
+    },
+    "p95_abs_pct": 0.0253,
+    "binance_mid_typical_step_pct": 0.008
+   }
+  },
+  "partB_usdttmn_leg_1m": {
+   "minutes": 10080,
+   "usdttmn_traded_minutes": 4895,
+   "abs_raw_vs_med5_gt_pct": {
+    "0.05": 8.175,
+    "0.1": 2.639,
+    "0.2": 0.536,
+    "0.3": 0.159,
+    "0.5": 0.069
+   },
+   "abs_spike_vs_prev5_gt_pct": {
+    "0.05": 11.538,
+    "0.1": 4.276,
+    "0.2": 0.913,
+    "0.3": 0.268,
+    "0.5": 0.099
+   },
+   "p99_abs_raw_vs_med5_pct": 0.155,
+   "max_abs_raw_vs_med5_pct": 1.211
+  },
+  "partB_A0_entries_on_usdttmn_up_spike": {
+   "u_up_spike_gt_0.05": {
+    "n": 11,
+    "mean_pct": 0.26,
+    "sum_pct": 2.86,
+    "win_pct": 72.7,
+    "exits": {
+     "target": 10,
+     "time": 1
+    }
+   },
+   "u_up_spike_gt_0.1": {
+    "n": 9,
+    "mean_pct": 0.193,
+    "sum_pct": 1.74,
+    "win_pct": 66.7,
+    "exits": {
+     "target": 8,
+     "time": 1
+    }
+   },
+   "u_up_spike_gt_0.2": {
+    "n": 8,
+    "mean_pct": 0.17,
+    "sum_pct": 1.36,
+    "win_pct": 62.5,
+    "exits": {
+     "target": 7,
+     "time": 1
+    }
+   }
+  },
+  "partB_A0_simultaneous_entries": {
+   "minutes_with_2plus_entries": 3,
+   "trades_in_them": {
+    "n": 7,
+    "mean_pct": 0.113,
+    "sum_pct": 0.79,
+    "win_pct": 57.1,
+    "exits": {
+     "target": 6,
+     "time": 1
+    }
+   },
+   "their_u_spike_mean_pct": 0.776
+  },
+  "partB_ticks_leg_per_run": {
+   "shadow_v2": {
+    "ticks": 986,
+    "exact": true,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 7.419,
+     "0.1": 2.846,
+     "0.2": 0.0
+    },
+    "max_abs_u_vs_med5_pct": 0.139,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.059
+   },
+   "shadow_v3": {
+    "ticks": 598,
+    "exact": true,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 22.819,
+     "0.1": 11.577,
+     "0.2": 0.0
+    },
+    "max_abs_u_vs_med5_pct": 0.153,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.053
+   },
+   "shadow_v4": {
+    "ticks": 424,
+    "exact": true,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 18.246,
+     "0.1": 14.692,
+     "0.2": 9.242
+    },
+    "max_abs_u_vs_med5_pct": 0.229,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.052
+   },
+   "shadow_v5": {
+    "ticks": 254,
+    "exact": true,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 32.143,
+     "0.1": 18.651,
+     "0.2": 0.0
+    },
+    "max_abs_u_vs_med5_pct": 0.188,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.059
+   },
+   "shadow_v6": {
+    "ticks": 232,
+    "exact": true,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 0.0,
+     "0.1": 0.0,
+     "0.2": 0.0
+    },
+    "max_abs_u_vs_med5_pct": 0.037,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.018
+   },
+   "live_main": {
+    "ticks": 2053,
+    "exact": false,
+    "abs_u_vs_med5_gt_pct": {
+     "0.05": 5.705,
+     "0.1": 0.683,
+     "0.2": 0.0
+    },
+    "max_abs_u_vs_med5_pct": 0.12,
+    "abs_tick_jump_gt_0.1_pct_count": 0,
+    "max_abs_tick_jump_pct": 0.053
+   }
+  },
+  "partB_tick_signal_counts": {
+   "shadow_exact_u": {
+    "ticks_buy_dev_le_0.3": {
+     "recorded": 31,
+     "robust_u": 37
+    },
+    "ticks_buy_dev_le_0.4": {
+     "recorded": 6,
+     "robust_u": 6
+    },
+    "ticks_buy_dev_le_0.5": {
+     "recorded": 0,
+     "robust_u": 0
+    },
+    "ticks_buy_dev_le_0.7": {
+     "recorded": 0,
+     "robust_u": 0
+    },
+    "ticks": 13166,
+    "u_available_ticks": 13166
+   },
+   "live_main_estimated_u": {
+    "ticks_buy_dev_le_0.3": {
+     "recorded": 167,
+     "robust_u": 185
+    },
+    "ticks_buy_dev_le_0.4": {
+     "recorded": 31,
+     "robust_u": 28
+    },
+    "ticks_buy_dev_le_0.5": {
+     "recorded": 10,
+     "robust_u": 15
+    },
+    "ticks_buy_dev_le_0.7": {
+     "recorded": 0,
+     "robust_u": 0
+    },
+    "ticks": 18944,
+    "u_available_ticks": 16424
+   }
+  },
+  "partB_tick_simultaneous_episodes": {
+   "3plus_le_0.40pct": {
+    "count": 0,
+    "u_dev_gt_0.1_at_t0": 0,
+    "u_dev_gt_0.05_at_t0": 0
+   },
+   "2plus_le_0.40pct": {
+    "count": 0,
+    "u_dev_gt_0.1_at_t0": 0,
+    "u_dev_gt_0.05_at_t0": 0
+   },
+   "3plus_le_0.25pct": {
+    "count": 1,
+    "u_dev_gt_0.1_at_t0": 0,
+    "u_dev_gt_0.05_at_t0": 0
+   }
+  },
+  "u_estimator_lag_s": 39,
+  "spreads_used_pct": {
+   "BTCTMN": 0.031,
+   "ETHTMN": 0.136,
+   "SOLTMN": 0.157,
+   "XRPTMN": 0.2,
+   "DOGETMN": 0.169,
+   "PEPETMN": 0.114,
+   "BNBTMN": 0.146,
+   "ARBTMN": 0.445
+  }
+ }
+}

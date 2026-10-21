@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="548" viewBox="0 0 820 548" font-family='system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif' role="img" aria-label="Per-market 7-day backtest at 0.7%">
+<title>Per-market 7-day backtest at 0.7%</title>
+<rect width="820" height="548" fill="#ffffff"/>
+<text x="20.0" y="30.0" font-size="17" fill="#0b0b0b" text-anchor="start" font-weight="600">7-day backtest at the live 0.7% threshold, per market</text>
+<text x="20.0" y="52.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Mean net % per trade. Existing method: 65 trades, mean +0.325%. Live exit rule: 69 trades, mean +0.230%.</text>
+<rect x="20" y="70" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="38.0" y="80.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">existing method (shadow_v1 spreads, original exit)</text>
+<rect x="424.0" y="70" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="442.0" y="80.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">live exit rule, today&#x27;s tick spreads</text>
+<line x1="110.0" x2="110.0" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="110.0" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">-0.2%</text>
+<line x1="203.3" x2="203.3" y1="98" y2="472" stroke="#c3c2b7" stroke-width="1"/>
+<text x="203.3" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">0</text>
+<line x1="296.7" x2="296.7" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="296.7" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">+0.2%</text>
+<line x1="390.0" x2="390.0" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="390.0" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">+0.4%</text>
+<line x1="483.3" x2="483.3" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="483.3" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">+0.6%</text>
+<line x1="576.7" x2="576.7" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="576.7" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">+0.8%</text>
+<line x1="670.0" x2="670.0" y1="98" y2="472" stroke="#e1e0d9" stroke-width="1"/>
+<text x="670.0" y="490.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">+1.0%</text>
+<text x="100.0" y="131.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">BTCTMN</text>
+<path d="M203.3,110.0 H358.0 Q362.0,110.0 362.0,114.0 V122.0 Q362.0,126.0 358.0,126.0 H203.3 Z" fill="#eb6834"><title>BTCTMN, existing method: n=3, mean +0.340%, sum +1.02%, win 100.0%</title></path>
+<text x="368.0" y="122.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.34% (n=3)</text>
+<path d="M203.3,128.0 H371.5 Q375.5,128.0 375.5,132.0 V140.0 Q375.5,144.0 371.5,144.0 H203.3 Z" fill="#2a78d6"><title>BTCTMN, live exit rule: n=3, mean +0.369%, sum +1.11%, win 100.0%</title></path>
+<text x="381.5" y="140.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.37% (n=3)</text>
+<text x="100.0" y="177.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">ETHTMN</text>
+<text x="209.3" y="168.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0 trades</text>
+<text x="209.3" y="186.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">0 trades</text>
+<text x="100.0" y="223.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">SOLTMN</text>
+<path d="M203.3,202.0 H225.9 Q229.9,202.0 229.9,206.0 V214.0 Q229.9,218.0 225.9,218.0 H203.3 Z" fill="#eb6834"><title>SOLTMN, existing method: n=2, mean +0.057%, sum +0.11%, win 100.0%</title></path>
+<text x="235.9" y="214.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.06% (n=2)</text>
+<path d="M203.3,220.0 H279.1 Q283.1,220.0 283.1,224.0 V232.0 Q283.1,236.0 279.1,236.0 H203.3 Z" fill="#2a78d6"><title>SOLTMN, live exit rule: n=3, mean +0.171%, sum +0.51%, win 100.0%</title></path>
+<text x="289.1" y="232.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.17% (n=3)</text>
+<text x="100.0" y="269.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">XRPTMN</text>
+<path d="M203.3,248.0 H651.5 Q655.5,248.0 655.5,252.0 V260.0 Q655.5,264.0 651.5,264.0 H203.3 Z" fill="#eb6834"><title>XRPTMN, existing method: n=2, mean +0.969%, sum +1.94%, win 100.0%</title></path>
+<text x="661.5" y="260.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.97% (n=2)</text>
+<path d="M203.3,266.0 H399.5 Q403.5,266.0 403.5,270.0 V278.0 Q403.5,282.0 399.5,282.0 H203.3 Z" fill="#2a78d6"><title>XRPTMN, live exit rule: n=4, mean +0.429%, sum +1.72%, win 100.0%</title></path>
+<text x="409.5" y="278.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.43% (n=4)</text>
+<text x="100.0" y="315.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">DOGETMN</text>
+<path d="M203.3,294.0 H368.3 Q372.3,294.0 372.3,298.0 V306.0 Q372.3,310.0 368.3,310.0 H203.3 Z" fill="#eb6834"><title>DOGETMN, existing method: n=1, mean +0.362%, sum +0.36%, win 100.0%</title></path>
+<text x="378.3" y="306.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.36% (n=1)</text>
+<path d="M203.3,312.0 H365.0 Q369.0,312.0 369.0,316.0 V324.0 Q369.0,328.0 365.0,328.0 H203.3 Z" fill="#2a78d6"><title>DOGETMN, live exit rule: n=1, mean +0.355%, sum +0.35%, win 100.0%</title></path>
+<text x="375.0" y="324.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.35% (n=1)</text>
+<text x="100.0" y="361.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">PEPETMN</text>
+<path d="M203.3,340.0 H348.7 Q352.7,340.0 352.7,344.0 V352.0 Q352.7,356.0 348.7,356.0 H203.3 Z" fill="#eb6834"><title>PEPETMN, existing method: n=27, mean +0.320%, sum +8.63%, win 70.4%</title></path>
+<text x="358.7" y="352.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.32% (n=27)</text>
+<path d="M203.3,358.0 H293.1 Q297.1,358.0 297.1,362.0 V370.0 Q297.1,374.0 293.1,374.0 H203.3 Z" fill="#2a78d6"><title>PEPETMN, live exit rule: n=22, mean +0.201%, sum +4.42%, win 72.7%</title></path>
+<text x="303.1" y="370.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.20% (n=22)</text>
+<text x="100.0" y="407.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">BNBTMN</text>
+<path d="M203.3,386.0 H334.2 Q338.2,386.0 338.2,390.0 V398.0 Q338.2,402.0 334.2,402.0 H203.3 Z" fill="#eb6834"><title>BNBTMN, existing method: n=9, mean +0.289%, sum +2.60%, win 55.6%</title></path>
+<text x="344.2" y="398.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.29% (n=9)</text>
+<path d="M203.3,404.0 H395.3 Q399.3,404.0 399.3,408.0 V416.0 Q399.3,420.0 395.3,420.0 H203.3 Z" fill="#2a78d6"><title>BNBTMN, live exit rule: n=13, mean +0.420%, sum +5.46%, win 69.2%</title></path>
+<text x="405.3" y="416.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.42% (n=13)</text>
+<text x="100.0" y="453.0" font-size="13" fill="#0b0b0b" text-anchor="end" font-weight="600">ARBTMN</text>
+<path d="M203.3,432.0 H342.1 Q346.1,432.0 346.1,436.0 V444.0 Q346.1,448.0 342.1,448.0 H203.3 Z" fill="#eb6834"><title>ARBTMN, existing method: n=21, mean +0.306%, sum +6.43%, win 61.9%</title></path>
+<text x="352.1" y="444.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.31% (n=21)</text>
+<path d="M203.3,450.0 H246.0 Q250.0,450.0 250.0,454.0 V462.0 Q250.0,466.0 246.0,466.0 H203.3 Z" fill="#2a78d6"><title>ARBTMN, live exit rule: n=23, mean +0.100%, sum +2.31%, win 56.5%</title></path>
+<text x="256.0" y="462.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">+0.10% (n=23)</text>
+<text x="20.0" y="520.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">Sources: research_ultra/sizing_depth/out/bt_trades_orig_sv1_ff.csv and bt_trades_live_tick_ff.csv.</text>
+<text x="20.0" y="536.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">BTC, SOL, XRP, DOGE of the existing method match runs/backtests/fv_sweep_0.007_0.004 exactly.</text>
+</svg>

@@ -1,0 +1,255 @@
+{
+ "candle_hours": 164.4,
+ "rate": {
+  "0.3%": {
+   "candle_expected_cheap_minutes_in_tick_hours": 18.49,
+   "tick_observed_cheap_minutes": 9.62,
+   "candle_expected_episodes_in_tick_hours": 8.69,
+   "tick_observed_episodes": 22,
+   "poisson_P(obs<=observed | candle rate)": 1.0,
+   "per_market": {
+    "BTCTMN": {
+     "cheap_minutes": 149,
+     "episodes": 44
+    },
+    "ETHTMN": {
+     "cheap_minutes": 57,
+     "episodes": 37
+    },
+    "SOLTMN": {
+     "cheap_minutes": 93,
+     "episodes": 63
+    },
+    "XRPTMN": {
+     "cheap_minutes": 77,
+     "episodes": 54
+    },
+    "DOGETMN": {
+     "cheap_minutes": 54,
+     "episodes": 35
+    },
+    "PEPETMN": {
+     "cheap_minutes": 465,
+     "episodes": 164
+    },
+    "BNBTMN": {
+     "cheap_minutes": 137,
+     "episodes": 59
+    },
+    "ARBTMN": {
+     "cheap_minutes": 206,
+     "episodes": 100
+    }
+   }
+  },
+  "0.4%": {
+   "candle_expected_cheap_minutes_in_tick_hours": 8.53,
+   "tick_observed_cheap_minutes": 1.54,
+   "candle_expected_episodes_in_tick_hours": 4.39,
+   "tick_observed_episodes": 8,
+   "poisson_P(obs<=observed | candle rate)": 0.9645,
+   "per_market": {
+    "BTCTMN": {
+     "cheap_minutes": 46,
+     "episodes": 20
+    },
+    "ETHTMN": {
+     "cheap_minutes": 20,
+     "episodes": 14
+    },
+    "SOLTMN": {
+     "cheap_minutes": 32,
+     "episodes": 22
+    },
+    "XRPTMN": {
+     "cheap_minutes": 35,
+     "episodes": 26
+    },
+    "DOGETMN": {
+     "cheap_minutes": 18,
+     "episodes": 13
+    },
+    "PEPETMN": {
+     "cheap_minutes": 255,
+     "episodes": 110
+    },
+    "BNBTMN": {
+     "cheap_minutes": 76,
+     "episodes": 33
+    },
+    "ARBTMN": {
+     "cheap_minutes": 128,
+     "episodes": 62
+    }
+   }
+  },
+  "0.5%": {
+   "candle_expected_cheap_minutes_in_tick_hours": 4.54,
+   "tick_observed_cheap_minutes": 0.42,
+   "candle_expected_episodes_in_tick_hours": 2.49,
+   "tick_observed_episodes": 2,
+   "poisson_P(obs<=observed | candle rate)": 0.5457,
+   "per_market": {
+    "BTCTMN": {
+     "cheap_minutes": 20,
+     "episodes": 8
+    },
+    "ETHTMN": {
+     "cheap_minutes": 9,
+     "episodes": 8
+    },
+    "SOLTMN": {
+     "cheap_minutes": 12,
+     "episodes": 8
+    },
+    "XRPTMN": {
+     "cheap_minutes": 13,
+     "episodes": 11
+    },
+    "DOGETMN": {
+     "cheap_minutes": 9,
+     "episodes": 7
+    },
+    "PEPETMN": {
+     "cheap_minutes": 142,
+     "episodes": 75
+    },
+    "BNBTMN": {
+     "cheap_minutes": 47,
+     "episodes": 16
+    },
+    "ARBTMN": {
+     "cheap_minutes": 87,
+     "episodes": 47
+    }
+   }
+  },
+  "0.6%": {
+   "candle_expected_cheap_minutes_in_tick_hours": 2.54,
+   "tick_observed_cheap_minutes": 0.0,
+   "candle_expected_episodes_in_tick_hours": 1.49,
+   "tick_observed_episodes": 0,
+   "poisson_P(obs<=observed | candle rate)": 0.2254,
+   "per_market": {
+    "BTCTMN": {
+     "cheap_minutes": 8,
+     "episodes": 6
+    },
+    "ETHTMN": {
+     "cheap_minutes": 5,
+     "episodes": 5
+    },
+    "SOLTMN": {
+     "cheap_minutes": 7,
+     "episodes": 7
+    },
+    "XRPTMN": {
+     "cheap_minutes": 8,
+     "episodes": 6
+    },
+    "DOGETMN": {
+     "cheap_minutes": 2,
+     "episodes": 2
+    },
+    "PEPETMN": {
+     "cheap_minutes": 70,
+     "episodes": 35
+    },
+    "BNBTMN": {
+     "cheap_minutes": 36,
+     "episodes": 12
+    },
+    "ARBTMN": {
+     "cheap_minutes": 58,
+     "episodes": 34
+    }
+   }
+  },
+  "0.7%": {
+   "candle_expected_cheap_minutes_in_tick_hours": 1.53,
+   "tick_observed_cheap_minutes": 0.0,
+   "candle_expected_episodes_in_tick_hours": 0.87,
+   "tick_observed_episodes": 0,
+   "poisson_P(obs<=observed | candle rate)": 0.419,
+   "per_market": {
+    "BTCTMN": {
+     "cheap_minutes": 4,
+     "episodes": 3
+    },
+    "ETHTMN": {
+     "cheap_minutes": 0,
+     "episodes": 0
+    },
+    "SOLTMN": {
+     "cheap_minutes": 3,
+     "episodes": 3
+    },
+    "XRPTMN": {
+     "cheap_minutes": 6,
+     "episodes": 4
+    },
+    "DOGETMN": {
+     "cheap_minutes": 1,
+     "episodes": 1
+    },
+    "PEPETMN": {
+     "cheap_minutes": 42,
+     "episodes": 22
+    },
+    "BNBTMN": {
+     "cheap_minutes": 27,
+     "episodes": 9
+    },
+    "ARBTMN": {
+     "cheap_minutes": 37,
+     "episodes": 24
+    }
+   }
+  }
+ },
+ "latency": {
+  "n": 69,
+  "mean_same_minute_pct": 0.236,
+  "mean_next_minute_pct": -0.475,
+  "win_next_minute": 30.4,
+  "share_signal_still_le_0.7_next_min": 0.217,
+  "share_signal_still_le_0.35_next_min": 0.406,
+  "median_gap_to_next_traded_min": 1.0,
+  "per_market_next_minute": {
+   "ARBTMN": {
+    "count": 23,
+    "mean": -0.745
+   },
+   "BNBTMN": {
+    "count": 13,
+    "mean": -0.293
+   },
+   "BTCTMN": {
+    "count": 3,
+    "mean": -0.87
+   },
+   "DOGETMN": {
+    "count": 1,
+    "mean": -1.621
+   },
+   "PEPETMN": {
+    "count": 22,
+    "mean": -0.177
+   },
+   "SOLTMN": {
+    "count": 3,
+    "mean": -0.853
+   },
+   "XRPTMN": {
+    "count": 4,
+    "mean": -0.281
+   }
+  }
+ },
+ "signal_minute_binance_ret": {
+  "n_minutes": 120,
+  "median_pct": 0.034,
+  "share_gret_gt_0.2pct": 0.35,
+  "share_gret_gt_0.4pct": 0.158
+ }
+}

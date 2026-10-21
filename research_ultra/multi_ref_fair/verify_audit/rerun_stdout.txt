@@ -1,0 +1,92 @@
+{
+ "spreads_used_pct": {
+  "BTCTMN": 0.031,
+  "ETHTMN": 0.136,
+  "SOLTMN": 0.157,
+  "XRPTMN": 0.2,
+  "DOGETMN": 0.169,
+  "PEPETMN": 0.114,
+  "BNBTMN": 0.146,
+  "ARBTMN": 0.445
+ },
+ "window": [
+  "2026-10-14 14:05:00+00:00",
+  "2026-10-21 14:04:00+00:00"
+ ],
+ "partB_usdttmn_leg": {
+  "minutes": 10080,
+  "usdttmn_traded_minutes": 4895,
+  "abs_raw_vs_med5_gt_pct": {
+   "0.05": 8.175,
+   "0.1": 2.639,
+   "0.2": 0.536,
+   "0.3": 0.159,
+   "0.5": 0.069
+  },
+  "abs_spike_vs_prev5_gt_pct": {
+   "0.05": 11.538,
+   "0.1": 4.276,
+   "0.2": 0.913,
+   "0.3": 0.268,
+   "0.5": 0.099
+  },
+  "p99_abs_raw_vs_med5_pct": 0.155,
+  "max_abs_raw_vs_med5_pct": 1.211
+ },
+ "A0_entries_on_usdttmn_up_spike": {
+  "u_up_spike_gt_0.05": {
+   "n": 11,
+   "mean_pct": 0.26,
+   "sum_pct": 2.86,
+   "win_pct": 72.7,
+   "exits": {
+    "target": 10,
+    "time": 1
+   }
+  },
+  "u_up_spike_gt_0.1": {
+   "n": 9,
+   "mean_pct": 0.193,
+   "sum_pct": 1.74,
+   "win_pct": 66.7,
+   "exits": {
+    "target": 8,
+    "time": 1
+   }
+  },
+  "u_up_spike_gt_0.2": {
+   "n": 8,
+   "mean_pct": 0.17,
+   "sum_pct": 1.36,
+   "win_pct": 62.5,
+   "exits": {
+    "target": 7,
+    "time": 1
+   }
+  }
+ },
+ "A0_simultaneous_entries": {
+  "minutes_with_2plus_entries": 3,
+  "trades_in_them": {
+   "n": 7,
+   "mean_pct": 0.113,
+   "sum_pct": 0.79,
+   "win_pct": 57.1,
+   "exits": {
+    "target": 6,
+    "time": 1
+   }
+  },
+  "their_u_spike_mean_pct": 0.776
+ }
+}
+A0 bt-exits {'n': 69, 'mean_pct': np.float64(0.229), 'sum_pct': np.float64(15.8), 'win_pct': np.float64(62.3), 'exits': {'target': 54, 'time': 15}} | be-guard {'n': 69, 'mean_pct': np.float64(0.23), 'sum_pct': np.float64(15.88), 'win_pct': np.float64(71.0), 'exits': {'target': 43, 'time': 26}}
+A1 bt-exits {'n': 68, 'mean_pct': np.float64(0.282), 'sum_pct': np.float64(19.16), 'win_pct': np.float64(61.8), 'exits': {'target': 55, 'time': 13}} | be-guard {'n': 67, 'mean_pct': np.float64(0.261), 'sum_pct': np.float64(17.47), 'win_pct': np.float64(70.1), 'exits': {'target': 38, 'time': 29}}
+B1 bt-exits {'n': 65, 'mean_pct': np.float64(0.262), 'sum_pct': np.float64(17.04), 'win_pct': np.float64(60.0), 'exits': {'target': 50, 'time': 15}} | be-guard {'n': 65, 'mean_pct': np.float64(0.223), 'sum_pct': np.float64(14.48), 'win_pct': np.float64(66.2), 'exits': {'target': 36, 'time': 28, 'stop': 1}}
+AB bt-exits {'n': 63, 'mean_pct': np.float64(0.297), 'sum_pct': np.float64(18.69), 'win_pct': np.float64(60.3), 'exits': {'target': 50, 'time': 13}} | be-guard {'n': 63, 'mean_pct': np.float64(0.257), 'sum_pct': np.float64(16.17), 'win_pct': np.float64(68.3), 'exits': {'target': 36, 'time': 27}}
+A0->A1 gone {'n': 11, 'mean_pct': np.float64(0.272), 'sum_pct': np.float64(2.99), 'win_pct': np.float64(54.5), 'exits': {'target': 9, 'time': 2}} new {'n': 10, 'mean_pct': np.float64(0.571), 'sum_pct': np.float64(5.71), 'win_pct': np.float64(40.0), 'exits': {'target': 10}} net 3.35
+    {'net_change_sum_pct': np.float64(3.35), 'net_change_changed_set_pct': 2.72, 'net_change_excl_abs_ret_gt_2pct': 0.08, 'net_change_first4d': -0.21, 'net_change_last3d': 2.94, 'disappeared_with_u_up_spike_gt_0.1': {'n': 0, 'mean_pct': None, 'sum_pct': 0.0, 'win_pct': None, 'exits': {}}, 'appeared_with_u_below_med5_lt_-0.05': {'n': 2, 'mean_pct': np.float64(2.83), 'sum_pct': np.float64(5.66), 'win_pct': np.float64(100.0), 'exits': {'target': 2}}, 'disappeared_binance_above_median_gt_0.1': {'n': 6, 'mean_pct': np.float64(0.251), 'sum_pct': np.float64(1.5), 'win_pct': np.float64(66.7), 'exits': {'target': 6}}, 'appeared_binance_below_median_lt_-0.1': {'n': 4, 'mean_pct': np.float64(0.047), 'sum_pct': np.float64(0.19), 'win_pct': np.float64(50.0), 'exits': {'target': 4}}, 'net_by_market': {'BTCTMN': 0.0, 'ETHTMN': 0.0, 'SOLTMN': 0.0, 'XRPTMN': 0.0, 'DOGETMN': 0.0, 'PEPETMN': 1.58, 'BNBTMN': 0.0, 'ARBTMN': 1.14}}
+A0->B1 gone {'n': 10, 'mean_pct': np.float64(0.402), 'sum_pct': np.float64(4.02), 'win_pct': np.float64(60.0), 'exits': {'target': 9, 'time': 1}} new {'n': 6, 'mean_pct': np.float64(0.771), 'sum_pct': np.float64(4.63), 'win_pct': np.float64(16.7), 'exits': {'target': 6}} net 1.23
+    {'net_change_sum_pct': np.float64(1.23), 'net_change_changed_set_pct': 0.61, 'net_change_excl_abs_ret_gt_2pct': -2.07, 'net_change_first4d': -0.72, 'net_change_last3d': 1.33, 'disappeared_with_u_up_spike_gt_0.1': {'n': 8, 'mean_pct': np.float64(0.17), 'sum_pct': np.float64(1.36), 'win_pct': np.float64(62.5), 'exits': {'target': 7, 'time': 1}}, 'appeared_with_u_below_med5_lt_-0.05': {'n': 4, 'mean_pct': np.float64(1.291), 'sum_pct': np.float64(5.16), 'win_pct': np.float64(25.0), 'exits': {'target': 4}}, 'disappeared_binance_above_median_gt_0.1': {'n': 0, 'mean_pct': None, 'sum_pct': 0.0, 'win_pct': None, 'exits': {}}, 'appeared_binance_below_median_lt_-0.1': {'n': 0, 'mean_pct': None, 'sum_pct': 0.0, 'win_pct': None, 'exits': {}}, 'net_by_market': {'BTCTMN': -0.28, 'ETHTMN': -0.22, 'SOLTMN': 0.22, 'XRPTMN': -0.28, 'DOGETMN': -0.07, 'PEPETMN': 1.38, 'BNBTMN': 0.04, 'ARBTMN': -0.18}}
+A0->AB gone {'n': 20, 'mean_pct': np.float64(0.129), 'sum_pct': np.float64(2.59), 'win_pct': np.float64(50.0), 'exits': {'target': 16, 'time': 4}} new {'n': 14, 'mean_pct': np.float64(0.359), 'sum_pct': np.float64(5.03), 'win_pct': np.float64(35.7), 'exits': {'target': 13, 'time': 1}} net 2.89
+    {'net_change_sum_pct': np.float64(2.89), 'net_change_changed_set_pct': 2.44, 'net_change_excl_abs_ret_gt_2pct': -0.2, 'net_change_first4d': 0.35, 'net_change_last3d': 2.09, 'disappeared_with_u_up_spike_gt_0.1': {'n': 7, 'mean_pct': np.float64(0.087), 'sum_pct': np.float64(0.61), 'win_pct': np.float64(57.1), 'exits': {'target': 6, 'time': 1}}, 'appeared_with_u_below_med5_lt_-0.05': {'n': 6, 'mean_pct': np.float64(0.751), 'sum_pct': np.float64(4.5), 'win_pct': np.float64(33.3), 'exits': {'target': 5, 'time': 1}}, 'disappeared_binance_above_median_gt_0.1': {'n': 6, 'mean_pct': np.float64(0.251), 'sum_pct': np.float64(1.5), 'win_pct': np.float64(66.7), 'exits': {'target': 6}}, 'appeared_binance_below_median_lt_-0.1': {'n': 4, 'mean_pct': np.float64(-0.151), 'sum_pct': np.float64(-0.6), 'win_pct': np.float64(50.0), 'exits': {'target': 3, 'time': 1}}, 'net_by_market': {'BTCTMN': -0.28, 'ETHTMN': -0.22, 'SOLTMN': 0.22, 'XRPTMN': -0.28, 'DOGETMN': -0.07, 'PEPETMN': 2.05, 'BNBTMN': 0.04, 'ARBTMN': 0.98}}

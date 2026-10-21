@@ -1,0 +1,224 @@
+{
+ "binance_vs_median3_pct_of_minutes": {
+  "BTC": {
+   ">0.05%": 0.0,
+   ">0.1%": 0.0,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "ETH": {
+   ">0.05%": 0.0,
+   ">0.1%": 0.0,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "SOL": {
+   ">0.05%": 0.0,
+   ">0.1%": 0.0,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "XRP": {
+   ">0.05%": 0.04,
+   ">0.1%": 0.0,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "DOGE": {
+   ">0.05%": 0.38,
+   ">0.1%": 0.02,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "PEPE": {
+   ">0.05%": 65.07,
+   ">0.1%": 42.49,
+   ">0.2%": 8.46,
+   "n": 10080
+  },
+  "BNB": {
+   ">0.05%": 0.11,
+   ">0.1%": 0.0,
+   ">0.2%": 0.0,
+   "n": 10080
+  },
+  "ARB": {
+   ">0.05%": 6.64,
+   ">0.1%": 0.26,
+   ">0.2%": 0.0,
+   "n": 10080
+  }
+ },
+ "usdttmn": {
+  "traded_minutes": 4895,
+  "grid_minutes": 10080,
+  "abs_u_vs_med5_gt": {
+   "0.05": 8.175,
+   "0.1": 2.639,
+   "0.2": 0.536
+  },
+  "abs_u_vs_prev5_gt": {
+   "0.05": 11.548,
+   "0.1": 4.276,
+   "0.2": 0.913
+  },
+  "max_abs_u_vs_med5_pct": 1.211
+ },
+ "A0_on_u_spike_vs_med5": {
+  "0.05": {
+   "n": 11,
+   "mean": 0.26,
+   "sum": 2.86,
+   "win": 72.7,
+   "exits": {
+    "target": 10,
+    "time": 1
+   }
+  },
+  "0.1": {
+   "n": 8,
+   "mean": 0.17,
+   "sum": 1.36,
+   "win": 62.5,
+   "exits": {
+    "target": 7,
+    "time": 1
+   }
+  },
+  "0.2": {
+   "n": 8,
+   "mean": 0.17,
+   "sum": 1.36,
+   "win": 62.5,
+   "exits": {
+    "target": 7,
+    "time": 1
+   }
+  }
+ },
+ "A0_on_u_spike_vs_prev5": {
+  "0.05": {
+   "n": 11,
+   "mean": 0.26,
+   "sum": 2.86,
+   "win": 72.7,
+   "exits": {
+    "target": 10,
+    "time": 1
+   }
+  },
+  "0.1": {
+   "n": 9,
+   "mean": 0.193,
+   "sum": 1.74,
+   "win": 66.7,
+   "exits": {
+    "target": 8,
+    "time": 1
+   }
+  },
+  "0.2": {
+   "n": 8,
+   "mean": 0.17,
+   "sum": 1.36,
+   "win": 62.5,
+   "exits": {
+    "target": 7,
+    "time": 1
+   }
+  }
+ },
+ "A0_not_on_spike_0.1": {
+  "n": 61,
+  "mean": 0.237,
+  "sum": 14.44,
+  "win": 62.3,
+  "exits": {
+   "target": 47,
+   "time": 14
+  }
+ },
+ "A0_simultaneous_2plus": {
+  "n": 7,
+  "mean": 0.113,
+  "sum": 0.79,
+  "win": 57.1,
+  "exits": {
+   "target": 6,
+   "time": 1
+  },
+  "minutes": 3,
+  "mean_u_dev5": 0.759
+ },
+ "ticks": {
+  "shadow_v2": {
+   "rows_tmn": 4930,
+   "hours": 0.69,
+   "min_buy_dev_pct": -0.424,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 0,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 2,
+   "implied_u_n": 986,
+   "implied_u_max_tick_jump_pct": 0.0587,
+   "implied_u_max_abs_vs_5min_median_pct": 0.1388
+  },
+  "shadow_v3": {
+   "rows_tmn": 2990,
+   "hours": 0.41,
+   "min_buy_dev_pct": -0.488,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 0,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 0,
+   "implied_u_n": 598,
+   "implied_u_max_tick_jump_pct": 0.0527,
+   "implied_u_max_abs_vs_5min_median_pct": 0.1529
+  },
+  "shadow_v4": {
+   "rows_tmn": 2120,
+   "hours": 0.31,
+   "min_buy_dev_pct": -0.246,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 0,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 0,
+   "implied_u_n": 424,
+   "implied_u_max_tick_jump_pct": 0.0524,
+   "implied_u_max_abs_vs_5min_median_pct": 0.2287
+  },
+  "shadow_v5": {
+   "rows_tmn": 1270,
+   "hours": 0.18,
+   "min_buy_dev_pct": -0.227,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 0,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 0,
+   "implied_u_n": 254,
+   "implied_u_max_tick_jump_pct": 0.0587,
+   "implied_u_max_abs_vs_5min_median_pct": 0.1882
+  },
+  "shadow_v6": {
+   "rows_tmn": 1856,
+   "hours": 0.16,
+   "min_buy_dev_pct": -0.356,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 0,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 0,
+   "implied_u_n": 232,
+   "implied_u_max_tick_jump_pct": 0.0178,
+   "implied_u_max_abs_vs_5min_median_pct": 0.0367
+  },
+  "live_main": {
+   "rows_tmn": 22048,
+   "hours": 1.94,
+   "min_buy_dev_pct": -0.591,
+   "ticks_buy_dev_le_-0.7": 0,
+   "ticks_buy_dev_le_-0.5": 10,
+   "timestamps_2plus_le_-0.4": 0,
+   "timestamps_3plus_le_-0.25": 0
+  }
+ }
+}

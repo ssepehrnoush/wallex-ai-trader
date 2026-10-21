@@ -1,0 +1,1192 @@
+{
+ "tag": "low",
+ "spread_mult": 1.0,
+ "min_periods": 30,
+ "usdt_mode": "traded",
+ "split": "2026-10-18T14:05",
+ "stop_mode": "low",
+ "spreads_pct": {
+  "BTCTMN": 0.0317,
+  "ETHTMN": 0.1321,
+  "SOLTMN": 0.1538,
+  "XRPTMN": 0.1827,
+  "DOGETMN": 0.1635,
+  "PEPETMN": 0.1055,
+  "BNBTMN": 0.1457,
+  "ARBTMN": 0.4396
+ },
+ "data_from": "2026-10-14 17:41:00+00:00",
+ "data_to": "2026-10-21 14:04:00+00:00",
+ "8m_A": {
+  "chosen": "0.9/45/0.00",
+  "is_sum_chosen": 8.442,
+  "is_sum_current": 6.806,
+  "oos_chosen": {
+   "n": 35,
+   "mean": 0.381,
+   "sum": 13.34,
+   "win": 82.9,
+   "exits": {
+    "target": 28,
+    "time": 6,
+    "stop": 1
+   },
+   "pnl_tmn": 112993
+  },
+  "oos_current": {
+   "n": 35,
+   "mean": 0.319,
+   "sum": 11.18,
+   "win": 74.3,
+   "exits": {
+    "target": 23,
+    "time": 12
+   },
+   "pnl_tmn": 94266
+  },
+  "paired": {
+   "diff": 2.16,
+   "ci90": [
+    -2.36,
+    6.43
+   ],
+   "p_gt0": 0.794,
+   "keys": 36,
+   "nonzero": 17
+  },
+  "cluster6h": {
+   "diff": 2.16,
+   "ci90": [
+    -2.58,
+    6.84
+   ],
+   "p_gt0": 0.778,
+   "clusters": 26
+  },
+  "oos_rank_of_chosen": 8,
+  "n_cfg": 80,
+  "oos_best": [
+   {
+    "cfg": "1.2/45/0.10",
+    "oos_n": 37,
+    "oos_sum": 16.027
+   },
+   {
+    "cfg": "1.5/45/0.10",
+    "oos_n": 37,
+    "oos_sum": 16.027
+   },
+   {
+    "cfg": "0.9/45/0.10",
+    "oos_n": 37,
+    "oos_sum": 14.808
+   },
+   {
+    "cfg": "1.5/45/0.20",
+    "oos_n": 39,
+    "oos_sum": 14.339
+   },
+   {
+    "cfg": "1.2/45/0.20",
+    "oos_n": 39,
+    "oos_sum": 14.339
+   }
+  ],
+  "is_top5": [
+   {
+    "cfg": "0.9/45/0.00",
+    "is_n": 25,
+    "is_sum": 8.442,
+    "oos_sum": 13.339
+   },
+   {
+    "cfg": "0.6/45/0.00",
+    "is_n": 25,
+    "is_sum": 8.442,
+    "oos_sum": 11.285
+   },
+   {
+    "cfg": "1.2/45/0.00",
+    "is_n": 25,
+    "is_sum": 8.442,
+    "oos_sum": 12.839
+   },
+   {
+    "cfg": "1.5/45/0.00",
+    "is_n": 25,
+    "is_sum": 8.442,
+    "oos_sum": 12.839
+   },
+   {
+    "cfg": "0.9/45/0.10",
+    "is_n": 26,
+    "is_sum": 7.546,
+    "oos_sum": 14.808
+   }
+  ],
+  "fresh_oos_chosen": {
+   "n": 35,
+   "mean": 0.381,
+   "sum": 13.34,
+   "win": 82.9,
+   "exits": {
+    "target": 28,
+    "time": 6,
+    "stop": 1
+   },
+   "pnl_tmn": 111428
+  },
+  "fresh_oos_current": {
+   "n": 35,
+   "mean": 0.319,
+   "sum": 11.18,
+   "win": 74.3,
+   "exits": {
+    "target": 23,
+    "time": 12
+   },
+   "pnl_tmn": 93211
+  },
+  "per_market_oos_current": {
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.366,
+    "sum": 1.1,
+    "win": 100.0,
+    "exits": {
+     "target": 3
+    },
+    "pnl_tmn": 9318
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 2,
+    "mean": 0.17,
+    "sum": 0.34,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 2848
+   },
+   "XRPTMN": {
+    "n": 2,
+    "mean": 0.317,
+    "sum": 0.63,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 5328
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.359,
+    "sum": 0.36,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 3008
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.391,
+    "sum": 4.31,
+    "win": 81.8,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 36310
+   },
+   "BNBTMN": {
+    "n": 4,
+    "mean": -0.026,
+    "sum": -0.11,
+    "win": 25.0,
+    "exits": {
+     "time": 3,
+     "target": 1
+    },
+    "pnl_tmn": -908
+   },
+   "ARBTMN": {
+    "n": 12,
+    "mean": 0.379,
+    "sum": 4.54,
+    "win": 66.7,
+    "exits": {
+     "target": 7,
+     "time": 5
+    },
+    "pnl_tmn": 38360
+   }
+  },
+  "per_market_oos_chosen": {
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.433,
+    "sum": 1.3,
+    "win": 100.0,
+    "exits": {
+     "target": 3
+    },
+    "pnl_tmn": 11070
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 2,
+    "mean": 0.17,
+    "sum": 0.34,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 2854
+   },
+   "XRPTMN": {
+    "n": 2,
+    "mean": 0.364,
+    "sum": 0.73,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 6154
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.359,
+    "sum": 0.36,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 3016
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.398,
+    "sum": 4.38,
+    "win": 81.8,
+    "exits": {
+     "target": 9,
+     "time": 2
+    },
+    "pnl_tmn": 37185
+   },
+   "BNBTMN": {
+    "n": 5,
+    "mean": 0.539,
+    "sum": 2.69,
+    "win": 80.0,
+    "exits": {
+     "target": 4,
+     "time": 1
+    },
+    "pnl_tmn": 22728
+   },
+   "ARBTMN": {
+    "n": 11,
+    "mean": 0.322,
+    "sum": 3.54,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 3,
+     "stop": 1
+    },
+    "pnl_tmn": 29987
+   }
+  },
+  "halts": 0,
+  "full_current": {
+   "n": 61,
+   "mean": 0.295,
+   "sum": 17.98,
+   "win": 73.8,
+   "exits": {
+    "target": 42,
+    "time": 19
+   },
+   "pnl_tmn": 150825
+  },
+  "full_by_reason_mean": {
+   "target": 0.569,
+   "time": -0.312
+  }
+ },
+ "8m_B_reverse": {
+  "chosen": "1.2/45/0.10",
+  "is_sum_chosen": 16.027,
+  "is_sum_current": 11.177,
+  "oos_chosen": {
+   "n": 26,
+   "mean": 0.29,
+   "sum": 7.55,
+   "win": 76.9,
+   "exits": {
+    "target": 19,
+    "time": 7
+   },
+   "pnl_tmn": 51951
+  },
+  "oos_current": {
+   "n": 26,
+   "mean": 0.262,
+   "sum": 6.81,
+   "win": 73.1,
+   "exits": {
+    "target": 19,
+    "time": 7
+   },
+   "pnl_tmn": 56560
+  },
+  "paired": {
+   "diff": 0.74,
+   "ci90": [
+    -1.31,
+    2.73
+   ],
+   "p_gt0": 0.729,
+   "keys": 26,
+   "nonzero": 9
+  },
+  "cluster6h": {
+   "diff": 0.74,
+   "ci90": [
+    -1.3,
+    2.7
+   ],
+   "p_gt0": 0.735,
+   "clusters": 17
+  },
+  "oos_rank_of_chosen": 5,
+  "n_cfg": 80,
+  "oos_best": [
+   {
+    "cfg": "0.6/45/0.00",
+    "oos_n": 25,
+    "oos_sum": 8.442
+   },
+   {
+    "cfg": "1.5/45/0.00",
+    "oos_n": 25,
+    "oos_sum": 8.442
+   },
+   {
+    "cfg": "1.2/45/0.00",
+    "oos_n": 25,
+    "oos_sum": 8.442
+   },
+   {
+    "cfg": "0.9/45/0.00",
+    "oos_n": 25,
+    "oos_sum": 8.442
+   },
+   {
+    "cfg": "0.6/45/0.10",
+    "oos_n": 26,
+    "oos_sum": 7.546
+   }
+  ],
+  "is_top5": [
+   {
+    "cfg": "1.2/45/0.10",
+    "is_n": 37,
+    "is_sum": 16.027,
+    "oos_sum": 7.546
+   },
+   {
+    "cfg": "1.5/45/0.10",
+    "is_n": 37,
+    "is_sum": 16.027,
+    "oos_sum": 7.546
+   },
+   {
+    "cfg": "0.9/45/0.10",
+    "is_n": 37,
+    "is_sum": 14.808,
+    "oos_sum": 7.546
+   },
+   {
+    "cfg": "1.2/45/0.20",
+    "is_n": 39,
+    "is_sum": 14.339,
+    "oos_sum": 7.201
+   },
+   {
+    "cfg": "1.5/45/0.20",
+    "is_n": 39,
+    "is_sum": 14.339,
+    "oos_sum": 7.201
+   }
+  ],
+  "fresh_oos_chosen": {
+   "n": 26,
+   "mean": 0.29,
+   "sum": 7.55,
+   "win": 76.9,
+   "exits": {
+    "target": 19,
+    "time": 7
+   },
+   "pnl_tmn": 51951
+  },
+  "fresh_oos_current": {
+   "n": 26,
+   "mean": 0.262,
+   "sum": 6.81,
+   "win": 73.1,
+   "exits": {
+    "target": 19,
+    "time": 7
+   },
+   "pnl_tmn": 56560
+  },
+  "per_market_oos_current": {
+   "BTCTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 1,
+    "mean": 0.182,
+    "sum": 0.18,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 1509
+   },
+   "XRPTMN": {
+    "n": 1,
+    "mean": 0.801,
+    "sum": 0.8,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 6698
+   },
+   "DOGETMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.047,
+    "sum": 0.52,
+    "win": 63.6,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 4172
+   },
+   "BNBTMN": {
+    "n": 7,
+    "mean": 0.636,
+    "sum": 4.45,
+    "win": 85.7,
+    "exits": {
+     "target": 6,
+     "time": 1
+    },
+    "pnl_tmn": 37101
+   },
+   "ARBTMN": {
+    "n": 6,
+    "mean": 0.142,
+    "sum": 0.85,
+    "win": 66.7,
+    "exits": {
+     "target": 4,
+     "time": 2
+    },
+    "pnl_tmn": 7080
+   }
+  },
+  "per_market_oos_chosen": {
+   "BTCTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 1,
+    "mean": 0.182,
+    "sum": 0.18,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 1250
+   },
+   "XRPTMN": {
+    "n": 1,
+    "mean": 0.801,
+    "sum": 0.8,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 5540
+   },
+   "DOGETMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.195,
+    "sum": 2.14,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 14679
+   },
+   "BNBTMN": {
+    "n": 7,
+    "mean": 0.522,
+    "sum": 3.65,
+    "win": 85.7,
+    "exits": {
+     "target": 6,
+     "time": 1
+    },
+    "pnl_tmn": 25187
+   },
+   "ARBTMN": {
+    "n": 6,
+    "mean": 0.129,
+    "sum": 0.77,
+    "win": 66.7,
+    "exits": {
+     "target": 4,
+     "time": 2
+    },
+    "pnl_tmn": 5295
+   }
+  },
+  "halts": 0
+ },
+ "7m_noBNB_A": {
+  "chosen": "0.9/45/0.00",
+  "is_sum_chosen": 6.398,
+  "is_sum_current": 2.813,
+  "oos_chosen": {
+   "n": 30,
+   "mean": 0.355,
+   "sum": 10.65,
+   "win": 83.3,
+   "exits": {
+    "target": 24,
+    "time": 5,
+    "stop": 1
+   },
+   "pnl_tmn": 89653
+  },
+  "oos_current": {
+   "n": 31,
+   "mean": 0.364,
+   "sum": 11.28,
+   "win": 80.6,
+   "exits": {
+    "target": 22,
+    "time": 9
+   },
+   "pnl_tmn": 94537
+  },
+  "paired": {
+   "diff": -0.64,
+   "ci90": [
+    -4.53,
+    2.6
+   ],
+   "p_gt0": 0.41,
+   "keys": 31,
+   "nonzero": 14
+  },
+  "cluster6h": {
+   "diff": -0.64,
+   "ci90": [
+    -4.38,
+    2.34
+   ],
+   "p_gt0": 0.407,
+   "clusters": 22
+  },
+  "oos_rank_of_chosen": 19,
+  "n_cfg": 80,
+  "oos_best": [
+   {
+    "cfg": "1.2/45/0.10",
+    "oos_n": 32,
+    "oos_sum": 13.334
+   },
+   {
+    "cfg": "1.5/45/0.10",
+    "oos_n": 32,
+    "oos_sum": 13.334
+   },
+   {
+    "cfg": "0.9/45/0.10",
+    "oos_n": 32,
+    "oos_sum": 12.115
+   },
+   {
+    "cfg": "0.9/25/0.00",
+    "oos_n": 31,
+    "oos_sum": 11.669
+   },
+   {
+    "cfg": "1.5/25/0.00",
+    "oos_n": 31,
+    "oos_sum": 11.669
+   }
+  ],
+  "is_top5": [
+   {
+    "cfg": "0.9/45/0.00",
+    "is_n": 19,
+    "is_sum": 6.398,
+    "oos_sum": 10.647
+   },
+   {
+    "cfg": "1.2/45/0.00",
+    "is_n": 19,
+    "is_sum": 6.398,
+    "oos_sum": 10.146
+   },
+   {
+    "cfg": "1.5/45/0.00",
+    "is_n": 19,
+    "is_sum": 6.398,
+    "oos_sum": 10.146
+   },
+   {
+    "cfg": "0.9/45/0.05",
+    "is_n": 20,
+    "is_sum": 5.48,
+    "oos_sum": 10.105
+   },
+   {
+    "cfg": "1.2/45/0.05",
+    "is_n": 20,
+    "is_sum": 5.48,
+    "oos_sum": 9.604
+   }
+  ],
+  "fresh_oos_chosen": {
+   "n": 30,
+   "mean": 0.355,
+   "sum": 10.65,
+   "win": 83.3,
+   "exits": {
+    "target": 24,
+    "time": 5,
+    "stop": 1
+   },
+   "pnl_tmn": 88711
+  },
+  "fresh_oos_current": {
+   "n": 31,
+   "mean": 0.364,
+   "sum": 11.28,
+   "win": 80.6,
+   "exits": {
+    "target": 22,
+    "time": 9
+   },
+   "pnl_tmn": 94099
+  },
+  "per_market_oos_current": {
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.366,
+    "sum": 1.1,
+    "win": 100.0,
+    "exits": {
+     "target": 3
+    },
+    "pnl_tmn": 9255
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 2,
+    "mean": 0.17,
+    "sum": 0.34,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 2830
+   },
+   "XRPTMN": {
+    "n": 2,
+    "mean": 0.317,
+    "sum": 0.63,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 5291
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.359,
+    "sum": 0.36,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 2988
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.391,
+    "sum": 4.31,
+    "win": 81.8,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 36061
+   },
+   "BNBTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ARBTMN": {
+    "n": 12,
+    "mean": 0.379,
+    "sum": 4.54,
+    "win": 66.7,
+    "exits": {
+     "target": 7,
+     "time": 5
+    },
+    "pnl_tmn": 38113
+   }
+  },
+  "per_market_oos_chosen": {
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.433,
+    "sum": 1.3,
+    "win": 100.0,
+    "exits": {
+     "target": 3
+    },
+    "pnl_tmn": 10991
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 2,
+    "mean": 0.17,
+    "sum": 0.34,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 2844
+   },
+   "XRPTMN": {
+    "n": 2,
+    "mean": 0.364,
+    "sum": 0.73,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    },
+    "pnl_tmn": 6116
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.359,
+    "sum": 0.36,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 3006
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.398,
+    "sum": 4.38,
+    "win": 81.8,
+    "exits": {
+     "target": 9,
+     "time": 2
+    },
+    "pnl_tmn": 36926
+   },
+   "BNBTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ARBTMN": {
+    "n": 11,
+    "mean": 0.322,
+    "sum": 3.54,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 3,
+     "stop": 1
+    },
+    "pnl_tmn": 29771
+   }
+  },
+  "halts": 0,
+  "full_current": {
+   "n": 51,
+   "mean": 0.276,
+   "sum": 14.1,
+   "win": 76.5,
+   "exits": {
+    "target": 35,
+    "time": 16
+   },
+   "pnl_tmn": 117822
+  },
+  "full_by_reason_mean": {
+   "target": 0.536,
+   "time": -0.292
+  }
+ },
+ "7m_noBNB_B_reverse": {
+  "chosen": "1.2/45/0.10",
+  "is_sum_chosen": 13.334,
+  "is_sum_current": 11.282,
+  "oos_chosen": {
+   "n": 20,
+   "mean": 0.197,
+   "sum": 3.94,
+   "win": 75.0,
+   "exits": {
+    "target": 14,
+    "time": 6
+   },
+   "pnl_tmn": 27083
+  },
+  "oos_current": {
+   "n": 20,
+   "mean": 0.141,
+   "sum": 2.81,
+   "win": 70.0,
+   "exits": {
+    "target": 13,
+    "time": 7
+   },
+   "pnl_tmn": 23284
+  },
+  "paired": {
+   "diff": 1.13,
+   "ci90": [
+    -0.4,
+    2.88
+   ],
+   "p_gt0": 0.879,
+   "keys": 20,
+   "nonzero": 9
+  },
+  "cluster6h": {
+   "diff": 1.13,
+   "ci90": [
+    -0.39,
+    2.77
+   ],
+   "p_gt0": 0.883,
+   "clusters": 13
+  },
+  "oos_rank_of_chosen": 7,
+  "n_cfg": 80,
+  "oos_best": [
+   {
+    "cfg": "1.2/45/0.00",
+    "oos_n": 19,
+    "oos_sum": 6.398
+   },
+   {
+    "cfg": "1.5/45/0.00",
+    "oos_n": 19,
+    "oos_sum": 6.398
+   },
+   {
+    "cfg": "0.9/45/0.00",
+    "oos_n": 19,
+    "oos_sum": 6.398
+   },
+   {
+    "cfg": "0.9/45/0.05",
+    "oos_n": 20,
+    "oos_sum": 5.48
+   },
+   {
+    "cfg": "1.5/45/0.05",
+    "oos_n": 20,
+    "oos_sum": 5.48
+   }
+  ],
+  "is_top5": [
+   {
+    "cfg": "1.2/45/0.10",
+    "is_n": 32,
+    "is_sum": 13.334,
+    "oos_sum": 3.943
+   },
+   {
+    "cfg": "1.5/45/0.10",
+    "is_n": 32,
+    "is_sum": 13.334,
+    "oos_sum": 3.943
+   },
+   {
+    "cfg": "0.9/45/0.10",
+    "is_n": 32,
+    "is_sum": 12.115,
+    "oos_sum": 3.943
+   },
+   {
+    "cfg": "0.9/25/0.00",
+    "is_n": 31,
+    "is_sum": 11.669,
+    "oos_sum": 2.552
+   },
+   {
+    "cfg": "1.2/25/0.00",
+    "is_n": 31,
+    "is_sum": 11.669,
+    "oos_sum": 2.956
+   }
+  ],
+  "fresh_oos_chosen": {
+   "n": 20,
+   "mean": 0.197,
+   "sum": 3.94,
+   "win": 75.0,
+   "exits": {
+    "target": 14,
+    "time": 6
+   },
+   "pnl_tmn": 27083
+  },
+  "fresh_oos_current": {
+   "n": 20,
+   "mean": 0.141,
+   "sum": 2.81,
+   "win": 70.0,
+   "exits": {
+    "target": 13,
+    "time": 7
+   },
+   "pnl_tmn": 23284
+  },
+  "per_market_oos_current": {
+   "BTCTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 1,
+    "mean": 0.182,
+    "sum": 0.18,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 1509
+   },
+   "XRPTMN": {
+    "n": 1,
+    "mean": 0.801,
+    "sum": 0.8,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 6653
+   },
+   "DOGETMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.047,
+    "sum": 0.52,
+    "win": 63.6,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 4239
+   },
+   "BNBTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ARBTMN": {
+    "n": 7,
+    "mean": 0.187,
+    "sum": 1.31,
+    "win": 71.4,
+    "exits": {
+     "target": 4,
+     "time": 3
+    },
+    "pnl_tmn": 10883
+   }
+  },
+  "per_market_oos_chosen": {
+   "BTCTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ETHTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "SOLTMN": {
+    "n": 1,
+    "mean": 0.182,
+    "sum": 0.18,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 1250
+   },
+   "XRPTMN": {
+    "n": 1,
+    "mean": 0.801,
+    "sum": 0.8,
+    "win": 100.0,
+    "exits": {
+     "target": 1
+    },
+    "pnl_tmn": 5513
+   },
+   "DOGETMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "PEPETMN": {
+    "n": 11,
+    "mean": 0.195,
+    "sum": 2.14,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 4
+    },
+    "pnl_tmn": 14687
+   },
+   "BNBTMN": {
+    "n": 0,
+    "mean": null,
+    "sum": 0.0,
+    "win": null,
+    "exits": {}
+   },
+   "ARBTMN": {
+    "n": 7,
+    "mean": 0.117,
+    "sum": 0.82,
+    "win": 71.4,
+    "exits": {
+     "target": 5,
+     "time": 2
+    },
+    "pnl_tmn": 5633
+   }
+  },
+  "halts": 0
+ }
+}

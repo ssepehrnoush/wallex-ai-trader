@@ -1,0 +1,1804 @@
+{
+ "mp30_8m": {
+  "current": {
+   "n": 61,
+   "mean": 0.295,
+   "sum": 18.02,
+   "win": 73.8,
+   "exits": {
+    "target": 42,
+    "time": 19
+   },
+   "pnl_tmn": 151165
+  },
+  "current_by_reason_mean": {
+   "target": 0.57,
+   "time": -0.311
+  },
+  "current_stop_count": 0,
+  "hold45": {
+   "s": {
+    "n": 61,
+    "mean": 0.334,
+    "sum": 20.36,
+    "win": 80.3,
+    "exits": {
+     "target": 47,
+     "time": 13,
+     "stop": 1
+    },
+    "pnl_tmn": 171048
+   },
+   "diff": 2.33,
+   "cluster6h_ci90": [
+    -2.74,
+    7.5
+   ],
+   "dayblock_ci90": [
+    -1.59,
+    6.93
+   ],
+   "days": 7,
+   "d1_4": 0.71,
+   "d5_7": 1.62,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.45,
+    "BNBTMN": 2.0,
+    "ARBTMN": -1.12
+   }
+  },
+  "hold15": {
+   "s": {
+    "n": 61,
+    "mean": 0.279,
+    "sum": 17.0,
+    "win": 75.4,
+    "exits": {
+     "target": 38,
+     "time": 23
+    },
+    "pnl_tmn": 142449
+   },
+   "diff": -1.02,
+   "cluster6h_ci90": [
+    -3.8,
+    1.64
+   ],
+   "dayblock_ci90": [
+    -4.1,
+    1.82
+   ],
+   "days": 7,
+   "d1_4": -0.42,
+   "d5_7": -0.6,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": -0.21,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.72,
+    "BNBTMN": -0.56,
+    "ARBTMN": -0.98
+   }
+  },
+  "hold10": {
+   "s": {
+    "n": 56,
+    "mean": 0.087,
+    "sum": 4.85,
+    "win": 64.3,
+    "exits": {
+     "target": 29,
+     "time": 27
+    },
+    "pnl_tmn": 40103
+   },
+   "diff": -13.17,
+   "cluster6h_ci90": [
+    -22.07,
+    -5.47
+   ],
+   "dayblock_ci90": [
+    -19.53,
+    -6.85
+   ],
+   "days": 7,
+   "d1_4": -7.25,
+   "d5_7": -5.92,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": -0.47,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.55,
+    "BNBTMN": -4.38,
+    "ARBTMN": -7.78
+   }
+  },
+  "stop0.6": {
+   "s": {
+    "n": 60,
+    "mean": 0.287,
+    "sum": 17.21,
+    "win": 73.3,
+    "exits": {
+     "target": 42,
+     "time": 17,
+     "stop": 1
+    },
+    "pnl_tmn": 182494
+   },
+   "diff": -0.81,
+   "cluster6h_ci90": [
+    -2.43,
+    0.0
+   ],
+   "dayblock_ci90": [
+    -2.43,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": -0.81,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.81
+   }
+  },
+  "stop1.2": {
+   "s": {
+    "n": 61,
+    "mean": 0.295,
+    "sum": 18.02,
+    "win": 73.8,
+    "exits": {
+     "target": 42,
+     "time": 19
+    },
+    "pnl_tmn": 124963
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.5": {
+   "s": {
+    "n": 61,
+    "mean": 0.295,
+    "sum": 18.02,
+    "win": 73.8,
+    "exits": {
+     "target": 42,
+     "time": 19
+    },
+    "pnl_tmn": 106503
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "slack0": {
+   "s": {
+    "n": 60,
+    "mean": 0.302,
+    "sum": 18.15,
+    "win": 73.3,
+    "exits": {
+     "target": 39,
+     "time": 20,
+     "stop": 1
+    },
+    "pnl_tmn": 152186
+   },
+   "diff": 0.13,
+   "cluster6h_ci90": [
+    -2.83,
+    3.13
+   ],
+   "dayblock_ci90": [
+    -2.88,
+    3.14
+   ],
+   "days": 7,
+   "d1_4": -0.26,
+   "d5_7": 0.39,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.04,
+    "ETHTMN": 0.0,
+    "SOLTMN": -0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.9,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.39
+   }
+  },
+  "X0.1": {
+   "s": {
+    "n": 63,
+    "mean": 0.29,
+    "sum": 18.27,
+    "win": 76.2,
+    "exits": {
+     "target": 46,
+     "time": 16,
+     "stop": 1
+    },
+    "pnl_tmn": 153279
+   },
+   "diff": 0.25,
+   "cluster6h_ci90": [
+    -1.26,
+    1.84
+   ],
+   "dayblock_ci90": [
+    -1.11,
+    1.61
+   ],
+   "days": 7,
+   "d1_4": 0.03,
+   "d5_7": 0.22,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.07,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.32
+   }
+  },
+  "X0.2": {
+   "s": {
+    "n": 64,
+    "mean": 0.264,
+    "sum": 16.92,
+    "win": 76.6,
+    "exits": {
+     "target": 48,
+     "time": 15,
+     "stop": 1
+    },
+    "pnl_tmn": 141830
+   },
+   "diff": -1.1,
+   "cluster6h_ci90": [
+    -3.65,
+    1.19
+   ],
+   "dayblock_ci90": [
+    -2.41,
+    0.19
+   ],
+   "days": 7,
+   "d1_4": -0.32,
+   "d5_7": -0.78,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.93,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.17
+   }
+  },
+  "X0.3": {
+   "s": {
+    "n": 64,
+    "mean": 0.231,
+    "sum": 14.79,
+    "win": 76.6,
+    "exits": {
+     "target": 48,
+     "time": 14,
+     "stop": 2
+    },
+    "pnl_tmn": 123691
+   },
+   "diff": -3.23,
+   "cluster6h_ci90": [
+    -7.01,
+    0.14
+   ],
+   "dayblock_ci90": [
+    -5.66,
+    -0.87
+   ],
+   "days": 7,
+   "d1_4": -2.21,
+   "d5_7": -1.02,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -1.96,
+    "BNBTMN": 0.0,
+    "ARBTMN": -1.27
+   }
+  },
+  "pick0.9/45/0": {
+   "s": {
+    "n": 60,
+    "mean": 0.364,
+    "sum": 21.82,
+    "win": 80.0,
+    "exits": {
+     "target": 46,
+     "time": 13,
+     "stop": 1
+    },
+    "pnl_tmn": 183547
+   },
+   "diff": 3.8,
+   "cluster6h_ci90": [
+    -1.65,
+    9.46
+   ],
+   "dayblock_ci90": [
+    -0.47,
+    8.62
+   ],
+   "days": 7,
+   "d1_4": 1.64,
+   "d5_7": 2.16,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.2,
+    "ETHTMN": 0.0,
+    "SOLTMN": -0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.73,
+    "BNBTMN": 2.0,
+    "ARBTMN": -1.5
+   }
+  },
+  "live_ARB_0.8/15": {
+   "s": {
+    "n": 61,
+    "mean": 0.279,
+    "sum": 17.05,
+    "win": 75.4,
+    "exits": {
+     "target": 40,
+     "time": 21
+    },
+    "pnl_tmn": 145623
+   },
+   "diff": -0.98,
+   "cluster6h_ci90": [
+    -3.07,
+    1.03
+   ],
+   "dayblock_ci90": [
+    -3.24,
+    1.29
+   ],
+   "days": 7,
+   "d1_4": -0.49,
+   "d5_7": -0.49,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.98
+   }
+  }
+ },
+ "mp30_7m": {
+  "current": {
+   "n": 51,
+   "mean": 0.277,
+   "sum": 14.14,
+   "win": 76.5,
+   "exits": {
+    "target": 35,
+    "time": 16
+   },
+   "pnl_tmn": 118175
+  },
+  "current_by_reason_mean": {
+   "target": 0.537,
+   "time": -0.291
+  },
+  "current_stop_count": 0,
+  "hold45": {
+   "s": {
+    "n": 50,
+    "mean": 0.312,
+    "sum": 15.62,
+    "win": 80.0,
+    "exits": {
+     "target": 38,
+     "time": 11,
+     "stop": 1
+    },
+    "pnl_tmn": 130738
+   },
+   "diff": 1.49,
+   "cluster6h_ci90": [
+    -2.71,
+    5.39
+   ],
+   "dayblock_ci90": [
+    -3.01,
+    5.69
+   ],
+   "days": 7,
+   "d1_4": 2.67,
+   "d5_7": -1.18,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.45,
+    "ARBTMN": 0.04
+   }
+  },
+  "hold15": {
+   "s": {
+    "n": 50,
+    "mean": 0.253,
+    "sum": 12.65,
+    "win": 76.0,
+    "exits": {
+     "target": 30,
+     "time": 20
+    },
+    "pnl_tmn": 105629
+   },
+   "diff": -1.48,
+   "cluster6h_ci90": [
+    -4.46,
+    1.28
+   ],
+   "dayblock_ci90": [
+    -4.8,
+    1.7
+   ],
+   "days": 7,
+   "d1_4": -0.64,
+   "d5_7": -0.84,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": -0.21,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.72,
+    "ARBTMN": -2.0
+   }
+  },
+  "hold10": {
+   "s": {
+    "n": 49,
+    "mean": 0.1,
+    "sum": 4.91,
+    "win": 67.3,
+    "exits": {
+     "target": 26,
+     "time": 23
+    },
+    "pnl_tmn": 40603
+   },
+   "diff": -9.23,
+   "cluster6h_ci90": [
+    -15.69,
+    -3.41
+   ],
+   "dayblock_ci90": [
+    -15.24,
+    -3.16
+   ],
+   "days": 7,
+   "d1_4": -3.07,
+   "d5_7": -6.15,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": -0.47,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.55,
+    "ARBTMN": -8.21
+   }
+  },
+  "stop0.6": {
+   "s": {
+    "n": 50,
+    "mean": 0.267,
+    "sum": 13.33,
+    "win": 76.0,
+    "exits": {
+     "target": 35,
+     "time": 14,
+     "stop": 1
+    },
+    "pnl_tmn": 140690
+   },
+   "diff": -0.81,
+   "cluster6h_ci90": [
+    -2.43,
+    0.0
+   ],
+   "dayblock_ci90": [
+    -2.43,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": -0.81,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": -0.81
+   }
+  },
+  "stop1.2": {
+   "s": {
+    "n": 51,
+    "mean": 0.277,
+    "sum": 14.14,
+    "win": 76.5,
+    "exits": {
+     "target": 35,
+     "time": 16
+    },
+    "pnl_tmn": 97748
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.5": {
+   "s": {
+    "n": 51,
+    "mean": 0.277,
+    "sum": 14.14,
+    "win": 76.5,
+    "exits": {
+     "target": 35,
+     "time": 16
+    },
+    "pnl_tmn": 83342
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "slack0": {
+   "s": {
+    "n": 50,
+    "mean": 0.285,
+    "sum": 14.26,
+    "win": 76.0,
+    "exits": {
+     "target": 32,
+     "time": 17,
+     "stop": 1
+    },
+    "pnl_tmn": 119195
+   },
+   "diff": 0.13,
+   "cluster6h_ci90": [
+    -2.88,
+    3.12
+   ],
+   "dayblock_ci90": [
+    -2.9,
+    3.18
+   ],
+   "days": 7,
+   "d1_4": -0.26,
+   "d5_7": 0.39,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.04,
+    "ETHTMN": 0.0,
+    "SOLTMN": -0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.9,
+    "ARBTMN": -0.39
+   }
+  },
+  "X0.1": {
+   "s": {
+    "n": 53,
+    "mean": 0.264,
+    "sum": 13.98,
+    "win": 79.2,
+    "exits": {
+     "target": 40,
+     "time": 12,
+     "stop": 1
+    },
+    "pnl_tmn": 116820
+   },
+   "diff": -0.16,
+   "cluster6h_ci90": [
+    -1.8,
+    1.54
+   ],
+   "dayblock_ci90": [
+    -1.68,
+    1.35
+   ],
+   "days": 7,
+   "d1_4": -0.38,
+   "d5_7": 0.22,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.07,
+    "ARBTMN": -0.09
+   }
+  },
+  "X0.2": {
+   "s": {
+    "n": 54,
+    "mean": 0.234,
+    "sum": 12.63,
+    "win": 79.6,
+    "exits": {
+     "target": 42,
+     "time": 11,
+     "stop": 1
+    },
+    "pnl_tmn": 105452
+   },
+   "diff": -1.51,
+   "cluster6h_ci90": [
+    -4.1,
+    0.83
+   ],
+   "dayblock_ci90": [
+    -2.77,
+    -0.19
+   ],
+   "days": 7,
+   "d1_4": -0.73,
+   "d5_7": -0.78,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.93,
+    "ARBTMN": -0.58
+   }
+  },
+  "X0.3": {
+   "s": {
+    "n": 54,
+    "mean": 0.195,
+    "sum": 10.5,
+    "win": 79.6,
+    "exits": {
+     "target": 42,
+     "time": 10,
+     "stop": 2
+    },
+    "pnl_tmn": 87509
+   },
+   "diff": -3.63,
+   "cluster6h_ci90": [
+    -7.55,
+    -0.19
+   ],
+   "dayblock_ci90": [
+    -6.45,
+    -0.95
+   ],
+   "days": 7,
+   "d1_4": -2.61,
+   "d5_7": -1.02,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -1.96,
+    "ARBTMN": -1.67
+   }
+  },
+  "pick0.9/45/0": {
+   "s": {
+    "n": 49,
+    "mean": 0.349,
+    "sum": 17.08,
+    "win": 79.6,
+    "exits": {
+     "target": 37,
+     "time": 11,
+     "stop": 1
+    },
+    "pnl_tmn": 143086
+   },
+   "diff": 2.95,
+   "cluster6h_ci90": [
+    -1.67,
+    7.45
+   ],
+   "dayblock_ci90": [
+    -2.11,
+    7.77
+   ],
+   "days": 7,
+   "d1_4": 3.58,
+   "d5_7": -0.64,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.2,
+    "ETHTMN": 0.0,
+    "SOLTMN": -0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.73,
+    "ARBTMN": -0.35
+   }
+  },
+  "live_ARB_0.8/15": {
+   "s": {
+    "n": 50,
+    "mean": 0.243,
+    "sum": 12.14,
+    "win": 76.0,
+    "exits": {
+     "target": 32,
+     "time": 18
+    },
+    "pnl_tmn": 103666
+   },
+   "diff": -2.0,
+   "cluster6h_ci90": [
+    -4.73,
+    0.48
+   ],
+   "dayblock_ci90": [
+    -4.65,
+    0.42
+   ],
+   "days": 7,
+   "d1_4": -1.51,
+   "d5_7": -0.49,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": -2.0
+   }
+  }
+ },
+ "mp60_8m": {
+  "current": {
+   "n": 41,
+   "mean": 0.266,
+   "sum": 10.89,
+   "win": 73.2,
+   "exits": {
+    "target": 28,
+    "time": 13
+   },
+   "pnl_tmn": 90777
+  },
+  "current_by_reason_mean": {
+   "target": 0.566,
+   "time": -0.381
+  },
+  "current_stop_count": 0,
+  "hold45": {
+   "s": {
+    "n": 41,
+    "mean": 0.299,
+    "sum": 12.26,
+    "win": 80.5,
+    "exits": {
+     "target": 31,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 102322
+   },
+   "diff": 1.37,
+   "cluster6h_ci90": [
+    -2.73,
+    5.16
+   ],
+   "dayblock_ci90": [
+    -0.89,
+    3.43
+   ],
+   "days": 7,
+   "d1_4": 1.45,
+   "d5_7": -0.08,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.39,
+    "BNBTMN": 1.01,
+    "ARBTMN": -1.02
+   }
+  },
+  "hold15": {
+   "s": {
+    "n": 42,
+    "mean": 0.278,
+    "sum": 11.68,
+    "win": 73.8,
+    "exits": {
+     "target": 26,
+     "time": 16
+    },
+    "pnl_tmn": 97456
+   },
+   "diff": 0.79,
+   "cluster6h_ci90": [
+    -1.11,
+    2.75
+   ],
+   "dayblock_ci90": [
+    -1.66,
+    3.36
+   ],
+   "days": 7,
+   "d1_4": 0.29,
+   "d5_7": 0.5,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.64,
+    "BNBTMN": 0.24,
+    "ARBTMN": -0.08
+   }
+  },
+  "hold10": {
+   "s": {
+    "n": 42,
+    "mean": 0.141,
+    "sum": 5.9,
+    "win": 64.3,
+    "exits": {
+     "target": 23,
+     "time": 19
+    },
+    "pnl_tmn": 48907
+   },
+   "diff": -4.99,
+   "cluster6h_ci90": [
+    -9.58,
+    -0.82
+   ],
+   "dayblock_ci90": [
+    -9.53,
+    -1.03
+   ],
+   "days": 7,
+   "d1_4": -0.98,
+   "d5_7": -4.01,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.62,
+    "BNBTMN": -0.89,
+    "ARBTMN": -3.49
+   }
+  },
+  "stop0.6": {
+   "s": {
+    "n": 41,
+    "mean": 0.266,
+    "sum": 10.89,
+    "win": 73.2,
+    "exits": {
+     "target": 28,
+     "time": 13
+    },
+    "pnl_tmn": 114669
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.2": {
+   "s": {
+    "n": 41,
+    "mean": 0.266,
+    "sum": 10.89,
+    "win": 73.2,
+    "exits": {
+     "target": 28,
+     "time": 13
+    },
+    "pnl_tmn": 75123
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.5": {
+   "s": {
+    "n": 41,
+    "mean": 0.266,
+    "sum": 10.89,
+    "win": 73.2,
+    "exits": {
+     "target": 28,
+     "time": 13
+    },
+    "pnl_tmn": 64075
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "slack0": {
+   "s": {
+    "n": 40,
+    "mean": 0.275,
+    "sum": 11.02,
+    "win": 72.5,
+    "exits": {
+     "target": 25,
+     "time": 14,
+     "stop": 1
+    },
+    "pnl_tmn": 91787
+   },
+   "diff": 0.13,
+   "cluster6h_ci90": [
+    -2.91,
+    3.13
+   ],
+   "dayblock_ci90": [
+    -2.86,
+    3.08
+   ],
+   "days": 7,
+   "d1_4": -0.26,
+   "d5_7": 0.39,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.04,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.9,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.39
+   }
+  },
+  "X0.1": {
+   "s": {
+    "n": 43,
+    "mean": 0.272,
+    "sum": 11.72,
+    "win": 76.7,
+    "exits": {
+     "target": 32,
+     "time": 10,
+     "stop": 1
+    },
+    "pnl_tmn": 97708
+   },
+   "diff": 0.83,
+   "cluster6h_ci90": [
+    -0.15,
+    2.22
+   ],
+   "dayblock_ci90": [
+    0.04,
+    1.76
+   ],
+   "days": 7,
+   "d1_4": 0.04,
+   "d5_7": 0.79,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.07,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.89
+   }
+  },
+  "X0.2": {
+   "s": {
+    "n": 44,
+    "mean": 0.235,
+    "sum": 10.32,
+    "win": 77.3,
+    "exits": {
+     "target": 34,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 85991
+   },
+   "diff": -0.57,
+   "cluster6h_ci90": [
+    -2.91,
+    1.47
+   ],
+   "dayblock_ci90": [
+    -1.6,
+    0.32
+   ],
+   "days": 7,
+   "d1_4": -0.36,
+   "d5_7": -0.21,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -1.06,
+    "BNBTMN": 0.0,
+    "ARBTMN": 0.49
+   }
+  },
+  "X0.3": {
+   "s": {
+    "n": 44,
+    "mean": 0.189,
+    "sum": 8.32,
+    "win": 77.3,
+    "exits": {
+     "target": 34,
+     "time": 8,
+     "stop": 2
+    },
+    "pnl_tmn": 69125
+   },
+   "diff": -2.57,
+   "cluster6h_ci90": [
+    -6.03,
+    0.5
+   ],
+   "dayblock_ci90": [
+    -4.9,
+    -0.35
+   ],
+   "days": 7,
+   "d1_4": -2.12,
+   "d5_7": -0.45,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -2.09,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.49
+   }
+  },
+  "pick0.9/45/0": {
+   "s": {
+    "n": 40,
+    "mean": 0.343,
+    "sum": 13.73,
+    "win": 80.0,
+    "exits": {
+     "target": 30,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 114658
+   },
+   "diff": 2.84,
+   "cluster6h_ci90": [
+    -1.74,
+    7.24
+   ],
+   "dayblock_ci90": [
+    -0.46,
+    6.13
+   ],
+   "days": 7,
+   "d1_4": 2.38,
+   "d5_7": 0.46,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.2,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.67,
+    "BNBTMN": 1.01,
+    "ARBTMN": -1.41
+   }
+  },
+  "live_ARB_0.8/15": {
+   "s": {
+    "n": 42,
+    "mean": 0.257,
+    "sum": 10.81,
+    "win": 76.2,
+    "exits": {
+     "target": 27,
+     "time": 15
+    },
+    "pnl_tmn": 92244
+   },
+   "diff": -0.08,
+   "cluster6h_ci90": [
+    -1.58,
+    1.52
+   ],
+   "dayblock_ci90": [
+    -1.47,
+    1.46
+   ],
+   "days": 7,
+   "d1_4": -0.49,
+   "d5_7": 0.41,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "BNBTMN": 0.0,
+    "ARBTMN": -0.08
+   }
+  }
+ },
+ "mp60_7m": {
+  "current": {
+   "n": 39,
+   "mean": 0.271,
+   "sum": 10.58,
+   "win": 74.4,
+   "exits": {
+    "target": 26,
+    "time": 13
+   },
+   "pnl_tmn": 88139
+  },
+  "current_by_reason_mean": {
+   "target": 0.566,
+   "time": -0.318
+  },
+  "current_stop_count": 0,
+  "hold45": {
+   "s": {
+    "n": 39,
+    "mean": 0.31,
+    "sum": 12.1,
+    "win": 79.5,
+    "exits": {
+     "target": 29,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 100909
+   },
+   "diff": 1.52,
+   "cluster6h_ci90": [
+    -2.83,
+    5.42
+   ],
+   "dayblock_ci90": [
+    -3.03,
+    5.74
+   ],
+   "days": 7,
+   "d1_4": 2.61,
+   "d5_7": -1.09,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.39,
+    "ARBTMN": 0.13
+   }
+  },
+  "hold15": {
+   "s": {
+    "n": 39,
+    "mean": 0.259,
+    "sum": 10.11,
+    "win": 71.8,
+    "exits": {
+     "target": 23,
+     "time": 16
+    },
+    "pnl_tmn": 84207
+   },
+   "diff": -0.47,
+   "cluster6h_ci90": [
+    -3.1,
+    1.99
+   ],
+   "dayblock_ci90": [
+    -3.25,
+    2.3
+   ],
+   "days": 7,
+   "d1_4": -0.73,
+   "d5_7": 0.26,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.64,
+    "ARBTMN": -1.11
+   }
+  },
+  "hold10": {
+   "s": {
+    "n": 39,
+    "mean": 0.155,
+    "sum": 6.04,
+    "win": 66.7,
+    "exits": {
+     "target": 22,
+     "time": 17
+    },
+    "pnl_tmn": 50081
+   },
+   "diff": -4.54,
+   "cluster6h_ci90": [
+    -9.01,
+    -0.51
+   ],
+   "dayblock_ci90": [
+    -9.32,
+    -0.36
+   ],
+   "days": 7,
+   "d1_4": -1.41,
+   "d5_7": -3.12,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.62,
+    "ARBTMN": -3.92
+   }
+  },
+  "stop0.6": {
+   "s": {
+    "n": 39,
+    "mean": 0.271,
+    "sum": 10.58,
+    "win": 74.4,
+    "exits": {
+     "target": 26,
+     "time": 13
+    },
+    "pnl_tmn": 111329
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.2": {
+   "s": {
+    "n": 39,
+    "mean": 0.271,
+    "sum": 10.58,
+    "win": 74.4,
+    "exits": {
+     "target": 26,
+     "time": 13
+    },
+    "pnl_tmn": 72944
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "stop1.5": {
+   "s": {
+    "n": 39,
+    "mean": 0.271,
+    "sum": 10.58,
+    "win": 74.4,
+    "exits": {
+     "target": 26,
+     "time": 13
+    },
+    "pnl_tmn": 62218
+   },
+   "diff": 0.0,
+   "cluster6h_ci90": [
+    0.0,
+    0.0
+   ],
+   "dayblock_ci90": [
+    0.0,
+    0.0
+   ],
+   "days": 7,
+   "d1_4": 0.0,
+   "d5_7": 0.0,
+   "same_trades": true,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": 0.0
+   }
+  },
+  "slack0": {
+   "s": {
+    "n": 38,
+    "mean": 0.282,
+    "sum": 10.7,
+    "win": 73.7,
+    "exits": {
+     "target": 23,
+     "time": 14,
+     "stop": 1
+    },
+    "pnl_tmn": 89156
+   },
+   "diff": 0.13,
+   "cluster6h_ci90": [
+    -2.85,
+    3.13
+   ],
+   "dayblock_ci90": [
+    -2.9,
+    3.14
+   ],
+   "days": 7,
+   "d1_4": -0.26,
+   "d5_7": 0.39,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.04,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.9,
+    "ARBTMN": -0.39
+   }
+  },
+  "X0.1": {
+   "s": {
+    "n": 41,
+    "mean": 0.268,
+    "sum": 11.0,
+    "win": 78.0,
+    "exits": {
+     "target": 31,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 91629
+   },
+   "diff": 0.42,
+   "cluster6h_ci90": [
+    -0.82,
+    1.94
+   ],
+   "dayblock_ci90": [
+    -0.75,
+    1.58
+   ],
+   "days": 7,
+   "d1_4": -0.37,
+   "d5_7": 0.79,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -0.07,
+    "ARBTMN": 0.48
+   }
+  },
+  "X0.2": {
+   "s": {
+    "n": 42,
+    "mean": 0.229,
+    "sum": 9.6,
+    "win": 78.6,
+    "exits": {
+     "target": 33,
+     "time": 8,
+     "stop": 1
+    },
+    "pnl_tmn": 79926
+   },
+   "diff": -0.98,
+   "cluster6h_ci90": [
+    -3.37,
+    1.19
+   ],
+   "dayblock_ci90": [
+    -2.0,
+    0.04
+   ],
+   "days": 7,
+   "d1_4": -0.76,
+   "d5_7": -0.21,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -1.06,
+    "ARBTMN": 0.08
+   }
+  },
+  "X0.3": {
+   "s": {
+    "n": 42,
+    "mean": 0.181,
+    "sum": 7.6,
+    "win": 78.6,
+    "exits": {
+     "target": 33,
+     "time": 7,
+     "stop": 2
+    },
+    "pnl_tmn": 63146
+   },
+   "diff": -2.98,
+   "cluster6h_ci90": [
+    -6.63,
+    0.23
+   ],
+   "dayblock_ci90": [
+    -5.81,
+    -0.37
+   ],
+   "days": 7,
+   "d1_4": -2.52,
+   "d5_7": -0.45,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": -2.09,
+    "ARBTMN": -0.89
+   }
+  },
+  "pick0.9/45/0": {
+   "s": {
+    "n": 38,
+    "mean": 0.357,
+    "sum": 13.56,
+    "win": 78.9,
+    "exits": {
+     "target": 28,
+     "time": 9,
+     "stop": 1
+    },
+    "pnl_tmn": 113187
+   },
+   "diff": 2.98,
+   "cluster6h_ci90": [
+    -1.81,
+    7.48
+   ],
+   "dayblock_ci90": [
+    -2.08,
+    7.7
+   ],
+   "days": 7,
+   "d1_4": 3.53,
+   "d5_7": -0.55,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.2,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 1.37,
+    "DOGETMN": 0.0,
+    "PEPETMN": 1.67,
+    "ARBTMN": -0.26
+   }
+  },
+  "live_ARB_0.8/15": {
+   "s": {
+    "n": 39,
+    "mean": 0.243,
+    "sum": 9.47,
+    "win": 74.4,
+    "exits": {
+     "target": 24,
+     "time": 15
+    },
+    "pnl_tmn": 80644
+   },
+   "diff": -1.11,
+   "cluster6h_ci90": [
+    -3.49,
+    1.1
+   ],
+   "dayblock_ci90": [
+    -3.35,
+    1.06
+   ],
+   "days": 7,
+   "d1_4": -1.51,
+   "d5_7": 0.41,
+   "same_trades": false,
+   "per_market_diff": {
+    "BTCTMN": 0.0,
+    "ETHTMN": 0.0,
+    "SOLTMN": 0.0,
+    "XRPTMN": 0.0,
+    "DOGETMN": 0.0,
+    "PEPETMN": 0.0,
+    "ARBTMN": -1.11
+   }
+  }
+ }
+}

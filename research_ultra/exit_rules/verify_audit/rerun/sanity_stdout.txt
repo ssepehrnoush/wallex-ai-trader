@@ -1,0 +1,8 @@
+BTCTMN mine: {'trades': 3, 'mean_ret_pct': np.float64(0.34), 'sum_ret_pct': np.float64(1.02), 'exits': {'target': 3}} | ref: {'trades': 3, 'mean_ret_pct': 0.34, 'sum_ret_pct': 1.02, 'exits': {'target': 3}}
+ETHTMN mine: {'trades': 0, 'mean_ret_pct': None, 'sum_ret_pct': 0, 'exits': {}} | ref: {'trades': 0, 'mean_ret_pct': None, 'sum_ret_pct': 0, 'exits': {}}
+SOLTMN mine: {'trades': 2, 'mean_ret_pct': np.float64(0.056), 'sum_ret_pct': np.float64(0.11), 'exits': {'target': 2}} | ref: {'trades': 2, 'mean_ret_pct': 0.056, 'sum_ret_pct': 0.11, 'exits': {'target': 2}}
+XRPTMN mine: {'trades': 2, 'mean_ret_pct': np.float64(1.019), 'sum_ret_pct': np.float64(2.04), 'exits': {'target': 2}} | ref: {'trades': 2, 'mean_ret_pct': 0.969, 'sum_ret_pct': 1.94, 'exits': {'target': 2}}
+DOGETMN mine: {'trades': 1, 'mean_ret_pct': np.float64(0.362), 'sum_ret_pct': np.float64(0.36), 'exits': {'target': 1}} | ref: {'trades': 1, 'mean_ret_pct': 0.362, 'sum_ret_pct': 0.36, 'exits': {'target': 1}}
+PEPETMN mine: {'trades': 27, 'mean_ret_pct': np.float64(0.32), 'sum_ret_pct': np.float64(8.63), 'exits': {'target': 25, 'time': 2}} | ref: -
+BNBTMN mine: {'trades': 9, 'mean_ret_pct': np.float64(0.289), 'sum_ret_pct': np.float64(2.6), 'exits': {'target': 7, 'time': 2}} | ref: -
+ARBTMN mine: {'trades': 21, 'mean_ret_pct': np.float64(0.306), 'sum_ret_pct': np.float64(6.43), 'exits': {'target': 19, 'time': 2}} | ref: -

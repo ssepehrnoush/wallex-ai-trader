@@ -1,0 +1,66 @@
+
+=== all_hours|same_close(author)  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.7, 'ARBTMN': 0.8} k=3.0
+  V4   IS n= 27 sum=  5.878 | OOS n= 35 mean=0.297 sum= 10.396 win=77.1 exits={'target': 22, 'time': 13}
+  V1   IS n= 16 sum=  8.471 | OOS n= 25 mean=0.398 sum=  9.944 win=76.0 exits={'target': 17, 'time': 8} | diff -0.453 ci90 [-3.069, 2.483] p>0 0.376
+  V2   IS n= 18 sum=  8.152 | OOS n= 25 mean=0.343 sum=  8.585 win=76.0 exits={'target': 17, 'time': 8} | diff -1.812 ci90 [-5.475, 1.731] p>0 0.209
+  V2b  IS n= 19 sum=  8.649 | OOS n= 26 mean=0.316 sum=  8.227 win=73.1 exits={'target': 17, 'time': 9} | diff -2.169 ci90 [-5.976, 1.385] p>0 0.171
+  V3   IS n= 20 sum=  5.962 | OOS n= 26 mean=0.273 sum=  7.111 win=80.8 exits={'target': 18, 'time': 8} | diff -3.286 ci90 [-8.352, 1.226] p>0 0.124
+   global fixed thr OOS (n,sum): {'0.7': (35, np.float64(10.4)), '0.8': (27, np.float64(9.81)), '0.9': (15, np.float64(7.59)), '1.0': (9, np.float64(4.89)), '1.2': (2, np.float64(1.34)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (27, np.float64(5.88)), '0.8': (17, np.float64(7.47)), '0.9': (12, np.float64(7.14)), '1.0': (8, np.float64(5.26)), '1.2': (6, np.float64(4.83)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [3, np.float64(1.103)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [2, np.float64(0.336)], 'XRPTMN': [2, np.float64(0.703)], 'DOGETMN': [1, np.float64(0.355)], 'PEPETMN': [11, np.float64(3.972)], 'BNBTMN': [4, np.float64(-0.107)], 'ARBTMN': [12, np.float64(4.034)]}
+   V1 OOS by market: {'BTCTMN': [3, np.float64(1.103)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [2, np.float64(0.336)], 'XRPTMN': [2, np.float64(0.703)], 'DOGETMN': [1, np.float64(0.355)], 'PEPETMN': [5, np.float64(3.602)], 'BNBTMN': [4, np.float64(-0.107)], 'ARBTMN': [8, np.float64(3.952)]}
+
+=== all_hours|next_open  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 1.0, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+  V4   IS n= 17 sum= -9.217 | OOS n= 25 mean=-0.386 sum= -9.651 win=44.0 exits={'target': 10, 'time': 10, 'stop': 5}
+  V1   IS n=  6 sum=  2.825 | OOS n=  9 mean=-0.15 sum= -1.352 win=55.6 exits={'target': 5, 'stop': 2, 'time': 2} | diff +8.299 ci90 [2.696, 14.265] p>0 0.995
+  V2   IS n=  4 sum= -2.605 | OOS n= 12 mean=-0.322 sum= -3.861 win=41.7 exits={'target': 5, 'time': 5, 'stop': 2} | diff +5.790 ci90 [0.45, 11.553] p>0 0.964
+  V2b  IS n=  5 sum= -2.547 | OOS n= 12 mean=-0.322 sum= -3.861 win=41.7 exits={'target': 5, 'time': 5, 'stop': 2} | diff +5.790 ci90 [0.45, 11.553] p>0 0.964
+  V3   IS n= 12 sum= -5.824 | OOS n= 18 mean=-0.271 sum= -4.883 win=44.4 exits={'time': 8, 'target': 7, 'stop': 3} | diff +4.768 ci90 [0.488, 9.781] p>0 0.968
+   global fixed thr OOS (n,sum): {'0.7': (25, np.float64(-9.65)), '0.8': (20, np.float64(-7.3)), '0.9': (10, np.float64(-6.26)), '1.0': (6, np.float64(-0.66)), '1.2': (2, np.float64(-1.59)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (17, np.float64(-9.22)), '0.8': (10, np.float64(-2.5)), '0.9': (7, np.float64(-3.61)), '1.0': (5, np.float64(0.05)), '1.2': (4, np.float64(2.0)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [2, np.float64(-0.317)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [1, np.float64(0.129)], 'DOGETMN': [1, np.float64(-1.7)], 'PEPETMN': [10, np.float64(0.779)], 'BNBTMN': [2, np.float64(-0.386)], 'ARBTMN': [9, np.float64(-8.156)]}
+   V1 OOS by market: {'BTCTMN': [2, np.float64(-0.317)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [0, np.float64(0.0)], 'DOGETMN': [1, np.float64(-1.7)], 'PEPETMN': [5, np.float64(0.477)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [1, np.float64(0.187)]}
+
+=== all_hours|next_close  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 1.0, 'ARBTMN': 1.2} k=4.0
+  V4   IS n= 17 sum=-10.162 | OOS n= 24 mean=-0.429 sum=-10.294 win=33.3 exits={'time': 13, 'target': 8, 'stop': 3}
+  V1   IS n=  5 sum=  2.586 | OOS n=  9 mean=-0.152 sum= -1.367 win=55.6 exits={'target': 5, 'time': 3, 'stop': 1} | diff +8.928 ci90 [2.751, 15.863] p>0 0.995
+  V2   IS n=  4 sum= -2.899 | OOS n= 12 mean=-0.67 sum= -8.034 win=16.7 exits={'time': 8, 'stop': 2, 'target': 2} | diff +2.260 ci90 [-2.2, 7.137] p>0 0.782
+  V2b  IS n=  4 sum= -2.899 | OOS n= 12 mean=-0.67 sum= -8.034 win=16.7 exits={'time': 8, 'stop': 2, 'target': 2} | diff +2.260 ci90 [-2.2, 7.137] p>0 0.782
+  V3   IS n= 12 sum= -6.322 | OOS n= 17 mean=-0.499 sum= -8.483 win=29.4 exits={'time': 9, 'target': 5, 'stop': 3} | diff +1.811 ci90 [-1.541, 5.58] p>0 0.808
+   global fixed thr OOS (n,sum): {'0.7': (24, np.float64(-10.29)), '0.8': (19, np.float64(-7.83)), '0.9': (10, np.float64(-6.67)), '1.0': (6, np.float64(-1.78)), '1.2': (2, np.float64(-1.65)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (17, np.float64(-10.16)), '0.8': (10, np.float64(-2.92)), '0.9': (7, np.float64(-4.07)), '1.0': (5, np.float64(-0.16)), '1.2': (4, np.float64(1.84)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [2, np.float64(-0.762)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [1, np.float64(-0.724)], 'DOGETMN': [1, np.float64(-1.631)], 'PEPETMN': [9, np.float64(-1.303)], 'BNBTMN': [2, np.float64(-0.891)], 'ARBTMN': [9, np.float64(-4.983)]}
+   V1 OOS by market: {'BTCTMN': [2, np.float64(-0.762)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [0, np.float64(0.0)], 'DOGETMN': [1, np.float64(-1.631)], 'PEPETMN': [5, np.float64(0.828)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [1, np.float64(0.199)]}
+
+=== daytime_usdt_fresh10|same_close(author)  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.7, 'ARBTMN': 0.7} k=2.5
+  V4   IS n= 14 sum=  1.676 | OOS n= 17 mean=0.311 sum=  5.281 win=82.4 exits={'target': 12, 'time': 5}
+  V1   IS n=  9 sum=  2.774 | OOS n= 13 mean=0.355 sum=  4.616 win=84.6 exits={'target': 10, 'time': 3} | diff -0.665 ci90 [-1.696, 0.16] p>0 0.109
+  V2   IS n= 11 sum=  2.888 | OOS n= 15 mean=0.35 sum=  5.254 win=86.7 exits={'target': 12, 'time': 3} | diff -0.027 ci90 [-0.269, 0.187] p>0 0.354
+  V2b  IS n= 11 sum=  2.888 | OOS n= 16 mean=0.306 sum=  4.896 win=81.2 exits={'target': 12, 'time': 4} | diff -0.384 ci90 [-1.341, 0.187] p>0 0.235
+  V3   IS n= 10 sum=  1.148 | OOS n= 14 mean=0.434 sum=  6.079 win=92.9 exits={'target': 11, 'time': 3} | diff +0.798 ci90 [-0.071, 1.879] p>0 0.909
+   global fixed thr OOS (n,sum): {'0.7': (17, np.float64(5.28)), '0.8': (15, np.float64(5.66)), '0.9': (8, np.float64(5.05)), '1.0': (4, np.float64(4.31)), '1.2': (2, np.float64(1.34)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (14, np.float64(1.68)), '0.8': (9, np.float64(2.23)), '0.9': (5, np.float64(2.1)), '1.0': (1, np.float64(0.75)), '1.2': (1, np.float64(0.75)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [2, np.float64(0.824)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [2, np.float64(0.336)], 'XRPTMN': [1, np.float64(0.129)], 'DOGETMN': [1, np.float64(0.355)], 'PEPETMN': [6, np.float64(3.568)], 'BNBTMN': [1, np.float64(-0.357)], 'ARBTMN': [4, np.float64(0.427)]}
+   V1 OOS by market: {'BTCTMN': [2, np.float64(0.824)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [2, np.float64(0.336)], 'XRPTMN': [1, np.float64(0.129)], 'DOGETMN': [1, np.float64(0.355)], 'PEPETMN': [2, np.float64(2.903)], 'BNBTMN': [1, np.float64(-0.357)], 'ARBTMN': [4, np.float64(0.427)]}
+
+=== daytime_usdt_fresh10|next_open  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 1.0, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.9, 'ARBTMN': 1.0} k=2.5
+  V4   IS n= 11 sum= -1.899 | OOS n= 12 mean=-0.359 sum= -4.307 win=41.7 exits={'time': 5, 'target': 4, 'stop': 3}
+  V1   IS n=  3 sum=  1.261 | OOS n=  5 mean=-0.284 sum= -1.422 win=40.0 exits={'stop': 2, 'target': 2, 'time': 1} | diff +2.885 ci90 [-0.484, 6.953] p>0 0.907
+  V2   IS n=  8 sum= -0.116 | OOS n= 11 mean=-0.427 sum= -4.695 win=36.4 exits={'target': 4, 'time': 4, 'stop': 3} | diff -0.389 ci90 [-1.184, 0.019] p>0 0.235
+  V2b  IS n=  6 sum=  0.323 | OOS n= 10 mean=-0.368 sum= -3.680 win=40.0 exits={'target': 4, 'stop': 3, 'time': 3} | diff +0.627 ci90 [-0.796, 2.658] p>0 0.685
+  V3   IS n=  8 sum= -1.713 | OOS n= 10 mean=-0.341 sum= -3.410 win=40.0 exits={'time': 4, 'stop': 3, 'target': 3} | diff +0.896 ci90 [-0.257, 2.927] p>0 0.716
+   global fixed thr OOS (n,sum): {'0.7': (12, np.float64(-4.31)), '0.8': (11, np.float64(-4.38)), '0.9': (6, np.float64(-5.13)), '1.0': (3, np.float64(0.6)), '1.2': (2, np.float64(-1.59)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (11, np.float64(-1.9)), '0.8': (7, np.float64(-0.35)), '0.9': (4, np.float64(0.33)), '1.0': (1, np.float64(0.44)), '1.2': (1, np.float64(0.44)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [1, np.float64(-0.558)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [1, np.float64(0.129)], 'DOGETMN': [1, np.float64(-1.7)], 'PEPETMN': [6, np.float64(1.142)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [3, np.float64(-3.319)]}
+   V1 OOS by market: {'BTCTMN': [1, np.float64(-0.558)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [0, np.float64(0.0)], 'DOGETMN': [1, np.float64(-1.7)], 'PEPETMN': [2, np.float64(0.649)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [1, np.float64(0.187)]}
+
+=== daytime_usdt_fresh10|next_close  V1={'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.8, 'XRPTMN': 1.0, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.9, 'ARBTMN': 1.0} k=4.0
+  V4   IS n= 11 sum= -2.832 | OOS n= 11 mean=-0.248 sum= -2.730 win=36.4 exits={'time': 5, 'stop': 3, 'target': 3}
+  V1   IS n=  2 sum=  1.084 | OOS n=  5 mean=-0.08 sum= -0.401 win=60.0 exits={'target': 3, 'stop': 1, 'time': 1} | diff +2.329 ci90 [-5.951, 9.935] p>0 0.698
+  V2   IS n=  2 sum= -0.913 | OOS n=  7 mean=-0.128 sum= -0.897 win=28.6 exits={'time': 4, 'stop': 2, 'target': 1} | diff +1.833 ci90 [-1.18, 5.567] p>0 0.804
+  V2b  IS n=  5 sum= -0.174 | OOS n= 10 mean=-0.159 sum= -1.589 win=40.0 exits={'time': 4, 'stop': 3, 'target': 3} | diff +1.140 ci90 [0.0, 3.171] p>0 0.87
+  V3   IS n=  8 sum= -2.153 | OOS n=  9 mean=-0.563 sum= -5.070 win=33.3 exits={'stop': 3, 'time': 3, 'target': 3} | diff -2.341 ci90 [-9.429, 2.156] p>0 0.32
+   global fixed thr OOS (n,sum): {'0.7': (11, np.float64(-2.73)), '0.8': (10, np.float64(-6.05)), '0.9': (6, np.float64(-4.26)), '1.0': (3, np.float64(-0.19)), '1.2': (2, np.float64(-1.65)), '1.5': (0, 0)}
+   global fixed thr IS  (n,sum): {'0.7': (11, np.float64(-2.83)), '0.8': (7, np.float64(-0.76)), '0.9': (4, np.float64(-0.08)), '1.0': (1, np.float64(0.34)), '1.2': (1, np.float64(0.34)), '1.5': (0, 0)}
+   V4 OOS by market: {'BTCTMN': [1, np.float64(-0.881)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [1, np.float64(3.481)], 'DOGETMN': [1, np.float64(-1.631)], 'PEPETMN': [5, np.float64(0.007)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [3, np.float64(-3.706)]}
+   V1 OOS by market: {'BTCTMN': [1, np.float64(-0.881)], 'ETHTMN': [0, np.float64(0.0)], 'SOLTMN': [0, np.float64(0.0)], 'XRPTMN': [0, np.float64(0.0)], 'DOGETMN': [1, np.float64(-1.631)], 'PEPETMN': [2, np.float64(1.912)], 'BNBTMN': [0, np.float64(0.0)], 'ARBTMN': [1, np.float64(0.199)]}

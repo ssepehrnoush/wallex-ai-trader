@@ -1,0 +1,22 @@
+tag sdblock | split 2026-10-18 14:05:00+00:00 | reverse False
+half spreads % {'BTCTMN': 0.0155, 'ETHTMN': 0.0694, 'SOLTMN': 0.077, 'XRPTMN': 0.0954, 'DOGETMN': 0.0838, 'PEPETMN': 0.0565, 'BNBTMN': 0.0729, 'ARBTMN': 0.2223}
+V1 thr {'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.7, 'ARBTMN': 0.8} | k totals {1.5: np.float64(2.005), 2.0: np.float64(2.215), 2.5: np.float64(2.997), 3.0: np.float64(4.29), 4.0: np.float64(1.12)} best k 3.0 | V2b k {'BTCTMN': 1.5, 'ETHTMN': 1.5, 'SOLTMN': 1.5, 'XRPTMN': 1.5, 'DOGETMN': 1.5, 'PEPETMN': 3.0, 'BNBTMN': 1.5, 'ARBTMN': 3.0}
+variant                 ISn  ISmean   ISsum  ISwin | OOSn    mean     sum    win    diff             CI90   P>0 exits
+V4_fixed0.7              27   0.218   5.876   70.4 |   35   0.296  10.375   77.1    0.00 [np.float64(0.0), np.float64(0.0)]  0.00 {'target': 22, 'time': 13}
+V1_per_market            16    0.53   8.476   87.5 |   25   0.397   9.933   76.0   -0.44 [np.float64(-3.17), np.float64(2.53)]  0.39 {'target': 17, 'time': 8}
+V2_vol_k3.0              13    0.33   4.290   84.6 |   23    0.36   8.280   78.3   -2.10 [np.float64(-5.93), np.float64(1.53)]  0.17 {'target': 16, 'time': 7}
+V2b_vol_k_per_mkt        14   0.342   4.787   85.7 |   24    0.33   7.923   75.0   -2.45 [np.float64(-6.44), np.float64(1.2)]  0.13 {'target': 16, 'time': 8}
+V3_0.7+half_spread       20   0.298   5.970   75.0 |   26   0.273   7.100   80.8   -3.27 [np.float64(-8.27), np.float64(1.34)]  0.13 {'target': 18, 'time': 8}
+ORACLE                   20     0.3   6.008   80.0 |   31   0.343  10.633   83.9    0.26 [np.float64(-0.67), np.float64(1.4)]  0.62 {'target': 21, 'time': 10}
+per market OOS (n / mean / sum):
+  BTCTMN   V4_fix: 3 / 0.367 / 1.102 | V1_per: 3 / 0.367 / 1.102 | V2_vol: 3 / 0.367 / 1.102 | V2b_vo: 3 / 0.367 / 1.102 | V3_0.7: 3 / 0.367 / 1.102 | ORACLE: 3 / 0.367 / 1.102
+  ETHTMN   V4_fix: 0 / None / 0.0 | V1_per: 0 / None / 0.0 | V2_vol: 0 / None / 0.0 | V2b_vo: 0 / None / 0.0 | V3_0.7: 0 / None / 0.0 | ORACLE: 0 / None / 0.0
+  SOLTMN   V4_fix: 2 / 0.17 / 0.34 | V1_per: 2 / 0.17 / 0.34 | V2_vol: 2 / 0.17 / 0.34 | V2b_vo: 2 / 0.17 / 0.34 | V3_0.7: 2 / 0.17 / 0.34 | ORACLE: 2 / 0.17 / 0.34
+  XRPTMN   V4_fix: 2 / 0.356 / 0.711 | V1_per: 2 / 0.356 / 0.711 | V2_vol: 2 / 0.356 / 0.711 | V2b_vo: 2 / 0.356 / 0.711 | V3_0.7: 0 / None / 0.0 | ORACLE: 2 / 0.356 / 0.711
+  DOGETMN  V4_fix: 1 / 0.355 / 0.355 | V1_per: 1 / 0.355 / 0.355 | V2_vol: 1 / 0.355 / 0.355 | V2b_vo: 1 / 0.355 / 0.355 | V3_0.7: 1 / 0.355 / 0.355 | ORACLE: 1 / 0.355 / 0.355
+  PEPETMN  V4_fix: 11 / 0.362 / 3.977 | V1_per: 5 / 0.721 / 3.604 | V2_vol: 8 / 0.381 / 3.045 | V2b_vo: 8 / 0.381 / 3.045 | V3_0.7: 11 / 0.37 / 4.07 | ORACLE: 11 / 0.375 / 4.13
+  BNBTMN   V4_fix: 4 / -0.026 / -0.105 | V1_per: 4 / -0.026 / -0.105 | V2_vol: 1 / -0.049 / -0.049 | V2b_vo: 2 / -0.203 / -0.406 | V3_0.7: 3 / 0.084 / 0.252 | ORACLE: 0 / None / 0.0
+  ARBTMN   V4_fix: 12 / 0.333 / 3.996 | V1_per: 8 / 0.491 / 3.926 | V2_vol: 6 / 0.463 / 2.776 | V2b_vo: 6 / 0.463 / 2.776 | V3_0.7: 6 / 0.164 / 0.982 | ORACLE: 12 / 0.333 / 3.996
+single thr: {"0.7": {"IS_n": 27, "IS_sum": 5.876, "OOS_n": 35, "OOS_sum": 10.375}, "0.8": {"IS_n": 17, "IS_sum": 7.469, "OOS_n": 27, "OOS_sum": 9.792}, "0.9": {"IS_n": 12, "IS_sum": 7.143, "OOS_n": 15, "OOS_sum": 7.571}, "1.0": {"IS_n": 8, "IS_sum": 5.263, "OOS_n": 9, "OOS_sum": 4.88}, "1.2": {"IS_n": 6, "IS_sum": 4.832, "OOS_n": 2, "OOS_sum": 1.339}, "1.5": {"IS_n": 0, "IS_sum": 0, "OOS_n": 0, "OOS_sum": 0}}
+V4 dev bands: {"-9..-1.5": {"IS_n": 0, "IS_sum": 0, "OOS_n": 0, "OOS_sum": 0}, "-1.5..-1.2": {"IS_n": 5, "IS_sum": 4.774, "OOS_n": 2, "OOS_sum": 1.339}, "-1.2..-1.0": {"IS_n": 0, "IS_sum": 0, "OOS_n": 3, "OOS_sum": 2.356}, "-1.0..-0.9": {"IS_n": 6, "IS_sum": 1.995, "OOS_n": 7, "OOS_sum": 2.88}, "-0.9..-0.8": {"IS_n": 5, "IS_sum": 0.634, "OOS_n": 14, "OOS_sum": 3.008}, "-0.8..-0.7": {"IS_n": 11, "IS_sum": -1.527, "OOS_n": 9, "OOS_sum": 0.792}}
+V4 max concurrent: 5 | V4 OOS night share: 0.429

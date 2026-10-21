@@ -1,0 +1,525 @@
+{
+ "args": {
+  "bid_model": "mid",
+  "usdt_max_stale": 0,
+  "split": "2026-10-18 14:05",
+  "spreads": "ticks",
+  "tag": ""
+ },
+ "spreads_pct": {
+  "BTCTMN": 0.032,
+  "ETHTMN": 0.132,
+  "SOLTMN": 0.154,
+  "XRPTMN": 0.176,
+  "DOGETMN": 0.162,
+  "PEPETMN": 0.105,
+  "BNBTMN": 0.146,
+  "ARBTMN": 0.443
+ },
+ "n_d1_4": 29,
+ "n_d5_7": 40,
+ "arms": {
+  "cur": {
+   "n": 69,
+   "mean": 0.236,
+   "sum": 16.31,
+   "win": 71.0,
+   "hold": 14.7,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 43,
+    "time": 26
+   },
+   "d1_4": 0.223,
+   "d5_7": 0.246
+  },
+  "cur_thr": {
+   "n": 69,
+   "mean": 0.11,
+   "sum": 7.56,
+   "win": 71.0,
+   "hold": 14.7,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 43,
+    "time": 26
+   },
+   "d1_4": 0.065,
+   "d5_7": 0.142
+  },
+  "cur_cont": {
+   "n": 69,
+   "mean": 0.071,
+   "sum": 4.92,
+   "win": 73.9,
+   "hold": 13.6,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 48,
+    "time": 21
+   },
+   "d1_4": 0.074,
+   "d5_7": 0.069
+  },
+  "cur_ohlc": {
+   "n": 69,
+   "mean": 0.139,
+   "sum": 9.59,
+   "win": 73.9,
+   "hold": 13.6,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 29,
+    "time": 21,
+    "target_gap": 19
+   },
+   "d1_4": 0.174,
+   "d5_7": 0.113
+  },
+  "mk_a": {
+   "n": 69,
+   "mean": 0.142,
+   "sum": 9.78,
+   "win": 79.7,
+   "hold": 11.7,
+   "maker_fill_pct": 75.4,
+   "exits": {
+    "maker": 52,
+    "time": 17
+   },
+   "d1_4": 0.124,
+   "d5_7": 0.154
+  },
+  "mk_b": {
+   "n": 69,
+   "mean": 0.162,
+   "sum": 11.21,
+   "win": 73.9,
+   "hold": 14.1,
+   "maker_fill_pct": 68.1,
+   "exits": {
+    "maker": 47,
+    "time": 22
+   },
+   "d1_4": 0.162,
+   "d5_7": 0.163
+  },
+  "mk_c": {
+   "n": 69,
+   "mean": -0.061,
+   "sum": -4.21,
+   "win": 85.5,
+   "hold": 8.1,
+   "maker_fill_pct": 85.5,
+   "exits": {
+    "maker": 59,
+    "time": 10
+   },
+   "d1_4": -0.075,
+   "d5_7": -0.051
+  },
+  "mk_a_raw": {
+   "n": 69,
+   "mean": 0.123,
+   "sum": 8.47,
+   "win": 60.9,
+   "hold": 10.2,
+   "maker_fill_pct": 88.4,
+   "exits": {
+    "maker": 61,
+    "time": 8
+   },
+   "d1_4": 0.102,
+   "d5_7": 0.138
+  },
+  "mk_bT": {
+   "n": 69,
+   "mean": 0.169,
+   "sum": 11.65,
+   "win": 75.4,
+   "hold": 13.2,
+   "maker_fill_pct": 55.1,
+   "exits": {
+    "maker": 38,
+    "time": 19,
+    "target": 12
+   },
+   "d1_4": 0.166,
+   "d5_7": 0.171
+  }
+ },
+ "paired": {
+  "mk_a-cur": {
+   "mean": -0.095,
+   "t": -1.83,
+   "ci95": [
+    -0.203,
+    -0.003
+   ],
+   "drop3_largest": -0.126,
+   "drop3_smallest": -0.023,
+   "better_worse_same": [
+    21,
+    33,
+    15
+   ],
+   "d1_4": -0.099,
+   "d5_7": -0.092
+  },
+  "mk_b-cur": {
+   "mean": -0.074,
+   "t": -1.54,
+   "ci95": [
+    -0.175,
+    0.011
+   ],
+   "drop3_largest": -0.099,
+   "drop3_smallest": -0.009,
+   "better_worse_same": [
+    28,
+    22,
+    19
+   ],
+   "d1_4": -0.062,
+   "d5_7": -0.083
+  },
+  "mk_c-cur": {
+   "mean": -0.297,
+   "t": -4.5,
+   "ci95": [
+    -0.433,
+    -0.177
+   ],
+   "drop3_largest": -0.341,
+   "drop3_smallest": -0.217,
+   "better_worse_same": [
+    10,
+    49,
+    10
+   ],
+   "d1_4": -0.298,
+   "d5_7": -0.297
+  },
+  "mk_bT-cur": {
+   "mean": -0.068,
+   "t": -1.48,
+   "ci95": [
+    -0.163,
+    0.013
+   ],
+   "drop3_largest": -0.091,
+   "drop3_smallest": -0.002,
+   "better_worse_same": [
+    19,
+    19,
+    31
+   ],
+   "d1_4": -0.058,
+   "d5_7": -0.075
+  },
+  "mk_a-cur_thr": {
+   "mean": 0.032,
+   "t": 0.66,
+   "ci95": [
+    -0.07,
+    0.119
+   ],
+   "drop3_largest": 0.001,
+   "drop3_smallest": 0.102,
+   "better_worse_same": [
+    43,
+    11,
+    15
+   ],
+   "d1_4": 0.06,
+   "d5_7": 0.012
+  },
+  "mk_b-cur_thr": {
+   "mean": 0.053,
+   "t": 1.12,
+   "ci95": [
+    -0.047,
+    0.136
+   ],
+   "drop3_largest": 0.026,
+   "drop3_smallest": 0.116,
+   "better_worse_same": [
+    41,
+    9,
+    19
+   ],
+   "d1_4": 0.097,
+   "d5_7": 0.021
+  },
+  "mk_c-cur_thr": {
+   "mean": -0.171,
+   "t": -2.93,
+   "ci95": [
+    -0.293,
+    -0.067
+   ],
+   "drop3_largest": -0.209,
+   "drop3_smallest": -0.092,
+   "better_worse_same": [
+    22,
+    37,
+    10
+   ],
+   "d1_4": -0.139,
+   "d5_7": -0.193
+  },
+  "mk_bT-cur_thr": {
+   "mean": 0.059,
+   "t": 1.31,
+   "ci95": [
+    -0.036,
+    0.137
+   ],
+   "drop3_largest": 0.033,
+   "drop3_smallest": 0.123,
+   "better_worse_same": [
+    43,
+    7,
+    19
+   ],
+   "d1_4": 0.101,
+   "d5_7": 0.029
+  },
+  "mk_a-cur_cont": {
+   "mean": 0.07,
+   "t": 3.59,
+   "ci95": [
+    0.033,
+    0.11
+   ],
+   "drop3_largest": 0.049,
+   "drop3_smallest": 0.09,
+   "better_worse_same": [
+    48,
+    6,
+    15
+   ],
+   "d1_4": 0.05,
+   "d5_7": 0.085
+  },
+  "mk_b-cur_cont": {
+   "mean": 0.091,
+   "t": 4.43,
+   "ci95": [
+    0.05,
+    0.13
+   ],
+   "drop3_largest": 0.079,
+   "drop3_smallest": 0.115,
+   "better_worse_same": [
+    45,
+    6,
+    18
+   ],
+   "d1_4": 0.087,
+   "d5_7": 0.094
+  },
+  "mk_c-cur_cont": {
+   "mean": -0.132,
+   "t": -3.96,
+   "ci95": [
+    -0.197,
+    -0.068
+   ],
+   "drop3_largest": -0.163,
+   "drop3_smallest": -0.103,
+   "better_worse_same": [
+    19,
+    40,
+    10
+   ],
+   "d1_4": -0.149,
+   "d5_7": -0.12
+  },
+  "mk_bT-cur_cont": {
+   "mean": 0.097,
+   "t": 6.45,
+   "ci95": [
+    0.068,
+    0.127
+   ],
+   "drop3_largest": 0.087,
+   "drop3_smallest": 0.109,
+   "better_worse_same": [
+    46,
+    5,
+    18
+   ],
+   "d1_4": 0.091,
+   "d5_7": 0.102
+  },
+  "mk_a-cur_ohlc": {
+   "mean": 0.003,
+   "t": 0.11,
+   "ci95": [
+    -0.049,
+    0.055
+   ],
+   "drop3_largest": -0.021,
+   "drop3_smallest": 0.03,
+   "better_worse_same": [
+    37,
+    17,
+    15
+   ],
+   "d1_4": -0.05,
+   "d5_7": 0.041
+  },
+  "mk_b-cur_ohlc": {
+   "mean": 0.023,
+   "t": 0.95,
+   "ci95": [
+    -0.027,
+    0.069
+   ],
+   "drop3_largest": 0.008,
+   "drop3_smallest": 0.05,
+   "better_worse_same": [
+    38,
+    13,
+    18
+   ],
+   "d1_4": -0.012,
+   "d5_7": 0.049
+  },
+  "mk_c-cur_ohlc": {
+   "mean": -0.2,
+   "t": -4.51,
+   "ci95": [
+    -0.289,
+    -0.116
+   ],
+   "drop3_largest": -0.234,
+   "drop3_smallest": -0.153,
+   "better_worse_same": [
+    17,
+    42,
+    10
+   ],
+   "d1_4": -0.249,
+   "d5_7": -0.164
+  },
+  "mk_bT-cur_ohlc": {
+   "mean": 0.03,
+   "t": 1.44,
+   "ci95": [
+    -0.012,
+    0.068
+   ],
+   "drop3_largest": 0.017,
+   "drop3_smallest": 0.054,
+   "better_worse_same": [
+    37,
+    13,
+    19
+   ],
+   "d1_4": -0.008,
+   "d5_7": 0.058
+  }
+ },
+ "per_market": {
+  "BTCTMN": {
+   "n": 3,
+   "cur": 0.366,
+   "cur_thr": 0.288,
+   "cur_cont": 0.321,
+   "cur_ohlc": 0.321,
+   "mk_a": 0.421,
+   "mk_b": 0.394,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.421,
+   "mk_bT": 0.383
+  },
+  "ETHTMN": {
+   "n": 0,
+   "cur": NaN,
+   "cur_thr": NaN,
+   "cur_cont": NaN,
+   "cur_ohlc": NaN,
+   "mk_a": NaN,
+   "mk_b": NaN,
+   "mk_c": NaN,
+   "mk_a_raw": NaN,
+   "mk_bT": NaN
+  },
+  "SOLTMN": {
+   "n": 3,
+   "cur": 0.174,
+   "cur_thr": 0.077,
+   "cur_cont": 0.093,
+   "cur_ohlc": 0.132,
+   "mk_a": 0.147,
+   "mk_b": 0.151,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.066,
+   "mk_bT": 0.144
+  },
+  "XRPTMN": {
+   "n": 4,
+   "cur": 0.429,
+   "cur_thr": 0.329,
+   "cur_cont": 0.346,
+   "cur_ohlc": 0.346,
+   "mk_a": 0.397,
+   "mk_b": 0.444,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.356,
+   "mk_bT": 0.394
+  },
+  "DOGETMN": {
+   "n": 1,
+   "cur": 0.36,
+   "cur_thr": 0.145,
+   "cur_cont": 0.344,
+   "cur_ohlc": 0.431,
+   "mk_a": 0.444,
+   "mk_b": 0.526,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.444,
+   "mk_bT": 0.526
+  },
+  "PEPETMN": {
+   "n": 22,
+   "cur": 0.22,
+   "cur_thr": 0.16,
+   "cur_cont": 0.059,
+   "cur_ohlc": 0.085,
+   "mk_a": 0.083,
+   "mk_b": 0.129,
+   "mk_c": -0.063,
+   "mk_a_raw": 0.067,
+   "mk_bT": 0.127
+  },
+  "BNBTMN": {
+   "n": 13,
+   "cur": 0.419,
+   "cur_thr": 0.134,
+   "cur_cont": 0.137,
+   "cur_ohlc": 0.372,
+   "mk_a": 0.198,
+   "mk_b": 0.233,
+   "mk_c": -0.016,
+   "mk_a_raw": 0.196,
+   "mk_bT": 0.233
+  },
+  "ARBTMN": {
+   "n": 23,
+   "cur": 0.101,
+   "cur_thr": -0.011,
+   "cur_cont": -0.049,
+   "cur_ohlc": -0.013,
+   "mk_a": 0.072,
+   "mk_b": 0.061,
+   "mk_c": -0.136,
+   "mk_a_raw": 0.049,
+   "mk_bT": 0.093
+  }
+ },
+ "cur_target_gross_mean": 1.125,
+ "cur_thr_target_gross_mean": 0.92
+}

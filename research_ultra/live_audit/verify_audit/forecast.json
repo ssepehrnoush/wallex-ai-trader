@@ -1,0 +1,1193 @@
+{
+ "now_utc": "2026-10-21 18:35:00+00:00",
+ "entries_allowed_until": "2026-10-23 17:50:00+00:00",
+ "remaining_days": 1.969,
+ "notional_tmn_per_trade": 827586,
+ "spreads_original_pct": {
+  "BTCTMN": 0.059,
+  "ETHTMN": 0.186,
+  "SOLTMN": 0.268,
+  "XRPTMN": 0.377,
+  "DOGETMN": 0.162,
+  "PEPETMN": 0.04,
+  "BNBTMN": 0.417,
+  "ARBTMN": 0.469
+ },
+ "spreads_live_median_pct": {
+  "ARBTMN": 0.444,
+  "BNBTMN": 0.146,
+  "BTCTMN": 0.03,
+  "DOGETMN": 0.112,
+  "ETHTMN": 0.101,
+  "PEPETMN": 0.088,
+  "SOLTMN": 0.095,
+  "XRPTMN": 0.124
+ },
+ "repro_check_trades(mine, stored)": {
+  "BTCTMN": [
+   3,
+   3
+  ],
+  "ETHTMN": [
+   0,
+   0
+  ],
+  "SOLTMN": [
+   2,
+   2
+  ],
+  "XRPTMN": [
+   2,
+   2
+  ],
+  "DOGETMN": [
+   1,
+   1
+  ]
+ },
+ "variants": {
+  "repro": {
+   "markets": {
+    "BTCTMN": {
+     "trades": 3,
+     "per_day": 0.438,
+     "mean_ret_pct": 0.34,
+     "median_ret_pct": 0.252,
+     "sum_ret_pct": 1.02,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 3
+     },
+     "half_spread_pct": 0.029,
+     "days": 6.85
+    },
+    "ETHTMN": {
+     "trades": 0,
+     "per_day": 0.0,
+     "mean_ret_pct": null,
+     "sum_ret_pct": 0.0,
+     "win_pct": null,
+     "exits": {},
+     "half_spread_pct": 0.093,
+     "days": 6.85
+    },
+    "SOLTMN": {
+     "trades": 2,
+     "per_day": 0.292,
+     "mean_ret_pct": 0.057,
+     "median_ret_pct": 0.057,
+     "sum_ret_pct": 0.113,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     },
+     "half_spread_pct": 0.134,
+     "days": 6.84
+    },
+    "XRPTMN": {
+     "trades": 2,
+     "per_day": 0.292,
+     "mean_ret_pct": 0.969,
+     "median_ret_pct": 0.969,
+     "sum_ret_pct": 1.938,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     },
+     "half_spread_pct": 0.189,
+     "days": 6.84
+    },
+    "DOGETMN": {
+     "trades": 1,
+     "per_day": 0.146,
+     "mean_ret_pct": 0.362,
+     "median_ret_pct": 0.362,
+     "sum_ret_pct": 0.362,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 1
+     },
+     "half_spread_pct": 0.081,
+     "days": 6.85
+    }
+   },
+   "pooled": {
+    "trades": 8,
+    "per_day": 1.168,
+    "mean_ret_pct": 0.429,
+    "median_ret_pct": 0.176,
+    "sum_ret_pct": 3.432,
+    "win_pct": 100.0,
+    "exits": {
+     "target": 8
+    }
+   }
+  },
+  "bt_orig": {
+   "markets": {
+    "BTCTMN": {
+     "trades": 3,
+     "per_day": 0.438,
+     "mean_ret_pct": 0.34,
+     "median_ret_pct": 0.252,
+     "sum_ret_pct": 1.02,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 3
+     },
+     "half_spread_pct": 0.029,
+     "days": 6.85
+    },
+    "ETHTMN": {
+     "trades": 0,
+     "per_day": 0.0,
+     "mean_ret_pct": null,
+     "sum_ret_pct": 0.0,
+     "win_pct": null,
+     "exits": {},
+     "half_spread_pct": 0.093,
+     "days": 6.85
+    },
+    "SOLTMN": {
+     "trades": 2,
+     "per_day": 0.292,
+     "mean_ret_pct": 0.057,
+     "median_ret_pct": 0.057,
+     "sum_ret_pct": 0.113,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     },
+     "half_spread_pct": 0.134,
+     "days": 6.84
+    },
+    "XRPTMN": {
+     "trades": 2,
+     "per_day": 0.292,
+     "mean_ret_pct": 0.969,
+     "median_ret_pct": 0.969,
+     "sum_ret_pct": 1.938,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 2
+     },
+     "half_spread_pct": 0.189,
+     "days": 6.84
+    },
+    "DOGETMN": {
+     "trades": 1,
+     "per_day": 0.146,
+     "mean_ret_pct": 0.362,
+     "median_ret_pct": 0.362,
+     "sum_ret_pct": 0.362,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 1
+     },
+     "half_spread_pct": 0.081,
+     "days": 6.85
+    },
+    "PEPETMN": {
+     "trades": 27,
+     "per_day": 3.942,
+     "mean_ret_pct": 0.32,
+     "median_ret_pct": 0.204,
+     "sum_ret_pct": 8.632,
+     "win_pct": 70.4,
+     "exits": {
+      "target": 25,
+      "time": 2
+     },
+     "half_spread_pct": 0.02,
+     "days": 6.85
+    },
+    "BNBTMN": {
+     "trades": 9,
+     "per_day": 1.314,
+     "mean_ret_pct": 0.289,
+     "median_ret_pct": 0.191,
+     "sum_ret_pct": 2.603,
+     "win_pct": 55.6,
+     "exits": {
+      "target": 7,
+      "time": 2
+     },
+     "half_spread_pct": 0.209,
+     "days": 6.85
+    },
+    "ARBTMN": {
+     "trades": 21,
+     "per_day": 3.067,
+     "mean_ret_pct": 0.306,
+     "median_ret_pct": 0.304,
+     "sum_ret_pct": 6.426,
+     "win_pct": 61.9,
+     "exits": {
+      "target": 19,
+      "time": 2
+     },
+     "half_spread_pct": 0.234,
+     "days": 6.85
+    }
+   },
+   "pooled": {
+    "trades": 65,
+    "per_day": 9.493,
+    "mean_ret_pct": 0.325,
+    "median_ret_pct": 0.209,
+    "sum_ret_pct": 21.094,
+    "win_pct": 69.2,
+    "exits": {
+     "target": 59,
+     "time": 6
+    }
+   }
+  },
+  "live_rule": {
+   "markets": {
+    "BTCTMN": {
+     "trades": 3,
+     "per_day": 0.438,
+     "mean_ret_pct": 0.37,
+     "median_ret_pct": 0.281,
+     "sum_ret_pct": 1.109,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 3
+     },
+     "half_spread_pct": 0.015,
+     "days": 6.85
+    },
+    "ETHTMN": {
+     "trades": 2,
+     "per_day": 0.292,
+     "mean_ret_pct": -0.091,
+     "median_ret_pct": -0.091,
+     "sum_ret_pct": -0.181,
+     "win_pct": 50.0,
+     "exits": {
+      "time": 1,
+      "target": 1
+     },
+     "half_spread_pct": 0.051,
+     "days": 6.85
+    },
+    "SOLTMN": {
+     "trades": 5,
+     "per_day": 0.731,
+     "mean_ret_pct": 0.25,
+     "median_ret_pct": 0.241,
+     "sum_ret_pct": 1.25,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 5
+     },
+     "half_spread_pct": 0.048,
+     "days": 6.84
+    },
+    "XRPTMN": {
+     "trades": 4,
+     "per_day": 0.584,
+     "mean_ret_pct": 0.482,
+     "median_ret_pct": 0.48,
+     "sum_ret_pct": 1.928,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 4
+     },
+     "half_spread_pct": 0.062,
+     "days": 6.84
+    },
+    "DOGETMN": {
+     "trades": 1,
+     "per_day": 0.146,
+     "mean_ret_pct": 0.412,
+     "median_ret_pct": 0.412,
+     "sum_ret_pct": 0.412,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 1
+     },
+     "half_spread_pct": 0.056,
+     "days": 6.85
+    },
+    "PEPETMN": {
+     "trades": 23,
+     "per_day": 3.358,
+     "mean_ret_pct": 0.351,
+     "median_ret_pct": 0.226,
+     "sum_ret_pct": 8.068,
+     "win_pct": 73.9,
+     "exits": {
+      "target": 15,
+      "time": 8
+     },
+     "half_spread_pct": 0.044,
+     "days": 6.85
+    },
+    "BNBTMN": {
+     "trades": 13,
+     "per_day": 1.898,
+     "mean_ret_pct": 0.42,
+     "median_ret_pct": 0.313,
+     "sum_ret_pct": 5.461,
+     "win_pct": 69.2,
+     "exits": {
+      "target": 9,
+      "time": 4
+     },
+     "half_spread_pct": 0.073,
+     "days": 6.85
+    },
+    "ARBTMN": {
+     "trades": 23,
+     "per_day": 3.359,
+     "mean_ret_pct": 0.101,
+     "median_ret_pct": 0.186,
+     "sum_ret_pct": 2.329,
+     "win_pct": 56.5,
+     "exits": {
+      "time": 14,
+      "target": 9
+     },
+     "half_spread_pct": 0.222,
+     "days": 6.85
+    }
+   },
+   "pooled": {
+    "trades": 74,
+    "per_day": 10.807,
+    "mean_ret_pct": 0.275,
+    "median_ret_pct": 0.244,
+    "sum_ret_pct": 20.375,
+    "win_pct": 71.6,
+    "exits": {
+     "target": 47,
+     "time": 27
+    }
+   }
+  },
+  "current_policy": {
+   "markets": {
+    "BTCTMN": {
+     "trades": 3,
+     "per_day": 0.438,
+     "mean_ret_pct": 0.37,
+     "median_ret_pct": 0.281,
+     "sum_ret_pct": 1.109,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 3
+     },
+     "half_spread_pct": 0.015,
+     "days": 6.85
+    },
+    "ETHTMN": {
+     "trades": 0,
+     "per_day": 0.0,
+     "mean_ret_pct": null,
+     "sum_ret_pct": 0.0,
+     "win_pct": null,
+     "exits": {},
+     "half_spread_pct": 0.051,
+     "days": 6.85
+    },
+    "SOLTMN": {
+     "trades": 5,
+     "per_day": 0.731,
+     "mean_ret_pct": 0.25,
+     "median_ret_pct": 0.241,
+     "sum_ret_pct": 1.25,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 5
+     },
+     "half_spread_pct": 0.048,
+     "days": 6.84
+    },
+    "XRPTMN": {
+     "trades": 4,
+     "per_day": 0.584,
+     "mean_ret_pct": 0.482,
+     "median_ret_pct": 0.48,
+     "sum_ret_pct": 1.928,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 4
+     },
+     "half_spread_pct": 0.062,
+     "days": 6.84
+    },
+    "DOGETMN": {
+     "trades": 1,
+     "per_day": 0.146,
+     "mean_ret_pct": 0.412,
+     "median_ret_pct": 0.412,
+     "sum_ret_pct": 0.412,
+     "win_pct": 100.0,
+     "exits": {
+      "target": 1
+     },
+     "half_spread_pct": 0.056,
+     "days": 6.85
+    },
+    "PEPETMN": {
+     "trades": 19,
+     "per_day": 2.774,
+     "mean_ret_pct": 0.271,
+     "median_ret_pct": 0.235,
+     "sum_ret_pct": 5.145,
+     "win_pct": 68.4,
+     "exits": {
+      "target": 12,
+      "time": 7
+     },
+     "half_spread_pct": 0.044,
+     "days": 6.85
+    },
+    "ARBTMN": {
+     "trades": 14,
+     "per_day": 2.045,
+     "mean_ret_pct": 0.316,
+     "median_ret_pct": 0.282,
+     "sum_ret_pct": 4.417,
+     "win_pct": 64.3,
+     "exits": {
+      "time": 8,
+      "target": 6
+     },
+     "half_spread_pct": 0.222,
+     "days": 6.85
+    }
+   },
+   "pooled": {
+    "trades": 46,
+    "per_day": 6.718,
+    "mean_ret_pct": 0.31,
+    "median_ret_pct": 0.252,
+    "sum_ret_pct": 14.26,
+    "win_pct": 76.1,
+    "exits": {
+     "target": 31,
+     "time": 15
+    }
+   }
+  }
+ },
+ "live_rule_halves": {
+  "first_4d": {
+   "trades": 31,
+   "per_day": 7.75,
+   "mean_ret_pct": 0.228,
+   "median_ret_pct": 0.241,
+   "sum_ret_pct": 7.08,
+   "win_pct": 74.2,
+   "exits": {
+    "target": 22,
+    "time": 9
+   },
+   "days": 4.0
+  },
+  "last_3d": {
+   "trades": 43,
+   "per_day": 15.091,
+   "mean_ret_pct": 0.309,
+   "median_ret_pct": 0.247,
+   "sum_ret_pct": 13.295,
+   "win_pct": 69.8,
+   "exits": {
+    "target": 25,
+    "time": 18
+   },
+   "days": 2.85
+  }
+ },
+ "live_rule_trades_by_day": {
+  "2026-10-15": 11,
+  "2026-10-16": 6,
+  "2026-10-17": 11,
+  "2026-10-18": 11,
+  "2026-10-19": 12,
+  "2026-10-20": 16,
+  "2026-10-21": 7
+ },
+ "forecast": {
+  "current_policy/current_policy": {
+   "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "bt_trades": 46,
+   "rate_per_day": 6.717,
+   "expected_trades": 13.22,
+   "poisson_fixed_rate": {
+    "q5": 8,
+    "q50": 13,
+    "q95": 19,
+    "p_zero": 0.0
+   },
+   "predictive_q5_q50_q95": [
+    8,
+    14,
+    22
+   ],
+   "predictive_p_zero": 0.0,
+   "mean_net_ret_per_trade_pct": 0.31,
+   "account_return": {
+    "mean_pct": 0.589,
+    "q5_pct": 0.063,
+    "q50_pct": 0.549,
+    "q95_pct": 1.254,
+    "mean_tmn": 29454,
+    "p_negative": 0.028
+   }
+  },
+  "enabled_now/live_rule": {
+   "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "bt_trades": 61,
+   "rate_per_day": 8.907,
+   "expected_trades": 17.54,
+   "poisson_fixed_rate": {
+    "q5": 11,
+    "q50": 17,
+    "q95": 25,
+    "p_zero": 0.0
+   },
+   "predictive_q5_q50_q95": [
+    11,
+    18,
+    27
+   ],
+   "predictive_p_zero": 0.0,
+   "mean_net_ret_per_trade_pct": 0.244,
+   "account_return": {
+    "mean_pct": 0.751,
+    "q5_pct": -0.122,
+    "q50_pct": 0.635,
+    "q95_pct": 1.979,
+    "mean_tmn": 37538,
+    "p_negative": 0.089
+   }
+  },
+  "enabled_now/bt_orig": {
+   "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "bt_trades": 56,
+   "rate_per_day": 8.176,
+   "expected_trades": 16.1,
+   "poisson_fixed_rate": {
+    "q5": 10,
+    "q50": 16,
+    "q95": 23,
+    "p_zero": 0.0
+   },
+   "predictive_q5_q50_q95": [
+    10,
+    17,
+    25
+   ],
+   "predictive_p_zero": 0.0,
+   "mean_net_ret_per_trade_pct": 0.33,
+   "account_return": {
+    "mean_pct": 0.934,
+    "q5_pct": 0.098,
+    "q50_pct": 0.806,
+    "q95_pct": 2.158,
+    "mean_tmn": 46708,
+    "p_negative": 0.026
+   }
+  },
+  "all_8/live_rule": {
+   "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN",
+    "PEPETMN",
+    "BNBTMN",
+    "ARBTMN"
+   ],
+   "bt_trades": 74,
+   "rate_per_day": 10.805,
+   "expected_trades": 21.27,
+   "poisson_fixed_rate": {
+    "q5": 14,
+    "q50": 21,
+    "q95": 29,
+    "p_zero": 0.0
+   },
+   "predictive_q5_q50_q95": [
+    14,
+    22,
+    32
+   ],
+   "predictive_p_zero": 0.0,
+   "mean_net_ret_per_trade_pct": 0.275,
+   "account_return": {
+    "mean_pct": 1.02,
+    "q5_pct": 0.049,
+    "q50_pct": 0.918,
+    "q95_pct": 2.3,
+    "mean_tmn": 50985,
+    "p_negative": 0.04
+   }
+  },
+  "all_8/bt_orig": {
+   "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN",
+    "PEPETMN",
+    "BNBTMN",
+    "ARBTMN"
+   ],
+   "bt_trades": 65,
+   "rate_per_day": 9.49,
+   "expected_trades": 18.68,
+   "poisson_fixed_rate": {
+    "q5": 12,
+    "q50": 19,
+    "q95": 26,
+    "p_zero": 0.0
+   },
+   "predictive_q5_q50_q95": [
+    12,
+    20,
+    29
+   ],
+   "predictive_p_zero": 0.0,
+   "mean_net_ret_per_trade_pct": 0.325,
+   "account_return": {
+    "mean_pct": 1.063,
+    "q5_pct": 0.153,
+    "q50_pct": 0.948,
+    "q95_pct": 2.332,
+    "mean_tmn": 53173,
+    "p_negative": 0.019
+   }
+  }
+ },
+ "share_of_windows_with_zero_entries_enabled_now": {
+  "1.84h": 0.616,
+  "3.80h": 0.377,
+  "6.00h": 0.215,
+  "12.00h": 0.037,
+  "24.00h": 0.0
+ },
+ "dev_distribution": {
+  "BTCTMN": {
+   "7d_minutes": {
+    "n": 5627,
+    "p1_pct": -0.388,
+    "p50_pct": 0.014,
+    "share<=-0.3%": 2.701,
+    "share<=-0.5%": 0.355,
+    "share<=-0.7%": 0.071
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.141,
+    "p50_pct": 0.088,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.149,
+    "p50_pct": 0.067,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.794,
+    "2026-10-16": 0.515,
+    "2026-10-17": 0.0,
+    "2026-10-18": 0.0,
+    "2026-10-19": 0.0,
+    "2026-10-20": 0.698,
+    "2026-10-21": 0.58
+   }
+  },
+  "ETHTMN": {
+   "7d_minutes": {
+    "n": 3403,
+    "p1_pct": -0.36,
+    "p50_pct": 0.049,
+    "share<=-0.3%": 2.028,
+    "share<=-0.5%": 0.294,
+    "share<=-0.7%": 0.059
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.246,
+    "p50_pct": 0.054,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.362,
+    "p50_pct": 0.006,
+    "share<=-0.3%": 1.802,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 1.0,
+    "2026-10-15": 0.611,
+    "2026-10-16": 0.0,
+    "2026-10-17": 0.0,
+    "2026-10-18": 0.0,
+    "2026-10-19": 0.463,
+    "2026-10-20": 0.217,
+    "2026-10-21": 0.755
+   }
+  },
+  "SOLTMN": {
+   "7d_minutes": {
+    "n": 1941,
+    "p1_pct": -0.486,
+    "p50_pct": 0.047,
+    "share<=-0.3%": 5.873,
+    "share<=-0.5%": 0.927,
+    "share<=-0.7%": 0.258
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.105,
+    "p50_pct": 0.073,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.16,
+    "p50_pct": 0.025,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.701,
+    "2026-10-16": 0.0,
+    "2026-10-17": 0.0,
+    "2026-10-18": 2.83,
+    "2026-10-19": 0.0,
+    "2026-10-20": 2.0,
+    "2026-10-21": 0.0
+   }
+  },
+  "XRPTMN": {
+   "7d_minutes": {
+    "n": 3045,
+    "p1_pct": -0.445,
+    "p50_pct": 0.059,
+    "share<=-0.3%": 3.186,
+    "share<=-0.5%": 0.558,
+    "share<=-0.7%": 0.197
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.261,
+    "p50_pct": 0.081,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.283,
+    "p50_pct": 0.031,
+    "share<=-0.3%": 0.901,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.174,
+    "2026-10-16": 0.445,
+    "2026-10-17": 0.928,
+    "2026-10-18": 0.93,
+    "2026-10-19": 0.234,
+    "2026-10-20": 0.976,
+    "2026-10-21": 0.402
+   }
+  },
+  "DOGETMN": {
+   "7d_minutes": {
+    "n": 2178,
+    "p1_pct": -0.392,
+    "p50_pct": 0.057,
+    "share<=-0.3%": 3.168,
+    "share<=-0.5%": 0.459,
+    "share<=-0.7%": 0.046
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.162,
+    "p50_pct": 0.057,
+    "share<=-0.3%": 0.0,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.236,
+    "p50_pct": 0.007,
+    "share<=-0.3%": 0.901,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.477,
+    "2026-10-16": 0.0,
+    "2026-10-17": 0.0,
+    "2026-10-18": 1.429,
+    "2026-10-19": 1.014,
+    "2026-10-20": 0.0,
+    "2026-10-21": 0.0
+   }
+  },
+  "PEPETMN": {
+   "7d_minutes": {
+    "n": 4687,
+    "p1_pct": -0.693,
+    "p50_pct": 0.038,
+    "share<=-0.3%": 10.326,
+    "share<=-0.5%": 3.179,
+    "share<=-0.7%": 0.96
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.379,
+    "p50_pct": 0.068,
+    "share<=-0.3%": 3.604,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.382,
+    "p50_pct": -0.003,
+    "share<=-0.3%": 9.009,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 3.488,
+    "2026-10-15": 6.577,
+    "2026-10-16": 0.919,
+    "2026-10-17": 1.732,
+    "2026-10-18": 5.363,
+    "2026-10-19": 2.046,
+    "2026-10-20": 2.672,
+    "2026-10-21": 1.735
+   }
+  },
+  "BNBTMN": {
+   "7d_minutes": {
+    "n": 2078,
+    "p1_pct": -0.798,
+    "p50_pct": 0.078,
+    "share<=-0.3%": 6.593,
+    "share<=-0.5%": 2.262,
+    "share<=-0.7%": 1.299
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.273,
+    "p50_pct": -0.041,
+    "share<=-0.3%": 0.901,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.306,
+    "p50_pct": -0.075,
+    "share<=-0.3%": 1.802,
+    "share<=-0.5%": 0.0,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 0.57,
+    "2026-10-16": 0.282,
+    "2026-10-17": 11.152,
+    "2026-10-18": 2.281,
+    "2026-10-19": 2.29,
+    "2026-10-20": 1.594,
+    "2026-10-21": 0.0
+   }
+  },
+  "ARBTMN": {
+   "7d_minutes": {
+    "n": 2930,
+    "p1_pct": -0.739,
+    "p50_pct": 0.219,
+    "share<=-0.3%": 7.031,
+    "share<=-0.5%": 2.969,
+    "share<=-0.7%": 1.263
+   },
+   "live_last_tick_per_min": {
+    "n": 111,
+    "p1_pct": -0.228,
+    "p50_pct": 0.146,
+    "share<=-0.3%": 0.901,
+    "share<=-0.5%": 0.901,
+    "share<=-0.7%": 0.0
+   },
+   "live_min_per_min": {
+    "n": 111,
+    "p1_pct": -0.587,
+    "p50_pct": 0.019,
+    "share<=-0.3%": 4.505,
+    "share<=-0.5%": 2.703,
+    "share<=-0.7%": 0.0
+   },
+   "7d_daily_share<=-0.5%": {
+    "2026-10-14": 0.0,
+    "2026-10-15": 1.527,
+    "2026-10-16": 3.719,
+    "2026-10-17": 0.621,
+    "2026-10-18": 1.493,
+    "2026-10-19": 6.25,
+    "2026-10-20": 3.036,
+    "2026-10-21": 2.508
+   }
+  }
+ },
+ "global_volatility": {
+  "BTCTMN": {
+   "7d_hourly_std_median_pct": 0.0368,
+   "7d_hourly_std_p25_pct": 0.0253,
+   "7d_hourly_std_p75_pct": 0.0485,
+   "live_1m_std_pct": 0.0307,
+   "live_percentile_vs_7d_hours": 34.7,
+   "live_hours": {
+    "17:00": 0.03
+   }
+  },
+  "ETHTMN": {
+   "7d_hourly_std_median_pct": 0.0546,
+   "7d_hourly_std_p25_pct": 0.041,
+   "7d_hourly_std_p75_pct": 0.0731,
+   "live_1m_std_pct": 0.0495,
+   "live_percentile_vs_7d_hours": 40.1,
+   "live_hours": {
+    "17:00": 0.0478
+   }
+  },
+  "SOLTMN": {
+   "7d_hourly_std_median_pct": 0.067,
+   "7d_hourly_std_p25_pct": 0.0521,
+   "7d_hourly_std_p75_pct": 0.088,
+   "live_1m_std_pct": 0.0618,
+   "live_percentile_vs_7d_hours": 45.5,
+   "live_hours": {
+    "17:00": 0.0619
+   }
+  },
+  "XRPTMN": {
+   "7d_hourly_std_median_pct": 0.0644,
+   "7d_hourly_std_p25_pct": 0.0476,
+   "7d_hourly_std_p75_pct": 0.0823,
+   "live_1m_std_pct": 0.0713,
+   "live_percentile_vs_7d_hours": 60.5,
+   "live_hours": {
+    "17:00": 0.0655
+   }
+  },
+  "DOGETMN": {
+   "7d_hourly_std_median_pct": 0.0699,
+   "7d_hourly_std_p25_pct": 0.0536,
+   "7d_hourly_std_p75_pct": 0.0868,
+   "live_1m_std_pct": 0.0559,
+   "live_percentile_vs_7d_hours": 32.9,
+   "live_hours": {
+    "17:00": 0.0569
+   }
+  },
+  "PEPETMN": {
+   "7d_hourly_std_median_pct": 0.1842,
+   "7d_hourly_std_p25_pct": 0.1672,
+   "7d_hourly_std_p75_pct": 0.2099,
+   "live_1m_std_pct": 0.1932,
+   "live_percentile_vs_7d_hours": 60.5,
+   "live_hours": {
+    "17:00": 0.2057
+   }
+  },
+  "BNBTMN": {
+   "7d_hourly_std_median_pct": 0.0361,
+   "7d_hourly_std_p25_pct": 0.0283,
+   "7d_hourly_std_p75_pct": 0.0478,
+   "live_1m_std_pct": 0.0281,
+   "live_percentile_vs_7d_hours": 25.1,
+   "live_hours": {
+    "17:00": 0.0256
+   }
+  },
+  "ARBTMN": {
+   "7d_hourly_std_median_pct": 0.1351,
+   "7d_hourly_std_p25_pct": 0.1129,
+   "7d_hourly_std_p75_pct": 0.1697,
+   "live_1m_std_pct": 0.1319,
+   "live_percentile_vs_7d_hours": 47.3,
+   "live_hours": {
+    "17:00": 0.1405
+   }
+  }
+ },
+ "entries_vs_global_moves": {
+  "BTCTMN": {
+   "all_minutes_median_abs15_pct": 0.081,
+   "entry_minutes_median_abs15_pct": 0.083,
+   "entries": 3
+  },
+  "ETHTMN": {
+   "all_minutes_median_abs15_pct": 0.125,
+   "entry_minutes_median_abs15_pct": 1.222,
+   "entries": 2
+  },
+  "SOLTMN": {
+   "all_minutes_median_abs15_pct": 0.153,
+   "entry_minutes_median_abs15_pct": 0.384,
+   "entries": 5
+  },
+  "XRPTMN": {
+   "all_minutes_median_abs15_pct": 0.145,
+   "entry_minutes_median_abs15_pct": 0.382,
+   "entries": 4
+  },
+  "DOGETMN": {
+   "all_minutes_median_abs15_pct": 0.151,
+   "entry_minutes_median_abs15_pct": 1.164,
+   "entries": 1
+  },
+  "PEPETMN": {
+   "all_minutes_median_abs15_pct": 0.25,
+   "entry_minutes_median_abs15_pct": 0.498,
+   "entries": 23
+  },
+  "BNBTMN": {
+   "all_minutes_median_abs15_pct": 0.084,
+   "entry_minutes_median_abs15_pct": 0.071,
+   "entries": 13
+  },
+  "ARBTMN": {
+   "all_minutes_median_abs15_pct": 0.315,
+   "entry_minutes_median_abs15_pct": 0.755,
+   "entries": 23
+  }
+ },
+ "live_hours": 1.84,
+ "enabled_now": [
+  "BTCTMN",
+  "ETHTMN",
+  "SOLTMN",
+  "XRPTMN",
+  "DOGETMN",
+  "PEPETMN",
+  "ARBTMN"
+ ],
+ "state_json_t": "2026-10-21T18:35:00+00:00",
+ "current_policy": {
+  "BTCTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "ETHTMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "SOLTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "XRPTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "DOGETMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "PEPETMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3
+  },
+  "BNBTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
+   "size_factor": 0.4
+  },
+  "ARBTMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.3
+  }
+ },
+ "notional_share_of_equity_current": {
+  "BTCTMN": 0.1333,
+  "ETHTMN": 0.1333,
+  "SOLTMN": 0.1333,
+  "XRPTMN": 0.1333,
+  "DOGETMN": 0.1333,
+  "PEPETMN": 0.1333,
+  "BNBTMN": 0.1655,
+  "ARBTMN": 0.1333
+ }
+}

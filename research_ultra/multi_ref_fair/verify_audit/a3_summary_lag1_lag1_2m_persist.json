@@ -1,0 +1,1855 @@
+{
+ "spreads_pct": {
+  "BTCTMN": 0.031,
+  "ETHTMN": 0.136,
+  "SOLTMN": 0.157,
+  "XRPTMN": 0.2,
+  "DOGETMN": 0.169,
+  "PEPETMN": 0.114,
+  "BNBTMN": 0.146,
+  "ARBTMN": 0.445
+ },
+ "lag1": {
+  "A0": {
+   "all": {
+    "n": 69,
+    "mean": -0.513,
+    "sum": -35.39,
+    "win": 29.0,
+    "exits": {
+     "time": 39,
+     "target": 19,
+     "stop": 11
+    }
+   },
+   "first4d": {
+    "n": 28,
+    "mean": -0.468,
+    "sum": -13.11,
+    "win": 32.1,
+    "exits": {
+     "time": 16,
+     "target": 9,
+     "stop": 3
+    }
+   },
+   "last3d": {
+    "n": 41,
+    "mean": -0.544,
+    "sum": -22.29,
+    "win": 26.8,
+    "exits": {
+     "time": 23,
+     "target": 10,
+     "stop": 8
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 67,
+    "mean": -0.556,
+    "sum": -37.24,
+    "win": 26.9,
+    "exits": {
+     "time": 39,
+     "target": 17,
+     "stop": 11
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 65,
+    "mean": -0.387,
+    "sum": -25.16,
+    "win": 30.8,
+    "exits": {
+     "time": 39,
+     "target": 19,
+     "stop": 7
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 3,
+     "mean": -0.869,
+     "sum": -2.61,
+     "win": 33.3,
+     "exits": {
+      "time": 1,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 3,
+     "mean": -0.856,
+     "sum": -2.57,
+     "win": 0.0,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 4,
+     "mean": -0.3,
+     "sum": -1.2,
+     "win": 25.0,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 21,
+     "mean": -0.33,
+     "sum": -6.92,
+     "win": 38.1,
+     "exits": {
+      "time": 12,
+      "target": 7,
+      "stop": 2
+     }
+    },
+    "BNBTMN": {
+     "n": 13,
+     "mean": -0.286,
+     "sum": -3.71,
+     "win": 38.5,
+     "exits": {
+      "time": 7,
+      "target": 5,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 24,
+     "mean": -0.698,
+     "sum": -16.75,
+     "win": 20.8,
+     "exits": {
+      "time": 14,
+      "stop": 5,
+      "target": 5
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -3.27,
+    "1": -5.72,
+    "2": -2.33,
+    "3": -1.78,
+    "4": -7.63,
+    "5": -6.29,
+    "6": -8.36
+   }
+  },
+  "A1": {
+   "all": {
+    "n": 69,
+    "mean": -0.474,
+    "sum": -32.73,
+    "win": 29.0,
+    "exits": {
+     "time": 38,
+     "target": 19,
+     "stop": 12
+    }
+   },
+   "first4d": {
+    "n": 26,
+    "mean": -0.466,
+    "sum": -12.12,
+    "win": 30.8,
+    "exits": {
+     "time": 14,
+     "target": 8,
+     "stop": 4
+    }
+   },
+   "last3d": {
+    "n": 43,
+    "mean": -0.479,
+    "sum": -20.61,
+    "win": 27.9,
+    "exits": {
+     "time": 24,
+     "target": 11,
+     "stop": 8
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 68,
+    "mean": -0.541,
+    "sum": -36.79,
+    "win": 27.9,
+    "exits": {
+     "time": 38,
+     "target": 18,
+     "stop": 12
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 66,
+    "mean": -0.483,
+    "sum": -31.9,
+    "win": 28.8,
+    "exits": {
+     "time": 38,
+     "target": 18,
+     "stop": 10
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 3,
+     "mean": -0.869,
+     "sum": -2.61,
+     "win": 33.3,
+     "exits": {
+      "time": 1,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 3,
+     "mean": -0.856,
+     "sum": -2.57,
+     "win": 0.0,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 4,
+     "mean": -0.3,
+     "sum": -1.2,
+     "win": 25.0,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 23,
+     "mean": -0.261,
+     "sum": -6.01,
+     "win": 34.8,
+     "exits": {
+      "time": 13,
+      "target": 7,
+      "stop": 3
+     }
+    },
+    "BNBTMN": {
+     "n": 13,
+     "mean": -0.286,
+     "sum": -3.71,
+     "win": 38.5,
+     "exits": {
+      "time": 7,
+      "target": 5,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 22,
+     "mean": -0.682,
+     "sum": -15.0,
+     "win": 22.7,
+     "exits": {
+      "time": 12,
+      "stop": 5,
+      "target": 5
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -1.53,
+    "1": -7.65,
+    "2": -2.27,
+    "3": -0.68,
+    "4": -7.82,
+    "5": -5.12,
+    "6": -7.67
+   }
+  },
+  "B1": {
+   "all": {
+    "n": 64,
+    "mean": -0.545,
+    "sum": -34.91,
+    "win": 26.6,
+    "exits": {
+     "time": 36,
+     "target": 16,
+     "stop": 12
+    }
+   },
+   "first4d": {
+    "n": 25,
+    "mean": -0.586,
+    "sum": -14.65,
+    "win": 28.0,
+    "exits": {
+     "time": 14,
+     "target": 7,
+     "stop": 4
+    }
+   },
+   "last3d": {
+    "n": 39,
+    "mean": -0.519,
+    "sum": -20.25,
+    "win": 25.6,
+    "exits": {
+     "time": 22,
+     "target": 9,
+     "stop": 8
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 62,
+    "mean": -0.635,
+    "sum": -39.4,
+    "win": 24.2,
+    "exits": {
+     "time": 36,
+     "target": 14,
+     "stop": 12
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 59,
+    "mean": -0.488,
+    "sum": -28.77,
+    "win": 27.1,
+    "exits": {
+     "time": 36,
+     "target": 15,
+     "stop": 8
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 2,
+     "mean": -1.363,
+     "sum": -2.73,
+     "win": 0.0,
+     "exits": {
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 2,
+     "mean": -1.156,
+     "sum": -2.31,
+     "win": 0.0,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLTMN": {
+     "n": 2,
+     "mean": -1.065,
+     "sum": -2.13,
+     "win": 0.0,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 2,
+     "mean": 0.073,
+     "sum": 0.15,
+     "win": 50.0,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 22,
+     "mean": -0.344,
+     "sum": -7.56,
+     "win": 27.3,
+     "exits": {
+      "time": 14,
+      "target": 5,
+      "stop": 3
+     }
+    },
+    "BNBTMN": {
+     "n": 11,
+     "mean": -0.255,
+     "sum": -2.81,
+     "win": 45.5,
+     "exits": {
+      "target": 5,
+      "time": 5,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 22,
+     "mean": -0.722,
+     "sum": -15.89,
+     "win": 22.7,
+     "exits": {
+      "time": 12,
+      "stop": 5,
+      "target": 5
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -4.8,
+    "1": -5.74,
+    "2": -2.33,
+    "3": -1.78,
+    "4": -7.63,
+    "5": -4.32,
+    "6": -8.3
+   }
+  },
+  "AB": {
+   "all": {
+    "n": 62,
+    "mean": -0.497,
+    "sum": -30.81,
+    "win": 29.0,
+    "exits": {
+     "time": 33,
+     "target": 18,
+     "stop": 11
+    }
+   },
+   "first4d": {
+    "n": 22,
+    "mean": -0.509,
+    "sum": -11.19,
+    "win": 31.8,
+    "exits": {
+     "time": 11,
+     "target": 7,
+     "stop": 4
+    }
+   },
+   "last3d": {
+    "n": 40,
+    "mean": -0.491,
+    "sum": -19.62,
+    "win": 27.5,
+    "exits": {
+     "time": 22,
+     "target": 11,
+     "stop": 7
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 61,
+    "mean": -0.572,
+    "sum": -34.87,
+    "win": 27.9,
+    "exits": {
+     "time": 33,
+     "target": 17,
+     "stop": 11
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 59,
+    "mean": -0.508,
+    "sum": -29.98,
+    "win": 28.8,
+    "exits": {
+     "time": 33,
+     "target": 17,
+     "stop": 9
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 2,
+     "mean": -1.363,
+     "sum": -2.73,
+     "win": 0.0,
+     "exits": {
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 2,
+     "mean": -1.156,
+     "sum": -2.31,
+     "win": 0.0,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLTMN": {
+     "n": 2,
+     "mean": -1.065,
+     "sum": -2.13,
+     "win": 0.0,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 2,
+     "mean": 0.073,
+     "sum": 0.15,
+     "win": 50.0,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 22,
+     "mean": -0.24,
+     "sum": -5.27,
+     "win": 31.8,
+     "exits": {
+      "time": 13,
+      "target": 7,
+      "stop": 2
+     }
+    },
+    "BNBTMN": {
+     "n": 11,
+     "mean": -0.255,
+     "sum": -2.81,
+     "win": 45.5,
+     "exits": {
+      "target": 5,
+      "time": 5,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 20,
+     "mean": -0.704,
+     "sum": -14.08,
+     "win": 25.0,
+     "exits": {
+      "time": 10,
+      "stop": 5,
+      "target": 5
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -1.53,
+    "1": -6.71,
+    "2": -2.27,
+    "3": -0.68,
+    "4": -7.82,
+    "5": -5.73,
+    "6": -6.07
+   }
+  },
+  "diff_A1_minus_A0": {
+   "all": 2.66,
+   "first4d": 0.99,
+   "last3d": 1.68,
+   "ex_pepe_pump": 0.45,
+   "ex_abs_gt2": -6.74,
+   "per_day": {
+    "0": 1.74,
+    "1": -1.93,
+    "2": 0.06,
+    "3": 1.1,
+    "4": -0.19,
+    "5": 1.17,
+    "6": 0.69
+   },
+   "days_pos": 5,
+   "days_neg": 2
+  },
+  "diff_B1_minus_A0": {
+   "all": 0.48,
+   "first4d": -1.54,
+   "last3d": 2.04,
+   "ex_pepe_pump": -2.16,
+   "ex_abs_gt2": -3.61,
+   "per_day": {
+    "0": -1.53,
+    "1": -0.02,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 1.97,
+    "6": 0.06
+   },
+   "days_pos": 2,
+   "days_neg": 2
+  },
+  "diff_AB_minus_A0": {
+   "all": 4.58,
+   "first4d": 1.92,
+   "last3d": 2.67,
+   "ex_pepe_pump": 2.37,
+   "ex_abs_gt2": -4.82,
+   "per_day": {
+    "0": 1.74,
+    "1": -0.99,
+    "2": 0.06,
+    "3": 1.1,
+    "4": -0.19,
+    "5": 0.56,
+    "6": 2.29
+   },
+   "days_pos": 5,
+   "days_neg": 2
+  }
+ },
+ "lag1_2m": {
+  "A0": {
+   "all": {
+    "n": 53,
+    "mean": -0.51,
+    "sum": -27.04,
+    "win": 30.2,
+    "exits": {
+     "time": 30,
+     "target": 15,
+     "stop": 8
+    }
+   },
+   "first4d": {
+    "n": 22,
+    "mean": -0.554,
+    "sum": -12.19,
+    "win": 27.3,
+    "exits": {
+     "time": 13,
+     "target": 6,
+     "stop": 3
+    }
+   },
+   "last3d": {
+    "n": 31,
+    "mean": -0.479,
+    "sum": -14.86,
+    "win": 32.3,
+    "exits": {
+     "time": 17,
+     "target": 9,
+     "stop": 5
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 51,
+    "mean": -0.566,
+    "sum": -28.89,
+    "win": 27.5,
+    "exits": {
+     "time": 30,
+     "target": 13,
+     "stop": 8
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 49,
+    "mean": -0.343,
+    "sum": -16.81,
+    "win": 32.7,
+    "exits": {
+     "time": 30,
+     "target": 15,
+     "stop": 4
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 3,
+     "mean": -0.869,
+     "sum": -2.61,
+     "win": 33.3,
+     "exits": {
+      "time": 1,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 1,
+     "mean": -0.438,
+     "sum": -0.44,
+     "win": 0.0,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 3,
+     "mean": -0.217,
+     "sum": -0.65,
+     "win": 33.3,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": -0.32,
+     "sum": -6.08,
+     "win": 42.1,
+     "exits": {
+      "time": 10,
+      "target": 7,
+      "stop": 2
+     }
+    },
+    "BNBTMN": {
+     "n": 7,
+     "mean": -0.391,
+     "sum": -2.74,
+     "win": 28.6,
+     "exits": {
+      "time": 4,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 19,
+     "mean": -0.679,
+     "sum": -12.9,
+     "win": 21.1,
+     "exits": {
+      "time": 12,
+      "target": 4,
+      "stop": 3
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -3.27,
+    "1": -6.1,
+    "2": -1.73,
+    "3": -1.08,
+    "4": -5.62,
+    "5": -3.33,
+    "6": -5.91
+   }
+  },
+  "A1": {
+   "all": {
+    "n": 53,
+    "mean": -0.448,
+    "sum": -23.74,
+    "win": 30.2,
+    "exits": {
+     "time": 30,
+     "target": 15,
+     "stop": 8
+    }
+   },
+   "first4d": {
+    "n": 20,
+    "mean": -0.528,
+    "sum": -10.56,
+    "win": 25.0,
+    "exits": {
+     "time": 12,
+     "target": 5,
+     "stop": 3
+    }
+   },
+   "last3d": {
+    "n": 33,
+    "mean": -0.399,
+    "sum": -13.18,
+    "win": 33.3,
+    "exits": {
+     "time": 18,
+     "target": 10,
+     "stop": 5
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 52,
+    "mean": -0.535,
+    "sum": -27.8,
+    "win": 28.8,
+    "exits": {
+     "time": 30,
+     "target": 14,
+     "stop": 8
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 50,
+    "mean": -0.458,
+    "sum": -22.9,
+    "win": 30.0,
+    "exits": {
+     "time": 30,
+     "target": 14,
+     "stop": 6
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 3,
+     "mean": -0.869,
+     "sum": -2.61,
+     "win": 33.3,
+     "exits": {
+      "time": 1,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 1,
+     "mean": -0.438,
+     "sum": -0.44,
+     "win": 0.0,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPTMN": {
+     "n": 3,
+     "mean": -0.217,
+     "sum": -0.65,
+     "win": 33.3,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 20,
+     "mean": -0.193,
+     "sum": -3.87,
+     "win": 40.0,
+     "exits": {
+      "time": 11,
+      "target": 7,
+      "stop": 2
+     }
+    },
+    "BNBTMN": {
+     "n": 7,
+     "mean": -0.391,
+     "sum": -2.74,
+     "win": 28.6,
+     "exits": {
+      "time": 4,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 18,
+     "mean": -0.656,
+     "sum": -11.8,
+     "win": 22.2,
+     "exits": {
+      "time": 11,
+      "target": 4,
+      "stop": 3
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": -8.02,
+    "2": -1.73,
+    "3": -0.8,
+    "4": -5.81,
+    "5": -2.16,
+    "6": -5.21
+   }
+  },
+  "B1": {
+   "all": {
+    "n": 49,
+    "mean": -0.538,
+    "sum": -26.37,
+    "win": 26.5,
+    "exits": {
+     "time": 29,
+     "target": 12,
+     "stop": 8
+    }
+   },
+   "first4d": {
+    "n": 18,
+    "mean": -0.678,
+    "sum": -12.21,
+    "win": 22.2,
+    "exits": {
+     "time": 11,
+     "target": 4,
+     "stop": 3
+    }
+   },
+   "last3d": {
+    "n": 31,
+    "mean": -0.457,
+    "sum": -14.16,
+    "win": 29.0,
+    "exits": {
+     "time": 18,
+     "target": 8,
+     "stop": 5
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 47,
+    "mean": -0.657,
+    "sum": -30.86,
+    "win": 23.4,
+    "exits": {
+     "time": 29,
+     "target": 10,
+     "stop": 8
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 44,
+    "mean": -0.46,
+    "sum": -20.23,
+    "win": 27.3,
+    "exits": {
+     "time": 29,
+     "target": 11,
+     "stop": 4
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 2,
+     "mean": -1.363,
+     "sum": -2.73,
+     "win": 0.0,
+     "exits": {
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 2,
+     "mean": -1.156,
+     "sum": -2.31,
+     "win": 0.0,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 2,
+     "mean": 0.073,
+     "sum": 0.15,
+     "win": 50.0,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": -0.273,
+     "sum": -5.19,
+     "win": 31.6,
+     "exits": {
+      "time": 12,
+      "target": 5,
+      "stop": 2
+     }
+    },
+    "BNBTMN": {
+     "n": 6,
+     "mean": -0.437,
+     "sum": -2.62,
+     "win": 33.3,
+     "exits": {
+      "time": 3,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 17,
+     "mean": -0.708,
+     "sum": -12.04,
+     "win": 23.5,
+     "exits": {
+      "time": 10,
+      "target": 4,
+      "stop": 3
+     }
+    }
+   },
+   "per_day_sum": {
+    "0": -3.27,
+    "1": -6.12,
+    "2": -1.73,
+    "3": -1.08,
+    "4": -5.62,
+    "5": -1.91,
+    "6": -6.64
+   }
+  },
+  "AB": {
+   "all": {
+    "n": 48,
+    "mean": -0.482,
+    "sum": -23.15,
+    "win": 29.2,
+    "exits": {
+     "time": 27,
+     "target": 14,
+     "stop": 7
+    }
+   },
+   "first4d": {
+    "n": 16,
+    "mean": -0.601,
+    "sum": -9.62,
+    "win": 25.0,
+    "exits": {
+     "time": 9,
+     "target": 4,
+     "stop": 3
+    }
+   },
+   "last3d": {
+    "n": 32,
+    "mean": -0.423,
+    "sum": -13.53,
+    "win": 31.2,
+    "exits": {
+     "time": 18,
+     "target": 10,
+     "stop": 4
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 47,
+    "mean": -0.579,
+    "sum": -27.21,
+    "win": 27.7,
+    "exits": {
+     "time": 27,
+     "target": 13,
+     "stop": 7
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 45,
+    "mean": -0.496,
+    "sum": -22.32,
+    "win": 28.9,
+    "exits": {
+     "time": 27,
+     "target": 13,
+     "stop": 5
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 2,
+     "mean": -1.363,
+     "sum": -2.73,
+     "win": 0.0,
+     "exits": {
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 2,
+     "mean": -1.156,
+     "sum": -2.31,
+     "win": 0.0,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 2,
+     "mean": 0.073,
+     "sum": 0.15,
+     "win": 50.0,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 1,
+     "mean": -1.63,
+     "sum": -1.63,
+     "win": 0.0,
+     "exits": {
+      "stop": 1
+     }
+    },
+    "PEPETMN": {
+     "n": 19,
+     "mean": -0.165,
+     "sum": -3.13,
+     "win": 36.8,
+     "exits": {
+      "time": 11,
+      "target": 7,
+      "stop": 1
+     }
+    },
+    "BNBTMN": {
+     "n": 6,
+     "mean": -0.437,
+     "sum": -2.62,
+     "win": 33.3,
+     "exits": {
+      "time": 3,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 16,
+     "mean": -0.68,
+     "sum": -10.88,
+     "win": 25.0,
+     "exits": {
+      "time": 9,
+      "target": 4,
+      "stop": 3
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": -7.09,
+    "2": -1.73,
+    "3": -0.8,
+    "4": -5.81,
+    "5": -3.32,
+    "6": -4.41
+   }
+  },
+  "diff_A1_minus_A0": {
+   "all": 3.3,
+   "first4d": 1.63,
+   "last3d": 1.68,
+   "ex_pepe_pump": 1.09,
+   "ex_abs_gt2": -6.09,
+   "per_day": {
+    "0": 3.27,
+    "1": -1.92,
+    "2": 0.0,
+    "3": 0.28,
+    "4": -0.19,
+    "5": 1.17,
+    "6": 0.7
+   },
+   "days_pos": 4,
+   "days_neg": 2
+  },
+  "diff_B1_minus_A0": {
+   "all": 0.67,
+   "first4d": -0.02,
+   "last3d": 0.7,
+   "ex_pepe_pump": -1.97,
+   "ex_abs_gt2": -3.42,
+   "per_day": {
+    "0": 0.0,
+    "1": -0.02,
+    "2": 0.0,
+    "3": 0.0,
+    "4": 0.0,
+    "5": 1.42,
+    "6": -0.73
+   },
+   "days_pos": 1,
+   "days_neg": 2
+  },
+  "diff_AB_minus_A0": {
+   "all": 3.89,
+   "first4d": 2.57,
+   "last3d": 1.33,
+   "ex_pepe_pump": 1.68,
+   "ex_abs_gt2": -5.51,
+   "per_day": {
+    "0": 3.27,
+    "1": -0.99,
+    "2": 0.0,
+    "3": 0.28,
+    "4": -0.19,
+    "5": 0.01,
+    "6": 1.5
+   },
+   "days_pos": 4,
+   "days_neg": 2
+  }
+ },
+ "persist": {
+  "A0": {
+   "all": {
+    "n": 17,
+    "mean": 0.179,
+    "sum": 3.04,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "first4d": {
+    "n": 10,
+    "mean": 0.278,
+    "sum": 2.78,
+    "win": 60.0,
+    "exits": {
+     "target": 6,
+     "time": 4
+    }
+   },
+   "last3d": {
+    "n": 7,
+    "mean": 0.038,
+    "sum": 0.26,
+    "win": 57.1,
+    "exits": {
+     "target": 4,
+     "time": 3
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 17,
+    "mean": 0.179,
+    "sum": 3.04,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 17,
+    "mean": 0.179,
+    "sum": 3.04,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 1,
+     "mean": 0.12,
+     "sum": 0.12,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.874,
+     "sum": 0.87,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "PEPETMN": {
+     "n": 6,
+     "mean": -0.043,
+     "sum": -0.26,
+     "win": 50.0,
+     "exits": {
+      "target": 3,
+      "time": 3
+     }
+    },
+    "BNBTMN": {
+     "n": 4,
+     "mean": 0.568,
+     "sum": 2.27,
+     "win": 50.0,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "ARBTMN": {
+     "n": 5,
+     "mean": 0.008,
+     "sum": 0.04,
+     "win": 60.0,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": 0.18,
+    "2": 2.39,
+    "3": 0.21,
+    "4": 1.01,
+    "5": -1.06,
+    "6": 0.32
+   }
+  },
+  "A1": {
+   "all": {
+    "n": 17,
+    "mean": 0.226,
+    "sum": 3.84,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "first4d": {
+    "n": 9,
+    "mean": 0.476,
+    "sum": 4.29,
+    "win": 66.7,
+    "exits": {
+     "target": 6,
+     "time": 3
+    }
+   },
+   "last3d": {
+    "n": 8,
+    "mean": -0.056,
+    "sum": -0.45,
+    "win": 50.0,
+    "exits": {
+     "target": 4,
+     "time": 4
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 17,
+    "mean": 0.226,
+    "sum": 3.84,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 17,
+    "mean": 0.226,
+    "sum": 3.84,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 1,
+     "mean": 0.12,
+     "sum": 0.12,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.874,
+     "sum": 0.87,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "PEPETMN": {
+     "n": 6,
+     "mean": 0.089,
+     "sum": 0.53,
+     "win": 50.0,
+     "exits": {
+      "target": 3,
+      "time": 3
+     }
+    },
+    "BNBTMN": {
+     "n": 4,
+     "mean": 0.568,
+     "sum": 2.27,
+     "win": 50.0,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "ARBTMN": {
+     "n": 5,
+     "mean": 0.008,
+     "sum": 0.04,
+     "win": 60.0,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": 1.88,
+    "2": 2.39,
+    "3": 0.02,
+    "4": 1.01,
+    "5": -1.77,
+    "6": 0.32
+   }
+  },
+  "B1": {
+   "all": {
+    "n": 14,
+    "mean": 0.338,
+    "sum": 4.74,
+    "win": 64.3,
+    "exits": {
+     "target": 8,
+     "time": 6
+    }
+   },
+   "first4d": {
+    "n": 8,
+    "mean": 0.574,
+    "sum": 4.6,
+    "win": 75.0,
+    "exits": {
+     "target": 5,
+     "time": 3
+    }
+   },
+   "last3d": {
+    "n": 6,
+    "mean": 0.024,
+    "sum": 0.14,
+    "win": 50.0,
+    "exits": {
+     "target": 3,
+     "time": 3
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 14,
+    "mean": 0.338,
+    "sum": 4.74,
+    "win": 64.3,
+    "exits": {
+     "target": 8,
+     "time": 6
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 14,
+    "mean": 0.338,
+    "sum": 4.74,
+    "win": 64.3,
+    "exits": {
+     "target": 8,
+     "time": 6
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.874,
+     "sum": 0.87,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "PEPETMN": {
+     "n": 4,
+     "mean": 0.345,
+     "sum": 1.38,
+     "win": 50.0,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "BNBTMN": {
+     "n": 4,
+     "mean": 0.612,
+     "sum": 2.45,
+     "win": 75.0,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 5,
+     "mean": 0.008,
+     "sum": 0.04,
+     "win": 60.0,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": 1.99,
+    "2": 2.45,
+    "3": 0.15,
+    "4": 1.01,
+    "5": -1.06,
+    "6": 0.2
+   }
+  },
+  "AB": {
+   "all": {
+    "n": 17,
+    "mean": 0.177,
+    "sum": 3.0,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "first4d": {
+    "n": 9,
+    "mean": 0.496,
+    "sum": 4.46,
+    "win": 77.8,
+    "exits": {
+     "target": 7,
+     "time": 2
+    }
+   },
+   "last3d": {
+    "n": 8,
+    "mean": -0.182,
+    "sum": -1.46,
+    "win": 37.5,
+    "exits": {
+     "time": 5,
+     "target": 3
+    }
+   },
+   "ex_pepe_pump": {
+    "n": 17,
+    "mean": 0.177,
+    "sum": 3.0,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "ex_abs_gt2": {
+    "n": 17,
+    "mean": 0.177,
+    "sum": 3.0,
+    "win": 58.8,
+    "exits": {
+     "target": 10,
+     "time": 7
+    }
+   },
+   "per_market": {
+    "BTCTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "ETHTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "SOLTMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "XRPTMN": {
+     "n": 1,
+     "mean": 0.874,
+     "sum": 0.87,
+     "win": 100.0,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGETMN": {
+     "n": 0,
+     "mean": null,
+     "sum": 0.0,
+     "win": null
+    },
+    "PEPETMN": {
+     "n": 6,
+     "mean": 0.089,
+     "sum": 0.53,
+     "win": 50.0,
+     "exits": {
+      "target": 3,
+      "time": 3
+     }
+    },
+    "BNBTMN": {
+     "n": 4,
+     "mean": 0.612,
+     "sum": 2.45,
+     "win": 75.0,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ARBTMN": {
+     "n": 6,
+     "mean": -0.142,
+     "sum": -0.85,
+     "win": 50.0,
+     "exits": {
+      "target": 3,
+      "time": 3
+     }
+    }
+   },
+   "per_day_sum": {
+    "1": 1.99,
+    "2": 2.45,
+    "3": 0.02,
+    "4": 1.01,
+    "5": -2.66,
+    "6": 0.2
+   }
+  },
+  "diff_A1_minus_A0": {
+   "all": 0.8,
+   "first4d": 1.51,
+   "last3d": -0.71,
+   "ex_pepe_pump": 0.8,
+   "ex_abs_gt2": 0.8,
+   "per_day": {
+    "1": 1.7,
+    "2": 0.0,
+    "3": -0.19,
+    "4": 0.0,
+    "5": -0.71,
+    "6": 0.0
+   },
+   "days_pos": 1,
+   "days_neg": 2
+  },
+  "diff_B1_minus_A0": {
+   "all": 1.7,
+   "first4d": 1.82,
+   "last3d": -0.12,
+   "ex_pepe_pump": 1.7,
+   "ex_abs_gt2": 1.7,
+   "per_day": {
+    "1": 1.81,
+    "2": 0.06,
+    "3": -0.06,
+    "4": 0.0,
+    "5": 0.0,
+    "6": -0.12
+   },
+   "days_pos": 2,
+   "days_neg": 2
+  },
+  "diff_AB_minus_A0": {
+   "all": -0.04,
+   "first4d": 1.68,
+   "last3d": -1.72,
+   "ex_pepe_pump": -0.04,
+   "ex_abs_gt2": -0.04,
+   "per_day": {
+    "1": 1.81,
+    "2": 0.06,
+    "3": -0.19,
+    "4": 0.0,
+    "5": -1.6,
+    "6": -0.12
+   },
+   "days_pos": 2,
+   "days_neg": 3
+  }
+ }
+}

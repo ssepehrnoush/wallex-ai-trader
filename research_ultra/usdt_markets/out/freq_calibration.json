@@ -1,0 +1,47 @@
+{
+ "TMN_ticks_0.6%": {
+  "episodes": 0,
+  "market_hours": 16.67,
+  "per_market_day": 0.0
+ },
+ "TMN_ticks_0.7%": {
+  "episodes": 0,
+  "market_hours": 16.67,
+  "per_market_day": 0.0
+ },
+ "TMN_candles_0.6%": {
+  "trades_7d_5_markets": 20,
+  "per_market_day": 0.57
+ },
+ "TMN_candles_0.7%": {
+  "trades_7d_5_markets": 8,
+  "per_market_day": 0.23
+ },
+ "USDT_ticks_0.36%": {
+  "episodes": 6,
+  "market_hours": 8.72,
+  "per_market_day": 16.51
+ },
+ "USDT_ticks_0.45%": {
+  "episodes": 2,
+  "market_hours": 8.72,
+  "per_market_day": 5.5
+ },
+ "USDT_ticks_0.60%": {
+  "episodes": 1,
+  "market_hours": 8.72,
+  "per_market_day": 2.75
+ },
+ "USDT_candles_mid_0.36%": {
+  "trades": 20,
+  "per_market_day": 0.584
+ },
+ "USDT_candles_mid_0.45%": {
+  "trades": 9,
+  "per_market_day": 0.263
+ },
+ "USDT_candles_mid_0.60%": {
+  "trades": 2,
+  "per_market_day": 0.058
+ }
+}

@@ -1,0 +1,72 @@
+===== stop on close, spread x1.0
+current_0.9_25_0.05      full n= 61 mean=0.288 sum=  17.57 win=73.8 tmn= 147348 exits={'target': 42, 'time': 19} | OOS n=35 mean=0.311 sum=10.88
+hold45_only              full n= 61 mean=0.326 sum=  19.91 win=80.3 tmn= 160438 exits={'target': 47, 'time': 13, 'stop': 1} | OOS n=35 mean=0.357 sum=12.51
+                         diff full 2.336 tradeCI [-2.544, 7.237] dayCI [-1.557, 6.971] | diff IS 0.714 OOS 1.622 OOS tradeCI [-2.919, 5.904]
+wf_choice_0.9_45_0.00    full n= 60 mean=0.358 sum=  21.47 win=80.0 tmn= 165375 exits={'target': 46, 'time': 13, 'stop': 1} | OOS n=35 mean=0.375 sum=13.14
+                         diff full 3.897 tradeCI [-1.793, 9.351] dayCI [-0.086, 8.518] | diff IS 1.643 OOS 2.254 OOS tradeCI [-2.327, 6.492]
+hold15                   full n= 61 mean=0.271 sum=  16.55 win=75.4 tmn= 138639 exits={'target': 38, 'time': 23} | OOS n=35 mean=0.294 sum=10.28
+                         diff full -1.022 tradeCI [-4.35, 2.029] dayCI [-4.1, 1.86] | diff IS -0.417 OOS -0.605 OOS tradeCI [-3.511, 1.876]
+hold10                   full n= 56 mean=0.079 sum=   4.41 win=62.5 tmn=  36416 exits={'target': 28, 'time': 28} | OOS n=35 mean=0.142 sum=4.97
+                         diff full -13.165 tradeCI [-20.072, -6.447] dayCI [-19.52, -6.848] | diff IS -7.248 OOS -5.917 OOS tradeCI [-10.59, -1.659]
+stop0.6                  full n= 60 mean=0.279 sum=  16.77 win=73.3 tmn= 169133 exits={'target': 42, 'time': 17, 'stop': 1} | OOS n=34 mean=0.296 sum=10.08
+                         diff full -0.805 tradeCI [-3.358, 0.942] dayCI [-2.416, 0.0] | diff IS 0.0 OOS -0.805 OOS tradeCI [-3.358, 0.942]
+stop1.2                  full n= 61 mean=0.288 sum=  17.57 win=73.8 tmn= 121817 exits={'target': 42, 'time': 19} | OOS n=35 mean=0.311 sum=10.88
+                         diff full 0.0 tradeCI [0.0, 0.0] dayCI [0.0, 0.0] | diff IS 0.0 OOS 0.0 OOS tradeCI [0.0, 0.0]
+partialX0.1              full n= 63 mean=0.283 sum=  17.82 win=76.2 tmn= 149400 exits={'target': 46, 'time': 16, 'stop': 1} | OOS n=37 mean=0.3 sum=11.10
+                         diff full 0.243 tradeCI [-3.796, 4.423] dayCI [-1.111, 1.57] | diff IS 0.026 OOS 0.217 OOS tradeCI [-3.829, 4.621]
+partialX0.2              full n= 64 mean=0.257 sum=  16.46 win=76.6 tmn= 137893 exits={'target': 48, 'time': 15, 'stop': 1} | OOS n=38 mean=0.265 sum=10.09
+                         diff full -1.114 tradeCI [-7.208, 4.529] dayCI [-2.416, 0.196] | diff IS -0.319 OOS -0.795 OOS tradeCI [-6.566, 5.068]
+partialX0.3              full n= 64 mean=0.238 sum=  15.23 win=76.6 tmn= 127414 exits={'target': 48, 'time': 15, 'stop': 1} | OOS n=38 mean=0.259 sum=9.85
+                         diff full -2.347 tradeCI [-8.559, 3.713] dayCI [-4.293, -0.456] | diff IS -1.312 OOS -1.035 OOS tradeCI [-7.033, 4.745]
+slack0                   full n= 60 mean=0.294 sum=  17.61 win=73.3 tmn= 147634 exits={'target': 39, 'time': 20, 'stop': 1} | OOS n=35 mean=0.319 sum=11.18
+                         diff full 0.039 tradeCI [-4.006, 3.809] dayCI [-2.866, 3.042] | diff IS -0.254 OOS 0.293 OOS tradeCI [0.044, 0.598]
+live_now_ARB_0.8_15      full n= 61 mean=0.272 sum=  16.60 win=75.4 tmn= 141769 exits={'target': 40, 'time': 21} | OOS n=35 mean=0.297 sum=10.40
+                         diff full -0.977 tradeCI [-3.825, 1.506] dayCI [-3.237, 1.283] | diff IS -0.49 OOS -0.487 OOS tradeCI [-3.276, 1.853]
+===== stop on low, spread x1.0
+current_0.9_25_0.05      full n= 61 mean=0.288 sum=  17.57 win=73.8 tmn= 147348 exits={'target': 42, 'time': 19} | OOS n=35 mean=0.311 sum=10.88
+hold45_only              full n= 61 mean=0.33 sum=  20.11 win=80.3 tmn= 162110 exits={'target': 47, 'time': 13, 'stop': 1} | OOS n=35 mean=0.363 sum=12.70
+                         diff full 2.531 tradeCI [-2.186, 7.066] dayCI [-1.162, 6.858] | diff IS 0.714 OOS 1.818 OOS tradeCI [-2.58, 5.878]
+wf_choice_0.9_45_0.00    full n= 60 mean=0.361 sum=  21.67 win=80.0 tmn= 167049 exits={'target': 46, 'time': 13, 'stop': 1} | OOS n=35 mean=0.381 sum=13.33
+                         diff full 4.093 tradeCI [-1.412, 9.503] dayCI [0.18, 8.68] | diff IS 1.643 OOS 2.449 OOS tradeCI [-1.793, 6.584]
+hold15                   full n= 61 mean=0.271 sum=  16.55 win=75.4 tmn= 138639 exits={'target': 38, 'time': 23} | OOS n=35 mean=0.294 sum=10.28
+                         diff full -1.022 tradeCI [-4.412, 2.061] dayCI [-4.036, 1.806] | diff IS -0.417 OOS -0.605 OOS tradeCI [-3.529, 1.871]
+hold10                   full n= 56 mean=0.079 sum=   4.41 win=62.5 tmn=  36416 exits={'target': 28, 'time': 28} | OOS n=35 mean=0.142 sum=4.97
+                         diff full -13.165 tradeCI [-20.26, -6.515] dayCI [-19.327, -6.848] | diff IS -7.248 OOS -5.917 OOS tradeCI [-10.561, -1.593]
+stop0.6                  full n= 59 mean=0.229 sum=  13.52 win=69.5 tmn= 142656 exits={'target': 40, 'time': 16, 'stop': 3} | OOS n=33 mean=0.207 sum=6.83
+                         diff full -4.056 tradeCI [-8.256, -0.481] dayCI [-7.307, -0.805] | diff IS 0.0 OOS -4.056 OOS tradeCI [-8.179, -0.481]
+stop1.2                  full n= 61 mean=0.288 sum=  17.57 win=73.8 tmn= 121817 exits={'target': 42, 'time': 19} | OOS n=35 mean=0.311 sum=10.88
+                         diff full 0.0 tradeCI [0.0, 0.0] dayCI [0.0, 0.0] | diff IS 0.0 OOS 0.0 OOS tradeCI [0.0, 0.0]
+partialX0.1              full n= 63 mean=0.283 sum=  17.82 win=76.2 tmn= 149450 exits={'target': 46, 'time': 16, 'stop': 1} | OOS n=37 mean=0.3 sum=11.11
+                         diff full 0.249 tradeCI [-3.77, 4.473] dayCI [-1.125, 1.604] | diff IS 0.026 OOS 0.223 OOS tradeCI [-3.823, 4.512]
+partialX0.2              full n= 64 mean=0.257 sum=  16.47 win=76.6 tmn= 137942 exits={'target': 48, 'time': 15, 'stop': 1} | OOS n=38 mean=0.266 sum=10.09
+                         diff full -1.108 tradeCI [-7.264, 4.655] dayCI [-2.411, 0.207] | diff IS -0.319 OOS -0.789 OOS tradeCI [-6.738, 4.884]
+partialX0.3              full n= 64 mean=0.238 sum=  15.23 win=76.6 tmn= 127463 exits={'target': 48, 'time': 15, 'stop': 1} | OOS n=38 mean=0.259 sum=9.85
+                         diff full -2.342 tradeCI [-8.694, 3.59] dayCI [-4.305, -0.384] | diff IS -1.312 OOS -1.03 OOS tradeCI [-7.108, 4.763]
+slack0                   full n= 60 mean=0.294 sum=  17.63 win=73.3 tmn= 147789 exits={'target': 39, 'time': 20, 'stop': 1} | OOS n=35 mean=0.319 sum=11.18
+                         diff full 0.058 tradeCI [-3.917, 3.793] dayCI [-2.881, 3.041] | diff IS -0.235 OOS 0.293 OOS tradeCI [0.044, 0.633]
+live_now_ARB_0.8_15      full n= 61 mean=0.272 sum=  16.60 win=75.4 tmn= 141769 exits={'target': 40, 'time': 21} | OOS n=35 mean=0.297 sum=10.40
+                         diff full -0.977 tradeCI [-3.84, 1.503] dayCI [-3.237, 1.283] | diff IS -0.49 OOS -0.487 OOS tradeCI [-3.281, 1.808]
+===== stop on close, spread x1.5
+current_0.9_25_0.05      full n= 47 mean=0.235 sum=  11.02 win=72.3 tmn=  91820 exits={'target': 28, 'time': 17, 'stop': 2} | OOS n=27 mean=0.211 sum=5.70
+hold45_only              full n= 48 mean=0.289 sum=  13.85 win=77.1 tmn= 115611 exits={'target': 34, 'time': 12, 'stop': 2} | OOS n=28 mean=0.226 sum=6.33
+                         diff full 2.829 tradeCI [-2.567, 8.223] dayCI [-3.064, 8.955] | diff IS 2.196 OOS 0.633 OOS tradeCI [-3.628, 4.197]
+wf_choice_0.9_45_0.00    full n= 48 mean=0.301 sum=  14.45 win=75.0 tmn= 120654 exits={'target': 32, 'time': 14, 'stop': 2} | OOS n=28 mean=0.247 sum=6.91
+                         diff full 3.425 tradeCI [-1.832, 8.921] dayCI [-2.061, 9.076] | diff IS 2.216 OOS 1.209 OOS tradeCI [-2.999, 4.908]
+hold15                   full n= 46 mean=0.197 sum=   9.06 win=63.0 tmn=  75329 exits={'target': 25, 'time': 21} | OOS n=27 mean=0.186 sum=5.03
+                         diff full -1.967 tradeCI [-6.472, 2.625] dayCI [-4.828, 0.894] | diff IS -1.297 OOS -0.67 OOS tradeCI [-2.777, 1.329]
+hold10                   full n= 43 mean=0.015 sum=   0.66 win=55.8 tmn=   5289 exits={'time': 25, 'target': 18} | OOS n=27 mean=0.055 sum=1.48
+                         diff full -10.363 tradeCI [-17.112, -3.765] dayCI [-18.645, -3.023] | diff IS -6.141 OOS -4.223 OOS tradeCI [-8.365, -0.171]
+stop0.6                  full n= 47 mean=0.162 sum=   7.60 win=68.1 tmn=  79524 exits={'target': 26, 'time': 15, 'stop': 6} | OOS n=27 mean=0.149 sum=4.02
+                         diff full -3.422 tradeCI [-7.481, 0.023] dayCI [-7.38, 0.136] | diff IS -1.743 OOS -1.68 OOS tradeCI [-4.699, 0.299]
+stop1.2                  full n= 47 mean=0.224 sum=  10.53 win=72.3 tmn=  72554 exits={'target': 28, 'time': 17, 'stop': 2} | OOS n=27 mean=0.199 sum=5.38
+                         diff full -0.493 tradeCI [-1.138, 0.0] dayCI [-1.138, 0.0] | diff IS -0.171 OOS -0.323 OOS tradeCI [-0.968, 0.0]
+partialX0.1              full n= 48 mean=0.222 sum=  10.68 win=72.9 tmn=  88955 exits={'target': 31, 'time': 16, 'stop': 1} | OOS n=27 mean=0.202 sum=5.45
+                         diff full -0.346 tradeCI [-4.208, 3.597] dayCI [-3.053, 2.361] | diff IS -0.093 OOS -0.253 OOS tradeCI [-0.76, 0.001]
+partialX0.2              full n= 49 mean=0.187 sum=   9.15 win=73.5 tmn=  76201 exits={'target': 33, 'time': 15, 'stop': 1} | OOS n=28 mean=0.134 sum=3.76
+                         diff full -1.868 tradeCI [-7.638, 3.62] dayCI [-5.047, 1.615] | diff IS 0.071 OOS -1.939 OOS tradeCI [-6.526, 1.827]
+partialX0.3              full n= 50 mean=0.181 sum=   9.07 win=74.0 tmn=  75423 exits={'target': 34, 'time': 14, 'stop': 2} | OOS n=29 mean=0.127 sum=3.67
+                         diff full -1.957 tradeCI [-9.156, 5.236] dayCI [-4.988, 1.436] | diff IS 0.071 OOS -2.029 OOS tradeCI [-8.046, 3.804]
+slack0                   full n= 47 mean=0.224 sum=  10.51 win=70.2 tmn=  87520 exits={'target': 26, 'time': 19, 'stop': 2} | OOS n=27 mean=0.221 sum=5.96
+                         diff full -0.509 tradeCI [-2.364, 0.708] dayCI [-2.443, 0.676] | diff IS -0.769 OOS 0.259 OOS tradeCI [0.0, 0.588]
+live_now_ARB_0.8_15      full n= 46 mean=0.229 sum=  10.52 win=69.6 tmn=  88093 exits={'target': 27, 'time': 18, 'stop': 1} | OOS n=27 mean=0.222 sum=5.99
+                         diff full -0.503 tradeCI [-2.163, 1.366] dayCI [-2.411, 1.485] | diff IS -0.797 OOS 0.294 OOS tradeCI [-0.988, 1.882]

@@ -1,0 +1,212 @@
+{
+ "global_fixed_threshold_curve": {
+  "0.7": {
+   "IS": {
+    "trades": 27,
+    "sum_net_pct": 5.879,
+    "mean_net_pct": 0.218
+   },
+   "OOS": {
+    "trades": 35,
+    "sum_net_pct": 10.398,
+    "mean_net_pct": 0.297
+   }
+  },
+  "0.8": {
+   "IS": {
+    "trades": 17,
+    "sum_net_pct": 7.466,
+    "mean_net_pct": 0.439
+   },
+   "OOS": {
+    "trades": 27,
+    "sum_net_pct": 9.812,
+    "mean_net_pct": 0.363
+   }
+  },
+  "0.9": {
+   "IS": {
+    "trades": 12,
+    "sum_net_pct": 7.139,
+    "mean_net_pct": 0.595
+   },
+   "OOS": {
+    "trades": 15,
+    "sum_net_pct": 7.587,
+    "mean_net_pct": 0.506
+   }
+  },
+  "1.0": {
+   "IS": {
+    "trades": 8,
+    "sum_net_pct": 5.26,
+    "mean_net_pct": 0.657
+   },
+   "OOS": {
+    "trades": 9,
+    "sum_net_pct": 4.89,
+    "mean_net_pct": 0.543
+   }
+  },
+  "1.2": {
+   "IS": {
+    "trades": 6,
+    "sum_net_pct": 4.826,
+    "mean_net_pct": 0.804
+   },
+   "OOS": {
+    "trades": 2,
+    "sum_net_pct": 1.343,
+    "mean_net_pct": 0.671
+   }
+  },
+  "1.5": {
+   "IS": {
+    "trades": 0,
+    "sum_net_pct": 0.0,
+    "mean_net_pct": null
+   },
+   "OOS": {
+    "trades": 0,
+    "sum_net_pct": 0.0,
+    "mean_net_pct": null
+   }
+  }
+ },
+ "V4_trades_by_entry_dip_depth": {
+  "IS dip 0.7-0.8%": {
+   "trades": 11,
+   "sum_net_pct": -1.522,
+   "mean_net_pct": -0.138
+  },
+  "IS dip 0.8-0.9%": {
+   "trades": 5,
+   "sum_net_pct": 0.64,
+   "mean_net_pct": 0.128
+  },
+  "IS dip 0.9-1.0%": {
+   "trades": 6,
+   "sum_net_pct": 1.992,
+   "mean_net_pct": 0.332
+  },
+  "IS dip 1.0-99%": {
+   "trades": 5,
+   "sum_net_pct": 4.768,
+   "mean_net_pct": 0.954
+  },
+  "OOS dip 0.7-0.8%": {
+   "trades": 9,
+   "sum_net_pct": 0.795,
+   "mean_net_pct": 0.088
+  },
+  "OOS dip 0.8-0.9%": {
+   "trades": 14,
+   "sum_net_pct": 3.014,
+   "mean_net_pct": 0.215
+  },
+  "OOS dip 0.9-1.0%": {
+   "trades": 7,
+   "sum_net_pct": 2.888,
+   "mean_net_pct": 0.413
+  },
+  "OOS dip 1.0-99%": {
+   "trades": 5,
+   "sum_net_pct": 3.699,
+   "mean_net_pct": 0.74
+  }
+ },
+ "V4_exit_reason_means": {
+  "IS": {
+   "target": {
+    "count": 18,
+    "mean": 0.524,
+    "sum": 9.432
+   },
+   "time": {
+    "count": 9,
+    "mean": -0.395,
+    "sum": -3.554
+   }
+  },
+  "OOS": {
+   "target": {
+    "count": 22,
+    "mean": 0.501,
+    "sum": 11.012
+   },
+   "time": {
+    "count": 13,
+    "mean": -0.047,
+    "sum": -0.615
+   }
+  }
+ },
+ "V4_trades_per_day_OOS": 11.7,
+ "V4_trades_per_day_IS": 6.8,
+ "candle_vs_tick_buy_dev_same_hours": {
+  "BTCTMN": {
+   "candle_p1_pct": -0.514,
+   "candle_share_le_0.7": 0.17,
+   "candle_minutes": 1176,
+   "tick_p1_pct": -0.172,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 3.25
+  },
+  "ETHTMN": {
+   "candle_p1_pct": -0.387,
+   "candle_share_le_0.7": 0.0,
+   "candle_minutes": 798,
+   "tick_p1_pct": -0.267,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 3.25
+  },
+  "SOLTMN": {
+   "candle_p1_pct": -0.43,
+   "candle_share_le_0.7": 0.173,
+   "candle_minutes": 577,
+   "tick_p1_pct": -0.129,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 3.25
+  },
+  "XRPTMN": {
+   "candle_p1_pct": -0.376,
+   "candle_share_le_0.7": 0.122,
+   "candle_minutes": 823,
+   "tick_p1_pct": -0.264,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 3.25
+  },
+  "DOGETMN": {
+   "candle_p1_pct": -0.314,
+   "candle_share_le_0.7": 0.0,
+   "candle_minutes": 608,
+   "tick_p1_pct": -0.219,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 3.25
+  },
+  "PEPETMN": {
+   "candle_p1_pct": -0.804,
+   "candle_share_le_0.7": 1.593,
+   "candle_minutes": 1130,
+   "tick_p1_pct": -0.298,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 1.68
+  },
+  "BNBTMN": {
+   "candle_p1_pct": -0.635,
+   "candle_share_le_0.7": 0.733,
+   "candle_minutes": 546,
+   "tick_p1_pct": -0.287,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 1.68
+  },
+  "ARBTMN": {
+   "candle_p1_pct": -0.735,
+   "candle_share_le_0.7": 1.138,
+   "candle_minutes": 615,
+   "tick_p1_pct": -0.194,
+   "tick_share_le_0.7": 0.0,
+   "tick_hours": 1.68
+  }
+ }
+}

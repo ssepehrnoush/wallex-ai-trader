@@ -1,0 +1,2001 @@
+{
+ "span": {
+  "from": "2026-10-21 14:29:52.549999952+00:00",
+  "to": "2026-10-21 18:24:31.160000086+00:00",
+  "rows": 30741,
+  "hours_with_data": 3.23
+ },
+ "by_entry": {
+  "0.7000000000000001": {
+   "signal_ticks": 0,
+   "current_0.9_25_0.05": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "hold45": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "wf_choice_0.9_45_0.00": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "hold15": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "hold10": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "stop0.6": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "partialX0.1": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "partialX0.2": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "partialX0.3": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   },
+   "live_now_ARB_0.8_15": {
+    "n": 0,
+    "mean_pct": null,
+    "sum_pct": 0.0,
+    "win_pct": null,
+    "pnl_tmn": 0,
+    "exits": {},
+    "trades": []
+   }
+  },
+  "0.5": {
+   "signal_ticks": 1,
+   "current_0.9_25_0.05": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "hold45": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "wf_choice_0.9_45_0.00": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 6.25,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "hold15": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "hold10": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "stop0.6": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 4518,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "partialX0.1": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.633,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "partialX0.2": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "partialX0.3": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3584,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   },
+   "live_now_ARB_0.8_15": {
+    "n": 1,
+    "mean_pct": 0.433,
+    "sum_pct": 0.433,
+    "win_pct": 100.0,
+    "pnl_tmn": 3849,
+    "exits": {
+     "target": 1
+    },
+    "trades": [
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     }
+    ]
+   }
+  },
+  "0.4": {
+   "signal_ticks": 22,
+   "current_0.9_25_0.05": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -4947,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "hold45": {
+    "n": 6,
+    "mean_pct": -0.174,
+    "sum_pct": -1.045,
+    "win_pct": 50.0,
+    "pnl_tmn": -8652,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.674,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.324,
+      "minutes": 45.0,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "wf_choice_0.9_45_0.00": {
+    "n": 6,
+    "mean_pct": -0.174,
+    "sum_pct": -1.045,
+    "win_pct": 50.0,
+    "pnl_tmn": -8650,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.674,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 6.25,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.324,
+      "minutes": 45.0,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "hold15": {
+    "n": 6,
+    "mean_pct": -0.219,
+    "sum_pct": -1.311,
+    "win_pct": 33.3,
+    "pnl_tmn": -10847,
+    "exits": {
+     "time": 3,
+     "target": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.334,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "time",
+      "ret_pct": -0.267,
+      "minutes": 15.033,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.46,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "hold10": {
+    "n": 6,
+    "mean_pct": -0.232,
+    "sum_pct": -1.391,
+    "win_pct": 16.7,
+    "pnl_tmn": -11506,
+    "exits": {
+     "time": 4,
+     "target": 1,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.393,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "time",
+      "ret_pct": -0.034,
+      "minutes": 10.0,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "time",
+      "ret_pct": -0.243,
+      "minutes": 10.033,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.38,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "stop0.6": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -6239,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "partialX0.1": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -4947,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.633,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "partialX0.2": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -4947,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "partialX0.3": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -4947,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   },
+   "live_now_ARB_0.8_15": {
+    "n": 6,
+    "mean_pct": -0.1,
+    "sum_pct": -0.597,
+    "win_pct": 50.0,
+    "pnl_tmn": -5156,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.416
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 15:03:52+00:00",
+      "why": "target",
+      "ret_pct": 0.091,
+      "minutes": 10.5,
+      "entry_dev_pct": -0.467
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:16:44+00:00",
+      "why": "target",
+      "ret_pct": 0.202,
+      "minutes": 20.367,
+      "entry_dev_pct": -0.444
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:37:23+00:00",
+      "why": "time",
+      "ret_pct": -0.446,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.402
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:24:13+00:00",
+      "why": "end",
+      "ret_pct": -0.774,
+      "minutes": 0.3,
+      "entry_dev_pct": -0.438
+     }
+    ]
+   }
+  },
+  "0.3": {
+   "signal_ticks": 155,
+   "current_0.9_25_0.05": {
+    "n": 12,
+    "mean_pct": -0.14,
+    "sum_pct": -1.68,
+    "win_pct": 33.3,
+    "pnl_tmn": -13903,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "end": 3
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.321,
+      "minutes": 23.433,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.551,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "hold45": {
+    "n": 11,
+    "mean_pct": -0.008,
+    "sum_pct": -0.087,
+    "win_pct": 54.5,
+    "pnl_tmn": -736,
+    "exits": {
+     "target": 6,
+     "end": 3,
+     "time": 2
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.321,
+      "minutes": 23.433,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.674,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.309,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "target",
+      "ret_pct": 0.297,
+      "minutes": 35.35,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "target",
+      "ret_pct": 0.048,
+      "minutes": 42.217,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "end",
+      "ret_pct": -0.016,
+      "minutes": 30.283,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 18:14:56+00:00",
+      "why": "end",
+      "ret_pct": -0.71,
+      "minutes": 9.583,
+      "entry_dev_pct": -0.3
+     }
+    ]
+   },
+   "wf_choice_0.9_45_0.00": {
+    "n": 11,
+    "mean_pct": -0.003,
+    "sum_pct": -0.035,
+    "win_pct": 54.5,
+    "pnl_tmn": -305,
+    "exits": {
+     "target": 6,
+     "end": 3,
+     "time": 2
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.321,
+      "minutes": 23.433,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.674,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.309,
+      "minutes": 45.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.506,
+      "minutes": 44.483,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "target",
+      "ret_pct": 0.297,
+      "minutes": 35.35,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 6.25,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "target",
+      "ret_pct": 0.048,
+      "minutes": 42.217,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "end",
+      "ret_pct": -0.016,
+      "minutes": 30.283,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 18:14:56+00:00",
+      "why": "end",
+      "ret_pct": -0.71,
+      "minutes": 9.583,
+      "entry_dev_pct": -0.3
+     }
+    ]
+   },
+   "hold15": {
+    "n": 11,
+    "mean_pct": -0.372,
+    "sum_pct": -4.097,
+    "win_pct": 18.2,
+    "pnl_tmn": -33831,
+    "exits": {
+     "time": 8,
+     "target": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "time",
+      "ret_pct": -0.325,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.334,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.644,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -1.188,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.248,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.451,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "time",
+      "ret_pct": -0.027,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "time",
+      "ret_pct": -0.599,
+      "minutes": 15.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "hold10": {
+    "n": 11,
+    "mean_pct": -0.35,
+    "sum_pct": -3.848,
+    "win_pct": 18.2,
+    "pnl_tmn": -31767,
+    "exits": {
+     "time": 8,
+     "target": 2,
+     "end": 1
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "time",
+      "ret_pct": -0.198,
+      "minutes": 10.0,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.393,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.531,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.672,
+      "minutes": 10.0,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.328,
+      "minutes": 10.0,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.568,
+      "minutes": 10.0,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "time",
+      "ret_pct": -0.279,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "time",
+      "ret_pct": -0.599,
+      "minutes": 10.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "stop0.6": {
+    "n": 12,
+    "mean_pct": -0.208,
+    "sum_pct": -2.495,
+    "win_pct": 33.3,
+    "pnl_tmn": -26017,
+    "exits": {
+     "target": 4,
+     "time": 4,
+     "end": 3,
+     "stop": 1
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.321,
+      "minutes": 23.433,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "stop",
+      "ret_pct": -1.366,
+      "minutes": 12.867,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "partialX0.1": {
+    "n": 12,
+    "mean_pct": -0.151,
+    "sum_pct": -1.808,
+    "win_pct": 33.3,
+    "pnl_tmn": -14965,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "end": 3
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.193,
+      "minutes": 21.817,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.551,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.633,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "partialX0.2": {
+    "n": 12,
+    "mean_pct": -0.151,
+    "sum_pct": -1.808,
+    "win_pct": 33.3,
+    "pnl_tmn": -14965,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "end": 3
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.193,
+      "minutes": 21.65,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.551,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "partialX0.3": {
+    "n": 12,
+    "mean_pct": -0.159,
+    "sum_pct": -1.912,
+    "win_pct": 33.3,
+    "pnl_tmn": -15820,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "end": 3
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.089,
+      "minutes": 21.267,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.551,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 3.5,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   },
+   "live_now_ARB_0.8_15": {
+    "n": 12,
+    "mean_pct": -0.14,
+    "sum_pct": -1.68,
+    "win_pct": 33.3,
+    "pnl_tmn": -14135,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "end": 3
+    },
+    "trades": [
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 14:48:06+00:00",
+      "why": "target",
+      "ret_pct": 0.321,
+      "minutes": 23.433,
+      "entry_dev_pct": -0.305
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 14:48:19+00:00",
+      "why": "target",
+      "ret_pct": 0.097,
+      "minutes": 2.7,
+      "entry_dev_pct": -0.384
+     },
+     {
+      "symbol": "BTCTMN",
+      "t": "2026-10-21 14:51:16+00:00",
+      "why": "time",
+      "ret_pct": -0.104,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.317
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 14:51:24+00:00",
+      "why": "time",
+      "ret_pct": -0.45,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.304
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 16:04:11+00:00",
+      "why": "target",
+      "ret_pct": 0.454,
+      "minutes": 41.317,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "PEPETMN",
+      "t": "2026-10-21 17:03:12+00:00",
+      "why": "time",
+      "ret_pct": -0.551,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.365
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 17:31:43+00:00",
+      "why": "target",
+      "ret_pct": 0.433,
+      "minutes": 4.55,
+      "entry_dev_pct": -0.591
+     },
+     {
+      "symbol": "ETHTMN",
+      "t": "2026-10-21 17:32:13+00:00",
+      "why": "time",
+      "ret_pct": -0.133,
+      "minutes": 25.017,
+      "entry_dev_pct": -0.329
+     },
+     {
+      "symbol": "DOGETMN",
+      "t": "2026-10-21 17:54:14+00:00",
+      "why": "time",
+      "ret_pct": -0.312,
+      "minutes": 25.033,
+      "entry_dev_pct": -0.308
+     },
+     {
+      "symbol": "XRPTMN",
+      "t": "2026-10-21 18:05:07+00:00",
+      "why": "end",
+      "ret_pct": -0.027,
+      "minutes": 19.4,
+      "entry_dev_pct": -0.303
+     },
+     {
+      "symbol": "BNBTMN",
+      "t": "2026-10-21 18:07:30+00:00",
+      "why": "end",
+      "ret_pct": -0.599,
+      "minutes": 17.017,
+      "entry_dev_pct": -0.335
+     },
+     {
+      "symbol": "ARBTMN",
+      "t": "2026-10-21 18:22:26+00:00",
+      "why": "end",
+      "ret_pct": -0.81,
+      "minutes": 2.083,
+      "entry_dev_pct": -0.307
+     }
+    ]
+   }
+  }
+ }
+}

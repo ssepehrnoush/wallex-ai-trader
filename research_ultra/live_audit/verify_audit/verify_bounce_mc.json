@@ -1,0 +1,164 @@
+{
+ "days": 6.847,
+ "half_spread_pct": {
+  "BTCTMN": 0.0155,
+  "ETHTMN": 0.0498,
+  "SOLTMN": 0.0477,
+  "XRPTMN": 0.0619,
+  "DOGETMN": 0.0563,
+  "PEPETMN": 0.0443,
+  "ARBTMN": 0.219
+ },
+ "policy": {
+  "BTCTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "ETHTMN": [
+   0.008,
+   0.008,
+   20.0
+  ],
+  "SOLTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "XRPTMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "DOGETMN": [
+   0.007,
+   0.008,
+   20.0
+  ],
+  "PEPETMN": [
+   0.008,
+   0.008,
+   20.0
+  ],
+  "ARBTMN": [
+   0.008,
+   0.008,
+   15.0
+  ]
+ },
+ "close_is_mid": {
+  "trades": 43,
+  "mean_pct": 0.34,
+  "by_market": {
+   "BTCTMN": [
+    3,
+    0.368
+   ],
+   "ETHTMN": [
+    0,
+    null
+   ],
+   "SOLTMN": [
+    5,
+    0.25
+   ],
+   "XRPTMN": [
+    4,
+    0.482
+   ],
+   "DOGETMN": [
+    1,
+    0.411
+   ],
+   "PEPETMN": [
+    19,
+    0.27
+   ],
+   "ARBTMN": [
+    11,
+    0.437
+   ]
+  }
+ },
+ "bounce_mc": {
+  "reps": 200,
+  "trades_mean": 45.9,
+  "trades_q5_q95": [
+   41,
+   50
+  ],
+  "mean_ret_pct_avg": 0.286,
+  "mean_ret_pct_q5_q95": [
+   0.19,
+   0.385
+  ],
+  "share_reps_mean_le_0": 0.0,
+  "by_market": {
+   "BTCTMN": {
+    "trades_avg": 3.0,
+    "mean_ret_avg": 0.366
+   },
+   "ETHTMN": {
+    "trades_avg": 0.0,
+    "mean_ret_avg": null
+   },
+   "SOLTMN": {
+    "trades_avg": 3.6,
+    "mean_ret_avg": 0.164
+   },
+   "XRPTMN": {
+    "trades_avg": 3.5,
+    "mean_ret_avg": 0.536
+   },
+   "DOGETMN": {
+    "trades_avg": 1.6,
+    "mean_ret_avg": 0.352
+   },
+   "PEPETMN": {
+    "trades_avg": 16.5,
+    "mean_ret_avg": 0.264
+   },
+   "ARBTMN": {
+    "trades_avg": 17.6,
+    "mean_ret_avg": 0.263
+   }
+  }
+ },
+ "windows_1.83h": {
+  "PEPETMN": {
+   "share_zero_le_-0.5%": 0.509,
+   "share_zero_le_-0.6%": 0.691,
+   "share_zero_le_-0.7%": 0.802
+  },
+  "ARBTMN": {
+   "share_zero_le_-0.5%": 0.616,
+   "share_zero_le_-0.6%": 0.719,
+   "share_zero_le_-0.7%": 0.789
+  },
+  "BTCTMN": {
+   "share_zero_le_-0.5%": 0.916,
+   "share_zero_le_-0.6%": 0.939,
+   "share_zero_le_-0.7%": 0.973
+  },
+  "ETHTMN": {
+   "share_zero_le_-0.5%": 0.904,
+   "share_zero_le_-0.6%": 0.944,
+   "share_zero_le_-0.7%": 0.978
+  },
+  "SOLTMN": {
+   "share_zero_le_-0.5%": 0.921,
+   "share_zero_le_-0.6%": 0.932,
+   "share_zero_le_-0.7%": 0.954
+  },
+  "XRPTMN": {
+   "share_zero_le_-0.5%": 0.874,
+   "share_zero_le_-0.6%": 0.906,
+   "share_zero_le_-0.7%": 0.955
+  },
+  "DOGETMN": {
+   "share_zero_le_-0.5%": 0.917,
+   "share_zero_le_-0.6%": 0.977,
+   "share_zero_le_-0.7%": 0.989
+  }
+ }
+}

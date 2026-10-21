@@ -1,0 +1,94 @@
+{
+ "t": "2026-10-21T18:33:00+00:00",
+ "mode": "live",
+ "equity_tmn": 5000000,
+ "return_pct": 0.0,
+ "drawdown_pct": 0.0,
+ "halted": "",
+ "positions": {},
+ "trades": 0,
+ "policies": {
+  "BTCTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "نقدشوندگی خوب است اما برای حفظ سرمایه اندازه و زمان نگهداری را کمی کمتر کردم."
+  },
+  "ETHTMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "اسپرد نسبتاً پهن است، پس ورود سخت‌تر و اندازه کمتر شد."
+  },
+  "SOLTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "وضعیت عادی است و فقط برای کنترل ریسک کمی محافظه‌کارتر شد."
+  },
+  "XRPTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "عمق مناسب است اما برای کاهش ریسک اندازه و مهلت نگهداری را کم کردم."
+  },
+  "DOGETMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "اسپرد قابل‌قبول است و فقط سیاست را کمی سخت‌گیرانه‌تر کردم."
+  },
+  "PEPETMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.3,
+   "reason": "اسپرد و نوسان بالاتر است، پس ورود سخت‌تر و اندازه کمتر شد."
+  },
+  "BNBTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد پهن و عمق پایین است، بنابراین همچنان غیرفعال می‌ماند."
+  },
+  "ARBTMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.3,
+   "reason": "اسپرد بالاست، پس ورود سخت و اندازه معامله کوچک‌تر شد."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.136,
+  "ETHTMN": -0.109,
+  "SOLTMN": -0.036,
+  "XRPTMN": -0.025,
+  "DOGETMN": -0.045,
+  "PEPETMN": -0.127,
+  "BNBTMN": 0.181,
+  "ARBTMN": -0.13
+ }
+}

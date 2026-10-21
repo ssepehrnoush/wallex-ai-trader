@@ -1,0 +1,32 @@
+{
+ "from_runs": [
+  "shadow_v2",
+  "shadow_v3",
+  "shadow_v4",
+  "shadow_v5",
+  "shadow_v6",
+  "live_main"
+ ],
+ "rows": 30454,
+ "last_tick_utc": "2026-10-21 18:16:51.079999924+00:00",
+ "spreads": {
+  "ARBTMN": 0.004414372734983463,
+  "BNBTMN": 0.0014605599926971191,
+  "BTCTMN": 0.0003052688973863571,
+  "DOGETMN": 0.0016816653031541673,
+  "ETHTMN": 0.0013587588146370955,
+  "PEPETMN": 0.0011335114565620419,
+  "SOLTMN": 0.0015600246914861948,
+  "XRPTMN": 0.0019507272732177672
+ },
+ "spreads_pct": {
+  "ARBTMN": 0.4414,
+  "BNBTMN": 0.1461,
+  "BTCTMN": 0.0305,
+  "DOGETMN": 0.1682,
+  "ETHTMN": 0.1359,
+  "PEPETMN": 0.1134,
+  "SOLTMN": 0.156,
+  "XRPTMN": 0.1951
+ }
+}

@@ -1,0 +1,4 @@
+**/data/
+**/ticks_snapshot.csv
+*.log
+__pycache__/

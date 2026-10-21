@@ -1,0 +1,202 @@
+{
+ "replay": {
+  "thr0.0036|pen0.0": {
+   "n": 4,
+   "mean": -0.002,
+   "sum": -0.006,
+   "win": 75.0,
+   "trades": [
+    {
+     "sym": "BTCUSDT",
+     "t": "14:51:34",
+     "ret": 0.153,
+     "why": "target",
+     "held_min": 20.0,
+     "dev": -0.365,
+     "top_ask_usdt": 11.54
+    },
+    {
+     "sym": "ETHUSDT",
+     "t": "15:03:42",
+     "ret": 0.376,
+     "why": "target",
+     "held_min": 10.9,
+     "dev": -0.37,
+     "top_ask_usdt": 1.19
+    },
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    },
+    {
+     "sym": "XRPUSDT",
+     "t": "14:51:24",
+     "ret": -0.765,
+     "why": "time",
+     "held_min": 25.0,
+     "dev": -0.364,
+     "top_ask_usdt": 5.25
+    }
+   ]
+  },
+  "thr0.0036|pen0.001": {
+   "n": 4,
+   "mean": -0.026,
+   "sum": -0.105,
+   "win": 75.0,
+   "trades": [
+    {
+     "sym": "BTCUSDT",
+     "t": "14:51:34",
+     "ret": 0.153,
+     "why": "target",
+     "held_min": 20.0,
+     "dev": -0.365,
+     "top_ask_usdt": 11.54
+    },
+    {
+     "sym": "ETHUSDT",
+     "t": "15:03:42",
+     "ret": 0.376,
+     "why": "target",
+     "held_min": 10.9,
+     "dev": -0.37,
+     "top_ask_usdt": 1.19
+    },
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    },
+    {
+     "sym": "XRPUSDT",
+     "t": "14:51:24",
+     "ret": -0.864,
+     "why": "time",
+     "held_min": 25.0,
+     "dev": -0.364,
+     "top_ask_usdt": 5.25
+    }
+   ]
+  },
+  "thr0.0045|pen0.0": {
+   "n": 2,
+   "mean": 0.266,
+   "sum": 0.533,
+   "win": 100.0,
+   "trades": [
+    {
+     "sym": "ETHUSDT",
+     "t": "15:03:52",
+     "ret": 0.303,
+     "why": "target",
+     "held_min": 10.7,
+     "dev": -0.526,
+     "top_ask_usdt": 771.09
+    },
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    }
+   ]
+  },
+  "thr0.0045|pen0.001": {
+   "n": 2,
+   "mean": 0.266,
+   "sum": 0.533,
+   "win": 100.0,
+   "trades": [
+    {
+     "sym": "ETHUSDT",
+     "t": "15:03:52",
+     "ret": 0.303,
+     "why": "target",
+     "held_min": 10.7,
+     "dev": -0.526,
+     "top_ask_usdt": 771.09
+    },
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    }
+   ]
+  },
+  "thr0.006|pen0.0": {
+   "n": 1,
+   "mean": 0.23,
+   "sum": 0.23,
+   "win": 100.0,
+   "trades": [
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    }
+   ]
+  },
+  "thr0.006|pen0.001": {
+   "n": 1,
+   "mean": 0.23,
+   "sum": 0.23,
+   "win": 100.0,
+   "trades": [
+    {
+     "sym": "SOLUSDT",
+     "t": "15:25:18",
+     "ret": 0.23,
+     "why": "target",
+     "held_min": 0.4,
+     "dev": -0.601,
+     "top_ask_usdt": 5.0
+    }
+   ]
+  }
+ },
+ "episodes": {
+  "0.0036": {
+   "BTCUSDT": 1,
+   "DOGEUSDT": 0,
+   "ETHUSDT": 4,
+   "SOLUSDT": 1,
+   "XRPUSDT": 1
+  },
+  "0.0045": {
+   "BTCUSDT": 0,
+   "DOGEUSDT": 0,
+   "ETHUSDT": 1,
+   "SOLUSDT": 1,
+   "XRPUSDT": 0
+  },
+  "0.006": {
+   "BTCUSDT": 0,
+   "DOGEUSDT": 0,
+   "ETHUSDT": 0,
+   "SOLUSDT": 1,
+   "XRPUSDT": 0
+  }
+ },
+ "market_hours": 8.762388888994852
+}

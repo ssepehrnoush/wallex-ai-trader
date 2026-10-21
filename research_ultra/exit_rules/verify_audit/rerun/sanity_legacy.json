@@ -1,0 +1,124 @@
+{
+ "mine": {
+  "BTCTMN": {
+   "trades": 3,
+   "mean_ret_pct": 0.34,
+   "sum_ret_pct": 1.02,
+   "exits": {
+    "target": 3
+   }
+  },
+  "ETHTMN": {
+   "trades": 0,
+   "mean_ret_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {}
+  },
+  "SOLTMN": {
+   "trades": 2,
+   "mean_ret_pct": 0.056,
+   "sum_ret_pct": 0.11,
+   "exits": {
+    "target": 2
+   }
+  },
+  "XRPTMN": {
+   "trades": 2,
+   "mean_ret_pct": 1.019,
+   "sum_ret_pct": 2.04,
+   "exits": {
+    "target": 2
+   }
+  },
+  "DOGETMN": {
+   "trades": 1,
+   "mean_ret_pct": 0.362,
+   "sum_ret_pct": 0.36,
+   "exits": {
+    "target": 1
+   }
+  },
+  "PEPETMN": {
+   "trades": 27,
+   "mean_ret_pct": 0.32,
+   "sum_ret_pct": 8.63,
+   "exits": {
+    "target": 25,
+    "time": 2
+   }
+  },
+  "BNBTMN": {
+   "trades": 9,
+   "mean_ret_pct": 0.289,
+   "sum_ret_pct": 2.6,
+   "exits": {
+    "target": 7,
+    "time": 2
+   }
+  },
+  "ARBTMN": {
+   "trades": 21,
+   "mean_ret_pct": 0.306,
+   "sum_ret_pct": 6.43,
+   "exits": {
+    "target": 19,
+    "time": 2
+   }
+  }
+ },
+ "ref_fv_sweep_0.007": {
+  "BTCTMN": {
+   "half_spread_pct": 0.03,
+   "minutes_traded": 5817,
+   "trades": 3,
+   "mean_ret_pct": 0.34,
+   "win_pct": 100.0,
+   "sum_ret_pct": 1.02,
+   "exits": {
+    "target": 3
+   }
+  },
+  "ETHTMN": {
+   "half_spread_pct": 0.093,
+   "minutes_traded": 3704,
+   "trades": 0,
+   "mean_ret_pct": null,
+   "win_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {}
+  },
+  "SOLTMN": {
+   "half_spread_pct": 0.134,
+   "minutes_traded": 2355,
+   "trades": 2,
+   "mean_ret_pct": 0.056,
+   "win_pct": 100.0,
+   "sum_ret_pct": 0.11,
+   "exits": {
+    "target": 2
+   }
+  },
+  "XRPTMN": {
+   "half_spread_pct": 0.188,
+   "minutes_traded": 3356,
+   "trades": 2,
+   "mean_ret_pct": 0.969,
+   "win_pct": 100.0,
+   "sum_ret_pct": 1.94,
+   "exits": {
+    "target": 2
+   }
+  },
+  "DOGETMN": {
+   "half_spread_pct": 0.081,
+   "minutes_traded": 2570,
+   "trades": 1,
+   "mean_ret_pct": 0.362,
+   "win_pct": 100.0,
+   "sum_ret_pct": 0.36,
+   "exits": {
+    "target": 1
+   }
+  }
+ }
+}

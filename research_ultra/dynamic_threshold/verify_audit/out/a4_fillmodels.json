@@ -1,0 +1,2055 @@
+{
+ "all_hours|same_close(author)": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.7,
+    "XRPTMN": 0.7,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 0.7,
+    "ARBTMN": 0.8
+   },
+   "k": 3.0,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 1.5,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 3.0,
+    "BNBTMN": 1.5,
+    "ARBTMN": 3.0
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 27,
+    "mean": 0.218,
+    "sum": 5.878,
+    "win": 70.4,
+    "exits": {
+     "target": 18,
+     "time": 9
+    }
+   },
+   "OOS": {
+    "n": 35,
+    "mean": 0.297,
+    "sum": 10.396,
+    "win": 77.1,
+    "exits": {
+     "target": 22,
+     "time": 13
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     3,
+     1.103
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     2,
+     0.703
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     11,
+     3.972
+    ],
+    "BNBTMN": [
+     4,
+     -0.107
+    ],
+    "ARBTMN": [
+     12,
+     4.034
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 16,
+    "mean": 0.529,
+    "sum": 8.471,
+    "win": 87.5,
+    "exits": {
+     "target": 13,
+     "time": 3
+    }
+   },
+   "OOS": {
+    "n": 25,
+    "mean": 0.398,
+    "sum": 9.944,
+    "win": 76.0,
+    "exits": {
+     "target": 17,
+     "time": 8
+    }
+   },
+   "diff_vs_V4": [
+    -0.453,
+    [
+     -3.069,
+     2.483
+    ],
+    0.376
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     3,
+     1.103
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     2,
+     0.703
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     5,
+     3.602
+    ],
+    "BNBTMN": [
+     4,
+     -0.107
+    ],
+    "ARBTMN": [
+     8,
+     3.952
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 18,
+    "mean": 0.453,
+    "sum": 8.152,
+    "win": 83.3,
+    "exits": {
+     "target": 14,
+     "time": 4
+    }
+   },
+   "OOS": {
+    "n": 25,
+    "mean": 0.343,
+    "sum": 8.585,
+    "win": 76.0,
+    "exits": {
+     "target": 17,
+     "time": 8
+    }
+   },
+   "diff_vs_V4": [
+    -1.812,
+    [
+     -5.475,
+     1.731
+    ],
+    0.209
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     3,
+     1.103
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     2,
+     0.703
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     8,
+     3.041
+    ],
+    "BNBTMN": [
+     3,
+     0.251
+    ],
+    "ARBTMN": [
+     6,
+     2.796
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 19,
+    "mean": 0.455,
+    "sum": 8.649,
+    "win": 84.2,
+    "exits": {
+     "target": 15,
+     "time": 4
+    }
+   },
+   "OOS": {
+    "n": 26,
+    "mean": 0.316,
+    "sum": 8.227,
+    "win": 73.1,
+    "exits": {
+     "target": 17,
+     "time": 9
+    }
+   },
+   "diff_vs_V4": [
+    -2.169,
+    [
+     -5.976,
+     1.385
+    ],
+    0.171
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     3,
+     1.103
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     2,
+     0.703
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     8,
+     3.041
+    ],
+    "BNBTMN": [
+     4,
+     -0.107
+    ],
+    "ARBTMN": [
+     6,
+     2.796
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 20,
+    "mean": 0.298,
+    "sum": 5.962,
+    "win": 75.0,
+    "exits": {
+     "target": 15,
+     "time": 5
+    }
+   },
+   "OOS": {
+    "n": 26,
+    "mean": 0.273,
+    "sum": 7.111,
+    "win": 80.8,
+    "exits": {
+     "target": 18,
+     "time": 8
+    }
+   },
+   "diff_vs_V4": [
+    -3.286,
+    [
+     -8.352,
+     1.226
+    ],
+    0.124
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     3,
+     1.103
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     11,
+     4.066
+    ],
+    "BNBTMN": [
+     3,
+     0.251
+    ],
+    "ARBTMN": [
+     6,
+     1.001
+    ]
+   }
+  }
+ },
+ "all_hours|next_open": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.7,
+    "XRPTMN": 1.0,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 1.0,
+    "ARBTMN": 1.2
+   },
+   "k": 4.0,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 1.5,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 4.0,
+    "BNBTMN": 1.5,
+    "ARBTMN": 4.0
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 17,
+    "mean": -0.542,
+    "sum": -9.217,
+    "win": 29.4,
+    "exits": {
+     "time": 10,
+     "target": 5,
+     "stop": 2
+    }
+   },
+   "OOS": {
+    "n": 25,
+    "mean": -0.386,
+    "sum": -9.651,
+    "win": 44.0,
+    "exits": {
+     "target": 10,
+     "time": 10,
+     "stop": 5
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.317
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     10,
+     0.779
+    ],
+    "BNBTMN": [
+     2,
+     -0.386
+    ],
+    "ARBTMN": [
+     9,
+     -8.156
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 6,
+    "mean": 0.471,
+    "sum": 2.825,
+    "win": 83.3,
+    "exits": {
+     "target": 5,
+     "time": 1
+    }
+   },
+   "OOS": {
+    "n": 9,
+    "mean": -0.15,
+    "sum": -1.352,
+    "win": 55.6,
+    "exits": {
+     "target": 5,
+     "stop": 2,
+     "time": 2
+    }
+   },
+   "diff_vs_V4": [
+    8.299,
+    [
+     2.696,
+     14.265
+    ],
+    0.995
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.317
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     5,
+     0.477
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     1,
+     0.187
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 4,
+    "mean": -0.651,
+    "sum": -2.605,
+    "win": 25.0,
+    "exits": {
+     "time": 2,
+     "stop": 1,
+     "target": 1
+    }
+   },
+   "OOS": {
+    "n": 12,
+    "mean": -0.322,
+    "sum": -3.861,
+    "win": 41.7,
+    "exits": {
+     "target": 5,
+     "time": 5,
+     "stop": 2
+    }
+   },
+   "diff_vs_V4": [
+    5.79,
+    [
+     0.45,
+     11.553
+    ],
+    0.964
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.317
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     3,
+     1.681
+    ],
+    "BNBTMN": [
+     2,
+     -0.386
+    ],
+    "ARBTMN": [
+     3,
+     -3.269
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 5,
+    "mean": -0.509,
+    "sum": -2.547,
+    "win": 40.0,
+    "exits": {
+     "target": 2,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "OOS": {
+    "n": 12,
+    "mean": -0.322,
+    "sum": -3.861,
+    "win": 41.7,
+    "exits": {
+     "target": 5,
+     "time": 5,
+     "stop": 2
+    }
+   },
+   "diff_vs_V4": [
+    5.79,
+    [
+     0.45,
+     11.553
+    ],
+    0.964
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.317
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     3,
+     1.681
+    ],
+    "BNBTMN": [
+     2,
+     -0.386
+    ],
+    "ARBTMN": [
+     3,
+     -3.269
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 12,
+    "mean": -0.485,
+    "sum": -5.824,
+    "win": 25.0,
+    "exits": {
+     "time": 7,
+     "target": 3,
+     "stop": 2
+    }
+   },
+   "OOS": {
+    "n": 18,
+    "mean": -0.271,
+    "sum": -4.883,
+    "win": 44.4,
+    "exits": {
+     "time": 8,
+     "target": 7,
+     "stop": 3
+    }
+   },
+   "diff_vs_V4": [
+    4.768,
+    [
+     0.488,
+     9.781
+    ],
+    0.968
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.317
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     10,
+     0.788
+    ],
+    "BNBTMN": [
+     2,
+     -0.386
+    ],
+    "ARBTMN": [
+     3,
+     -3.269
+    ]
+   }
+  }
+ },
+ "all_hours|next_close": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.8,
+    "XRPTMN": 1.0,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 1.0,
+    "ARBTMN": 1.2
+   },
+   "k": 4.0,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 4.0,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 4.0,
+    "BNBTMN": 1.5,
+    "ARBTMN": 4.0
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 17,
+    "mean": -0.598,
+    "sum": -10.162,
+    "win": 23.5,
+    "exits": {
+     "time": 11,
+     "target": 4,
+     "stop": 2
+    }
+   },
+   "OOS": {
+    "n": 24,
+    "mean": -0.429,
+    "sum": -10.294,
+    "win": 33.3,
+    "exits": {
+     "time": 13,
+     "target": 8,
+     "stop": 3
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.762
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     -0.724
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     9,
+     -1.303
+    ],
+    "BNBTMN": [
+     2,
+     -0.891
+    ],
+    "ARBTMN": [
+     9,
+     -4.983
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 5,
+    "mean": 0.517,
+    "sum": 2.586,
+    "win": 80.0,
+    "exits": {
+     "target": 4,
+     "time": 1
+    }
+   },
+   "OOS": {
+    "n": 9,
+    "mean": -0.152,
+    "sum": -1.367,
+    "win": 55.6,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "diff_vs_V4": [
+    8.928,
+    [
+     2.751,
+     15.863
+    ],
+    0.995
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.762
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     5,
+     0.828
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     1,
+     0.199
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 4,
+    "mean": -0.725,
+    "sum": -2.899,
+    "win": 25.0,
+    "exits": {
+     "time": 2,
+     "stop": 1,
+     "target": 1
+    }
+   },
+   "OOS": {
+    "n": 12,
+    "mean": -0.67,
+    "sum": -8.034,
+    "win": 16.7,
+    "exits": {
+     "time": 8,
+     "stop": 2,
+     "target": 2
+    }
+   },
+   "diff_vs_V4": [
+    2.26,
+    [
+     -2.2,
+     7.137
+    ],
+    0.782
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.762
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     -0.724
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     3,
+     -0.006
+    ],
+    "BNBTMN": [
+     2,
+     -0.891
+    ],
+    "ARBTMN": [
+     3,
+     -4.021
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 4,
+    "mean": -0.725,
+    "sum": -2.899,
+    "win": 25.0,
+    "exits": {
+     "time": 2,
+     "stop": 1,
+     "target": 1
+    }
+   },
+   "OOS": {
+    "n": 12,
+    "mean": -0.67,
+    "sum": -8.034,
+    "win": 16.7,
+    "exits": {
+     "time": 8,
+     "stop": 2,
+     "target": 2
+    }
+   },
+   "diff_vs_V4": [
+    2.26,
+    [
+     -2.2,
+     7.137
+    ],
+    0.782
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.762
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     -0.724
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     3,
+     -0.006
+    ],
+    "BNBTMN": [
+     2,
+     -0.891
+    ],
+    "ARBTMN": [
+     3,
+     -4.021
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 12,
+    "mean": -0.527,
+    "sum": -6.322,
+    "win": 25.0,
+    "exits": {
+     "time": 7,
+     "target": 3,
+     "stop": 2
+    }
+   },
+   "OOS": {
+    "n": 17,
+    "mean": -0.499,
+    "sum": -8.483,
+    "win": 29.4,
+    "exits": {
+     "time": 9,
+     "target": 5,
+     "stop": 3
+    }
+   },
+   "diff_vs_V4": [
+    1.811,
+    [
+     -1.541,
+     5.58
+    ],
+    0.808
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     -0.762
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     9,
+     -1.178
+    ],
+    "BNBTMN": [
+     2,
+     -0.891
+    ],
+    "ARBTMN": [
+     3,
+     -4.021
+    ]
+   }
+  }
+ },
+ "daytime_usdt_fresh10|same_close(author)": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.7,
+    "XRPTMN": 0.7,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 0.7,
+    "ARBTMN": 0.7
+   },
+   "k": 2.5,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 1.5,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 2.5,
+    "BNBTMN": 1.5,
+    "ARBTMN": 1.5
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 14,
+    "mean": 0.12,
+    "sum": 1.676,
+    "win": 64.3,
+    "exits": {
+     "target": 8,
+     "time": 6
+    }
+   },
+   "OOS": {
+    "n": 17,
+    "mean": 0.311,
+    "sum": 5.281,
+    "win": 82.4,
+    "exits": {
+     "target": 12,
+     "time": 5
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     0.824
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     6,
+     3.568
+    ],
+    "BNBTMN": [
+     1,
+     -0.357
+    ],
+    "ARBTMN": [
+     4,
+     0.427
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 9,
+    "mean": 0.308,
+    "sum": 2.774,
+    "win": 77.8,
+    "exits": {
+     "target": 6,
+     "time": 3
+    }
+   },
+   "OOS": {
+    "n": 13,
+    "mean": 0.355,
+    "sum": 4.616,
+    "win": 84.6,
+    "exits": {
+     "target": 10,
+     "time": 3
+    }
+   },
+   "diff_vs_V4": [
+    -0.665,
+    [
+     -1.696,
+     0.16
+    ],
+    0.109
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     0.824
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     2,
+     2.903
+    ],
+    "BNBTMN": [
+     1,
+     -0.357
+    ],
+    "ARBTMN": [
+     4,
+     0.427
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 11,
+    "mean": 0.263,
+    "sum": 2.888,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 4
+    }
+   },
+   "OOS": {
+    "n": 15,
+    "mean": 0.35,
+    "sum": 5.254,
+    "win": 86.7,
+    "exits": {
+     "target": 12,
+     "time": 3
+    }
+   },
+   "diff_vs_V4": [
+    -0.027,
+    [
+     -0.269,
+     0.187
+    ],
+    0.354
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     0.824
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     5,
+     3.184
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     4,
+     0.427
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 11,
+    "mean": 0.263,
+    "sum": 2.888,
+    "win": 72.7,
+    "exits": {
+     "target": 7,
+     "time": 4
+    }
+   },
+   "OOS": {
+    "n": 16,
+    "mean": 0.306,
+    "sum": 4.896,
+    "win": 81.2,
+    "exits": {
+     "target": 12,
+     "time": 4
+    }
+   },
+   "diff_vs_V4": [
+    -0.384,
+    [
+     -1.341,
+     0.187
+    ],
+    0.235
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     0.824
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     5,
+     3.184
+    ],
+    "BNBTMN": [
+     1,
+     -0.357
+    ],
+    "ARBTMN": [
+     4,
+     0.427
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 10,
+    "mean": 0.115,
+    "sum": 1.148,
+    "win": 70.0,
+    "exits": {
+     "target": 7,
+     "time": 3
+    }
+   },
+   "OOS": {
+    "n": 14,
+    "mean": 0.434,
+    "sum": 6.079,
+    "win": 92.9,
+    "exits": {
+     "target": 11,
+     "time": 3
+    }
+   },
+   "diff_vs_V4": [
+    0.798,
+    [
+     -0.071,
+     1.879
+    ],
+    0.909
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     2,
+     0.824
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     2,
+     0.336
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     0.355
+    ],
+    "PEPETMN": [
+     6,
+     3.662
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     3,
+     0.903
+    ]
+   }
+  }
+ },
+ "daytime_usdt_fresh10|next_open": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.7,
+    "XRPTMN": 1.0,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 0.9,
+    "ARBTMN": 1.0
+   },
+   "k": 2.5,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 1.5,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 2.5,
+    "BNBTMN": 1.5,
+    "ARBTMN": 4.0
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 11,
+    "mean": -0.173,
+    "sum": -1.899,
+    "win": 36.4,
+    "exits": {
+     "time": 7,
+     "target": 4
+    }
+   },
+   "OOS": {
+    "n": 12,
+    "mean": -0.359,
+    "sum": -4.307,
+    "win": 41.7,
+    "exits": {
+     "time": 5,
+     "target": 4,
+     "stop": 3
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.558
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     6,
+     1.142
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     3,
+     -3.319
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 3,
+    "mean": 0.42,
+    "sum": 1.261,
+    "win": 100.0,
+    "exits": {
+     "target": 3
+    }
+   },
+   "OOS": {
+    "n": 5,
+    "mean": -0.284,
+    "sum": -1.422,
+    "win": 40.0,
+    "exits": {
+     "stop": 2,
+     "target": 2,
+     "time": 1
+    }
+   },
+   "diff_vs_V4": [
+    2.885,
+    [
+     -0.484,
+     6.953
+    ],
+    0.907
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.558
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     2,
+     0.649
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     1,
+     0.187
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 8,
+    "mean": -0.015,
+    "sum": -0.116,
+    "win": 37.5,
+    "exits": {
+     "time": 5,
+     "target": 3
+    }
+   },
+   "OOS": {
+    "n": 11,
+    "mean": -0.427,
+    "sum": -4.695,
+    "win": 36.4,
+    "exits": {
+     "target": 4,
+     "time": 4,
+     "stop": 3
+    }
+   },
+   "diff_vs_V4": [
+    -0.389,
+    [
+     -1.184,
+     0.019
+    ],
+    0.235
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.558
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     5,
+     0.754
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     3,
+     -3.319
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 6,
+    "mean": 0.054,
+    "sum": 0.323,
+    "win": 50.0,
+    "exits": {
+     "target": 3,
+     "time": 3
+    }
+   },
+   "OOS": {
+    "n": 10,
+    "mean": -0.368,
+    "sum": -3.68,
+    "win": 40.0,
+    "exits": {
+     "target": 4,
+     "stop": 3,
+     "time": 3
+    }
+   },
+   "diff_vs_V4": [
+    0.627,
+    [
+     -0.796,
+     2.658
+    ],
+    0.685
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.558
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     0.129
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     5,
+     0.754
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     2,
+     -2.304
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 8,
+    "mean": -0.214,
+    "sum": -1.713,
+    "win": 25.0,
+    "exits": {
+     "time": 6,
+     "target": 2
+    }
+   },
+   "OOS": {
+    "n": 10,
+    "mean": -0.341,
+    "sum": -3.41,
+    "win": 40.0,
+    "exits": {
+     "time": 4,
+     "stop": 3,
+     "target": 3
+    }
+   },
+   "diff_vs_V4": [
+    0.896,
+    [
+     -0.257,
+     2.927
+    ],
+    0.716
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.558
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.7
+    ],
+    "PEPETMN": [
+     6,
+     1.152
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     2,
+     -2.304
+    ]
+   }
+  }
+ },
+ "daytime_usdt_fresh10|next_close": {
+  "choices": {
+   "V1": {
+    "BTCTMN": 0.7,
+    "ETHTMN": 0.7,
+    "SOLTMN": 0.8,
+    "XRPTMN": 1.0,
+    "DOGETMN": 0.7,
+    "PEPETMN": 0.9,
+    "BNBTMN": 0.9,
+    "ARBTMN": 1.0
+   },
+   "k": 4.0,
+   "kpm": {
+    "BTCTMN": 1.5,
+    "ETHTMN": 1.5,
+    "SOLTMN": 4.0,
+    "XRPTMN": 1.5,
+    "DOGETMN": 1.5,
+    "PEPETMN": 2.5,
+    "BNBTMN": 1.5,
+    "ARBTMN": 4.0
+   }
+  },
+  "V4": {
+   "IS": {
+    "n": 11,
+    "mean": -0.257,
+    "sum": -2.832,
+    "win": 27.3,
+    "exits": {
+     "time": 8,
+     "target": 3
+    }
+   },
+   "OOS": {
+    "n": 11,
+    "mean": -0.248,
+    "sum": -2.73,
+    "win": 36.4,
+    "exits": {
+     "time": 5,
+     "stop": 3,
+     "target": 3
+    }
+   },
+   "diff_vs_V4": null,
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.881
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     3.481
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     5,
+     0.007
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     3,
+     -3.706
+    ]
+   }
+  },
+  "V1": {
+   "IS": {
+    "n": 2,
+    "mean": 0.542,
+    "sum": 1.084,
+    "win": 100.0,
+    "exits": {
+     "target": 2
+    }
+   },
+   "OOS": {
+    "n": 5,
+    "mean": -0.08,
+    "sum": -0.401,
+    "win": 60.0,
+    "exits": {
+     "target": 3,
+     "stop": 1,
+     "time": 1
+    }
+   },
+   "diff_vs_V4": [
+    2.329,
+    [
+     -5.951,
+     9.935
+    ],
+    0.698
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.881
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     2,
+     1.912
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     1,
+     0.199
+    ]
+   }
+  },
+  "V2": {
+   "IS": {
+    "n": 2,
+    "mean": -0.456,
+    "sum": -0.913,
+    "win": 0.0,
+    "exits": {
+     "time": 2
+    }
+   },
+   "OOS": {
+    "n": 7,
+    "mean": -0.128,
+    "sum": -0.897,
+    "win": 28.6,
+    "exits": {
+     "time": 4,
+     "stop": 2,
+     "target": 1
+    }
+   },
+   "diff_vs_V4": [
+    1.833,
+    [
+     -1.18,
+     5.567
+    ],
+    0.804
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.881
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     3.481
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     2,
+     0.825
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     2,
+     -2.691
+    ]
+   }
+  },
+  "V2b": {
+   "IS": {
+    "n": 5,
+    "mean": -0.035,
+    "sum": -0.174,
+    "win": 40.0,
+    "exits": {
+     "time": 3,
+     "target": 2
+    }
+   },
+   "OOS": {
+    "n": 10,
+    "mean": -0.159,
+    "sum": -1.589,
+    "win": 40.0,
+    "exits": {
+     "time": 4,
+     "stop": 3,
+     "target": 3
+    }
+   },
+   "diff_vs_V4": [
+    1.14,
+    [
+     0.0,
+     3.171
+    ],
+    0.87
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.881
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     1,
+     3.481
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     5,
+     0.132
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     2,
+     -2.691
+    ]
+   }
+  },
+  "V3": {
+   "IS": {
+    "n": 8,
+    "mean": -0.269,
+    "sum": -2.153,
+    "win": 25.0,
+    "exits": {
+     "time": 6,
+     "target": 2
+    }
+   },
+   "OOS": {
+    "n": 9,
+    "mean": -0.563,
+    "sum": -5.07,
+    "win": 33.3,
+    "exits": {
+     "stop": 3,
+     "time": 3,
+     "target": 3
+    }
+   },
+   "diff_vs_V4": [
+    -2.341,
+    [
+     -9.429,
+     2.156
+    ],
+    0.32
+   ],
+   "OOS_by_market": {
+    "BTCTMN": [
+     1,
+     -0.881
+    ],
+    "ETHTMN": [
+     0,
+     0.0
+    ],
+    "SOLTMN": [
+     0,
+     0.0
+    ],
+    "XRPTMN": [
+     0,
+     0.0
+    ],
+    "DOGETMN": [
+     1,
+     -1.631
+    ],
+    "PEPETMN": [
+     5,
+     0.132
+    ],
+    "BNBTMN": [
+     0,
+     0.0
+    ],
+    "ARBTMN": [
+     2,
+     -2.691
+    ]
+   }
+  }
+ }
+}

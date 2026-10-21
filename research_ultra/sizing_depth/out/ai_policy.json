@@ -1,0 +1,866 @@
+{
+ "live_window": {
+  "from": "2026-10-21 16:45:30",
+  "to": "2026-10-21 18:15:00",
+  "hours": 1.49
+ },
+ "reviews": [
+  {
+   "t": "2026-10-21T16:48:54+00:00",
+   "risk_mode_final": "defensive",
+   "analyst_said": "normal",
+   "disabled": [
+    "XRPTMN",
+    "BNBTMN"
+   ],
+   "sizes": {
+    "BTCTMN": 0.4,
+    "ETHTMN": 0.4,
+    "SOLTMN": 0.4,
+    "XRPTMN": 0.4,
+    "DOGETMN": 0.4,
+    "PEPETMN": 0.4,
+    "BNBTMN": 0.4,
+    "ARBTMN": 0.4
+   },
+   "entry_devs": {
+    "BTCTMN": 0.006,
+    "ETHTMN": 0.006,
+    "SOLTMN": 0.006,
+    "XRPTMN": 0.006,
+    "DOGETMN": 0.006,
+    "PEPETMN": 0.006,
+    "BNBTMN": 0.006,
+    "ARBTMN": 0.006
+   },
+   "reasons_disabled": {
+    "XRPTMN": "اسپرد این بازار بالاست و ریسک لغزش را زیاد می‌کند.",
+    "BNBTMN": "اسپرد بالا و هزینه اجرای این بازار را نامطلوب می‌کند."
+   }
+  },
+  {
+   "t": "2026-10-21T16:56:17+00:00",
+   "risk_mode_final": "defensive",
+   "analyst_said": "defensive",
+   "disabled": [
+    "ETHTMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "sizes": {
+    "BTCTMN": 0.4,
+    "ETHTMN": 0.4,
+    "SOLTMN": 0.4,
+    "XRPTMN": 0.4,
+    "DOGETMN": 0.4,
+    "PEPETMN": 0.4,
+    "BNBTMN": 0.4,
+    "ARBTMN": 0.4
+   },
+   "entry_devs": {
+    "BTCTMN": 0.007,
+    "ETHTMN": 0.007,
+    "SOLTMN": 0.007,
+    "XRPTMN": 0.007,
+    "DOGETMN": 0.007,
+    "PEPETMN": 0.007,
+    "BNBTMN": 0.007,
+    "ARBTMN": 0.007
+   },
+   "reasons_disabled": {
+    "ETHTMN": "اسپرد و هزینه اجرا برای اتریوم نامطلوب است.",
+    "PEPETMN": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+    "ARBTMN": "اسپرد این بازار برای ورود امن بیش از حد پهن است."
+   }
+  },
+  {
+   "t": "2026-10-21T17:16:14+00:00",
+   "risk_mode_final": "defensive",
+   "analyst_said": "defensive",
+   "disabled": [
+    "ETHTMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "sizes": {
+    "BTCTMN": 0.4,
+    "ETHTMN": 0.4,
+    "SOLTMN": 0.3,
+    "XRPTMN": 0.3,
+    "DOGETMN": 0.4,
+    "PEPETMN": 0.4,
+    "BNBTMN": 0.3,
+    "ARBTMN": 0.4
+   },
+   "entry_devs": {
+    "BTCTMN": 0.007,
+    "ETHTMN": 0.0085,
+    "SOLTMN": 0.007,
+    "XRPTMN": 0.007,
+    "DOGETMN": 0.007,
+    "PEPETMN": 0.007,
+    "BNBTMN": 0.007,
+    "ARBTMN": 0.007
+   },
+   "reasons_disabled": {
+    "ETHTMN": "اسپرد بالاتر و کیفیت اجرای ضعیف‌تر است، پس فعلاً غیرفعال می‌ماند.",
+    "PEPETMN": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+    "ARBTMN": "اسپرد بسیار پهن است و ورود امن ندارد."
+   }
+  },
+  {
+   "t": "2026-10-21T17:36:17+00:00",
+   "risk_mode_final": "defensive",
+   "analyst_said": "defensive",
+   "disabled": [
+    "ETHTMN",
+    "PEPETMN",
+    "ARBTMN"
+   ],
+   "sizes": {
+    "BTCTMN": 0.4,
+    "ETHTMN": 0.4,
+    "SOLTMN": 0.25,
+    "XRPTMN": 0.25,
+    "DOGETMN": 0.35,
+    "PEPETMN": 0.4,
+    "BNBTMN": 0.25,
+    "ARBTMN": 0.4
+   },
+   "entry_devs": {
+    "BTCTMN": 0.006,
+    "ETHTMN": 0.0085,
+    "SOLTMN": 0.007,
+    "XRPTMN": 0.007,
+    "DOGETMN": 0.007,
+    "PEPETMN": 0.007,
+    "BNBTMN": 0.007,
+    "ARBTMN": 0.007
+   },
+   "reasons_disabled": {
+    "ETHTMN": "هزینه اجرا بالاست و فعلاً ورود امن نیست.",
+    "PEPETMN": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+    "ARBTMN": "اسپرد پهن است و ورود امن ندارد."
+   }
+  },
+  {
+   "t": "2026-10-21T17:55:47+00:00",
+   "risk_mode_final": "defensive",
+   "analyst_said": "defensive",
+   "disabled": [
+    "BNBTMN"
+   ],
+   "sizes": {
+    "BTCTMN": 0.4,
+    "ETHTMN": 0.4,
+    "SOLTMN": 0.4,
+    "XRPTMN": 0.4,
+    "DOGETMN": 0.4,
+    "PEPETMN": 0.4,
+    "BNBTMN": 0.4,
+    "ARBTMN": 0.4
+   },
+   "entry_devs": {
+    "BTCTMN": 0.007,
+    "ETHTMN": 0.007,
+    "SOLTMN": 0.007,
+    "XRPTMN": 0.007,
+    "DOGETMN": 0.007,
+    "PEPETMN": 0.007,
+    "BNBTMN": 0.007,
+    "ARBTMN": 0.007
+   },
+   "reasons_disabled": {
+    "BNBTMN": "اسپرد پهن و عمق پایین است، پس برای حفظ سرمایه غیرفعال شد."
+   }
+  }
+ ],
+ "mode_share_of_time": {
+  "default(before first review)": 0.12,
+  "defensive": 0.88
+ },
+ "effective_policy_live_so_far": {
+  "BTCTMN": {
+   "enabled_share": 1.0,
+   "avg_size_when_enabled": 0.412
+  },
+  "ETHTMN": {
+   "enabled_share": 0.378,
+   "avg_size_when_enabled": 0.432
+  },
+  "SOLTMN": {
+   "enabled_share": 1.0,
+   "avg_size_when_enabled": 0.363
+  },
+  "XRPTMN": {
+   "enabled_share": 0.956,
+   "avg_size_when_enabled": 0.362
+  },
+  "DOGETMN": {
+   "enabled_share": 1.0,
+   "avg_size_when_enabled": 0.403
+  },
+  "PEPETMN": {
+   "enabled_share": 0.378,
+   "avg_size_when_enabled": 0.432
+  },
+  "BNBTMN": {
+   "enabled_share": 0.741,
+   "avg_size_when_enabled": 0.351
+  },
+  "ARBTMN": {
+   "enabled_share": 0.378,
+   "avg_size_when_enabled": 0.432
+  }
+ },
+ "latest_policy": {
+  "BTCTMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "ETHTMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "SOLTMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "XRPTMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "DOGETMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "PEPETMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "BNBTMN": {
+   "enabled": false,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 25.0
+  },
+  "ARBTMN": {
+   "enabled": true,
+   "size_factor": 0.4,
+   "entry_dev": 0.007,
+   "max_hold_min": 15.0
+  }
+ },
+ "ai_disable_reason_vs_measured_spread": [
+  {
+   "review": "2026-10-21T16:48:54+00:00",
+   "symbol": "XRPTMN",
+   "reason_fa": "اسپرد این بازار بالاست و ریسک لغزش را زیاد می‌کند.",
+   "spread_at_review_pct": 0.169,
+   "spread_median_prev_2h_pct": 0.239,
+   "spread_p90_prev_2h_pct": 0.426,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 4609962,
+   "top_bid_notional_at_review": 4049903
+  },
+  {
+   "review": "2026-10-21T16:48:54+00:00",
+   "symbol": "BNBTMN",
+   "reason_fa": "اسپرد بالا و هزینه اجرای این بازار را نامطلوب می‌کند.",
+   "spread_at_review_pct": 0.25,
+   "spread_median_prev_2h_pct": 0.083,
+   "spread_p90_prev_2h_pct": 0.506,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 65062236,
+   "top_bid_notional_at_review": 2761384000
+  },
+  {
+   "review": "2026-10-21T16:56:17+00:00",
+   "symbol": "ETHTMN",
+   "reason_fa": "اسپرد و هزینه اجرا برای اتریوم نامطلوب است.",
+   "spread_at_review_pct": 0.073,
+   "spread_median_prev_2h_pct": 0.143,
+   "spread_p90_prev_2h_pct": 0.377,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 106872000,
+   "top_bid_notional_at_review": 26605139
+  },
+  {
+   "review": "2026-10-21T16:56:17+00:00",
+   "symbol": "PEPETMN",
+   "reason_fa": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+   "spread_at_review_pct": 0.585,
+   "spread_median_prev_2h_pct": 0.153,
+   "spread_p90_prev_2h_pct": 0.377,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 117651,
+   "top_bid_notional_at_review": 554302144
+  },
+  {
+   "review": "2026-10-21T16:56:17+00:00",
+   "symbol": "ARBTMN",
+   "reason_fa": "اسپرد این بازار برای ورود امن بیش از حد پهن است.",
+   "spread_at_review_pct": 0.33,
+   "spread_median_prev_2h_pct": 0.337,
+   "spread_p90_prev_2h_pct": 0.614,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 1193269,
+   "top_bid_notional_at_review": 14940094
+  },
+  {
+   "review": "2026-10-21T17:16:14+00:00",
+   "symbol": "ETHTMN",
+   "reason_fa": "اسپرد بالاتر و کیفیت اجرای ضعیف‌تر است، پس فعلاً غیرفعال می‌ماند.",
+   "spread_at_review_pct": 0.18,
+   "spread_median_prev_2h_pct": 0.103,
+   "spread_p90_prev_2h_pct": 0.365,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 2112062981,
+   "top_bid_notional_at_review": 9542136
+  },
+  {
+   "review": "2026-10-21T17:16:14+00:00",
+   "symbol": "PEPETMN",
+   "reason_fa": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+   "spread_at_review_pct": 0.466,
+   "spread_median_prev_2h_pct": 0.247,
+   "spread_p90_prev_2h_pct": 0.673,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 3961216,
+   "top_bid_notional_at_review": 97800000
+  },
+  {
+   "review": "2026-10-21T17:16:14+00:00",
+   "symbol": "ARBTMN",
+   "reason_fa": "اسپرد بسیار پهن است و ورود امن ندارد.",
+   "spread_at_review_pct": 0.473,
+   "spread_median_prev_2h_pct": 0.436,
+   "spread_p90_prev_2h_pct": 0.614,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 24043065,
+   "top_bid_notional_at_review": 13909216
+  },
+  {
+   "review": "2026-10-21T17:36:17+00:00",
+   "symbol": "ETHTMN",
+   "reason_fa": "هزینه اجرا بالاست و فعلاً ورود امن نیست.",
+   "spread_at_review_pct": 0.014,
+   "spread_median_prev_2h_pct": 0.086,
+   "spread_p90_prev_2h_pct": 0.209,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 187110000,
+   "top_bid_notional_at_review": 5325210
+  },
+  {
+   "review": "2026-10-21T17:36:17+00:00",
+   "symbol": "PEPETMN",
+   "reason_fa": "اسپرد بسیار پهن است و اجرای مطمئن ندارد.",
+   "spread_at_review_pct": 0.243,
+   "spread_median_prev_2h_pct": 0.203,
+   "spread_p90_prev_2h_pct": 0.673,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 7617429311,
+   "top_bid_notional_at_review": 644415
+  },
+  {
+   "review": "2026-10-21T17:36:17+00:00",
+   "symbol": "ARBTMN",
+   "reason_fa": "اسپرد پهن است و ورود امن ندارد.",
+   "spread_at_review_pct": 0.084,
+   "spread_median_prev_2h_pct": 0.419,
+   "spread_p90_prev_2h_pct": 0.657,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 24707427,
+   "top_bid_notional_at_review": 101783001
+  },
+  {
+   "review": "2026-10-21T17:55:47+00:00",
+   "symbol": "BNBTMN",
+   "reason_fa": "اسپرد پهن و عمق پایین است، پس برای حفظ سرمایه غیرفعال شد.",
+   "spread_at_review_pct": 0.317,
+   "spread_median_prev_2h_pct": 0.146,
+   "spread_p90_prev_2h_pct": 0.308,
+   "engine_spread_gate_pct": 0.6,
+   "top_ask_notional_at_review": 13332085,
+   "top_bid_notional_at_review": 87974003
+  }
+ ],
+ "tick_median_spread_pct": {
+  "ARBTMN": 0.445,
+  "BNBTMN": 0.146,
+  "BTCTMN": 0.031,
+  "DOGETMN": 0.169,
+  "ETHTMN": 0.136,
+  "PEPETMN": 0.114,
+  "SOLTMN": 0.157,
+  "XRPTMN": 0.2
+ },
+ "rate_calibration_factor": 0.29,
+ "per_market_fill_pct": {
+  "BTCTMN": {
+   "0.25": 100.0,
+   "0.4": 93.6,
+   "0.7": 85.6,
+   "1.0": 83.8,
+   "source": "buy_dev<=-0.3%"
+  },
+  "ETHTMN": {
+   "0.25": 98.4,
+   "0.4": 96.1,
+   "0.7": 94.4,
+   "1.0": 92.7,
+   "source": "buy_dev<=-0.3%"
+  },
+  "SOLTMN": {
+   "0.25": 40.9,
+   "0.4": 30.3,
+   "0.7": 22.6,
+   "1.0": 20.9,
+   "source": "buy_dev<=-0.2%"
+  },
+  "XRPTMN": {
+   "0.25": 100.0,
+   "0.4": 100.0,
+   "0.7": 100.0,
+   "1.0": 100.0,
+   "source": "buy_dev<=-0.3%"
+  },
+  "DOGETMN": {
+   "0.25": 34.2,
+   "0.4": 21.4,
+   "0.7": 12.2,
+   "1.0": 10.1,
+   "source": "buy_dev<=-0.2%"
+  },
+  "PEPETMN": {
+   "0.25": 100.0,
+   "0.4": 100.0,
+   "0.7": 100.0,
+   "1.0": 100.0,
+   "source": "buy_dev<=-0.3%"
+  },
+  "BNBTMN": {
+   "0.25": 100.0,
+   "0.4": 100.0,
+   "0.7": 100.0,
+   "1.0": 100.0,
+   "source": "buy_dev<=-0.3%"
+  },
+  "ARBTMN": {
+   "0.25": 100.0,
+   "0.4": 100.0,
+   "0.7": 100.0,
+   "1.0": 100.0,
+   "source": "buy_dev<=-0.2%"
+  }
+ },
+ "trade_weighted_fill_pct": {
+  "0.25": 96.5,
+  "0.4": 95.6,
+  "0.7": 94.7,
+  "1.0": 94.6
+ },
+ "expected_45h": {
+  "base: live rule, tick spreads": {
+   "ai_latest_review": {
+    "ret_pct": 0.4426,
+    "tmn": 22128,
+    "per_market_tmn": {
+     "BTCTMN": 2352,
+     "ETHTMN": 0,
+     "SOLTMN": 1090,
+     "XRPTMN": 3647,
+     "DOGETMN": 754,
+     "PEPETMN": 9397,
+     "BNBTMN": 0,
+     "ARBTMN": 4888
+    }
+   },
+   "ai_time_weighted_live_so_far": {
+    "ret_pct": 0.4162,
+    "tmn": 20808,
+    "per_market_tmn": {
+     "BTCTMN": 2421,
+     "ETHTMN": 0,
+     "SOLTMN": 998,
+     "XRPTMN": 3183,
+     "DOGETMN": 760,
+     "PEPETMN": 3826,
+     "BNBTMN": 7631,
+     "ARBTMN": 1990
+    }
+   },
+   "all_on_0.4 (defensive cap)": {
+    "ret_pct": 0.6746,
+    "tmn": 33731,
+    "per_market_tmn": {
+     "BTCTMN": 2352,
+     "ETHTMN": 0,
+     "SOLTMN": 1090,
+     "XRPTMN": 3647,
+     "DOGETMN": 754,
+     "PEPETMN": 9397,
+     "BNBTMN": 11603,
+     "ARBTMN": 4888
+    }
+   },
+   "all_on_0.7": {
+    "ret_pct": 1.1504,
+    "tmn": 57519,
+    "per_market_tmn": {
+     "BTCTMN": 4011,
+     "ETHTMN": 0,
+     "SOLTMN": 1859,
+     "XRPTMN": 6218,
+     "DOGETMN": 1286,
+     "PEPETMN": 16024,
+     "BNBTMN": 19785,
+     "ARBTMN": 8334
+    }
+   },
+   "all_on_1.0 (normal)": {
+    "ret_pct": 1.3672,
+    "tmn": 68361,
+    "per_market_tmn": {
+     "BTCTMN": 4768,
+     "ETHTMN": 0,
+     "SOLTMN": 2209,
+     "XRPTMN": 7390,
+     "DOGETMN": 1529,
+     "PEPETMN": 19045,
+     "BNBTMN": 23515,
+     "ARBTMN": 9906
+    }
+   }
+  },
+  "pessimistic entry: full spread on entry": {
+   "ai_latest_review": {
+    "ret_pct": 0.1343,
+    "tmn": 6713,
+    "per_market_tmn": {
+     "BTCTMN": 2250,
+     "ETHTMN": 0,
+     "SOLTMN": 378,
+     "XRPTMN": 1743,
+     "DOGETMN": 574,
+     "PEPETMN": 6630,
+     "BNBTMN": 0,
+     "ARBTMN": -4862
+    }
+   },
+   "ai_time_weighted_live_so_far": {
+    "ret_pct": 0.2475,
+    "tmn": 12374,
+    "per_market_tmn": {
+     "BTCTMN": 2316,
+     "ETHTMN": 0,
+     "SOLTMN": 346,
+     "XRPTMN": 1521,
+     "DOGETMN": 578,
+     "PEPETMN": 2699,
+     "BNBTMN": 6893,
+     "ARBTMN": -1979
+    }
+   },
+   "all_on_0.4 (defensive cap)": {
+    "ret_pct": 0.3439,
+    "tmn": 17194,
+    "per_market_tmn": {
+     "BTCTMN": 2250,
+     "ETHTMN": 0,
+     "SOLTMN": 378,
+     "XRPTMN": 1743,
+     "DOGETMN": 574,
+     "PEPETMN": 6630,
+     "BNBTMN": 10481,
+     "ARBTMN": -4862
+    }
+   },
+   "all_on_0.7": {
+    "ret_pct": 0.5864,
+    "tmn": 29319,
+    "per_market_tmn": {
+     "BTCTMN": 3837,
+     "ETHTMN": 0,
+     "SOLTMN": 645,
+     "XRPTMN": 2971,
+     "DOGETMN": 978,
+     "PEPETMN": 11306,
+     "BNBTMN": 17872,
+     "ARBTMN": -8291
+    }
+   },
+   "all_on_1.0 (normal)": {
+    "ret_pct": 0.6969,
+    "tmn": 34846,
+    "per_market_tmn": {
+     "BTCTMN": 4561,
+     "ETHTMN": 0,
+     "SOLTMN": 767,
+     "XRPTMN": 3532,
+     "DOGETMN": 1163,
+     "PEPETMN": 13437,
+     "BNBTMN": 21241,
+     "ARBTMN": -9854
+    }
+   }
+  },
+  "tick-calibrated rate (x0.28)": {
+   "ai_latest_review": {
+    "ret_pct": 0.1282,
+    "tmn": 6408,
+    "per_market_tmn": {
+     "BTCTMN": 681,
+     "ETHTMN": 0,
+     "SOLTMN": 316,
+     "XRPTMN": 1056,
+     "DOGETMN": 218,
+     "PEPETMN": 2721,
+     "BNBTMN": 0,
+     "ARBTMN": 1415
+    }
+   },
+   "ai_time_weighted_live_so_far": {
+    "ret_pct": 0.1205,
+    "tmn": 6025,
+    "per_market_tmn": {
+     "BTCTMN": 701,
+     "ETHTMN": 0,
+     "SOLTMN": 289,
+     "XRPTMN": 922,
+     "DOGETMN": 220,
+     "PEPETMN": 1108,
+     "BNBTMN": 2210,
+     "ARBTMN": 576
+    }
+   },
+   "all_on_0.4 (defensive cap)": {
+    "ret_pct": 0.1954,
+    "tmn": 9768,
+    "per_market_tmn": {
+     "BTCTMN": 681,
+     "ETHTMN": 0,
+     "SOLTMN": 316,
+     "XRPTMN": 1056,
+     "DOGETMN": 218,
+     "PEPETMN": 2721,
+     "BNBTMN": 3360,
+     "ARBTMN": 1415
+    }
+   },
+   "all_on_0.7": {
+    "ret_pct": 0.3331,
+    "tmn": 16656,
+    "per_market_tmn": {
+     "BTCTMN": 1162,
+     "ETHTMN": 0,
+     "SOLTMN": 538,
+     "XRPTMN": 1801,
+     "DOGETMN": 373,
+     "PEPETMN": 4640,
+     "BNBTMN": 5729,
+     "ARBTMN": 2413
+    }
+   },
+   "all_on_1.0 (normal)": {
+    "ret_pct": 0.3959,
+    "tmn": 19796,
+    "per_market_tmn": {
+     "BTCTMN": 1381,
+     "ETHTMN": 0,
+     "SOLTMN": 640,
+     "XRPTMN": 2140,
+     "DOGETMN": 443,
+     "PEPETMN": 5515,
+     "BNBTMN": 6809,
+     "ARBTMN": 2868
+    }
+   }
+  },
+  "base, pooled mean per trade": {
+   "ai_latest_review": {
+    "ret_pct": 0.5474,
+    "tmn": 27371,
+    "per_market_tmn": {
+     "BTCTMN": 1466,
+     "ETHTMN": 0,
+     "SOLTMN": 1466,
+     "XRPTMN": 1955,
+     "DOGETMN": 489,
+     "PEPETMN": 10753,
+     "BNBTMN": 0,
+     "ARBTMN": 11242
+    }
+   },
+   "ai_time_weighted_live_so_far": {
+    "ret_pct": 0.3637,
+    "tmn": 18183,
+    "per_market_tmn": {
+     "BTCTMN": 1509,
+     "ETHTMN": 0,
+     "SOLTMN": 1342,
+     "XRPTMN": 1707,
+     "DOGETMN": 492,
+     "PEPETMN": 4378,
+     "BNBTMN": 4179,
+     "ARBTMN": 4577
+    }
+   },
+   "all_on_0.4 (defensive cap)": {
+    "ret_pct": 0.6745,
+    "tmn": 33725,
+    "per_market_tmn": {
+     "BTCTMN": 1466,
+     "ETHTMN": 0,
+     "SOLTMN": 1466,
+     "XRPTMN": 1955,
+     "DOGETMN": 489,
+     "PEPETMN": 10753,
+     "BNBTMN": 6354,
+     "ARBTMN": 11242
+    }
+   },
+   "all_on_0.7": {
+    "ret_pct": 1.1502,
+    "tmn": 57508,
+    "per_market_tmn": {
+     "BTCTMN": 2500,
+     "ETHTMN": 0,
+     "SOLTMN": 2500,
+     "XRPTMN": 3334,
+     "DOGETMN": 833,
+     "PEPETMN": 18336,
+     "BNBTMN": 10835,
+     "ARBTMN": 19169
+    }
+   },
+   "all_on_1.0 (normal)": {
+    "ret_pct": 1.367,
+    "tmn": 68348,
+    "per_market_tmn": {
+     "BTCTMN": 2972,
+     "ETHTMN": 0,
+     "SOLTMN": 2972,
+     "XRPTMN": 3962,
+     "DOGETMN": 991,
+     "PEPETMN": 21792,
+     "BNBTMN": 12877,
+     "ARBTMN": 22783
+    }
+   }
+  },
+  "base, per-market depth fill": {
+   "ai_latest_review": {
+    "ret_pct": 0.4398,
+    "tmn": 21988,
+    "per_market_tmn": {
+     "BTCTMN": 2347,
+     "ETHTMN": 0,
+     "SOLTMN": 352,
+     "XRPTMN": 3888,
+     "DOGETMN": 172,
+     "PEPETMN": 10018,
+     "BNBTMN": 0,
+     "ARBTMN": 5211
+    }
+   },
+   "ai_time_weighted_live_so_far": {
+    "ret_pct": 0.4111,
+    "tmn": 20553,
+    "per_market_tmn": {
+     "BTCTMN": 2410,
+     "ETHTMN": 0,
+     "SOLTMN": 347,
+     "XRPTMN": 3363,
+     "DOGETMN": 173,
+     "PEPETMN": 4090,
+     "BNBTMN": 8043,
+     "ARBTMN": 2127
+    }
+   },
+   "all_on_0.4 (defensive cap)": {
+    "ret_pct": 0.6871,
+    "tmn": 34357,
+    "per_market_tmn": {
+     "BTCTMN": 2347,
+     "ETHTMN": 0,
+     "SOLTMN": 352,
+     "XRPTMN": 3888,
+     "DOGETMN": 172,
+     "PEPETMN": 10018,
+     "BNBTMN": 12370,
+     "ARBTMN": 5211
+    }
+   },
+   "all_on_0.7": {
+    "ret_pct": 1.1898,
+    "tmn": 59492,
+    "per_market_tmn": {
+     "BTCTMN": 3758,
+     "ETHTMN": 0,
+     "SOLTMN": 461,
+     "XRPTMN": 6803,
+     "DOGETMN": 172,
+     "PEPETMN": 17532,
+     "BNBTMN": 21647,
+     "ARBTMN": 9119
+    }
+   },
+   "all_on_1.0 (normal)": {
+    "ret_pct": 1.4342,
+    "tmn": 71709,
+    "per_market_tmn": {
+     "BTCTMN": 4444,
+     "ETHTMN": 0,
+     "SOLTMN": 514,
+     "XRPTMN": 8221,
+     "DOGETMN": 172,
+     "PEPETMN": 21184,
+     "BNBTMN": 26157,
+     "ARBTMN": 11018
+    }
+   }
+  }
+ },
+ "linear_vs_replay_check": {
+  "0.4": {
+   "linear_45h_pct": 0.6746,
+   "replay_45h_pct": 0.7118,
+   "windows_45h_mean_pct": 0.6111,
+   "monte_carlo_45h_mean_pct": 0.6803
+  },
+  "0.7": {
+   "linear_45h_pct": 1.1504,
+   "replay_45h_pct": 1.0307,
+   "windows_45h_mean_pct": 1.0417,
+   "monte_carlo_45h_mean_pct": 1.1594
+  },
+  "1.0": {
+   "linear_45h_pct": 1.3672,
+   "replay_45h_pct": 1.332,
+   "windows_45h_mean_pct": 1.2367,
+   "monte_carlo_45h_mean_pct": 1.3827
+  }
+ },
+ "account_state_last": {
+  "t": "2026-10-21T18:22:59+00:00",
+  "event": "equity",
+  "equity_tmn": 5000000,
+  "return_pct": 0.0,
+  "drawdown_pct": 0.0,
+  "halted": "",
+  "trades": 0
+ }
+}

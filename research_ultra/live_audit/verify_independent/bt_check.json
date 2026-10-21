@@ -1,0 +1,619 @@
+{
+ "spreads_live_median_pct": {
+  "BTCTMN": 0.029,
+  "ETHTMN": 0.098,
+  "SOLTMN": 0.095,
+  "XRPTMN": 0.116,
+  "DOGETMN": 0.113,
+  "PEPETMN": 0.081,
+  "BNBTMN": 0.142,
+  "ARBTMN": 0.437
+ },
+ "alignment": {
+  "BTCTMN": {
+   "-1": 0.1259,
+   "0": 0.1201,
+   "1": 0.1181
+  },
+  "ETHTMN": {
+   "-1": 0.1978,
+   "0": 0.1776,
+   "1": 0.1802
+  },
+  "SOLTMN": {
+   "-1": 0.2985,
+   "0": 0.2774,
+   "1": 0.273
+  },
+  "XRPTMN": {
+   "-1": 0.2438,
+   "0": 0.2167,
+   "1": 0.2182
+  },
+  "DOGETMN": {
+   "-1": 0.2509,
+   "0": 0.2193,
+   "1": 0.2204
+  },
+  "PEPETMN": {
+   "-1": 0.3233,
+   "0": 0.2781,
+   "1": 0.2869
+  },
+  "BNBTMN": {
+   "-1": 0.3562,
+   "0": 0.3509,
+   "1": 0.3501
+  },
+  "ARBTMN": {
+   "-1": 0.4073,
+   "0": 0.3608,
+   "1": 0.3679
+  }
+ },
+ "days": 6.843,
+ "current_policy_no_risk_rules": {
+  "label": "current_policy_no_risk_rules",
+  "trades": 46,
+  "per_day": 6.72,
+  "mean_net_pct": 0.315,
+  "sum_net_pct": 14.49,
+  "median_net_pct": 0.255,
+  "win_pct": 76.1,
+  "t_stat": 3.31,
+  "exits": {
+   "target": 31,
+   "time": 15
+  },
+  "per_market": {
+   "ARBTMN": {
+    "n": 14,
+    "mean": 0.322,
+    "sum": 4.51,
+    "exits": {
+     "time": 8,
+     "target": 6
+    }
+   },
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.369,
+    "sum": 1.11,
+    "exits": {
+     "target": 3
+    }
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.41,
+    "sum": 0.41,
+    "exits": {
+     "target": 1
+    }
+   },
+   "PEPETMN": {
+    "n": 19,
+    "mean": 0.277,
+    "sum": 5.26,
+    "exits": {
+     "target": 12,
+     "time": 7
+    }
+   },
+   "SOLTMN": {
+    "n": 5,
+    "mean": 0.249,
+    "sum": 1.25,
+    "exits": {
+     "target": 5
+    }
+   },
+   "XRPTMN": {
+    "n": 4,
+    "mean": 0.489,
+    "sum": 1.96,
+    "exits": {
+     "target": 4
+    }
+   }
+  },
+  "first4d": {
+   "n": 16,
+   "per_day": 4.0,
+   "mean": 0.236
+  },
+  "last": {
+   "n": 30,
+   "per_day": 10.55,
+   "mean": 0.357
+  },
+  "remaining_days": 1.965,
+  "expected_trades": 13.2,
+  "poisson90": [
+   8,
+   19
+  ],
+  "expected_account_ret_pct": 0.555,
+  "distinct_days_with_trades": 7,
+  "zero_window_pct": {
+   "1.7h": 71.3,
+   "1.9h": 68.7,
+   "3.8h": 49.4,
+   "6h": 35.4,
+   "12h": 16.9,
+   "24h": 8.0
+  },
+  "share_PEPE_ARB_BNB_pct": 71.7,
+  "trades_in_clusters_60min": 29
+ },
+ "current_policy_with_cooldown_maxpos": {
+  "label": "current_policy_with_cooldown_maxpos",
+  "trades": 43,
+  "per_day": 6.28,
+  "mean_net_pct": 0.357,
+  "sum_net_pct": 15.35,
+  "median_net_pct": 0.278,
+  "win_pct": 81.4,
+  "t_stat": 3.65,
+  "exits": {
+   "target": 31,
+   "time": 12
+  },
+  "per_market": {
+   "ARBTMN": {
+    "n": 11,
+    "mean": 0.489,
+    "sum": 5.38,
+    "exits": {
+     "target": 6,
+     "time": 5
+    }
+   },
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.369,
+    "sum": 1.11,
+    "exits": {
+     "target": 3
+    }
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.41,
+    "sum": 0.41,
+    "exits": {
+     "target": 1
+    }
+   },
+   "PEPETMN": {
+    "n": 19,
+    "mean": 0.277,
+    "sum": 5.26,
+    "exits": {
+     "target": 12,
+     "time": 7
+    }
+   },
+   "SOLTMN": {
+    "n": 5,
+    "mean": 0.249,
+    "sum": 1.25,
+    "exits": {
+     "target": 5
+    }
+   },
+   "XRPTMN": {
+    "n": 4,
+    "mean": 0.489,
+    "sum": 1.96,
+    "exits": {
+     "target": 4
+    }
+   }
+  },
+  "first4d": {
+   "n": 15,
+   "per_day": 3.75,
+   "mean": 0.261
+  },
+  "last": {
+   "n": 28,
+   "per_day": 9.85,
+   "mean": 0.408
+  },
+  "remaining_days": 1.965,
+  "expected_trades": 12.3,
+  "poisson90": [
+   7,
+   18
+  ],
+  "expected_account_ret_pct": 0.588,
+  "distinct_days_with_trades": 7,
+  "zero_window_pct": {
+   "1.7h": 72.1,
+   "1.9h": 69.4,
+   "3.8h": 50.2,
+   "6h": 36.1,
+   "12h": 16.9,
+   "24h": 8.0
+  },
+  "share_PEPE_ARB_BNB_pct": 69.8,
+  "trades_in_clusters_60min": 25
+ },
+ "current_policy_persist_1min": {
+  "label": "current_policy_persist_1min",
+  "trades": 7,
+  "per_day": 1.02,
+  "mean_net_pct": 0.104,
+  "sum_net_pct": 0.73,
+  "median_net_pct": 0.204,
+  "win_pct": 71.4,
+  "t_stat": 0.37,
+  "exits": {
+   "target": 5,
+   "time": 2
+  },
+  "per_market": {
+   "ARBTMN": {
+    "n": 2,
+    "mean": -0.406,
+    "sum": -0.81,
+    "exits": {
+     "time": 1,
+     "target": 1
+    }
+   },
+   "BTCTMN": {
+    "n": 1,
+    "mean": 0.12,
+    "sum": 0.12,
+    "exits": {
+     "target": 1
+    }
+   },
+   "PEPETMN": {
+    "n": 3,
+    "mean": 0.154,
+    "sum": 0.46,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "XRPTMN": {
+    "n": 1,
+    "mean": 0.958,
+    "sum": 0.96,
+    "exits": {
+     "target": 1
+    }
+   }
+  },
+  "first4d": {
+   "n": 3,
+   "per_day": 0.75,
+   "mean": 0.297
+  },
+  "last": {
+   "n": 4,
+   "per_day": 1.41,
+   "mean": -0.041
+  },
+  "remaining_days": 1.965,
+  "expected_trades": 2.0,
+  "poisson90": [
+   0,
+   5
+  ],
+  "expected_account_ret_pct": 0.028,
+  "distinct_days_with_trades": 6,
+  "zero_window_pct": {
+   "1.7h": 93.6,
+   "1.9h": 92.9,
+   "3.8h": 85.7,
+   "6h": 77.1,
+   "12h": 56.5,
+   "24h": 23.2
+  },
+  "share_PEPE_ARB_BNB_pct": 71.4,
+  "trades_in_clusters_60min": 2
+ },
+ "all_0.7_no_risk_rules": {
+  "label": "all_0.7_no_risk_rules",
+  "trades": 74,
+  "per_day": 10.81,
+  "mean_net_pct": 0.265,
+  "sum_net_pct": 19.6,
+  "median_net_pct": 0.236,
+  "win_pct": 70.3,
+  "t_stat": 2.71,
+  "exits": {
+   "target": 46,
+   "time": 28
+  },
+  "per_market": {
+   "ARBTMN": {
+    "n": 23,
+    "mean": 0.108,
+    "sum": 2.49,
+    "exits": {
+     "time": 14,
+     "target": 9
+    }
+   },
+   "BNBTMN": {
+    "n": 13,
+    "mean": 0.335,
+    "sum": 4.36,
+    "exits": {
+     "target": 8,
+     "time": 5
+    }
+   },
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.369,
+    "sum": 1.11,
+    "exits": {
+     "target": 3
+    }
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.41,
+    "sum": 0.41,
+    "exits": {
+     "target": 1
+    }
+   },
+   "ETHTMN": {
+    "n": 2,
+    "mean": -0.088,
+    "sum": -0.18,
+    "exits": {
+     "time": 1,
+     "target": 1
+    }
+   },
+   "PEPETMN": {
+    "n": 23,
+    "mean": 0.357,
+    "sum": 8.21,
+    "exits": {
+     "target": 15,
+     "time": 8
+    }
+   },
+   "SOLTMN": {
+    "n": 5,
+    "mean": 0.249,
+    "sum": 1.25,
+    "exits": {
+     "target": 5
+    }
+   },
+   "XRPTMN": {
+    "n": 4,
+    "mean": 0.489,
+    "sum": 1.96,
+    "exits": {
+     "target": 4
+    }
+   }
+  },
+  "first4d": {
+   "n": 31,
+   "per_day": 7.75,
+   "mean": 0.234
+  },
+  "last": {
+   "n": 43,
+   "per_day": 15.12,
+   "mean": 0.287
+  },
+  "remaining_days": 1.965,
+  "expected_trades": 21.3,
+  "poisson90": [
+   14,
+   29
+  ],
+  "expected_account_ret_pct": 0.932,
+  "distinct_days_with_trades": 7,
+  "zero_window_pct": {
+   "1.7h": 60.9,
+   "1.9h": 57.6,
+   "3.8h": 33.2,
+   "6h": 16.7,
+   "12h": 0.3,
+   "24h": 0.0
+  },
+  "share_PEPE_ARB_BNB_pct": 79.7,
+  "trades_in_clusters_60min": 60
+ },
+ "all_0.7_with_cooldown_maxpos": {
+  "label": "all_0.7_with_cooldown_maxpos",
+  "trades": 66,
+  "per_day": 9.64,
+  "mean_net_pct": 0.323,
+  "sum_net_pct": 21.3,
+  "median_net_pct": 0.267,
+  "win_pct": 75.8,
+  "t_stat": 3.04,
+  "exits": {
+   "target": 44,
+   "time": 22
+  },
+  "per_market": {
+   "ARBTMN": {
+    "n": 18,
+    "mean": 0.249,
+    "sum": 4.47,
+    "exits": {
+     "target": 9,
+     "time": 9
+    }
+   },
+   "BNBTMN": {
+    "n": 11,
+    "mean": 0.399,
+    "sum": 4.39,
+    "exits": {
+     "target": 7,
+     "time": 4
+    }
+   },
+   "BTCTMN": {
+    "n": 3,
+    "mean": 0.369,
+    "sum": 1.11,
+    "exits": {
+     "target": 3
+    }
+   },
+   "DOGETMN": {
+    "n": 1,
+    "mean": 0.41,
+    "sum": 0.41,
+    "exits": {
+     "target": 1
+    }
+   },
+   "ETHTMN": {
+    "n": 2,
+    "mean": -0.088,
+    "sum": -0.18,
+    "exits": {
+     "time": 1,
+     "target": 1
+    }
+   },
+   "PEPETMN": {
+    "n": 23,
+    "mean": 0.357,
+    "sum": 8.21,
+    "exits": {
+     "target": 15,
+     "time": 8
+    }
+   },
+   "SOLTMN": {
+    "n": 5,
+    "mean": 0.249,
+    "sum": 1.25,
+    "exits": {
+     "target": 5
+    }
+   },
+   "XRPTMN": {
+    "n": 3,
+    "mean": 0.545,
+    "sum": 1.64,
+    "exits": {
+     "target": 3
+    }
+   }
+  },
+  "first4d": {
+   "n": 28,
+   "per_day": 7.0,
+   "mean": 0.25
+  },
+  "last": {
+   "n": 38,
+   "per_day": 13.37,
+   "mean": 0.376
+  },
+  "remaining_days": 1.965,
+  "expected_trades": 19.0,
+  "poisson90": [
+   12,
+   26
+  ],
+  "expected_account_ret_pct": 1.012,
+  "distinct_days_with_trades": 7,
+  "zero_window_pct": {
+   "1.7h": 61.9,
+   "1.9h": 58.5,
+   "3.8h": 34.2,
+   "6h": 17.1,
+   "12h": 0.3,
+   "24h": 0.0
+  },
+  "share_PEPE_ARB_BNB_pct": 78.8,
+  "trades_in_clusters_60min": 51
+ },
+ "candle_tails": {
+  "BTCTMN": {
+   "p1_pct": -0.388,
+   "pct_traded_minutes_le_-0.5": 0.35,
+   "traded_minutes_per_day": 826,
+   "zero_win_2h_le_-0.5": 91.0,
+   "zero_win_4h_le_-0.5": 85.0,
+   "zero_win_2h_le_-0.6": 93.4,
+   "zero_win_4h_le_-0.6": 87.3
+  },
+  "ETHTMN": {
+   "p1_pct": -0.362,
+   "pct_traded_minutes_le_-0.5": 0.28,
+   "traded_minutes_per_day": 525,
+   "zero_win_2h_le_-0.5": 89.5,
+   "zero_win_4h_le_-0.5": 80.3,
+   "zero_win_2h_le_-0.6": 93.8,
+   "zero_win_4h_le_-0.6": 87.5
+  },
+  "SOLTMN": {
+   "p1_pct": -0.486,
+   "pct_traded_minutes_le_-0.5": 0.79,
+   "traded_minutes_per_day": 333,
+   "zero_win_2h_le_-0.5": 91.4,
+   "zero_win_4h_le_-0.5": 85.1,
+   "zero_win_2h_le_-0.6": 92.6,
+   "zero_win_4h_le_-0.6": 86.2
+  },
+  "XRPTMN": {
+   "p1_pct": -0.449,
+   "pct_traded_minutes_le_-0.5": 0.55,
+   "traded_minutes_per_day": 474,
+   "zero_win_2h_le_-0.5": 85.2,
+   "zero_win_4h_le_-0.5": 72.5,
+   "zero_win_2h_le_-0.6": 88.6,
+   "zero_win_4h_le_-0.6": 78.5
+  },
+  "DOGETMN": {
+   "p1_pct": -0.392,
+   "pct_traded_minutes_le_-0.5": 0.4,
+   "traded_minutes_per_day": 366,
+   "zero_win_2h_le_-0.5": 90.9,
+   "zero_win_4h_le_-0.5": 83.2,
+   "zero_win_2h_le_-0.6": 97.5,
+   "zero_win_4h_le_-0.6": 95.0
+  },
+  "PEPETMN": {
+   "p1_pct": -0.697,
+   "pct_traded_minutes_le_-0.5": 3.14,
+   "traded_minutes_per_day": 697,
+   "zero_win_2h_le_-0.5": 48.3,
+   "zero_win_4h_le_-0.5": 26.5,
+   "zero_win_2h_le_-0.6": 65.3,
+   "zero_win_4h_le_-0.6": 44.0
+  },
+  "BNBTMN": {
+   "p1_pct": -0.8,
+   "pct_traded_minutes_le_-0.5": 1.98,
+   "traded_minutes_per_day": 354,
+   "zero_win_2h_le_-0.5": 84.5,
+   "zero_win_4h_le_-0.5": 71.9,
+   "zero_win_2h_le_-0.6": 87.9,
+   "zero_win_4h_le_-0.6": 77.8
+  },
+  "ARBTMN": {
+   "p1_pct": -0.743,
+   "pct_traded_minutes_le_-0.5": 2.84,
+   "traded_minutes_per_day": 452,
+   "zero_win_2h_le_-0.5": 58.9,
+   "zero_win_4h_le_-0.5": 38.0,
+   "zero_win_2h_le_-0.6": 69.8,
+   "zero_win_4h_le_-0.6": 51.6
+  }
+ }
+}

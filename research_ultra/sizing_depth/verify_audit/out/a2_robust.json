@@ -1,0 +1,216 @@
+{
+ "repro_live_tick_ff": {
+  "trades": 69,
+  "mean": 0.23,
+  "sum": 15.88,
+  "win": 71.0,
+  "exits": {
+   "target": 43,
+   "time": 26
+  },
+  "by_mkt": {
+   "ARBTMN": {
+    "count": 23,
+    "mean": 0.1
+   },
+   "BNBTMN": {
+    "count": 13,
+    "mean": 0.42
+   },
+   "BTCTMN": {
+    "count": 3,
+    "mean": 0.369
+   },
+   "DOGETMN": {
+    "count": 1,
+    "mean": 0.355
+   },
+   "PEPETMN": {
+    "count": 22,
+    "mean": 0.201
+   },
+   "SOLTMN": {
+    "count": 3,
+    "mean": 0.171
+   },
+   "XRPTMN": {
+    "count": 4,
+    "mean": 0.429
+   }
+  }
+ },
+ "delay1_recheck": {
+  "trades": 14,
+  "mean": 0.077,
+  "sum": 1.08,
+  "win": 57.1,
+  "exits": {
+   "target": 8,
+   "time": 6
+  },
+  "by_mkt": {
+   "ARBTMN": {
+    "count": 4,
+    "mean": -0.084
+   },
+   "BNBTMN": {
+    "count": 3,
+    "mean": 0.311
+   },
+   "BTCTMN": {
+    "count": 1,
+    "mean": 0.12
+   },
+   "PEPETMN": {
+    "count": 5,
+    "mean": -0.102
+   },
+   "XRPTMN": {
+    "count": 1,
+    "mean": 0.874
+   }
+  }
+ },
+ "delay1_no_recheck": {
+  "trades": 55,
+  "mean": -0.537,
+  "sum": -29.51,
+  "win": 29.1,
+  "exits": {
+   "time": 31,
+   "target": 15,
+   "stop": 9
+  },
+  "by_mkt": {
+   "ARBTMN": {
+    "count": 20,
+    "mean": -0.745
+   },
+   "BNBTMN": {
+    "count": 7,
+    "mean": -0.391
+   },
+   "BTCTMN": {
+    "count": 3,
+    "mean": -0.869
+   },
+   "DOGETMN": {
+    "count": 1,
+    "mean": -1.63
+   },
+   "PEPETMN": {
+    "count": 20,
+    "mean": -0.327
+   },
+   "SOLTMN": {
+    "count": 1,
+    "mean": -0.438
+   },
+   "XRPTMN": {
+    "count": 3,
+    "mean": -0.217
+   }
+  }
+ },
+ "fullentry_nogap": {
+  "trades": 33,
+  "mean": 0.256,
+  "sum": 8.44,
+  "win": 72.7,
+  "exits": {
+   "target": 22,
+   "time": 11
+  },
+  "by_mkt": {
+   "ARBTMN": {
+    "count": 6,
+    "mean": -0.088
+   },
+   "BNBTMN": {
+    "count": 7,
+    "mean": 0.5
+   },
+   "BTCTMN": {
+    "count": 3,
+    "mean": 0.353
+   },
+   "DOGETMN": {
+    "count": 1,
+    "mean": 0.27
+   },
+   "PEPETMN": {
+    "count": 13,
+    "mean": 0.294
+   },
+   "SOLTMN": {
+    "count": 2,
+    "mean": 0.089
+   },
+   "XRPTMN": {
+    "count": 1,
+    "mean": 0.136
+   }
+  }
+ },
+ "nogap": {
+  "trades": 43,
+  "mean": 0.289,
+  "sum": 12.43,
+  "win": 79.1,
+  "exits": {
+   "target": 31,
+   "time": 12
+  },
+  "by_mkt": {
+   "ARBTMN": {
+    "count": 11,
+    "mean": 0.126
+   },
+   "BNBTMN": {
+    "count": 8,
+    "mean": 0.457
+   },
+   "BTCTMN": {
+    "count": 3,
+    "mean": 0.369
+   },
+   "DOGETMN": {
+    "count": 1,
+    "mean": 0.355
+   },
+   "PEPETMN": {
+    "count": 14,
+    "mean": 0.32
+   },
+   "SOLTMN": {
+    "count": 3,
+    "mean": 0.171
+   },
+   "XRPTMN": {
+    "count": 3,
+    "mean": 0.31
+   }
+  }
+ },
+ "base_stats": {
+  "n": 69,
+  "mean": 0.23,
+  "sd": 0.67,
+  "se": 0.081,
+  "boot95": [
+   0.077,
+   0.391
+  ],
+  "p_mean_le_0": 0.0016,
+  "mean_without_top5": 0.106,
+  "mean_without_top3": 0.145,
+  "top5_share_of_sum": 0.574,
+  "top5": [
+   1.338,
+   1.428,
+   1.629,
+   1.936,
+   2.775
+  ]
+ }
+}

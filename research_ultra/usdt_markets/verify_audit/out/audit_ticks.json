@@ -1,0 +1,921 @@
+{
+ "replays": {
+  "thr0.36|lat0|cross0.0": {
+   "n": 4,
+   "mean_pct": -0.002,
+   "sum_pct": -0.008,
+   "median_pct": 0.191,
+   "win_pct": 75.0,
+   "worst_pct": -0.765,
+   "best_pct": 0.375,
+   "se_mean_pct": 0.259,
+   "exits": {
+    "target": 3,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.071,
+   "sum_usdt_pnl": -0.0075,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:34",
+     "ret_pct": 0.153,
+     "why": "target",
+     "minutes": 20.016,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.365
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:42",
+     "ret_pct": 0.375,
+     "why": "target",
+     "minutes": 10.877,
+     "fill_usdt": 1.194,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.37
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:24",
+     "ret_pct": -0.765,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.364
+    }
+   ]
+  },
+  "thr0.36|lat0|cross0.3": {
+   "n": 4,
+   "mean_pct": -0.076,
+   "sum_pct": -0.306,
+   "median_pct": 0.191,
+   "win_pct": 75.0,
+   "worst_pct": -1.063,
+   "best_pct": 0.375,
+   "se_mean_pct": 0.332,
+   "exits": {
+    "target": 3,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.159,
+   "sum_usdt_pnl": -0.0168,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:34",
+     "ret_pct": 0.153,
+     "why": "target",
+     "minutes": 20.016,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.365
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:42",
+     "ret_pct": 0.375,
+     "why": "target",
+     "minutes": 10.877,
+     "fill_usdt": 1.194,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.37
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:24",
+     "ret_pct": -1.063,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.364
+    }
+   ]
+  },
+  "thr0.36|lat1|cross0.0": {
+   "n": 4,
+   "mean_pct": -0.152,
+   "sum_pct": -0.609,
+   "median_pct": -0.11,
+   "win_pct": 50.0,
+   "worst_pct": -0.764,
+   "best_pct": 0.375,
+   "se_mean_pct": 0.25,
+   "exits": {
+    "target": 2,
+    "time": 2
+   },
+   "depth_weighted_mean_pct": -0.249,
+   "sum_usdt_pnl": -0.0263,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:36",
+     "ret_pct": 0.104,
+     "why": "target",
+     "minutes": 19.974,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.297
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:45",
+     "ret_pct": 0.375,
+     "why": "target",
+     "minutes": 10.835,
+     "fill_usdt": 1.194,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.37
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:26",
+     "ret_pct": -0.764,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.342
+    }
+   ]
+  },
+  "thr0.36|lat1|cross0.3": {
+   "n": 4,
+   "mean_pct": -0.301,
+   "sum_pct": -1.206,
+   "median_pct": -0.26,
+   "win_pct": 50.0,
+   "worst_pct": -1.062,
+   "best_pct": 0.375,
+   "se_mean_pct": 0.33,
+   "exits": {
+    "target": 2,
+    "time": 2
+   },
+   "depth_weighted_mean_pct": -0.425,
+   "sum_usdt_pnl": -0.045,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:36",
+     "ret_pct": 0.104,
+     "why": "target",
+     "minutes": 19.974,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.297
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:45",
+     "ret_pct": 0.375,
+     "why": "target",
+     "minutes": 10.835,
+     "fill_usdt": 1.194,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.37
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:26",
+     "ret_pct": -1.062,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.342
+    }
+   ]
+  },
+  "thr0.36|lat2|cross0.0": {
+   "n": 4,
+   "mean_pct": -0.168,
+   "sum_pct": -0.673,
+   "median_pct": -0.11,
+   "win_pct": 50.0,
+   "worst_pct": -0.755,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.235,
+   "exits": {
+    "target": 2,
+    "time": 2
+   },
+   "depth_weighted_mean_pct": -0.168,
+   "sum_usdt_pnl": -0.0211,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:39",
+     "ret_pct": 0.104,
+     "why": "target",
+     "minutes": 19.932,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.28
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:47",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.794,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.306
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:29",
+     "ret_pct": -0.755,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.385
+    }
+   ]
+  },
+  "thr0.36|lat2|cross0.3": {
+   "n": 4,
+   "mean_pct": -0.318,
+   "sum_pct": -1.27,
+   "median_pct": -0.26,
+   "win_pct": 50.0,
+   "worst_pct": -1.053,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.316,
+   "exits": {
+    "target": 2,
+    "time": 2
+   },
+   "depth_weighted_mean_pct": -0.318,
+   "sum_usdt_pnl": -0.0398,
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "14:51:39",
+     "ret_pct": 0.104,
+     "why": "target",
+     "minutes": 19.932,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.365,
+     "sig_spread_pct": 0.17,
+     "sig_top_ask_usdt": 11.54,
+     "binance_60s_pct": 0.289,
+     "binance_180s_pct": 0.412,
+     "fill_buy_dev_pct": -0.28
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:47",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.794,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.37,
+     "sig_spread_pct": 0.068,
+     "sig_top_ask_usdt": 1.19,
+     "binance_60s_pct": 0.127,
+     "binance_180s_pct": 0.135,
+     "fill_buy_dev_pct": -0.306
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "14:51:29",
+     "ret_pct": -1.053,
+     "why": "time",
+     "minutes": 25.017,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.364,
+     "sig_spread_pct": 0.049,
+     "sig_top_ask_usdt": 5.25,
+     "binance_60s_pct": 0.442,
+     "binance_180s_pct": 0.638,
+     "fill_buy_dev_pct": -0.385
+    }
+   ]
+  },
+  "thr0.45|lat0|cross0.0": {
+   "n": 2,
+   "mean_pct": 0.266,
+   "sum_pct": 0.532,
+   "median_pct": 0.266,
+   "win_pct": 100.0,
+   "worst_pct": 0.229,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.036,
+   "exits": {
+    "target": 2
+   },
+   "depth_weighted_mean_pct": 0.266,
+   "sum_usdt_pnl": 0.0166,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:52",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.71,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.526
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    }
+   ]
+  },
+  "thr0.45|lat0|cross0.3": {
+   "n": 2,
+   "mean_pct": 0.266,
+   "sum_pct": 0.532,
+   "median_pct": 0.266,
+   "win_pct": 100.0,
+   "worst_pct": 0.229,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.036,
+   "exits": {
+    "target": 2
+   },
+   "depth_weighted_mean_pct": 0.266,
+   "sum_usdt_pnl": 0.0166,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:52",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.71,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.526
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    }
+   ]
+  },
+  "thr0.45|lat1|cross0.0": {
+   "n": 2,
+   "mean_pct": -0.011,
+   "sum_pct": -0.022,
+   "median_pct": -0.011,
+   "win_pct": 50.0,
+   "worst_pct": -0.324,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.313,
+   "exits": {
+    "target": 1,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.011,
+   "sum_usdt_pnl": -0.0007,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:55",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.669,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.548
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    }
+   ]
+  },
+  "thr0.45|lat1|cross0.3": {
+   "n": 2,
+   "mean_pct": -0.16,
+   "sum_pct": -0.321,
+   "median_pct": -0.16,
+   "win_pct": 50.0,
+   "worst_pct": -0.623,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.463,
+   "exits": {
+    "target": 1,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.16,
+   "sum_usdt_pnl": -0.01,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:55",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.669,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.548
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    }
+   ]
+  },
+  "thr0.45|lat2|cross0.0": {
+   "n": 2,
+   "mean_pct": -0.011,
+   "sum_pct": -0.022,
+   "median_pct": -0.011,
+   "win_pct": 50.0,
+   "worst_pct": -0.324,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.313,
+   "exits": {
+    "target": 1,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.011,
+   "sum_usdt_pnl": -0.0007,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:57",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.627,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.491
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    }
+   ]
+  },
+  "thr0.45|lat2|cross0.3": {
+   "n": 2,
+   "mean_pct": -0.16,
+   "sum_pct": -0.321,
+   "median_pct": -0.16,
+   "win_pct": 50.0,
+   "worst_pct": -0.623,
+   "best_pct": 0.302,
+   "se_mean_pct": 0.463,
+   "exits": {
+    "target": 1,
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.16,
+   "sum_usdt_pnl": -0.01,
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "15:03:57",
+     "ret_pct": 0.302,
+     "why": "target",
+     "minutes": 10.627,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.526,
+     "sig_spread_pct": 0.07,
+     "sig_top_ask_usdt": 771.09,
+     "binance_60s_pct": 0.387,
+     "binance_180s_pct": 0.28,
+     "fill_buy_dev_pct": -0.491
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    }
+   ]
+  },
+  "thr0.60|lat0|cross0.0": {
+   "n": 1,
+   "mean_pct": 0.229,
+   "sum_pct": 0.229,
+   "median_pct": 0.229,
+   "win_pct": 100.0,
+   "worst_pct": 0.229,
+   "best_pct": 0.229,
+   "exits": {
+    "target": 1
+   },
+   "depth_weighted_mean_pct": 0.229,
+   "sum_usdt_pnl": 0.0072,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    }
+   ]
+  },
+  "thr0.60|lat0|cross0.3": {
+   "n": 1,
+   "mean_pct": 0.229,
+   "sum_pct": 0.229,
+   "median_pct": 0.229,
+   "win_pct": 100.0,
+   "worst_pct": 0.229,
+   "best_pct": 0.229,
+   "exits": {
+    "target": 1
+   },
+   "depth_weighted_mean_pct": 0.229,
+   "sum_usdt_pnl": 0.0072,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:18",
+     "ret_pct": 0.229,
+     "why": "target",
+     "minutes": 0.375,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.601
+    }
+   ]
+  },
+  "thr0.60|lat1|cross0.0": {
+   "n": 1,
+   "mean_pct": -0.324,
+   "sum_pct": -0.324,
+   "median_pct": -0.324,
+   "win_pct": 0.0,
+   "worst_pct": -0.324,
+   "best_pct": -0.324,
+   "exits": {
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.324,
+   "sum_usdt_pnl": -0.0101,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    }
+   ]
+  },
+  "thr0.60|lat1|cross0.3": {
+   "n": 1,
+   "mean_pct": -0.623,
+   "sum_pct": -0.623,
+   "median_pct": -0.623,
+   "win_pct": 0.0,
+   "worst_pct": -0.623,
+   "best_pct": -0.623,
+   "exits": {
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.623,
+   "sum_usdt_pnl": -0.0195,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:20",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.123
+    }
+   ]
+  },
+  "thr0.60|lat2|cross0.0": {
+   "n": 1,
+   "mean_pct": -0.324,
+   "sum_pct": -0.324,
+   "median_pct": -0.324,
+   "win_pct": 0.0,
+   "worst_pct": -0.324,
+   "best_pct": -0.324,
+   "exits": {
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.324,
+   "sum_usdt_pnl": -0.0101,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.324,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    }
+   ]
+  },
+  "thr0.60|lat2|cross0.3": {
+   "n": 1,
+   "mean_pct": -0.623,
+   "sum_pct": -0.623,
+   "median_pct": -0.623,
+   "win_pct": 0.0,
+   "worst_pct": -0.623,
+   "best_pct": -0.623,
+   "exits": {
+    "time": 1
+   },
+   "depth_weighted_mean_pct": -0.623,
+   "sum_usdt_pnl": -0.0195,
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "15:25:23",
+     "ret_pct": -0.623,
+     "why": "time",
+     "minutes": 25.036,
+     "fill_usdt": 3.13,
+     "sig_buy_dev_pct": -0.601,
+     "sig_spread_pct": 0.009,
+     "sig_top_ask_usdt": 5.0,
+     "binance_60s_pct": 0.499,
+     "binance_180s_pct": 0.573,
+     "fill_buy_dev_pct": -0.059
+    }
+   ]
+  }
+ },
+ "signal_ticks_by_minute": {
+  "2026-10-21 14:51:00+00:00": "['BTCUSDT', 'XRPUSDT']",
+  "2026-10-21 15:03:00+00:00": "['ETHUSDT']",
+  "2026-10-21 15:04:00+00:00": "['ETHUSDT']",
+  "2026-10-21 15:06:00+00:00": "['ETHUSDT']",
+  "2026-10-21 15:09:00+00:00": "['ETHUSDT']",
+  "2026-10-21 15:10:00+00:00": "['ETHUSDT']",
+  "2026-10-21 15:25:00+00:00": "['SOLUSDT']"
+ },
+ "binance_btc_activity": {
+  "shadow_window_mean_abs_1m_pct": 0.0583,
+  "7d_mean_abs_1m_pct": 0.0307,
+  "shadow_window_share_abs_1m_gt_0.15pct": 5.56,
+  "7d_share_abs_1m_gt_0.15pct": 1.27,
+  "shadow_window_max_5m_up_pct": 0.521,
+  "7d_5m_up_gt_0.3pct_events_per_day": 7.43,
+  "shadow_window_5m_up_gt_0.3pct_events": 4,
+  "shadow_window_hours": 1.78
+ }
+}

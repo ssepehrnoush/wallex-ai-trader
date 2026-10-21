@@ -1,0 +1,9 @@
+# Tested on Python 3.14.4. Versions are the ones installed in the bot's own venv.
+numpy==2.5.4
+pandas==3.0.6
+httpx==0.28.1
+openai==3.35.1
+python-dotenv==1.2.4
+mcp==1.30.0
+# only research/wallex_public.py (candle download helper)
+requests==2.34.2

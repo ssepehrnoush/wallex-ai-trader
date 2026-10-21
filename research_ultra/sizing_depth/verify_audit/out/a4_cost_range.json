@@ -1,0 +1,44 @@
+{
+ "author base (69 tr, +0.230%)": {
+  "trades_45h": 18.9,
+  "ret_0.4_pct": 0.675,
+  "gain_0.7_vs_0.4_pp": 0.476,
+  "gain_1.0_vs_0.4_pp": 0.693
+ },
+ "base rate, mean without top-5 trades (+0.106%)": {
+  "trades_45h": 18.9,
+  "ret_0.4_pct": 0.311,
+  "gain_0.7_vs_0.4_pp": 0.219,
+  "gain_1.0_vs_0.4_pp": 0.319
+ },
+ "full-spread entry (51 tr, +0.159%)": {
+  "trades_45h": 14.0,
+  "ret_0.4_pct": 0.345,
+  "gain_0.7_vs_0.4_pp": 0.243,
+  "gain_1.0_vs_0.4_pp": 0.354
+ },
+ "full-spread entry + no USDT gap (33 tr, +0.256%)": {
+  "trades_45h": 9.0,
+  "ret_0.4_pct": 0.359,
+  "gain_0.7_vs_0.4_pp": 0.253,
+  "gain_1.0_vs_0.4_pp": 0.369
+ },
+ "1-min delay, signal must persist (14 tr, +0.077%)": {
+  "trades_45h": 3.8,
+  "ret_0.4_pct": 0.046,
+  "gain_0.7_vs_0.4_pp": 0.032,
+  "gain_1.0_vs_0.4_pp": 0.047
+ },
+ "author rate x0.29 (base mean)": {
+  "trades_45h": 5.5,
+  "ret_0.4_pct": 0.195,
+  "gain_0.7_vs_0.4_pp": 0.138,
+  "gain_1.0_vs_0.4_pp": 0.201
+ },
+ "edge -0.20%/trade (downside if live edge is negative), base rate": {
+  "trades_45h": 18.9,
+  "ret_0.4_pct": -0.587,
+  "gain_0.7_vs_0.4_pp": -0.414,
+  "gain_1.0_vs_0.4_pp": -0.602
+ }
+}

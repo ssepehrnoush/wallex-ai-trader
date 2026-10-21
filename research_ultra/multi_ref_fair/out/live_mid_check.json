@@ -1,0 +1,82 @@
+{
+ "ARBTMN": {
+  "ticks_compared": 189,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 2.65,
+   "0.1": 0.53,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0407,
+  "binance_mid_typical_step_pct": 0.051
+ },
+ "BNBTMN": {
+  "ticks_compared": 189,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0283,
+  "binance_mid_typical_step_pct": 0.007
+ },
+ "BTCTMN": {
+  "ticks_compared": 377,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0169,
+  "binance_mid_typical_step_pct": 0.003
+ },
+ "DOGETMN": {
+  "ticks_compared": 377,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 1.33,
+   "0.1": 0.27,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0299,
+  "binance_mid_typical_step_pct": 0.012
+ },
+ "ETHTMN": {
+  "ticks_compared": 377,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 0.8,
+   "0.1": 0.0,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0229,
+  "binance_mid_typical_step_pct": 0.0055
+ },
+ "PEPETMN": {
+  "ticks_compared": 189,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 38.1,
+   "0.1": 10.58,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.1076,
+  "binance_mid_typical_step_pct": 0.2132
+ },
+ "SOLTMN": {
+  "ticks_compared": 377,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0232,
+  "binance_mid_typical_step_pct": 0.01
+ },
+ "XRPTMN": {
+  "ticks_compared": 377,
+  "binance_mid_vs_median_abs_gt_pct": {
+   "0.05": 0.53,
+   "0.1": 0.27,
+   "0.2": 0.0
+  },
+  "p95_abs_pct": 0.0253,
+  "binance_mid_typical_step_pct": 0.008
+ }
+}

@@ -1,0 +1,72 @@
+now 2026-10-21 18:27:00+00:00 remaining days 1.974 enabled now ['BTCTMN', 'ETHTMN', 'SOLTMN', 'XRPTMN', 'DOGETMN', 'PEPETMN', 'ARBTMN']
+repro (mine, stored): {'BTCTMN': (3, 3), 'ETHTMN': (0, 0), 'SOLTMN': (2, 2), 'XRPTMN': (2, 2), 'DOGETMN': (1, 1)}
+
+[repro] pooled: {'trades': 8, 'per_day': 1.168, 'mean_ret_pct': 0.429, 'median_ret_pct': 0.176, 'sum_ret_pct': 3.432, 'win_pct': 100.0, 'exits': {'target': 8}}
+  BTCTMN   hs=0.029% days=6.85 trades=3 /day=0.438 mean=0.34 sum=1.02 win=100.0 exits={'target': 3}
+  ETHTMN   hs=0.093% days=6.85 trades=0 /day=0.0 mean=None sum=0.0 win=None exits={}
+  SOLTMN   hs=0.134% days=6.84 trades=2 /day=0.292 mean=0.057 sum=0.113 win=100.0 exits={'target': 2}
+  XRPTMN   hs=0.189% days=6.84 trades=2 /day=0.292 mean=0.969 sum=1.938 win=100.0 exits={'target': 2}
+  DOGETMN  hs=0.081% days=6.85 trades=1 /day=0.146 mean=0.362 sum=0.362 win=100.0 exits={'target': 1}
+
+[bt_orig] pooled: {'trades': 65, 'per_day': 9.493, 'mean_ret_pct': 0.325, 'median_ret_pct': 0.209, 'sum_ret_pct': 21.094, 'win_pct': 69.2, 'exits': {'target': 59, 'time': 6}}
+  BTCTMN   hs=0.029% days=6.85 trades=3 /day=0.438 mean=0.34 sum=1.02 win=100.0 exits={'target': 3}
+  ETHTMN   hs=0.093% days=6.85 trades=0 /day=0.0 mean=None sum=0.0 win=None exits={}
+  SOLTMN   hs=0.134% days=6.84 trades=2 /day=0.292 mean=0.057 sum=0.113 win=100.0 exits={'target': 2}
+  XRPTMN   hs=0.189% days=6.84 trades=2 /day=0.292 mean=0.969 sum=1.938 win=100.0 exits={'target': 2}
+  DOGETMN  hs=0.081% days=6.85 trades=1 /day=0.146 mean=0.362 sum=0.362 win=100.0 exits={'target': 1}
+  PEPETMN  hs=0.020% days=6.85 trades=27 /day=3.942 mean=0.32 sum=8.632 win=70.4 exits={'target': 25, 'time': 2}
+  BNBTMN   hs=0.209% days=6.85 trades=9 /day=1.314 mean=0.289 sum=2.603 win=55.6 exits={'target': 7, 'time': 2}
+  ARBTMN   hs=0.234% days=6.85 trades=21 /day=3.067 mean=0.306 sum=6.426 win=61.9 exits={'target': 19, 'time': 2}
+
+[live_rule] pooled: {'trades': 74, 'per_day': 10.807, 'mean_ret_pct': 0.279, 'median_ret_pct': 0.243, 'sum_ret_pct': 20.666, 'win_pct': 71.6, 'exits': {'target': 47, 'time': 27}}
+  BTCTMN   hs=0.016% days=6.85 trades=3 /day=0.438 mean=0.367 sum=1.101 win=100.0 exits={'target': 3}
+  ETHTMN   hs=0.049% days=6.85 trades=2 /day=0.292 mean=-0.086 sum=-0.173 win=50.0 exits={'time': 1, 'target': 1}
+  SOLTMN   hs=0.048% days=6.84 trades=5 /day=0.731 mean=0.25 sum=1.25 win=100.0 exits={'target': 5}
+  XRPTMN   hs=0.062% days=6.84 trades=4 /day=0.584 mean=0.482 sum=1.928 win=100.0 exits={'target': 4}
+  DOGETMN  hs=0.057% days=6.85 trades=1 /day=0.146 mean=0.411 sum=0.411 win=100.0 exits={'target': 1}
+  PEPETMN  hs=0.045% days=6.85 trades=23 /day=3.358 mean=0.349 sum=8.035 win=73.9 exits={'target': 15, 'time': 8}
+  BNBTMN   hs=0.073% days=6.85 trades=13 /day=1.898 mean=0.42 sum=5.461 win=69.2 exits={'target': 9, 'time': 4}
+  ARBTMN   hs=0.215% days=6.85 trades=23 /day=3.359 mean=0.115 sum=2.654 win=56.5 exits={'time': 14, 'target': 9}
+
+[current_policy] pooled: {'trades': 47, 'per_day': 6.864, 'mean_ret_pct': 0.336, 'median_ret_pct': 0.271, 'sum_ret_pct': 15.795, 'win_pct': 78.7, 'exits': {'target': 33, 'time': 14}}
+  BTCTMN   hs=0.016% days=6.85 trades=3 /day=0.438 mean=0.367 sum=1.101 win=100.0 exits={'target': 3}
+  ETHTMN   hs=0.049% days=6.85 trades=0 /day=0.0 mean=None sum=0.0 win=None exits={}
+  SOLTMN   hs=0.048% days=6.84 trades=5 /day=0.731 mean=0.25 sum=1.25 win=100.0 exits={'target': 5}
+  XRPTMN   hs=0.062% days=6.84 trades=4 /day=0.584 mean=0.482 sum=1.928 win=100.0 exits={'target': 4}
+  DOGETMN  hs=0.057% days=6.85 trades=1 /day=0.146 mean=0.411 sum=0.411 win=100.0 exits={'target': 1}
+  PEPETMN  hs=0.045% days=6.85 trades=18 /day=2.628 mean=0.311 sum=5.589 win=72.2 exits={'target': 12, 'time': 6}
+  ARBTMN   hs=0.215% days=6.85 trades=16 /day=2.337 mean=0.345 sum=5.517 win=68.8 exits={'time': 8, 'target': 8}
+
+live_rule halves: {'first_4d': {'trades': 31, 'per_day': 7.75, 'mean_ret_pct': 0.231, 'median_ret_pct': 0.241, 'sum_ret_pct': 7.162, 'win_pct': 74.2, 'exits': {'target': 22, 'time': 9}, 'days': 4.0}, 'last_3d': {'trades': 43, 'per_day': 15.091, 'mean_ret_pct': 0.314, 'median_ret_pct': 0.245, 'sum_ret_pct': 13.504, 'win_pct': 69.8, 'exits': {'target': 25, 'time': 18}, 'days': 2.85}}
+live_rule trades by day: {'2026-10-15': 11, '2026-10-16': 6, '2026-10-17': 11, '2026-10-18': 11, '2026-10-19': 12, '2026-10-20': 16, '2026-10-21': 7}
+
+forecast:
+  current_policy/current_policy: bt_trades=47 rate/day=6.863 E[N]=13.55 fixed-rate {'q5': 8, 'q50': 13, 'q95': 20, 'p_zero': 0.0} predictive q5/q50/q95=[8, 14, 22] P0=0.0 mean/trade=0.336 account={'mean_pct': 0.65, 'q5_pct': 0.118, 'q50_pct': 0.611, 'q95_pct': 1.317, 'mean_tmn': 32519, 'p_negative': 0.016}
+  enabled_now/live_rule: bt_trades=61 rate/day=8.907 E[N]=17.59 fixed-rate {'q5': 11, 'q50': 17, 'q95': 25, 'p_zero': 0.0} predictive q5/q50/q95=[11, 18, 27] P0=0.0 mean/trade=0.249 account={'mean_pct': 0.768, 'q5_pct': -0.106, 'q50_pct': 0.653, 'q95_pct': 1.998, 'mean_tmn': 38376, 'p_negative': 0.083}
+  enabled_now/bt_orig: bt_trades=56 rate/day=8.176 E[N]=16.14 fixed-rate {'q5': 10, 'q50': 16, 'q95': 23, 'p_zero': 0.0} predictive q5/q50/q95=[10, 17, 25] P0=0.0 mean/trade=0.33 account={'mean_pct': 0.937, 'q5_pct': 0.091, 'q50_pct': 0.811, 'q95_pct': 2.183, 'mean_tmn': 46827, 'p_negative': 0.027}
+  all_8/live_rule: bt_trades=74 rate/day=10.805 E[N]=21.33 fixed-rate {'q5': 14, 'q50': 21, 'q95': 29, 'p_zero': 0.0} predictive q5/q50/q95=[14, 22, 32] P0=0.0 mean/trade=0.279 account={'mean_pct': 1.037, 'q5_pct': 0.062, 'q50_pct': 0.936, 'q95_pct': 2.323, 'mean_tmn': 51846, 'p_negative': 0.038}
+  all_8/bt_orig: bt_trades=65 rate/day=9.49 E[N]=18.74 fixed-rate {'q5': 12, 'q50': 19, 'q95': 26, 'p_zero': 0.0} predictive q5/q50/q95=[12, 20, 29] P0=0.0 mean/trade=0.325 account={'mean_pct': 1.066, 'q5_pct': 0.158, 'q50_pct': 0.948, 'q95_pct': 2.352, 'mean_tmn': 53305, 'p_negative': 0.018}
+
+share of windows with zero entries (enabled markets, live_rule): {'1.70h': 0.638, '3.80h': 0.377, '6.00h': 0.215, '12.00h': 0.037, '24.00h': 0.0}
+
+dev distribution (share of minutes, %):
+  BTCTMN   7d p1=-0.386 <=-0.5:0.355 <=-0.7:0.071 | live(last) p1=-0.142 <=-0.5:0.000 | live(min) p1=-0.149 <=-0.5:0.000 <=-0.7:0.000
+  ETHTMN   7d p1=-0.362 <=-0.5:0.294 <=-0.7:0.059 | live(last) p1=-0.247 <=-0.5:0.000 | live(min) p1=-0.368 <=-0.5:0.000 <=-0.7:0.000
+  SOLTMN   7d p1=-0.486 <=-0.5:0.927 <=-0.7:0.258 | live(last) p1=-0.106 <=-0.5:0.000 | live(min) p1=-0.161 <=-0.5:0.000 <=-0.7:0.000
+  XRPTMN   7d p1=-0.445 <=-0.5:0.558 <=-0.7:0.197 | live(last) p1=-0.262 <=-0.5:0.000 | live(min) p1=-0.283 <=-0.5:0.000 <=-0.7:0.000
+  DOGETMN  7d p1=-0.392 <=-0.5:0.459 <=-0.7:0.046 | live(last) p1=-0.169 <=-0.5:0.000 | live(min) p1=-0.241 <=-0.5:0.000 <=-0.7:0.000
+  PEPETMN  7d p1=-0.692 <=-0.5:3.158 <=-0.7:0.960 | live(last) p1=-0.379 <=-0.5:0.000 | live(min) p1=-0.382 <=-0.5:0.000 <=-0.7:0.000
+  BNBTMN   7d p1=-0.798 <=-0.5:2.262 <=-0.7:1.299 | live(last) p1=-0.277 <=-0.5:0.000 | live(min) p1=-0.308 <=-0.5:0.000 <=-0.7:0.000
+  ARBTMN   7d p1=-0.746 <=-0.5:3.038 <=-0.7:1.263 | live(last) p1=-0.229 <=-0.5:0.971 | live(min) p1=-0.587 <=-0.5:2.913 <=-0.7:0.000
+
+global volatility (hourly std of 1m returns, %):
+  BTCTMN   7d median=0.0368 IQR=[0.0253,0.0485] live=0.0307 pct-rank=34.7
+  ETHTMN   7d median=0.0546 IQR=[0.041,0.0731] live=0.0495 pct-rank=40.1
+  SOLTMN   7d median=0.067 IQR=[0.0521,0.088] live=0.0618 pct-rank=45.5
+  XRPTMN   7d median=0.0644 IQR=[0.0476,0.0823] live=0.0713 pct-rank=60.5
+  DOGETMN  7d median=0.0699 IQR=[0.0536,0.0868] live=0.0559 pct-rank=32.9
+  PEPETMN  7d median=0.1842 IQR=[0.1672,0.2099] live=0.1932 pct-rank=60.5
+  BNBTMN   7d median=0.0361 IQR=[0.0283,0.0478] live=0.0281 pct-rank=25.1
+  ARBTMN   7d median=0.1351 IQR=[0.1129,0.1697] live=0.1319 pct-rank=47.3
+
+entries vs global moves: {'BTCTMN': {'all_minutes_median_abs15_pct': 0.081, 'entry_minutes_median_abs15_pct': 0.083, 'entries': 3}, 'ETHTMN': {'all_minutes_median_abs15_pct': 0.125, 'entry_minutes_median_abs15_pct': 1.222, 'entries': 2}, 'SOLTMN': {'all_minutes_median_abs15_pct': 0.153, 'entry_minutes_median_abs15_pct': 0.384, 'entries': 5}, 'XRPTMN': {'all_minutes_median_abs15_pct': 0.145, 'entry_minutes_median_abs15_pct': 0.382, 'entries': 4}, 'DOGETMN': {'all_minutes_median_abs15_pct': 0.151, 'entry_minutes_median_abs15_pct': 1.164, 'entries': 1}, 'PEPETMN': {'all_minutes_median_abs15_pct': 0.25, 'entry_minutes_median_abs15_pct': 0.498, 'entries': 23}, 'BNBTMN': {'all_minutes_median_abs15_pct': 0.084, 'entry_minutes_median_abs15_pct': 0.071, 'entries': 13}, 'ARBTMN': {'all_minutes_median_abs15_pct': 0.315, 'entry_minutes_median_abs15_pct': 0.755, 'entries': 23}}

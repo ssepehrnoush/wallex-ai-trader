@@ -1,0 +1,1260 @@
+{
+ "snapshot_utc": "2026-10-21 18:35:27",
+ "live_ticks_first": "2026-10-21 16:45:30",
+ "live_ticks_last": "2026-10-21 18:35:24",
+ "live_hours": 1.83,
+ "decision_events": {
+  "equity": 111,
+  "policy_review": 6,
+  "warm_start": 3,
+  "start": 3
+ },
+ "unparseable_lines": 0,
+ "flagged_events": [],
+ "equity_gaps_over_90s": [],
+ "state": {
+  "t": "2026-10-21T18:35:00+00:00",
+  "equity_tmn": 5000000,
+  "return_pct": 0.0,
+  "drawdown_pct": 0.0,
+  "halted": "",
+  "positions": {},
+  "trades": 0
+ },
+ "stop_flag_exists": false,
+ "flatten_flag_exists": false,
+ "policy_timeline": [
+  {
+   "t": "2026-10-21T16:45:30+00:00",
+   "restart_default_policy": {
+    "enabled": true,
+    "entry_dev": 0.006,
+    "exit_slack": 0.0005,
+    "stop_pct": 0.009,
+    "max_hold_min": 25,
+    "size_factor": 0.5,
+    "reason": "default before first AI review"
+   }
+  },
+  {
+   "t": "2026-10-21T16:48:54+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "gpt-5.4-mini",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "ETHTMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "XRPTMN": {
+     "enabled": false,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "PEPETMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "BNBTMN": {
+     "enabled": false,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    },
+    "ARBTMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.007,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    }
+   }
+  },
+  {
+   "t": "2026-10-21T16:52:50+00:00",
+   "restart_default_policy": {
+    "enabled": true,
+    "entry_dev": 0.006,
+    "exit_slack": 0.0005,
+    "stop_pct": 0.009,
+    "max_hold_min": 25,
+    "size_factor": 0.5,
+    "reason": "default before first AI review"
+   }
+  },
+  {
+   "t": "2026-10-21T16:56:17+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "gpt-5.4-mini via MCP[engine, wallex-official]",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "ETHTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "XRPTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "PEPETMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "BNBTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "ARBTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    }
+   }
+  },
+  {
+   "t": "2026-10-21T17:16:14+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "gpt-5.4-mini via MCP[engine, wallex-official]",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "ETHTMN": {
+     "enabled": false,
+     "entry_dev": 0.0085,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "XRPTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "PEPETMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "BNBTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "ARBTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    }
+   }
+  },
+  {
+   "t": "2026-10-21T17:36:17+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "gpt-5.4-mini via MCP[engine, wallex-official]",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.006,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "ETHTMN": {
+     "enabled": false,
+     "entry_dev": 0.0085,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.25
+    },
+    "XRPTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.25
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.35
+    },
+    "PEPETMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    },
+    "BNBTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.25
+    },
+    "ARBTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.4
+    }
+   }
+  },
+  {
+   "t": "2026-10-21T17:51:56+00:00",
+   "restart_default_policy": {
+    "enabled": true,
+    "entry_dev": 0.006,
+    "exit_slack": 0.0005,
+    "stop_pct": 0.009,
+    "max_hold_min": 25,
+    "size_factor": 0.5,
+    "reason": "default before first AI review"
+   }
+  },
+  {
+   "t": "2026-10-21T17:55:47+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "openai/gpt-5.4-mini via MCP[engine, wallex-official]",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "ETHTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "XRPTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "PEPETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "BNBTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "ARBTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 15.0,
+     "size_factor": 0.4
+    }
+   }
+  },
+  {
+   "t": "2026-10-21T18:25:41+00:00",
+   "risk_mode": "defensive",
+   "analyst_model": "openai/gpt-5.4-mini via MCP[engine, wallex-official]",
+   "policies": {
+    "BTCTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "ETHTMN": {
+     "enabled": true,
+     "entry_dev": 0.008,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "SOLTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "XRPTMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "DOGETMN": {
+     "enabled": true,
+     "entry_dev": 0.007,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "PEPETMN": {
+     "enabled": true,
+     "entry_dev": 0.008,
+     "stop_pct": 0.008,
+     "max_hold_min": 20.0,
+     "size_factor": 0.3
+    },
+    "BNBTMN": {
+     "enabled": false,
+     "entry_dev": 0.007,
+     "stop_pct": 0.009,
+     "max_hold_min": 25.0,
+     "size_factor": 0.4
+    },
+    "ARBTMN": {
+     "enabled": true,
+     "entry_dev": 0.008,
+     "stop_pct": 0.008,
+     "max_hold_min": 15.0,
+     "size_factor": 0.3
+    }
+   }
+  }
+ ],
+ "size_tmn_at_factor_0.4": 827586,
+ "live_by_market": {
+  "BTCTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.21,
+   "buy_dev_min_at": "2026-10-21 18:25:43",
+   "spread_at_min_pct": 0.015,
+   "buy_dev_p01_pct": -0.185,
+   "buy_dev_p1_pct": -0.144,
+   "buy_dev_p5_pct": -0.111,
+   "buy_dev_p50_pct": 0.087,
+   "share_buy_dev_positive_pct": 65.2,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.03,
+   "spread_p90_pct": 0.104,
+   "spread_p99_pct": 0.186,
+   "spread_max_pct": 0.236,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.233,
+   "baseline_last_pct": -0.133,
+   "baseline_min_pct": -0.233,
+   "baseline_max_pct": -0.118,
+   "premium_first_pct": -0.04,
+   "premium_last_pct": -0.045,
+   "premium_minus_baseline_median_pct": 0.068,
+   "top_ask_tmn_median": 57972568,
+   "top_ask_tmn_p10": 1572591,
+   "share_top_ask_below_size_pct": 6.2,
+   "share_top_ask_below_105k_pct": 2.0,
+   "top_bid_tmn_median": 26930059,
+   "share_top_bid_below_size_pct": 10.4,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "ETHTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.406,
+   "buy_dev_min_at": "2026-10-21 17:37:26",
+   "spread_at_min_pct": 0.0,
+   "buy_dev_p01_pct": -0.398,
+   "buy_dev_p1_pct": -0.262,
+   "buy_dev_p5_pct": -0.194,
+   "buy_dev_p50_pct": 0.049,
+   "share_buy_dev_positive_pct": 64.0,
+   "minutes_below": {
+    "0.3%": 0.75,
+    "0.4%": 0.12,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 2,
+    "0.4%": 1,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.102,
+   "spread_p90_pct": 0.233,
+   "spread_p99_pct": 0.281,
+   "spread_max_pct": 0.417,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.116,
+   "baseline_last_pct": -0.107,
+   "baseline_min_pct": -0.129,
+   "baseline_max_pct": -0.097,
+   "premium_first_pct": -0.209,
+   "premium_last_pct": 0.031,
+   "premium_minus_baseline_median_pct": -0.005,
+   "top_ask_tmn_median": 99996239,
+   "top_ask_tmn_p10": 4678872,
+   "share_top_ask_below_size_pct": 2.1,
+   "share_top_ask_below_105k_pct": 0.0,
+   "top_bid_tmn_median": 13300763,
+   "share_top_bid_below_size_pct": 6.7,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "SOLTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.161,
+   "buy_dev_min_at": "2026-10-21 18:25:28",
+   "spread_at_min_pct": 0.01,
+   "buy_dev_p01_pct": -0.156,
+   "buy_dev_p1_pct": -0.119,
+   "buy_dev_p5_pct": -0.082,
+   "buy_dev_p50_pct": 0.067,
+   "share_buy_dev_positive_pct": 74.6,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.095,
+   "spread_p90_pct": 0.227,
+   "spread_p99_pct": 0.376,
+   "spread_max_pct": 0.476,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.055,
+   "baseline_last_pct": -0.034,
+   "baseline_min_pct": -0.062,
+   "baseline_max_pct": -0.034,
+   "premium_first_pct": -0.108,
+   "premium_last_pct": 0.096,
+   "premium_minus_baseline_median_pct": 0.007,
+   "top_ask_tmn_median": 32686529,
+   "top_ask_tmn_p10": 843083,
+   "share_top_ask_below_size_pct": 6.2,
+   "share_top_ask_below_105k_pct": 0.8,
+   "top_bid_tmn_median": 11369180,
+   "share_top_bid_below_size_pct": 6.6,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "XRPTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.352,
+   "buy_dev_min_at": "2026-10-21 18:05:17",
+   "spread_at_min_pct": 0.0,
+   "buy_dev_p01_pct": -0.325,
+   "buy_dev_p1_pct": -0.273,
+   "buy_dev_p5_pct": -0.141,
+   "buy_dev_p50_pct": 0.094,
+   "share_buy_dev_positive_pct": 75.0,
+   "minutes_below": {
+    "0.3%": 0.5,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.124,
+   "spread_p90_pct": 0.303,
+   "spread_p99_pct": 0.394,
+   "spread_max_pct": 0.485,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.058,
+   "baseline_last_pct": -0.023,
+   "baseline_min_pct": -0.059,
+   "baseline_max_pct": -0.023,
+   "premium_first_pct": -0.064,
+   "premium_last_pct": 0.093,
+   "premium_minus_baseline_median_pct": 0.018,
+   "top_ask_tmn_median": 16479556,
+   "top_ask_tmn_p10": 918005,
+   "share_top_ask_below_size_pct": 9.7,
+   "share_top_ask_below_105k_pct": 0.3,
+   "top_bid_tmn_median": 20304324,
+   "share_top_bid_below_size_pct": 6.8,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "DOGETMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.308,
+   "buy_dev_min_at": "2026-10-21 17:54:21",
+   "spread_at_min_pct": 0.005,
+   "buy_dev_p01_pct": -0.307,
+   "buy_dev_p1_pct": -0.207,
+   "buy_dev_p5_pct": -0.066,
+   "buy_dev_p50_pct": 0.056,
+   "share_buy_dev_positive_pct": 75.1,
+   "minutes_below": {
+    "0.3%": 0.21,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.112,
+   "spread_p90_pct": 0.236,
+   "spread_p99_pct": 0.339,
+   "spread_max_pct": 0.666,
+   "share_spread_over_0.6_pct": 0.04,
+   "baseline_first_pct": -0.009,
+   "baseline_last_pct": -0.043,
+   "baseline_min_pct": -0.048,
+   "baseline_max_pct": -0.009,
+   "premium_first_pct": -0.058,
+   "premium_last_pct": 0.014,
+   "premium_minus_baseline_median_pct": -0.022,
+   "top_ask_tmn_median": 59018043,
+   "top_ask_tmn_p10": 1084358,
+   "share_top_ask_below_size_pct": 9.5,
+   "share_top_ask_below_105k_pct": 4.7,
+   "top_bid_tmn_median": 36360177,
+   "share_top_bid_below_size_pct": 8.2,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "PEPETMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.444,
+   "buy_dev_min_at": "2026-10-21 17:16:44",
+   "spread_at_min_pct": 0.458,
+   "buy_dev_p01_pct": -0.444,
+   "buy_dev_p1_pct": -0.38,
+   "buy_dev_p5_pct": -0.296,
+   "buy_dev_p50_pct": 0.066,
+   "share_buy_dev_positive_pct": 68.4,
+   "minutes_below": {
+    "0.3%": 4.42,
+    "0.4%": 0.21,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 7,
+    "0.4%": 1,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.088,
+   "spread_p90_pct": 0.446,
+   "spread_p99_pct": 0.894,
+   "spread_max_pct": 1.16,
+   "share_spread_over_0.6_pct": 7.18,
+   "baseline_first_pct": -0.076,
+   "baseline_last_pct": -0.129,
+   "baseline_min_pct": -0.202,
+   "baseline_max_pct": -0.065,
+   "premium_first_pct": -0.141,
+   "premium_last_pct": -0.132,
+   "premium_minus_baseline_median_pct": -0.0,
+   "top_ask_tmn_median": 46830545,
+   "top_ask_tmn_p10": 1771066,
+   "share_top_ask_below_size_pct": 3.0,
+   "share_top_ask_below_105k_pct": 1.5,
+   "top_bid_tmn_median": 10798516,
+   "share_top_bid_below_size_pct": 18.3,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "BNBTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.335,
+   "buy_dev_min_at": "2026-10-21 18:07:30",
+   "spread_at_min_pct": 0.0,
+   "buy_dev_p01_pct": -0.328,
+   "buy_dev_p1_pct": -0.286,
+   "buy_dev_p5_pct": -0.183,
+   "buy_dev_p50_pct": -0.039,
+   "share_buy_dev_positive_pct": 23.9,
+   "minutes_below": {
+    "0.3%": 1.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.146,
+   "spread_p90_pct": 0.274,
+   "spread_p99_pct": 0.409,
+   "spread_max_pct": 0.5,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": 0.395,
+   "baseline_last_pct": 0.173,
+   "baseline_min_pct": 0.173,
+   "baseline_max_pct": 0.443,
+   "premium_first_pct": 0.201,
+   "premium_last_pct": 0.14,
+   "premium_minus_baseline_median_pct": -0.109,
+   "top_ask_tmn_median": 5319882,
+   "top_ask_tmn_p10": 194529,
+   "share_top_ask_below_size_pct": 27.2,
+   "share_top_ask_below_105k_pct": 2.1,
+   "top_bid_tmn_median": 59828746,
+   "share_top_bid_below_size_pct": 11.3,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  },
+  "ARBTMN": {
+   "ticks": 2606,
+   "hours": 1.83,
+   "buy_dev_min_pct": -0.591,
+   "buy_dev_min_at": "2026-10-21 17:31:43",
+   "spread_at_min_pct": 0.056,
+   "buy_dev_p01_pct": -0.587,
+   "buy_dev_p1_pct": -0.387,
+   "buy_dev_p5_pct": -0.156,
+   "buy_dev_p50_pct": 0.155,
+   "share_buy_dev_positive_pct": 76.2,
+   "minutes_below": {
+    "0.3%": 1.46,
+    "0.4%": 0.96,
+    "0.5%": 0.42,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 4,
+    "0.4%": 3,
+    "0.5%": 2,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.444,
+   "spread_p90_pct": 0.806,
+   "spread_p99_pct": 1.054,
+   "spread_max_pct": 1.122,
+   "share_spread_over_0.6_pct": 25.44,
+   "baseline_first_pct": -0.083,
+   "baseline_last_pct": -0.134,
+   "baseline_min_pct": -0.135,
+   "baseline_max_pct": -0.032,
+   "premium_first_pct": -0.177,
+   "premium_last_pct": -0.199,
+   "premium_minus_baseline_median_pct": -0.054,
+   "top_ask_tmn_median": 12368519,
+   "top_ask_tmn_p10": 2683616,
+   "share_top_ask_below_size_pct": 0.4,
+   "share_top_ask_below_105k_pct": 0.0,
+   "top_bid_tmn_median": 3523336,
+   "share_top_bid_below_size_pct": 14.5,
+   "first_tick": "2026-10-21 16:45:30",
+   "last_tick": "2026-10-21 18:35:24"
+  }
+ },
+ "shadow_today_by_market": {
+  "BTCTMN": {
+   "ticks": 2494,
+   "hours": 1.75,
+   "buy_dev_min_pct": -0.424,
+   "buy_dev_min_at": "2026-10-21 14:51:29",
+   "spread_at_min_pct": 0.005,
+   "buy_dev_p01_pct": -0.404,
+   "buy_dev_p1_pct": -0.193,
+   "buy_dev_p5_pct": -0.136,
+   "buy_dev_p50_pct": 0.025,
+   "share_buy_dev_positive_pct": 62.4,
+   "minutes_below": {
+    "0.3%": 0.33,
+    "0.4%": 0.12,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 2,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.032,
+   "spread_p90_pct": 0.18,
+   "spread_p99_pct": 0.331,
+   "spread_max_pct": 0.436,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.145,
+   "baseline_last_pct": -0.233,
+   "baseline_min_pct": -0.291,
+   "baseline_max_pct": -0.114,
+   "premium_first_pct": -0.145,
+   "premium_last_pct": -0.282,
+   "premium_minus_baseline_median_pct": -0.006,
+   "top_ask_tmn_median": 37210800,
+   "top_ask_tmn_p10": 3677935,
+   "share_top_ask_below_size_pct": 5.3,
+   "share_top_ask_below_105k_pct": 3.3,
+   "top_bid_tmn_median": 26847031,
+   "share_top_bid_below_size_pct": 5.8,
+   "first_tick": "2026-10-21 14:19:52",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "ETHTMN": {
+   "ticks": 2494,
+   "hours": 1.75,
+   "buy_dev_min_pct": -0.488,
+   "buy_dev_min_at": "2026-10-21 15:03:55",
+   "spread_at_min_pct": 0.079,
+   "buy_dev_p01_pct": -0.405,
+   "buy_dev_p1_pct": -0.253,
+   "buy_dev_p5_pct": -0.136,
+   "buy_dev_p50_pct": 0.098,
+   "share_buy_dev_positive_pct": 75.8,
+   "minutes_below": {
+    "0.3%": 0.83,
+    "0.4%": 0.12,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 4,
+    "0.4%": 1,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.169,
+   "spread_p90_pct": 0.381,
+   "spread_p99_pct": 0.543,
+   "spread_max_pct": 0.609,
+   "share_spread_over_0.6_pct": 0.52,
+   "baseline_first_pct": -0.015,
+   "baseline_last_pct": -0.116,
+   "baseline_min_pct": -0.174,
+   "baseline_max_pct": 0.021,
+   "premium_first_pct": -0.048,
+   "premium_last_pct": -0.275,
+   "premium_minus_baseline_median_pct": 0.008,
+   "top_ask_tmn_median": 30123829,
+   "top_ask_tmn_p10": 1474187,
+   "share_top_ask_below_size_pct": 5.2,
+   "share_top_ask_below_105k_pct": 0.0,
+   "top_bid_tmn_median": 55438951,
+   "share_top_bid_below_size_pct": 1.5,
+   "first_tick": "2026-10-21 14:19:52",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "SOLTMN": {
+   "ticks": 2494,
+   "hours": 1.75,
+   "buy_dev_min_pct": -0.285,
+   "buy_dev_min_at": "2026-10-21 14:22:52",
+   "spread_at_min_pct": 0.0,
+   "buy_dev_p01_pct": -0.218,
+   "buy_dev_p1_pct": -0.139,
+   "buy_dev_p5_pct": -0.039,
+   "buy_dev_p50_pct": 0.13,
+   "share_buy_dev_positive_pct": 89.0,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.227,
+   "spread_p90_pct": 0.475,
+   "spread_p99_pct": 0.664,
+   "spread_max_pct": 0.855,
+   "share_spread_over_0.6_pct": 3.77,
+   "baseline_first_pct": 0.089,
+   "baseline_last_pct": -0.055,
+   "baseline_min_pct": -0.098,
+   "baseline_max_pct": 0.118,
+   "premium_first_pct": 0.045,
+   "premium_last_pct": -0.05,
+   "premium_minus_baseline_median_pct": -0.005,
+   "top_ask_tmn_median": 52926584,
+   "top_ask_tmn_p10": 713697,
+   "share_top_ask_below_size_pct": 11.8,
+   "share_top_ask_below_105k_pct": 2.4,
+   "top_bid_tmn_median": 53779971,
+   "share_top_bid_below_size_pct": 0.4,
+   "first_tick": "2026-10-21 14:19:52",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "XRPTMN": {
+   "ticks": 2494,
+   "hours": 1.75,
+   "buy_dev_min_pct": -0.384,
+   "buy_dev_min_at": "2026-10-21 14:48:19",
+   "spread_at_min_pct": 0.036,
+   "buy_dev_p01_pct": -0.295,
+   "buy_dev_p1_pct": -0.166,
+   "buy_dev_p5_pct": -0.039,
+   "buy_dev_p50_pct": 0.145,
+   "share_buy_dev_positive_pct": 89.5,
+   "minutes_below": {
+    "0.3%": 0.08,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.24,
+   "spread_p90_pct": 0.431,
+   "spread_p99_pct": 0.612,
+   "spread_max_pct": 0.666,
+   "share_spread_over_0.6_pct": 1.16,
+   "baseline_first_pct": -0.095,
+   "baseline_last_pct": -0.058,
+   "baseline_min_pct": -0.117,
+   "baseline_max_pct": -0.025,
+   "premium_first_pct": -0.065,
+   "premium_last_pct": 0.113,
+   "premium_minus_baseline_median_pct": 0.019,
+   "top_ask_tmn_median": 20347991,
+   "top_ask_tmn_p10": 3335161,
+   "share_top_ask_below_size_pct": 2.6,
+   "share_top_ask_below_105k_pct": 0.4,
+   "top_bid_tmn_median": 22894704,
+   "share_top_bid_below_size_pct": 0.6,
+   "first_tick": "2026-10-21 14:19:52",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "DOGETMN": {
+   "ticks": 2494,
+   "hours": 1.75,
+   "buy_dev_min_pct": -0.304,
+   "buy_dev_min_at": "2026-10-21 14:51:24",
+   "spread_at_min_pct": 0.005,
+   "buy_dev_p01_pct": -0.256,
+   "buy_dev_p1_pct": -0.212,
+   "buy_dev_p5_pct": -0.086,
+   "buy_dev_p50_pct": 0.116,
+   "share_buy_dev_positive_pct": 86.6,
+   "minutes_below": {
+    "0.3%": 0.04,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 1,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.218,
+   "spread_p90_pct": 0.455,
+   "spread_p99_pct": 0.674,
+   "spread_max_pct": 1.153,
+   "share_spread_over_0.6_pct": 2.81,
+   "baseline_first_pct": 0.012,
+   "baseline_last_pct": -0.009,
+   "baseline_min_pct": -0.036,
+   "baseline_max_pct": 0.082,
+   "premium_first_pct": 0.041,
+   "premium_last_pct": 0.033,
+   "premium_minus_baseline_median_pct": -0.002,
+   "top_ask_tmn_median": 54779317,
+   "top_ask_tmn_p10": 530358,
+   "share_top_ask_below_size_pct": 10.9,
+   "share_top_ask_below_105k_pct": 4.8,
+   "top_bid_tmn_median": 59696075,
+   "share_top_bid_below_size_pct": 14.3,
+   "first_tick": "2026-10-21 14:19:52",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "PEPETMN": {
+   "ticks": 232,
+   "hours": 0.16,
+   "buy_dev_min_pct": -0.1,
+   "buy_dev_min_at": "2026-10-21 16:03:46",
+   "spread_at_min_pct": 0.275,
+   "buy_dev_p01_pct": -0.099,
+   "buy_dev_p1_pct": -0.097,
+   "buy_dev_p5_pct": -0.076,
+   "buy_dev_p50_pct": 0.151,
+   "share_buy_dev_positive_pct": 83.2,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.259,
+   "spread_p90_pct": 0.332,
+   "spread_p99_pct": 0.389,
+   "spread_max_pct": 0.405,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": -0.34,
+   "baseline_last_pct": -0.075,
+   "baseline_min_pct": -0.34,
+   "baseline_max_pct": -0.054,
+   "premium_first_pct": -0.263,
+   "premium_last_pct": -0.1,
+   "premium_minus_baseline_median_pct": 0.053,
+   "top_ask_tmn_median": 135030564,
+   "top_ask_tmn_p10": 6554225,
+   "share_top_ask_below_size_pct": 5.6,
+   "share_top_ask_below_105k_pct": 0.4,
+   "top_bid_tmn_median": 5002311,
+   "share_top_bid_below_size_pct": 23.3,
+   "first_tick": "2026-10-21 15:55:23",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "BNBTMN": {
+   "ticks": 232,
+   "hours": 0.16,
+   "buy_dev_min_pct": 0.015,
+   "buy_dev_min_at": "2026-10-21 16:04:56",
+   "spread_at_min_pct": 0.489,
+   "buy_dev_p01_pct": 0.015,
+   "buy_dev_p1_pct": 0.017,
+   "buy_dev_p5_pct": 0.038,
+   "buy_dev_p50_pct": 0.199,
+   "share_buy_dev_positive_pct": 100.0,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.078,
+   "spread_p90_pct": 0.506,
+   "spread_p99_pct": 0.528,
+   "spread_max_pct": 0.528,
+   "share_spread_over_0.6_pct": 0.0,
+   "baseline_first_pct": 0.326,
+   "baseline_last_pct": 0.396,
+   "baseline_min_pct": 0.174,
+   "baseline_max_pct": 0.414,
+   "premium_first_pct": 0.191,
+   "premium_last_pct": 0.398,
+   "premium_minus_baseline_median_pct": 0.0,
+   "top_ask_tmn_median": 13218615,
+   "top_ask_tmn_p10": 558103,
+   "share_top_ask_below_size_pct": 10.8,
+   "share_top_ask_below_105k_pct": 0.0,
+   "top_bid_tmn_median": 36003729,
+   "share_top_bid_below_size_pct": 0.0,
+   "first_tick": "2026-10-21 15:55:23",
+   "last_tick": "2026-10-21 16:05:01"
+  },
+  "ARBTMN": {
+   "ticks": 232,
+   "hours": 0.16,
+   "buy_dev_min_pct": 0.085,
+   "buy_dev_min_at": "2026-10-21 15:56:28",
+   "spread_at_min_pct": 0.171,
+   "buy_dev_p01_pct": 0.085,
+   "buy_dev_p1_pct": 0.085,
+   "buy_dev_p5_pct": 0.136,
+   "buy_dev_p50_pct": 0.283,
+   "share_buy_dev_positive_pct": 100.0,
+   "minutes_below": {
+    "0.3%": 0.0,
+    "0.4%": 0.0,
+    "0.5%": 0.0,
+    "0.6%": 0.0,
+    "0.7%": 0.0
+   },
+   "episodes_below": {
+    "0.3%": 0,
+    "0.4%": 0,
+    "0.5%": 0,
+    "0.6%": 0,
+    "0.7%": 0
+   },
+   "spread_median_pct": 0.545,
+   "spread_p90_pct": 0.662,
+   "spread_p99_pct": 0.805,
+   "spread_max_pct": 0.817,
+   "share_spread_over_0.6_pct": 26.29,
+   "baseline_first_pct": -0.545,
+   "baseline_last_pct": -0.083,
+   "baseline_min_pct": -0.545,
+   "baseline_max_pct": -0.035,
+   "premium_first_pct": -0.131,
+   "premium_last_pct": -0.022,
+   "premium_minus_baseline_median_pct": 0.043,
+   "top_ask_tmn_median": 52919716,
+   "top_ask_tmn_p10": 1118469,
+   "share_top_ask_below_size_pct": 6.5,
+   "share_top_ask_below_105k_pct": 0.0,
+   "top_bid_tmn_median": 37409906,
+   "share_top_bid_below_size_pct": 0.0,
+   "first_tick": "2026-10-21 15:55:23",
+   "last_tick": "2026-10-21 16:05:01"
+  }
+ },
+ "gate_walk_live": {
+  "BTCTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 0,
+   "above_threshold": 2390,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "ETHTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 1310,
+   "above_threshold": 1080,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "SOLTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 0,
+   "above_threshold": 2390,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "XRPTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 90,
+   "above_threshold": 2300,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "DOGETMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 0,
+   "above_threshold": 2390,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "PEPETMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 1310,
+   "above_threshold": 1080,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "BNBTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 1040,
+   "above_threshold": 1350,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  },
+  "ARBTMN": {
+   "ticks": 2606,
+   "warmup(3 min after start)": 216,
+   "disabled_by_policy": 1310,
+   "above_threshold": 1080,
+   "below_threshold_but_spread>0.6%": 0,
+   "would_reach_risk.size": 0
+  }
+ },
+ "synthetic_test_ticks": {
+  "rows": 17,
+  "first": "2026-10-21 17:39:56",
+  "last": "2026-10-21 17:53:01",
+  "symbols": {
+   "BTCTMN": 12,
+   "ETHTMN": 5
+  },
+  "max_premium_pct": 3220.6,
+  "max_sell_dev_pct": 3220.7
+ }
+}

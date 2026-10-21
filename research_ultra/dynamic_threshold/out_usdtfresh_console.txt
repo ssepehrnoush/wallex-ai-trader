@@ -1,0 +1,33 @@
+half spreads %: {'BTCTMN': 0.0151, 'ETHTMN': 0.0681, 'SOLTMN': 0.078, 'XRPTMN': 0.097, 'DOGETMN': 0.0838, 'PEPETMN': 0.0565, 'BNBTMN': 0.073, 'ARBTMN': 0.2202}
+traded minutes: {'BTCTMN': 3328, 'ETHTMN': 2097, 'SOLTMN': 1310, 'XRPTMN': 1832, 'DOGETMN': 1414, 'PEPETMN': 2772, 'BNBTMN': 1341, 'ARBTMN': 1556}
+V1 choice: {'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.7, 'ARBTMN': 0.7}  oracle: {'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.8, 'BNBTMN': 0.8, 'ARBTMN': 0.9}
+V2 k: 2.5 per-market k: {'BTCTMN': 1.5, 'ETHTMN': 1.5, 'SOLTMN': 1.5, 'XRPTMN': 1.5, 'DOGETMN': 1.5, 'PEPETMN': 2.5, 'BNBTMN': 1.5, 'ARBTMN': 1.5}
+  k=1.5: IS 14 tr sum 1.683 | OOS 17 tr sum 5.29
+  k=2.0: IS 12 tr sum 2.2 | OOS 16 tr sum 5.647
+  k=2.5: IS 11 tr sum 2.893 | OOS 15 tr sum 5.262
+  k=3.0: IS 11 tr sum 2.893 | OOS 13 tr sum 5.587
+  k=4.0: IS 2 tr sum 0.324 | OOS 10 tr sum 5.027
+
+variant                            |  IS n  IS mean   IS sum IS win | OOS n    mean     sum    win | portf OOS n, TMN
+V4_fixed_0.7                       |    14     0.12    1.683   64.3 |    17   0.311   5.290   82.4 | 17, 43776  exits {'target': 12, 'time': 5}
+V1_per_market_fixed                |     9    0.309    2.778   77.8 |    13   0.356   4.623   84.6 | 13, 38262  exits {'target': 10, 'time': 3}
+V2_vol_scaled_global_k             |    11    0.263    2.893   72.7 |    15   0.351   5.262   86.7 | 15, 43547  exits {'target': 12, 'time': 3}
+V2b_vol_scaled_per_market_k        |    11    0.263    2.893   72.7 |    16   0.307   4.905   81.2 | 16, 40591  exits {'target': 12, 'time': 4}
+V3_spread_aware                    |    10    0.115    1.152   70.0 |    14   0.435   6.085   92.9 | 14, 50363  exits {'target': 11, 'time': 3}
+ORACLE_per_market_chosen_on_OOS    |    10    0.168    1.676   70.0 |    15   0.418   6.275   93.3 | 15, 51930  exits {'target': 12, 'time': 3}
+
+bootstrap V1_per_market_fixed {'diff_sum_net_pct': -0.666, 'ci90': [-1.699, 0.159], 'p_diff_gt_0': 0.105, 'diff_trades': -4}
+bootstrap V2_vol_scaled_global_k {'diff_sum_net_pct': -0.028, 'ci90': [-0.27, 0.187], 'p_diff_gt_0': 0.339, 'diff_trades': -2}
+bootstrap V2b_vol_scaled_per_market_k {'diff_sum_net_pct': -0.385, 'ci90': [-1.342, 0.187], 'p_diff_gt_0': 0.239, 'diff_trades': -1}
+bootstrap V3_spread_aware {'diff_sum_net_pct': 0.796, 'ci90': [-0.082, 1.856], 'p_diff_gt_0': 0.906, 'diff_trades': -3}
+bootstrap ORACLE_per_market_chosen_on_OOS {'diff_sum_net_pct': 0.985, 'ci90': [-0.056, 2.174], 'p_diff_gt_0': 0.875, 'diff_trades': -2}
+reverse WF: {"V1_choice_pct": {"BTCTMN": 0.7, "ETHTMN": 0.7, "SOLTMN": 0.7, "XRPTMN": 0.7, "DOGETMN": 0.7, "PEPETMN": 0.8, "BNBTMN": 0.8, "ARBTMN": 0.9}, "V1_test_IS": {"trades": 10, "mean_net_pct": 0.168, "sum_net_pct": 1.676, "win_pct": 70.0, "exits": {"target": 7, "time": 3}, "se_mean": 0.144, "median_min_held": 12.5}, "V2_k": 2.0, "V2_test_IS": {"trades": 12, "mean_net_pct": 0.183, "sum_net_pct": 2.2, "win_pct": 66.7, "exits": {"target": 7, "time": 5}, "se_mean": 0.13, "median_min_held": 12.5}, "V4_same_days": {"trades": 14, "mean_net_pct": 0.12, "sum_net_pct": 1.683, "win_pct": 64.3, "exits": {"target": 8, "time": 6}, "se_mean": 0.124, "median_min_held": 13.0}}
+
+V4_fixed_0.7 OOS by market: {'BTCTMN': (2, np.float64(0.412), np.float64(0.825)), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.168), np.float64(0.336)), 'XRPTMN': (1, np.float64(0.13), np.float64(0.13)), 'DOGETMN': (1, np.float64(0.355), np.float64(0.355)), 'PEPETMN': (6, np.float64(0.595), np.float64(3.571)), 'BNBTMN': (1, np.float64(-0.357), np.float64(-0.357)), 'ARBTMN': (4, np.float64(0.108), np.float64(0.431))}
+V4_fixed_0.7  IS by market: {'BTCTMN': (0, None, 0.0), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.008), np.float64(0.017)), 'XRPTMN': (1, np.float64(0.242), np.float64(0.242)), 'DOGETMN': (0, None, 0.0), 'PEPETMN': (8, np.float64(0.114), np.float64(0.909)), 'BNBTMN': (1, np.float64(0.082), np.float64(0.082)), 'ARBTMN': (2, np.float64(0.216), np.float64(0.433))}
+V1_per_market_fixed OOS by market: {'BTCTMN': (2, np.float64(0.412), np.float64(0.825)), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.168), np.float64(0.336)), 'XRPTMN': (1, np.float64(0.13), np.float64(0.13)), 'DOGETMN': (1, np.float64(0.355), np.float64(0.355)), 'PEPETMN': (2, np.float64(1.452), np.float64(2.904)), 'BNBTMN': (1, np.float64(-0.357), np.float64(-0.357)), 'ARBTMN': (4, np.float64(0.108), np.float64(0.431))}
+V1_per_market_fixed  IS by market: {'BTCTMN': (0, None, 0.0), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.008), np.float64(0.017)), 'XRPTMN': (1, np.float64(0.242), np.float64(0.242)), 'DOGETMN': (0, None, 0.0), 'PEPETMN': (3, np.float64(0.668), np.float64(2.005)), 'BNBTMN': (1, np.float64(0.082), np.float64(0.082)), 'ARBTMN': (2, np.float64(0.216), np.float64(0.433))}
+V2_vol_scaled_global_k OOS by market: {'BTCTMN': (2, np.float64(0.412), np.float64(0.825)), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.168), np.float64(0.336)), 'XRPTMN': (1, np.float64(0.13), np.float64(0.13)), 'DOGETMN': (1, np.float64(0.355), np.float64(0.355)), 'PEPETMN': (5, np.float64(0.637), np.float64(3.186)), 'BNBTMN': (0, None, 0.0), 'ARBTMN': (4, np.float64(0.108), np.float64(0.431))}
+V2_vol_scaled_global_k  IS by market: {'BTCTMN': (0, None, 0.0), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.008), np.float64(0.017)), 'XRPTMN': (1, np.float64(0.242), np.float64(0.242)), 'DOGETMN': (0, None, 0.0), 'PEPETMN': (5, np.float64(0.424), np.float64(2.12)), 'BNBTMN': (1, np.float64(0.082), np.float64(0.082)), 'ARBTMN': (2, np.float64(0.216), np.float64(0.433))}
+V3_spread_aware OOS by market: {'BTCTMN': (2, np.float64(0.412), np.float64(0.825)), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (2, np.float64(0.168), np.float64(0.336)), 'XRPTMN': (0, None, 0.0), 'DOGETMN': (1, np.float64(0.355), np.float64(0.355)), 'PEPETMN': (6, np.float64(0.611), np.float64(3.664)), 'BNBTMN': (0, None, 0.0), 'ARBTMN': (3, np.float64(0.302), np.float64(0.906))}
+V3_spread_aware  IS by market: {'BTCTMN': (0, None, 0.0), 'ETHTMN': (0, None, 0.0), 'SOLTMN': (0, None, 0.0), 'XRPTMN': (1, np.float64(0.242), np.float64(0.242)), 'DOGETMN': (0, None, 0.0), 'PEPETMN': (7, np.float64(0.138), np.float64(0.969)), 'BNBTMN': (1, np.float64(0.082), np.float64(0.082)), 'ARBTMN': (1, np.float64(-0.141), np.float64(-0.141))}

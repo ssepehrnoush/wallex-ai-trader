@@ -1,0 +1,36 @@
+{
+ "0.003": {
+  "n": 537,
+  "mean_pct": -0.254,
+  "win": 36.1,
+  "exits": {
+   "time": 353,
+   "target": 167,
+   "stop": 15,
+   "end": 2
+  },
+  "stops": 15
+ },
+ "0.004": {
+  "n": 301,
+  "mean_pct": -0.112,
+  "win": 48.5,
+  "exits": {
+   "time": 166,
+   "target": 127,
+   "stop": 8
+  },
+  "stops": 8
+ },
+ "0.005": {
+  "n": 182,
+  "mean_pct": -0.011,
+  "win": 55.5,
+  "exits": {
+   "target": 90,
+   "time": 89,
+   "stop": 3
+  },
+  "stops": 3
+ }
+}

@@ -1,0 +1,10947 @@
+{
+ "split": 1792345260,
+ "test_days": 2.852777777777778,
+ "spreads": {
+  "BTCUSDT": 0.0002833284815211279,
+  "DOGEUSDT": 0.004381166263580094,
+  "ETHUSDT": 0.0014111758732899826,
+  "SOLUSDT": 0.002396202945044945,
+  "XRPUSDT": 0.002256240067121662
+ },
+ "grid": {
+  "mid|stop0.009|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 15,
+    "mean": 0.046,
+    "sum": 0.69,
+    "win": 60.0,
+    "se": 0.129,
+    "exits": {
+     "time": 9,
+     "target": 6
+    }
+   },
+   "test": {
+    "n": 9,
+    "mean": 0.196,
+    "sum": 1.76,
+    "win": 77.8,
+    "se": 0.1,
+    "exits": {
+     "target": 6,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 24,
+    "mean": 0.102,
+    "sum": 2.45,
+    "win": 66.7,
+    "se": 0.089,
+    "exits": {
+     "time": 12,
+     "target": 12
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.281,
+     "sum": 2.53,
+     "win": 77.8,
+     "se": 0.103,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 6,
+     "mean": 0.095,
+     "sum": 0.57,
+     "win": 66.7,
+     "se": 0.072,
+     "exits": {
+      "time": 3,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.028,
+     "sum": 0.14,
+     "win": 60.0,
+     "se": 0.308,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.197,
+     "sum": -0.79,
+     "win": 50.0,
+     "se": 0.264,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.288,
+     "sum": 1.15,
+     "win": 75.0,
+     "se": 0.215,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.135,
+     "sum": 0.54,
+     "win": 75.0,
+     "se": 0.089,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 8,
+    "mean": 0.151,
+    "sum": 1.21,
+    "win": 62.5,
+    "se": 0.199,
+    "exits": {
+     "time": 4,
+     "target": 4
+    }
+   },
+   "test": {
+    "n": 4,
+    "mean": 0.144,
+    "sum": 0.58,
+    "win": 50.0,
+    "se": 0.141,
+    "exits": {
+     "target": 2,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 12,
+    "mean": 0.149,
+    "sum": 1.78,
+    "win": 58.3,
+    "se": 0.136,
+    "exits": {
+     "time": 6,
+     "target": 6
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.243,
+     "sum": 1.22,
+     "win": 60.0,
+     "se": 0.152,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.285,
+     "sum": -0.86,
+     "win": 33.3,
+     "se": 0.351,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.234,
+     "sum": 0.47,
+     "win": 50.0,
+     "se": 0.261,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "mid|stop0.009|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 27,
+    "mean": -0.114,
+    "sum": -3.08,
+    "win": 51.9,
+    "se": 0.111,
+    "exits": {
+     "time": 17,
+     "target": 9,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 16,
+    "mean": 0.244,
+    "sum": 3.91,
+    "win": 81.2,
+    "se": 0.173,
+    "exits": {
+     "target": 11,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 43,
+    "mean": 0.019,
+    "sum": 0.83,
+    "win": 62.8,
+    "se": 0.098,
+    "exits": {
+     "time": 21,
+     "target": 20,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 10,
+     "mean": 0.237,
+     "sum": 2.37,
+     "win": 80.0,
+     "se": 0.105,
+     "exits": {
+      "target": 8,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 13,
+     "mean": 0.035,
+     "sum": 0.46,
+     "win": 69.2,
+     "se": 0.197,
+     "exits": {
+      "target": 8,
+      "time": 4,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 9,
+     "mean": 0.182,
+     "sum": 1.64,
+     "win": 55.6,
+     "se": 0.235,
+     "exits": {
+      "time": 7,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 6,
+     "mean": -0.165,
+     "sum": -0.99,
+     "win": 66.7,
+     "se": 0.202,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "DOGEUSDT": {
+     "n": 5,
+     "mean": -0.53,
+     "sum": -2.65,
+     "win": 20.0,
+     "se": 0.353,
+     "exits": {
+      "time": 4,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.249,
+     "sum": 1.24,
+     "win": 80.0,
+     "se": 0.171,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 7,
+     "mean": 0.119,
+     "sum": 0.83,
+     "win": 85.7,
+     "se": 0.363,
+     "exits": {
+      "target": 6,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-21 13:04",
+     "ETHUSDT",
+     0.079,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 19,
+    "mean": 0.006,
+    "sum": 0.11,
+    "win": 63.2,
+    "se": 0.151,
+    "exits": {
+     "time": 10,
+     "target": 8,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.459,
+    "sum": 4.59,
+    "win": 80.0,
+    "se": 0.163,
+    "exits": {
+     "target": 7,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 29,
+    "mean": 0.162,
+    "sum": 4.7,
+    "win": 69.0,
+    "se": 0.119,
+    "exits": {
+     "target": 15,
+     "time": 13,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.218,
+     "sum": 1.31,
+     "win": 66.7,
+     "se": 0.126,
+     "exits": {
+      "target": 4,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.456,
+     "sum": 3.65,
+     "win": 100.0,
+     "se": 0.18,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.606,
+     "sum": 3.64,
+     "win": 83.3,
+     "se": 0.143,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.312,
+     "sum": -1.25,
+     "win": 50.0,
+     "se": 0.282,
+     "exits": {
+      "target": 2,
+      "time": 2
+     }
+    },
+    "DOGEUSDT": {
+     "n": 5,
+     "mean": -0.53,
+     "sum": -2.65,
+     "win": 20.0,
+     "se": 0.353,
+     "exits": {
+      "time": 4,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.187,
+     "sum": 0.56,
+     "win": 66.7,
+     "se": 0.158,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.566,
+     "sum": 2.27,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 9,
+    "mean": 0.199,
+    "sum": 1.79,
+    "win": 88.9,
+    "se": 0.269,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 10,
+    "mean": 0.261,
+    "sum": 2.61,
+    "win": 90.0,
+    "se": 0.248,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 3,
+     "mean": 0.441,
+     "sum": 1.32,
+     "win": 100.0,
+     "se": 0.2,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.672,
+     "sum": 2.69,
+     "win": 100.0,
+     "se": 0.076,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.088,
+     "sum": 0.09,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -1.844,
+     "sum": -1.84,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.816,
+     "sum": 0.82,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 18,
+    "mean": 0.18,
+    "sum": 3.24,
+    "win": 66.7,
+    "se": 0.145,
+    "exits": {
+     "time": 9,
+     "target": 9
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.005,
+    "sum": 0.05,
+    "win": 70.0,
+    "se": 0.211,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 28,
+    "mean": 0.117,
+    "sum": 3.29,
+    "win": 67.9,
+    "se": 0.118,
+    "exits": {
+     "target": 15,
+     "time": 12,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 10,
+     "mean": 0.303,
+     "sum": 3.03,
+     "win": 80.0,
+     "se": 0.094,
+     "exits": {
+      "target": 8,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": -0.109,
+     "sum": -0.87,
+     "win": 62.5,
+     "se": 0.236,
+     "exits": {
+      "target": 4,
+      "time": 3,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.319,
+     "sum": 1.92,
+     "win": 66.7,
+     "se": 0.385,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.197,
+     "sum": -0.79,
+     "win": 50.0,
+     "se": 0.264,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.288,
+     "sum": 1.15,
+     "win": 75.0,
+     "se": 0.215,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": -0.235,
+     "sum": -1.17,
+     "win": 60.0,
+     "se": 0.376,
+     "exits": {
+      "target": 3,
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 9,
+    "mean": 0.189,
+    "sum": 1.7,
+    "win": 66.7,
+    "se": 0.179,
+    "exits": {
+     "target": 5,
+     "time": 4
+    }
+   },
+   "test": {
+    "n": 4,
+    "mean": 0.144,
+    "sum": 0.58,
+    "win": 50.0,
+    "se": 0.141,
+    "exits": {
+     "target": 2,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 13,
+    "mean": 0.175,
+    "sum": 2.28,
+    "win": 61.5,
+    "se": 0.128,
+    "exits": {
+     "target": 7,
+     "time": 6
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 66.7,
+     "se": 0.131,
+     "exits": {
+      "target": 4,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.285,
+     "sum": -0.86,
+     "win": 33.3,
+     "se": 0.351,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.234,
+     "sum": 0.47,
+     "win": 50.0,
+     "se": 0.261,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "mid|stop0.009|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 37,
+    "mean": 0.031,
+    "sum": 1.14,
+    "win": 56.8,
+    "se": 0.107,
+    "exits": {
+     "time": 22,
+     "target": 14,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 18,
+    "mean": 0.249,
+    "sum": 4.49,
+    "win": 83.3,
+    "se": 0.153,
+    "exits": {
+     "target": 12,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 55,
+    "mean": 0.102,
+    "sum": 5.63,
+    "win": 65.5,
+    "se": 0.088,
+    "exits": {
+     "time": 27,
+     "target": 26,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 11,
+     "mean": 0.261,
+     "sum": 2.87,
+     "win": 81.8,
+     "se": 0.098,
+     "exits": {
+      "target": 9,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 17,
+     "mean": 0.115,
+     "sum": 1.96,
+     "win": 76.5,
+     "se": 0.157,
+     "exits": {
+      "target": 11,
+      "time": 5,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 12,
+     "mean": 0.287,
+     "sum": 3.44,
+     "win": 58.3,
+     "se": 0.225,
+     "exits": {
+      "time": 9,
+      "target": 3
+     }
+    },
+    "XRPUSDT": {
+     "n": 8,
+     "mean": -0.117,
+     "sum": -0.93,
+     "win": 62.5,
+     "se": 0.16,
+     "exits": {
+      "time": 5,
+      "target": 3
+     }
+    },
+    "DOGEUSDT": {
+     "n": 7,
+     "mean": -0.245,
+     "sum": -1.71,
+     "win": 28.6,
+     "se": 0.357,
+     "exits": {
+      "time": 6,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.249,
+     "sum": 1.24,
+     "win": 80.0,
+     "se": 0.171,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.133,
+     "sum": 1.06,
+     "win": 87.5,
+     "se": 0.315,
+     "exits": {
+      "target": 7,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.528,
+     "sum": 2.11,
+     "win": 75.0,
+     "se": 0.227,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-21 13:04",
+     "ETHUSDT",
+     0.079,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "SOLUSDT",
+     0.346,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 23,
+    "mean": 0.086,
+    "sum": 1.98,
+    "win": 65.2,
+    "se": 0.139,
+    "exits": {
+     "time": 12,
+     "target": 10,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.459,
+    "sum": 4.59,
+    "win": 80.0,
+    "se": 0.163,
+    "exits": {
+     "target": 7,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 33,
+    "mean": 0.199,
+    "sum": 6.57,
+    "win": 69.7,
+    "se": 0.112,
+    "exits": {
+     "target": 17,
+     "time": 15,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.258,
+     "sum": 1.81,
+     "win": 71.4,
+     "se": 0.114,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.456,
+     "sum": 3.65,
+     "win": 100.0,
+     "se": 0.18,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.606,
+     "sum": 3.64,
+     "win": 83.3,
+     "se": 0.143,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 6,
+     "mean": -0.199,
+     "sum": -1.19,
+     "win": 50.0,
+     "se": 0.205,
+     "exits": {
+      "target": 3,
+      "time": 3
+     }
+    },
+    "DOGEUSDT": {
+     "n": 6,
+     "mean": -0.222,
+     "sum": -1.33,
+     "win": 33.3,
+     "se": 0.422,
+     "exits": {
+      "time": 5,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.187,
+     "sum": 0.56,
+     "win": 66.7,
+     "se": 0.158,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.566,
+     "sum": 2.27,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ]
+   ]
+  },
+  "mid|stop0.009|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 10,
+    "mean": 0.292,
+    "sum": 2.92,
+    "win": 90.0,
+    "se": 0.258,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 11,
+    "mean": 0.339,
+    "sum": 3.73,
+    "win": 90.9,
+    "se": 0.238,
+    "exits": {
+     "target": 5,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 3,
+     "mean": 0.441,
+     "sum": 1.32,
+     "win": 100.0,
+     "se": 0.2,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.672,
+     "sum": 2.69,
+     "win": 100.0,
+     "se": 0.076,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.088,
+     "sum": 0.09,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.36,
+     "sum": -0.72,
+     "win": 50.0,
+     "se": 1.484,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.816,
+     "sum": 0.82,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 15,
+    "mean": 0.035,
+    "sum": 0.52,
+    "win": 60.0,
+    "se": 0.135,
+    "exits": {
+     "time": 8,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 9,
+    "mean": 0.196,
+    "sum": 1.76,
+    "win": 77.8,
+    "se": 0.1,
+    "exits": {
+     "target": 6,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 24,
+    "mean": 0.095,
+    "sum": 2.29,
+    "win": 66.7,
+    "se": 0.092,
+    "exits": {
+     "target": 12,
+     "time": 11,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.281,
+     "sum": 2.53,
+     "win": 77.8,
+     "se": 0.103,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 6,
+     "mean": 0.095,
+     "sum": 0.57,
+     "win": 66.7,
+     "se": 0.072,
+     "exits": {
+      "time": 3,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.028,
+     "sum": 0.14,
+     "win": 60.0,
+     "se": 0.308,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.239,
+     "sum": -0.96,
+     "win": 50.0,
+     "se": 0.302,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.288,
+     "sum": 1.15,
+     "win": 75.0,
+     "se": 0.215,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.135,
+     "sum": 0.54,
+     "win": 75.0,
+     "se": 0.089,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 8,
+    "mean": 0.13,
+    "sum": 1.04,
+    "win": 62.5,
+    "se": 0.215,
+    "exits": {
+     "target": 4,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 4,
+    "mean": 0.144,
+    "sum": 0.58,
+    "win": 50.0,
+    "se": 0.141,
+    "exits": {
+     "target": 2,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 12,
+    "mean": 0.135,
+    "sum": 1.62,
+    "win": 58.3,
+    "se": 0.146,
+    "exits": {
+     "target": 6,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.243,
+     "sum": 1.22,
+     "win": 60.0,
+     "se": 0.152,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.341,
+     "sum": -1.02,
+     "win": 33.3,
+     "se": 0.402,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.234,
+     "sum": 0.47,
+     "win": 50.0,
+     "se": 0.261,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "mid|stop0.008|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 27,
+    "mean": -0.12,
+    "sum": -3.25,
+    "win": 51.9,
+    "se": 0.113,
+    "exits": {
+     "time": 16,
+     "target": 9,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 16,
+    "mean": 0.244,
+    "sum": 3.91,
+    "win": 81.2,
+    "se": 0.173,
+    "exits": {
+     "target": 11,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 43,
+    "mean": 0.015,
+    "sum": 0.66,
+    "win": 62.8,
+    "se": 0.099,
+    "exits": {
+     "time": 20,
+     "target": 20,
+     "stop": 3
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 10,
+     "mean": 0.237,
+     "sum": 2.37,
+     "win": 80.0,
+     "se": 0.105,
+     "exits": {
+      "target": 8,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 13,
+     "mean": 0.035,
+     "sum": 0.46,
+     "win": 69.2,
+     "se": 0.197,
+     "exits": {
+      "target": 8,
+      "time": 4,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 9,
+     "mean": 0.182,
+     "sum": 1.64,
+     "win": 55.6,
+     "se": 0.235,
+     "exits": {
+      "time": 7,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 6,
+     "mean": -0.193,
+     "sum": -1.16,
+     "win": 66.7,
+     "se": 0.223,
+     "exits": {
+      "time": 3,
+      "target": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 5,
+     "mean": -0.53,
+     "sum": -2.65,
+     "win": 20.0,
+     "se": 0.353,
+     "exits": {
+      "time": 4,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.249,
+     "sum": 1.24,
+     "win": 80.0,
+     "se": 0.171,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 7,
+     "mean": 0.119,
+     "sum": 0.83,
+     "win": 85.7,
+     "se": 0.363,
+     "exits": {
+      "target": 6,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-21 13:04",
+     "ETHUSDT",
+     0.079,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 19,
+    "mean": -0.003,
+    "sum": -0.06,
+    "win": 63.2,
+    "se": 0.154,
+    "exits": {
+     "time": 9,
+     "target": 8,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.459,
+    "sum": 4.59,
+    "win": 80.0,
+    "se": 0.163,
+    "exits": {
+     "target": 7,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 29,
+    "mean": 0.156,
+    "sum": 4.53,
+    "win": 69.0,
+    "se": 0.121,
+    "exits": {
+     "target": 15,
+     "time": 12,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.218,
+     "sum": 1.31,
+     "win": 66.7,
+     "se": 0.126,
+     "exits": {
+      "target": 4,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.456,
+     "sum": 3.65,
+     "win": 100.0,
+     "se": 0.18,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.606,
+     "sum": 3.64,
+     "win": 83.3,
+     "se": 0.143,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.354,
+     "sum": -1.42,
+     "win": 50.0,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 5,
+     "mean": -0.53,
+     "sum": -2.65,
+     "win": 20.0,
+     "se": 0.353,
+     "exits": {
+      "time": 4,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.187,
+     "sum": 0.56,
+     "win": 66.7,
+     "se": 0.158,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.566,
+     "sum": 2.27,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 9,
+    "mean": 0.199,
+    "sum": 1.79,
+    "win": 88.9,
+    "se": 0.269,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 10,
+    "mean": 0.261,
+    "sum": 2.61,
+    "win": 90.0,
+    "se": 0.248,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 3,
+     "mean": 0.441,
+     "sum": 1.32,
+     "win": 100.0,
+     "se": 0.2,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.672,
+     "sum": 2.69,
+     "win": 100.0,
+     "se": 0.076,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.088,
+     "sum": 0.09,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -1.844,
+     "sum": -1.84,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.816,
+     "sum": 0.82,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 18,
+    "mean": 0.171,
+    "sum": 3.07,
+    "win": 66.7,
+    "se": 0.149,
+    "exits": {
+     "target": 9,
+     "time": 8,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.005,
+    "sum": 0.05,
+    "win": 70.0,
+    "se": 0.211,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 28,
+    "mean": 0.112,
+    "sum": 3.12,
+    "win": 67.9,
+    "se": 0.121,
+    "exits": {
+     "target": 15,
+     "time": 11,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 10,
+     "mean": 0.303,
+     "sum": 3.03,
+     "win": 80.0,
+     "se": 0.094,
+     "exits": {
+      "target": 8,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": -0.109,
+     "sum": -0.87,
+     "win": 62.5,
+     "se": 0.236,
+     "exits": {
+      "target": 4,
+      "time": 3,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.319,
+     "sum": 1.92,
+     "win": 66.7,
+     "se": 0.385,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.239,
+     "sum": -0.96,
+     "win": 50.0,
+     "se": 0.302,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.288,
+     "sum": 1.15,
+     "win": 75.0,
+     "se": 0.215,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": -0.235,
+     "sum": -1.17,
+     "win": 60.0,
+     "se": 0.376,
+     "exits": {
+      "target": 3,
+      "time": 1,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 9,
+    "mean": 0.171,
+    "sum": 1.54,
+    "win": 66.7,
+    "se": 0.194,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 4,
+    "mean": 0.144,
+    "sum": 0.58,
+    "win": 50.0,
+    "se": 0.141,
+    "exits": {
+     "target": 2,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 13,
+    "mean": 0.163,
+    "sum": 2.11,
+    "win": 61.5,
+    "se": 0.138,
+    "exits": {
+     "target": 7,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 66.7,
+     "se": 0.131,
+     "exits": {
+      "target": 4,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.341,
+     "sum": -1.02,
+     "win": 33.3,
+     "se": 0.402,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.234,
+     "sum": 0.47,
+     "win": 50.0,
+     "se": 0.261,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.054,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.185,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.131,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.657,
+     "sum": 1.31,
+     "win": 100.0,
+     "se": 0.131,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "mid|stop0.008|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 37,
+    "mean": 0.026,
+    "sum": 0.97,
+    "win": 56.8,
+    "se": 0.109,
+    "exits": {
+     "time": 21,
+     "target": 14,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 18,
+    "mean": 0.249,
+    "sum": 4.49,
+    "win": 83.3,
+    "se": 0.153,
+    "exits": {
+     "target": 12,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "all": {
+    "n": 55,
+    "mean": 0.099,
+    "sum": 5.46,
+    "win": 65.5,
+    "se": 0.089,
+    "exits": {
+     "time": 26,
+     "target": 26,
+     "stop": 3
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 11,
+     "mean": 0.261,
+     "sum": 2.87,
+     "win": 81.8,
+     "se": 0.098,
+     "exits": {
+      "target": 9,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 17,
+     "mean": 0.115,
+     "sum": 1.96,
+     "win": 76.5,
+     "se": 0.157,
+     "exits": {
+      "target": 11,
+      "time": 5,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 12,
+     "mean": 0.287,
+     "sum": 3.44,
+     "win": 58.3,
+     "se": 0.225,
+     "exits": {
+      "time": 9,
+      "target": 3
+     }
+    },
+    "XRPUSDT": {
+     "n": 8,
+     "mean": -0.138,
+     "sum": -1.1,
+     "win": 62.5,
+     "se": 0.175,
+     "exits": {
+      "time": 4,
+      "target": 3,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 7,
+     "mean": -0.245,
+     "sum": -1.71,
+     "win": 28.6,
+     "se": 0.357,
+     "exits": {
+      "time": 6,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.249,
+     "sum": 1.24,
+     "win": 80.0,
+     "se": 0.171,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.133,
+     "sum": 1.06,
+     "win": 87.5,
+     "se": 0.315,
+     "exits": {
+      "target": 7,
+      "stop": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.528,
+     "sum": 2.11,
+     "win": 75.0,
+     "se": 0.227,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.068,
+     "sum": 0.07,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.157,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.922,
+     "target"
+    ],
+    [
+     "10-21 11:52",
+     "BTCUSDT",
+     0.101,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "ETHUSDT",
+     0.203,
+     "target"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 14:59",
+     "ETHUSDT",
+     -1.715,
+     "stop"
+    ],
+    [
+     "10-20 16:58",
+     "ETHUSDT",
+     0.231,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-21 13:04",
+     "ETHUSDT",
+     0.079,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-18 22:00",
+     "SOLUSDT",
+     0.346,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ],
+    [
+     "10-20 17:08",
+     "XRPUSDT",
+     0.068,
+     "time"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 23,
+    "mean": 0.079,
+    "sum": 1.81,
+    "win": 65.2,
+    "se": 0.141,
+    "exits": {
+     "time": 11,
+     "target": 10,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.459,
+    "sum": 4.59,
+    "win": 80.0,
+    "se": 0.163,
+    "exits": {
+     "target": 7,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 33,
+    "mean": 0.194,
+    "sum": 6.4,
+    "win": 69.7,
+    "se": 0.113,
+    "exits": {
+     "target": 17,
+     "time": 14,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.258,
+     "sum": 1.81,
+     "win": 71.4,
+     "se": 0.114,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.456,
+     "sum": 3.65,
+     "win": 100.0,
+     "se": 0.18,
+     "exits": {
+      "target": 7,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.606,
+     "sum": 3.64,
+     "win": 83.3,
+     "se": 0.143,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 6,
+     "mean": -0.227,
+     "sum": -1.36,
+     "win": 50.0,
+     "se": 0.225,
+     "exits": {
+      "target": 3,
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 6,
+     "mean": -0.222,
+     "sum": -1.33,
+     "win": 33.3,
+     "se": 0.422,
+     "exits": {
+      "time": 5,
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.187,
+     "sum": 0.56,
+     "win": 66.7,
+     "se": 0.158,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.566,
+     "sum": 2.27,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.589,
+     "sum": 1.77,
+     "win": 66.7,
+     "se": 0.309,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.092,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.495,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.027,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.141,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.239,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.572,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.313,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.022,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.972,
+     "target"
+    ]
+   ]
+  },
+  "mid|stop0.008|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 10,
+    "mean": 0.292,
+    "sum": 2.92,
+    "win": 90.0,
+    "se": 0.258,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 11,
+    "mean": 0.339,
+    "sum": 3.73,
+    "win": 90.9,
+    "se": 0.238,
+    "exits": {
+     "target": 5,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.353,
+     "sum": 0.35,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 3,
+     "mean": 0.441,
+     "sum": 1.32,
+     "win": 100.0,
+     "se": 0.2,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 4,
+     "mean": 0.672,
+     "sum": 2.69,
+     "win": 100.0,
+     "se": 0.076,
+     "exits": {
+      "time": 3,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.088,
+     "sum": 0.09,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.36,
+     "sum": -0.72,
+     "win": 50.0,
+     "se": 1.484,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.816,
+     "sum": 0.82,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.816,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 8,
+    "mean": -0.025,
+    "sum": -0.2,
+    "win": 62.5,
+    "se": 0.22,
+    "exits": {
+     "target": 4,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.098,
+    "sum": 0.49,
+    "win": 40.0,
+    "se": 0.215,
+    "exits": {
+     "time": 3,
+     "target": 2
+    }
+   },
+   "all": {
+    "n": 13,
+    "mean": 0.023,
+    "sum": 0.29,
+    "win": 53.8,
+    "se": 0.154,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.243,
+     "sum": 1.7,
+     "win": 71.4,
+     "se": 0.148,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 2,
+     "mean": -0.883,
+     "sum": -1.77,
+     "win": 0.0,
+     "se": 0.395,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.289,
+     "sum": 0.87,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.372,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 5,
+    "mean": 0.259,
+    "sum": 1.3,
+    "win": 80.0,
+    "se": 0.162,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.76,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.258,
+     "sum": 1.03,
+     "win": 75.0,
+     "se": 0.2,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.467,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.547,
+     "sum": 0.55,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "cons|stop0.009|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 15,
+    "mean": -0.186,
+    "sum": -2.79,
+    "win": 46.7,
+    "se": 0.208,
+    "exits": {
+     "time": 8,
+     "target": 5,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.316,
+    "sum": 3.48,
+    "win": 63.6,
+    "se": 0.157,
+    "exits": {
+     "target": 6,
+     "time": 5
+    }
+   },
+   "all": {
+    "n": 26,
+    "mean": 0.027,
+    "sum": 0.69,
+    "win": 53.8,
+    "se": 0.144,
+    "exits": {
+     "time": 13,
+     "target": 11,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.221,
+     "sum": 1.77,
+     "win": 75.0,
+     "se": 0.131,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.182,
+     "sum": 1.45,
+     "win": 37.5,
+     "se": 0.237,
+     "exits": {
+      "time": 5,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 83.3,
+     "se": 0.15,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.626,
+     "sum": -1.88,
+     "win": 0.0,
+     "se": 0.344,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.233,
+     "sum": 0.93,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.444,
+     "sum": 1.78,
+     "win": 50.0,
+     "se": 0.343,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.256,
+     "sum": 0.77,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     -0.043,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.393,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.656,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 12,
+    "mean": -0.108,
+    "sum": -1.29,
+    "win": 50.0,
+    "se": 0.24,
+    "exits": {
+     "time": 7,
+     "target": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.414,
+    "sum": 2.07,
+    "win": 80.0,
+    "se": 0.297,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 17,
+    "mean": 0.046,
+    "sum": 0.78,
+    "win": 58.8,
+    "se": 0.195,
+    "exits": {
+     "time": 9,
+     "target": 7,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.219,
+     "sum": 1.09,
+     "win": 80.0,
+     "se": 0.159,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.221,
+     "sum": 1.11,
+     "win": 40.0,
+     "se": 0.387,
+     "exits": {
+      "time": 3,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.212,
+     "sum": 1.06,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": -0.111,
+     "sum": -0.11,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.265,
+     "sum": 0.53,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.429,
+     "sum": 1.43,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.057,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.417,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": -0.018,
+    "sum": -0.12,
+    "win": 71.4,
+    "se": 0.402,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.342,
+     "sum": 0.68,
+     "win": 50.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.413,
+     "sum": 1.24,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.474,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 9,
+    "mean": 0.03,
+    "sum": 0.27,
+    "win": 66.7,
+    "se": 0.201,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.098,
+    "sum": 0.49,
+    "win": 40.0,
+    "se": 0.215,
+    "exits": {
+     "time": 3,
+     "target": 2
+    }
+   },
+   "all": {
+    "n": 14,
+    "mean": 0.055,
+    "sum": 0.76,
+    "win": 57.1,
+    "se": 0.146,
+    "exits": {
+     "target": 7,
+     "time": 6,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.272,
+     "sum": 2.17,
+     "win": 75.0,
+     "se": 0.132,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 2,
+     "mean": -0.883,
+     "sum": -1.77,
+     "win": 0.0,
+     "se": 0.395,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.289,
+     "sum": 0.87,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.372,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.77,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.319,
+    "sum": 2.23,
+    "win": 85.7,
+    "se": 0.118,
+    "exits": {
+     "target": 5,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.3,
+     "sum": 1.5,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.467,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.547,
+     "sum": 0.55,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "cons|stop0.009|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 17,
+    "mean": -0.102,
+    "sum": -1.73,
+    "win": 52.9,
+    "se": 0.191,
+    "exits": {
+     "time": 9,
+     "target": 6,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.316,
+    "sum": 3.48,
+    "win": 63.6,
+    "se": 0.157,
+    "exits": {
+     "target": 6,
+     "time": 5
+    }
+   },
+   "all": {
+    "n": 28,
+    "mean": 0.062,
+    "sum": 1.74,
+    "win": 57.1,
+    "se": 0.135,
+    "exits": {
+     "time": 14,
+     "target": 12,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.249,
+     "sum": 2.24,
+     "win": 77.8,
+     "se": 0.118,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.182,
+     "sum": 1.45,
+     "win": 37.5,
+     "se": 0.237,
+     "exits": {
+      "time": 5,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 83.3,
+     "se": 0.15,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.626,
+     "sum": -1.88,
+     "win": 0.0,
+     "se": 0.344,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.894,
+     "sum": -1.79,
+     "win": 50.0,
+     "se": 1.476,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.233,
+     "sum": 0.93,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.444,
+     "sum": 1.78,
+     "win": 50.0,
+     "se": 0.343,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.256,
+     "sum": 0.77,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     -0.043,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.393,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.656,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 13,
+    "mean": -0.063,
+    "sum": -0.82,
+    "win": 53.8,
+    "se": 0.225,
+    "exits": {
+     "time": 7,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.414,
+    "sum": 2.07,
+    "win": 80.0,
+    "se": 0.297,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 18,
+    "mean": 0.069,
+    "sum": 1.25,
+    "win": 61.1,
+    "se": 0.185,
+    "exits": {
+     "time": 9,
+     "target": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.261,
+     "sum": 1.56,
+     "win": 83.3,
+     "se": 0.137,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.221,
+     "sum": 1.11,
+     "win": 40.0,
+     "se": 0.387,
+     "exits": {
+      "time": 3,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.212,
+     "sum": 1.06,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": -0.111,
+     "sum": -0.11,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.265,
+     "sum": 0.53,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.429,
+     "sum": 1.43,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.057,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.417,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.009|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": -0.018,
+    "sum": -0.12,
+    "win": 71.4,
+    "se": 0.402,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.342,
+     "sum": 0.68,
+     "win": 50.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.413,
+     "sum": 1.24,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.474,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 8,
+    "mean": -0.025,
+    "sum": -0.2,
+    "win": 62.5,
+    "se": 0.22,
+    "exits": {
+     "target": 4,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.098,
+    "sum": 0.49,
+    "win": 40.0,
+    "se": 0.215,
+    "exits": {
+     "time": 3,
+     "target": 2
+    }
+   },
+   "all": {
+    "n": 13,
+    "mean": 0.023,
+    "sum": 0.29,
+    "win": 53.8,
+    "se": 0.154,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.243,
+     "sum": 1.7,
+     "win": 71.4,
+     "se": 0.148,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 2,
+     "mean": -0.883,
+     "sum": -1.77,
+     "win": 0.0,
+     "se": 0.395,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.289,
+     "sum": 0.87,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.372,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 5,
+    "mean": 0.259,
+    "sum": 1.3,
+    "win": 80.0,
+    "se": 0.162,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.76,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.258,
+     "sum": 1.03,
+     "win": 75.0,
+     "se": 0.2,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.467,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.547,
+     "sum": 0.55,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "cons|stop0.008|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 15,
+    "mean": -0.186,
+    "sum": -2.79,
+    "win": 46.7,
+    "se": 0.208,
+    "exits": {
+     "time": 8,
+     "target": 5,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.316,
+    "sum": 3.48,
+    "win": 63.6,
+    "se": 0.157,
+    "exits": {
+     "target": 6,
+     "time": 5
+    }
+   },
+   "all": {
+    "n": 26,
+    "mean": 0.027,
+    "sum": 0.69,
+    "win": 53.8,
+    "se": 0.144,
+    "exits": {
+     "time": 13,
+     "target": 11,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.221,
+     "sum": 1.77,
+     "win": 75.0,
+     "se": 0.131,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.182,
+     "sum": 1.45,
+     "win": 37.5,
+     "se": 0.237,
+     "exits": {
+      "time": 5,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 83.3,
+     "se": 0.15,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.626,
+     "sum": -1.88,
+     "win": 0.0,
+     "se": 0.344,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.233,
+     "sum": 0.93,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.444,
+     "sum": 1.78,
+     "win": 50.0,
+     "se": 0.343,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.256,
+     "sum": 0.77,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     -0.043,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.393,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.656,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 12,
+    "mean": -0.108,
+    "sum": -1.29,
+    "win": 50.0,
+    "se": 0.24,
+    "exits": {
+     "time": 7,
+     "target": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.414,
+    "sum": 2.07,
+    "win": 80.0,
+    "se": 0.297,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 17,
+    "mean": 0.046,
+    "sum": 0.78,
+    "win": 58.8,
+    "se": 0.195,
+    "exits": {
+     "time": 9,
+     "target": 7,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.219,
+     "sum": 1.09,
+     "win": 80.0,
+     "se": 0.159,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.221,
+     "sum": 1.11,
+     "win": 40.0,
+     "se": 0.387,
+     "exits": {
+      "time": 3,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.212,
+     "sum": 1.06,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": -0.111,
+     "sum": -0.11,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.265,
+     "sum": 0.53,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.429,
+     "sum": 1.43,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.057,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.417,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": -0.018,
+    "sum": -0.12,
+    "win": 71.4,
+    "se": 0.402,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.342,
+     "sum": 0.68,
+     "win": 50.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.413,
+     "sum": 1.24,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.474,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 9,
+    "mean": 0.03,
+    "sum": 0.27,
+    "win": 66.7,
+    "se": 0.201,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.098,
+    "sum": 0.49,
+    "win": 40.0,
+    "se": 0.215,
+    "exits": {
+     "time": 3,
+     "target": 2
+    }
+   },
+   "all": {
+    "n": 14,
+    "mean": 0.055,
+    "sum": 0.76,
+    "win": 57.1,
+    "se": 0.146,
+    "exits": {
+     "target": 7,
+     "time": 6,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.272,
+     "sum": 2.17,
+     "win": 75.0,
+     "se": 0.132,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 2,
+     "mean": -0.883,
+     "sum": -1.77,
+     "win": 0.0,
+     "se": 0.395,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.289,
+     "sum": 0.87,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.187,
+     "sum": -0.37,
+     "win": 0.0,
+     "se": 0.185,
+     "exits": {
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.372,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.77,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.319,
+    "sum": 2.23,
+    "win": 85.7,
+    "se": 0.118,
+    "exits": {
+     "target": 5,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.3,
+     "sum": 1.5,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.366,
+     "sum": 0.73,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.467,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.436,
+    "sum": 0.87,
+    "win": 100.0,
+    "se": 0.111,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.547,
+     "sum": 0.55,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "cons|stop0.008|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 17,
+    "mean": -0.102,
+    "sum": -1.73,
+    "win": 52.9,
+    "se": 0.191,
+    "exits": {
+     "time": 9,
+     "target": 6,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.316,
+    "sum": 3.48,
+    "win": 63.6,
+    "se": 0.157,
+    "exits": {
+     "target": 6,
+     "time": 5
+    }
+   },
+   "all": {
+    "n": 28,
+    "mean": 0.062,
+    "sum": 1.74,
+    "win": 57.1,
+    "se": 0.135,
+    "exits": {
+     "time": 14,
+     "target": 12,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.249,
+     "sum": 2.24,
+     "win": 77.8,
+     "se": 0.118,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.182,
+     "sum": 1.45,
+     "win": 37.5,
+     "se": 0.237,
+     "exits": {
+      "time": 5,
+      "target": 3
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.286,
+     "sum": 1.72,
+     "win": 83.3,
+     "se": 0.15,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.626,
+     "sum": -1.88,
+     "win": 0.0,
+     "se": 0.344,
+     "exits": {
+      "time": 2,
+      "stop": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.894,
+     "sum": -1.79,
+     "win": 50.0,
+     "se": 1.476,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.233,
+     "sum": 0.93,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.444,
+     "sum": 1.78,
+     "win": 50.0,
+     "se": 0.343,
+     "exits": {
+      "time": 2,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.256,
+     "sum": 0.77,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.128,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.893,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.155,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     -0.043,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     -0.003,
+     "time"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.393,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.656,
+     "target"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 13,
+    "mean": -0.063,
+    "sum": -0.82,
+    "win": 53.8,
+    "se": 0.225,
+    "exits": {
+     "time": 7,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.414,
+    "sum": 2.07,
+    "win": 80.0,
+    "se": 0.297,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 18,
+    "mean": 0.069,
+    "sum": 1.25,
+    "win": 61.1,
+    "se": 0.185,
+    "exits": {
+     "time": 9,
+     "target": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.261,
+     "sum": 1.56,
+     "win": 83.3,
+     "se": 0.137,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.221,
+     "sum": 1.11,
+     "win": 40.0,
+     "se": 0.387,
+     "exits": {
+      "time": 3,
+      "target": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.212,
+     "sum": 1.06,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": -0.111,
+     "sum": -0.11,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.265,
+     "sum": 0.53,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.429,
+     "sum": 1.43,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.057,
+     "sum": 0.11,
+     "win": 50.0,
+     "se": 0.417,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.064,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.467,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.429,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.361,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "cons|stop0.008|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": -0.018,
+    "sum": -0.12,
+    "win": 71.4,
+    "se": 0.402,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.324,
+     "sum": 0.32,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.342,
+     "sum": 0.68,
+     "win": 50.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.413,
+     "sum": 1.24,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.371,
+     "sum": -2.37,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.474,
+     "sum": 0.47,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.474,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 9,
+    "mean": 0.034,
+    "sum": 0.31,
+    "win": 66.7,
+    "se": 0.203,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.155,
+    "sum": 0.78,
+    "win": 60.0,
+    "se": 0.208,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 14,
+    "mean": 0.077,
+    "sum": 1.08,
+    "win": 64.3,
+    "se": 0.146,
+    "exits": {
+     "target": 8,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.258,
+     "sum": 1.8,
+     "win": 71.4,
+     "se": 0.148,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.52,
+     "sum": -1.56,
+     "win": 33.3,
+     "se": 0.428,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.303,
+     "sum": 0.91,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.302,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 5,
+    "mean": 0.316,
+    "sum": 1.58,
+    "win": 80.0,
+    "se": 0.171,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 6,
+    "mean": 0.343,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.272,
+     "sum": 1.09,
+     "win": 75.0,
+     "se": 0.2,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.481,
+     "sum": 0.48,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.668,
+     "sum": 0.67,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "acons|stop0.009|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 16,
+    "mean": -0.038,
+    "sum": -0.61,
+    "win": 68.8,
+    "se": 0.187,
+    "exits": {
+     "time": 7,
+     "target": 7,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.379,
+    "sum": 4.17,
+    "win": 81.8,
+    "se": 0.159,
+    "exits": {
+     "target": 8,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 27,
+    "mean": 0.132,
+    "sum": 3.56,
+    "win": 74.1,
+    "se": 0.132,
+    "exits": {
+     "target": 15,
+     "time": 10,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.235,
+     "sum": 1.88,
+     "win": 75.0,
+     "se": 0.131,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.36,
+     "sum": 2.88,
+     "win": 87.5,
+     "se": 0.187,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.419,
+     "sum": 2.51,
+     "win": 83.3,
+     "se": 0.157,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.389,
+     "sum": -1.56,
+     "win": 50.0,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.247,
+     "sum": 0.99,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.495,
+     "sum": 1.98,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.402,
+     "sum": 1.21,
+     "win": 66.7,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.071,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.243,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.852,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 12,
+    "mean": 0.055,
+    "sum": 0.66,
+    "win": 75.0,
+    "se": 0.221,
+    "exits": {
+     "time": 6,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 17,
+    "mean": 0.181,
+    "sum": 3.07,
+    "win": 76.5,
+    "se": 0.18,
+    "exits": {
+     "time": 8,
+     "target": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.233,
+     "sum": 1.17,
+     "win": 80.0,
+     "se": 0.159,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.48,
+     "sum": 2.4,
+     "win": 80.0,
+     "se": 0.295,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.333,
+     "sum": 1.66,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.002,
+     "sum": 0.0,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.279,
+     "sum": 0.56,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.5,
+     "sum": 1.5,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.177,
+     "sum": 0.35,
+     "win": 50.0,
+     "se": 0.418,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": 0.002,
+    "sum": 0.01,
+    "win": 83.3,
+    "se": 0.444,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.595,
+    "sum": 0.59,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.087,
+    "sum": 0.61,
+    "win": 85.7,
+    "se": 0.385,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.413,
+     "sum": 0.83,
+     "win": 100.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.533,
+     "sum": 1.6,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.595,
+     "sum": 0.59,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 10,
+    "mean": 0.079,
+    "sum": 0.79,
+    "win": 70.0,
+    "se": 0.187,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.155,
+    "sum": 0.78,
+    "win": 60.0,
+    "se": 0.208,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 15,
+    "mean": 0.105,
+    "sum": 1.57,
+    "win": 66.7,
+    "se": 0.138,
+    "exits": {
+     "target": 9,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.286,
+     "sum": 2.29,
+     "win": 75.0,
+     "se": 0.132,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.52,
+     "sum": -1.56,
+     "win": 33.3,
+     "se": 0.428,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.303,
+     "sum": 0.91,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.302,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 6,
+    "mean": 0.344,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.363,
+    "sum": 2.54,
+    "win": 85.7,
+    "se": 0.122,
+    "exits": {
+     "target": 5,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.314,
+     "sum": 1.57,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.481,
+     "sum": 0.48,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.668,
+     "sum": 0.67,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "acons|stop0.009|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 18,
+    "mean": 0.038,
+    "sum": 0.68,
+    "win": 72.2,
+    "se": 0.174,
+    "exits": {
+     "time": 8,
+     "target": 8,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.379,
+    "sum": 4.17,
+    "win": 81.8,
+    "se": 0.159,
+    "exits": {
+     "target": 8,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 29,
+    "mean": 0.167,
+    "sum": 4.85,
+    "win": 75.9,
+    "se": 0.126,
+    "exits": {
+     "target": 16,
+     "time": 11,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.263,
+     "sum": 2.36,
+     "win": 77.8,
+     "se": 0.118,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.36,
+     "sum": 2.88,
+     "win": 87.5,
+     "se": 0.187,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.419,
+     "sum": 2.51,
+     "win": 83.3,
+     "se": 0.157,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.389,
+     "sum": -1.56,
+     "win": 50.0,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.676,
+     "sum": -1.35,
+     "win": 50.0,
+     "se": 1.479,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.247,
+     "sum": 0.99,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.495,
+     "sum": 1.98,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.402,
+     "sum": 1.21,
+     "win": 66.7,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.071,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.243,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.852,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 13,
+    "mean": 0.088,
+    "sum": 1.14,
+    "win": 76.9,
+    "se": 0.206,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 18,
+    "mean": 0.198,
+    "sum": 3.56,
+    "win": 77.8,
+    "se": 0.171,
+    "exits": {
+     "target": 9,
+     "time": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.275,
+     "sum": 1.65,
+     "win": 83.3,
+     "se": 0.137,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.48,
+     "sum": 2.4,
+     "win": 80.0,
+     "se": 0.295,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.333,
+     "sum": 1.66,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.002,
+     "sum": 0.0,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.279,
+     "sum": 0.56,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.5,
+     "sum": 1.5,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.177,
+     "sum": 0.35,
+     "win": 50.0,
+     "se": 0.418,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.009|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": 0.002,
+    "sum": 0.01,
+    "win": 83.3,
+    "se": 0.444,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.595,
+    "sum": 0.59,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.087,
+    "sum": 0.61,
+    "win": 85.7,
+    "se": 0.385,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.413,
+     "sum": 0.83,
+     "win": 100.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.533,
+     "sum": 1.6,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.595,
+     "sum": 0.59,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd1|minp30|thr0.0036": {
+   "train": {
+    "n": 9,
+    "mean": 0.048,
+    "sum": 0.43,
+    "win": 66.7,
+    "se": 0.192,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.155,
+    "sum": 0.78,
+    "win": 60.0,
+    "se": 0.208,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 14,
+    "mean": 0.086,
+    "sum": 1.21,
+    "win": 64.3,
+    "se": 0.14,
+    "exits": {
+     "target": 8,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 7,
+     "mean": 0.258,
+     "sum": 1.8,
+     "win": 71.4,
+     "se": 0.148,
+     "exits": {
+      "target": 5,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.479,
+     "sum": -1.44,
+     "win": 33.3,
+     "se": 0.392,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.303,
+     "sum": 0.91,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.302,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd1|minp30|thr0.0045": {
+   "train": {
+    "n": 5,
+    "mean": 0.316,
+    "sum": 1.58,
+    "win": 80.0,
+    "se": 0.171,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 6,
+    "mean": 0.343,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.272,
+     "sum": 1.09,
+     "win": 75.0,
+     "se": 0.2,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.481,
+     "sum": 0.48,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd1|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.668,
+     "sum": 0.67,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "acons|stop0.008|cd1|minp10|thr0.0036": {
+   "train": {
+    "n": 16,
+    "mean": -0.031,
+    "sum": -0.49,
+    "win": 68.8,
+    "se": 0.183,
+    "exits": {
+     "time": 7,
+     "target": 7,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.379,
+    "sum": 4.17,
+    "win": 81.8,
+    "se": 0.159,
+    "exits": {
+     "target": 8,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 27,
+    "mean": 0.136,
+    "sum": 3.69,
+    "win": 74.1,
+    "se": 0.13,
+    "exits": {
+     "target": 15,
+     "time": 10,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.235,
+     "sum": 1.88,
+     "win": 75.0,
+     "se": 0.131,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.36,
+     "sum": 2.88,
+     "win": 87.5,
+     "se": 0.187,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.419,
+     "sum": 2.51,
+     "win": 83.3,
+     "se": 0.157,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.359,
+     "sum": -1.44,
+     "win": 50.0,
+     "se": 0.302,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.247,
+     "sum": 0.99,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.495,
+     "sum": 1.98,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.402,
+     "sum": 1.21,
+     "win": 66.7,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.071,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.243,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.852,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd1|minp10|thr0.0045": {
+   "train": {
+    "n": 12,
+    "mean": 0.055,
+    "sum": 0.66,
+    "win": 75.0,
+    "se": 0.221,
+    "exits": {
+     "time": 6,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 17,
+    "mean": 0.181,
+    "sum": 3.07,
+    "win": 76.5,
+    "se": 0.18,
+    "exits": {
+     "time": 8,
+     "target": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.233,
+     "sum": 1.17,
+     "win": 80.0,
+     "se": 0.159,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.48,
+     "sum": 2.4,
+     "win": 80.0,
+     "se": 0.295,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.333,
+     "sum": 1.66,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.002,
+     "sum": 0.0,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.279,
+     "sum": 0.56,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.5,
+     "sum": 1.5,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.177,
+     "sum": 0.35,
+     "win": 50.0,
+     "se": 0.418,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd1|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": 0.002,
+    "sum": 0.01,
+    "win": 83.3,
+    "se": 0.444,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.595,
+    "sum": 0.59,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.087,
+    "sum": 0.61,
+    "win": 85.7,
+    "se": 0.385,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.413,
+     "sum": 0.83,
+     "win": 100.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.533,
+     "sum": 1.6,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.595,
+     "sum": 0.59,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd0|minp30|thr0.0036": {
+   "train": {
+    "n": 10,
+    "mean": 0.091,
+    "sum": 0.91,
+    "win": 70.0,
+    "se": 0.177,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.155,
+    "sum": 0.78,
+    "win": 60.0,
+    "se": 0.208,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 15,
+    "mean": 0.113,
+    "sum": 1.69,
+    "win": 66.7,
+    "se": 0.133,
+    "exits": {
+     "target": 9,
+     "time": 5,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 8,
+     "mean": 0.286,
+     "sum": 2.29,
+     "win": 75.0,
+     "se": 0.132,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 3,
+     "mean": -0.479,
+     "sum": -1.44,
+     "win": 33.3,
+     "se": 0.392,
+     "exits": {
+      "stop": 1,
+      "target": 1,
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 3,
+     "mean": 0.303,
+     "sum": 0.91,
+     "win": 66.7,
+     "se": 0.313,
+     "exits": {
+      "target": 2,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": -0.067,
+     "sum": -0.13,
+     "win": 50.0,
+     "se": 0.235,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:14",
+     "ETHUSDT",
+     -0.302,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd0|minp30|thr0.0045": {
+   "train": {
+    "n": 6,
+    "mean": 0.344,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.363,
+    "sum": 2.54,
+    "win": 85.7,
+    "se": 0.122,
+    "exits": {
+     "target": 5,
+     "time": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 5,
+     "mean": 0.314,
+     "sum": 1.57,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "target": 4,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.486,
+     "sum": 0.97,
+     "win": 100.0,
+     "se": 0.181,
+     "exits": {
+      "time": 1,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.481,
+     "sum": 0.48,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd0|minp30|thr0.006": {
+   "train": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "all": {
+    "n": 2,
+    "mean": 0.503,
+    "sum": 1.01,
+    "win": 100.0,
+    "se": 0.165,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.668,
+     "sum": 0.67,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 0
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": []
+  },
+  "acons|stop0.008|cd0|minp10|thr0.0036": {
+   "train": {
+    "n": 18,
+    "mean": 0.044,
+    "sum": 0.8,
+    "win": 72.2,
+    "se": 0.171,
+    "exits": {
+     "time": 8,
+     "target": 8,
+     "stop": 2
+    }
+   },
+   "test": {
+    "n": 11,
+    "mean": 0.379,
+    "sum": 4.17,
+    "win": 81.8,
+    "se": 0.159,
+    "exits": {
+     "target": 8,
+     "time": 3
+    }
+   },
+   "all": {
+    "n": 29,
+    "mean": 0.171,
+    "sum": 4.97,
+    "win": 75.9,
+    "se": 0.124,
+    "exits": {
+     "target": 16,
+     "time": 11,
+     "stop": 2
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 9,
+     "mean": 0.263,
+     "sum": 2.36,
+     "win": 77.8,
+     "se": 0.118,
+     "exits": {
+      "target": 7,
+      "time": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 8,
+     "mean": 0.36,
+     "sum": 2.88,
+     "win": 87.5,
+     "se": 0.187,
+     "exits": {
+      "target": 6,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 6,
+     "mean": 0.419,
+     "sum": 2.51,
+     "win": 83.3,
+     "se": 0.157,
+     "exits": {
+      "time": 4,
+      "target": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 4,
+     "mean": -0.359,
+     "sum": -1.44,
+     "win": 50.0,
+     "se": 0.302,
+     "exits": {
+      "time": 2,
+      "stop": 1,
+      "target": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 2,
+     "mean": -0.676,
+     "sum": -1.35,
+     "win": 50.0,
+     "se": 1.479,
+     "exits": {
+      "stop": 1,
+      "time": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 4,
+     "mean": 0.247,
+     "sum": 0.99,
+     "win": 75.0,
+     "se": 0.228,
+     "exits": {
+      "target": 3,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 4,
+     "mean": 0.495,
+     "sum": 1.98,
+     "win": 100.0,
+     "se": 0.337,
+     "exits": {
+      "target": 4
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.402,
+     "sum": 1.21,
+     "win": 66.7,
+     "se": 0.33,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-19 13:03",
+     "BTCUSDT",
+     0.142,
+     "target"
+    ],
+    [
+     "10-20 14:06",
+     "BTCUSDT",
+     0.907,
+     "target"
+    ],
+    [
+     "10-21 13:08",
+     "BTCUSDT",
+     -0.141,
+     "time"
+    ],
+    [
+     "10-19 04:07",
+     "ETHUSDT",
+     0.071,
+     "target"
+    ],
+    [
+     "10-19 09:29",
+     "ETHUSDT",
+     0.168,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-20 20:54",
+     "ETHUSDT",
+     0.243,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ],
+    [
+     "10-20 14:07",
+     "SOLUSDT",
+     0.852,
+     "target"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd0|minp10|thr0.0045": {
+   "train": {
+    "n": 13,
+    "mean": 0.088,
+    "sum": 1.14,
+    "win": 76.9,
+    "se": 0.206,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "all": {
+    "n": 18,
+    "mean": 0.198,
+    "sum": 3.56,
+    "win": 77.8,
+    "se": 0.171,
+    "exits": {
+     "target": 9,
+     "time": 8,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 6,
+     "mean": 0.275,
+     "sum": 1.65,
+     "win": 83.3,
+     "se": 0.137,
+     "exits": {
+      "target": 5,
+      "time": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 5,
+     "mean": 0.48,
+     "sum": 2.4,
+     "win": 80.0,
+     "se": 0.295,
+     "exits": {
+      "target": 3,
+      "time": 2
+     }
+    },
+    "SOLUSDT": {
+     "n": 5,
+     "mean": 0.333,
+     "sum": 1.66,
+     "win": 80.0,
+     "se": 0.16,
+     "exits": {
+      "time": 4,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean": 0.002,
+     "sum": 0.0,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 2,
+     "mean": 0.279,
+     "sum": 0.56,
+     "win": 100.0,
+     "se": 0.201,
+     "exits": {
+      "target": 2
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean": 1.5,
+     "sum": 1.5,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 2,
+     "mean": 0.177,
+     "sum": 0.35,
+     "win": 50.0,
+     "se": 0.418,
+     "exits": {
+      "time": 2
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 03:37",
+     "BTCUSDT",
+     0.078,
+     "target"
+    ],
+    [
+     "10-20 14:09",
+     "BTCUSDT",
+     0.481,
+     "target"
+    ],
+    [
+     "10-20 14:02",
+     "ETHUSDT",
+     1.5,
+     "target"
+    ],
+    [
+     "10-18 19:46",
+     "SOLUSDT",
+     -0.241,
+     "time"
+    ],
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  },
+  "acons|stop0.008|cd0|minp10|thr0.006": {
+   "train": {
+    "n": 6,
+    "mean": 0.002,
+    "sum": 0.01,
+    "win": 83.3,
+    "se": 0.444,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.595,
+    "sum": 0.59,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "all": {
+    "n": 7,
+    "mean": 0.087,
+    "sum": 0.61,
+    "win": 85.7,
+    "se": 0.385,
+    "exits": {
+     "target": 3,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "per_market_all": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean": 0.338,
+     "sum": 0.34,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 2,
+     "mean": 0.413,
+     "sum": 0.83,
+     "win": 100.0,
+     "se": 0.356,
+     "exits": {
+      "target": 1,
+      "time": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 3,
+     "mean": 0.533,
+     "sum": 1.6,
+     "win": 100.0,
+     "se": 0.1,
+     "exits": {
+      "time": 2,
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 1,
+     "mean": -2.156,
+     "sum": -2.16,
+     "win": 0.0,
+     "se": null,
+     "exits": {
+      "stop": 1
+     }
+    }
+   },
+   "per_market_test": {
+    "BTCUSDT": {
+     "n": 0
+    },
+    "ETHUSDT": {
+     "n": 0
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean": 0.595,
+     "sum": 0.59,
+     "win": 100.0,
+     "se": null,
+     "exits": {
+      "time": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 0
+    },
+    "DOGEUSDT": {
+     "n": 0
+    }
+   },
+   "test_trades": [
+    [
+     "10-19 02:48",
+     "SOLUSDT",
+     0.595,
+     "time"
+    ]
+   ]
+  }
+ },
+ "walk_forward": {
+  "mid|stop0.009|cd1|minp30": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "test_trades_per_day": 0.0
+  },
+  "mid|stop0.009|cd1|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 9,
+    "mean": 0.199,
+    "sum": 1.79,
+    "win": 88.9,
+    "se": 0.269,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "mid|stop0.009|cd0|minp30": {
+   "chosen_thr": 0.0036,
+   "train": {
+    "n": 18,
+    "mean": 0.18,
+    "sum": 3.24,
+    "win": 66.7,
+    "se": 0.145,
+    "exits": {
+     "time": 9,
+     "target": 9
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.005,
+    "sum": 0.05,
+    "win": 70.0,
+    "se": 0.211,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test_trades_per_day": 3.51
+  },
+  "mid|stop0.009|cd0|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 10,
+    "mean": 0.292,
+    "sum": 2.92,
+    "win": 90.0,
+    "se": 0.258,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "mid|stop0.008|cd1|minp30": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 3,
+    "mean": 0.556,
+    "sum": 1.67,
+    "win": 100.0,
+    "se": 0.127,
+    "exits": {
+     "target": 2,
+     "time": 1
+    }
+   },
+   "test": {
+    "n": 0
+   },
+   "test_trades_per_day": 0.0
+  },
+  "mid|stop0.008|cd1|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 9,
+    "mean": 0.199,
+    "sum": 1.79,
+    "win": 88.9,
+    "se": 0.269,
+    "exits": {
+     "target": 5,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "mid|stop0.008|cd0|minp30": {
+   "chosen_thr": 0.0036,
+   "train": {
+    "n": 18,
+    "mean": 0.171,
+    "sum": 3.07,
+    "win": 66.7,
+    "se": 0.149,
+    "exits": {
+     "target": 9,
+     "time": 8,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 10,
+    "mean": 0.005,
+    "sum": 0.05,
+    "win": 70.0,
+    "se": 0.211,
+    "exits": {
+     "target": 6,
+     "time": 3,
+     "stop": 1
+    }
+   },
+   "test_trades_per_day": 3.51
+  },
+  "mid|stop0.008|cd0|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 10,
+    "mean": 0.292,
+    "sum": 2.92,
+    "win": 90.0,
+    "se": 0.258,
+    "exits": {
+     "target": 5,
+     "time": 4,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.816,
+    "sum": 0.82,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.009|cd1|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 5,
+    "mean": 0.259,
+    "sum": 1.3,
+    "win": 80.0,
+    "se": 0.162,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.009|cd1|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.009|cd0|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.77,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.009|cd0|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.008|cd1|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 5,
+    "mean": 0.259,
+    "sum": 1.3,
+    "win": 80.0,
+    "se": 0.162,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.008|cd1|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.008|cd0|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 6,
+    "mean": 0.294,
+    "sum": 1.77,
+    "win": 83.3,
+    "se": 0.137,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.467,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "cons|stop0.008|cd0|minp10": {
+   "chosen_thr": 0.006,
+   "train": {
+    "n": 6,
+    "mean": -0.1,
+    "sum": -0.6,
+    "win": 66.7,
+    "se": 0.465,
+    "exits": {
+     "target": 3,
+     "time": 2,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.474,
+    "sum": 0.47,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "time": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "acons|stop0.009|cd1|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 5,
+    "mean": 0.316,
+    "sum": 1.58,
+    "win": 80.0,
+    "se": 0.171,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "acons|stop0.009|cd1|minp10": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 12,
+    "mean": 0.055,
+    "sum": 0.66,
+    "win": 75.0,
+    "se": 0.221,
+    "exits": {
+     "time": 6,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test_trades_per_day": 1.75
+  },
+  "acons|stop0.009|cd0|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 6,
+    "mean": 0.344,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "acons|stop0.009|cd0|minp10": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 13,
+    "mean": 0.088,
+    "sum": 1.14,
+    "win": 76.9,
+    "se": 0.206,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test_trades_per_day": 1.75
+  },
+  "acons|stop0.008|cd1|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 5,
+    "mean": 0.316,
+    "sum": 1.58,
+    "win": 80.0,
+    "se": 0.171,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "acons|stop0.008|cd1|minp10": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 12,
+    "mean": 0.055,
+    "sum": 0.66,
+    "win": 75.0,
+    "se": 0.221,
+    "exits": {
+     "time": 6,
+     "target": 5,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test_trades_per_day": 1.75
+  },
+  "acons|stop0.008|cd0|minp30": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 6,
+    "mean": 0.344,
+    "sum": 2.06,
+    "win": 83.3,
+    "se": 0.142,
+    "exits": {
+     "target": 4,
+     "time": 2
+    }
+   },
+   "test": {
+    "n": 1,
+    "mean": 0.481,
+    "sum": 0.48,
+    "win": 100.0,
+    "se": null,
+    "exits": {
+     "target": 1
+    }
+   },
+   "test_trades_per_day": 0.35
+  },
+  "acons|stop0.008|cd0|minp10": {
+   "chosen_thr": 0.0045,
+   "train": {
+    "n": 13,
+    "mean": 0.088,
+    "sum": 1.14,
+    "win": 76.9,
+    "se": 0.206,
+    "exits": {
+     "time": 6,
+     "target": 6,
+     "stop": 1
+    }
+   },
+   "test": {
+    "n": 5,
+    "mean": 0.483,
+    "sum": 2.41,
+    "win": 80.0,
+    "se": 0.295,
+    "exits": {
+     "target": 3,
+     "time": 2
+    }
+   },
+   "test_trades_per_day": 1.75
+  }
+ }
+}

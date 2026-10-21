@@ -1,0 +1,122 @@
+{
+ "frozen_1815": {
+  "tick_hours": {
+   "BTCTMN": 3.2,
+   "ETHTMN": 3.2,
+   "SOLTMN": 3.2,
+   "XRPTMN": 3.2,
+   "DOGETMN": 3.2,
+   "PEPETMN": 1.63,
+   "BNBTMN": 1.63,
+   "ARBTMN": 1.63
+  },
+  "tick_end_utc": "2026-10-21 18:14:58.559999943",
+  "by_threshold": {
+   "0.3%": {
+    "cand_min_exp": 15.94,
+    "tick_min_obs": 4.63,
+    "cand_eps_exp": 10.98,
+    "tick_eps_obs": 18,
+    "ratio_min": 0.2901,
+    "ratio_eps": 1.6401,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.4%": {
+    "cand_min_exp": 7.41,
+    "tick_min_obs": 0.62,
+    "cand_eps_exp": 5.35,
+    "tick_eps_obs": 5,
+    "ratio_min": 0.0844,
+    "ratio_eps": 0.9339,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.5%": {
+    "cand_min_exp": 3.96,
+    "tick_min_obs": 0.04,
+    "cand_eps_exp": 2.97,
+    "tick_eps_obs": 1,
+    "ratio_min": 0.0105,
+    "ratio_eps": 0.337,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.6%": {
+    "cand_min_exp": 2.18,
+    "tick_min_obs": 0.0,
+    "cand_eps_exp": 1.72,
+    "tick_eps_obs": 0,
+    "ratio_min": 0.0,
+    "ratio_eps": 0.0,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.7%": {
+    "cand_min_exp": 1.31,
+    "tick_min_obs": 0.0,
+    "cand_eps_exp": 1.06,
+    "tick_eps_obs": 0,
+    "ratio_min": 0.0,
+    "ratio_eps": 0.0,
+    "poisson_P(obs_eps<=k | exp)": null
+   }
+  }
+ },
+ "extended_now": {
+  "tick_hours": {
+   "BTCTMN": 3.61,
+   "ETHTMN": 3.61,
+   "SOLTMN": 3.61,
+   "XRPTMN": 3.61,
+   "DOGETMN": 3.61,
+   "PEPETMN": 2.03,
+   "BNBTMN": 2.03,
+   "ARBTMN": 2.03
+  },
+  "tick_end_utc": "2026-10-21 18:39:14.299999952",
+  "by_threshold": {
+   "0.3%": {
+    "cand_min_exp": 18.91,
+    "tick_min_obs": 9.63,
+    "cand_eps_exp": 12.99,
+    "tick_eps_obs": 23,
+    "ratio_min": 0.5091,
+    "ratio_eps": 1.77,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.4%": {
+    "cand_min_exp": 8.89,
+    "tick_min_obs": 1.54,
+    "cand_eps_exp": 6.4,
+    "tick_eps_obs": 6,
+    "ratio_min": 0.1734,
+    "ratio_eps": 0.9376,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.5%": {
+    "cand_min_exp": 4.79,
+    "tick_min_obs": 0.42,
+    "cand_eps_exp": 3.58,
+    "tick_eps_obs": 2,
+    "ratio_min": 0.087,
+    "ratio_eps": 0.5587,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.6%": {
+    "cand_min_exp": 2.65,
+    "tick_min_obs": 0.0,
+    "cand_eps_exp": 2.08,
+    "tick_eps_obs": 0,
+    "ratio_min": 0.0,
+    "ratio_eps": 0.0,
+    "poisson_P(obs_eps<=k | exp)": null
+   },
+   "0.7%": {
+    "cand_min_exp": 1.61,
+    "tick_min_obs": 0.0,
+    "cand_eps_exp": 1.29,
+    "tick_eps_obs": 0,
+    "ratio_min": 0.0,
+    "ratio_eps": 0.0,
+    "poisson_P(obs_eps<=k | exp)": null
+   }
+  }
+ }
+}

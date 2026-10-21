@@ -1,0 +1,139 @@
+{
+ "7d_1m": {
+  "start": "2026-10-14 14:05:00+00:00",
+  "end": "2026-10-21 14:04:00+00:00",
+  "days": 7.0,
+  "first": 263640.0,
+  "last": 263870.0,
+  "total_change_pct": 0.087,
+  "daily_drift_pct": 0.012,
+  "range_min_max": [
+   259351.0,
+   267565.0
+  ],
+  "chg_45h_overlapping": {
+   "n_windows": 7380,
+   "mean_pct": -0.612,
+   "std_pct": 0.784,
+   "p05": -1.782,
+   "p16": -1.444,
+   "p50": -0.754,
+   "p84": 0.329,
+   "p95": 0.584,
+   "min": -1.835,
+   "max": 1.689,
+   "mean_abs_pct": 0.839
+  },
+  "independent_45h_windows": 3.7,
+  "chg_24h_overlapping": {
+   "n_windows": 8640,
+   "mean_pct": -0.251,
+   "std_pct": 0.707,
+   "p05": -1.775,
+   "p16": -0.95,
+   "p50": -0.007,
+   "p84": 0.548,
+   "p95": 0.681,
+   "min": -1.828,
+   "max": 1.537,
+   "mean_abs_pct": 0.57
+  },
+  "realised_vol_1h_logret_std_pct": 0.2551,
+  "realised_vol_scaled_to_45h_pct": 1.711,
+  "realised_vol_scaled_to_24h_pct": 1.25,
+  "longest_gap_in_trades_min": 730.0,
+  "tehran_daily_close_changes_pct": {
+   "2026-10-15": 0.548,
+   "2026-10-16": -0.746,
+   "2026-10-17": -0.007,
+   "2026-10-18": -1.775,
+   "2026-10-19": 0.088,
+   "2026-10-20": 0.241,
+   "2026-10-21": 1.353
+  }
+ },
+ "60d_1h": {
+  "start": "2026-08-22 14:00:00+00:00",
+  "end": "2026-10-21 13:00:00+00:00",
+  "days": 60.0,
+  "total_change_pct": 37.86,
+  "daily_drift_pct": 0.537,
+  "chg_45h_overlapping": {
+   "n_windows": 1395,
+   "mean_pct": 0.953,
+   "std_pct": 2.118,
+   "p05": -1.738,
+   "p16": -1.069,
+   "p50": 0.527,
+   "p84": 3.22,
+   "p95": 4.827,
+   "min": -4.197,
+   "max": 8.247,
+   "mean_abs_pct": 1.745
+  },
+  "chg_45h_non_overlapping": {
+   "n_windows": 31,
+   "mean_pct": 1.028,
+   "std_pct": 2.247,
+   "p05": -2.098,
+   "p16": -1.172,
+   "p50": 0.71,
+   "p84": 3.083,
+   "p95": 5.218,
+   "min": -2.67,
+   "max": 6.201,
+   "mean_abs_pct": 1.927
+  },
+  "share_45h_windows_down_pct": 37.8,
+  "realised_vol_scaled_to_45h_pct": 2.15,
+  "last_30d": {
+   "total_change_pct": 15.72,
+   "daily_drift_pct": 0.488,
+   "chg_45h_overlapping": {
+    "n_windows": 676,
+    "mean_pct": 0.912,
+    "std_pct": 2.267,
+    "p05": -1.785,
+    "p16": -1.185,
+    "p50": 0.38,
+    "p84": 3.374,
+    "p95": 5.426,
+    "min": -4.197,
+    "max": 8.247,
+    "mean_abs_pct": 1.782
+   },
+   "realised_vol_scaled_to_45h_pct": 2.192
+  },
+  "last_14d": {
+   "total_change_pct": -0.18,
+   "daily_drift_pct": -0.013,
+   "chg_45h_overlapping": {
+    "n_windows": 292,
+    "mean_pct": -0.307,
+    "std_pct": 1.675,
+    "p05": -2.542,
+    "p16": -1.688,
+    "p50": -0.705,
+    "p84": 1.193,
+    "p95": 3.508,
+    "min": -4.197,
+    "max": 5.625,
+    "mean_abs_pct": 1.345
+   },
+   "realised_vol_scaled_to_45h_pct": 1.767
+  }
+ },
+ "shadow_implied_usdttmn_mid": {
+  "first": 263404,
+  "last": 264602,
+  "min": 263022,
+  "max": 264602,
+  "start": "2026-10-21 14:19:52.220000029+00:00",
+  "end": "2026-10-21 16:05:01.140000105+00:00"
+ },
+ "live_main_ticks": {
+  "rows": 18816,
+  "start": "2026-10-21 16:45:30.299999952+00:00",
+  "end": "2026-10-21 18:24:48.670000076+00:00"
+ }
+}

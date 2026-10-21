@@ -1,0 +1,45 @@
+{'from': '2026-10-21 14:29:52.549999952+00:00', 'to': '2026-10-21 18:24:31.160000086+00:00', 'rows': 30741, 'hours_with_data': np.float64(3.23)}
+== entry 0.7%  signal ticks 0
+   current_0.9_25_0.05      n=0 mean=None sum=0.0 win=None exits={}
+   hold45                   n=0 mean=None sum=0.0 win=None exits={}
+   wf_choice_0.9_45_0.00    n=0 mean=None sum=0.0 win=None exits={}
+   hold15                   n=0 mean=None sum=0.0 win=None exits={}
+   hold10                   n=0 mean=None sum=0.0 win=None exits={}
+   stop0.6                  n=0 mean=None sum=0.0 win=None exits={}
+   partialX0.1              n=0 mean=None sum=0.0 win=None exits={}
+   partialX0.2              n=0 mean=None sum=0.0 win=None exits={}
+   partialX0.3              n=0 mean=None sum=0.0 win=None exits={}
+   live_now_ARB_0.8_15      n=0 mean=None sum=0.0 win=None exits={}
+== entry 0.5%  signal ticks 1
+   current_0.9_25_0.05      n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   hold45                   n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   wf_choice_0.9_45_0.00    n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   hold15                   n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   hold10                   n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   stop0.6                  n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   partialX0.1              n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   partialX0.2              n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   partialX0.3              n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+   live_now_ARB_0.8_15      n=1 mean=0.433 sum=0.433 win=100.0 exits={'target': 1}
+== entry 0.4%  signal ticks 22
+   current_0.9_25_0.05      n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   hold45                   n=6 mean=-0.174 sum=-1.045 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   wf_choice_0.9_45_0.00    n=6 mean=-0.174 sum=-1.045 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   hold15                   n=6 mean=-0.219 sum=-1.311 win=33.3 exits={'time': 3, 'target': 2, 'end': 1}
+   hold10                   n=6 mean=-0.232 sum=-1.391 win=16.7 exits={'time': 4, 'target': 1, 'end': 1}
+   stop0.6                  n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   partialX0.1              n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   partialX0.2              n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   partialX0.3              n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+   live_now_ARB_0.8_15      n=6 mean=-0.1 sum=-0.597 win=50.0 exits={'target': 3, 'time': 2, 'end': 1}
+== entry 0.3%  signal ticks 155
+   current_0.9_25_0.05      n=12 mean=-0.14 sum=-1.68 win=33.3 exits={'time': 5, 'target': 4, 'end': 3}
+   hold45                   n=11 mean=-0.008 sum=-0.087 win=54.5 exits={'target': 6, 'end': 3, 'time': 2}
+   wf_choice_0.9_45_0.00    n=11 mean=-0.003 sum=-0.035 win=54.5 exits={'target': 6, 'end': 3, 'time': 2}
+   hold15                   n=11 mean=-0.372 sum=-4.097 win=18.2 exits={'time': 8, 'target': 2, 'end': 1}
+   hold10                   n=11 mean=-0.35 sum=-3.848 win=18.2 exits={'time': 8, 'target': 2, 'end': 1}
+   stop0.6                  n=12 mean=-0.208 sum=-2.495 win=33.3 exits={'target': 4, 'time': 4, 'end': 3, 'stop': 1}
+   partialX0.1              n=12 mean=-0.151 sum=-1.808 win=33.3 exits={'time': 5, 'target': 4, 'end': 3}
+   partialX0.2              n=12 mean=-0.151 sum=-1.808 win=33.3 exits={'time': 5, 'target': 4, 'end': 3}
+   partialX0.3              n=12 mean=-0.159 sum=-1.912 win=33.3 exits={'time': 5, 'target': 4, 'end': 3}
+   live_now_ARB_0.8_15      n=12 mean=-0.14 sum=-1.68 win=33.3 exits={'time': 5, 'target': 4, 'end': 3}

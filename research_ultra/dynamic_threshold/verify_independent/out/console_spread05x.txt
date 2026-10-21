@@ -1,0 +1,22 @@
+tag spread05x | split 2026-10-18 14:05:00+00:00 | reverse False
+half spreads % {'BTCTMN': 0.0078, 'ETHTMN': 0.0347, 'SOLTMN': 0.0385, 'XRPTMN': 0.0477, 'DOGETMN': 0.0419, 'PEPETMN': 0.0282, 'BNBTMN': 0.0364, 'ARBTMN': 0.1112}
+V1 thr {'BTCTMN': 0.7, 'ETHTMN': 0.7, 'SOLTMN': 0.7, 'XRPTMN': 0.7, 'DOGETMN': 0.7, 'PEPETMN': 0.9, 'BNBTMN': 0.7, 'ARBTMN': 0.9} | k totals {1.5: np.float64(3.808), 2.0: np.float64(4.595), 2.5: np.float64(6.455), 3.0: np.float64(8.064), 4.0: np.float64(6.433)} best k 3.0 | V2b k {'BTCTMN': 1.5, 'ETHTMN': 1.5, 'SOLTMN': 1.5, 'XRPTMN': 1.5, 'DOGETMN': 1.5, 'PEPETMN': 4.0, 'BNBTMN': 1.5, 'ARBTMN': 3.0}
+variant                 ISn  ISmean   ISsum  ISwin | OOSn    mean     sum    win    diff             CI90   P>0 exits
+V4_fixed0.7              31   0.123   3.808   67.7 |   45   0.338  15.223   77.8    0.00 [np.float64(0.0), np.float64(0.0)]  0.00 {'target': 30, 'time': 14, 'stop': 1}
+V1_per_market            20   0.529  10.583   90.0 |   34   0.397  13.493   82.4   -1.73 [np.float64(-8.02), np.float64(3.53)]  0.34 {'target': 23, 'time': 10, 'stop': 1}
+V2_vol_k3.0              19   0.424   8.064   84.2 |   33   0.377  12.426   81.8   -2.80 [np.float64(-9.27), np.float64(3.28)]  0.24 {'target': 22, 'time': 11}
+V2b_vol_k_per_mkt        16   0.545   8.726   87.5 |   30   0.367  10.995   76.7   -4.23 [np.float64(-11.58), np.float64(2.15)]  0.14 {'target': 19, 'time': 11}
+V3_0.7+half_spread       28   0.334   9.352   78.6 |   37   0.397  14.705   83.8   -0.52 [np.float64(-6.19), np.float64(4.42)]  0.46 {'target': 26, 'time': 10, 'stop': 1}
+ORACLE                   26   0.321   8.339   80.8 |   37   0.516  19.088   89.2    3.87 [np.float64(0.57), np.float64(7.26)]  0.97 {'target': 28, 'time': 8, 'stop': 1}
+per market OOS (n / mean / sum):
+  BTCTMN   V4_fix: 3 / 0.383 / 1.148 | V1_per: 3 / 0.383 / 1.148 | V2_vol: 3 / 0.383 / 1.148 | V2b_vo: 3 / 0.383 / 1.148 | V3_0.7: 3 / 0.383 / 1.148 | ORACLE: 3 / 0.383 / 1.148
+  ETHTMN   V4_fix: 2 / -0.145 / -0.291 | V1_per: 2 / -0.145 / -0.291 | V2_vol: 2 / -0.145 / -0.291 | V2b_vo: 2 / -0.145 / -0.291 | V3_0.7: 0 / None / 0.0 | ORACLE: 0 / None / 0.0
+  SOLTMN   V4_fix: 3 / 0.33 / 0.991 | V1_per: 3 / 0.33 / 0.991 | V2_vol: 3 / 0.33 / 0.991 | V2b_vo: 3 / 0.33 / 0.991 | V3_0.7: 2 / 0.247 / 0.494 | ORACLE: 3 / 0.33 / 0.991
+  XRPTMN   V4_fix: 2 / 0.404 / 0.809 | V1_per: 2 / 0.404 / 0.809 | V2_vol: 2 / 0.404 / 0.809 | V2b_vo: 2 / 0.404 / 0.809 | V3_0.7: 2 / 0.404 / 0.809 | ORACLE: 2 / 0.404 / 0.809
+  DOGETMN  V4_fix: 2 / 0.305 / 0.61 | V1_per: 2 / 0.305 / 0.61 | V2_vol: 2 / 0.305 / 0.61 | V2b_vo: 2 / 0.305 / 0.61 | V3_0.7: 1 / 0.439 / 0.439 | ORACLE: 2 / 0.305 / 0.61
+  PEPETMN  V4_fix: 12 / 0.602 / 7.228 | V1_per: 6 / 0.558 / 3.348 | V2_vol: 8 / 0.437 / 3.498 | V2b_vo: 4 / 0.588 / 2.352 | V3_0.7: 11 / 0.374 / 4.114 | ORACLE: 12 / 0.602 / 7.228
+  BNBTMN   V4_fix: 5 / 0.034 / 0.168 | V1_per: 5 / 0.034 / 0.168 | V2_vol: 4 / 0.113 / 0.452 | V2b_vo: 5 / 0.034 / 0.168 | V3_0.7: 5 / 0.261 / 1.307 | ORACLE: 4 / 0.398 / 1.592
+  ARBTMN   V4_fix: 16 / 0.285 / 4.56 | V1_per: 11 / 0.61 / 6.71 | V2_vol: 9 / 0.579 / 5.209 | V2b_vo: 9 / 0.579 / 5.209 | V3_0.7: 13 / 0.492 / 6.393 | ORACLE: 11 / 0.61 / 6.71
+single thr: {"0.7": {"IS_n": 31, "IS_sum": 3.808, "OOS_n": 45, "OOS_sum": 15.223}, "0.8": {"IS_n": 24, "IS_sum": 8.645, "OOS_n": 34, "OOS_sum": 14.274}, "0.9": {"IS_n": 16, "IS_sum": 9.719, "OOS_n": 22, "OOS_sum": 11.766}, "1.0": {"IS_n": 11, "IS_sum": 8.045, "OOS_n": 16, "OOS_sum": 10.871}, "1.2": {"IS_n": 8, "IS_sum": 6.007, "OOS_n": 6, "OOS_sum": 3.08}, "1.5": {"IS_n": 2, "IS_sum": 0.83, "OOS_n": 0, "OOS_sum": 0}}
+V4 dev bands: {"-9..-1.5": {"IS_n": 1, "IS_sum": 1.502, "OOS_n": 0, "OOS_sum": 0}, "-1.5..-1.2": {"IS_n": 3, "IS_sum": 2.836, "OOS_n": 3, "OOS_sum": 2.97}, "-1.2..-1.0": {"IS_n": 3, "IS_sum": 2.039, "OOS_n": 5, "OOS_sum": 1.586}, "-1.0..-0.9": {"IS_n": 3, "IS_sum": 0.829, "OOS_n": 7, "OOS_sum": 0.353}, "-0.9..-0.8": {"IS_n": 6, "IS_sum": -1.881, "OOS_n": 11, "OOS_sum": 1.547}, "-0.8..-0.7": {"IS_n": 15, "IS_sum": -1.516, "OOS_n": 19, "OOS_sum": 8.767}}
+V4 max concurrent: 4 | V4 OOS night share: 0.422

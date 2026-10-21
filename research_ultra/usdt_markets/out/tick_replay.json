@@ -1,0 +1,406 @@
+{
+ "runs": {
+  "shadow_v2": {
+   "start_utc": "2026-10-21 14:19:52.220000029+00:00",
+   "end_utc": "2026-10-21 15:01:04.380000114+00:00",
+   "minutes": 41.2
+  },
+  "shadow_v3": {
+   "start_utc": "2026-10-21 15:01:10.099999905+00:00",
+   "end_utc": "2026-10-21 15:26:03.259999990+00:00",
+   "minutes": 24.9
+  },
+  "shadow_v4": {
+   "start_utc": "2026-10-21 15:26:09.670000076+00:00",
+   "end_utc": "2026-10-21 15:44:35.819999933+00:00",
+   "minutes": 18.4
+  },
+  "shadow_v5": {
+   "start_utc": "2026-10-21 15:44:42.819999933+00:00",
+   "end_utc": "2026-10-21 15:55:15.440000057+00:00",
+   "minutes": 10.5
+  },
+  "shadow_v6": {
+   "start_utc": "2026-10-21 15:55:23.539999962+00:00",
+   "end_utc": "2026-10-21 16:05:01.140000105+00:00",
+   "minutes": 9.6
+  }
+ },
+ "markets": {
+  "BTCUSDT": {
+   "ticks": 2494,
+   "spread_pct_p25_p50_p75": [
+    0.013,
+    0.028,
+    0.067
+   ],
+   "share_spread_over_0.6pct": 0.0,
+   "top_ask_usdt_p25_p50_p75": [
+    26.49,
+    103.8,
+    297.03
+   ],
+   "top_bid_usdt_p25_p50_p75": [
+    130.96,
+    169.97,
+    4719.26
+   ],
+   "buy_dev_pct_p1_p5_p50": [
+    -0.257,
+    -0.131,
+    0.035
+   ],
+   "baseline_pct_median": -0.162,
+   "minutes_buy_dev_below_-0.36pct": 0.0,
+   "top_ask_usdt_median_when_below_-0.36pct": 11.54,
+   "minutes_buy_dev_below_-0.45pct": 0.0,
+   "minutes_buy_dev_below_-0.60pct": 0.0
+  },
+  "DOGEUSDT": {
+   "ticks": 2494,
+   "spread_pct_p25_p50_p75": [
+    0.301,
+    0.438,
+    0.621
+   ],
+   "share_spread_over_0.6pct": 28.8,
+   "top_ask_usdt_p25_p50_p75": [
+    76.28,
+    77.4,
+    237.0
+   ],
+   "top_bid_usdt_p25_p50_p75": [
+    65.74,
+    121.49,
+    378.51
+   ],
+   "buy_dev_pct_p1_p5_p50": [
+    0.018,
+    0.079,
+    0.233
+   ],
+   "baseline_pct_median": -0.054,
+   "minutes_buy_dev_below_-0.36pct": 0.0,
+   "minutes_buy_dev_below_-0.45pct": 0.0,
+   "minutes_buy_dev_below_-0.60pct": 0.0
+  },
+  "ETHUSDT": {
+   "ticks": 2494,
+   "spread_pct_p25_p50_p75": [
+    0.052,
+    0.141,
+    0.214
+   ],
+   "share_spread_over_0.6pct": 1.2,
+   "top_ask_usdt_p25_p50_p75": [
+    88.12,
+    157.72,
+    791.93
+   ],
+   "top_bid_usdt_p25_p50_p75": [
+    100.1,
+    196.55,
+    378.52
+   ],
+   "buy_dev_pct_p1_p5_p50": [
+    -0.352,
+    -0.258,
+    0.089
+   ],
+   "baseline_pct_median": -0.175,
+   "minutes_buy_dev_below_-0.36pct": 0.9,
+   "top_ask_usdt_median_when_below_-0.36pct": 770.0,
+   "minutes_buy_dev_below_-0.45pct": 0.4,
+   "top_ask_usdt_median_when_below_-0.45pct": 770.0,
+   "minutes_buy_dev_below_-0.60pct": 0.0
+  },
+  "SOLUSDT": {
+   "ticks": 2494,
+   "spread_pct_p25_p50_p75": [
+    0.148,
+    0.24,
+    0.37
+   ],
+   "share_spread_over_0.6pct": 2.8,
+   "top_ask_usdt_p25_p50_p75": [
+    43.24,
+    355.06,
+    378.63
+   ],
+   "top_bid_usdt_p25_p50_p75": [
+    80.03,
+    133.04,
+    378.49
+   ],
+   "buy_dev_pct_p1_p5_p50": [
+    -0.172,
+    -0.049,
+    0.157
+   ],
+   "baseline_pct_median": -0.097,
+   "minutes_buy_dev_below_-0.36pct": 0.0,
+   "top_ask_usdt_median_when_below_-0.36pct": 5.0,
+   "minutes_buy_dev_below_-0.45pct": 0.0,
+   "top_ask_usdt_median_when_below_-0.45pct": 5.0,
+   "minutes_buy_dev_below_-0.60pct": 0.0,
+   "top_ask_usdt_median_when_below_-0.60pct": 5.0
+  },
+  "XRPUSDT": {
+   "ticks": 2494,
+   "spread_pct_p25_p50_p75": [
+    0.144,
+    0.226,
+    0.329
+   ],
+   "share_spread_over_0.6pct": 3.6,
+   "top_ask_usdt_p25_p50_p75": [
+    83.11,
+    161.77,
+    253.99
+   ],
+   "top_bid_usdt_p25_p50_p75": [
+    84.08,
+    223.95,
+    368.55
+   ],
+   "buy_dev_pct_p1_p5_p50": [
+    -0.081,
+    0.002,
+    0.159
+   ],
+   "baseline_pct_median": -0.081,
+   "minutes_buy_dev_below_-0.36pct": 0.1,
+   "top_ask_usdt_median_when_below_-0.36pct": 5.25,
+   "minutes_buy_dev_below_-0.45pct": 0.0,
+   "minutes_buy_dev_below_-0.60pct": 0.0
+  }
+ },
+ "replay": {
+  "0.36%": {
+   "all": {
+    "n": 4,
+    "mean_pct": -0.002,
+    "sum_pct": -0.008,
+    "median_pct": 0.191,
+    "win_pct": 75.0,
+    "worst_pct": -0.765,
+    "best_pct": 0.375,
+    "se_mean_pct": 0.259,
+    "exits": {
+     "target": 3,
+     "time": 1
+    }
+   },
+   "per_market": {
+    "BTCUSDT": {
+     "n": 1,
+     "mean_pct": 0.153,
+     "sum_pct": 0.153,
+     "median_pct": 0.153,
+     "win_pct": 100.0,
+     "worst_pct": 0.153,
+     "best_pct": 0.153,
+     "exits": {
+      "target": 1
+     }
+    },
+    "ETHUSDT": {
+     "n": 1,
+     "mean_pct": 0.375,
+     "sum_pct": 0.375,
+     "median_pct": 0.375,
+     "win_pct": 100.0,
+     "worst_pct": 0.375,
+     "best_pct": 0.375,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean_pct": 0.229,
+     "sum_pct": 0.229,
+     "median_pct": 0.229,
+     "win_pct": 100.0,
+     "worst_pct": 0.229,
+     "best_pct": 0.229,
+     "exits": {
+      "target": 1
+     }
+    },
+    "XRPUSDT": {
+     "n": 1,
+     "mean_pct": -0.765,
+     "sum_pct": -0.765,
+     "median_pct": -0.765,
+     "win_pct": 0.0,
+     "worst_pct": -0.765,
+     "best_pct": -0.765,
+     "exits": {
+      "time": 1
+     }
+    }
+   },
+   "trades": [
+    {
+     "symbol": "BTCUSDT",
+     "t": "2026-10-21 14:51:34.289999962+00:00",
+     "ret_pct": 0.1527,
+     "why": "target",
+     "minutes": 20.0155,
+     "entry_top_ask_usdt": 11.5425
+    },
+    {
+     "symbol": "ETHUSDT",
+     "t": "2026-10-21 15:03:42.619999886+00:00",
+     "ret_pct": 0.3754,
+     "why": "target",
+     "minutes": 10.8773,
+     "entry_top_ask_usdt": 1.1939
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "2026-10-21 15:25:18.250000+00:00",
+     "ret_pct": 0.2295,
+     "why": "target",
+     "minutes": 0.375,
+     "entry_top_ask_usdt": 4.9996
+    },
+    {
+     "symbol": "XRPUSDT",
+     "t": "2026-10-21 14:51:24.279999971+00:00",
+     "ret_pct": -0.7654,
+     "why": "time",
+     "minutes": 25.0167,
+     "entry_top_ask_usdt": 5.2476
+    }
+   ]
+  },
+  "0.45%": {
+   "all": {
+    "n": 2,
+    "mean_pct": 0.266,
+    "sum_pct": 0.532,
+    "median_pct": 0.266,
+    "win_pct": 100.0,
+    "worst_pct": 0.229,
+    "best_pct": 0.302,
+    "se_mean_pct": 0.036,
+    "exits": {
+     "target": 2
+    }
+   },
+   "per_market": {
+    "ETHUSDT": {
+     "n": 1,
+     "mean_pct": 0.302,
+     "sum_pct": 0.302,
+     "median_pct": 0.302,
+     "win_pct": 100.0,
+     "worst_pct": 0.302,
+     "best_pct": 0.302,
+     "exits": {
+      "target": 1
+     }
+    },
+    "SOLUSDT": {
+     "n": 1,
+     "mean_pct": 0.229,
+     "sum_pct": 0.229,
+     "median_pct": 0.229,
+     "win_pct": 100.0,
+     "worst_pct": 0.229,
+     "best_pct": 0.229,
+     "exits": {
+      "target": 1
+     }
+    }
+   },
+   "trades": [
+    {
+     "symbol": "ETHUSDT",
+     "t": "2026-10-21 15:03:52.630000114+00:00",
+     "ret_pct": 0.3024,
+     "why": "target",
+     "minutes": 10.7105,
+     "entry_top_ask_usdt": 771.0922
+    },
+    {
+     "symbol": "SOLUSDT",
+     "t": "2026-10-21 15:25:18.250000+00:00",
+     "ret_pct": 0.2295,
+     "why": "target",
+     "minutes": 0.375,
+     "entry_top_ask_usdt": 4.9996
+    }
+   ]
+  },
+  "0.60%": {
+   "all": {
+    "n": 1,
+    "mean_pct": 0.229,
+    "sum_pct": 0.229,
+    "median_pct": 0.229,
+    "win_pct": 100.0,
+    "worst_pct": 0.229,
+    "best_pct": 0.229,
+    "exits": {
+     "target": 1
+    }
+   },
+   "per_market": {
+    "SOLUSDT": {
+     "n": 1,
+     "mean_pct": 0.229,
+     "sum_pct": 0.229,
+     "median_pct": 0.229,
+     "win_pct": 100.0,
+     "worst_pct": 0.229,
+     "best_pct": 0.229,
+     "exits": {
+      "target": 1
+     }
+    }
+   },
+   "trades": [
+    {
+     "symbol": "SOLUSDT",
+     "t": "2026-10-21 15:25:18.250000+00:00",
+     "ret_pct": 0.2295,
+     "why": "target",
+     "minutes": 0.375,
+     "entry_top_ask_usdt": 4.9996
+    }
+   ]
+  }
+ },
+ "shadow_log_trades": [
+  {
+   "t": "2026-10-21T15:04:10+00:00",
+   "event": "entry",
+   "symbol": "ETHUSDT",
+   "price": 2489.0,
+   "spent": 3.3353,
+   "buy_dev_pct": -0.497,
+   "reason": null,
+   "ret_pct": null,
+   "held_s": null,
+   "pnl_tmn": null,
+   "run": "shadow_v3"
+  },
+  {
+   "t": "2026-10-21T15:14:36+00:00",
+   "event": "exit",
+   "symbol": "ETHUSDT",
+   "price": null,
+   "spent": null,
+   "buy_dev_pct": null,
+   "reason": "target",
+   "ret_pct": 0.301,
+   "held_s": 625,
+   "pnl_tmn": 2645,
+   "run": "shadow_v3"
+  }
+ ],
+ "total_minutes": 104.6
+}

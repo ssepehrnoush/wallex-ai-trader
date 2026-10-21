@@ -1,0 +1,533 @@
+{
+ "args": {
+  "bid_model": "ask_print",
+  "usdt_max_stale": 0,
+  "split": "2026-10-18 14:05",
+  "spreads": "ticks",
+  "tag": ""
+ },
+ "spreads_pct": {
+  "BTCTMN": 0.032,
+  "ETHTMN": 0.132,
+  "SOLTMN": 0.154,
+  "XRPTMN": 0.176,
+  "DOGETMN": 0.162,
+  "PEPETMN": 0.105,
+  "BNBTMN": 0.146,
+  "ARBTMN": 0.443
+ },
+ "n_d1_4": 29,
+ "n_d5_7": 40,
+ "arms": {
+  "cur": {
+   "n": 69,
+   "mean": 0.108,
+   "sum": 7.42,
+   "win": 65.2,
+   "hold": 16.1,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 36,
+    "time": 31,
+    "stop": 2
+   },
+   "d1_4": 0.102,
+   "d5_7": 0.112
+  },
+  "cur_thr": {
+   "n": 69,
+   "mean": 0.017,
+   "sum": 1.19,
+   "win": 65.2,
+   "hold": 16.1,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 36,
+    "time": 31,
+    "stop": 2
+   },
+   "d1_4": -0.032,
+   "d5_7": 0.053
+  },
+  "cur_cont": {
+   "n": 69,
+   "mean": -0.015,
+   "sum": -1.0,
+   "win": 66.7,
+   "hold": 14.9,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "target": 39,
+    "time": 28,
+    "stop": 2
+   },
+   "d1_4": -0.047,
+   "d5_7": 0.009
+  },
+  "cur_ohlc": {
+   "n": 69,
+   "mean": 0.032,
+   "sum": 2.21,
+   "win": 66.7,
+   "hold": 14.9,
+   "maker_fill_pct": 0.0,
+   "exits": {
+    "time": 28,
+    "target": 26,
+    "target_gap": 13,
+    "stop": 2
+   },
+   "d1_4": 0.029,
+   "d5_7": 0.035
+  },
+  "mk_a": {
+   "n": 69,
+   "mean": 0.088,
+   "sum": 6.07,
+   "win": 78.3,
+   "hold": 11.7,
+   "maker_fill_pct": 75.4,
+   "exits": {
+    "maker": 52,
+    "time": 15,
+    "stop": 2
+   },
+   "d1_4": 0.037,
+   "d5_7": 0.125
+  },
+  "mk_b": {
+   "n": 69,
+   "mean": 0.095,
+   "sum": 6.53,
+   "win": 72.5,
+   "hold": 14.0,
+   "maker_fill_pct": 68.1,
+   "exits": {
+    "maker": 47,
+    "time": 20,
+    "stop": 2
+   },
+   "d1_4": 0.059,
+   "d5_7": 0.12
+  },
+  "mk_c": {
+   "n": 69,
+   "mean": -0.106,
+   "sum": -7.31,
+   "win": 84.1,
+   "hold": 8.4,
+   "maker_fill_pct": 84.1,
+   "exits": {
+    "maker": 58,
+    "time": 9,
+    "stop": 2
+   },
+   "d1_4": -0.155,
+   "d5_7": -0.071
+  },
+  "mk_a_raw": {
+   "n": 69,
+   "mean": 0.089,
+   "sum": 6.17,
+   "win": 59.4,
+   "hold": 10.1,
+   "maker_fill_pct": 89.9,
+   "exits": {
+    "maker": 62,
+    "time": 7
+   },
+   "d1_4": 0.033,
+   "d5_7": 0.131
+  },
+  "mk_bT": {
+   "n": 69,
+   "mean": 0.087,
+   "sum": 6.04,
+   "win": 72.5,
+   "hold": 13.9,
+   "maker_fill_pct": 58.0,
+   "exits": {
+    "maker": 40,
+    "time": 20,
+    "target": 7,
+    "stop": 2
+   },
+   "d1_4": 0.055,
+   "d5_7": 0.111
+  }
+ },
+ "paired": {
+  "mk_a-cur": {
+   "mean": -0.02,
+   "t": -0.34,
+   "ci95": [
+    -0.135,
+    0.086
+   ],
+   "drop3_largest": -0.066,
+   "drop3_smallest": 0.049,
+   "better_worse_same": [
+    31,
+    21,
+    17
+   ],
+   "d1_4": -0.064,
+   "d5_7": 0.013
+  },
+  "mk_b-cur": {
+   "mean": -0.013,
+   "t": -0.26,
+   "ci95": [
+    -0.116,
+    0.076
+   ],
+   "drop3_largest": -0.043,
+   "drop3_smallest": 0.051,
+   "better_worse_same": [
+    32,
+    15,
+    22
+   ],
+   "d1_4": -0.042,
+   "d5_7": 0.009
+  },
+  "mk_c-cur": {
+   "mean": -0.214,
+   "t": -2.93,
+   "ci95": [
+    -0.361,
+    -0.08
+   ],
+   "drop3_largest": -0.263,
+   "drop3_smallest": -0.128,
+   "better_worse_same": [
+    14,
+    44,
+    11
+   ],
+   "d1_4": -0.256,
+   "d5_7": -0.183
+  },
+  "mk_bT-cur": {
+   "mean": -0.02,
+   "t": -0.41,
+   "ci95": [
+    -0.122,
+    0.071
+   ],
+   "drop3_largest": -0.051,
+   "drop3_smallest": 0.043,
+   "better_worse_same": [
+    26,
+    14,
+    29
+   ],
+   "d1_4": -0.047,
+   "d5_7": -0.001
+  },
+  "mk_a-cur_thr": {
+   "mean": 0.071,
+   "t": 1.36,
+   "ci95": [
+    -0.036,
+    0.165
+   ],
+   "drop3_largest": 0.028,
+   "drop3_smallest": 0.139,
+   "better_worse_same": [
+    43,
+    9,
+    17
+   ],
+   "d1_4": 0.069,
+   "d5_7": 0.072
+  },
+  "mk_b-cur_thr": {
+   "mean": 0.077,
+   "t": 1.69,
+   "ci95": [
+    -0.02,
+    0.158
+   ],
+   "drop3_largest": 0.048,
+   "drop3_smallest": 0.138,
+   "better_worse_same": [
+    41,
+    6,
+    22
+   ],
+   "d1_4": 0.091,
+   "d5_7": 0.068
+  },
+  "mk_c-cur_thr": {
+   "mean": -0.123,
+   "t": -1.93,
+   "ci95": [
+    -0.255,
+    -0.008
+   ],
+   "drop3_largest": -0.169,
+   "drop3_smallest": -0.043,
+   "better_worse_same": [
+    24,
+    34,
+    11
+   ],
+   "d1_4": -0.123,
+   "d5_7": -0.123
+  },
+  "mk_bT-cur_thr": {
+   "mean": 0.07,
+   "t": 1.54,
+   "ci95": [
+    -0.025,
+    0.15
+   ],
+   "drop3_largest": 0.041,
+   "drop3_smallest": 0.131,
+   "better_worse_same": [
+    41,
+    6,
+    22
+   ],
+   "d1_4": 0.087,
+   "d5_7": 0.058
+  },
+  "mk_a-cur_cont": {
+   "mean": 0.102,
+   "t": 3.13,
+   "ci95": [
+    0.04,
+    0.168
+   ],
+   "drop3_largest": 0.063,
+   "drop3_smallest": 0.132,
+   "better_worse_same": [
+    47,
+    5,
+    17
+   ],
+   "d1_4": 0.085,
+   "d5_7": 0.115
+  },
+  "mk_b-cur_cont": {
+   "mean": 0.109,
+   "t": 4.64,
+   "ci95": [
+    0.062,
+    0.155
+   ],
+   "drop3_largest": 0.087,
+   "drop3_smallest": 0.132,
+   "better_worse_same": [
+    43,
+    4,
+    22
+   ],
+   "d1_4": 0.107,
+   "d5_7": 0.111
+  },
+  "mk_c-cur_cont": {
+   "mean": -0.091,
+   "t": -2.09,
+   "ci95": [
+    -0.178,
+    -0.007
+   ],
+   "drop3_largest": -0.133,
+   "drop3_smallest": -0.046,
+   "better_worse_same": [
+    22,
+    36,
+    11
+   ],
+   "d1_4": -0.107,
+   "d5_7": -0.08
+  },
+  "mk_bT-cur_cont": {
+   "mean": 0.102,
+   "t": 4.32,
+   "ci95": [
+    0.055,
+    0.147
+   ],
+   "drop3_largest": 0.08,
+   "drop3_smallest": 0.125,
+   "better_worse_same": [
+    43,
+    4,
+    22
+   ],
+   "d1_4": 0.102,
+   "d5_7": 0.102
+  },
+  "mk_a-cur_ohlc": {
+   "mean": 0.056,
+   "t": 1.48,
+   "ci95": [
+    -0.018,
+    0.13
+   ],
+   "drop3_largest": 0.014,
+   "drop3_smallest": 0.091,
+   "better_worse_same": [
+    40,
+    12,
+    17
+   ],
+   "d1_4": 0.009,
+   "d5_7": 0.09
+  },
+  "mk_b-cur_ohlc": {
+   "mean": 0.063,
+   "t": 2.2,
+   "ci95": [
+    0.006,
+    0.116
+   ],
+   "drop3_largest": 0.039,
+   "drop3_smallest": 0.093,
+   "better_worse_same": [
+    38,
+    9,
+    22
+   ],
+   "d1_4": 0.031,
+   "d5_7": 0.086
+  },
+  "mk_c-cur_ohlc": {
+   "mean": -0.138,
+   "t": -2.67,
+   "ci95": [
+    -0.242,
+    -0.041
+   ],
+   "drop3_largest": -0.181,
+   "drop3_smallest": -0.084,
+   "better_worse_same": [
+    21,
+    37,
+    11
+   ],
+   "d1_4": -0.183,
+   "d5_7": -0.105
+  },
+  "mk_bT-cur_ohlc": {
+   "mean": 0.055,
+   "t": 1.96,
+   "ci95": [
+    -0.002,
+    0.108
+   ],
+   "drop3_largest": 0.031,
+   "drop3_smallest": 0.085,
+   "better_worse_same": [
+    38,
+    9,
+    22
+   ],
+   "d1_4": 0.026,
+   "d5_7": 0.076
+  }
+ },
+ "per_market": {
+  "BTCTMN": {
+   "n": 3,
+   "cur": 0.35,
+   "cur_thr": 0.288,
+   "cur_cont": 0.321,
+   "cur_ohlc": 0.321,
+   "mk_a": 0.421,
+   "mk_b": 0.394,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.421,
+   "mk_bT": 0.378
+  },
+  "ETHTMN": {
+   "n": 0,
+   "cur": NaN,
+   "cur_thr": NaN,
+   "cur_cont": NaN,
+   "cur_ohlc": NaN,
+   "mk_a": NaN,
+   "mk_b": NaN,
+   "mk_c": NaN,
+   "mk_a_raw": NaN,
+   "mk_bT": NaN
+  },
+  "SOLTMN": {
+   "n": 3,
+   "cur": 0.097,
+   "cur_thr": 0.047,
+   "cur_cont": 0.047,
+   "cur_ohlc": 0.053,
+   "mk_a": 0.147,
+   "mk_b": 0.151,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.066,
+   "mk_bT": 0.118
+  },
+  "XRPTMN": {
+   "n": 4,
+   "cur": 0.682,
+   "cur_thr": 0.442,
+   "cur_cont": 0.312,
+   "cur_ohlc": 0.312,
+   "mk_a": 0.397,
+   "mk_b": 0.444,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.356,
+   "mk_bT": 0.414
+  },
+  "DOGETMN": {
+   "n": 1,
+   "cur": 0.279,
+   "cur_thr": 0.145,
+   "cur_cont": 0.344,
+   "cur_ohlc": 0.349,
+   "mk_a": 0.444,
+   "mk_b": 0.526,
+   "mk_c": 0.047,
+   "mk_a_raw": 0.444,
+   "mk_bT": 0.526
+  },
+  "PEPETMN": {
+   "n": 22,
+   "cur": 0.095,
+   "cur_thr": 0.056,
+   "cur_cont": -0.033,
+   "cur_ohlc": -0.017,
+   "mk_a": -0.016,
+   "mk_b": 0.031,
+   "mk_c": -0.148,
+   "mk_a_raw": -0.001,
+   "mk_bT": 0.02
+  },
+  "BNBTMN": {
+   "n": 13,
+   "cur": 0.346,
+   "cur_thr": 0.104,
+   "cur_cont": 0.107,
+   "cur_ohlc": 0.314,
+   "mk_a": 0.182,
+   "mk_b": 0.21,
+   "mk_c": -0.027,
+   "mk_a_raw": 0.185,
+   "mk_bT": 0.21
+  },
+  "ARBTMN": {
+   "n": 23,
+   "cur": -0.153,
+   "cur_thr": -0.187,
+   "cur_cont": -0.189,
+   "cur_ohlc": -0.183,
+   "mk_a": 0.014,
+   "mk_b": -0.035,
+   "mk_c": -0.184,
+   "mk_a_raw": 0.02,
+   "mk_bT": -0.035
+  }
+ },
+ "cur_target_gross_mean": 1.104,
+ "cur_thr_target_gross_mean": 0.929
+}

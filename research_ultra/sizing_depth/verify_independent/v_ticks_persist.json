@@ -1,0 +1,248 @@
+{
+ "0.3%": {
+  "runs": 23,
+  "run_seconds_median": 12.5,
+  "share_runs_le_5s": 0.391,
+  "episodes_10min": 16,
+  "sim_mean_net_pct": -0.204,
+  "sim_mean_best_bid_vs_entry_pct": 0.566,
+  "sims": [
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 17:31:43.829999924",
+    "buy_dev_pct": -0.591,
+    "ret_net_pct": 0.434,
+    "why": "target",
+    "held_s": 273,
+    "best_bid_vs_entry_pct": 1.052
+   },
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 18:19:51.109999895",
+    "buy_dev_pct": -0.37,
+    "ret_net_pct": -1.263,
+    "why": "time",
+    "held_s": 901,
+    "best_bid_vs_entry_pct": 0.333
+   },
+   {
+    "symbol": "BNBTMN",
+    "t": "2026-10-21 18:07:30.329999924",
+    "buy_dev_pct": -0.335,
+    "ret_net_pct": -0.55,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.167
+   },
+   {
+    "symbol": "BTCTMN",
+    "t": "2026-10-21 14:51:16.779999971",
+    "buy_dev_pct": -0.317,
+    "ret_net_pct": -0.103,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.498
+   },
+   {
+    "symbol": "DOGETMN",
+    "t": "2026-10-21 14:51:24.279999971",
+    "buy_dev_pct": -0.304,
+    "ret_net_pct": -0.449,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.483
+   },
+   {
+    "symbol": "DOGETMN",
+    "t": "2026-10-21 17:54:14.180000067",
+    "buy_dev_pct": -0.308,
+    "ret_net_pct": -0.311,
+    "why": "time",
+    "held_s": 1502,
+    "best_bid_vs_entry_pct": 0.347
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 14:48:06.750000",
+    "buy_dev_pct": -0.305,
+    "ret_net_pct": 0.322,
+    "why": "target",
+    "held_s": 1406,
+    "best_bid_vs_entry_pct": 0.926
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 15:03:52.630000114",
+    "buy_dev_pct": -0.467,
+    "ret_net_pct": 0.092,
+    "why": "target",
+    "held_s": 630,
+    "best_bid_vs_entry_pct": 0.694
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 16:04:11.130000114",
+    "buy_dev_pct": -0.335,
+    "ret_net_pct": 0.454,
+    "why": "target",
+    "held_s": 2479,
+    "best_bid_vs_entry_pct": 1.059
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 17:32:13.839999914",
+    "buy_dev_pct": -0.329,
+    "ret_net_pct": -0.132,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.469
+   },
+   {
+    "symbol": "PEPETMN",
+    "t": "2026-10-21 17:03:12.859999895",
+    "buy_dev_pct": -0.365,
+    "ret_net_pct": -0.55,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.325
+   },
+   {
+    "symbol": "PEPETMN",
+    "t": "2026-10-21 17:16:44.269999981",
+    "buy_dev_pct": -0.444,
+    "ret_net_pct": 0.203,
+    "why": "target",
+    "held_s": 1222,
+    "best_bid_vs_entry_pct": 0.806
+   },
+   {
+    "symbol": "PEPETMN",
+    "t": "2026-10-21 17:38:16.420000076",
+    "buy_dev_pct": -0.339,
+    "ret_net_pct": -0.366,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.266
+   },
+   {
+    "symbol": "PEPETMN",
+    "t": "2026-10-21 18:14:56.059999943",
+    "buy_dev_pct": -0.3,
+    "ret_net_pct": -0.932,
+    "why": "end",
+    "held_s": 1318,
+    "best_bid_vs_entry_pct": 0.32
+   },
+   {
+    "symbol": "XRPTMN",
+    "t": "2026-10-21 14:48:19.250000",
+    "buy_dev_pct": -0.384,
+    "ret_net_pct": 0.098,
+    "why": "target",
+    "held_s": 163,
+    "best_bid_vs_entry_pct": 0.7
+   },
+   {
+    "symbol": "XRPTMN",
+    "t": "2026-10-21 18:05:07.359999895",
+    "buy_dev_pct": -0.303,
+    "ret_net_pct": -0.218,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.607
+   }
+  ]
+ },
+ "0.4%": {
+  "runs": 8,
+  "run_seconds_median": 7.5,
+  "share_runs_le_5s": 0.375,
+  "episodes_10min": 6,
+  "sim_mean_net_pct": -0.282,
+  "sim_mean_best_bid_vs_entry_pct": 0.628,
+  "sims": [
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 17:31:43.829999924",
+    "buy_dev_pct": -0.591,
+    "ret_net_pct": 0.434,
+    "why": "target",
+    "held_s": 273,
+    "best_bid_vs_entry_pct": 1.052
+   },
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 18:24:13.660000086",
+    "buy_dev_pct": -0.438,
+    "ret_net_pct": -1.871,
+    "why": "stop",
+    "held_s": 193,
+    "best_bid_vs_entry_pct": 0.208
+   },
+   {
+    "symbol": "BTCTMN",
+    "t": "2026-10-21 14:51:24.279999971",
+    "buy_dev_pct": -0.416,
+    "ret_net_pct": -0.103,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.498
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 15:03:52.630000114",
+    "buy_dev_pct": -0.467,
+    "ret_net_pct": 0.092,
+    "why": "target",
+    "held_s": 630,
+    "best_bid_vs_entry_pct": 0.694
+   },
+   {
+    "symbol": "ETHTMN",
+    "t": "2026-10-21 17:37:23.910000086",
+    "buy_dev_pct": -0.402,
+    "ret_net_pct": -0.445,
+    "why": "time",
+    "held_s": 1501,
+    "best_bid_vs_entry_pct": 0.511
+   },
+   {
+    "symbol": "PEPETMN",
+    "t": "2026-10-21 17:16:44.269999981",
+    "buy_dev_pct": -0.444,
+    "ret_net_pct": 0.203,
+    "why": "target",
+    "held_s": 1222,
+    "best_bid_vs_entry_pct": 0.806
+   }
+  ]
+ },
+ "0.5%": {
+  "runs": 2,
+  "run_seconds_median": 12.5,
+  "share_runs_le_5s": 0.5,
+  "episodes_10min": 2,
+  "sim_mean_net_pct": -0.719,
+  "sim_mean_best_bid_vs_entry_pct": 0.63,
+  "sims": [
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 17:31:43.829999924",
+    "buy_dev_pct": -0.591,
+    "ret_net_pct": 0.434,
+    "why": "target",
+    "held_s": 273,
+    "best_bid_vs_entry_pct": 1.052
+   },
+   {
+    "symbol": "ARBTMN",
+    "t": "2026-10-21 18:24:51.170000076",
+    "buy_dev_pct": -0.537,
+    "ret_net_pct": -1.871,
+    "why": "stop",
+    "held_s": 155,
+    "best_bid_vs_entry_pct": 0.208
+   }
+  ]
+ }
+}
