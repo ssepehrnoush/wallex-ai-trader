@@ -130,7 +130,7 @@ async def _run(llm, model: str, brief: dict, max_steps: int, kw: dict) -> tuple[
 
 def analyst_with_tools(committee, brief: dict, max_steps: int = 12) -> tuple[dict, list, str]:
     """Run the agent on the primary provider (BoxAPI), then on the fallback (OpenAI direct).
-    gpt-5.x on /chat/completions accepts function tools only with reasoning_effort "none".
+    gpt-5.x and gpt-6 on /chat/completions accept function tools only with reasoning_effort "none".
     If both fail, the supervisor falls back to the single-call analyst."""
     last = None
     # primary (BoxAPI, the sponsor) first; if its credit runs out or it is down, the same agent runs on the
@@ -138,7 +138,7 @@ def analyst_with_tools(committee, brief: dict, max_steps: int = 12) -> tuple[dic
     for llm, model in [(committee.client, committee.model)] + ([committee.fallback] if committee.fallback else []):
         if llm is None:
             continue
-        kw = {"reasoning_effort": "none"} if "gpt-5" in model else {}
+        kw = {"reasoning_effort": "none"} if re.search(r"gpt-[56]", model) else {}
         try:
             prop, trace, servers = asyncio.run(_run(llm, model, brief, max_steps, kw))
             return prop, trace, f"{model} via MCP[{', '.join(servers)}]"
