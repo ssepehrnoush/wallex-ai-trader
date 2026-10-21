@@ -117,7 +117,7 @@
     "default_policy": {
       "TMN": {
         "enabled": true,
-        "entry_dev": 0.006,
+        "entry_dev": 0.007,
         "exit_slack": 0.0005,
         "stop_pct": 0.009,
         "max_hold_min": 25,
@@ -126,7 +126,7 @@
       },
       "USDT": {
         "enabled": true,
-        "entry_dev": 0.0035,
+        "entry_dev": 0.0036,
         "exit_slack": 0.0005,
         "stop_pct": 0.008,
         "max_hold_min": 25,

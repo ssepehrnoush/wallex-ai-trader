@@ -1,12 +1,12 @@
 {
- "t": "2026-10-21T17:48:13+00:00",
+ "t": "2026-10-21T17:52:47+00:00",
  "mode": "live",
  "equity_tmn": 5000000,
  "return_pct": 0.0,
  "drawdown_pct": 0.0,
  "halted": "",
  "positions": {},
- "trades": 24,
+ "trades": 34,
  "policies": {
   "BTCTMN": {
    "enabled": true,
@@ -19,18 +19,18 @@
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.149,
-  "ETHTMN": -0.12,
-  "SOLTMN": -0.039,
-  "XRPTMN": -0.033,
+  "BTCTMN": -0.132,
+  "ETHTMN": -0.125,
+  "SOLTMN": -0.036,
+  "XRPTMN": -0.027,
   "DOGETMN": -0.029,
-  "ARBTMN": -0.075,
-  "BNBTMN": 0.289,
-  "PEPETMN": -0.13,
-  "BTCUSDT": -0.126,
-  "ETHUSDT": -0.188,
-  "SOLUSDT": -0.028,
-  "XRPUSDT": -0.032,
+  "ARBTMN": -0.096,
+  "BNBTMN": 0.278,
+  "PEPETMN": -0.129,
+  "BTCUSDT": -0.118,
+  "ETHUSDT": -0.169,
+  "SOLUSDT": -0.018,
+  "XRPUSDT": -0.025,
   "DOGEUSDT": -0.012
  }
 }

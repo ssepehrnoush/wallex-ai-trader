@@ -72,3 +72,7 @@
 {"t": "2026-10-21T17:48:07+00:00", "event": "equity", "equity_tmn": 5000000, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
 {"t": "2026-10-21T17:49:07+00:00", "event": "equity", "equity_tmn": 5000000, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
 {"t": "2026-10-21T17:50:07+00:00", "event": "equity", "equity_tmn": 5000000, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T17:51:07+00:00", "event": "equity", "equity_tmn": 5000000, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T17:51:55+00:00", "event": "warm_start", "ticks": 22112, "baselines_pct": {"BTCTMN": -0.135, "ETHTMN": -0.123, "SOLTMN": -0.036, "XRPTMN": -0.027, "DOGETMN": -0.028, "PEPETMN": -0.127, "BNBTMN": 0.28, "ARBTMN": -0.093}}
+{"t": "2026-10-21T17:51:56+00:00", "event": "start", "mode": "live", "symbols": ["BTCTMN", "ETHTMN", "SOLTMN", "XRPTMN", "DOGETMN", "PEPETMN", "BNBTMN", "ARBTMN"], "policy": {"TMN": {"enabled": true, "entry_dev": 0.006, "exit_slack": 0.0005, "stop_pct": 0.009, "max_hold_min": 25, "size_factor": 0.5, "reason": "default before first AI review"}, "USDT": {"enabled": true, "entry_dev": 0.0035, "exit_slack": 0.0005, "stop_pct": 0.008, "max_hold_min": 25, "size_factor": 0.5, "reason": "default before first AI review"}}}
+{"t": "2026-10-21T17:51:57+00:00", "event": "equity", "equity_tmn": 5000000, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}

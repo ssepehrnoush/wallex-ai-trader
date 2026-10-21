@@ -1,5 +1,5 @@
 {
- "t": "2026-10-21T17:50:07+00:00",
+ "t": "2026-10-21T17:51:57+00:00",
  "mode": "live",
  "equity_tmn": 5000000,
  "return_pct": 0.0,
@@ -12,83 +12,83 @@
    "enabled": true,
    "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد مناسب است و فقط آستانه ورود را سخت‌تر می‌کنیم."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "ETHTMN": {
-   "enabled": false,
-   "entry_dev": 0.0085,
+   "enabled": true,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.4,
-   "reason": "هزینه اجرا بالاست و فعلاً ورود امن نیست."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "SOLTMN": {
    "enabled": true,
-   "entry_dev": 0.007,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.25,
-   "reason": "اسپرد پهن است، پس سایز را کمتر می‌کنیم."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "XRPTMN": {
    "enabled": true,
-   "entry_dev": 0.007,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.25,
-   "reason": "کیفیت اجرا متوسط است و فقط اندازه معامله را کم می‌کنیم."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "DOGETMN": {
    "enabled": true,
-   "entry_dev": 0.007,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.35,
-   "reason": "شرایط قابل قبول است و کمی محافظه‌کارتر می‌مانیم."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "PEPETMN": {
-   "enabled": false,
-   "entry_dev": 0.007,
+   "enabled": true,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد بسیار پهن است و اجرای مطمئن ندارد."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "BNBTMN": {
    "enabled": true,
-   "entry_dev": 0.007,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.25,
-   "reason": "پریمیوم مثبت است اما برای کنترل ریسک سایز را پایین نگه می‌داریم."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   },
   "ARBTMN": {
-   "enabled": false,
-   "entry_dev": 0.007,
+   "enabled": true,
+   "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد پهن است و ورود امن ندارد."
+   "stop_pct": 0.009,
+   "max_hold_min": 25,
+   "size_factor": 0.5,
+   "reason": "default before first AI review"
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.156,
-  "ETHTMN": -0.122,
-  "SOLTMN": -0.035,
-  "XRPTMN": -0.03,
-  "DOGETMN": -0.027,
-  "PEPETMN": -0.117,
-  "BNBTMN": 0.278,
-  "ARBTMN": -0.096
+  "BTCTMN": -0.135,
+  "ETHTMN": -0.123,
+  "SOLTMN": -0.036,
+  "XRPTMN": -0.027,
+  "DOGETMN": -0.028,
+  "PEPETMN": -0.127,
+  "BNBTMN": 0.279,
+  "ARBTMN": -0.094
  }
 }

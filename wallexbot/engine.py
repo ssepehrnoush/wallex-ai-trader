@@ -26,7 +26,7 @@ from .fairvalue import Policy, PremiumTracker, base_of, fair_price, momentum, qu
 from .feeds import GlobalFeed, WallexBooks
 from .journal import Journal, read as read_journal
 from .risk import RiskManager
-from .supervisor import Supervisor
+from .supervisor import Supervisor, min_entry
 
 
 @dataclass
@@ -479,7 +479,8 @@ class Engine:
             return
         if self.halt_flag.exists():
             return
-        if buy_dev > -pol.entry_dev:
+        # the fee floor is enforced here too, so no policy (default, stale or AI) can buy below it
+        if buy_dev > -max(pol.entry_dev, min_entry(s, self.fees_q)):
             return
         mom = momentum(self.gl_hist[base_of(s)], now, 60) if base_of(s) in self.gl_hist else None
         if mom is not None and mom < -self.fv["max_global_drop_60s"]:
