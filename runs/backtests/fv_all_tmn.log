@@ -1,0 +1,467 @@
+{
+ "1INCHTMN": {
+  "half_spread_pct": 0.466,
+  "minutes_traded": 40,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "AAVETMN": {
+  "half_spread_pct": 0.07,
+  "minutes_traded": 306,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "ADATMN": {
+  "half_spread_pct": 0.09,
+  "minutes_traded": 1522,
+  "trades": 20,
+  "mean_ret_pct": -0.096,
+  "win_pct": 50.0,
+  "sum_ret_pct": -1.92,
+  "exits": {
+   "time": 15,
+   "target": 4,
+   "stop": 1
+  }
+ },
+ "AGLDTMN": {
+  "half_spread_pct": 0.449,
+  "minutes_traded": 19,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "ALICETMN": {
+  "half_spread_pct": 0.311,
+  "minutes_traded": 99,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "APETMN": {
+  "half_spread_pct": 0.288,
+  "minutes_traded": 1300,
+  "trades": 8,
+  "mean_ret_pct": 0.175,
+  "win_pct": 75.0,
+  "sum_ret_pct": 1.4,
+  "exits": {
+   "target": 4,
+   "time": 3,
+   "stop": 1
+  }
+ },
+ "ATOMTMN": {
+  "half_spread_pct": 0.31,
+  "minutes_traded": 434,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "AVAXTMN": {
+  "half_spread_pct": 0.328,
+  "minutes_traded": 615,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "AXSTMN": {
+  "half_spread_pct": 0.162,
+  "minutes_traded": 116,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "BCHTMN": {
+  "half_spread_pct": 0.359,
+  "minutes_traded": 612,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "CAKETMN": {
+  "half_spread_pct": 0.272,
+  "minutes_traded": 543,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "CHZTMN": {
+  "half_spread_pct": 0.385,
+  "minutes_traded": 166,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "COOKIETMN": {
+  "half_spread_pct": 0.351,
+  "minutes_traded": 109,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "DOTTMN": {
+  "half_spread_pct": 0.274,
+  "minutes_traded": 544,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "DYDXTMN": {
+  "half_spread_pct": 0.464,
+  "minutes_traded": 347,
+  "trades": 1,
+  "mean_ret_pct": -1.609,
+  "win_pct": 0.0,
+  "sum_ret_pct": -1.61,
+  "exits": {
+   "stop": 1
+  }
+ },
+ "EGLDTMN": {
+  "half_spread_pct": 0.291,
+  "minutes_traded": 24,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "EIGENTMN": {
+  "half_spread_pct": 1.265,
+  "minutes_traded": 67,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "ENATMN": {
+  "half_spread_pct": 0.304,
+  "minutes_traded": 390,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "ENJTMN": {
+  "half_spread_pct": 0.165,
+  "minutes_traded": 107,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "ETCTMN": {
+  "half_spread_pct": 1.061,
+  "minutes_traded": 62,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "FILTMN": {
+  "half_spread_pct": 0.263,
+  "minutes_traded": 812,
+  "trades": 6,
+  "mean_ret_pct": 1.647,
+  "win_pct": 83.3,
+  "sum_ret_pct": 9.88,
+  "exits": {
+   "target": 4,
+   "time": 2
+  }
+ },
+ "FLOKITMN": {
+  "half_spread_pct": 0.32,
+  "minutes_traded": 326,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "FORMTMN": {
+  "half_spread_pct": 0.203,
+  "minutes_traded": 179,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "GALATMN": {
+  "half_spread_pct": 0.19,
+  "minutes_traded": 719,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "HBARTMN": {
+  "half_spread_pct": 0.14,
+  "minutes_traded": 520,
+  "trades": 2,
+  "mean_ret_pct": -1.061,
+  "win_pct": 0.0,
+  "sum_ret_pct": -2.12,
+  "exits": {
+   "time": 1,
+   "stop": 1
+  }
+ },
+ "HYPETMN": {
+  "half_spread_pct": 0.136,
+  "minutes_traded": 431,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "IMXTMN": {
+  "half_spread_pct": 1.354,
+  "minutes_traded": 30,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "LINKTMN": {
+  "half_spread_pct": 0.235,
+  "minutes_traded": 570,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "LTCTMN": {
+  "half_spread_pct": 0.161,
+  "minutes_traded": 751,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "MANATMN": {
+  "half_spread_pct": 0.537,
+  "minutes_traded": 85,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "PENGUTMN": {
+  "half_spread_pct": 0.159,
+  "minutes_traded": 338,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "PEOPLETMN": {
+  "half_spread_pct": 0.107,
+  "minutes_traded": 80,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "POLTMN": {
+  "half_spread_pct": 0.377,
+  "minutes_traded": 1325,
+  "trades": 56,
+  "mean_ret_pct": 0.105,
+  "win_pct": 42.9,
+  "sum_ret_pct": 5.88,
+  "exits": {
+   "target": 24,
+   "stop": 16,
+   "time": 16
+  }
+ },
+ "PUMPTMN": {
+  "half_spread_pct": 0.227,
+  "minutes_traded": 6108,
+  "trades": 17,
+  "mean_ret_pct": -0.11,
+  "win_pct": 58.8,
+  "sum_ret_pct": -1.86,
+  "exits": {
+   "target": 10,
+   "time": 4,
+   "stop": 3
+  }
+ },
+ "SANDTMN": {
+  "half_spread_pct": 0.219,
+  "minutes_traded": 1218,
+  "trades": 35,
+  "mean_ret_pct": 0.269,
+  "win_pct": 60.0,
+  "sum_ret_pct": 9.4,
+  "exits": {
+   "target": 25,
+   "time": 6,
+   "stop": 4
+  }
+ },
+ "SEITMN": {
+  "half_spread_pct": 0.456,
+  "minutes_traded": 395,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "SHIBTMN": {
+  "half_spread_pct": 0.321,
+  "minutes_traded": 878,
+  "trades": 1,
+  "mean_ret_pct": 0.555,
+  "win_pct": 100.0,
+  "sum_ret_pct": 0.56,
+  "exits": {
+   "target": 1
+  }
+ },
+ "STMN": {
+  "half_spread_pct": 0.238,
+  "minutes_traded": 3173,
+  "trades": 33,
+  "mean_ret_pct": -0.469,
+  "win_pct": 33.3,
+  "sum_ret_pct": -15.48,
+  "exits": {
+   "target": 15,
+   "time": 10,
+   "stop": 8
+  }
+ },
+ "SUITMN": {
+  "half_spread_pct": 0.757,
+  "minutes_traded": 948,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "SUSHITMN": {
+  "half_spread_pct": 0.017,
+  "minutes_traded": 112,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "TNSRTMN": {
+  "half_spread_pct": 0.355,
+  "minutes_traded": 123,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "TRXTMN": {
+  "half_spread_pct": 0.013,
+  "minutes_traded": 4393,
+  "trades": 32,
+  "mean_ret_pct": -0.05,
+  "win_pct": 56.2,
+  "sum_ret_pct": -1.59,
+  "exits": {
+   "target": 18,
+   "time": 14
+  }
+ },
+ "UNITMN": {
+  "half_spread_pct": 0.335,
+  "minutes_traded": 527,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "WLDTMN": {
+  "half_spread_pct": 0.319,
+  "minutes_traded": 567,
+  "trades": 3,
+  "mean_ret_pct": -0.585,
+  "win_pct": 0.0,
+  "sum_ret_pct": -1.76,
+  "exits": {
+   "time": 2,
+   "target": 1
+  }
+ },
+ "XAUTTMN": {
+  "half_spread_pct": 0.0,
+  "minutes_traded": 2336,
+  "trades": 1,
+  "mean_ret_pct": -0.362,
+  "win_pct": 0.0,
+  "sum_ret_pct": -0.36,
+  "exits": {
+   "target": 1
+  }
+ },
+ "XLMTMN": {
+  "half_spread_pct": 0.049,
+  "minutes_traded": 193,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ },
+ "YFITMN": {
+  "half_spread_pct": 0.391,
+  "minutes_traded": 19,
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {}
+ }
+}

@@ -83,7 +83,8 @@
   "live": {
     "poll_seconds": 10,
     "entry_reprice_seconds": 45,
-    "entry_max_chase_pct": 0.003
+    "entry_max_chase_pct": 0.003,
+    "start_capital": 5000000
   },
   "fees_usdt": {
     "maker": 0.001,

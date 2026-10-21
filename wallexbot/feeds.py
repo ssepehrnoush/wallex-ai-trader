@@ -32,9 +32,16 @@ class Book:
 class GlobalFeed:
     """Mid prices in USDT for a list of base assets."""
     def __init__(self, bases: list[str]):
-        self.bases = bases
         self.http = httpx.Client(timeout=6)
         self.source = "binance"
+        # one unknown symbol makes Binance reject the whole batch request, so keep only listed ones
+        try:
+            listed = {x["symbol"] for x in self.http.get("https://api.binance.com/api/v3/exchangeInfo", timeout=20).json()["symbols"]
+                      if x.get("status") == "TRADING"}
+            bases = [b for b in bases if f"{b}USDT" in listed]
+        except Exception:
+            pass
+        self.bases = bases
 
     def _binance(self) -> dict[str, float]:
         syms = json.dumps([f"{b}USDT" for b in self.bases], separators=(",", ":"))
@@ -50,15 +57,20 @@ class GlobalFeed:
                 for x in r.json()["data"] if x["instId"] in want and x["bidPx"] and x["askPx"]}
 
     def get(self) -> tuple[dict[str, float], str]:
+        """Prices from Binance, or OKX if Binance fails. Partial answers are fine: a market without a
+        fresh reference price simply has no fair value this tick and cannot trade."""
+        best: dict[str, float] = {}
         for name, fn in (("binance", self._binance), ("okx", self._okx)):
             try:
                 px = fn()
-                if len(px) == len(self.bases):
-                    self.source = name
-                    return px, name
             except Exception:
                 continue
-        return {}, "none"
+            if len(px) == len(self.bases):
+                self.source = name
+                return px, name
+            if len(px) > len(best):
+                best, self.source = px, name
+        return best, (self.source if best else "none")
 
 
 class WallexBooks:

@@ -88,11 +88,14 @@ class PremiumTracker:
         return self.sorted[n // 2] if n % 2 else (self.sorted[n // 2 - 1] + self.sorted[n // 2]) / 2
 
     def stats(self) -> dict:
-        devs = [d for _, d in self.buy_devs]
+        # called from the supervisor thread while the main loop appends: work on a snapshot
+        devs = [d for _, d in list(self.buy_devs)]
         if len(devs) < 10:
             return {"samples": len(devs)}
         q = statistics.quantiles(devs, n=100)
-        return {"samples": len(devs), "baseline_premium_pct": round(self.baseline * 100, 3),
+        snap = list(self.sorted)
+        base = statistics.median(snap) if snap else 0.0
+        return {"samples": len(devs), "baseline_premium_pct": round(base * 100, 3),
                 "buy_dev_p1_pct": round(q[0] * 100, 3), "buy_dev_p5_pct": round(q[4] * 100, 3),
                 "buy_dev_p50_pct": round(q[49] * 100, 3),
                 "minutes_below_0.3pct": round(sum(1 for d in devs if d < -0.003) * 2.5 / 60, 1),

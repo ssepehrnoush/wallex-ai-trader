@@ -1,5 +1,5 @@
 {
- "t": "2026-10-21T16:49:31+00:00",
+ "t": "2026-10-21T17:50:07+00:00",
  "mode": "live",
  "equity_tmn": 5000000,
  "return_pct": 0.0,
@@ -12,83 +12,83 @@
    "enabled": true,
    "entry_dev": 0.006,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
    "size_factor": 0.4,
-   "reason": "اسپرد کم است اما ورود را سخت‌تر و حجم را کمتر کردم."
+   "reason": "اسپرد مناسب است و فقط آستانه ورود را سخت‌تر می‌کنیم."
   },
   "ETHTMN": {
-   "enabled": true,
-   "entry_dev": 0.006,
+   "enabled": false,
+   "entry_dev": 0.0085,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
    "size_factor": 0.4,
-   "reason": "بازار قابل‌قبول است ولی برای محافظت از سرمایه سخت‌گیرتر شد."
+   "reason": "هزینه اجرا بالاست و فعلاً ورود امن نیست."
   },
   "SOLTMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.4,
-   "reason": "نوسان و اسپرد متوسط است، پس ورود و نگهداری را محدود کردم."
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.25,
+   "reason": "اسپرد پهن است، پس سایز را کمتر می‌کنیم."
   },
   "XRPTMN": {
-   "enabled": false,
-   "entry_dev": 0.006,
+   "enabled": true,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد این بازار بالاست و ریسک لغزش را زیاد می‌کند."
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.25,
+   "reason": "کیفیت اجرا متوسط است و فقط اندازه معامله را کم می‌کنیم."
   },
   "DOGETMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.4,
-   "reason": "برای جلوگیری از معاملات کم‌بازده، آستانه ورود را بالاتر بردم."
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.35,
+   "reason": "شرایط قابل قبول است و کمی محافظه‌کارتر می‌مانیم."
   },
   "PEPETMN": {
-   "enabled": true,
-   "entry_dev": 0.006,
+   "enabled": false,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
    "size_factor": 0.4,
-   "reason": "بازار هنوز مناسب است اما با ریسک کمتر نگه داشته شد."
+   "reason": "اسپرد بسیار پهن است و اجرای مطمئن ندارد."
   },
   "BNBTMN": {
-   "enabled": false,
-   "entry_dev": 0.006,
+   "enabled": true,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد بالا و هزینه اجرای این بازار را نامطلوب می‌کند."
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.25,
+   "reason": "پریمیوم مثبت است اما برای کنترل ریسک سایز را پایین نگه می‌داریم."
   },
   "ARBTMN": {
-   "enabled": true,
-   "entry_dev": 0.006,
+   "enabled": false,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
    "size_factor": 0.4,
-   "reason": "ساختار بازار خوب است ولی فقط با فیلتر سخت‌تر فعال می‌ماند."
+   "reason": "اسپرد پهن است و ورود امن ندارد."
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.23,
-  "ETHTMN": -0.118,
-  "SOLTMN": -0.061,
-  "XRPTMN": -0.057,
-  "DOGETMN": -0.011,
-  "PEPETMN": -0.133,
-  "BNBTMN": 0.326,
-  "ARBTMN": -0.074
+  "BTCTMN": -0.156,
+  "ETHTMN": -0.122,
+  "SOLTMN": -0.035,
+  "XRPTMN": -0.03,
+  "DOGETMN": -0.027,
+  "PEPETMN": -0.117,
+  "BNBTMN": 0.278,
+  "ARBTMN": -0.096
  }
 }

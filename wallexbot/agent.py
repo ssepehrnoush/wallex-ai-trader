@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import os
 import re
 import sys
 from contextlib import AsyncExitStack
@@ -74,7 +75,8 @@ async def _run(llm, model: str, brief: dict, max_steps: int, kw: dict) -> tuple[
         tools, servers = [], []
         # our engine MCP (always)
         r, w = await stack.enter_async_context(stdio_client(
-            StdioServerParameters(command=sys.executable, args=["-m", "wallexbot.mcp_server"], cwd=str(ROOT))))
+            StdioServerParameters(command=sys.executable, args=["-m", "wallexbot.mcp_server"], cwd=str(ROOT),
+                                  env=dict(os.environ))))
         ours = await stack.enter_async_context(ClientSession(r, w))
         await ours.initialize()
         for t in (await ours.list_tools()).tools:

@@ -3,27 +3,28 @@
 Every `poll_seconds`: read Wallex books + global prices -> update fair value and premium baselines
 -> manage open positions (target / stop / time / end-of-window) -> look for entries within the AI
 supervisor's current policy and the risk manager's limits. Every `review_minutes` the supervisor
-re-reads the statistics and updates the policies. Everything is written to decisions.jsonl.
+re-reads the statistics and updates the policies. Every minute (live) the tracked positions are
+reconciled with the real balances. Everything is written to decisions.jsonl.
 """
 from __future__ import annotations
 
 import csv
 import json
-import math
+import os
 import threading
 import time
 import traceback
 from collections import deque
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime, timezone
-from pathlib import Path
+from decimal import ROUND_DOWN, Decimal
 
 from .ai import AICommittee
 from .client import WallexClient, new_client_id
 from .config import RUNS, load_secrets
 from .fairvalue import Policy, PremiumTracker, base_of, fair_price, momentum, quote_of
 from .feeds import GlobalFeed, WallexBooks
-from .journal import Journal
+from .journal import Journal, read as read_journal
 from .risk import RiskManager
 from .supervisor import Supervisor
 
@@ -33,24 +34,25 @@ class Position:
     symbol: str
     qty: float               # coins we hold (net of buy fee)
     entry: float             # average buy price
-    cost_q: float            # quote currency spent incl. fee
+    cost_q: float            # quote currency spent on what is still held
     opened: float            # unix time
     entry_dev: float
     order_id: str
     peak_bid: float = 0.0
+    realized_q: float = 0.0  # P&L of chunks already sold (partial exits)
 
 
 @dataclass
 class Meta:
     step: int                # quantity decimals
     tick: int                # price decimals
-    min_notional: float
+    min_notional: float      # the exchange minimum order value, as published
     market_orders: bool
 
 
 def floor_to(x: float, decimals: int) -> float:
-    m = 10 ** decimals
-    return math.floor(x * m) / m
+    """Round DOWN to `decimals` without float artefacts (floor(0.29*100) is 28 in floats)."""
+    return float(Decimal(repr(x)).quantize(Decimal(1).scaleb(-decimals), rounding=ROUND_DOWN))
 
 
 class PaperExecutor:
@@ -61,10 +63,13 @@ class PaperExecutor:
         self.fees = fees_by_quote
         self.cash = dict(start_cash)
 
+    def free(self, asset: str) -> float:
+        return float("inf")
+
     def buy(self, sym, book, quote_amount, meta):
         f = self.fees[quote_of(sym)]["taker"]
         qty = floor_to(min(quote_amount / book.ask, book.ask_qty), meta.step)
-        if qty * book.ask < meta.min_notional:
+        if qty * book.ask < meta.min_notional * 1.05:
             return None
         spent = qty * book.ask
         self.cash[quote_of(sym)] -= spent
@@ -82,7 +87,7 @@ class PaperExecutor:
 
 class LiveExecutor:
     """Real orders. Taker-style LIMIT at the touch, short wait, cancel the remainder.
-    Never used unless the key is explicitly marked as the hackathon account (see cli.py)."""
+    Never used unless the key is explicitly marked as the hackathon account (see __main__.py)."""
     name = "live"
 
     def __init__(self, client: WallexClient, fees_by_quote: dict, journal: Journal):
@@ -90,40 +95,56 @@ class LiveExecutor:
         self.fees = fees_by_quote
         self.j = journal
 
-    def _settle(self, oid: str, waits=(0.7, 1.2, 1.8)):
+    def _settle(self, cid: str, waits=(0.6, 1.0, 1.5, 2.0)):
+        """Wait for the order to finish; otherwise cancel it (retrying until it is really inactive, so no
+        order of ours is left on the book) and return its final state. Works even when the POST itself
+        timed out: we know the client id because we chose it."""
         res = None
         for w in waits:
             time.sleep(w)
             try:
-                res = self.c.get_order(oid)
+                res = self.c.get_order(cid)
             except Exception as e:
-                self.j.log("order_status_error", id=oid, error=str(e)[:200])
+                self.j.log("order_status_error", id=cid, error=str(e)[:200])
                 continue
-            if not res.active or res.status.upper() in ("FILLED", "DONE", "FINISHED"):
+            if not res.active:
                 return res
-        try:
-            self.c.cancel_order(oid)
-        except Exception as e:
-            self.j.log("cancel_error", id=oid, error=str(e)[:200])
-        try:
-            res = self.c.get_order(oid)
-        except Exception:
-            pass
+        for _ in range(3):
+            try:
+                self.c.cancel_order(cid)
+            except Exception as e:
+                self.j.log("cancel_error", id=cid, error=str(e)[:200])
+            time.sleep(0.5)
+            try:
+                res = self.c.get_order(cid)
+                if not res.active:
+                    return res
+            except Exception as e:
+                self.j.log("order_status_error", id=cid, error=str(e)[:200])
         return res
+
+    def _place(self, sym, side, qty, price, meta) -> str:
+        cid = new_client_id()
+        q, p = f"{qty:.{meta.step}f}", f"{price:.{meta.tick}f}"
+        try:
+            o = self.c.place_order(sym, side, "LIMIT", q, price=p, client_id=cid)
+            self.j.log("order", side=side, symbol=sym, id=cid, price=p, qty=q, status=o.status)
+        except Exception as e:      # a timeout may still have created the order: settle by id anyway
+            self.j.log("place_error", side=side, symbol=sym, id=cid, price=p, qty=q, error=str(e)[:200])
+        return cid
 
     def buy(self, sym, book, quote_amount, meta):
         qty = floor_to(min(quote_amount / book.ask, book.ask_qty), meta.step)
-        if qty * book.ask < meta.min_notional:
+        if qty * book.ask < meta.min_notional * 1.05:
             return None
-        price = f"{book.ask:.{meta.tick}f}"
-        o = self.c.place_order(sym, "BUY", "LIMIT", f"{qty:.{meta.step}f}", price=price)
-        self.j.log("order", side="BUY", symbol=sym, id=o.client_id, price=price, qty=qty, status=o.status)
-        r = self._settle(o.client_id)
+        cid = self._place(sym, "BUY", qty, book.ask, meta)
+        r = self._settle(cid)
         if not r or r.executed_qty <= 0:
             return None
-        fee_coin = sum(float(fl.get("fee", 0)) for fl in r.raw.get("fills", []) if fl.get("feeAsset") == base_of(sym))
+        fills = r.raw.get("fills") or []
+        fee_coin = sum(float(fl.get("fee") or 0) for fl in fills if fl.get("feeAsset") == base_of(sym))
         net = r.executed_qty - (fee_coin or r.executed_qty * self.fees[quote_of(sym)]["taker"])
-        return {"qty": floor_to(net, meta.step), "avg": r.avg_price, "spent": r.executed_sum, "fee_q": r.fee, "id": o.client_id}
+        return {"qty": floor_to(net, meta.step), "avg": r.avg_price, "spent": r.executed_sum, "fee_q": r.fee, "id": cid}
 
     def free(self, asset: str) -> float:
         total, locked = self.c.balances().get(asset, (0.0, 0.0))
@@ -143,21 +164,21 @@ class LiveExecutor:
         return n
 
     def sell(self, sym, book, qty, meta, reason):
-        # never try to sell more than the account really holds (fee rounding, partial fills)
-        q = floor_to(min(qty, self.free(base_of(sym))), meta.step)
-        if q <= 0 or q * book.bid < meta.min_notional * 0.5:
+        # Sell what the account really holds of this coin. Only this bot trades the hackathon account, so
+        # every coin of a traded market belongs to the position, including fee-rounding leftovers: this is
+        # what makes the account end fully in toman.
+        q = floor_to(self.free(base_of(sym)), meta.step)
+        if q <= 0 or q * book.bid < meta.min_notional:
             return None
-        if reason in ("stop", "flatten") and meta.market_orders:
-            o = self.c.place_order(sym, "SELL", "MARKET", f"{q:.{meta.step}f}", price=f"{book.bid:.{meta.tick}f}")
-        else:
-            # marketable limit a little through the bid so it fills like a market order
-            px = book.bid * (0.998 if reason in ("stop", "flatten", "time") else 1.0)
-            o = self.c.place_order(sym, "SELL", "LIMIT", f"{q:.{meta.step}f}", price=f"{px:.{meta.tick}f}")
-        self.j.log("order", side="SELL", symbol=sym, id=o.client_id, qty=q, reason=reason, status=o.status)
-        r = self._settle(o.client_id)
+        # Every exit is a marketable LIMIT (one order format for every market: MARKET is only enabled on a
+        # few Wallex markets and is auto-cancelled on >2% moves). Stops/flatten/time cross the bid by 0.3%
+        # so they fill like a market order; a target sells at the bid.
+        px = book.bid * (0.997 if reason in ("stop", "flatten", "time") else 1.0)
+        cid = self._place(sym, "SELL", q, px, meta)
+        r = self._settle(cid)
         if not r or r.executed_qty <= 0:
             return None
-        return {"qty": r.executed_qty, "avg": r.avg_price, "received": r.executed_sum - r.fee, "fee_q": r.fee, "id": o.client_id}
+        return {"qty": r.executed_qty, "avg": r.avg_price, "received": r.executed_sum - r.fee, "fee_q": r.fee, "id": cid}
 
 
 class Engine:
@@ -168,6 +189,7 @@ class Engine:
         self.fv = fv
         self.secrets = load_secrets()
         self.run_dir = RUNS / run_name
+        os.environ["WALLEXBOT_RUN"] = run_name     # tells the MCP tools which run is live
         self.j = Journal(self.run_dir)
         self.public = WallexClient(min_interval=0.0)
         # The hackathon key is created ON the credit account, so it already addresses that account; Wallex's own
@@ -183,7 +205,11 @@ class Engine:
         self.policies = {s: Policy(**fv["default_policy"][quote_of(s)]) for s in self.symbols}
         self.gl_hist = {b: deque(maxlen=200) for b in self.global_feed.bases}
         self.positions: dict[str, Position] = {}
-        self.trades: list[dict] = []
+        self._last_bid: dict[str, float] = {}
+        self._last_gap_log = 0.0
+        # closed trades survive restarts: reload them from this run's own journal
+        self.trades: list[dict] = [{k: v for k, v in e.items() if k not in ("t", "event")} | {"t": e["t"]}
+                                   for e in read_journal(self.run_dir / "decisions.jsonl") if e.get("event") == "exit"]
         self.meta = self._load_meta()
         self.window_end = datetime.fromisoformat(cfg["window"]["end_utc"].replace("Z", "+00:00"))
         self.risk = RiskManager(cfg["risk"], self.window_end, cfg["fees"])
@@ -209,15 +235,14 @@ class Engine:
                                              for s, d in m["markets"].items()}}
 
         self._warm_start()
+        self._last_books = {}
         if mode == "live":
             self.exec = LiveExecutor(self.priv, self.fees_q, self.j)
-            self.equity0 = self._live_equity()
             self.exec.cancel_strays()
-            self._adopt_holdings()
+            self._reconcile(self.priv.balances(), self.books.get(), why="adopted_holding")
         else:
             cash = {"TMN": cfg["shadow"]["start_tmn"], "USDT": cfg["shadow"]["start_usdt"]}
             self.exec = PaperExecutor(self.fees_q, cash)
-            self.equity0 = None
         self.state = None
 
     # -- setup ------------------------------------------------------------
@@ -226,73 +251,94 @@ class Engine:
         out = {}
         for s in self.symbols:
             x = m[s]
-            out[s] = Meta(int(x["stepSize"]), int(x["tickSize"]), float(x.get("minNotional") or 0) * 1.05,
+            out[s] = Meta(int(x["stepSize"]), int(x["tickSize"]), float(x.get("minNotional") or 0),
                           bool(x.get("isMarketTypeEnable")))
             if quote_of(s) == "USDT" and out[s].min_notional == 0:
-                out[s].min_notional = 5.5
+                out[s].min_notional = 1.0
         return out
 
     def _warm_start(self):
-        """Seed premium baselines from recent ticks of earlier runs, so a restart does not need
-        hours to relearn each market's normal premium (and never trades on a cold baseline)."""
+        """Seed premium baselines from recent ticks (this run's own file included), so a restart does not
+        need hours to relearn each market's normal premium and never trades on a cold baseline."""
         cutoff = time.time() - self.fv["baseline_window_min"] * 60
         files = sorted(RUNS.glob("*/ticks.csv"), key=lambda p: p.stat().st_mtime)
-        seeded = 0
+        rows = []
         for p in files:
-            if p.parent == self.run_dir or p.stat().st_mtime < cutoff:
+            if p.stat().st_mtime < cutoff:
                 continue
             with open(p, encoding="utf-8") as fh:
                 for r in csv.DictReader(fh):
                     try:
                         t = float(r["t"])
-                        if t < cutoff or r["symbol"] not in self.trackers:
-                            continue
-                        mid = (float(r["bid"]) + float(r["ask"])) / 2
-                        self.trackers[r["symbol"]].add(t, mid / float(r["fair"]) - 1)
-                        self.trackers[r["symbol"]].note_dev(t, float(r["buy_dev"]))
-                        seeded += 1
+                        if t >= cutoff and r["symbol"] in self.trackers:
+                            rows.append((t, r["symbol"], (float(r["bid"]) + float(r["ask"])) / 2 / float(r["fair"]) - 1,
+                                         float(r["buy_dev"])))
                     except (KeyError, ValueError, ZeroDivisionError):
                         continue
-        self.j.log("warm_start", ticks=seeded, baselines_pct={s: round(t.baseline * 100, 3) for s, t in self.trackers.items()})
+        rows.sort()
+        for t, s, prem, bd in rows:
+            self.trackers[s].add(t, prem)
+            self.trackers[s].note_dev(t, bd)
+        self.j.log("warm_start", ticks=len(rows), baselines_pct={s: round(t.baseline * 100, 3) for s, t in self.trackers.items()})
 
-    def _live_equity(self) -> float:
-        bal = self.priv.balances()
-        return bal.get("TMN", (0, 0))[0]
-
-    def _adopt_holdings(self):
-        """After a restart, coins bought by an earlier run are still in the account. Adopt them as
-        positions so the exit rules (target / stop / time / flatten) sell them; they are never forgotten."""
-        bal = self.priv.balances()
-        books = self.books.get()
+    def _reconcile(self, bal: dict, books: dict, why: str = "reconciled"):
+        """Make tracked positions match what the account really holds (live). Coins nobody tracks (a fill
+        whose confirmation was lost, an earlier run) become positions so exits and flatten sell them;
+        positions with nothing sellable behind them (dust, phantom) are dropped and free their slot."""
         for s in self.symbols:
-            b = books.get(s)
-            qty = bal.get(base_of(s), (0.0, 0.0))[0]
-            if b and qty * b.bid >= self.meta[s].min_notional:
-                self.positions[s] = Position(s, qty, b.bid, qty * b.bid, time.time(), 0.0, "adopted", b.bid)
-                self.j.log("adopted_holding", symbol=s, qty=qty, mark=b.bid)
+            px = self._mark_price(s, books)
+            if px is None:
+                continue
+            held = bal.get(base_of(s), (0.0, 0.0))[0]
+            sellable = held * px >= self.meta[s].min_notional
+            p = self.positions.get(s)
+            if p and not sellable:
+                self.j.log("dust_left", symbol=s, qty=held, value=round(held * px), reason=why)
+                del self.positions[s]
+                if self.state:
+                    self.risk.on_exit(self.state, s, p.realized_q, datetime.now(timezone.utc))
+            elif not p and sellable:
+                self.positions[s] = Position(s, held, px, held * px, time.time(), 0.0, why, px)
+                self.j.log(why, symbol=s, qty=held, mark=px)
+            elif p and held > p.qty * 1.001:
+                p.cost_q += (held - p.qty) * px
+                p.qty = held
+                self.j.log("position_resized", symbol=s, qty=held)
 
     # -- valuation ----------------------------------------------------------
-    def equity_tmn(self, books) -> float:
+    def _mark_price(self, s: str, books) -> float | None:
+        b = books.get(s)
+        if b:
+            self._last_bid[s] = b.bid
+            return b.bid
+        if s in self._last_bid:
+            return self._last_bid[s]
+        p = self.positions.get(s)
+        return p.entry if p else None
+
+    def equity_tmn(self, books, bal: dict | None = None) -> float | None:
+        """Account value in toman, or None when it cannot be measured right now. None means "skip this
+        mark": a failed balance call must never look like a 100% loss and trip the kill switch."""
         u = books.get("USDTTMN")
         u_bid = u.bid if u else (self.usdttmn or 0)
-        cash = self.exec.cash if isinstance(self.exec, PaperExecutor) else {"TMN": 0, "USDT": 0}
-        eq = cash.get("TMN", 0) + cash.get("USDT", 0) * u_bid
-        for s, p in self.positions.items():
-            b = books.get(s)
-            px = b.bid if b else p.entry
-            eq += p.qty * px * (u_bid if quote_of(s) == "USDT" else 1)
-        if self.mode == "live":
-            try:
-                # value EVERY coin of the traded markets, not only tracked positions (leftovers count too)
-                bal = self.priv.balances()
-                eq = bal.get("TMN", (0, 0))[0] + bal.get("USDT", (0, 0))[0] * u_bid
-                for s in self.symbols:
-                    b = books.get(s)
-                    q = bal.get(base_of(s), (0, 0))[0]
-                    if q and b:
-                        eq += q * b.bid * (u_bid if quote_of(s) == "USDT" else 1)
-            except Exception as e:
-                self.j.log("balance_error", error=str(e)[:200])
+        if self.mode != "live":
+            cash = self.exec.cash
+            eq = cash.get("TMN", 0) + cash.get("USDT", 0) * u_bid
+            for s, p in self.positions.items():
+                px = self._mark_price(s, books) or p.entry
+                eq += p.qty * px * (u_bid if quote_of(s) == "USDT" else 1)
+            return eq
+        if bal is None:
+            return None
+        # value EVERY coin of the traded markets, not only tracked positions (leftovers count too)
+        eq = bal.get("TMN", (0, 0))[0] + bal.get("USDT", (0, 0))[0] * u_bid
+        for s in self.symbols:
+            q = bal.get(base_of(s), (0, 0))[0]
+            if q:
+                px = self._mark_price(s, books)
+                if px is None:
+                    return None          # a coin we cannot price: do not guess the account value
+                eq += q * px * (u_bid if quote_of(s) == "USDT" else 1)
         return eq
 
     # -- supervisor -----------------------------------------------------------
@@ -318,7 +364,7 @@ class Engine:
                     data["markets"][s] = st
                 for b in ("BTC", "ETH"):
                     if b in self.gl_hist:
-                        data["context"][f"{b}_global_ret_10m_pct"] = round((momentum(self.gl_hist[b], now, 600) or 0) * 100, 3)
+                        data["context"][f"{b}_global_ret_10m_pct"] = round((momentum(list(self.gl_hist[b]), now, 600) or 0) * 100, 3)
                 data["context"]["fees_round_trip_pct"] = {"TMN": 0.6, "USDT": 0.26}
                 if self.backtest_ref:
                     data["backtest_7d_reference"] = self.backtest_ref
@@ -335,7 +381,6 @@ class Engine:
     def run(self, minutes: float | None = None):
         fv, poll = self.fv, self.fv["poll_seconds"]
         t_end = time.time() + minutes * 60 if minutes else None
-        self._last_books = {}
         last_mark = 0.0
         self.j.log("start", mode=self.mode, symbols=self.symbols, policy=self.fv["default_policy"])
         warm_until = time.time() + fv["warmup_minutes"] * 60
@@ -367,9 +412,10 @@ class Engine:
         u = books.get("USDTTMN")
         if u:
             self.usdttmn = u.mid
-        if not gpx or not self.usdttmn:
-            self.j.log("feed_gap", wallex=len(books), global_source=src)
-            return
+        if (not gpx or not self.usdttmn) and now - self._last_gap_log > 60:
+            # keep going: without fair values there are no entries, but exits (stop / time / flatten) still run
+            self.j.log("feed_gap", wallex=len(books), global_source=src, prices=len(gpx))
+            self._last_gap_log = now
         for b, px in gpx.items():
             self.gl_hist[b].append((now, px))
         nowdt = datetime.now(timezone.utc)
@@ -378,58 +424,76 @@ class Engine:
             phase = "flatten"          # human emergency switch: same path as the end-of-window exit
         rows = []
         for s in self.symbols:
-            b = books.get(s)
-            fair = fair_price(s, gpx, self.usdttmn)
-            if not b or not fair:
-                continue
-            tr = self.trackers[s]
-            tr.add(now, b.mid / fair - 1)
-            base = tr.baseline
-            buy_dev = b.ask / fair - 1 - base
-            sell_dev = b.bid / fair - 1 - base
-            tr.note_dev(now, buy_dev)
-            rows.append([round(now, 2), s, b.bid, b.ask, b.bid_qty, b.ask_qty, round(fair, 6), round(base, 6),
-                         round(buy_dev, 6), round(sell_dev, 6)])
-
-            pos = self.positions.get(s)
-            pol = self.policies[s]
-            if pos:
-                pos.peak_bid = max(pos.peak_bid, b.bid)
-                reason = None
-                if phase == "flatten":
-                    reason = "flatten"
-                elif b.bid <= pos.entry * (1 - pol.stop_pct):
-                    reason = "stop"
-                elif sell_dev >= -pol.exit_slack and b.bid > pos.entry:
-                    reason = "target"
-                elif now - pos.opened >= pol.max_hold_min * 60:
-                    reason = "time"
-                if reason:
-                    self._exit(s, b, pos, reason, sell_dev, now)
-                continue
-
-            if not trading or not tr.ready or not pol.enabled or phase != "normal":
-                continue
-            if self.halt_flag.exists():
-                continue
-            if buy_dev > -pol.entry_dev:
-                continue
-            mom = momentum(self.gl_hist[base_of(s)], now, 60)
-            if mom is not None and mom < -self.fv["max_global_drop_60s"]:
-                self.j.log("skip", symbol=s, why="global price falling fast", mom_60s=round(mom, 5), buy_dev=round(buy_dev, 5))
-                continue
-            if b.spread > self.fv["max_spread"]:
-                continue
-            self._enter(s, b, fair, base, buy_dev, pol, now, nowdt)
+            try:   # one market's error must never stop the others (or the minute mark) from running
+                self._step_symbol(s, books.get(s), gpx, phase, now, nowdt, trading, rows)
+            except Exception as e:
+                self.j.log("symbol_error", symbol=s, error=str(e)[:300], tb=traceback.format_exc()[-600:])
         if rows:
             self._ticks.writerows(rows)
             self._ticks_f.flush()
+
+    def _break_even(self, s: str, entry: float) -> float:
+        t = self.fees_q[quote_of(s)]["taker"]
+        return entry * (1 + 2 * t + 0.0005)
+
+    def _step_symbol(self, s, b, gpx, phase, now, nowdt, trading, rows):
+        fair = fair_price(s, gpx, self.usdttmn) if self.usdttmn or quote_of(s) == "USDT" else None
+        pos = self.positions.get(s)
+        pol = self.policies[s]
+        if b and not fair:
+            if pos:
+                # no reference price this tick: no target exit, but stop / time / flatten still protect the position
+                reason = ("flatten" if phase == "flatten" else "stop" if b.bid <= pos.entry * (1 - pol.stop_pct)
+                          else "time" if now - pos.opened >= pol.max_hold_min * 60 else None)
+                if reason:
+                    self._exit(s, b, pos, reason, 0.0, now)
+            return
+        if not b:
+            return
+        tr = self.trackers[s]
+        tr.add(now, b.mid / fair - 1)
+        base = tr.baseline
+        buy_dev = b.ask / fair - 1 - base
+        sell_dev = b.bid / fair - 1 - base
+        tr.note_dev(now, buy_dev)
+        rows.append([round(now, 2), s, b.bid, b.ask, b.bid_qty, b.ask_qty, round(fair, 6), round(base, 6),
+                     round(buy_dev, 6), round(sell_dev, 6)])
+
+        if pos:
+            pos.peak_bid = max(pos.peak_bid, b.bid)
+            reason = None
+            if phase == "flatten":
+                reason = "flatten"
+            elif b.bid <= pos.entry * (1 - pol.stop_pct):
+                reason = "stop"
+            elif sell_dev >= -pol.exit_slack and b.bid >= self._break_even(s, pos.entry):
+                # the gap has closed AND selling now clears both fees: a "target" never locks in a fee loss
+                reason = "target"
+            elif now - pos.opened >= pol.max_hold_min * 60:
+                reason = "time"
+            if reason:
+                self._exit(s, b, pos, reason, sell_dev, now)
+            return
+
+        if not trading or not tr.ready or not pol.enabled or phase != "normal":
+            return
+        if self.halt_flag.exists():
+            return
+        if buy_dev > -pol.entry_dev:
+            return
+        mom = momentum(self.gl_hist[base_of(s)], now, 60) if base_of(s) in self.gl_hist else None
+        if mom is not None and mom < -self.fv["max_global_drop_60s"]:
+            self.j.log("skip", symbol=s, why="global price falling fast", mom_60s=round(mom, 5), buy_dev=round(buy_dev, 5))
+            return
+        if b.spread > self.fv["max_spread"]:
+            return
+        self._enter(s, b, fair, base, buy_dev, pol, now, nowdt)
 
     def _enter(self, s, b, fair, base, buy_dev, pol, now, nowdt):
         st = self.state
         if st is None:
             return
-        u = self.usdttmn
+        u = self.usdttmn or 0
         to_tmn = u if quote_of(s) == "USDT" else 1.0
 
         class C:      # adapter for RiskManager.size (expects stop/tp percentages)
@@ -464,34 +528,61 @@ class Engine:
     def _exit(self, s, b, pos, reason, sell_dev, now):
         fill = self.exec.sell(s, b, pos.qty, self.meta[s], reason)
         if not fill:
+            # Nothing sellable left (below the exchange minimum, or coins gone): stop tracking it. Dust stays in
+            # the account, still counted in equity, instead of being retried forever and blocking a slot.
+            held = self._live_cash(base_of(s)) if isinstance(self.exec, LiveExecutor) else pos.qty
+            if held * b.bid < self.meta[s].min_notional:
+                self.j.log("dust_left", symbol=s, qty=held, value=round(held * b.bid), reason=reason)
+                del self.positions[s]
+                if self.state:
+                    self.risk.on_exit(self.state, s, pos.realized_q, datetime.now(timezone.utc))
+                return
             self.j.log("exit_unfilled", symbol=s, reason=reason, bid=b.bid)
             return
-        pnl_q = fill["received"] - pos.cost_q * (fill["qty"] / pos.qty if pos.qty else 1)
+        frac = min(fill["qty"] / pos.qty, 1.0) if pos.qty else 1.0
+        cost_part = pos.cost_q * frac
+        pnl_q = fill["received"] - cost_part
+        pos.realized_q += pnl_q
         to_tmn = self.usdttmn if quote_of(s) == "USDT" else 1.0
         rec = {"symbol": s, "reason": reason, "entry": pos.entry, "exit": fill["avg"], "qty": fill["qty"],
-               "pnl_quote": round(pnl_q, 6), "pnl_tmn": round(pnl_q * to_tmn), "ret_pct": round(pnl_q / pos.cost_q * 100, 3),
+               "pnl_quote": round(pnl_q, 6), "pnl_tmn": round(pnl_q * (to_tmn or 0)),
+               "ret_pct": round(pnl_q / cost_part * 100, 3) if cost_part else 0.0,
                "held_s": round(now - pos.opened), "entry_dev_pct": round(pos.entry_dev * 100, 3),
                "exit_dev_pct": round(sell_dev * 100, 3)}
         self.trades.append(rec)
         self.j.log("exit", executor=self.exec.name, **rec)
-        remaining = pos.qty - fill["qty"]
-        if remaining * b.bid > self.meta[s].min_notional:
+        remaining = max(pos.qty - fill["qty"], 0.0)
+        if remaining * b.bid >= self.meta[s].min_notional:
             pos.qty = remaining
-            pos.cost_q *= remaining / (remaining + fill["qty"])
+            pos.cost_q -= cost_part
         else:
             del self.positions[s]
-            self.risk.on_exit(self.state, s, pnl_q, datetime.now(timezone.utc))
+            if self.state:
+                self.risk.on_exit(self.state, s, pos.realized_q, datetime.now(timezone.utc))
 
     def mark(self, now: float):
         books = self._last_books or {}
+        bal = None
         if self.mode == "live":
             try:
                 self.exec.cancel_strays()   # runs between steps, when no order of ours is in flight
             except Exception as e:
                 self.j.log("stray_check_error", error=str(e)[:200])
-        eq = self.equity_tmn(books)
+            try:
+                bal = self.priv.balances()
+                self._reconcile(bal, books)
+            except Exception as e:
+                self.j.log("balance_error", error=str(e)[:200])
+                bal = None
+        eq = self.equity_tmn(books, bal)
+        if eq is None or eq <= 0:
+            return          # could not measure the account this minute; keep the last state
         if self.state is None:
-            self.state = self.risk.new_state(eq)
+            # live: measure return and drawdown against the hackathon's starting capital, not against
+            # whatever the account held at the last restart (a restart must not reset the kill switch)
+            base = self.cfg.get("live", {}).get("start_capital") if self.mode == "live" else None
+            self.state = self.risk.new_state(base or eq)
+            self.state.peak_equity = max(self.state.peak_equity, eq)
         self.risk.mark(self.state, eq, datetime.now(timezone.utc))
         snap = {"t": datetime.now(timezone.utc).isoformat(timespec="seconds"), "mode": self.mode, "equity_tmn": round(eq),
                 "return_pct": round(self.state.total_return * 100, 3), "drawdown_pct": round(self.state.drawdown * 100, 3),

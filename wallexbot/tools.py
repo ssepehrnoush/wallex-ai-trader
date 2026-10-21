@@ -9,6 +9,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import os
 import statistics
 import time
 from pathlib import Path
@@ -26,7 +27,10 @@ _http = httpx.Client(timeout=8)
 
 
 def _run_dir(run: str | None = None) -> Path:
-    if run:
+    """The engine run these tools describe: the engine exports WALLEXBOT_RUN to its MCP server, so
+    the agent always reads the LIVE run, never a test or an old shadow run."""
+    run = run or os.environ.get("WALLEXBOT_RUN")
+    if run and (RUNS / run).exists():
         return RUNS / run
     runs = [d for d in RUNS.iterdir() if (d / "ticks.csv").exists()]
     return max(runs, key=lambda d: (d / "ticks.csv").stat().st_mtime)

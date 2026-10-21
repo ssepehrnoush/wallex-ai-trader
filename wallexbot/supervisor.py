@@ -55,8 +55,9 @@ def _clamp(k, v):
 
 def min_entry(symbol: str, fees_by_quote: dict) -> float:
     """Smallest entry threshold that can pay a taker round trip plus a minimum edge."""
+    # both legs are taker (buy at the ask, sell at or through the bid), plus at least 0.1% of edge
     f = fees_by_quote[quote_of(symbol)]
-    return f["maker"] + f["taker"] + 0.0005
+    return 2 * f["taker"] + 0.001
 
 
 class Supervisor:
