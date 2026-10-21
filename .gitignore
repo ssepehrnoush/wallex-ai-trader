@@ -10,3 +10,12 @@ research/premium/binance_*_1m.csv
 runs/*/ticks.csv
 runs/ai_cache_test/
 research/premium/wallex_*_1m.csv
+# dashboards rebuilt from runs/ (5-dashboard.bat, python -m wallexbot.report) are never tracked, so rebuilding
+# one never leaves a modified tracked file; the frozen copy the docs link is dashboard/snapshot_live_main.html
+dashboard/*.html
+!dashboard/snapshot_*.html
+# outputs of the reproduction commands in README.md and RESULTS.md: compare them with the committed files,
+# never commit them
+runs/backtests/rerun_*/
+research/live_spreads_check.json
+docs/*_check.json

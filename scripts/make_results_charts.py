@@ -2,7 +2,7 @@
 
 Reads docs/results_stats.json, which scripts/results_stats.py writes from recorded files only.
 
-  python scripts/results_stats.py --cutoff 2026-10-21T18:45:00
+  python scripts/results_stats.py --cutoff 2026-10-21T20:40:00
   python scripts/make_results_charts.py
 
 Charts:
@@ -177,46 +177,71 @@ def chart_markets(b):
 
 # -- chart 3 ----------------------------------------------------------------------------------
 def chart_live(lv, snap):
+    """Deepest buy_dev per market up to the cutoff, against the policy in force AT the cutoff (the last review
+    before it, from decisions.jsonl). state.json is read later than the cutoff, so it is only a fallback."""
     bs = lv["by_symbol"]
-    pol = (lv.get("state") or {}).get("policies", {})
+    pc = lv.get("policy_at_cutoff") or {}
+    pol = pc.get("policies") or (lv.get("state") or {}).get("policies", {})
+    since = pc.get("disabled_since", {})
+    review = (pc.get("from_review_utc") or "")[11:16]
+    hhmm = lambda t: str(t)[11:16]
+    short = lambda m: m.replace("TMN", "")
+    # thresholds of the enabled markets, in percent; the floor 0.7% always gets a line
+    by_thr = {}
+    for m in TMN8:
+        p = pol.get(m) or {}
+        if p.get("enabled", True) and p.get("entry_dev") is not None:
+            by_thr.setdefault(round(max(float(p["entry_dev"]), 0.007) * 100, 2), []).append(short(m))
+    extra = sorted(v for v in by_thr if v != 0.7)
     W = 820
-    L, R, T = 110, 40, 112
+    L, R = 110, 40
+    T = 112 + 16 * len(extra)
     row = 36
     H = T + row * len(TMN8) + 70
     lo, hi = -1.0, 0.0
     pw = W - L - R
-    x = lambda v: L + (v - lo) / (hi - lo) * pw
+    x = lambda v: L + (min(max(v, lo), hi) - lo) / (hi - lo) * pw
     first = lv["first_tick_utc"][11:16]
+    crossed = {s: bs[s]["ticks_le_0.7pct"] for s in TMN8 if bs.get(s, {}).get("ticks_le_0.7pct")}
+    crossed_txt = (", ".join(f"{short(s)} {n}" for s, n in crossed.items()) + ", 0 in the other markets"
+                   if crossed else "0 in every market")
     body = [text(20, 30, "Live run: how close each market came to a buy", 17, INK, weight="600"),
             text(20, 52, f"Deepest buy_dev on 2.5 s ticks, {lv['first_tick_utc'][:10]} {first} to {snap[11:16]} UTC "
                          f"({lv['tick_minutes'] / 60:.1f} h). A buy needs buy_dev at or below the threshold.", 13, INK2),
-            text(20, 72, f"Ticks at or below -0.7%: 0 in every market. Trades: {lv['state']['trades'] if lv.get('state') else 0}. "
+            text(20, 72, f"Ticks at or below -0.7%: {crossed_txt}. Trades: {len(lv.get('exits') or [])}. "
                          f"Equity {lv['equity_last']:,} TMN.", 13, INK2)]
     for v in [-1.0, -0.8, -0.6, -0.4, -0.2, 0.0]:
         xx = x(v)
         body.append(f'<line x1="{xx:.1f}" x2="{xx:.1f}" y1="{T - 8}" y2="{T + row * len(TMN8)}" stroke="{AXIS if v == 0 else GRID}" stroke-width="1"/>')
         body.append(text(xx, T + row * len(TMN8) + 18, f"{v:.1f}%" if v else "0", 12, MUTED, "middle"))
-    # threshold reference lines
-    for v in (-0.7, -0.8):
-        xx = x(v)
-        body.append(f'<line x1="{xx:.1f}" x2="{xx:.1f}" y1="{T - 14}" y2="{T + row * len(TMN8)}" stroke="{INK2}" stroke-width="1.5"/>')
-    body.append(text(x(-0.7) + 5, T - 16, "entry floor -0.7%", 12, INK, "start", "600"))
-    body.append(text(x(-0.8) - 5, T - 16, "-0.8% (AI policy for ETH, PEPE, ARB)", 12, INK, "end", "600"))
+    # threshold reference lines: the floor, then each AI threshold of an enabled market, one label row each
+    on_floor = by_thr.get(0.7)
+    floor_lbl = "entry floor -0.7%" + (f" (AI policy for {', '.join(on_floor)})" if on_floor else "")
+    rows = [(-0.7, floor_lbl)] + [(-v, f"-{v:g}%: AI policy for {', '.join(by_thr[v])}") for v in extra]
+    for k, (v, lbl) in enumerate(rows):
+        xx, yy = x(v), T - 16 - 16 * k
+        body.append(f'<line x1="{xx:.1f}" x2="{xx:.1f}" y1="{yy + 2}" y2="{T + row * len(TMN8)}" stroke="{INK2}" stroke-width="1.5"/>')
+        body.append(text(xx + 5, yy, lbl, 12, INK, "start", "600"))
     bh = 18
     for i, s in enumerate(TMN8):
         yc = T + row * i + row / 2
         st = bs.get(s, {})
         m = st.get("min_buy_dev_pct")
-        en = pol.get(s, {}).get("enabled", True)
+        en = (pol.get(s) or {}).get("enabled", True)
         body.append(text(L - 10, yc + 4, s, 13, INK, "end", "600"))
         if m is None:
             continue
         tip = f"{s}: deepest buy_dev {m:.3f}% at {st['min_at_utc']} UTC; {st['ticks']} ticks; median spread {st['median_spread_pct']}%"
         body.append(hbar(yc - bh / 2, bh, x(0), x(m), S1, tip))
-        note = "" if en else " (now disabled by AI)"
-        body.append(text(x(m) - 6, yc + 4, f"{m:.2f}%{note}", 12, INK, "end"))
-    body.append(text(20, H - 14, f"Source: runs/live_main/ticks.csv and state.json (snapshot {snap} UTC), via scripts/results_stats.py",
-                     11, MUTED))
+        note = "" if en else (f" (disabled by AI since {hhmm(since[s])})" if s in since else " (disabled by AI)")
+        lbl = f"{m:.2f}%{note}"
+        if x(m) - 6 - 6.6 * len(lbl) < L + 4:            # no room left of the bar: write it inside the bar
+            body.append(text(x(m) + 6, yc + 4, lbl, 12, BG, "start", "600"))
+        else:
+            body.append(text(x(m) - 6, yc + 4, lbl, 12, INK, "end"))
+    src = f"policy from the {review} UTC review" if review else "policy from state.json"
+    body.append(text(20, H - 14, f"Source: runs/live_main/ticks.csv and decisions.jsonl up to {snap} UTC ({src}), "
+                                 "via scripts/results_stats.py", 11, MUTED))
     return svg(W, H, body, "Live run, deepest buy_dev per market")
 
 

@@ -95,12 +95,22 @@ def run_summary(run_dir: Path, cutoff=None):
     reviews = [d for d in dec if d["event"] == "policy_review"]
     calls = Counter()
     per_review = []
+    disabled_since = {}
     for r in reviews:
         tc = r.get("analyst_tool_calls") or []
         c = Counter(tool_server(x) for x in tc)
         calls.update(c)
+        pols = r.get("policies") or {}
+        off = sorted(m for m, p in pols.items() if not p.get("enabled", True))
+        disabled_since = {m: disabled_since.get(m, r["t"]) for m in off}      # start of each market's current "off" streak
         per_review.append({"t": r["t"], "risk_mode": r.get("risk_mode"), "model": r.get("analyst_model"),
-                           "tool_calls": len(tc), "by_server": dict(c)})
+                           "tool_calls": len(tc), "by_server": dict(c), "disabled": off})
+    # the policy in force at the cutoff is the last review's (state.json is read now, so it can be newer than the cutoff)
+    policy_at_cutoff = None
+    if reviews:
+        policy_at_cutoff = {"from_review_utc": reviews[-1]["t"], "disabled_since": disabled_since,
+                            "policies": {m: {k: p.get(k) for k in ("enabled", "entry_dev", "size_factor")}
+                                         for m, p in (reviews[-1].get("policies") or {}).items()}}
     entries = [d for d in dec if d["event"] == "entry"]
     exits = [d for d in dec if d["event"] == "exit"]
     eq = [d for d in dec if d["event"] == "equity"]
@@ -126,6 +136,7 @@ def run_summary(run_dir: Path, cutoff=None):
         "starts": [s["t"] for s in starts],
         "start_entry_dev_tmn": [s.get("policy", {}).get("TMN", {}).get("entry_dev") for s in starts],
         "reviews": per_review,
+        "policy_at_cutoff": policy_at_cutoff,
         "risk_modes": dict(Counter(r["risk_mode"] for r in per_review)),
         "tool_calls_by_server": dict(calls),
         "tool_calls_total": int(sum(calls.values())),

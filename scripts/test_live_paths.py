@@ -1,21 +1,93 @@
 """Offline test of the LIVE-only code paths with a fake exchange (no network orders, no keys).
 
 Exercises: entry -> target exit, partial fills, stop exit, a sell the account cannot cover (dust),
-a failed balance call (must not trip the kill switch), restart adoption, end-of-window flatten.
+a failed balance call (must not trip the kill switch), restart adoption, end-of-window flatten,
+a warm start and the AI tools' tick reader over a ticks.csv with torn lines.
     python scripts/test_live_paths.py
+
+Fully offline by itself: Wallex /v1/markets is served from research/markets_snapshot.csv and any other
+Wallex request raises; the global price feed is a fixed stub; every HTTP send is blocked. The engine's
+tick rows go to memory, never to runs/test_live_paths/ticks.csv, because the live AI tools and the
+engine warm start read runs/*/ticks.csv and fake rows (an ETHTMN row at a BTC price) must not leak there.
 """
+import csv
+import io
 import sys
+import tempfile
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
 
+import httpx
+
+from wallexbot import client as WC
+from wallexbot import config as CFG
 from wallexbot import engine as E
 from wallexbot.client import OrderResult
 from wallexbot.config import load_config
 from wallexbot.fairvalue import Policy
 from wallexbot.feeds import Book
+
+# -- offline guards (installed before any engine is built) -----------------------------------------
+SNAPSHOT = ROOT / "research" / "markets_snapshot.csv"
+USDT_DEFAULT = {"stepSize": 6, "tickSize": 4, "minNotional": 1.0, "isMarketTypeEnable": True}
+wallex_calls: list[str] = []
+http_attempts: list[str] = []
+
+
+class _Snapshot(dict):
+    """Market rules from the saved snapshot; USDT-quoted markets (absent from it) get a safe default."""
+    def __missing__(self, symbol):
+        if symbol.endswith("USDT"):
+            return dict(USDT_DEFAULT)
+        raise KeyError(symbol)
+
+
+def _snapshot_markets() -> dict:
+    out = _Snapshot()
+    with open(SNAPSHOT, encoding="utf-8", newline="") as f:
+        for r in csv.DictReader(f):
+            out[r["symbol"]] = {"stepSize": int(r["qty_decimals"]), "tickSize": int(r["price_decimals"]),
+                                "minNotional": float(r["min_notional_tmn"]),
+                                "isMarketTypeEnable": r["market_orders_enabled"] == "True"}
+    return out
+
+
+def _offline_request(self, method, path, retries=3, **kw):
+    wallex_calls.append(f"{method} {path}")
+    if method == "GET" and path == "/v1/markets":
+        return {"result": {"symbols": _snapshot_markets()}}
+    raise RuntimeError(f"offline test: Wallex {method} {path} blocked")
+
+
+def _no_http(self, request, *a, **k):
+    http_attempts.append(str(request.url))
+    raise RuntimeError(f"offline test: HTTP {request.method} {request.url} blocked")
+
+
+async def _no_http_async(self, request, *a, **k):
+    _no_http(self, request)
+
+
+class OfflineGlobalFeed:
+    """Stand-in for the Binance/OKX feed: a fixed BTC price (83,800 USDT, about 22.1e9 toman at 264,000)."""
+    PRICES = {"BTC": 83800.0}
+
+    def __init__(self, bases):
+        self.bases = list(bases)
+        self.source = "offline"
+
+    def get(self):
+        return {b: px for b, px in self.PRICES.items() if b in self.bases}, "offline"
+
+
+WC.WallexClient._request = _offline_request
+httpx.Client.send = _no_http
+httpx.AsyncClient.send = _no_http_async
+E.GlobalFeed = OfflineGlobalFeed
 
 
 class FakeClient:
@@ -76,6 +148,9 @@ def make_engine(fake):
     cfg = load_config().raw
     cfg["ai"]["enabled"] = False
     eng = E.Engine(cfg, "shadow", "test_live_paths")       # build offline, then swap in the live executor
+    eng._ticks_f.close()                                    # tick rows to memory: never into runs/*/ticks.csv
+    eng._ticks_f = io.StringIO()
+    eng._ticks = csv.writer(eng._ticks_f)
     eng.mode = "live"
     eng.priv = fake
     eng.exec = E.LiveExecutor(fake, eng.fees_q, eng.j)
@@ -88,13 +163,31 @@ def make_engine(fake):
     return eng
 
 
+passed = 0
+
+
 def check(cond, msg):
+    global passed
     print(("PASS " if cond else "FAIL ") + msg)
     if not cond:
+        print(f"{passed} checks passed, then check {passed + 1} failed")
         raise SystemExit(1)
+    passed += 1
+
+
+TEST_TICKS = CFG.RUNS / "test_live_paths" / "ticks.csv"
+
+
+def _tick_rows(path: Path) -> int:
+    """Data rows (header lines excluded) in a ticks.csv; 0 if the file does not exist."""
+    try:
+        return sum(1 for ln in path.read_bytes().split(b"\n") if ln.strip() and not ln.startswith(b"t,"))
+    except OSError:
+        return 0
 
 
 if __name__ == "__main__":
+    rows_before = _tick_rows(TEST_TICKS)
     fake = FakeClient()
     eng = make_engine(fake)
     check(abs(eng.state.start_equity - 5_000_000) < 1, "baseline is the 5M start capital")
@@ -202,4 +295,56 @@ if __name__ == "__main__":
     eng2.books = type("B", (), {"get": lambda self: {"BTCTMN": small, "USDTTMN": Book(264000, 1, 264000, 1, now)}})()
     eng2.step(time.time(), True)
     check("BTCTMN" in eng2.positions, "a 'target' that would lose money after fees is not taken")
+
+    # the test itself must stay offline and must not leave fake ticks where the live AI tools read
+    check(set(wallex_calls) <= {"GET /v1/markets"} and not http_attempts and _tick_rows(TEST_TICKS) == rows_before,
+          f"offline: Wallex calls {sorted(set(wallex_calls))} served from the snapshot, {len(http_attempts)} HTTP sends, "
+          f"no tick row added to runs/test_live_paths/ticks.csv")
+    # the helper the AI tools and the engine warm start read ticks through
+    header = "t,symbol,bid,ask,bid_qty,ask_qty,fair,baseline,buy_dev,sell_dev\n"
+    with tempfile.TemporaryDirectory() as tmp:
+        for name in ("live_main", "shadow_v1", "test_live_paths", "smoke"):
+            (Path(tmp) / name).mkdir()
+            (Path(tmp) / name / "ticks.csv").write_text(header, encoding="utf-8")
+        listed = {p.parent.name for p in CFG.market_tick_files(Path(tmp))}
+    real = {p.resolve() for p in CFG.market_tick_files()}
+    check(listed == {"live_main", "shadow_v1"} and TEST_TICKS.resolve() not in real,
+          f"config.market_tick_files() keeps live and shadow runs and leaves out test and smoke runs "
+          f"(sample folder: {sorted(listed)}; real runs/: {len(real)} files)")
+
+    # a restart must survive torn lines: one that a later restart appended to (a future t), a short last line
+    # (t and symbol present, later fields missing -> None) and a shifted row (a symbol where a number belongs).
+    # Only the one good row may seed the baseline, and only that row may reach the AI tools.
+    t_now = time.time()
+    row = lambda t: f"{t:.2f},BTCTMN,22000000000,22000100000,1,1,22050000000,-0.002,-0.0025,-0.0026\n"
+    shifted = f"{t_now - 58:.2f},BTCTMN,22000000000,BTCTMN,1,1,22050000000,-0.002,-0.0025,-0.0026\n"
+    tool_rows, tool_err = None, None
+    with tempfile.TemporaryDirectory() as tmp:
+        (Path(tmp) / "live_x").mkdir()
+        torn = Path(tmp) / "live_x" / "ticks.csv"
+        torn.write_text(
+            header + row(t_now - 60) + shifted + f"{t_now - 57.5:.2f}"[:5] + row(t_now - 55)
+            + f"{t_now - 52.5:.2f},BTCTMN,2200",
+            encoding="utf-8")
+        try:
+            from wallexbot import tools as T
+            tool_rows = len(T._tail_file(torn, 180, t_now - 180 * 60))
+        except Exception as e:                 # noqa: BLE001 - the check reports any escape
+            tool_err = f"{type(e).__name__}: {e}"
+        runs_before, E.RUNS = E.RUNS, Path(tmp)
+        seen = {}
+        stub = type("S", (), {"fv": {"baseline_window_min": 180},
+                              "trackers": {"BTCTMN": E.PremiumTracker(180, 240)},
+                              "j": type("J", (), {"log": lambda self, ev, **kw: seen.update(kw)})()})()
+        try:
+            E.Engine._warm_start(stub)
+            err = None
+        except Exception as e:                 # noqa: BLE001 - the check reports any escape
+            err = f"{type(e).__name__}: {e}"
+        finally:
+            E.RUNS = runs_before
+    check(err is None and seen.get("ticks") == 1 and tool_err is None and tool_rows == 1,
+          f"warm start and the AI tools' tick reader skip torn lines in a ticks.csv and keep the one good row "
+          f"(warm start error: {err}, rows: {seen.get('ticks')}; tools error: {tool_err}, rows: {tool_rows})")
     print(f"final toman {fake.bal['TMN']:,.0f}")
+    print(f"{passed}/{passed} checks passed")

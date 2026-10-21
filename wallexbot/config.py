@@ -14,6 +14,37 @@ ENV_FILE = ROOT.parent / ".env"                         # agentic-hackathon/.env
 RUNS = ROOT / "runs"
 
 
+def market_tick_files(runs: Path = RUNS) -> list[Path]:
+    """ticks.csv of real market runs only (live_*, shadow_*): test and smoke runs write fake ticks."""
+    return [p for p in Path(runs).glob("*/ticks.csv") if p.parent.name.startswith(("live_", "shadow_"))]
+
+
+def load_backtest(name: str, runs: Path = RUNS) -> dict | None:
+    """runs/backtests/<name>/summary.json (scripts/bt_fairvalue.py) as {"note", "markets"}, or None when the
+    file is missing or malformed: it is optional evidence for the AI and must never stop the engine or a tool.
+    A summary without a note (older runs) gets one built from its params, with the same warning."""
+    try:
+        d = json.loads((Path(runs) / "backtests" / name / "summary.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    if not isinstance(d, dict):
+        return None
+    m = d.get("markets")
+    markets = {s: x for s, x in m.items() if isinstance(x, dict)} if isinstance(m, dict) else {}
+    note = d.get("note")
+    if not isinstance(note, str) or not note:
+        p = d.get("params") if isinstance(d.get("params"), dict) else {}
+        try:
+            entry = f", entry {float(p['entry_tmn']) * 100:.2f}% (TMN) / {float(p['entry_usdt']) * 100:.2f}% (USDT)"
+        except (KeyError, TypeError, ValueError):
+            entry = ""
+        days = f" over {p['days']} days" if p.get("days") else ""
+        note = (f"1-minute-candle backtest '{name}' of the fair-value rule{days}{entry}, modelled spreads. "
+                "Its summary has no next-minute robustness check: treat the numbers as an optimistic upper bound, "
+                "not a forecast.")
+    return {"note": note, "markets": markets}
+
+
 @dataclass
 class Secrets:
     wallex_key: str = ""

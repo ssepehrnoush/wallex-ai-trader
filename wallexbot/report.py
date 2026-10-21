@@ -105,8 +105,12 @@ def _ticks(path: Path, hours: float = TICK_HOURS) -> dict[str, list[tuple]]:
 
 
 # -- formatting -----------------------------------------------------------------------------------
+# U+2013 and U+2014 become a plain hyphen: the page uses plain hyphens, also in quoted model and log text
+_DASHES = str.maketrans({"\u2013": "-", "\u2014": "-"})
+
+
 def _e(x) -> str:
-    return html.escape(str(x), quote=True)
+    return html.escape(str(x).translate(_DASHES), quote=True)
 
 
 def _n(text, cls: str = "") -> str:
@@ -293,9 +297,12 @@ def _legend(off: int, eng: int) -> str:
             f'<span><i class="sw s2"></i>MCP موتور ربات {_n(eng)}</span></div>')
 
 
-def _pol_cells(p: dict, prev: dict | None, floor: float) -> str:
-    """Policy cells; a cell that differs from the previous review is highlighted (effective values, fee floor applied)."""
-    eff = lambda q: {"enabled": bool(q.get("enabled", True)), "entry_dev": round(max(float(q.get("entry_dev", 0)), floor), 6),
+def _pol_cells(p: dict, prev: dict | None) -> str:
+    """Policy cells of one review, as logged; a cell that differs from the previous review is highlighted.
+    entry_dev is shown as logged: the supervisor had already clamped it to the fee floor of the code running at
+    that time, which can be lower than today's (live_main: 0.6% before the 17:51:56 UTC start). Applying today's
+    floor here would show old reviews at a threshold they never used."""
+    eff = lambda q: {"enabled": bool(q.get("enabled", True)), "entry_dev": round(float(q.get("entry_dev", 0)), 6),
                      "stop_pct": float(q.get("stop_pct", 0)), "max_hold_min": float(q.get("max_hold_min", 0)),
                      "size_factor": float(q.get("size_factor", 0))}
     show = lambda k, v: (_badge("فعال", "good") if v else _badge("خاموش", "mute")) if k == "enabled" else         _n(_pct(-v * 100)) if k == "entry_dev" else _n(_pct(v * 100, sign=False)) if k == "stop_pct" else _n(f"{v:g}")
@@ -309,6 +316,29 @@ def _pol_cells(p: dict, prev: dict | None, floor: float) -> str:
         mark = "تغییر" if k == "enabled" else "▲" if v > old[k] else "▼"
         out += f'<td class="chg" title="قبلی: {_e(html.unescape(was))}">{show(k, v)}<sup>{mark}</sup></td>'
     return out
+
+
+def _code_history(starts: list[dict], reviews: list[dict], last_t, live: bool) -> str:
+    """One header line: every start event (Tehran time). Each start loads the code and config on disk at that
+    moment, so the starts are the versions of the running code; the AI model of each stretch is its first review's."""
+    if not starts:
+        return ""
+    ts = [_utc(e["t"]) for e in starts]
+    items, prev_day = [], None
+    for i, t in enumerate(ts):
+        nxt = ts[i + 1] if i + 1 < len(ts) else None
+        model = next((str(r["analyst_model"]) for r in reviews if r.get("analyst_model") and r.get("t")
+                      and _utc(r["t"]) >= t and (nxt is None or _utc(r["t"]) < nxt)), "")
+        model = re.sub(r"\s*via MCP.*$", "", model).split("/")[-1]
+        day = _day(t)
+        label = (f"{_e(day)} " if day != prev_day else "") + _n(_hm(t))
+        prev_day = day
+        items.append(f'<li{" class=last" if nxt is None else ""}>{label}' + (f"<small>{_e(model)}</small>" if model else "") + "</li>")
+    since = (f"<span>از آخرین شروع {_e(_dur((_utc(last_t) - ts[-1]).total_seconds()))} بی‌وقفه</span>"
+             if last_t and _utc(last_t) > ts[-1] else "")
+    restarts = f"، {_n(len(ts) - 1)} بار راه‌اندازی دوباره" if len(ts) > 1 else ""
+    return (f'<div class="hist"><span><b>{"تاریخچه کد زنده" if live else "تاریخچه اجرا"}</b>: {_n(len(ts))} شروع{restarts}'
+            f' (به وقت تهران، هر شروع کد و تنظیمات همان لحظه را بار می‌کند)</span><ol>{"".join(items)}</ol>{since}</div>')
 
 
 def build(run_dir: Path, out: Path | None = None) -> Path:
@@ -372,6 +402,7 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
     stale = (now - _utc(last_t)).total_seconds() if last_t else None
     badge = (_badge("آزمایشی · صرافی ساختگی", "warn") if is_test else _badge("زنده · پول واقعی", "live") if mode == "live"
              else _badge("سایه · معامله کاغذی", "mute"))
+    hist = _code_history(starts, reviews, last_t, live=mode == "live" and not is_test)
     head = f"""<header class="hd">
 <div class="top"><span class="brand">هکاتون Agentic AI استارکوچ · چالش والکس</span>
 <button id="theme" type="button" hidden aria-label="تغییر حالت روشن و تیره">روشن / تیره</button></div>
@@ -380,7 +411,7 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
 <p class="formula">قیمت منصفانه = قیمت جهانی کوین (بایننس) × نرخ تتر به تومان در والکس</p>
 <div class="meta"><span>آخرین داده: <b>{_e(_when(last_t)) if last_t else 'ندارد'}</b>{f' ({_e(_dur(stale))} پیش)' if stale is not None else ''}</span>
 <span>مدت اجرا: <b>{_e(_dur((_utc(last_t) - _utc(first_t)).total_seconds())) if first_t else 'ندارد'}</b></span>
-<span>پوشه اجرا: <b>{_n(run_dir.name)}</b></span></div></div>
+<span>پوشه اجرا: <b>{_n(run_dir.name)}</b></span></div>{hist}</div>
 <div class="clock"><div class="cl">{'تا پایان مسابقه' if left > 0 else 'مسابقه'}</div><div class="cv">{_e(_dur(left)) if left > 0 else 'تمام شد'}</div>
 <div class="cs">پایان: {_e(_when(deadline, True))} به وقت تهران<br>توقف خرید تازه {risk.get('no_new_entries_min_before_end', 150)} دقیقه و فروش همه {risk.get('flatten_min_before_end', 75)} دقیقه پیش از پایان</div></div></div>
 {'<div class="banner warn">این صفحه از یک اجرای آزمایشی آفلاین با صرافی ساختگی ساخته شده است. هیچ‌کدام از معامله‌های آن واقعی نیست.</div>' if is_test else ''}
@@ -408,7 +439,7 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
         _tile("فراخوانی ابزار MCP", _n(len(calls)),
               f"رسمی والکس {_n(n_off)} · موتور ربات {_n(n_eng)}{_split_bar(n_off, n_eng)}"),
         _tile("خطاها", _n(len(errors), "neg" if errors else ""),
-              "، ".join(f"{EVENT_FA.get(k, k)} {_n(c)}" for k, c in err_kinds) if errors else "بدون خطا"),
+              "، ".join(f"{_e(EVENT_FA.get(k, k))} {_n(c)}" for k, c in err_kinds) if errors else "بدون خطا"),
     ])
 
     # ---------------------------------------------------------------- equity and drawdown
@@ -492,9 +523,13 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
 
     # ---------------------------------------------------------------- markets
     base = st.get("baselines_pct") or {}
-    cards, near = [], []
+    cards, near = [], []          # near: (gap to threshold, symbol, lowest tick, threshold, enabled now)
     span_txt = ""
-    for s, p in pols.items():
+    is_on = lambda s: bool(pols[s].get("enabled", True))
+    order = sorted(pols, key=lambda s: not is_on(s))      # enabled markets first; config order kept inside each group
+    for s in order:
+        p = pols[s]
+        on = is_on(s)
         thr = max(float(p.get("entry_dev", 0)), floor(s))
         rows_s = ticks.get(s, [])
         mins: dict[int, tuple] = {}
@@ -509,7 +544,7 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
             lt = rows_s[-1]
             gap = (lo_r[3] + thr) * 100
             below = len({int(t // 60) for t, _, _, bd in rows_s if bd <= -thr})
-            near.append((gap, s, lo_r, thr))
+            near.append((gap, s, lo_r, thr, on))
             span_txt = _dur(rows_s[-1][0] - rows_s[0][0])
             lo_v = min(min(v for _, v in series), -thr * 100) - 0.12
             hi_v = max(max(v for _, v in series), 0.15) + 0.08
@@ -522,28 +557,47 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
                      f'<div><dt>پریمیوم عادی</dt><dd>{_n(_pct(base[s])) if s in base else "ندارد"}<small>میانه ۳ ساعت</small></dd></div></dl>')
         else:
             chart = '<div class="empty">در این اجرا تیکی برای این بازار ثبت نشده است.</div>'
-        on = p.get("enabled", True)
         coin = s[:-3] if s.endswith("TMN") else s[:-4]
         quote = "تومان" if s.endswith("TMN") else "تتر"
-        cards.append(f'<article class="mk{"" if on else " off"}"><div class="mh"><div><b>{_e(s)}</b><span>{_e(COIN.get(coin, coin))} / {quote}</span></div>'
-                     f'{_badge("فعال", "good") if on else _badge("خاموش", "mute")}</div>{chart}{stats}'
+        cards.append(f'<article class="mk {"on" if on else "off"}"><div class="mh"><div><b>{_e(s)}</b><span>{_e(COIN.get(coin, coin))} / {quote}</span></div>'
+                     f'{_badge("فعال", "good") if on else _badge("خاموش", "mute")}</div>'
+                     + ("" if on else '<div class="offnote">در سیاست فعلی خاموش است: ربات در این بازار خرید تازه نمی‌کند، '
+                                      'حتی اگر انحراف به آستانه برسد.</div>')
+                     + f'{chart}{stats}'
                      f'<div class="pol">آستانه {_n(_pct(-thr * 100))} · حد ضرر {_n(_pct(p.get("stop_pct", 0) * 100, sign=False))} · '
                      f'نگه‌داری تا {_n(format(p.get("max_hold_min", 0), "g"))} دقیقه · ضریب اندازه {_n(format(p.get("size_factor", 0), "g"))}</div>'
                      f'<p class="why">{_e(p.get("reason", ""))}</p></article>')
+    gap_txt = lambda g: "رسید" if g <= 0 else f"فاصله {_n(_pct(g, sign=False))}"
+    near_on = sorted(n for n in near if n[4])
+    near_off = sorted(n for n in near if not n[4])
+    callout = ""
     if near:
-        near.sort()
-        g, s0, r0, thr0 = near[0]
-        hit = [n for n in near if n[0] <= 0]
+        span = f"{_e(span_txt)} اخیر"
+        if near_on:
+            hit = [n for n in near_on if n[0] <= 0]
+            g, s0, r0, thr0, _ = near_on[0]
+            body = ((f'در {span} انحراف خرید {_n(len(hit))} بازار از {_n(len(near_on))} بازار فعال به آستانه ورود رسید.' if hit else
+                     f'در {span} انحراف خرید هیچ‌کدام از {_n(len(near_on))} بازار فعال به آستانه ورود نرسید.')
+                    + f' نزدیک‌ترین بازار فعال <b>{_e(s0)}</b> بود با {_n(_pct(r0[3] * 100))} در {_e(_when(r0[0]))} (آستانه {_n(_pct(-thr0 * 100))}).'
+                    + '<ol class="rank">' + "".join(f'<li><b>{_e(s)}</b> کمترین {_n(_pct(r[3] * 100))} · {gap_txt(g)}</li>'
+                                                    for g, s, r, _, _ in near_on) + '</ol>')
+        else:
+            body = 'در سیاست فعلی هیچ بازاری فعال نیست، پس ربات اصلاً خرید تازه نمی‌کند.'
+        off = ""
+        if near_off:
+            off = (f'<div class="offl">{_badge("خاموش", "mute")} این بازارها در سیاست فعلی خاموش‌اند و در رتبه‌بندی بالا حساب نشده‌اند: '
+                   + "".join(f'<span class="it"><b>{_e(s)}</b> کمترین {_n(_pct(r[3] * 100))} · '
+                             f'{"رسید، ولی خاموش است" if g <= 0 else gap_txt(g)}</span>' for g, s, r, _, _ in near_off) + '</div>')
         callout = (f'<div class="callout"><b>{"چرا هنوز خریدی انجام نشده؟" if not entries else "فرصت‌ها در برابر آستانه"}</b> '
-                   + (f'در {_e(span_txt)} اخیر انحراف خرید {_n(len(hit))} بازار به آستانه ورود رسید.' if hit else
-                      f'در {_e(span_txt)} اخیر انحراف خرید هیچ بازاری به آستانه ورود نرسید.')
-                   + f' نزدیک‌ترین مورد <b>{_e(s0)}</b> بود با {_n(_pct(r0[3] * 100))} در {_e(_when(r0[0]))} (آستانه {_n(_pct(-thr0 * 100))}).'
-                   + ' کف آستانه همیشه کارمزد رفت و برگشت به‌علاوه ۰٫۱ درصد حاشیه است، تا هیچ خریدی از اول ضررده نباشد.</div>')
-    else:
-        callout = ""
+                   + body + off
+                   + '<p class="fl">کف آستانه همیشه کارمزد رفت و برگشت به‌علاوه ۰٫۱ درصد حاشیه است، تا هیچ خریدی از اول ضررده نباشد.</p></div>')
+    on_syms = [s for s in order if is_on(s)]
+    off_syms = [s for s in order if not is_on(s)]
+    onoff = (f'<div class="onoff"><span>{_badge(f"فعال {len(on_syms)}", "good")} {"، ".join(_n(s) for s in on_syms) or "هیچ"}</span>'
+             f'<span>{_badge(f"خاموش {len(off_syms)}", "mute")} {"، ".join(_n(s) for s in off_syms) or "هیچ"}</span></div>')
     legend = ('<div class="lg"><span><i class="sw line"></i>کمترین انحراف خرید در هر دقیقه</span><span><i class="sw zone"></i>ناحیه خرید (زیر آستانه)</span>'
               '<span><i class="sw ring"></i>نزدیک‌ترین لحظه</span></div>')
-    markets_html = (callout + legend + f'<div class="mks">{"".join(cards)}</div>' if cards else
+    markets_html = (callout + onoff + legend + f'<div class="mks">{"".join(cards)}</div>' if cards else
                     '<div class="empty">هنوز سیاستی برای بازارها ثبت نشده است.</div>')
 
     # ---------------------------------------------------------------- AI reviews
@@ -577,8 +631,8 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
                       f'<code>{_e(json.dumps(c.get("args") or {}, ensure_ascii=False)[:160])}</code>'
                       f'<small>{_e(str(c.get("result", ""))[:220])}</small></li>' for c in tc)
         errs = [c.get("agent_error") for c in tr if c.get("agent_error")]
-        prow = "".join(f'<tr><td><b>{_e(s)}</b></td>{_pol_cells(p, (prevp or {}).get(s), floor(s))}<td class="why">{_e(p.get("reason", ""))}</td></tr>'
-                       for s, p in rp.items())
+        prow = "".join(f'<tr{"" if p.get("enabled", True) else " class=offr"}><td><b>{_e(s)}</b></td>{_pol_cells(p, (prevp or {}).get(s))}'
+                       f'<td class="why">{_e(p.get("reason", ""))}</td></tr>' for s, p in rp.items())
         body = (f'<p class="sum">{_e(r.get("summary_fa") or "")}</p>'
                 + (f'<p class="en" dir="ltr">{_e(r["analyst_summary"])}</p>' if r.get("analyst_summary") else "")
                 + (f'<div class="banner bad">بازبینی ناموفق بود؛ سیاست‌ها با اندازه کوچک‌تر حفظ شد: <span dir="ltr">{_e(r["error"])}</span></div>' if r.get("error") else "")
@@ -654,7 +708,7 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
             + _section("pos", "موقعیت‌های باز", pos_html)
             + _section("markets", "بازارها و فاصله تا آستانه خرید", markets_html,
                        f"سیاست فعلی هر بازار و {span_txt or 'ساعت‌های'} اخیر انحراف قیمت خرید والکس از قیمت منصفانه، پس از کم کردن پریمیوم عادی همان بازار. "
-                       "ربات فقط وقتی می‌خرد که خط وارد ناحیه سبز شود.")
+                       "ربات فقط در بازارهای فعال، و فقط وقتی می‌خرد که خط وارد ناحیه سبز شود. بازارهای خاموش آخر فهرست و کم‌رنگ آمده‌اند.")
             + _section("ai", "نقش هوش مصنوعی: بازبینی سیاست با دو سرور MCP", ai_html,
                        "ایجنت تحلیلگر با دو سرور MCP داده جمع می‌کند و برای هر بازار سیاست پیشنهاد می‌دهد؛ افسر ریسک فقط می‌تواند سخت‌گیرتر کند "
                        "و کد هر عدد را به بازه مجاز می‌بندد. ورود و خروج در چند ثانیه را موتور انجام می‌دهد، نه مدل زبانی.")
@@ -762,7 +816,24 @@ td.why{min-width:220px;color:var(--fg2);font-size:.85rem;overflow-wrap:anywhere}
 .sw.ring{border-radius:50%;width:10px;height:10px;border:2px solid var(--neg)}
 .mks{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
 .mk{padding:14px 14px 12px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.mk.off{opacity:.78}
+.mk.on{border-inline-start:4px solid var(--pos)}
+.mk.off{background:var(--card2);border-style:dashed}.mk.off .plot,.mk.off .xa,.mk.off dl{opacity:.55;filter:grayscale(1)}
+.mk.off .mh b{color:var(--mut)}
+.offnote{font-size:.8rem;color:var(--fg2);background:var(--card);border:1px dashed var(--mut);border-radius:8px;padding:4px 10px}
+.onoff{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;font-size:.9rem;color:var(--fg2)}
+.onoff>span{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px}
+.callout .rank{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0;padding:0;list-style:none;counter-reset:r}
+.callout .rank li{counter-increment:r;font-size:.85rem;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:1px 10px}
+.callout .rank li::before{content:counter(r) ". ";color:var(--mut);font-weight:700}
+.callout .offl{margin-top:8px;font-size:.85rem;color:var(--mut);display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.callout .offl .it{white-space:nowrap;border:1px dashed var(--line);border-radius:8px;padding:0 8px}
+.callout .fl{margin:6px 0 0;font-size:.85rem;color:var(--mut)}
+.hist{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:.85rem;color:var(--mut)}.hist b{color:var(--fg2)}
+.hist ol{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.hist li{display:inline-flex;align-items:baseline;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:0 10px;white-space:nowrap;color:var(--fg2)}
+.hist li small{font-size:.72rem;color:var(--mut);direction:ltr;unicode-bidi:isolate}
+.hist li.last{border-color:var(--acc);color:var(--fg)}
+.pt tr.offr td:not(.chg){background:var(--card2);color:var(--mut)}
 .mh{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .mh b{font-size:1.15rem;margin-inline-end:8px}.mh span{color:var(--mut);font-size:.85rem}
 .mk dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}

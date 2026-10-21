@@ -23,8 +23,8 @@ BOUNDS = {"entry_dev": (0.0025, 0.02), "exit_slack": (0.0, 0.002), "stop_pct": (
 ANALYST = """You are the quant analyst supervising a fair-value reversion trading engine on the Iranian exchange Wallex.
 The engine buys a coin on Wallex when its ASK is below the global fair price (Binance price, times Wallex USDT/TMN
 for toman markets) by more than `entry_dev` beyond that market's normal premium, and sells when the BID is back
-within `exit_slack` of normal, or at the stop / max holding time. Fees per round trip: toman (TMN) markets about
-0.55%, USDT markets about 0.23%; the entry threshold must clear the fee with margin, otherwise the trade loses.
+within `exit_slack` of normal, or at the stop / max holding time. Fees per round trip (taker on both legs): toman (TMN)
+markets about 0.6%, USDT markets about 0.26%; the entry threshold must clear the fee with margin, otherwise the trade loses.
 For each market you get the last two hours: how often and how deep cheap moments occurred (buy_dev percentiles,
 minutes below thresholds), spread and depth, and the engine's recent trades there. Global context: BTC and USDT/TMN moves.
 Propose a policy per market. Prefer thresholds that historically occurred a few times per hour, not never and not
@@ -32,7 +32,7 @@ constantly (constant 'discounts' usually mean the market is stale or illiquid, n
 spread or depth makes exits unreliable, and lower size or raise thresholds when global volatility is high.
 Reply JSON only:
 {"risk_mode": "normal|defensive|halt",
- "markets": {"<SYMBOL>": {"enabled": true, "entry_dev": 0.005, "exit_slack": 0.0005, "stop_pct": 0.008,
+ "markets": {"<SYMBOL>": {"enabled": true, "entry_dev": 0.007, "exit_slack": 0.0005, "stop_pct": 0.008,
               "max_hold_min": 20, "size_factor": 0.5, "reason": "<one sentence>"}},
  "summary": "<two sentences on the market state>"}"""
 
@@ -43,7 +43,7 @@ Never loosen anything. Do not disable a market just because no discount appeared
 already protects capital, and a disabled market cannot catch the next dislocation. Disable only for structural
 problems (wide spread, thin book, stale data) or when the account is near its loss limits. Reply JSON only, same shape:
 {"risk_mode": "normal|defensive|halt",
- "markets": {"<SYMBOL>": {"enabled": true, "entry_dev": 0.005, "exit_slack": 0.0005, "stop_pct": 0.008,
+ "markets": {"<SYMBOL>": {"enabled": true, "entry_dev": 0.007, "exit_slack": 0.0005, "stop_pct": 0.008,
               "max_hold_min": 20, "size_factor": 0.5, "reason_fa": "<one short Persian sentence>"}},
  "summary_fa": "<two short Persian sentences for the decision log>"}"""
 

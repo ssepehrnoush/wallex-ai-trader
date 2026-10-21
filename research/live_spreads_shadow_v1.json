@@ -1,0 +1,74 @@
+{
+ "note": "Median live spread (ask / bid - 1, fraction) per market. shadow_v1 is a 70-second sample (about 29 order-book snapshots per market) taken shortly after the candles were fetched; markets missing there use the median of the live run's ticks before the cutoff.",
+ "spreads": {
+  "ARBTMN": 0.004337,
+  "BNBTMN": 0.001311,
+  "BTCTMN": 0.000592,
+  "BTCUSDT": 0.00015,
+  "DOGETMN": 0.00162,
+  "DOGEUSDT": 0.00464,
+  "ETHTMN": 0.001855,
+  "ETHUSDT": 0.001646,
+  "PEPETMN": 0.000887,
+  "SOLTMN": 0.002684,
+  "SOLUSDT": 0.00376,
+  "XRPTMN": 0.003274,
+  "XRPUSDT": 0.001772
+ },
+ "source": {
+  "ARBTMN": "live_main",
+  "BNBTMN": "live_main",
+  "BTCTMN": "shadow_v1",
+  "BTCUSDT": "shadow_v1",
+  "DOGETMN": "shadow_v1",
+  "DOGEUSDT": "shadow_v1",
+  "ETHTMN": "shadow_v1",
+  "ETHUSDT": "shadow_v1",
+  "PEPETMN": "live_main",
+  "SOLTMN": "shadow_v1",
+  "SOLUSDT": "shadow_v1",
+  "XRPTMN": "shadow_v1",
+  "XRPUSDT": "shadow_v1"
+ },
+ "samples": {
+  "ARBTMN": 3195,
+  "BNBTMN": 3195,
+  "BTCTMN": 29,
+  "BTCUSDT": 29,
+  "DOGETMN": 29,
+  "DOGEUSDT": 29,
+  "ETHTMN": 29,
+  "ETHUSDT": 29,
+  "PEPETMN": 3195,
+  "SOLTMN": 29,
+  "SOLUSDT": 29,
+  "XRPTMN": 29,
+  "XRPUSDT": 29
+ },
+ "sources": {
+  "shadow_v1": {
+   "file": "MAIN/runs/shadow_v1/ticks.csv",
+   "rows": 290,
+   "first_utc": "2026-10-21T14:18:18Z",
+   "last_utc": "2026-10-21T14:19:28Z"
+  },
+  "live_main": {
+   "file": "MAIN/runs/live_main/ticks.csv",
+   "cutoff_utc": "2026-10-21T19:00:00Z",
+   "rows": 25560,
+   "first_utc": "2026-10-21T16:45:30Z",
+   "last_utc": "2026-10-21T18:59:57Z"
+  }
+ },
+ "live_main_median_all_markets": {
+  "ARBTMN": 0.004337,
+  "BNBTMN": 0.001311,
+  "BTCTMN": 0.00036,
+  "DOGETMN": 0.001223,
+  "ETHTMN": 0.000973,
+  "PEPETMN": 0.000887,
+  "SOLTMN": 0.001155,
+  "XRPTMN": 0.001219
+ },
+ "how": "python research/live_spreads.py --main ../wallex-bot --cutoff 2026-10-21T19:00:00Z"
+}

@@ -21,7 +21,7 @@ from decimal import ROUND_DOWN, Decimal
 
 from .ai import AICommittee
 from .client import WallexClient, new_client_id
-from .config import RUNS, load_secrets
+from .config import RUNS, load_backtest, load_secrets, market_tick_files
 from .fairvalue import Policy, PremiumTracker, base_of, fair_price, momentum, quote_of
 from .feeds import GlobalFeed, WallexBooks
 from .journal import Journal, read as read_journal
@@ -225,14 +225,13 @@ class Engine:
         self.halt_flag = self.run_dir / "STOP"          # create this file to stop new entries
         self.flatten_flag = self.run_dir / "FLATTEN"    # create this file to sell everything to toman now
         # historical evidence the supervisor may use (scripts/bt_fairvalue.py output), if present
-        self.backtest_ref = None
-        ref = RUNS / "backtests" / fv.get("backtest_reference", "fv_sweep_0.006_0.0035") / "summary.json"
-        if ref.exists():
-            m = json.loads(ref.read_text(encoding="utf-8"))
-            self.backtest_ref = {"note": "1-minute-candle backtest of the same rule over the last 7 days, "
-                                         "entry 0.6% (TMN) / 0.35% (USDT), modelled spreads",
-                                 "markets": {s: {k: v for k, v in d.items() if k in ("trades", "mean_ret_pct", "win_pct")}
-                                             for s, d in m["markets"].items()}}
+        # (a missing or malformed file gives None and never stops the engine). Each market keeps its caveats
+        # next to its numbers: the mean when entering one traded minute later, and trades on a stale USDT/TMN rate.
+        self.backtest_ref = load_backtest(fv.get("backtest_reference", "fv_sweep_0.006_0.0035"), RUNS)
+        if self.backtest_ref:
+            keep = ("trades", "mean_ret_pct", "next_minute_mean_ret_pct", "win_pct", "stale_usdt_trades")
+            self.backtest_ref["markets"] = {s: {k: d[k] for k in keep if k in d}
+                                            for s, d in self.backtest_ref["markets"].items()}
 
         self._warm_start()
         self._last_books = {}
@@ -260,8 +259,9 @@ class Engine:
     def _warm_start(self):
         """Seed premium baselines from recent ticks (this run's own file included), so a restart does not
         need hours to relearn each market's normal premium and never trades on a cold baseline."""
-        cutoff = time.time() - self.fv["baseline_window_min"] * 60
-        files = sorted(RUNS.glob("*/ticks.csv"), key=lambda p: p.stat().st_mtime)
+        now = time.time()
+        cutoff = now - self.fv["baseline_window_min"] * 60
+        files = sorted(market_tick_files(RUNS), key=lambda p: p.stat().st_mtime)
         rows = []
         for p in files:
             if p.stat().st_mtime < cutoff:
@@ -270,11 +270,12 @@ class Engine:
                 for r in csv.DictReader(fh):
                     try:
                         t = float(r["t"])
-                        if t >= cutoff and r["symbol"] in self.trackers:
+                        # t in the future: a torn line that a restart appended to ("17926" + "1792617862.88,...")
+                        if cutoff <= t <= now + 60 and r["symbol"] in self.trackers:
                             rows.append((t, r["symbol"], (float(r["bid"]) + float(r["ask"])) / 2 / float(r["fair"]) - 1,
                                          float(r["buy_dev"])))
-                    except (KeyError, ValueError, ZeroDivisionError):
-                        continue
+                    except (KeyError, ValueError, TypeError, ZeroDivisionError):
+                        continue          # TypeError: a short or torn line, whose missing fields read as None
         rows.sort()
         for t, s, prem, bd in rows:
             self.trackers[s].add(t, prem)
@@ -518,7 +519,8 @@ class Engine:
         self.j.log("entry", symbol=s, executor=self.exec.name, price=fill["avg"], qty=fill["qty"], spent=round(fill["spent"], 4),
                    fair=round(fair, 6), baseline_pct=round(base * 100, 3), buy_dev_pct=round(buy_dev * 100, 3),
                    policy=pol.to_dict(), risk=why,
-                   why_fa=f"قیمت خرید والکس {abs(buy_dev) * 100:.2f}٪ زیر قیمت منصفانه جهانی بود (آستانه {pol.entry_dev * 100:.2f}٪)")
+                   why_fa=f"قیمت خرید والکس {abs(buy_dev) * 100:.2f}٪ ارزان‌تر از فاصلهٔ عادی‌اش با قیمت منصفانهٔ جهانی بود "
+                          f"(آستانه {pol.entry_dev * 100:.2f}٪)")
 
     def _live_cash(self, q):
         try:

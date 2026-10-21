@@ -1,6 +1,6 @@
 {
  "main": "../wallex-bot",
- "cutoff": "2026-10-21T18:45:00",
+ "cutoff": "2026-10-21T20:40:00",
  "runs": {
   "shadow_v1": {
    "first_tick_utc": "2026-10-21 14:18:18",
@@ -30,6 +30,7 @@
     0.008
    ],
    "reviews": [],
+   "policy_at_cutoff": null,
    "risk_modes": {},
    "tool_calls_by_server": {},
    "tool_calls_total": 0,
@@ -251,23 +252,122 @@
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "BTCTMN",
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT",
+      "XRPUSDT"
+     ]
     },
     {
      "t": "2026-10-21T14:38:05+00:00",
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "BTCTMN",
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT",
+      "XRPUSDT"
+     ]
     },
     {
      "t": "2026-10-21T14:53:06+00:00",
      "risk_mode": "halt",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "BTCTMN",
+      "BTCUSDT",
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT",
+      "XRPTMN",
+      "XRPUSDT"
+     ]
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T14:53:06+00:00",
+    "disabled_since": {
+     "BTCTMN": "2026-10-21T14:23:10+00:00",
+     "BTCUSDT": "2026-10-21T14:53:06+00:00",
+     "DOGETMN": "2026-10-21T14:23:10+00:00",
+     "DOGEUSDT": "2026-10-21T14:23:10+00:00",
+     "ETHTMN": "2026-10-21T14:23:10+00:00",
+     "ETHUSDT": "2026-10-21T14:23:10+00:00",
+     "SOLTMN": "2026-10-21T14:23:10+00:00",
+     "SOLUSDT": "2026-10-21T14:23:10+00:00",
+     "XRPTMN": "2026-10-21T14:53:06+00:00",
+     "XRPUSDT": "2026-10-21T14:23:10+00:00"
+    },
+    "policies": {
+     "BTCTMN": {
+      "enabled": false,
+      "entry_dev": 0.009,
+      "size_factor": 0.0
+     },
+     "ETHTMN": {
+      "enabled": false,
+      "entry_dev": 0.009,
+      "size_factor": 0.0
+     },
+     "SOLTMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "XRPTMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "DOGETMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "BTCUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0055,
+      "size_factor": 0.12
+     },
+     "ETHUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     },
+     "SOLUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     },
+     "XRPUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     },
+     "DOGEUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     }
+    }
+   },
    "risk_modes": {
     "defensive": 2,
     "halt": 1
@@ -655,16 +755,103 @@
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "BTCTMN",
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "XRPTMN",
+      "XRPUSDT"
+     ]
     },
     {
      "t": "2026-10-21T15:19:22+00:00",
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "BTCTMN",
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT",
+      "XRPTMN",
+      "XRPUSDT"
+     ]
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T15:19:22+00:00",
+    "disabled_since": {
+     "BTCTMN": "2026-10-21T15:04:23+00:00",
+     "DOGETMN": "2026-10-21T15:04:23+00:00",
+     "DOGEUSDT": "2026-10-21T15:04:23+00:00",
+     "ETHTMN": "2026-10-21T15:04:23+00:00",
+     "ETHUSDT": "2026-10-21T15:04:23+00:00",
+     "SOLTMN": "2026-10-21T15:04:23+00:00",
+     "SOLUSDT": "2026-10-21T15:19:22+00:00",
+     "XRPTMN": "2026-10-21T15:04:23+00:00",
+     "XRPUSDT": "2026-10-21T15:04:23+00:00"
+    },
+    "policies": {
+     "BTCTMN": {
+      "enabled": false,
+      "entry_dev": 0.0065,
+      "size_factor": 0.0
+     },
+     "ETHTMN": {
+      "enabled": false,
+      "entry_dev": 0.007,
+      "size_factor": 0.0
+     },
+     "SOLTMN": {
+      "enabled": false,
+      "entry_dev": 0.008,
+      "size_factor": 0.0
+     },
+     "XRPTMN": {
+      "enabled": false,
+      "entry_dev": 0.0085,
+      "size_factor": 0.0
+     },
+     "DOGETMN": {
+      "enabled": false,
+      "entry_dev": 0.009,
+      "size_factor": 0.0
+     },
+     "BTCUSDT": {
+      "enabled": true,
+      "entry_dev": 0.005,
+      "size_factor": 0.25
+     },
+     "ETHUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0055,
+      "size_factor": 0.0
+     },
+     "SOLUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     },
+     "XRPUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     },
+     "DOGEUSDT": {
+      "enabled": false,
+      "entry_dev": 0.006,
+      "size_factor": 0.0
+     }
+    }
+   },
    "risk_modes": {
     "defensive": 2
    },
@@ -998,16 +1185,97 @@
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT"
+     ]
     },
     {
      "t": "2026-10-21T15:44:22+00:00",
      "risk_mode": "defensive",
      "model": null,
      "tool_calls": 0,
-     "by_server": {}
+     "by_server": {},
+     "disabled": [
+      "DOGETMN",
+      "DOGEUSDT",
+      "ETHTMN",
+      "ETHUSDT",
+      "SOLTMN",
+      "SOLUSDT",
+      "XRPUSDT"
+     ]
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T15:44:22+00:00",
+    "disabled_since": {
+     "DOGETMN": "2026-10-21T15:29:21+00:00",
+     "DOGEUSDT": "2026-10-21T15:29:21+00:00",
+     "ETHTMN": "2026-10-21T15:29:21+00:00",
+     "ETHUSDT": "2026-10-21T15:29:21+00:00",
+     "SOLTMN": "2026-10-21T15:29:21+00:00",
+     "SOLUSDT": "2026-10-21T15:29:21+00:00",
+     "XRPUSDT": "2026-10-21T15:44:22+00:00"
+    },
+    "policies": {
+     "BTCTMN": {
+      "enabled": true,
+      "entry_dev": 0.01,
+      "size_factor": 0.15
+     },
+     "ETHTMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "SOLTMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "XRPTMN": {
+      "enabled": true,
+      "entry_dev": 0.011,
+      "size_factor": 0.1
+     },
+     "DOGETMN": {
+      "enabled": false,
+      "entry_dev": 0.01,
+      "size_factor": 0.0
+     },
+     "BTCUSDT": {
+      "enabled": true,
+      "entry_dev": 0.006,
+      "size_factor": 0.15
+     },
+     "ETHUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0065,
+      "size_factor": 0.0
+     },
+     "SOLUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0065,
+      "size_factor": 0.0
+     },
+     "XRPUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0065,
+      "size_factor": 0.0
+     },
+     "DOGEUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0065,
+      "size_factor": 0.0
+     }
+    }
+   },
    "risk_modes": {
     "defensive": 2
    },
@@ -1302,9 +1570,70 @@
      "tool_calls": 21,
      "by_server": {
       "engine": 21
-     }
+     },
+     "disabled": [
+      "DOGEUSDT"
+     ]
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T15:48:05+00:00",
+    "disabled_since": {
+     "DOGEUSDT": "2026-10-21T15:48:05+00:00"
+    },
+    "policies": {
+     "BTCTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "ETHTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "SOLTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "XRPTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "DOGETMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "BTCUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "ETHUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "SOLUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "XRPUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "DOGEUSDT": {
+      "enabled": false,
+      "entry_dev": 0.0035,
+      "size_factor": 0.4
+     }
+    }
+   },
    "risk_modes": {
     "defensive": 1
    },
@@ -1572,9 +1901,81 @@
      "tool_calls": 18,
      "by_server": {
       "engine": 18
-     }
+     },
+     "disabled": []
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T15:58:50+00:00",
+    "disabled_since": {},
+    "policies": {
+     "BTCTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "ETHTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "SOLTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "XRPTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "DOGETMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "ARBTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "BNBTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "PEPETMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "BTCUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "ETHUSDT": {
+      "enabled": true,
+      "entry_dev": 0.0035,
+      "size_factor": 0.4
+     },
+     "SOLUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "XRPUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     },
+     "DOGEUSDT": {
+      "enabled": true,
+      "entry_dev": 0.004,
+      "size_factor": 0.4
+     }
+    }
+   },
    "risk_modes": {
     "defensive": 1
    },
@@ -1845,9 +2246,9 @@
   },
   "live_main": {
    "first_tick_utc": "2026-10-21 16:45:30",
-   "last_tick_utc": "2026-10-21 18:44:59",
-   "tick_minutes": 119.5,
-   "tick_rows": 22688,
+   "last_tick_utc": "2026-10-21 20:39:59",
+   "tick_minutes": 234.5,
+   "tick_rows": 44728,
    "markets": [
     "ARBTMN",
     "BNBTMN",
@@ -1859,20 +2260,22 @@
     "XRPTMN"
    ],
    "events": {
-    "warm_start": 3,
-    "start": 3,
-    "equity": 121,
-    "policy_review": 6
+    "warm_start": 4,
+    "start": 4,
+    "equity": 236,
+    "policy_review": 10
    },
    "starts": [
     "2026-10-21T16:45:30+00:00",
     "2026-10-21T16:52:50+00:00",
-    "2026-10-21T17:51:56+00:00"
+    "2026-10-21T17:51:56+00:00",
+    "2026-10-21T19:14:57+00:00"
    ],
    "start_entry_dev_tmn": [
     0.006,
     0.006,
-    0.006
+    0.006,
+    0.007
    ],
    "reviews": [
     {
@@ -1882,7 +2285,11 @@
      "tool_calls": 28,
      "by_server": {
       "engine": 28
-     }
+     },
+     "disabled": [
+      "BNBTMN",
+      "XRPTMN"
+     ]
     },
     {
      "t": "2026-10-21T16:56:17+00:00",
@@ -1892,7 +2299,12 @@
      "by_server": {
       "engine": 12,
       "wallex-official": 4
-     }
+     },
+     "disabled": [
+      "ARBTMN",
+      "ETHTMN",
+      "PEPETMN"
+     ]
     },
     {
      "t": "2026-10-21T17:16:14+00:00",
@@ -1902,7 +2314,12 @@
      "by_server": {
       "engine": 12,
       "wallex-official": 4
-     }
+     },
+     "disabled": [
+      "ARBTMN",
+      "ETHTMN",
+      "PEPETMN"
+     ]
     },
     {
      "t": "2026-10-21T17:36:17+00:00",
@@ -1912,7 +2329,12 @@
      "by_server": {
       "engine": 9,
       "wallex-official": 4
-     }
+     },
+     "disabled": [
+      "ARBTMN",
+      "ETHTMN",
+      "PEPETMN"
+     ]
     },
     {
      "t": "2026-10-21T17:55:47+00:00",
@@ -1922,7 +2344,10 @@
      "by_server": {
       "engine": 16,
       "wallex-official": 6
-     }
+     },
+     "disabled": [
+      "BNBTMN"
+     ]
     },
     {
      "t": "2026-10-21T18:25:41+00:00",
@@ -1932,20 +2357,129 @@
      "by_server": {
       "engine": 18,
       "wallex-official": 8
-     }
+     },
+     "disabled": [
+      "BNBTMN"
+     ]
+    },
+    {
+     "t": "2026-10-21T18:55:33+00:00",
+     "risk_mode": "defensive",
+     "model": "openai/gpt-5.4-mini via MCP[engine, wallex-official]",
+     "tool_calls": 17,
+     "by_server": {
+      "engine": 11,
+      "wallex-official": 6
+     },
+     "disabled": [
+      "ARBTMN",
+      "BNBTMN"
+     ]
+    },
+    {
+     "t": "2026-10-21T19:18:38+00:00",
+     "risk_mode": "defensive",
+     "model": "openai/gpt-5.6-sol via MCP[engine, wallex-official]",
+     "tool_calls": 21,
+     "by_server": {
+      "engine": 13,
+      "wallex-official": 8
+     },
+     "disabled": [
+      "ARBTMN",
+      "SOLTMN"
+     ]
+    },
+    {
+     "t": "2026-10-21T19:48:42+00:00",
+     "risk_mode": "defensive",
+     "model": "openai/gpt-5.6-sol via MCP[engine, wallex-official]",
+     "tool_calls": 21,
+     "by_server": {
+      "engine": 13,
+      "wallex-official": 8
+     },
+     "disabled": [
+      "ARBTMN",
+      "SOLTMN"
+     ]
+    },
+    {
+     "t": "2026-10-21T20:18:35+00:00",
+     "risk_mode": "normal",
+     "model": "openai/gpt-5.6-sol via MCP[engine, wallex-official]",
+     "tool_calls": 21,
+     "by_server": {
+      "engine": 13,
+      "wallex-official": 8
+     },
+     "disabled": [
+      "ARBTMN",
+      "SOLTMN"
+     ]
     }
    ],
+   "policy_at_cutoff": {
+    "from_review_utc": "2026-10-21T20:18:35+00:00",
+    "disabled_since": {
+     "ARBTMN": "2026-10-21T18:55:33+00:00",
+     "SOLTMN": "2026-10-21T19:18:38+00:00"
+    },
+    "policies": {
+     "BTCTMN": {
+      "enabled": true,
+      "entry_dev": 0.008,
+      "size_factor": 0.4
+     },
+     "ETHTMN": {
+      "enabled": true,
+      "entry_dev": 0.008,
+      "size_factor": 0.25
+     },
+     "SOLTMN": {
+      "enabled": false,
+      "entry_dev": 0.008,
+      "size_factor": 0.2
+     },
+     "XRPTMN": {
+      "enabled": true,
+      "entry_dev": 0.007,
+      "size_factor": 0.4
+     },
+     "DOGETMN": {
+      "enabled": true,
+      "entry_dev": 0.008,
+      "size_factor": 0.3
+     },
+     "PEPETMN": {
+      "enabled": true,
+      "entry_dev": 0.008,
+      "size_factor": 0.2
+     },
+     "BNBTMN": {
+      "enabled": true,
+      "entry_dev": 0.008,
+      "size_factor": 0.25
+     },
+     "ARBTMN": {
+      "enabled": false,
+      "entry_dev": 0.008,
+      "size_factor": 0.2
+     }
+    }
+   },
    "risk_modes": {
-    "defensive": 6
+    "defensive": 9,
+    "normal": 1
    },
    "tool_calls_by_server": {
-    "engine": 95,
-    "wallex-official": 26
+    "engine": 145,
+    "wallex-official": 56
    },
-   "tool_calls_total": 121,
+   "tool_calls_total": 201,
    "entries": [],
    "exits": [],
-   "equity_marks": 121,
+   "equity_marks": 236,
    "equity_first": 5000000,
    "equity_last": 5000000,
    "return_last_pct": 0.0,
@@ -2436,76 +2970,536 @@
     [
      "2026-10-21T18:45:00+00:00",
      5000000
+    ],
+    [
+     "2026-10-21T18:46:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:47:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:48:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:49:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:50:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:51:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:52:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:53:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:54:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:55:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:56:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:57:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:58:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T18:59:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:00:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:01:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:02:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:03:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:04:01+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:05:03+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:06:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:07:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:08:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:09:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:10:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:11:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:12:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:13:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:14:02+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:14:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:15:59+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:16:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:17:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:18:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:19:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:20:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:21:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:22:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:23:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:24:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:25:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:26:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:27:59+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:28:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:29:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:30:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:31:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:32:59+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:33:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:34:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:35:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:36:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:37:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:38:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:39:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:40:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:41:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:42:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:43:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:44:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:45:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:46:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:47:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:48:58+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:50:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:51:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:52:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:53:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:54:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:55:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:56:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:57:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:58:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T19:59:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:00:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:01:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:02:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:03:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:04:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:05:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:06:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:07:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:08:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:09:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:10:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:11:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:12:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:13:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:14:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:15:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:16:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:17:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:18:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:19:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:20:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:21:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:22:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:23:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:24:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:25:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:26:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:27:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:28:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:29:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:30:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:31:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:32:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:33:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:34:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:35:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:36:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:37:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:38:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:39:00+00:00",
+     5000000
+    ],
+    [
+     "2026-10-21T20:40:00+00:00",
+     5000000
     ]
    ],
    "by_symbol": {
     "ARBTMN": {
-     "ticks": 2836,
-     "min_buy_dev_pct": -0.591,
-     "min_at_utc": "2026-10-21 17:31:43",
-     "ticks_le_0.7pct": 0,
-     "ticks_le_0.5pct": 10,
-     "median_spread_pct": 0.428
+     "ticks": 5591,
+     "min_buy_dev_pct": -0.874,
+     "min_at_utc": "2026-10-21 20:35:29",
+     "ticks_le_0.7pct": 17,
+     "ticks_le_0.5pct": 51,
+     "median_spread_pct": 0.404
     },
     "BNBTMN": {
-     "ticks": 2836,
+     "ticks": 5591,
      "min_buy_dev_pct": -0.335,
      "min_at_utc": "2026-10-21 18:07:30",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.138
+     "median_spread_pct": 0.063
     },
     "BTCTMN": {
-     "ticks": 2836,
-     "min_buy_dev_pct": -0.21,
-     "min_at_utc": "2026-10-21 18:25:43",
+     "ticks": 5591,
+     "min_buy_dev_pct": -0.263,
+     "min_at_utc": "2026-10-21 19:25:04",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.031
+     "median_spread_pct": 0.032
     },
     "DOGETMN": {
-     "ticks": 2836,
+     "ticks": 5591,
      "min_buy_dev_pct": -0.308,
      "min_at_utc": "2026-10-21 17:54:21",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.117
+     "median_spread_pct": 0.14
     },
     "ETHTMN": {
-     "ticks": 2836,
+     "ticks": 5591,
      "min_buy_dev_pct": -0.406,
      "min_at_utc": "2026-10-21 17:37:26",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.097
+     "median_spread_pct": 0.137
     },
     "PEPETMN": {
-     "ticks": 2836,
-     "min_buy_dev_pct": -0.444,
-     "min_at_utc": "2026-10-21 17:16:44",
+     "ticks": 5591,
+     "min_buy_dev_pct": -0.555,
+     "min_at_utc": "2026-10-21 19:03:42",
      "ticks_le_0.7pct": 0,
-     "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.088
+     "ticks_le_0.5pct": 1,
+     "median_spread_pct": 0.105
     },
     "SOLTMN": {
-     "ticks": 2836,
-     "min_buy_dev_pct": -0.161,
-     "min_at_utc": "2026-10-21 18:25:28",
+     "ticks": 5591,
+     "min_buy_dev_pct": -0.253,
+     "min_at_utc": "2026-10-21 19:24:24",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.095
+     "median_spread_pct": 0.17
     },
     "XRPTMN": {
-     "ticks": 2836,
+     "ticks": 5591,
      "min_buy_dev_pct": -0.352,
      "min_at_utc": "2026-10-21 18:05:17",
      "ticks_le_0.7pct": 0,
      "ticks_le_0.5pct": 0,
-     "median_spread_pct": 0.115
+     "median_spread_pct": 0.097
     }
    },
    "state": {
-    "t": "2026-10-21T19:03:01+00:00",
+    "t": "2026-10-21T21:26:01+00:00",
     "mode": "live",
     "equity_tmn": 5000000,
     "return_pct": 0.0,
@@ -2516,20 +3510,20 @@
     "policies": {
      "BTCTMN": {
       "enabled": true,
-      "entry_dev": 0.007,
+      "entry_dev": 0.008,
       "stop_pct": 0.008,
-      "max_hold_min": 15.0,
-      "size_factor": 0.2
+      "max_hold_min": 20.0,
+      "size_factor": 0.4
      },
      "ETHTMN": {
       "enabled": true,
-      "entry_dev": 0.009,
-      "stop_pct": 0.008,
+      "entry_dev": 0.008,
+      "stop_pct": 0.007,
       "max_hold_min": 15.0,
-      "size_factor": 0.2
+      "size_factor": 0.25
      },
      "SOLTMN": {
-      "enabled": true,
+      "enabled": false,
       "entry_dev": 0.008,
       "stop_pct": 0.008,
       "max_hold_min": 15.0,
@@ -2539,8 +3533,8 @@
       "enabled": true,
       "entry_dev": 0.008,
       "stop_pct": 0.008,
-      "max_hold_min": 15.0,
-      "size_factor": 0.2
+      "max_hold_min": 20.0,
+      "size_factor": 0.4
      },
      "DOGETMN": {
       "enabled": true,
@@ -2550,25 +3544,25 @@
       "size_factor": 0.2
      },
      "PEPETMN": {
-      "enabled": true,
-      "entry_dev": 0.009,
+      "enabled": false,
+      "entry_dev": 0.008,
       "stop_pct": 0.008,
-      "max_hold_min": 12.0,
-      "size_factor": 0.15
+      "max_hold_min": 15.0,
+      "size_factor": 0.2
      },
      "BNBTMN": {
       "enabled": false,
-      "entry_dev": 0.007,
-      "stop_pct": 0.009,
-      "max_hold_min": 25.0,
-      "size_factor": 0.4
+      "entry_dev": 0.008,
+      "stop_pct": 0.008,
+      "max_hold_min": 20.0,
+      "size_factor": 0.25
      },
      "ARBTMN": {
       "enabled": false,
       "entry_dev": 0.008,
       "stop_pct": 0.008,
       "max_hold_min": 15.0,
-      "size_factor": 0.3
+      "size_factor": 0.2
      }
     }
    }
@@ -3135,5 +4129,5 @@
    "XRPTMN"
   ]
  },
- "live_snapshot_utc": "2026-10-21 18:44:59"
+ "live_snapshot_utc": "2026-10-21 20:39:59"
 }

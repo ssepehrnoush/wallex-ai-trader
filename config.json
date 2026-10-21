@@ -134,7 +134,7 @@
         "reason": "default before first AI review"
       }
     },
-    "backtest_reference": "fv_sweep_0.006_0.0035",
+    "backtest_reference": "fv_live_rule_0.007",
     "live_symbols": [
       "BTCTMN",
       "ETHTMN",

@@ -2,3 +2,12 @@
 **/ticks_snapshot.csv
 *.log
 __pycache__/
+# scratch of the final review rounds, not part of the submission; only the four review_docs scripts that
+# RESULTS.md cites (sections 4.3, 4.4 and 4.6) are kept
+review_code/
+review_safety/
+review_docs/*
+!review_docs/arb_replay.py
+!review_docs/leak_check.py
+!review_docs/min_dev_enabled.py
+!review_docs/spreads_before_reviews.py

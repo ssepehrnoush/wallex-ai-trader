@@ -1,0 +1,39 @@
+{"t": "2026-10-21T21:45:57+00:00", "event": "warm_start", "ticks": 34488, "baselines_pct": {"BTCTMN": -0.06, "ETHTMN": -0.021, "SOLTMN": -0.025, "XRPTMN": -0.029, "DOGETMN": -0.02, "ARBTMN": -0.176, "BNBTMN": 0.236, "PEPETMN": -0.099, "BTCUSDT": 0.0, "ETHUSDT": 0.0, "SOLUSDT": 0.0, "XRPUSDT": 0.0, "DOGEUSDT": 0.0}}
+{"t": "2026-10-21T21:45:57+00:00", "event": "start", "mode": "shadow", "symbols": ["BTCTMN", "ETHTMN", "SOLTMN", "XRPTMN", "DOGETMN", "ARBTMN", "BNBTMN", "PEPETMN", "BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT"], "policy": {"TMN": {"enabled": true, "entry_dev": 0.007, "exit_slack": 0.0005, "stop_pct": 0.009, "max_hold_min": 25, "size_factor": 0.5, "reason": "default before first AI review"}, "USDT": {"enabled": true, "entry_dev": 0.0036, "exit_slack": 0.0005, "stop_pct": 0.008, "max_hold_min": 25, "size_factor": 0.5, "reason": "default before first AI review"}}}
+{"t": "2026-10-21T21:45:58+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:46:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:47:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:48:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:49:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:50:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:51:57+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:52:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:53:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:54:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:55:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:56:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:57:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:58:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T21:59:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:00:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:01:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:02:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:03:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:04:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:05:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:06:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:07:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:08:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:09:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:10:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:11:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:12:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:13:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:14:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:15:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:16:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:17:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:18:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:19:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:20:59+00:00", "event": "equity", "equity_tmn": 4000400, "return_pct": 0.0, "drawdown_pct": 0.0, "halted": "", "trades": 0}
+{"t": "2026-10-21T22:20:59+00:00", "event": "stop", "trades": 0}
