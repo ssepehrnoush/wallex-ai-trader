@@ -1,0 +1,94 @@
+{
+ "t": "2026-10-21T16:49:31+00:00",
+ "mode": "live",
+ "equity_tmn": 5000000,
+ "return_pct": 0.0,
+ "drawdown_pct": 0.0,
+ "halted": "",
+ "positions": {},
+ "trades": 0,
+ "policies": {
+  "BTCTMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد کم است اما ورود را سخت‌تر و حجم را کمتر کردم."
+  },
+  "ETHTMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "بازار قابل‌قبول است ولی برای محافظت از سرمایه سخت‌گیرتر شد."
+  },
+  "SOLTMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "نوسان و اسپرد متوسط است، پس ورود و نگهداری را محدود کردم."
+  },
+  "XRPTMN": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد این بازار بالاست و ریسک لغزش را زیاد می‌کند."
+  },
+  "DOGETMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "برای جلوگیری از معاملات کم‌بازده، آستانه ورود را بالاتر بردم."
+  },
+  "PEPETMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "بازار هنوز مناسب است اما با ریسک کمتر نگه داشته شد."
+  },
+  "BNBTMN": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد بالا و هزینه اجرای این بازار را نامطلوب می‌کند."
+  },
+  "ARBTMN": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "ساختار بازار خوب است ولی فقط با فیلتر سخت‌تر فعال می‌ماند."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.23,
+  "ETHTMN": -0.118,
+  "SOLTMN": -0.061,
+  "XRPTMN": -0.057,
+  "DOGETMN": -0.011,
+  "PEPETMN": -0.133,
+  "BNBTMN": 0.326,
+  "ARBTMN": -0.074
+ }
+}

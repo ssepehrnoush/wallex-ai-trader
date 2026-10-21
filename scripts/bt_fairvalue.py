@@ -32,17 +32,26 @@ ap.add_argument("--stop", type=float, default=0.009)
 ap.add_argument("--hold", type=int, default=25)
 ap.add_argument("--days", type=float, default=7)
 ap.add_argument("--out", default=str(ROOT / "runs" / "backtests" / "fairvalue"))
+ap.add_argument("--symbols", default="", help="comma list; default = config fairvalue.symbols")
+ap.add_argument("--live-spreads", action="store_true", help="take spreads from Wallex /v1/markets now")
 a = ap.parse_args()
 
 cfg = load_config().raw
 fees = {"TMN": cfg["fees"], "USDT": cfg["fees_usdt"]}
-syms = cfg["fairvalue"]["symbols"]
+syms = a.symbols.split(",") if a.symbols else cfg["fairvalue"]["symbols"]
 
 spreads = {}
 tp = Path(a.ticks)
 if tp.exists():
     t = pd.read_csv(tp)
     spreads = ((t.ask / t.bid - 1).groupby(t.symbol).median()).to_dict()
+if a.live_spreads:
+    import httpx
+    mk = httpx.get("https://api.wallex.ir/v1/markets", timeout=15).json()["result"]["symbols"]
+    for s_ in syms:
+        if s_ not in spreads and s_ in mk:
+            st = mk[s_]["stats"]
+            spreads[s_] = float(st["askPrice"]) / float(st["bidPrice"]) - 1
 
 end = int(time.time()) - 120
 start = int(end - a.days * 86400)

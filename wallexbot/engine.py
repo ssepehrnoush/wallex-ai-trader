@@ -125,12 +125,30 @@ class LiveExecutor:
         net = r.executed_qty - (fee_coin or r.executed_qty * self.fees[quote_of(sym)]["taker"])
         return {"qty": floor_to(net, meta.step), "avg": r.avg_price, "spent": r.executed_sum, "fee_q": r.fee, "id": o.client_id}
 
+    def free(self, asset: str) -> float:
+        total, locked = self.c.balances().get(asset, (0.0, 0.0))
+        return max(total - locked, 0.0)
+
+    def cancel_strays(self) -> int:
+        """This engine never leaves resting orders (every order is settled or cancelled within seconds),
+        so any open order found here is a leftover from a timeout or crash: cancel it."""
+        n = 0
+        for o in self.c.open_orders():
+            try:
+                self.c.cancel_order(o.client_id)
+                n += 1
+                self.j.log("stray_order_cancelled", id=o.client_id, symbol=o.symbol, side=o.side)
+            except Exception as e:
+                self.j.log("cancel_error", id=o.client_id, error=str(e)[:200])
+        return n
+
     def sell(self, sym, book, qty, meta, reason):
-        q = floor_to(qty, meta.step)
-        if q <= 0:
+        # never try to sell more than the account really holds (fee rounding, partial fills)
+        q = floor_to(min(qty, self.free(base_of(sym))), meta.step)
+        if q <= 0 or q * book.bid < meta.min_notional * 0.5:
             return None
         if reason in ("stop", "flatten") and meta.market_orders:
-            o = self.c.place_order(sym, "SELL", "MARKET", f"{q:.{meta.step}f}")
+            o = self.c.place_order(sym, "SELL", "MARKET", f"{q:.{meta.step}f}", price=f"{book.bid:.{meta.tick}f}")
         else:
             # marketable limit a little through the bid so it fills like a market order
             px = book.bid * (0.998 if reason in ("stop", "flatten", "time") else 1.0)
@@ -152,8 +170,11 @@ class Engine:
         self.run_dir = RUNS / run_name
         self.j = Journal(self.run_dir)
         self.public = WallexClient(min_interval=0.0)
-        self.priv = WallexClient(self.secrets.wallex_key, self.secrets.wallex_subaccount or None) if mode == "live" else None
-        self.symbols: list[str] = fv["symbols"]
+        # The hackathon key is created ON the credit account, so it already addresses that account; Wallex's own
+        # tutorial sends orders with x-api-key alone. No sub-account header: one way to address one account.
+        self.priv = WallexClient(self.secrets.wallex_key) if mode == "live" else None
+        # live trades only the markets the hackathon account can hold (toman markets by default)
+        self.symbols: list[str] = fv.get("live_symbols", fv["symbols"]) if mode == "live" else fv["symbols"]
         books_syms = sorted(set(self.symbols) | {"USDTTMN"})
         self.books = WallexBooks(self.public, books_syms, workers=8)
         self.global_feed = GlobalFeed(sorted({base_of(s) for s in self.symbols}))
@@ -191,6 +212,8 @@ class Engine:
         if mode == "live":
             self.exec = LiveExecutor(self.priv, self.fees_q, self.j)
             self.equity0 = self._live_equity()
+            self.exec.cancel_strays()
+            self._adopt_holdings()
         else:
             cash = {"TMN": cfg["shadow"]["start_tmn"], "USDT": cfg["shadow"]["start_usdt"]}
             self.exec = PaperExecutor(self.fees_q, cash)
@@ -236,6 +259,18 @@ class Engine:
         bal = self.priv.balances()
         return bal.get("TMN", (0, 0))[0]
 
+    def _adopt_holdings(self):
+        """After a restart, coins bought by an earlier run are still in the account. Adopt them as
+        positions so the exit rules (target / stop / time / flatten) sell them; they are never forgotten."""
+        bal = self.priv.balances()
+        books = self.books.get()
+        for s in self.symbols:
+            b = books.get(s)
+            qty = bal.get(base_of(s), (0.0, 0.0))[0]
+            if b and qty * b.bid >= self.meta[s].min_notional:
+                self.positions[s] = Position(s, qty, b.bid, qty * b.bid, time.time(), 0.0, "adopted", b.bid)
+                self.j.log("adopted_holding", symbol=s, qty=qty, mark=b.bid)
+
     # -- valuation ----------------------------------------------------------
     def equity_tmn(self, books) -> float:
         u = books.get("USDTTMN")
@@ -248,11 +283,14 @@ class Engine:
             eq += p.qty * px * (u_bid if quote_of(s) == "USDT" else 1)
         if self.mode == "live":
             try:
+                # value EVERY coin of the traded markets, not only tracked positions (leftovers count too)
                 bal = self.priv.balances()
                 eq = bal.get("TMN", (0, 0))[0] + bal.get("USDT", (0, 0))[0] * u_bid
-                for s, p in self.positions.items():
+                for s in self.symbols:
                     b = books.get(s)
-                    eq += bal.get(base_of(s), (0, 0))[0] * (b.bid if b else p.entry) * (u_bid if quote_of(s) == "USDT" else 1)
+                    q = bal.get(base_of(s), (0, 0))[0]
+                    if q and b:
+                        eq += q * b.bid * (u_bid if quote_of(s) == "USDT" else 1)
             except Exception as e:
                 self.j.log("balance_error", error=str(e)[:200])
         return eq
@@ -419,7 +457,7 @@ class Engine:
 
     def _live_cash(self, q):
         try:
-            return self.priv.balances().get(q, (0, 0))[0] - self.priv.balances().get(q, (0, 0))[1]
+            return self.exec.free(q)
         except Exception:
             return 0.0
 
@@ -446,6 +484,11 @@ class Engine:
 
     def mark(self, now: float):
         books = self._last_books or {}
+        if self.mode == "live":
+            try:
+                self.exec.cancel_strays()   # runs between steps, when no order of ours is in flight
+            except Exception as e:
+                self.j.log("stray_check_error", error=str(e)[:200])
         eq = self.equity_tmn(books)
         if self.state is None:
             self.state = self.risk.new_state(eq)

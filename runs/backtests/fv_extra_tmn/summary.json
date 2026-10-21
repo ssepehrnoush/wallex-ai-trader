@@ -1,0 +1,128 @@
+{
+ "params": {
+  "ticks": "C:\\Users\\Sadeq\\Desktop\\agentic-hackathon\\wallex-bot\\runs\\shadow_v1\\ticks.csv",
+  "entry_tmn": 0.006,
+  "entry_usdt": 0.005,
+  "slack": 0.0005,
+  "stop": 0.009,
+  "hold": 25,
+  "days": 7,
+  "out": "../runs/backtests/fv_extra_tmn",
+  "symbols": "PEPETMN,PUMPTMN,XAUTTMN,HYPETMN,LTCTMN,STMN,BNBTMN,ARBTMN",
+  "live_spreads": true
+ },
+ "spreads_from_live": {
+  "BTCTMN": 0.059,
+  "BTCUSDT": 0.015,
+  "DOGETMN": 0.162,
+  "DOGEUSDT": 0.464,
+  "ETHTMN": 0.186,
+  "ETHUSDT": 0.165,
+  "SOLTMN": 0.268,
+  "SOLUSDT": 0.376,
+  "XRPTMN": 0.327,
+  "XRPUSDT": 0.177,
+  "PEPETMN": 0.04,
+  "PUMPTMN": 0.077,
+  "XAUTTMN": 0.067,
+  "HYPETMN": 0.052,
+  "LTCTMN": 0.127,
+  "STMN": 0.152,
+  "BNBTMN": 0.417,
+  "ARBTMN": 0.469
+ },
+ "markets": {
+  "PEPETMN": {
+   "half_spread_pct": 0.02,
+   "minutes_traded": 4831,
+   "trades": 50,
+   "mean_ret_pct": 0.148,
+   "win_pct": 60.0,
+   "sum_ret_pct": 7.42,
+   "exits": {
+    "target": 46,
+    "time": 4
+   }
+  },
+  "PUMPTMN": {
+   "half_spread_pct": 0.038,
+   "minutes_traded": 6187,
+   "trades": 59,
+   "mean_ret_pct": 0.004,
+   "win_pct": 54.2,
+   "sum_ret_pct": 0.25,
+   "exits": {
+    "target": 47,
+    "time": 8,
+    "stop": 4
+   }
+  },
+  "XAUTTMN": {
+   "half_spread_pct": 0.033,
+   "minutes_traded": 2370,
+   "trades": 0,
+   "mean_ret_pct": null,
+   "win_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {}
+  },
+  "HYPETMN": {
+   "half_spread_pct": 0.026,
+   "minutes_traded": 435,
+   "trades": 0,
+   "mean_ret_pct": null,
+   "win_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {}
+  },
+  "LTCTMN": {
+   "half_spread_pct": 0.064,
+   "minutes_traded": 763,
+   "trades": 1,
+   "mean_ret_pct": 0.323,
+   "win_pct": 100.0,
+   "sum_ret_pct": 0.32,
+   "exits": {
+    "time": 1
+   }
+  },
+  "STMN": {
+   "half_spread_pct": 0.076,
+   "minutes_traded": 3241,
+   "trades": 60,
+   "mean_ret_pct": 0.036,
+   "win_pct": 60.0,
+   "sum_ret_pct": 2.19,
+   "exits": {
+    "target": 43,
+    "time": 12,
+    "stop": 5
+   }
+  },
+  "BNBTMN": {
+   "half_spread_pct": 0.208,
+   "minutes_traded": 2474,
+   "trades": 12,
+   "mean_ret_pct": 0.213,
+   "win_pct": 58.3,
+   "sum_ret_pct": 2.55,
+   "exits": {
+    "target": 9,
+    "time": 3
+   }
+  },
+  "ARBTMN": {
+   "half_spread_pct": 0.235,
+   "minutes_traded": 3121,
+   "trades": 30,
+   "mean_ret_pct": 0.102,
+   "win_pct": 56.7,
+   "sum_ret_pct": 3.05,
+   "exits": {
+    "target": 23,
+    "time": 6,
+    "stop": 1
+   }
+  }
+ }
+}

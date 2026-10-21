@@ -155,5 +155,5 @@ class WallexClient:
 
 
 def new_client_id(prefix: str = "WB") -> str:
-    # docs allow letters, digits and underscore only
-    return f"{prefix}_{int(time.time())}_{uuid.uuid4().hex[:8]}"
+    # docs allow letters (A-Z), digits and underscore only
+    return f"{prefix}_{int(time.time())}_{uuid.uuid4().hex[:8].upper()}"

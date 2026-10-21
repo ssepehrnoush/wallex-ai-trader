@@ -1,8 +1,8 @@
 {
- "t": "2026-10-21T15:44:44+00:00",
+ "t": "2026-10-21T15:54:43+00:00",
  "mode": "shadow",
- "equity_tmn": 3978192,
- "return_pct": 0.0,
+ "equity_tmn": 3983308,
+ "return_pct": 0.129,
  "drawdown_pct": 0.0,
  "halted": "",
  "positions": {},
@@ -10,105 +10,105 @@
  "policies": {
   "BTCTMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "فاصله فعلی هنوز زیر کارمزد است و نگهداری را کوتاه‌تر و سایز را کمتر کردم."
   },
   "ETHTMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد قابل‌توجه است و برای کاهش ریسک، آستانه و زمان نگهداری را سخت‌تر کردم."
   },
   "SOLTMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "فرصت‌ها کم‌عمق‌اند و با سایز کمتر و حدضرر تنگ‌تر ریسک را پایین آوردم."
   },
   "XRPTMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "برای حفظ سرمایه، ورود را سخت‌تر و مدت معامله را کوتاه‌تر کردم."
   },
   "DOGETMN": {
    "enabled": true,
-   "entry_dev": 0.006,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "نوسان و هزینه رفت‌وبرگشت ایجاب می‌کند با ریسک کمتر ادامه دهیم."
   },
   "BTCUSDT": {
    "enabled": true,
-   "entry_dev": 0.0035,
+   "entry_dev": 0.004,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "بازار سالم است اما برای کنترل افت سرمایه، ورود و زمان نگهداری را سخت‌تر کردم."
   },
   "ETHUSDT": {
    "enabled": true,
-   "entry_dev": 0.0035,
+   "entry_dev": 0.004,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "عمق خوب است ولی برای دفاع، سایز و زمان معامله را کاهش دادم."
   },
   "SOLUSDT": {
    "enabled": true,
-   "entry_dev": 0.0035,
+   "entry_dev": 0.004,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "سیگنال کافی نیست و با حد ورود سخت‌تر از ورودهای ضعیف جلوگیری می‌کنیم."
   },
   "XRPUSDT": {
    "enabled": true,
-   "entry_dev": 0.0035,
+   "entry_dev": 0.004,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد بالاست و با کاهش سایز، ریسک اجرا را محدود کردم."
   },
   "DOGEUSDT": {
-   "enabled": true,
+   "enabled": false,
    "entry_dev": 0.0035,
    "exit_slack": 0.0005,
    "stop_pct": 0.008,
-   "max_hold_min": 25,
-   "size_factor": 0.5,
-   "reason": "default before first AI review"
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد این بازار خیلی پهن است و برای حفظ سرمایه موقتاً غیرفعال شد."
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.243,
-  "ETHTMN": -0.117,
-  "SOLTMN": -0.059,
-  "XRPTMN": -0.064,
-  "DOGETMN": -0.021,
-  "BTCUSDT": -0.16,
-  "ETHUSDT": -0.207,
-  "SOLUSDT": -0.079,
-  "XRPUSDT": -0.068,
-  "DOGEUSDT": -0.048
+  "BTCTMN": -0.225,
+  "ETHTMN": -0.113,
+  "SOLTMN": -0.052,
+  "XRPTMN": -0.067,
+  "DOGETMN": -0.023,
+  "BTCUSDT": -0.138,
+  "ETHUSDT": -0.175,
+  "SOLUSDT": -0.066,
+  "XRPUSDT": -0.058,
+  "DOGEUSDT": -0.036
  }
 }

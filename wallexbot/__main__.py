@@ -16,7 +16,7 @@ from .config import RUNS, load_config, load_secrets
 
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="wallexbot")
-    ap.add_argument("cmd", choices=["shadow", "live", "status"])
+    ap.add_argument("cmd", choices=["shadow", "live", "status", "check"])
     ap.add_argument("--minutes", type=float, default=None)
     ap.add_argument("--run", default=None)
     ap.add_argument("--config", default=None)
@@ -27,6 +27,20 @@ def main(argv=None):
     if a.no_ai:
         cfg["ai"]["enabled"] = False
     run = a.run or f"{a.cmd}_{datetime.now(timezone.utc):%Y%m%d_%H%M}"
+
+    if a.cmd == "check":
+        # read-only pre-flight: which account does this key control, and is it the hackathon one?
+        from .client import WallexClient
+        s = load_secrets()
+        c = WallexClient(s.wallex_key, s.wallex_subaccount or None)
+        bal = c.balances()
+        nonzero = {k: v[0] for k, v in bal.items() if v[0] > 0}
+        fees = c.fees()
+        live = cfg["fairvalue"].get("live_symbols", cfg["fairvalue"]["symbols"])
+        print(json.dumps({"key_marked_as": s.wallex_key_account, "subaccount_header": bool(s.wallex_subaccount),
+                          "nonzero_balances": nonzero, "open_orders": len(c.open_orders()),
+                          "fees": {m: fees.get(m) for m in live}}, ensure_ascii=False, indent=1))
+        return
 
     if a.cmd == "status":
         p = RUNS / (a.run or sorted(d.name for d in RUNS.iterdir() if (d / "state.json").exists())[-1]) / "state.json"

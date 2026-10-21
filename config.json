@@ -96,6 +96,9 @@
       "SOLTMN",
       "XRPTMN",
       "DOGETMN",
+      "ARBTMN",
+      "BNBTMN",
+      "PEPETMN",
       "BTCUSDT",
       "ETHUSDT",
       "SOLUSDT",
@@ -104,7 +107,7 @@
     ],
     "poll_seconds": 2.5,
     "baseline_window_min": 180,
-    "baseline_min_samples": 60,
+    "baseline_min_samples": 240,
     "warmup_minutes": 3,
     "review_minutes": 20,
     "max_global_drop_60s": 0.004,
@@ -129,7 +132,17 @@
         "reason": "default before first AI review"
       }
     },
-    "backtest_reference": "fv_sweep_0.006_0.0035"
+    "backtest_reference": "fv_sweep_0.006_0.0035",
+    "live_symbols": [
+      "BTCTMN",
+      "ETHTMN",
+      "SOLTMN",
+      "XRPTMN",
+      "DOGETMN",
+      "PEPETMN",
+      "BNBTMN",
+      "ARBTMN"
+    ]
   },
   "shadow": {
     "start_tmn": 2000000,

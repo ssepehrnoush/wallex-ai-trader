@@ -1,0 +1,144 @@
+{
+ "t": "2026-10-21T16:04:24+00:00",
+ "mode": "shadow",
+ "equity_tmn": 3984492,
+ "return_pct": 0.029,
+ "drawdown_pct": 0.0,
+ "halted": "",
+ "positions": {},
+ "trades": 0,
+ "policies": {
+  "BTCTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد کم است اما برای حفظ سرمایه آستانه ورود را کمی سخت‌تر کردم."
+  },
+  "ETHTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "پیشنهاد ورود خیلی نرم بود؛ آستانه را به سیاست محافظه‌کارانه برگرداندم."
+  },
+  "SOLTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد بالاست و سیگنال کم‌تکرار؛ ورود سخت‌تر و نگهداری کوتاه‌تر شد."
+  },
+  "XRPTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "برای کاهش ریسک، آستانه ورود و زمان نگهداری را محدودتر کردم."
+  },
+  "DOGETMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "بازار کم‌عمق‌تر است؛ سایز و مدت نگهداری را پایین آوردم."
+  },
+  "ARBTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد خیلی پهن است؛ فقط با دیسکانت بهتر وارد می‌شویم."
+  },
+  "BNBTMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "به‌خاطر اسپرد بالا آستانه ورود را سخت‌تر و سایز را کمتر کردم."
+  },
+  "PEPETMN": {
+   "enabled": true,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "فقط با تخفیف عمیق‌تر معامله می‌کنیم تا ریسک افت کمتر شود."
+  },
+  "BTCUSDT": {
+   "enabled": true,
+   "entry_dev": 0.004,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "پیشنهاد ورود کمی شل بود؛ آن را به سطح محافظه‌کارانه‌تر بردم."
+  },
+  "ETHUSDT": {
+   "enabled": true,
+   "entry_dev": 0.0035,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "آستانه ورود را از پیشنهاد نرم‌تر بالا بردم تا فقط فرصت‌های بهتر گرفته شوند."
+  },
+  "SOLUSDT": {
+   "enabled": true,
+   "entry_dev": 0.004,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "برای جلوگیری از ورودهای ضعیف، شرط ورود را سخت‌تر کردم."
+  },
+  "XRPUSDT": {
+   "enabled": true,
+   "entry_dev": 0.004,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "ریسک را با آستانه ورود بالاتر و سایز کمتر مهار کردم."
+  },
+  "DOGEUSDT": {
+   "enabled": true,
+   "entry_dev": 0.004,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.4,
+   "reason": "اسپرد نسبتاً پهن است؛ ورود سخت‌تر و سایز کوچک‌تر شد."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.232,
+  "ETHTMN": -0.115,
+  "SOLTMN": -0.055,
+  "XRPTMN": -0.059,
+  "DOGETMN": -0.009,
+  "ARBTMN": -0.088,
+  "BNBTMN": 0.406,
+  "PEPETMN": -0.072,
+  "BTCUSDT": -0.135,
+  "ETHUSDT": -0.149,
+  "SOLUSDT": -0.055,
+  "XRPUSDT": -0.049,
+  "DOGEUSDT": -0.042
+ }
+}
