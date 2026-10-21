@@ -1,0 +1,58 @@
+{
+ "label": "rules",
+ "start": "2026-08-22 14:00:00+00:00",
+ "end": "2026-10-21 13:45:00+00:00",
+ "days": 60.0,
+ "return_pct": -4.902,
+ "max_drawdown_pct": 5.211,
+ "trades": 18,
+ "trades_per_day": 0.3,
+ "fees_paid": 64606,
+ "win_rate_pct": 22.2,
+ "avg_trade_ret_pct": -0.795,
+ "profit_factor": 0.17,
+ "by_setup": {
+  "range_reversion": {
+   "n": 5,
+   "pnl": -37145.0
+  },
+  "trend_pullback": {
+   "n": 6,
+   "pnl": -39025.0
+  },
+  "volume_breakout": {
+   "n": 7,
+   "pnl": -21868.0
+  }
+ },
+ "by_symbol": {
+  "BTCTMN": {
+   "n": 5,
+   "pnl": -39687.0
+  },
+  "DOGETMN": {
+   "n": 2,
+   "pnl": -23965.0
+  },
+  "ETHTMN": {
+   "n": 6,
+   "pnl": -17361.0
+  },
+  "SOLTMN": {
+   "n": 4,
+   "pnl": -5303.0
+  },
+  "XRPTMN": {
+   "n": 1,
+   "pnl": -11723.0
+  }
+ },
+ "by_reason": {
+  "stop": 12,
+  "target": 3,
+  "time": 3
+ },
+ "worst_3d_pct": -3.82,
+ "best_3d_pct": 0.0,
+ "share_3d_windows_positive_pct": 0.0
+}

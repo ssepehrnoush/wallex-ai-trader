@@ -1,0 +1,138 @@
+{
+  "markets": [
+    "BTCTMN",
+    "ETHTMN",
+    "USDTTMN",
+    "SOLTMN",
+    "XRPTMN",
+    "DOGETMN"
+  ],
+  "fees": {
+    "maker": 0.0025,
+    "taker": 0.003
+  },
+  "slippage": 0.0008,
+  "window": {
+    "end_utc": "2026-10-23T20:20:00Z"
+  },
+  "strategy": {
+    "trade_symbols": [
+      "BTCTMN",
+      "ETHTMN",
+      "SOLTMN",
+      "XRPTMN",
+      "DOGETMN"
+    ],
+    "setups": [
+      "pullback",
+      "reversion",
+      "breakout"
+    ],
+    "trend_min_spread": 0.002,
+    "trend_min_adx": 18,
+    "range_max_spread": 0.0025,
+    "range_max_adx": 22,
+    "stop_min_pct": 0.008,
+    "stop_max_pct": 0.025,
+    "min_tp_pct": 0.012,
+    "pb_rsi_dip": 42,
+    "pb_stop_atr": 1.6,
+    "pb_tp_atr": 2.4,
+    "pb_max_hold": 24,
+    "rv_rsi_max": 32,
+    "rv_stop_atr": 1.4,
+    "rv_max_hold": 16,
+    "bo_vol_z": 2.0,
+    "bo_rsi_max": 75,
+    "bo_stop_atr": 1.5,
+    "bo_tp_atr": 2.5,
+    "bo_max_hold": 16,
+    "entry_valid_bars": 2
+  },
+  "risk": {
+    "risk_per_trade": 0.006,
+    "max_position_pct": 0.35,
+    "max_positions": 3,
+    "max_exposure_pct": 0.7,
+    "daily_loss_limit": 0.015,
+    "kill_switch_dd": 0.03,
+    "cooldown_min_after_loss": 120,
+    "min_edge_after_fees": 0.004,
+    "min_reward_risk": 1.2,
+    "profit_lock_at": 0.03,
+    "profit_lock_factor": 0.5,
+    "breakeven_trigger_pct": 0.009,
+    "breakeven_lock_pct": 0.0055,
+    "min_notional": 60000,
+    "no_new_entries_min_before_end": 150,
+    "flatten_min_before_end": 75
+  },
+  "ai": {
+    "enabled": true,
+    "provider": "openai",
+    "model": "gpt-5.4-mini",
+    "boxapi_model": "openai/gpt-5.4-mini",
+    "reasoning_effort": "low",
+    "timeout_s": 45,
+    "min_confidence": 0.55,
+    "min_setup_quality": 5,
+    "stop_floor_pct": 0.006,
+    "tp_floor_pct": 0.009,
+    "agentic": true
+  },
+  "live": {
+    "poll_seconds": 10,
+    "entry_reprice_seconds": 45,
+    "entry_max_chase_pct": 0.003
+  },
+  "fees_usdt": {
+    "maker": 0.001,
+    "taker": 0.0013
+  },
+  "fairvalue": {
+    "symbols": [
+      "BTCTMN",
+      "ETHTMN",
+      "SOLTMN",
+      "XRPTMN",
+      "DOGETMN",
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "DOGEUSDT"
+    ],
+    "poll_seconds": 2.5,
+    "baseline_window_min": 180,
+    "baseline_min_samples": 60,
+    "warmup_minutes": 3,
+    "review_minutes": 20,
+    "max_global_drop_60s": 0.004,
+    "max_spread": 0.006,
+    "default_policy": {
+      "TMN": {
+        "enabled": true,
+        "entry_dev": 0.006,
+        "exit_slack": 0.0005,
+        "stop_pct": 0.009,
+        "max_hold_min": 25,
+        "size_factor": 0.5,
+        "reason": "default before first AI review"
+      },
+      "USDT": {
+        "enabled": true,
+        "entry_dev": 0.0035,
+        "exit_slack": 0.0005,
+        "stop_pct": 0.008,
+        "max_hold_min": 25,
+        "size_factor": 0.5,
+        "reason": "default before first AI review"
+      }
+    },
+    "backtest_reference": "fv_sweep_0.006_0.0035"
+  },
+  "shadow": {
+    "start_tmn": 2000000,
+    "start_usdt": 7.5
+  }
+}

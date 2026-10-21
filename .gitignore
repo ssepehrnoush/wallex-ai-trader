@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+*.env
+runs/ai_cache/
+runs/ai_cache_live/
+runs/*.log
+research/premium/binance_*_1m.csv
+runs/*/ticks.csv
+runs/ai_cache_test/
+research/premium/wallex_*_1m.csv

@@ -1,0 +1,114 @@
+{
+ "t": "2026-10-21T15:00:59+00:00",
+ "mode": "shadow",
+ "equity_tmn": 3979235,
+ "return_pct": 0.095,
+ "drawdown_pct": 0.0,
+ "halted": "",
+ "positions": {},
+ "trades": 0,
+ "policies": {
+  "BTCTMN": {
+   "enabled": false,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0007,
+   "stop_pct": 0.009,
+   "max_hold_min": 14.0,
+   "size_factor": 0.0,
+   "reason": "لبهٔ کافی بعد از کارمزد TMN دیده نمی‌شود."
+  },
+  "ETHTMN": {
+   "enabled": false,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0007,
+   "stop_pct": 0.009,
+   "max_hold_min": 14.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد و تکرار سیگنال برای ریسک فعلی مناسب نیست."
+  },
+  "SOLTMN": {
+   "enabled": false,
+   "entry_dev": 0.01,
+   "exit_slack": 0.0008,
+   "stop_pct": 0.01,
+   "max_hold_min": 16.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد بسیار بالا و لبهٔ عملیاتی ضعیف است."
+  },
+  "XRPTMN": {
+   "enabled": false,
+   "entry_dev": 0.01,
+   "exit_slack": 0.0007,
+   "stop_pct": 0.008,
+   "max_hold_min": 12.0,
+   "size_factor": 0.0,
+   "reason": "خروج امن با این اسپرد بالا قابل اتکا نیست."
+  },
+  "DOGETMN": {
+   "enabled": false,
+   "entry_dev": 0.01,
+   "exit_slack": 0.0007,
+   "stop_pct": 0.01,
+   "max_hold_min": 16.0,
+   "size_factor": 0.0,
+   "reason": "هزینهٔ رفت‌وبرگشت مزیت را می‌بلعد."
+  },
+  "BTCUSDT": {
+   "enabled": false,
+   "entry_dev": 0.0055,
+   "exit_slack": 0.0004,
+   "stop_pct": 0.006,
+   "max_hold_min": 8.0,
+   "size_factor": 0.12,
+   "reason": "نقدشوندگی خوب است اما برای حفظ سرمایه فعلاً فعال نمی‌شود."
+  },
+  "ETHUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0004,
+   "stop_pct": 0.007,
+   "max_hold_min": 12.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد هنوز برای اجرای مطمئن زیاد است."
+  },
+  "SOLUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0004,
+   "stop_pct": 0.007,
+   "max_hold_min": 12.0,
+   "size_factor": 0.0,
+   "reason": "ساختار قیمت و هزینه‌ها ریسک را بالا می‌برد."
+  },
+  "XRPUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0004,
+   "stop_pct": 0.007,
+   "max_hold_min": 12.0,
+   "size_factor": 0.0,
+   "reason": "بعد از کارمزدها و اسپرد، لبه کافی نمی‌ماند."
+  },
+  "DOGEUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0004,
+   "stop_pct": 0.007,
+   "max_hold_min": 12.0,
+   "size_factor": 0.0,
+   "reason": "عمق کم و اسپرد بالا اجرای امن را ناممکن می‌کند."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.286,
+  "ETHTMN": -0.147,
+  "SOLTMN": -0.064,
+  "XRPTMN": -0.085,
+  "DOGETMN": -0.024,
+  "BTCUSDT": -0.222,
+  "ETHUSDT": -0.181,
+  "SOLUSDT": -0.134,
+  "XRPUSDT": -0.104,
+  "DOGEUSDT": -0.103
+ }
+}

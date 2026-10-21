@@ -1,0 +1,114 @@
+{
+ "t": "2026-10-21T15:44:16+00:00",
+ "mode": "shadow",
+ "equity_tmn": 3978185,
+ "return_pct": 0.119,
+ "drawdown_pct": 0.0,
+ "halted": "",
+ "positions": {},
+ "trades": 0,
+ "policies": {
+  "BTCTMN": {
+   "enabled": true,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.25,
+   "reason": "نقدشوندگی خوب است اما فقط با ورود سخت‌تر و سایز کمتر."
+  },
+  "ETHTMN": {
+   "enabled": false,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد بالا و سیگنال ضعیف است، پس غیرفعال می‌ماند."
+  },
+  "SOLTMN": {
+   "enabled": false,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد سنگین و فرصت بازگشت کم است."
+  },
+  "XRPTMN": {
+   "enabled": true,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.0075,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "لبه تاریخی خوب است اما فعلاً فقط با ورود سخت‌تر و حجم کمتر."
+  },
+  "DOGETMN": {
+   "enabled": false,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 16.0,
+   "size_factor": 0.0,
+   "reason": "مزیت کافی برای ادامه معامله ندارد."
+  },
+  "BTCUSDT": {
+   "enabled": true,
+   "entry_dev": 0.005,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.0065,
+   "max_hold_min": 15.0,
+   "size_factor": 0.25,
+   "reason": "بازار تمیزتر است ولی در فاز ریسک‌گریز باید محافظه‌کارتر بود."
+  },
+  "ETHUSDT": {
+   "enabled": false,
+   "entry_dev": 0.0055,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.0075,
+   "max_hold_min": 16.0,
+   "size_factor": 0.0,
+   "reason": "نوسان و اسپرد برای این شرایط زیاد است."
+  },
+  "SOLUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد نامناسب و خروج‌ها غیرقابل اتکا است."
+  },
+  "XRPUSDT": {
+   "enabled": true,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "قابل معامله است اما فقط با آستانه سخت‌تر و سایز کمتر."
+  },
+  "DOGEUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "مزیت اجرایی کافی برای ورود ندارد."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.244,
+  "ETHTMN": -0.117,
+  "SOLTMN": -0.06,
+  "XRPTMN": -0.065,
+  "DOGETMN": -0.021,
+  "BTCUSDT": -0.16,
+  "ETHUSDT": -0.21,
+  "SOLUSDT": -0.079,
+  "XRPUSDT": -0.069,
+  "DOGEUSDT": -0.048
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "t": "2026-10-21T15:25:12+00:00",
+ "mode": "shadow",
+ "equity_tmn": 3970652,
+ "return_pct": -0.216,
+ "drawdown_pct": 0.276,
+ "halted": "",
+ "positions": {},
+ "trades": 1,
+ "policies": {
+  "BTCTMN": {
+   "enabled": false,
+   "entry_dev": 0.0065,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.01,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "کارمزد TMN هنوز لبهٔ کافی برای ریسک‌پذیری نمی‌دهد."
+  },
+  "ETHTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.01,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "هزینه‌ها و ضعف لبهٔ کوتاه‌مدت معامله را نامطلوب می‌کند."
+  },
+  "SOLTMN": {
+   "enabled": false,
+   "entry_dev": 0.008,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.01,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "فاصلهٔ خرید و کارمزد TMN هنوز مزیت پایدار نمی‌سازد."
+  },
+  "XRPTMN": {
+   "enabled": false,
+   "entry_dev": 0.0085,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.01,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد بالا اجرای امن را برای این بازار محدود می‌کند."
+  },
+  "DOGETMN": {
+   "enabled": false,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.01,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "لبهٔ معاملاتی کافی در برابر اسپرد دیده نمی‌شود."
+  },
+  "BTCUSDT": {
+   "enabled": true,
+   "entry_dev": 0.005,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.25,
+   "reason": "فقط با ورود عمیق‌تر و اندازهٔ کمتر قابل‌قبول است."
+  },
+  "ETHUSDT": {
+   "enabled": false,
+   "entry_dev": 0.0055,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 18.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد و لبهٔ خالص برای ریسک فعلی کافی نیست."
+  },
+  "SOLUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 15.0,
+   "size_factor": 0.0,
+   "reason": "نوسان اجرا و اسپرد ریسک را از حد مجاز بالاتر می‌برد."
+  },
+  "XRPUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 18.0,
+   "size_factor": 0.0,
+   "reason": "اسپرد فعلی اجازهٔ اجرای کم‌ریسک نمی‌دهد."
+  },
+  "DOGEUSDT": {
+   "enabled": false,
+   "entry_dev": 0.006,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 18.0,
+   "size_factor": 0.0,
+   "reason": "لبهٔ کافی برای جبران اسپرد و ریسک دیده نمی‌شود."
+  }
+ },
+ "baselines_pct": {
+  "BTCTMN": -0.261,
+  "ETHTMN": -0.142,
+  "SOLTMN": -0.057,
+  "XRPTMN": -0.069,
+  "DOGETMN": -0.01,
+  "BTCUSDT": -0.174,
+  "ETHUSDT": -0.214,
+  "SOLUSDT": -0.102,
+  "XRPUSDT": -0.085,
+  "DOGEUSDT": -0.036
+ }
+}
