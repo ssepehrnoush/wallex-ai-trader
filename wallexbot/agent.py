@@ -129,13 +129,19 @@ async def _run(llm, model: str, brief: dict, max_steps: int, kw: dict) -> tuple[
 
 
 def analyst_with_tools(committee, brief: dict, max_steps: int = 12) -> tuple[dict, list, str]:
-    """Run the agent on the committee's primary provider.
+    """Run the agent on the primary provider (BoxAPI), then on the fallback (OpenAI direct).
     gpt-5.x on /chat/completions accepts function tools only with reasoning_effort "none".
-    Only the primary provider runs the agent: a tool loop costs ~20x a single call, and the BoxAPI
-    fallback credit is shared with the other challenge apps. On failure the supervisor falls back to
-    the single-call analyst instead."""
-    kw = {"reasoning_effort": "none"} if "gpt-5" in committee.model else {}
-    if committee.client is None:
-        raise RuntimeError("no primary LLM client")
-    prop, trace, servers = asyncio.run(_run(committee.client, committee.model, brief, max_steps, kw))
-    return prop, trace, f"{committee.model} via MCP[{', '.join(servers)}]"
+    If both fail, the supervisor falls back to the single-call analyst."""
+    last = None
+    # primary (BoxAPI, the sponsor) first; if its credit runs out or it is down, the same agent runs on the
+    # fallback (OpenAI direct), so the tool-using review never silently degrades to the single-call analyst
+    for llm, model in [(committee.client, committee.model)] + ([committee.fallback] if committee.fallback else []):
+        if llm is None:
+            continue
+        kw = {"reasoning_effort": "none"} if "gpt-5" in model else {}
+        try:
+            prop, trace, servers = asyncio.run(_run(llm, model, brief, max_steps, kw))
+            return prop, trace, f"{model} via MCP[{', '.join(servers)}]"
+        except Exception as e:
+            last = e
+    raise RuntimeError(f"agent failed on every provider: {last}")
