@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>اتاق کنترل ربات والکس</title>
+<link rel="icon" href="data:,">
 <style>
 @font-face { font-family: V; src: url(fonts/Vazirmatn.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
 /* Look and feel from wallex.ir: primary #007AFF, text #171D26, neutrals #F5F6F7 / #EBEDEF / #D7DADF, buy #039874, sell #F65555.
@@ -62,8 +63,8 @@ select { background: var(--card); color: var(--ink); border: 1px solid var(--lin
 .answer .a { font-size: 15.5px; margin: 0 0 14px; }
 .answer .meta { color: var(--muted); font-size: 12px; margin-top: 12px; display: flex; gap: 8px; align-items: center; }
 .gen { display: inline-flex; align-items: center; gap: 6px; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 700; }
-.blocks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
-.blk { grid-column: span 12; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; animation: rise .5s ease both; }
+.blocks { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
+.blk { min-width: 0; grid-column: span 12; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; animation: rise .5s ease both; }
 .blk.half { grid-column: span 6; }
 @media (max-width: 900px) { .blk.half { grid-column: span 12; } }
 .blk h4 { margin: 0 0 10px; font-size: 15px; color: var(--muted); font-weight: 700; }
@@ -74,7 +75,7 @@ select { background: var(--card); color: var(--ink); border: 1px solid var(--lin
 .spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: rot .8s linear infinite; }
 @keyframes rot { to { transform: rotate(360deg); } }
 /* components */
-.kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 10px; }
 .kpi { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; }
 .kpi .l { color: var(--muted); font-size: 12.5px; }
 .kpi .v { font-size: 26px; font-weight: 900; direction: ltr; text-align: right; letter-spacing: -.5px; }
@@ -87,7 +88,7 @@ select { background: var(--card); color: var(--ink); border: 1px solid var(--lin
 .meter i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--amber), var(--red)); }
 .state { font-size: 12.5px; font-weight: 800; text-align: center; border-radius: 6px; padding: 3px 8px; }
 .ok { background: var(--gtint); color: var(--green); } .bad { background: var(--rtint); color: var(--red); } .idle { background: var(--bg); color: var(--muted); }
-.mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 12px; }
 .mk { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; }
 .mk.off { opacity: .62; border-style: dashed; }
 .mk .h { display: flex; justify-content: space-between; align-items: center; }
@@ -121,6 +122,7 @@ select { background: var(--card); color: var(--ink); border: 1px solid var(--lin
 .steps div { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 10px 14px 10px 14px; position: relative; padding-right: 52px; font-size: 14.5px; }
 .steps div::before { content: counter(s); position: absolute; right: 12px; top: 9px; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 14px; }
 .img img { width: 100%; border-radius: var(--r); display: block; }
+.tbl { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 td, th { padding: 8px; border-bottom: 1px solid var(--line); text-align: right; }
 .chart svg { width: 100%; height: auto; display: block; }
@@ -146,6 +148,18 @@ td, th { padding: 8px; border-bottom: 1px solid var(--line); text-align: right; 
 .box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; max-width: 460px; width: 100%; box-shadow: var(--shadow); }
 .box input { width: 100%; margin: 12px 0; background: var(--bg2); border: 1px solid var(--line2); color: var(--ink); border-radius: 10px; padding: 12px; font-size: 16px; }
 .foot { margin-top: 36px; color: var(--muted); font-size: 12.5px; text-align: center; }
+@media (max-width: 640px) {
+  .wrap { padding: 12px 12px 48px; }
+  .brand h1 { font-size: 18px; } .brand div { font-size: 12px; }
+  .top { gap: 10px; } .pill, select { font-size: 12.5px; padding: 5px 10px; }
+  .ask { padding: 16px; } .row { flex-direction: column; } .go { padding: 12px; }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kpi .v { font-size: 22px; }
+  .brake { grid-template-columns: minmax(0, 1fr) 80px 64px; gap: 8px; }
+  .dist { grid-template-columns: 82px minmax(0, 1fr) 70px; gap: 8px; font-size: 12px; }
+  .tools .t { grid-template-columns: minmax(0, 1fr) 70px 24px; }
+  .tools code { font-size: 10.5px; overflow-wrap: anywhere; }
+  .clock { flex: 1 1 140px; }
+}
 </style>
 </head>
 <body>
@@ -264,7 +278,7 @@ function cBrakes(b, s) {
     const ratio = k.limit ? Math.max(0, Math.min(1, k.value / k.limit)) : (k.active ? 1 : 0);
     const st = k.tripped ? ["فعال شد", "bad"] : k.key === "gain" ? (k.active ? ["روشن", "ok"] : ["منتظر سود", "idle"]) : ["عادی", "ok"];
     const val = k.key === "gain" ? pct(k.value) : fa(Math.max(0, k.value).toFixed(2)) + "٪ از " + fa(k.limit.toFixed(1)) + "٪";
-    return `<div class="brake"><div><div class="n">${k.name}</div><div class="d">${esc(k.rule)} · الان ${val}</div></div><div class="meter"><i style="width:${(ratio * 100).toFixed(1)}%"></i></div><div class="state ${st[1]}">${st[0]}</div></div>`;
+    return `<div class="brake"><div><div class="n">${k.name}</div><div class="d">${esc(k.rule)} · <span style="white-space:nowrap">الان ${val}</span></div></div><div class="meter"><i style="width:${(ratio * 100).toFixed(1)}%"></i></div><div class="state ${st[1]}">${st[0]}</div></div>`;
   }).join("");
 }
 function spark(m) {
@@ -308,11 +322,11 @@ function cTools(b, s) {
 function cDecisions(b, s) {
   const ds = s.decisions.slice(0, b.n || 8);
   if (!ds.length) return `<div class="empty">عامل معامله روشن است؛ هنوز فرصتی به آستانه نرسیده که مدل دربارهٔ آن تصمیم بگیرد.</div>`;
-  return `<table><tr><th>زمان</th><th>بازار</th><th>تصمیم</th><th>ارزانی</th><th>دلیل مدل</th></tr>${ds.map(d => `<tr><td>${hm(d.t)}</td><td style="direction:ltr">${d.symbol}</td><td><span class="state ${d.decision === "buy" ? "ok" : "idle"}">${d.decision === "buy" ? "بخر" : "نخر"}</span></td><td>${pct(d.buy_dev_pct_asked)}</td><td>${esc(d.reason_fa)}</td></tr>`).join("")}</table>`;
+  return `<div class="tbl"><table><tr><th>زمان</th><th>بازار</th><th>تصمیم</th><th>ارزانی</th><th>دلیل مدل</th></tr>${ds.map(d => `<tr><td>${hm(d.t)}</td><td style="direction:ltr">${d.symbol}</td><td><span class="state ${d.decision === "buy" ? "ok" : "idle"}">${d.decision === "buy" ? "بخر" : "نخر"}</span></td><td>${pct(d.buy_dev_pct_asked)}</td><td>${esc(d.reason_fa)}</td></tr>`).join("")}</table></div>`;
 }
 function cTrades(b, s) {
   if (!s.trades.length) return `<div class="empty">هنوز معامله‌ای بسته نشده است.</div>`;
-  return `<table><tr><th>بازار</th><th>بازده</th><th>دلیل خروج</th></tr>${s.trades.map(t => `<tr><td style="direction:ltr">${esc(t.symbol)}</td><td>${pct(t.ret_pct ?? t.return_pct)}</td><td>${esc(t.why || t.reason || "")}</td></tr>`).join("")}</table>`;
+  return `<div class="tbl"><table><tr><th>بازار</th><th>بازده</th><th>دلیل خروج</th></tr>${s.trades.map(t => `<tr><td style="direction:ltr">${esc(t.symbol)}</td><td>${pct(t.ret_pct ?? t.return_pct)}</td><td>${esc(t.why || t.reason || "")}</td></tr>`).join("")}</table></div>`;
 }
 function cRestarts(b, s) { return `<div class="minis">${s.starts.map(x => `<span>${day(x.t)} ${hm(x.t)}${x.trade_agent ? " · عامل معامله" : ""}</span>`).join("")}</div>`; }
 const IMG = {month_equity: ["img/month_equity.png", "اگر ربات یک ماه گذشته روشن بود (بک‌تست ۳۰ روزه)"], ideas: ["img/ideas.png", "میانگین سود خالص هر معامله در همهٔ ایده‌هایی که سنجیدیم"]};
@@ -327,9 +341,13 @@ const COMP = {
 };
 const HALF = new Set(["brakes", "review_tools", "market_distance", "restarts"]);
 function renderBlocks(blocks, s) {
-  return blocks.map((b, i) => { const c = COMP[b.type]; if (!c) return "";
+  blocks = blocks.filter(b => COMP[b.type]);
+  // a half-width block only stays half when the next one pairs with it, so no row is left half empty
+  const half = blocks.map(() => false);
+  for (let i = 0; i + 1 < blocks.length; i++) if (HALF.has(blocks[i].type) && HALF.has(blocks[i + 1].type)) { half[i] = half[i + 1] = true; i++; }
+  return blocks.map((b, i) => { const c = COMP[b.type];
     const title = b.type === "image" ? (IMG[b.src] || IMG.month_equity)[1] : c[1];
-    return `<div class="blk ${HALF.has(b.type) ? "half" : ""}" style="animation-delay:${i * 90}ms">${title ? `<h4>${title}</h4>` : ""}${c[0](b, s)}</div>`; }).join("");
+    return `<div class="blk ${half[i] ? "half" : ""}" style="animation-delay:${i * 90}ms">${title ? `<h4>${title}</h4>` : ""}${c[0](b, s)}</div>`; }).join("");
 }
 
 /* ---------------- page ---------------- */

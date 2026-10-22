@@ -1,26 +1,74 @@
+<div align="center">
+
 # ربات معامله‌گر والکس با ناظر هوش مصنوعی
 
-<p align="center"><a href="https://ssepehrnoush.github.io/wallex-ai-trader/"><img src="docs/img/video-thumb.jpg" width="860" alt="ویدیوی دمو، برای تماشا کلیک کنید"></a></p>
+**ربات زنده با پول واقعی روی والکس. هوش مصنوعی هر ۳۰ دقیقه بازبینی‌اش می‌کند، و قوانین ریسکش داخل کد قفل است.**
 
-<p align="center">
-  <img alt="live trading" src="https://img.shields.io/badge/live-real%20money%20since%2021%20Oct%202026-1E8A4C">
-  <img alt="AI model" src="https://img.shields.io/badge/AI-gpt--6--sol%20via%20BoxAPI-2A6FD6">
-  <img alt="MCP" src="https://img.shields.io/badge/MCP-Wallex%20official%20%2B%20engine-7C3AED">
-  <img alt="tests" src="https://img.shields.io/badge/tests-105%20offline-1E8A4C">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-6B716C">
-</p>
+هکاتون Agentic AI استارکوچ · چالش ۸ والکس · مهر و آبان ۱۴۰۵
 
-ارسال تیم برای چالش والکس در هکاتون Agentic AI استارکوچ (مهر و آبان ۱۴۰۵).
+<img alt="live trading" src="https://img.shields.io/badge/live-real%20money%20since%2021%20Oct%202026-039874">
+<img alt="AI model" src="https://img.shields.io/badge/AI-gpt--6--sol%20via%20BoxAPI-007AFF">
+<img alt="MCP" src="https://img.shields.io/badge/MCP-Wallex%20official%20%2B%20engine-4C9AFF">
+<img alt="tests" src="https://img.shields.io/badge/tests-105%20offline-039874">
+<img alt="license" src="https://img.shields.io/badge/license-MIT-2E3A4D">
+
+</div>
+
+https://github.com/user-attachments/assets/57a830ee-b368-4299-bac6-352d039f7596
+
+<div align="center">
+
+<a href="https://ssepehrnoush.github.io/wallex-ai-trader/"><img alt="Watch the demo online" src="https://img.shields.io/badge/%E2%96%B6%20%20Watch%20the%20demo-5%3A38-007AFF?style=for-the-badge"></a>
+<a href="https://ssepehrnoush.github.io/wallex-ai-trader/app/"><img alt="Generative UI" src="https://img.shields.io/badge/%E2%9C%A6%20%20Generative%20UI-open%20the%20app-4C9AFF?style=for-the-badge"></a>
+<a href="https://ssepehrnoush.github.io/wallex-ai-trader/dashboard.html"><img alt="Live dashboard" src="https://img.shields.io/badge/%F0%9F%93%8A%20%20Live%20bot-dashboard-039874?style=for-the-badge"></a>
+<a href="https://github.com/ssepehrnoush/wallex-ai-trader/releases/download/demo-video/wallex-demo.mp4"><img alt="Download the video" src="https://img.shields.io/badge/%E2%AC%87%20%20Download-MP4-2E3A4D?style=for-the-badge"></a>
+
+ویدیو همین‌جا پخش می‌شود و زیرنویس فارسی دارد. لینک تماشای آنلاین هم با و بدون فیلترشکن باز می‌شود.
+
+</div>
 
 > **در یک جمله:** والکس یک بازار محلی است که قیمت‌های جهانی را با کمی تأخیر دنبال می‌کند. هر وقت بتوان یک کوین را روی والکس به‌وضوح **ارزان‌تر از قیمت منصفانه جهانی** خرید، معمولاً ظرف چند دقیقه به آن قیمت برمی‌گردد. ربات همان لحظه می‌خرد و وقتی فاصله بسته شد می‌فروشد. یک ناظر هوش مصنوعی دوعاملی هر ۳۰ دقیقه آمار زنده همه بازارها را می‌خواند و تصمیم می‌گیرد ربات در کدام بازار، با چه آستانه و چه اندازه‌ای کار کند. قوانین ریسک داخل کد است و هوش مصنوعی نمی‌تواند دورشان بزند.
 
-> **ویدیوی دمو (۵ دقیقه و ۳۸ ثانیه):** [▶ تماشای آنلاین](https://ssepehrnoush.github.io/wallex-ai-trader/) · [دانلود wallex-demo.mp4](https://github.com/ssepehrnoush/wallex-ai-trader/releases/download/demo-video/wallex-demo.mp4)
->
-> **داشبورد ربات زنده (رابط کاربری، فقط نمایش):** [📊 باز کردن داشبورد](https://ssepehrnoush.github.io/wallex-ai-trader/dashboard.html): ارزش حساب، معامله‌ها، فاصلهٔ هر بازار تا آستانهٔ خرید، و هر بازبینی هوش مصنوعی با ابزارهایی که صدا زد.
->
-> **رابط هوشمند (Generative UI):** [✦ نسخهٔ عمومی](https://ssepehrnoush.github.io/wallex-ai-trader/app/): از ربات می‌پرسید و هوش مصنوعی جواب را به‌شکل صفحه می‌سازد (بخش [رابط کاربری هوشمند](#رابط-کاربری-هوشمند)).
+## در یک نگاه
+
+<table>
+<tr>
+<td align="center" width="25%"><h3>۱۰۵ آزمون</h3>آفلاین، بدون کلید<br>و بدون شبکهٔ صرافی</td>
+<td align="center" width="25%"><h3>۰٫۶٪</h3>ریسک هر معامله؛ کلید قطع<br>با ۳٪ افت، داخل کد</td>
+<td align="center" width="25%"><h3>هر ۳۰ دقیقه</h3>بازبینی هوش مصنوعی<br>با دو سرور MCP</td>
+<td align="center" width="25%"><h3>۸ بازار</h3>تومانی، روی حساب واقعی<br>۵ میلیون تومانی هکاتون</td>
+</tr>
+</table>
+
+## چطور کار می‌کند
+
+```mermaid
+flowchart LR
+  A["قیمت جهانی<br/>بایننس، OKX پشتیبان"] --> C["قیمت منصفانه<br/>× نرخ تتر والکس"]
+  B["دفتر سفارش والکس<br/>هر ۲٫۵ ثانیه"] --> C
+  C --> D{"ارزان‌تر از فاصلهٔ<br/>عادی همان بازار؟"}
+  H["ناظر هوش مصنوعی<br/>هر ۳۰ دقیقه، دو سرور MCP"] -. "سیاست هر بازار" .-> D
+  D -- "بله" --> E["عامل معامله<br/>بخر یا نخر، با دلیل"]
+  E --> F["قوانین ریسک در کد<br/>risk.py"]
+  F --> G["سفارش روی والکس"]
+  G --> L[("decisions.jsonl<br/>هر تصمیم با دلیل")]
+```
+
+کد فقط فرصت را پیدا می‌کند؛ هوش مصنوعی سیاست بازارها و هر خرید را تصمیم می‌گیرد؛ و ریسک در کد بسته است، پس هیچ جواب مدلی نمی‌تواند از سقف‌ها رد شود. جزئیات در [معماری](#معماری) و [نقش هوش مصنوعی](#نقش-هوش-مصنوعی).
 
 ## رابط کاربری هوشمند
+
+<table>
+<tr>
+<td width="66%"><img src="docs/img/app-home.png" alt="اتاق کنترل: از ربات بپرس، ساعت‌های مسابقه و خلاصهٔ زنده"></td>
+<td width="34%"><img src="docs/img/app-mobile.png" alt="همان صفحه روی گوشی"></td>
+</tr>
+<tr>
+<td colspan="2"><img src="docs/img/app-answer.png" alt="جواب «چرا امروز معامله نکرد؟» که هوش مصنوعی به‌شکل صفحه ساخته است"></td>
+</tr>
+</table>
+
+<p align="center"><sub>بالا: اتاق کنترل روی دسکتاپ و گوشی. پایین: جوابی که هوش مصنوعی برای «چرا امروز معامله نکرد؟» به‌شکل صفحه ساخت؛ عددها از لاگ خود ربات است. <a href="https://ssepehrnoush.github.io/wallex-ai-trader/app/">نسخهٔ عمومی را باز کنید</a>.</sub></p>
 
 **چرا ساختیم:** قانون چالش رابط کاربری را معیار اصلی نمی‌داند، ولی یک ربات پولی باید شفاف باشد: هر تصمیم هوش مصنوعی، هر ترمز ریسک و فاصلهٔ هر بازار تا خرید باید با دلیلش دیده شود، بی آنکه کسی لاگ بخواند. همین رابط پایهٔ نسخهٔ واقعی محصول برای کاربرهای والکس هم هست.
 
