@@ -21,3 +21,7 @@ research/live_spreads_check.json
 research/live_spreads_watch_check.json
 research/candles_30d_check/
 docs/*_check.json
+runs/ai_cache_ui/
+runs/*/STOP
+runs/*/FLATTEN
+runs/*/ui_controls.jsonl

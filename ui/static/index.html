@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اتاق کنترل ربات والکس</title>
+<style>
+@font-face { font-family: V; src: url(fonts/Vazirmatn.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+:root {
+  --bg: #0D1311; --bg2: #121A17; --card: #17211D; --card2: #1C2823; --line: #26332D; --ink: #ECF1EE; --muted: #93A29A;
+  --accent: #FF7A3D; --accent2: #FFB38F; --green: #3CCB82; --red: #FF5D52; --blue: #6C9BFF; --violet: #A98BFF; --amber: #F5B942;
+  --shadow: 0 10px 40px rgba(0,0,0,.35); --r: 20px;
+}
+[data-theme="light"] {
+  --bg: #EEF1EC; --bg2: #E6EAE4; --card: #FFFFFF; --card2: #F5F7F3; --line: #E2E7E0; --ink: #1D2420; --muted: #66716A;
+  --accent: #E8622C; --accent2: #C2410C; --green: #1E8A4C; --red: #C8372D; --blue: #2A6FD6; --violet: #7C3AED; --amber: #B7791F;
+  --shadow: 0 8px 30px rgba(20,30,25,.10);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: radial-gradient(1200px 600px at 85% -10%, rgba(255,122,61,.10), transparent 60%), var(--bg); color: var(--ink);
+  font-family: V, Tahoma, sans-serif; line-height: 1.75; }
+a { color: var(--accent); }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 18px 20px 60px; }
+/* header */
+.top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 6px 0 18px; }
+.logo { width: 46px; height: 46px; border-radius: 14px; background: linear-gradient(135deg, var(--accent), #FF4D6D); display: grid; place-items: center; box-shadow: 0 8px 24px rgba(255,122,61,.35); }
+.logo svg { width: 26px; height: 26px; }
+.brand h1 { margin: 0; font-size: 22px; font-weight: 900; letter-spacing: -.2px; }
+.brand div { color: var(--muted); font-size: 13px; }
+.sp { flex: 1; }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; white-space: nowrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 0 rgba(255,93,82,.6); animation: pulse 1.8s infinite; }
+.dot.shadow { background: var(--blue); animation: none; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255,93,82,.55); } 70% { box-shadow: 0 0 0 10px rgba(255,93,82,0); } 100% { box-shadow: 0 0 0 0 rgba(255,93,82,0); } }
+select, .btn, input, textarea { font-family: inherit; }
+select { background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13.5px; }
+.btn { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 12px; padding: 9px 16px; cursor: pointer; font-size: 14px; }
+.btn:hover { border-color: var(--accent); }
+.clocks { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px; }
+.clock { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 8px 14px; font-size: 13px; color: var(--muted); }
+.clock b { color: var(--ink); font-size: 15px; display: block; }
+/* composer */
+.ask { background: linear-gradient(160deg, var(--card2), var(--card)); border: 1px solid var(--line); border-radius: 26px; padding: 22px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+.ask::before { content: ""; position: absolute; inset: -1px; border-radius: 26px; padding: 1px; background: linear-gradient(120deg, rgba(255,122,61,.55), rgba(108,155,255,.35), rgba(169,139,255,.45)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.ask h2 { margin: 0 0 4px; font-size: 20px; }
+.ask p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+.row { display: flex; gap: 10px; }
+.row input { flex: 1; background: var(--bg2); border: 1px solid var(--line); color: var(--ink); border-radius: 16px; padding: 15px 18px; font-size: 16px; outline: none; }
+.row input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(255,122,61,.15); }
+.go { background: linear-gradient(135deg, var(--accent), #FF4D6D); color: #fff; border: 0; border-radius: 16px; padding: 0 22px; font-size: 16px; font-weight: 800; cursor: pointer; }
+.go:disabled { opacity: .55; cursor: wait; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.chip { background: var(--bg2); border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; font-size: 13.5px; cursor: pointer; color: var(--ink); }
+.chip:hover { border-color: var(--accent); color: var(--accent2); }
+/* generated answers */
+.answers { display: flex; flex-direction: column; gap: 18px; margin-top: 18px; }
+.answer { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 20px; box-shadow: var(--shadow); animation: rise .45s ease both; }
+.answer .q { color: var(--muted); font-size: 13.5px; margin-bottom: 4px; }
+.answer h3 { margin: 0 0 6px; font-size: 21px; }
+.answer .a { font-size: 15.5px; margin: 0 0 14px; }
+.answer .meta { color: var(--muted); font-size: 12px; margin-top: 12px; display: flex; gap: 8px; align-items: center; }
+.gen { display: inline-flex; align-items: center; gap: 6px; background: rgba(169,139,255,.14); color: var(--violet); border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 700; }
+.blocks { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+.blk { grid-column: span 12; background: var(--card2); border: 1px solid var(--line); border-radius: 18px; padding: 16px; animation: rise .5s ease both; }
+.blk.half { grid-column: span 6; }
+@media (max-width: 900px) { .blk.half { grid-column: span 12; } }
+.blk h4 { margin: 0 0 10px; font-size: 15px; color: var(--muted); font-weight: 700; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
+.skel { height: 14px; border-radius: 8px; background: linear-gradient(90deg, var(--bg2), var(--line), var(--bg2)); background-size: 200% 100%; animation: sh 1.2s linear infinite; margin: 8px 0; }
+@keyframes sh { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.thinking { color: var(--muted); font-size: 14px; display: flex; gap: 10px; align-items: center; }
+.spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: rot .8s linear infinite; }
+@keyframes rot { to { transform: rotate(360deg); } }
+/* components */
+.kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.kpi .l { color: var(--muted); font-size: 12.5px; }
+.kpi .v { font-size: 26px; font-weight: 900; direction: ltr; text-align: right; letter-spacing: -.5px; }
+.kpi .s { color: var(--muted); font-size: 12px; }
+.g { color: var(--green); } .r { color: var(--red); } .o { color: var(--accent); } .b { color: var(--blue); } .v2 { color: var(--violet); }
+.brake { display: grid; grid-template-columns: 1fr 200px 70px; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.brake:last-child { border-bottom: 0; }
+.brake .n { font-weight: 800; } .brake .d { color: var(--muted); font-size: 12.5px; }
+.meter { height: 10px; background: var(--bg2); border-radius: 999px; overflow: hidden; direction: ltr; }
+.meter i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--amber), var(--red)); }
+.state { font-size: 12.5px; font-weight: 800; text-align: center; border-radius: 999px; padding: 3px 8px; }
+.ok { background: rgba(60,203,130,.14); color: var(--green); } .bad { background: rgba(255,93,82,.16); color: var(--red); } .idle { background: rgba(147,162,154,.14); color: var(--muted); }
+.mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.mk { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px; }
+.mk.off { opacity: .62; border-style: dashed; }
+.mk .h { display: flex; justify-content: space-between; align-items: center; }
+.mk .sym { font-weight: 900; direction: ltr; } .mk .nm { color: var(--muted); font-size: 12.5px; }
+.tag { font-size: 11.5px; font-weight: 800; border-radius: 999px; padding: 2px 9px; }
+.mk .nums { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.mk .nums b { color: var(--ink); direction: ltr; display: inline-block; }
+.mk .why { font-size: 12.5px; color: var(--muted); margin-top: 6px; min-height: 2.6em; }
+.dist { display: grid; grid-template-columns: 150px 1fr 120px; gap: 12px; align-items: center; margin: 8px 0; font-size: 13.5px; }
+.dist .track { position: relative; height: 16px; background: var(--bg2); border-radius: 999px; direction: ltr; }
+.dist .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: linear-gradient(90deg, var(--blue), var(--violet)); }
+.dist .fill.hot { background: linear-gradient(90deg, var(--amber), var(--accent)); }
+.dist .thr { position: absolute; right: 0; top: -4px; bottom: -4px; width: 3px; background: var(--accent); border-radius: 2px; }
+.rev { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px; margin-bottom: 10px; }
+.rev .h { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.rev .h b { color: var(--ink); font-size: 14.5px; }
+.rev .s { margin: 8px 0; font-size: 14px; }
+.split { display: flex; height: 8px; border-radius: 999px; overflow: hidden; direction: ltr; margin: 6px 0; }
+.split i:first-child { background: var(--blue); } .split i:last-child { background: var(--accent); }
+.mini { font-size: 12px; color: var(--muted); }
+.minis { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.minis span { font-size: 11.5px; border-radius: 999px; padding: 2px 9px; background: var(--bg2); border: 1px solid var(--line); direction: ltr; }
+.tools .t { display: grid; grid-template-columns: 1fr 160px 34px; gap: 10px; align-items: center; font-size: 13px; margin: 6px 0; }
+.tools code { direction: ltr; font-size: 12px; color: var(--ink); }
+.tools .bar { height: 10px; border-radius: 999px; direction: ltr; background: var(--bg2); overflow: hidden; }
+.tools .bar i { display: block; height: 100%; }
+.empty { color: var(--muted); font-size: 14px; padding: 18px; text-align: center; background: var(--card); border: 1px dashed var(--line); border-radius: 14px; }
+.call { border-radius: 16px; padding: 14px 16px; font-size: 15px; border: 1px solid var(--line); }
+.call.info { background: rgba(108,155,255,.10); } .call.good { background: rgba(60,203,130,.10); } .call.warn { background: rgba(245,185,66,.12); } .call.bad { background: rgba(255,93,82,.12); }
+.steps { counter-reset: s; display: grid; gap: 8px; }
+.steps div { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px 10px 14px; position: relative; padding-right: 52px; font-size: 14.5px; }
+.steps div::before { content: counter(s); position: absolute; right: 12px; top: 9px; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 14px; }
+.img img { width: 100%; border-radius: 14px; display: block; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+td, th { padding: 8px; border-bottom: 1px solid var(--line); text-align: right; }
+.chart svg { width: 100%; height: auto; display: block; }
+/* sections */
+.sec { margin-top: 26px; }
+.sec > h2 { font-size: 18px; margin: 0 0 12px; display: flex; gap: 10px; align-items: center; }
+.sec > h2 small { color: var(--muted); font-weight: 400; font-size: 13px; }
+/* controls */
+.ctl { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 18px; }
+.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+.switch input { display: none; }
+.switch span { width: 50px; height: 28px; border-radius: 999px; background: var(--line); position: relative; transition: .2s; }
+.switch span::after { content: ""; position: absolute; top: 3px; right: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: .2s; }
+.switch input:checked + span { background: var(--accent); } .switch input:checked + span::after { right: 25px; }
+.lock { margin-top: 14px; border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; }
+.lock.on { background: rgba(255,93,82,.12); border: 1px solid rgba(255,93,82,.35); } .lock.open { background: rgba(245,185,66,.10); border: 1px solid rgba(245,185,66,.35); }
+.cbtns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+.cbtn { border-radius: 14px; padding: 12px 18px; font-weight: 800; border: 1px solid var(--line); background: var(--card2); color: var(--ink); cursor: pointer; font-family: inherit; font-size: 14.5px; }
+.cbtn.danger { border-color: rgba(255,93,82,.5); color: var(--red); }
+.cbtn:disabled { opacity: .4; cursor: not-allowed; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 20; padding: 16px; }
+.modal.show { display: flex; }
+.box { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 22px; max-width: 460px; width: 100%; box-shadow: var(--shadow); }
+.box input { width: 100%; margin: 12px 0; background: var(--bg2); border: 1px solid var(--line); color: var(--ink); border-radius: 12px; padding: 12px; font-size: 16px; }
+.foot { margin-top: 36px; color: var(--muted); font-size: 12.5px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg></div>
+    <div class="brand"><h1>اتاق کنترل ربات والکس</h1><div>هکاتون Agentic AI استارکوچ · چالش ۸ · رابط هوشمند</div></div>
+    <div class="sp"></div>
+    <span class="pill" id="live"><i class="dot"></i><span>…</span></span>
+    <span class="pill" id="upd">…</span>
+    <select id="run" title="اجرا"></select>
+    <button class="btn" id="theme" title="روشن / تیره">◐</button>
+  </div>
+  <div class="clocks" id="clocks"></div>
+
+  <div class="ask">
+    <h2>از ربات بپرس</h2>
+    <p>هوش مصنوعی (از BoxAPI، اسپانسر هکاتون) جواب را به‌شکل صفحه می‌سازد: کارت، نمودار و جدول. همهٔ عددها مستقیم از لاگ و وضعیت خود ربات می‌آیند، نه از مدل.</p>
+    <div class="row"><input id="q" placeholder="مثلاً: چرا امروز معامله نکرد؟" autocomplete="off"><button class="go" id="go">بساز</button></div>
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="answers" id="answers"></div>
+
+  <div class="sec"><h2>خلاصهٔ زنده <small id="ovsub">از لاگ ربات، هر ۳۰ ثانیه تازه می‌شود</small></h2><div class="blocks" id="overview"></div></div>
+
+  <div class="sec"><h2>کنترل‌ها <small>پرریسک · فقط به خواست کاربر</small></h2>
+    <div class="ctl">
+      <label class="switch"><input type="checkbox" id="cmode"><span></span><b>حالت کنترل</b></label>
+      <div class="mini" style="margin-top:6px">پیش‌فرض خاموش است. دکمه‌ها فقط وقتی کار می‌کنند که این حالت روشن باشد، اجرا «سایه» باشد و فرمان را با نوشتن «تأیید» تأیید کنید.</div>
+      <div id="lockbox"></div>
+      <div class="cbtns">
+        <button class="cbtn" data-a="stop" disabled>⏸ توقف خرید تازه</button>
+        <button class="cbtn" data-a="resume" disabled>▶ ادامهٔ خرید</button>
+        <button class="cbtn danger" data-a="flatten" disabled>⏏ فروش همه به تومان</button>
+      </div>
+    </div>
+  </div>
+  <div class="foot">رابط فقط می‌خواند؛ کلیدها روی سرور محلی می‌مانند و به مرورگر نمی‌رسند · کد: github.com/ssepehrnoush/wallex-ai-trader</div>
+</div>
+
+<div class="modal" id="modal"><div class="box">
+  <h3 id="mt" style="margin:0 0 6px"></h3><div class="mini" id="md"></div>
+  <input id="mi" placeholder="تأیید" autocomplete="off">
+  <div style="display:flex;gap:10px;justify-content:flex-start"><button class="cbtn danger" id="mok">اجرا</button><button class="cbtn" id="mcancel">انصراف</button></div>
+  <div class="mini" id="merr" style="color:var(--red);margin-top:8px"></div>
+</div></div>
+
+<script>
+const TOKEN = "__UI_TOKEN__";
+const STATIC = TOKEN.startsWith("__");          // opened as a plain page (GitHub Pages): no server, no model, no controls
+let STATIC_DATA = null;
+const $ = (s, el = document) => el.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const fa = (s) => String(s).replace(/[0-9]/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]).replace(/\./g, "٫").replace(/-/g, "−");
+const money = (n) => fa(Math.round(n).toLocaleString("en-US")).replace(/,/g, "٬");
+const pct = (v, d = 2, sign = true) => v == null ? "–" : (sign && v > 0 ? "+" : "") + fa(Number(v).toFixed(d)) + "٪";
+const hm = (iso) => iso ? new Date(iso).toLocaleTimeString("fa-IR", {timeZone: "Asia/Tehran", hour: "2-digit", minute: "2-digit"}) : "–";
+const day = (iso) => new Date(iso).toLocaleDateString("fa-IR-u-ca-persian", {timeZone: "Asia/Tehran", day: "numeric", month: "long"});
+const ago = (iso) => { const m = Math.max(0, Math.round((Date.now() - new Date(iso)) / 60000)); return m < 1 ? "همین الان" : m < 60 ? fa(m) + " دقیقه پیش" : fa(Math.round(m / 60)) + " ساعت پیش"; };
+const MODE = {normal: ["عادی", "ok"], defensive: ["دفاعی", "idle"], halt: ["توقف", "bad"]};
+let SNAP = null, RUN = "live_main";
+
+async function api(path, body) {
+  if (STATIC) return staticApi(path, body);
+  const r = await fetch(path, body ? {method: "POST", headers: {"Content-Type": "application/json", "X-UI-Token": TOKEN}, body: JSON.stringify(body)} : {});
+  const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j;
+}
+
+async function staticApi(path, body) {
+  if (!STATIC_DATA) STATIC_DATA = await (await fetch("data.json", {cache: "no-store"})).json();
+  if (path.startsWith("/api/runs")) return [{run: "live_main", kind: "live", updated: STATIC_DATA.snapshot.updated}];
+  if (path.startsWith("/api/snapshot")) return STATIC_DATA.snapshot;
+  if (path.startsWith("/api/controls")) return {run: "live_main", kind: "live", locked: true, stop: false, flatten: false,
+    why: "این نسخهٔ عمومی فقط نمایش است و هیچ کنترلی ندارد. در نسخهٔ محلی هم روی حساب پول واقعی (حساب هکاتون) همیشه قفل است، چون قانون چالش معاملهٔ دستی را ممنوع کرده."};
+  if (path.startsWith("/api/ask")) {
+    const a = STATIC_DATA.answers[body.question];
+    if (a) return {...a, snapshot: STATIC_DATA.snapshot};
+    throw new Error("پرسش آزاد فقط در نسخهٔ محلی کار می‌کند، چون کلید هوش مصنوعی نباید در صفحهٔ عمومی باشد. یکی از پرسش‌های آماده را بزنید؛ جواب‌هایشان را همین هوش مصنوعی از دادهٔ واقعی ربات ساخته است.");
+  }
+  throw new Error("در نسخهٔ عمومی در دسترس نیست");
+}
+
+/* ---------------- components: each takes its numbers from the snapshot ---------------- */
+const KPI = {
+  equity: (k) => ["ارزش حساب", money(k.equity), "تومان · سرمایهٔ اول " + money(k.start_equity)],
+  return: (k) => ["بازده", pct(k.return_pct), "نسبت به سرمایهٔ اول", k.return_pct > 0 ? "g" : k.return_pct < 0 ? "r" : ""],
+  drawdown: (k) => ["بیشترین افت", pct(k.max_drawdown_pct, 2, false), "کلید قطع در ۳٪"],
+  trades: (k) => ["معامله‌های بسته‌شده", fa(k.trades), k.open_positions ? fa(k.open_positions) + " موقعیت باز" : "موقعیت باز ندارد"],
+  reviews: (k) => ["بازبینی هوش مصنوعی", fa(k.reviews), "هر ۳۰ دقیقه", "v2"],
+  tool_calls: (k) => ["فراخوانی ابزار MCP", fa(k.tool_calls), "رسمی والکس " + fa(k.tool_calls_official) + " · موتور " + fa(k.tool_calls - k.tool_calls_official), "b"],
+  errors: (k) => ["خطاها", fa(k.errors), k.errors ? "در لاگ" : "بدون خطا", k.errors ? "r" : "g"],
+  decisions: (k) => ["تصمیم‌های عامل معامله", fa(k.decisions), "بخر یا نخر، با دلیل"],
+};
+function cKpis(b, s) {
+  const keys = (b.keys && b.keys.length ? b.keys : Object.keys(KPI)).filter(k => KPI[k]);
+  return `<div class="kpis">${keys.map(k => { const [l, v, sub, c] = KPI[k](s.kpis); return `<div class="kpi"><div class="l">${l}</div><div class="v ${c || ""}">${v}</div><div class="s">${esc(sub)}</div></div>`; }).join("")}</div>`;
+}
+function cEquity(b, s) {
+  const pts = s.equity.map(([t, v]) => [new Date(t).getTime(), v]);
+  if (pts.length < 2) return `<div class="empty">هنوز دادهٔ کافی برای نمودار نیست.</div>`;
+  const W = 900, H = 240, L = 70, R = 14, T = 14, B = 34;
+  const t0 = pts[0][0], t1 = pts[pts.length - 1][0], base = s.kpis.start_equity;
+  let lo = Math.min(...pts.map(p => p[1]), base), hi = Math.max(...pts.map(p => p[1]), base);
+  const pad = Math.max((hi - lo) * .2, base * .004); lo -= pad; hi += pad;
+  const X = t => L + (t - t0) / Math.max(1, t1 - t0) * (W - L - R), Y = v => T + (hi - v) / (hi - lo) * (H - T - B);
+  const line = pts.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(" ");
+  const area = `${line} ${X(t1).toFixed(1)},${Y(base).toFixed(1)} ${X(t0).toFixed(1)},${Y(base).toFixed(1)}`;
+  const ticks = [lo + pad, base, hi - pad].map(v => `<text x="${L - 8}" y="${Y(v) + 4}" font-size="12" fill="var(--muted)" text-anchor="end">${fa((v / 1e6).toFixed(3))}م</text>`).join("");
+  const xt = [0, .25, .5, .75, 1].map(f => { const t = t0 + f * (t1 - t0); return `<text x="${X(t)}" y="${H - 10}" font-size="12" fill="var(--muted)" text-anchor="middle" style="direction:rtl">${day(new Date(t).toISOString())} ${hm(new Date(t).toISOString())}</text>`; }).join("");
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" style="direction:ltr"><defs><linearGradient id="eg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--green)" stop-opacity=".35"/><stop offset="1" stop-color="var(--green)" stop-opacity="0"/></linearGradient></defs>
+    <line x1="${L}" x2="${W - R}" y1="${Y(base)}" y2="${Y(base)}" stroke="var(--muted)" stroke-dasharray="4 5"/>${ticks}${xt}
+    <polygon points="${area}" fill="url(#eg)"/><polyline points="${line}" fill="none" stroke="var(--green)" stroke-width="3" stroke-linejoin="round"/></svg></div>`;
+}
+function cBrakes(b, s) {
+  return s.brakes.map(k => {
+    const ratio = k.limit ? Math.max(0, Math.min(1, k.value / k.limit)) : (k.active ? 1 : 0);
+    const st = k.tripped ? ["فعال شد", "bad"] : k.key === "gain" ? (k.active ? ["روشن", "ok"] : ["منتظر سود", "idle"]) : ["عادی", "ok"];
+    const val = k.key === "gain" ? pct(k.value) : fa(Math.max(0, k.value).toFixed(2)) + "٪ از " + fa(k.limit.toFixed(1)) + "٪";
+    return `<div class="brake"><div><div class="n">${k.name}</div><div class="d">${esc(k.rule)} · الان ${val}</div></div><div class="meter"><i style="width:${(ratio * 100).toFixed(1)}%"></i></div><div class="state ${st[1]}">${st[0]}</div></div>`;
+  }).join("");
+}
+function spark(m) {
+  const d = m.spark || []; if (d.length < 2) return "";
+  const W = 220, H = 54, lo = Math.min(...d, -m.threshold_pct - .15), hi = Math.max(...d, .4);
+  const X = i => i / (d.length - 1) * W, Y = v => (hi - v) / (hi - lo) * H;
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:54px;direction:ltr;margin-top:6px"><rect x="0" y="${Y(-m.threshold_pct)}" width="${W}" height="${H - Y(-m.threshold_pct)}" fill="var(--green)" opacity=".10"/><line x1="0" x2="${W}" y1="${Y(-m.threshold_pct)}" y2="${Y(-m.threshold_pct)}" stroke="var(--accent)" stroke-dasharray="3 3"/><polyline points="${d.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ")}" fill="none" stroke="${m.enabled ? "var(--blue)" : "var(--muted)"}" stroke-width="2"/></svg>`;
+}
+function cMarkets(b, s) {
+  const want = (b.symbols || []).filter(Boolean);
+  const ms = s.markets.filter(m => !want.length || want.includes(m.symbol));
+  return `<div class="mgrid">${ms.map(m => `<div class="mk ${m.enabled ? "" : "off"}"><div class="h"><div><div class="sym">${m.symbol}</div><div class="nm">${m.name}</div></div>
+    <span class="tag ${m.enabled ? "ok" : m.watch ? "idle" : "bad"}">${m.enabled ? "فعال" : m.watch ? "تماشا" : "خاموش"}</span></div>${spark(m)}
+    <div class="nums"><span>آستانه <b>−${fa(m.threshold_pct.toFixed(2))}٪</b></span><span>الان <b>${pct(m.dev_now_pct)}</b></span><span>کمترین <b>${pct(m.dev_min_pct)}</b></span></div>
+    <div class="why">${esc(m.reason_fa)}</div></div>`).join("")}</div>`;
+}
+function cDistance(b, s) {
+  const want = (b.symbols || []).filter(Boolean);
+  const ms = s.markets.filter(m => (!want.length || want.includes(m.symbol)) && m.dev_min_pct != null);
+  if (!ms.length) return `<div class="empty">برای این اجرا دادهٔ دفتر سفارش نیست.</div>`;
+  return ms.map(m => { const r = Math.max(0, Math.min(1, -m.dev_min_pct / m.threshold_pct));
+    return `<div class="dist"><div><b style="direction:ltr;display:inline-block">${m.symbol}</b> <span class="mini">${m.enabled ? "" : "· خاموش"}</span></div>
+      <div class="track"><div class="fill ${r > .85 ? "hot" : ""}" style="width:${(r * 100).toFixed(1)}%"></div><div class="thr"></div></div>
+      <div class="mini">${r >= 1 ? "از آستانه رد شد" : fa(Math.round(r * 100)) + "٪ تا خرید"}</div></div>`; }).join("") +
+    `<div class="mini" style="margin-top:6px">نوار = عمیق‌ترین ارزانیِ ۶ ساعت اخیر نسبت به آستانهٔ خرید همان بازار؛ خط نارنجی = آستانه.</div>`;
+}
+function cReviews(b, s) {
+  const rs = s.reviews.slice(0, Math.max(1, Math.min(5, b.n || 2)));
+  if (!rs.length) return `<div class="empty">هنوز بازبینی‌ای ثبت نشده.</div>`;
+  return rs.map(r => { const m = MODE[r.risk_mode] || [r.risk_mode, "idle"];
+    return `<div class="rev"><div class="h"><b>${day(r.t)}، ${hm(r.t)}</b><span class="state ${m[1]}">${m[0]}</span><span>${fa(r.calls)} ابزار: والکس ${fa(r.official)} · موتور ${fa(r.calls - r.official)}</span><span class="mini" style="direction:ltr">${esc(r.model || "")}</span></div>
+      <div class="split"><i style="width:${r.calls ? r.official / r.calls * 100 : 0}%"></i><i style="flex:1"></i></div>
+      <div class="s">${esc(r.summary_fa)}</div>
+      <div class="minis">${r.on.map(x => `<span style="color:var(--green)">${x}</span>`).join("")}${r.off.map(x => `<span style="color:var(--muted);text-decoration:line-through">${x}</span>`).join("")}</div></div>`; }).join("");
+}
+function cTools(b, s) {
+  const r = s.reviews[Math.max(0, Math.min(s.reviews.length - 1, b.index || 0))]; if (!r) return `<div class="empty">بازبینی‌ای نیست.</div>`;
+  const mx = Math.max(...r.tools.map(t => t.n), 1);
+  return `<div class="tools"><div class="mini" style="margin-bottom:6px">بازبینی ${hm(r.t)} · آبی = MCP رسمی والکس، نارنجی = MCP موتور</div>${r.tools.map(t => `<div class="t"><code>${esc(t.tool)}</code><div class="bar"><i style="width:${t.n / mx * 100}%;background:${t.server === "wallex-official" ? "var(--blue)" : "var(--accent)"}"></i></div><b>${fa(t.n)}</b></div>`).join("")}</div>`;
+}
+function cDecisions(b, s) {
+  const ds = s.decisions.slice(0, b.n || 8);
+  if (!ds.length) return `<div class="empty">عامل معامله روشن است؛ هنوز فرصتی به آستانه نرسیده که مدل دربارهٔ آن تصمیم بگیرد.</div>`;
+  return `<table><tr><th>زمان</th><th>بازار</th><th>تصمیم</th><th>ارزانی</th><th>دلیل مدل</th></tr>${ds.map(d => `<tr><td>${hm(d.t)}</td><td style="direction:ltr">${d.symbol}</td><td><span class="state ${d.decision === "buy" ? "ok" : "idle"}">${d.decision === "buy" ? "بخر" : "نخر"}</span></td><td>${pct(d.buy_dev_pct_asked)}</td><td>${esc(d.reason_fa)}</td></tr>`).join("")}</table>`;
+}
+function cTrades(b, s) {
+  if (!s.trades.length) return `<div class="empty">هنوز معامله‌ای بسته نشده است.</div>`;
+  return `<table><tr><th>بازار</th><th>بازده</th><th>دلیل خروج</th></tr>${s.trades.map(t => `<tr><td style="direction:ltr">${esc(t.symbol)}</td><td>${pct(t.ret_pct ?? t.return_pct)}</td><td>${esc(t.why || t.reason || "")}</td></tr>`).join("")}</table>`;
+}
+function cRestarts(b, s) { return `<div class="minis">${s.starts.map(x => `<span>${day(x.t)} ${hm(x.t)}${x.trade_agent ? " · عامل معامله" : ""}</span>`).join("")}</div>`; }
+const IMG = {month_equity: ["img/month_equity.png", "اگر ربات یک ماه گذشته روشن بود (بک‌تست ۳۰ روزه)"], ideas: ["img/ideas.png", "میانگین سود خالص هر معامله در همهٔ ایده‌هایی که سنجیدیم"]};
+const COMP = {
+  kpis: [cKpis, "شاخص‌ها"], equity_chart: [cEquity, "ارزش حساب"], brakes: [cBrakes, "ترمزهای ریسک"], markets: [cMarkets, "بازارها"],
+  market_distance: [cDistance, "فاصله تا خرید"], reviews: [cReviews, "تصمیم‌های هوش مصنوعی"], review_tools: [cTools, "ابزارهایی که ایجنت صدا زد"],
+  trade_decisions: [cDecisions, "عامل معامله"], trades: [cTrades, "معامله‌ها"], restarts: [cRestarts, "راه‌اندازی‌ها"],
+  image: [(b) => { const i = IMG[b.src] || IMG.month_equity; return `<div class="img"><img src="${i[0]}" alt=""></div>`; }, null],
+  callout: [(b) => `<div class="call ${["info", "good", "warn", "bad"].includes(b.tone) ? b.tone : "info"}">${esc(b.text)}</div>`, null],
+  steps: [(b) => `<div class="steps">${(b.items || []).map(x => `<div>${esc(x)}</div>`).join("")}</div>`, null],
+  text: [(b) => `<div style="font-size:15px">${esc(b.text)}</div>`, null],
+};
+const HALF = new Set(["brakes", "review_tools", "market_distance", "restarts"]);
+function renderBlocks(blocks, s) {
+  return blocks.map((b, i) => { const c = COMP[b.type]; if (!c) return "";
+    const title = b.type === "image" ? (IMG[b.src] || IMG.month_equity)[1] : c[1];
+    return `<div class="blk ${HALF.has(b.type) ? "half" : ""}" style="animation-delay:${i * 90}ms">${title ? `<h4>${title}</h4>` : ""}${c[0](b, s)}</div>`; }).join("");
+}
+
+/* ---------------- page ---------------- */
+function header(s) {
+  const live = s.kind === "live";
+  $("#live").innerHTML = `<i class="dot ${live ? "" : "shadow"}"></i><span>${live ? "زنده · پول واقعی" : s.kind === "shadow" ? "سایه · بدون پول" : "اجرا"}</span>`;
+  $("#upd").textContent = "آخرین داده: " + (s.updated ? ago(s.updated) : "–");
+  const c = s.contest, now = Date.now();
+  const left = (iso) => { const m = Math.round((new Date(iso) - now) / 60000); return m <= 0 ? "گذشت" : (m >= 60 ? fa(Math.floor(m / 60)) + " ساعت و " : "") + fa(m % 60) + " دقیقه"; };
+  $("#clocks").innerHTML = [["قطع خرید تازه", c.no_new_entries], ["فروش همه به تومان", c.flatten], ["پایان مسابقه", c.end]]
+    .map(([l, t]) => `<div class="clock">${l} · ${hm(t)}<b>${left(t)}</b></div>`).join("");
+}
+async function refresh() {
+  try {
+    SNAP = await api("/api/snapshot?run=" + encodeURIComponent(RUN));
+    header(SNAP);
+    $("#overview").innerHTML = renderBlocks([{type: "kpis"}, {type: "equity_chart"}, {type: "brakes"}, {type: "market_distance"}, {type: "markets"}, {type: "reviews", n: 2}, {type: "review_tools", index: 0}, {type: "trade_decisions", n: 6}], SNAP);
+    controls();
+  } catch (e) { $("#overview").innerHTML = `<div class="empty">خواندن داده نشد: ${esc(e.message)}</div>`; }
+}
+const SUGG = ["چرا امروز معامله نکرد؟", "ریسک الان چطور است؟", "هوش مصنوعی آخرین بار چه تصمیمی گرفت و با کدام ابزارها؟", "کدام بازار به خرید نزدیک‌تر است؟", "اگر ربات یک ماه پیش روشن بود چه می‌شد؟", "ربات چطور تصمیم می‌گیرد بخرد؟"];
+$("#chips").innerHTML = SUGG.map(x => `<span class="chip">${x}</span>`).join("");
+$("#chips").onclick = (e) => { if (e.target.classList.contains("chip")) { $("#q").value = e.target.textContent; ask(); } };
+async function ask() {
+  const q = $("#q").value.trim(); if (!q) return;
+  $("#go").disabled = true;
+  const card = document.createElement("div"); card.className = "answer";
+  card.innerHTML = `<div class="q">${esc(q)}</div><div class="thinking"><span class="spin"></span><span>هوش مصنوعی دارد از دادهٔ واقعی ربات صفحه می‌سازد…</span></div><div class="skel" style="width:70%"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:55%"></div>`;
+  $("#answers").prepend(card);
+  try {
+    const r = await api("/api/ask", {run: RUN, question: q});
+    const p = r.page;
+    card.innerHTML = `<div class="q">${esc(q)}</div><h3>${esc(p.title)}</h3><p class="a">${esc(p.answer)}</p><div class="blocks">${renderBlocks(p.blocks, r.snapshot)}</div>
+      <div class="meta"><span class="gen">✦ رابط ساخته‌شده با هوش مصنوعی</span><span style="direction:ltr">${esc(r.model)}</span><span>· ${fa(r.latency_s)} ثانیه</span>${r.t ? `<span>· ساخته‌شده در ${day(r.t)} ${hm(r.t)}</span>` : ""}</div>`;
+  } catch (e) { card.innerHTML = `<div class="q">${esc(q)}</div><div class="call bad">${esc(e.message)}</div>`; }
+  $("#go").disabled = false;
+}
+$("#go").onclick = ask; $("#q").onkeydown = (e) => { if (e.key === "Enter") ask(); };
+
+/* ---------------- high-risk controls: off by default, locked on real money ---------------- */
+let CTL = null, ACT = null;
+const ACTN = {stop: "توقف خرید تازه", resume: "ادامهٔ خرید", flatten: "فروش همه به تومان"};
+async function controls() {
+  try { CTL = await api("/api/controls?run=" + encodeURIComponent(RUN)); } catch (e) { return; }
+  const on = $("#cmode").checked;
+  $("#lockbox").innerHTML = !on ? "" : CTL.locked
+    ? `<div class="lock on"><span style="font-size:22px">🔒</span><div><b>قفل است.</b> ${esc(CTL.why)}</div></div>`
+    : `<div class="lock open"><span style="font-size:22px">⚠️</span><div>${esc(CTL.why)} وضعیت فعلی: ${CTL.stop ? "خرید متوقف است" : "خرید آزاد است"}${CTL.flatten ? " · فرمان فروش همه ثبت شده" : ""}.</div></div>`;
+  document.querySelectorAll(".cbtn[data-a]").forEach(b => b.disabled = !on || CTL.locked);
+}
+$("#cmode").onchange = controls;
+document.querySelectorAll(".cbtn[data-a]").forEach(b => b.onclick = () => {
+  ACT = b.dataset.a; $("#mt").textContent = ACTN[ACT] + "؟";
+  $("#md").textContent = `این فرمان روی اجرای «${RUN}» اثر می‌گذارد. برای ادامه بنویسید: تأیید`; $("#mi").value = ""; $("#merr").textContent = "";
+  $("#modal").classList.add("show"); $("#mi").focus();
+});
+$("#mcancel").onclick = () => $("#modal").classList.remove("show");
+$("#mok").onclick = async () => {
+  try { await api("/api/control", {run: RUN, action: ACT, confirm: $("#mi").value.trim()}); $("#modal").classList.remove("show"); controls(); }
+  catch (e) { $("#merr").textContent = e.message; }
+};
+
+/* ---------------- boot ---------------- */
+$("#theme").onclick = () => { const h = document.documentElement; h.dataset.theme = h.dataset.theme === "dark" ? "light" : "dark"; try { localStorage.setItem("theme", h.dataset.theme); } catch (e) {} };
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+(async () => {
+  const runs = await api("/api/runs");
+  $("#run").innerHTML = runs.map(r => `<option value="${r.run}">${r.run}${r.kind === "live" ? " · زنده" : r.kind === "shadow" ? " · سایه" : ""}</option>`).join("");
+  RUN = runs.find(r => r.run === "live_main") ? "live_main" : runs[0].run; $("#run").value = RUN;
+  $("#run").onchange = () => { RUN = $("#run").value; $("#cmode").checked = false; refresh(); };
+  refresh(); setInterval(refresh, 30000);
+})();
+</script>
+</body>
+</html>
