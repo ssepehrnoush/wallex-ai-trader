@@ -4,7 +4,7 @@
 
 > **در یک جمله:** والکس یک بازار محلی است که قیمت‌های جهانی را با کمی تأخیر دنبال می‌کند. هر وقت بتوان یک کوین را روی والکس به‌وضوح **ارزان‌تر از قیمت منصفانه جهانی** خرید، معمولاً ظرف چند دقیقه به آن قیمت برمی‌گردد. ربات همان لحظه می‌خرد و وقتی فاصله بسته شد می‌فروشد. یک ناظر هوش مصنوعی دوعاملی هر ۳۰ دقیقه آمار زنده همه بازارها را می‌خواند و تصمیم می‌گیرد ربات در کدام بازار، با چه آستانه و چه اندازه‌ای کار کند. قوانین ریسک داخل کد است و هوش مصنوعی نمی‌تواند دورشان بزند.
 
-> **ویدیوی دمو (۵ دقیقه و ۳۲ ثانیه):** [دانلود wallex-demo.mp4](https://github.com/ssepehrnoush/wallex-ai-trader/releases/download/demo-video/wallex-demo.mp4) · [صفحهٔ انتشار](https://github.com/ssepehrnoush/wallex-ai-trader/releases/tag/demo-video)
+> **ویدیوی دمو (۵ دقیقه و ۳۲ ثانیه):** [▶ تماشای آنلاین](https://ssepehrnoush.github.io/wallex-ai-trader/) · [دانلود wallex-demo.mp4](https://github.com/ssepehrnoush/wallex-ai-trader/releases/download/demo-video/wallex-demo.mp4)
 
 ## خلاصه برای داور (۲ دقیقه)
 
