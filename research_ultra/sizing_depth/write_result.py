@@ -179,7 +179,7 @@ res = {
             "'defensive' mode (size_factor capped at 0.4) be replaced by a code rule (0.7 normally, 0.4 only after a 1% drawdown "
             "or a -0.75% day)? Also, can walking several ask levels add anything?",
     "verdict": "accept",
-    "one_line_fa": "پذیرفته شد، ولی تصمیم نهایی با دایی است: عمق بازار جلوی معامله را نمی‌گیرد و حدود ۹۰ تا ۹۴ درصد سفارش پر می‌شود. "
+    "one_line_fa": "پذیرفته شد، ولی تصمیم نهایی با تیم است: عمق بازار جلوی معامله را نمی‌گیرد و حدود ۹۰ تا ۹۴ درصد سفارش پر می‌شود. "
                    "اگر اندازه معامله از ۰٫۴ به ۰٫۷ برسد، سود مورد انتظار ۴۵ ساعت باقی‌مانده در حالت پایه از حدود ۰٫۶۷ به ۱٫۱۵ درصد سرمایه "
                    "می‌رسد و در حالت محتاطانه از ۰٫۲ به ۰٫۳۳ درصد.",
     "summary_md": summary.strip(),
