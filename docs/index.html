@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ربات معامله‌گر والکس، ویدیوی دمو</title>
+<style>
+  :root { --bg:#EEF0EC; --card:#fff; --ink:#1F2421; --muted:#5C635E; --accent:#E8622C; --line:#E3E6E1; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#151917; --card:#1F2421; --ink:#EEF0EC; --muted:#A8B0AA; --line:#2E3430; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:Vazirmatn, Tahoma, "Segoe UI", sans-serif; line-height:1.8; }
+  main { max-width:1040px; margin:0 auto; padding:28px 16px 40px; }
+  .kicker { color:var(--muted); font-size:15px; }
+  h1 { font-size:clamp(24px, 4vw, 36px); margin:4px 0 6px; line-height:1.4; }
+  h1 span { color:var(--accent); }
+  .lead { color:var(--muted); margin:0 0 18px; font-size:16px; }
+  .player { background:#000; border-radius:16px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,.18); }
+  video { display:block; width:100%; height:auto; aspect-ratio:16/9; background:#000; }
+  .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+  .links a { text-decoration:none; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:999px; padding:8px 16px; font-size:15px; }
+  .links a.primary { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .note { margin-top:18px; color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <div class="kicker">هکاتون Agentic AI استارکوچ · چالش ۸ والکس</div>
+  <h1>ربات معامله‌گر والکس <span>با عامل هوش مصنوعی</span></h1>
+  <p class="lead">ویدیوی دمو، ۵ دقیقه و ۳۲ ثانیه، با زیرنویس فارسی. ربات از ۲۹ مهر با پول واقعی روی حساب هکاتون کار می‌کند.</p>
+  <div class="player">
+    <video controls playsinline preload="metadata" poster="video-poster.jpg">
+      <source src="wallex-demo.mp4" type="video/mp4">
+      مرورگر شما پخش ویدیو را پشتیبانی نمی‌کند. <a href="wallex-demo.mp4">ویدیو را دانلود کنید</a>.
+    </video>
+  </div>
+  <div class="links">
+    <a class="primary" href="https://github.com/ssepehrnoush/wallex-ai-trader">کد و مستندات در گیت‌هاب</a>
+    <a href="https://github.com/ssepehrnoush/wallex-ai-trader/blob/main/RESULTS.md">نتیجه‌ها با منبع (RESULTS.md)</a>
+    <a href="wallex-demo.mp4" download>دانلود ویدیو</a>
+  </div>
+  <p class="note">لاگ تک‌تک تصمیم‌های ربات زنده در runs/live_main/decisions.jsonl و داشبورد ثابتش در dashboard/snapshot_live_main.html همان ریپوست.</p>
+</main>
+</body>
+</html>
