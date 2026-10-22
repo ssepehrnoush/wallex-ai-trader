@@ -77,6 +77,15 @@
     "max_entry_dev": 0.01,
     "size_factor_range": [0.2, 0.3]
   },
+  "trade_agent": {
+    "enabled": false,
+    "timeout_s": 8,
+    "max_age_s": 20,
+    "cooldown_after_skip_s": 120,
+    "cooldown_after_other_s": 30,
+    "max_requests_per_hour": 30,
+    "max_requests_per_symbol_hour": 8
+  },
   "ai": {
     "enabled": true,
     "provider": "boxapi",

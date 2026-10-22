@@ -101,6 +101,34 @@ class AICommittee:
                         encoding="utf-8")
         return resp
 
+    def ask_fast(self, role: str, system: str, payload: dict, timeout_s: float) -> tuple[dict, str, float]:
+        """One attempt on the primary provider, then one on the fallback, each bounded by timeout_s and with no
+        retry sleeps: for decisions that are worthless when late. Never reads the cache (every payload is a live
+        moment); writes each answer there as an audit record. Returns (response, model used, latency in s)."""
+        if self.offline or self.client is None:
+            raise RuntimeError("no live model available")
+        kwargs = dict(response_format={"type": "json_object"},
+                      messages=[{"role": "system", "content": system},
+                                {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}])
+        if self.cfg.get("reasoning_effort"):
+            kwargs["reasoning_effort"] = self.cfg["reasoning_effort"]
+        t0, last = time.time(), None
+        for client, model in [(self.client, self.model)] + ([self.fallback] if self.fallback else []):
+            try:
+                # max_retries=0: the SDK would otherwise retry a timeout twice by itself
+                r = client.with_options(max_retries=0).chat.completions.create(timeout=timeout_s, model=model, **kwargs)
+                resp = json.loads(r.choices[0].message.content)
+            except Exception as e:
+                last = e
+                continue
+            latency = round(time.time() - t0, 2)
+            self.calls += 1
+            (self.cache_dir / f"{role}_{_hash(payload)}.json").write_text(
+                json.dumps({"role": role, "model": model, "latency_s": latency, "payload": payload, "response": resp},
+                           ensure_ascii=False, indent=1), encoding="utf-8")
+            return resp, model, latency
+        raise RuntimeError(f"LLM failed: {last}")
+
     # -- decision ---------------------------------------------------------
     def decide(self, cand, snapshot: dict) -> dict:
         """Returns a dict with analyst, officer and a normalized verdict. Never raises:

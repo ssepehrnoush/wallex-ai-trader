@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 import os
 import threading
 import time
@@ -25,8 +26,9 @@ from .config import RUNS, load_backtest, load_secrets, market_tick_files
 from .fairvalue import Policy, PremiumTracker, base_of, fair_price, momentum, quote_of
 from .feeds import GlobalFeed, WallexBooks
 from .journal import Journal, read as read_journal
-from .risk import RiskManager
+from .risk import TEHRAN, RiskManager
 from .supervisor import Supervisor, min_entry
+from .trader import TradeAgent
 
 
 @dataclass
@@ -224,6 +226,9 @@ class Engine:
                            if cfg["ai"].get("enabled", True) else None)
         if self.supervisor:      # contest bounds hold from the first tick, not only after the first review
             self.policies = self.supervisor.bound_start(self.policies)
+        # per-trade AI decision (trader.py): off unless config trade_agent.enabled; then the model decides each entry
+        ta = cfg.get("trade_agent") or {}
+        self.trader = TradeAgent(committee, ta) if ta.get("enabled") and cfg["ai"].get("enabled", True) else None
         self._review_lock = threading.Lock()
         self._last_review = 0.0
         self._ticks_f = open(self.run_dir / "ticks.csv", "a", newline="", encoding="utf-8")
@@ -486,27 +491,101 @@ class Engine:
                 self._exit(s, b, pos, reason, sell_dev, now)
             return
 
-        if not trading or not tr.ready or not pol.enabled or phase != "normal":
+        if self.trader:
+            d = self.trader.take(s)       # a trade-agent answer that came back since the last tick
+            if d:
+                self._act_on_decision(s, d, b, fair, base, buy_dev, pol, now, nowdt,
+                                      self._no_candidate(s, b, buy_dev, pol, now, phase, trading))
+                return
+        if self._no_candidate(s, b, buy_dev, pol, now, phase, trading):
             return
-        if self.halt_flag.exists():
-            return
-        # the fee floor is enforced here too, so no policy (default, stale or AI) can buy below it
-        if buy_dev > -max(pol.entry_dev, min_entry(s, self.fees_q)):
-            return
-        mom = momentum(self.gl_hist[base_of(s)], now, 60) if base_of(s) in self.gl_hist else None
-        if mom is not None and mom < -self.fv["max_global_drop_60s"]:
-            self.j.log("skip", symbol=s, why="global price falling fast", mom_60s=round(mom, 5), buy_dev=round(buy_dev, 5))
-            return
-        if b.spread > self.fv["max_spread"]:
+        if self.trader:
+            # the model decides this entry; ask only when the risk rules would allow a trade at all
+            if self.trader.wants(s, now) and self._risk_size(s, pol, buy_dev, nowdt)[0] > 0:
+                self.trader.request(s, self._dossier(s, b, base, buy_dev, pol, now), now)
             return
         self._enter(s, b, fair, base, buy_dev, pol, now, nowdt)
 
-    def _enter(self, s, b, fair, base, buy_dev, pol, now, nowdt):
+    def _no_candidate(self, s, b, buy_dev, pol, now, phase, trading) -> str:
+        """'' when the entry rule sees a candidate in this market now, else the reason it does not."""
+        if not trading or not self.trackers[s].ready or not pol.enabled or phase != "normal":
+            return "not trading"
+        if self.halt_flag.exists():
+            return "STOP file"
+        # the fee floor is enforced here too, so no policy (default, stale or AI) can buy below it
+        if buy_dev > -max(pol.entry_dev, min_entry(s, self.fees_q)):
+            return "no discount"
+        mom = momentum(self.gl_hist[base_of(s)], now, 60) if base_of(s) in self.gl_hist else None
+        if mom is not None and mom < -self.fv["max_global_drop_60s"]:
+            self.j.log("skip", symbol=s, why="global price falling fast", mom_60s=round(mom, 5), buy_dev=round(buy_dev, 5))
+            return "global price falling fast"
+        if b.spread > self.fv["max_spread"]:
+            return "spread above the cap"
+        return ""
+
+    def _dossier(self, s, b, base, buy_dev, pol, now) -> dict:
+        """What the trade agent sees about one candidate: percentages and market data, never balances or keys."""
+        thr = max(pol.entry_dev, min_entry(s, self.fees_q))
+        devs = [(t, d) for t, d in self.trackers[s].buy_devs if t >= now - 600]
+        lasted = 0.0
+        for t, d in reversed(devs):           # how long the discount has been at or beyond the threshold
+            if d > -thr:
+                break
+            lasted = now - t
+        g = self.gl_hist.get(base_of(s))
+        mom = {}
+        for w in (60, 300):
+            m = momentum(g, now, w) if g else None
+            mom[f"{w}s"] = round(m * 100, 3) if m is not None else None
+        u, st = self._last_books.get("USDTTMN"), self.state
+        contest = self.cfg.get("contest") or {}
+        lo = contest.get("size_factor_range", [0.0])[0] if contest.get("enabled") else 0.0
+        return {"time_tehran": datetime.now(TEHRAN).strftime("%H:%M"),
+                "market": {"symbol": s, "ask": b.ask, "bid": b.bid, "spread_pct": round(b.spread * 100, 3),
+                           "ask_depth_quote": round(b.ask * b.ask_qty), "buy_dev_pct": round(buy_dev * 100, 3),
+                           "threshold_pct": round(thr * 100, 3), "baseline_premium_pct": round(base * 100, 3),
+                           "discount_lasted_s": round(lasted),
+                           "buy_dev_last_10min_pct": [round(d * 100, 3) for _, d in devs[::12]][-20:]},
+                "policy": {"stop_pct": pol.stop_pct, "max_hold_min": pol.max_hold_min, "review_reason": pol.reason[:160]},
+                "global": {"coin": base_of(s), "momentum_pct": mom},
+                "usdt_tmn_book": {"spread_pct": round(u.spread * 100, 3)} if u else None,
+                "account": ({"return_pct": round(st.total_return * 100, 3), "drawdown_pct": round(st.drawdown * 100, 3),
+                             "open_positions": len(self.positions)} if st else None),
+                "recent_trades": [{k: t[k] for k in ("symbol", "reason", "ret_pct") if k in t} for t in self.trades[-5:]],
+                "backtest_reference": (self.backtest_ref or {}).get("markets", {}).get(s),
+                "size_min": min(lo, pol.size_factor), "size_max": pol.size_factor}
+
+    def _act_on_decision(self, s, d, b, fair, base, buy_dev, pol, now, nowdt, gone: str):
+        """A trade-agent answer is back: buy only on a fresh BUY whose candidate is still there (gone == '')."""
+        cfg = self.trader.cfg
+        age = now - d["asked_at"]
+        act = "skip"
+        if d["decision"] == "buy":
+            act = "expired" if age > cfg.get("max_age_s", 20) else "candidate gone" if gone else "buy"
+        self.j.log("trade_decision", symbol=s, decision=d["decision"], action=act, why_not=gone or None,
+                   age_s=round(age, 1), buy_dev_pct_asked=d.get("buy_dev_pct"), buy_dev_pct_now=round(buy_dev * 100, 3),
+                   **{k: d.get(k) for k in ("size_factor", "confidence", "reason_fa", "model", "latency_s", "error")})
+        if d.get("error"):
+            self.j.log("trade_agent_error", symbol=s, error=d["error"])     # the model did not answer: no trade
+        if act == "buy":
+            lo = min(d.get("size_min", 0.0), pol.size_factor)
+            try:
+                size = float(d.get("size_factor") or 0.0)
+            except (TypeError, ValueError):
+                size = lo
+            size = min(max(size, lo), pol.size_factor) if math.isfinite(size) else lo
+            self._enter(s, b, fair, base, buy_dev, pol, now, nowdt, size_factor=size, ai=d)
+        # every answer cools the market: a long one after a real SKIP, a short one otherwise (error, expired,
+        # vanished candidate, or a BUY the risk rules or the exchange then refused), so one market cannot flood the model
+        long_wait = act == "skip" and not d.get("error")
+        self.trader.cool(s, now, cfg.get("cooldown_after_skip_s", 120) if long_wait else cfg.get("cooldown_after_other_s", 30))
+
+    def _risk_size(self, s, pol, buy_dev, nowdt, size_factor=None):
+        """RiskManager.size for an entry in this market now: (toman notional, reasons); 0 = blocked."""
         st = self.state
         if st is None:
-            return
+            return 0.0, ["no account value yet"]
         u = self.usdttmn or 0
-        to_tmn = u if quote_of(s) == "USDT" else 1.0
 
         class C:      # adapter for RiskManager.size (expects stop/tp percentages)
             symbol = s
@@ -514,7 +593,13 @@ class Engine:
             tp_pct = abs(buy_dev) + pol.exit_slack
         st.open_symbols = set(self.positions)
         st.exposure = sum(p.qty * p.entry * (u if quote_of(k) == "USDT" else 1) for k, p in self.positions.items())
-        notional_tmn, why = self.risk.size(st, C, pol.size_factor, nowdt, edge_checks=False)
+        return self.risk.size(st, C, pol.size_factor if size_factor is None else size_factor, nowdt, edge_checks=False)
+
+    def _enter(self, s, b, fair, base, buy_dev, pol, now, nowdt, size_factor=None, ai=None):
+        if self.state is None:
+            return
+        to_tmn = (self.usdttmn or 0) if quote_of(s) == "USDT" else 1.0
+        notional_tmn, why = self._risk_size(s, pol, buy_dev, nowdt, size_factor)
         if notional_tmn <= 0:
             self.j.log("blocked", symbol=s, buy_dev=round(buy_dev, 5), why=why)
             return
@@ -528,9 +613,9 @@ class Engine:
         self.positions[s] = Position(s, fill["qty"], fill["avg"], fill["spent"], now, buy_dev, fill["id"], b.bid)
         self.j.log("entry", symbol=s, executor=self.exec.name, price=fill["avg"], qty=fill["qty"], spent=round(fill["spent"], 4),
                    fair=round(fair, 6), baseline_pct=round(base * 100, 3), buy_dev_pct=round(buy_dev * 100, 3),
-                   policy=pol.to_dict(), risk=why,
-                   why_fa=f"قیمت خرید والکس {abs(buy_dev) * 100:.2f}٪ ارزان‌تر از فاصلهٔ عادی‌اش با قیمت منصفانهٔ جهانی بود "
-                          f"(آستانه {pol.entry_dev * 100:.2f}٪)")
+                   policy=pol.to_dict(), risk=why, ai_decision=ai,
+                   why_fa=(f"قیمت خرید والکس {abs(buy_dev) * 100:.2f}٪ ارزان‌تر از فاصلهٔ عادی‌اش با قیمت منصفانهٔ جهانی بود "
+                           f"(آستانه {pol.entry_dev * 100:.2f}٪)" + (f"؛ تصمیم هوش مصنوعی: {ai.get('reason_fa', '')}" if ai else "")))
 
     def _live_cash(self, q):
         try:

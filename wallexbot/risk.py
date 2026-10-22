@@ -2,6 +2,7 @@
 can never make one bigger, riskier or more frequent than these rules allow."""
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 
@@ -98,7 +99,7 @@ class RiskManager:
         if budget and st.total_return <= -budget:
             return 0.0, [f"contest loss budget: account {st.total_return:.2%}, limit -{budget:.1%}"]
 
-        factor = min(max(ai_size_factor, 0.0), 1.0)
+        factor = min(max(ai_size_factor, 0.0), 1.0) if math.isfinite(ai_size_factor) else 0.0
         risk_toman = st.equity * self.risk_fraction(st) * factor
         notional = risk_toman / (cand.stop_pct + self.fees["taker"] + self.fees["maker"])
         cap_pos = st.equity * self.p["max_position_pct"]
