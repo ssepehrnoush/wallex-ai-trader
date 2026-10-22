@@ -4,8 +4,8 @@ bt_fairvalue reports net percent per trade, one market at a time. This replays t
 account: RiskManager.size sets each order (risk_per_trade x AI size factor over stop + both fees, capped per
 position and in total, minimum order), at most max_positions at once, a cooldown after each loss, the Tehran-day
 loss limit, the drawdown kill switch and the profit lock. The window-end phases are off (a month has no contest end),
-and so is the gain guard (risk.protect_gain_*): it is a contest end-game rule that, over a month, would stop the
-account after its first gain. scripts/bt_gain_guard.py measures it on contest-length windows instead.
+and so are the contest end-game rules (risk.protect_gain_* and risk.contest_loss_budget): over a month they would
+stop the account after its first gain or its first small loss. scripts/bt_gain_guard.py measures it on contest-length windows instead.
 Writes <run>/toman.json; no network, no files read outside the run folder and config.json.
 
 Simplifications, all stated in the output note: equity moves only when a trade closes (the engine marks open
@@ -40,7 +40,7 @@ window = [pd.Timestamp(x) for x in summary["params"]["window_utc"]]
 
 
 def replay(trades: pd.DataFrame, factor: float, kill: bool = True) -> dict:
-    p = {**cfg["risk"], "protect_gain_share": 0, **({} if kill else {"kill_switch_dd": 1.0})}
+    p = {**cfg["risk"], "protect_gain_share": 0, "contest_loss_budget": 0, **({} if kill else {"kill_switch_dd": 1.0})}
     rm = RiskManager(p, (window[1] + pd.Timedelta(days=30)).to_pydatetime(), cfg["fees"])
     st = rm.new_state(a.equity)
     open_, taken, skipped, by_sym, by_day = [], [], {}, {}, {}

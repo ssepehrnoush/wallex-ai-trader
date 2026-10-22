@@ -90,6 +90,13 @@ class RiskManager:
             return 0.0, [f"target {cand.tp_pct:.2%} does not clear fees {round_trip:.2%} + edge"]
         if edge_checks and cand.tp_pct / max(cand.stop_pct, 1e-9) < self.p["min_reward_risk"]:
             return 0.0, [f"reward/risk {cand.tp_pct / cand.stop_pct:.2f} < {self.p['min_reward_risk']}"]
+        share, budget = self.p.get("protect_gain_share", 0.0), self.p.get("contest_loss_budget", 0.0)
+        if (share or budget) and st.closed_since_mark:
+            return 0.0, ["a trade just closed: waiting for a fresh account value"]
+        # Contest loss budget: this far below the start capital, getting back above it is unlikely and every further
+        # loss costs drawdown score, so no new entries (open positions still exit as usual).
+        if budget and st.total_return <= -budget:
+            return 0.0, [f"contest loss budget: account {st.total_return:.2%}, limit -{budget:.1%}"]
 
         factor = min(max(ai_size_factor, 0.0), 1.0)
         risk_toman = st.equity * self.risk_fraction(st) * factor
@@ -106,10 +113,7 @@ class RiskManager:
         # mark (the engine marks within seconds) instead of sizing on a stale value. Open positions count at
         # their marked value and their worst case is worst x entry exposure, which holds while none is up by
         # more than that (target exits take profit near +0.65%).
-        share = self.p.get("protect_gain_share", 0.0)
         if share:
-            if st.closed_since_mark:
-                return 0.0, why + ["a trade just closed: waiting for a fresh account value"]
             gain = st.equity - st.start_equity
             if gain >= self.p["protect_gain_min_toman"]:
                 worst = self.p["protect_gain_worst_loss"]

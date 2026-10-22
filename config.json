@@ -68,7 +68,14 @@
     "flatten_min_before_end": 75,
     "protect_gain_share": 0.5,
     "protect_gain_worst_loss": 0.04,
-    "protect_gain_min_toman": 100
+    "protect_gain_min_toman": 100,
+    "contest_loss_budget": 0.004
+  },
+  "contest": {
+    "enabled": true,
+    "keep_markets_on": true,
+    "max_entry_dev": 0.01,
+    "size_factor_range": [0.2, 0.3]
   },
   "ai": {
     "enabled": true,

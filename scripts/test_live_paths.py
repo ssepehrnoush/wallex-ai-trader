@@ -147,7 +147,8 @@ class FakeClient:
 def make_engine(fake):
     cfg = load_config().raw
     cfg["ai"]["enabled"] = False
-    cfg["risk"]["protect_gain_share"] = 0      # these checks chain trades after a win; the gain guard has its own test
+    # these checks chain trades right after a close; the contest rules (gain guard, loss budget) have their own tests
+    cfg["risk"]["protect_gain_share"] = cfg["risk"]["contest_loss_budget"] = 0
     eng = E.Engine(cfg, "shadow", "test_live_paths")       # build offline, then swap in the live executor
     eng._ticks_f.close()                                    # tick rows to memory: never into runs/*/ticks.csv
     eng._ticks_f = io.StringIO()

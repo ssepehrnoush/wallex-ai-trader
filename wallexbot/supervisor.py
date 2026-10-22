@@ -28,6 +28,18 @@ WATCH_RULE = ("Markets in watch_markets start switched off. The code switches on
               "you set; otherwise it stays off whatever you propose. Run simulate_threshold for each watch market and "
               "propose enabled=true when its replay is profitable.")
 
+# Contest mode (config "contest"): the contest pays its profit score only to a positive final return, and a market
+# the bot never trades in can only end flat. The gain guard (risk.py) freezes risk once the account is ahead and a
+# loss budget stops new entries after a small loss, so the AI may switch a live market off only for a structural
+# reason the code can see, and its caution is bounded. Told to the model too, so it reasons with it.
+CONTEST_RULE = ("Contest mode is on: the contest scores only a positive final return. The code freezes new risk as soon as "
+                "the account is ahead (gain guard) and stops new entries after a small loss (loss budget), so an idle bot "
+                "can only end flat. Keep every market without a structural problem (spread above the cap, top of book "
+                "below the minimum order, stale data) enabled; set entry_dev between the fee floor and the contest cap "
+                "and size_factor within the contest range; prefer lower thresholds where spreads are tight. Use risk_mode "
+                "halt only for an account-level emergency (a crash, broken data): it switches every market off.")
+CONTEST_DEFAULTS = {"keep_markets_on": True, "max_entry_dev": 0.01, "size_factor_range": [0.2, 0.3]}
+
 ANALYST = """You are the quant analyst supervising a fair-value reversion trading engine on the Iranian exchange Wallex.
 The engine buys a coin on Wallex when its ASK is below the global fair price (Binance price, times Wallex USDT/TMN
 for toman markets) by more than `entry_dev` beyond that market's normal premium, and sells when the BID is back
@@ -69,11 +81,62 @@ def min_entry(symbol: str, fees_by_quote: dict) -> float:
 
 
 class Supervisor:
-    def __init__(self, committee, fees: dict, watch=()):
+    def __init__(self, committee, fees: dict, watch=(), contest: dict | None = None, max_spread: float = 0.006,
+                 min_depth: float = 60_000):
         self.ai = committee            # AICommittee instance: provides the cached _ask()
         self.fees = fees
         self.watch = set(watch)
+        self.contest = {**CONTEST_DEFAULTS, **contest} if contest and contest.get("enabled") else {}
+        self.max_spread, self.min_depth = max_spread, min_depth
         self.last: dict = {}
+
+    def _structural(self, st: dict) -> str:
+        """A reason the code can verify for keeping a market off, from the review's own market data ('' = none)."""
+        if st.get("samples", 0) < 10 or "spread_pct" not in st:
+            return "no fresh order book or fair value"
+        if st["spread_pct"] > self.max_spread * 100:
+            return f"spread {st['spread_pct']}% above the {self.max_spread:.1%} cap"
+        if st.get("quote") == "TMN" and st.get("top_depth_quote", 0) < self.min_depth:
+            return "top of book below the minimum order"
+        return ""
+
+    def _bound(self, s: str, p: Policy, problem: str | None) -> tuple[bool, float, float]:
+        """Contest bounds for one market. problem=None: do not force it on (start-up, watch markets). Watch markets
+        keep the AI's entry_dev, so their live replay tests what the AI proposed, but their size is clamped too."""
+        c = self.contest
+        lo, hi = c["size_factor_range"]
+        watch = s in self.watch
+        enabled = p.enabled or (not watch and problem == "" and c["keep_markets_on"])
+        entry = p.entry_dev if watch else min(p.entry_dev, max(c["max_entry_dev"], min_entry(s, self.fees)))
+        return enabled, entry, min(max(p.size_factor, lo), hi)
+
+    def bound_start(self, policies: dict[str, Policy]) -> dict[str, Policy]:
+        """Contest bounds on the start-up policies, which trade until the first review returns."""
+        if not self.contest:
+            return policies
+        out = {}
+        for s, p in policies.items():
+            _, entry, size = self._bound(s, p, None)
+            out[s] = Policy(**{**p.to_dict(), "entry_dev": entry, "size_factor": size})
+        return out
+
+    def _contest_bounds(self, new: dict[str, Policy], data: dict) -> dict:
+        """Contest mode: a live market stays on unless the code sees a structural problem; entry_dev is capped and
+        size_factor kept in range. Watch markets keep their own gate. Returns what was changed, for the log."""
+        notes = {}
+        for s, p in new.items():
+            problem = None if s in self.watch else self._structural((data.get("markets") or {}).get(s, {}))
+            enabled, entry, size = self._bound(s, p, problem)
+            if (enabled, entry, size) == (p.enabled, p.entry_dev, p.size_factor):
+                continue
+            notes[s] = {"ai": {"enabled": p.enabled, "entry_dev": p.entry_dev, "size_factor": p.size_factor},
+                        "contest": {"enabled": enabled, "entry_dev": entry, "size_factor": size},
+                        "structural_problem": problem or None}
+            why = "حالت مسابقه: " + ("روشن ماند، چون مشکل ساختاری نبود" if enabled and not p.enabled else
+                                     "آستانه و اندازه در بازهٔ مسابقه")
+            new[s] = Policy(**{**p.to_dict(), "enabled": enabled, "entry_dev": entry, "size_factor": size,
+                               "reason": f"{why} | {p.reason}"[:200]})
+        return notes
 
     def _live_evidence(self, s: str, p: Policy) -> dict:
         from .tools import simulate_threshold      # imported here: tools imports this module
@@ -88,6 +151,10 @@ class Supervisor:
         but switches to defensive sizing (fail safe)."""
         trace, analyst_model = [], None
         watch_note = {"watch_markets": sorted(self.watch), "watch_rule": WATCH_RULE} if self.watch else {}
+        if self.contest:
+            watch_note["contest_rule"] = CONTEST_RULE
+            watch_note["contest_bounds"] = {"entry_dev_max": self.contest["max_entry_dev"],
+                                            "size_factor_range": self.contest["size_factor_range"]}
         data = {**data, **watch_note}
         try:
             if self.ai.cfg.get("agentic", True):
@@ -133,6 +200,10 @@ class Supervisor:
                             stop_pct=_clamp("stop_pct", stop), max_hold_min=_clamp("max_hold_min", hold),
                             size_factor=_clamp("size_factor", size),
                             reason=str(o.get("reason_fa") or a.get("reason") or "")[:200])
+        contest_notes = {}
+        if self.contest:
+            contest_notes = (self._contest_bounds(new, data) if mode != "halt" else
+                             {"halt": "AI risk_mode halt: every market off for this review (contest bounds not applied)"})
         # the watch gate is code, not prompt: no model output can switch a watch market on without live proof
         evidence = {}
         for s in sorted(self.watch & new.keys()):
@@ -145,6 +216,6 @@ class Supervisor:
                                    "reason": f"watch: live replay not profitable yet ({ev.get('trades', 0)} trades)"})
         rec = {"risk_mode": mode, "summary_fa": final.get("summary_fa", ""), "analyst_summary": prop.get("summary", ""),
                "analyst_model": analyst_model, "analyst_tool_calls": trace, "watch_evidence": evidence,
-               "policies": {s: p.to_dict() for s, p in new.items()}}
+               "contest_adjustments": contest_notes, "policies": {s: p.to_dict() for s, p in new.items()}}
         self.last = rec
         return new, rec

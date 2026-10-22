@@ -44,6 +44,7 @@ Investigate before deciding: check order books (wallex_basic_get_market_depth) a
 simulate_threshold to test candidate thresholds before proposing them.
 Budget: at most 8 tool calls, so pick the markets that matter. Prefer thresholds that historically fired a few times per hour with positive simulated results.
 If the brief lists watch_markets, follow its watch_rule: run simulate_threshold on each of them before proposing.
+If the brief has a contest_rule, follow it and stay within contest_bounds.
 Disabling a market means missing its next dislocation. Disable ONLY for structural problems (spread above 0.6%,
 top-of-book depth below the minimum order, stale or missing data). A quiet market with no recent discounts should
 stay enabled at a fee-safe threshold: the threshold itself protects capital.

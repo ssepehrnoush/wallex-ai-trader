@@ -219,7 +219,11 @@ class Engine:
         self.window_end = datetime.fromisoformat(cfg["window"]["end_utc"].replace("Z", "+00:00"))
         self.risk = RiskManager(cfg["risk"], self.window_end, cfg["fees"])
         committee = AICommittee(cfg["ai"], self.secrets, RUNS / "ai_cache_live")
-        self.supervisor = Supervisor(committee, self.fees_q, self.watch) if cfg["ai"].get("enabled", True) else None
+        self.supervisor = (Supervisor(committee, self.fees_q, self.watch, contest=cfg.get("contest"),
+                                      max_spread=self.fv["max_spread"], min_depth=cfg["risk"]["min_notional"] * 1.05)
+                           if cfg["ai"].get("enabled", True) else None)
+        if self.supervisor:      # contest bounds hold from the first tick, not only after the first review
+            self.policies = self.supervisor.bound_start(self.policies)
         self._review_lock = threading.Lock()
         self._last_review = 0.0
         self._ticks_f = open(self.run_dir / "ticks.csv", "a", newline="", encoding="utf-8")

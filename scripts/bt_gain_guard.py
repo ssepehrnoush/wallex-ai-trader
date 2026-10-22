@@ -7,6 +7,8 @@ an account that ends in profit, so the number that matters is the share of windo
 Same simplifications as scripts/bt_toman.py (equity moves on closes, full fills). No network.
 
   python scripts/bt_gain_guard.py runs/backtests/fv_ai_policy_30d --size-factor 0.35 --hours 32.5 --out docs/gain_guard_windows.json
+Contest mode (RESULTS.md 8): every market on at the 0.7% floor, size 0.25, gain guard and the 0.4% loss budget:
+  python scripts/bt_gain_guard.py runs/backtests/fv_live_rule_30d --size-factor 0.25 --hours 28 --loss-budget 0.004 --out docs/contest_mode_windows.json
 """
 import argparse
 import json
@@ -27,6 +29,7 @@ ap.add_argument("run")
 ap.add_argument("--size-factor", type=float, default=0.35, help="AI size factor (live reviews used 0.25 to 0.4)")
 ap.add_argument("--hours", type=float, default=32.5, help="window length (2026-10-22 09:20 UTC to the last entry)")
 ap.add_argument("--equity", type=float, default=5_000_000)
+ap.add_argument("--loss-budget", type=float, default=0.0, help="contest loss budget in both replays (config: 0.004)")
 ap.add_argument("--out", default="docs/gain_guard_windows.json")
 a = ap.parse_args()
 at_root = lambda p: Path(p) if Path(p).is_absolute() else ROOT / p
@@ -37,7 +40,7 @@ far = pd.Timestamp("2100-01-01", tz="UTC").to_pydatetime()          # no contest
 
 
 def replay(tr: pd.DataFrame, guard: bool) -> tuple[float, int]:
-    p = {**cfg["risk"], **({} if guard else {"protect_gain_share": 0})}
+    p = {**cfg["risk"], "contest_loss_budget": a.loss_budget, **({} if guard else {"protect_gain_share": 0})}
     rm = RiskManager(p, far, cfg["fees"])
     st, open_, taken = rm.new_state(a.equity), [], 0
 
@@ -84,6 +87,7 @@ doc = {"note": (f"Every {a.hours:g}-hour window (stepped 1 h) of {run.name} repl
                 "config risk.protect_gain_*, '_no_guard' sets protect_gain_share to 0. Candle trades: the live order "
                 "book offers fewer signals (RESULTS.md 2.6, 2.7), so read the shares, not the trade counts."),
        "params": {"run": run.name, "size_factor": a.size_factor, "hours": a.hours, "equity_toman": a.equity,
+                  "loss_budget": a.loss_budget,
                   "guard": {k: v for k, v in cfg["risk"].items() if k.startswith("protect_gain")}},
        "results": res}
 at_root(a.out).write_text(json.dumps(doc, indent=1), encoding="utf-8")

@@ -100,7 +100,7 @@ def judge(cands, frames, ctx, ai: AICommittee | None, workers: int = 8) -> dict[
 
 def run(cfg, frames, cands, verdicts, start_equity: float, label: str, out_dir: Path | None = None) -> dict:
     p, fees = cfg["strategy"], cfg["fees"]
-    rp = dict(cfg["risk"])
+    rp = {**cfg["risk"], "protect_gain_share": 0, "contest_loss_budget": 0}   # contest end-game rules: live only
     rm = RiskManager(rp, datetime(2100, 1, 1, tzinfo=timezone.utc), fees)
     st = rm.new_state(start_equity)
     slip = cfg["slippage"]

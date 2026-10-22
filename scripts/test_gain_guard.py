@@ -113,10 +113,10 @@ rm.mark(st, START + 0.4, NOW)                        # rounding noise is not a g
 n, _ = size(rm, st)
 check(round(n) == round(base), f"equity +0.4 toman: guard off ({n:,.0f})")
 
-rm, st = fresh({**P, "protect_gain_share": 0})
+rm, st = fresh({**P, "protect_gain_share": 0, "contest_loss_budget": 0})
 rm.on_exit(st, "ETHTMN", 10_000, NOW)
 n, _ = size(rm, st)
-check(round(n) == round(base), f"share 0 disables the guard, no wait after a close ({n:,.0f})")
+check(round(n) == round(base), f"share 0 and no loss budget: no guard and no wait after a close ({n:,.0f})")
 
 worst, ok, cases = P["protect_gain_worst_loss"], True, 0
 for gain in range(-50_000, 400_001, 2_500):
