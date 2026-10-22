@@ -297,6 +297,7 @@
 python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # پایتون ۳٫۱۴
 # کلیدها در ../.env : BOXAPI_KEY (سرویس اصلی هوش مصنوعی)، OPENAI_API_KEY (اختیاری، پشتیبان)،
 # و برای حالت واقعی WALLEX_API_KEY + WALLEX_KEY_ACCOUNT=hackathon
+cp .env.example ../.env                   # نمونهٔ کلیدها با توضیح؛ همین نام‌ها به‌صورت متغیر محیطی هم کار می‌کنند (بک‌تست و آزمون‌ها کلید نمی‌خواهند)
 python scripts/premium.py                 # پژوهش پریمیوم (بدون کلید)
 python scripts/bt_fairvalue.py --live-exit --max-drop 0.004 --entry-tmn 0.007 --slack 0.0005 --stop 0.009 --hold 25 --spreads-json research/live_spreads_shadow_v1.json --symbols BTCTMN,ETHTMN,SOLTMN,XRPTMN,DOGETMN,PEPETMN,BNBTMN,ARBTMN --out runs/backtests/rerun_live_rule   # بک‌تست مرجع (بدون کلید)
 python scripts/bt_fairvalue.py --live-exit --max-drop 0.004 --entry-tmn 0.007 --slack 0.0005 --stop 0.009 --hold 25 --spreads-json research/live_spreads_shadow_v1.json --symbols BTCTMN,ETHTMN,SOLTMN,XRPTMN,DOGETMN,PEPETMN,BNBTMN,ARBTMN --candle-dir research/candles_30d --end 2026-10-22T07:00:00Z --days 30 --out runs/backtests/rerun_live_rule_30d   # بک‌تست ۳۰ روزه (بدون کلید)
