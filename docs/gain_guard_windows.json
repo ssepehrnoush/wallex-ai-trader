@@ -1,0 +1,60 @@
+{
+ "note": "Every 32.5-hour window (stepped 1 h) of fv_ai_policy_30d replayed on a fresh 5,000,000 toman account with wallexbot/risk.py, AI size factor 0.35, stop 0.80%; '_guard' uses config risk.protect_gain_*, '_no_guard' sets protect_gain_share to 0. Candle trades: the live order book offers fewer signals (RESULTS.md 2.6, 2.7), so read the shares, not the trade counts.",
+ "params": {
+  "run": "fv_ai_policy_30d",
+  "size_factor": 0.35,
+  "hours": 32.5,
+  "equity_toman": 5000000,
+  "guard": {
+   "protect_gain_share": 0.5,
+   "protect_gain_worst_loss": 0.04,
+   "protect_gain_min_toman": 100
+  }
+ },
+ "results": {
+  "instant_no_guard": {
+   "windows": 685,
+   "share_positive": 0.655,
+   "share_zero": 0.0,
+   "share_negative": 0.345,
+   "mean_pnl_toman": 13950,
+   "median_pnl_toman": 5398,
+   "worst_pnl_toman": -48398,
+   "best_pnl_toman": 117281,
+   "mean_trades": 8.73
+  },
+  "instant_guard": {
+   "windows": 685,
+   "share_positive": 0.823,
+   "share_zero": 0.0,
+   "share_negative": 0.177,
+   "mean_pnl_toman": 3696,
+   "median_pnl_toman": 1981,
+   "worst_pnl_toman": -48398,
+   "best_pnl_toman": 84189,
+   "mean_trades": 4.45
+  },
+  "next_minute_no_guard": {
+   "windows": 685,
+   "share_positive": 0.058,
+   "share_zero": 0.0,
+   "share_negative": 0.942,
+   "mean_pnl_toman": -28248,
+   "median_pnl_toman": -26024,
+   "worst_pnl_toman": -105924,
+   "best_pnl_toman": 52682,
+   "mean_trades": 7.68
+  },
+  "next_minute_guard": {
+   "windows": 685,
+   "share_positive": 0.432,
+   "share_zero": 0.0,
+   "share_negative": 0.568,
+   "mean_pnl_toman": -17925,
+   "median_pnl_toman": -12394,
+   "worst_pnl_toman": -105924,
+   "best_pnl_toman": 18878,
+   "mean_trades": 5.49
+  }
+ }
+}

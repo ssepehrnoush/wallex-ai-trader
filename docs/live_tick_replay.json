@@ -1,0 +1,470 @@
+{
+ "note": "Engine rule replayed on the live order book (MAIN/runs/live_main/ticks.csv), every market except POLTMN switched on regardless of the AI policy. See the script docstring for what is not modelled.",
+ "ticks_utc": [
+  "2026-10-21T16:45:30Z",
+  "2026-10-22T08:59:58Z"
+ ],
+ "hours": 16.24,
+ "markets": [
+  "ARBTMN",
+  "BNBTMN",
+  "BTCTMN",
+  "DOGETMN",
+  "ETHTMN",
+  "PEPETMN",
+  "SANDTMN",
+  "SOLTMN",
+  "XRPTMN"
+ ],
+ "hold_min": 25,
+ "stop": 0.009,
+ "max_spread": 0.006,
+ "results": {
+  "thr_0.005_persist_1": {
+   "trades": 16,
+   "mean_net_pct": -0.617,
+   "wins": 5,
+   "sum_net_pct": -9.87,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T17:31:43Z",
+     "buy_dev_pct": -0.591,
+     "exit": "target",
+     "minutes": 4.5,
+     "net_pct": 0.433
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T18:24:51Z",
+     "buy_dev_pct": -0.537,
+     "exit": "stop",
+     "minutes": 2.6,
+     "net_pct": -1.871
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-21T19:03:42Z",
+     "buy_dev_pct": -0.555,
+     "exit": "target",
+     "minutes": 11.7,
+     "net_pct": 0.42
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:23:34Z",
+     "buy_dev_pct": -0.528,
+     "exit": "target",
+     "minutes": 19.4,
+     "net_pct": 0.521
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-21T21:15:42Z",
+     "buy_dev_pct": -0.534,
+     "exit": "target",
+     "minutes": 23.0,
+     "net_pct": 0.311
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-21T23:15:14Z",
+     "buy_dev_pct": -0.594,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.25
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-22T02:30:58Z",
+     "buy_dev_pct": -0.562,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.857
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T03:29:09Z",
+     "buy_dev_pct": -0.516,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.732
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:37:09Z",
+     "buy_dev_pct": -0.501,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.102
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:35:49Z",
+     "buy_dev_pct": -0.615,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.263
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T05:00:51Z",
+     "buy_dev_pct": -0.534,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.133
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T05:19:19Z",
+     "buy_dev_pct": -0.574,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.499
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T06:53:04Z",
+     "buy_dev_pct": -0.52,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.088
+    },
+    {
+     "symbol": "XRPTMN",
+     "entry_utc": "2026-10-22T06:55:29Z",
+     "buy_dev_pct": -0.562,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.056
+    },
+    {
+     "symbol": "XRPTMN",
+     "entry_utc": "2026-10-22T07:31:00Z",
+     "buy_dev_pct": -0.567,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.885
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T08:00:18Z",
+     "buy_dev_pct": -0.502,
+     "exit": "target",
+     "minutes": 4.4,
+     "net_pct": 0.18
+    }
+   ]
+  },
+  "thr_0.005_persist_3": {
+   "trades": 12,
+   "mean_net_pct": -0.901,
+   "wins": 2,
+   "sum_net_pct": -10.81,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T18:24:56Z",
+     "buy_dev_pct": -0.587,
+     "exit": "stop",
+     "minutes": 2.5,
+     "net_pct": -1.871
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:34:29Z",
+     "buy_dev_pct": -0.568,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.527
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-21T21:18:12Z",
+     "buy_dev_pct": -0.55,
+     "exit": "target",
+     "minutes": 20.5,
+     "net_pct": 0.327
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-21T23:15:19Z",
+     "buy_dev_pct": -0.594,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.25
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-22T02:31:03Z",
+     "buy_dev_pct": -0.615,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.857
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T03:29:14Z",
+     "buy_dev_pct": -0.516,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.732
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:37:14Z",
+     "buy_dev_pct": -0.501,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.102
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:35:54Z",
+     "buy_dev_pct": -0.631,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.263
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T05:00:56Z",
+     "buy_dev_pct": -0.533,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.133
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T05:19:24Z",
+     "buy_dev_pct": -0.574,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.499
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T06:53:09Z",
+     "buy_dev_pct": -0.52,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.08
+    },
+    {
+     "symbol": "PEPETMN",
+     "entry_utc": "2026-10-22T08:00:28Z",
+     "buy_dev_pct": -0.522,
+     "exit": "target",
+     "minutes": 4.2,
+     "net_pct": 0.18
+    }
+   ]
+  },
+  "thr_0.006_persist_1": {
+   "trades": 5,
+   "mean_net_pct": -1.084,
+   "wins": 0,
+   "sum_net_pct": -5.42,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:34:59Z",
+     "buy_dev_pct": -0.619,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.09
+    },
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-22T02:31:01Z",
+     "buy_dev_pct": -0.615,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.857
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:42:49Z",
+     "buy_dev_pct": -0.602,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.097
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:35:49Z",
+     "buy_dev_pct": -0.615,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.263
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T05:02:14Z",
+     "buy_dev_pct": -0.602,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.111
+    }
+   ]
+  },
+  "thr_0.006_persist_3": {
+   "trades": 4,
+   "mean_net_pct": -1.197,
+   "wins": 0,
+   "sum_net_pct": -4.79,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:35:24Z",
+     "buy_dev_pct": -0.774,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.423
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:42:54Z",
+     "buy_dev_pct": -0.61,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.991
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:35:54Z",
+     "buy_dev_pct": -0.631,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.263
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T05:02:19Z",
+     "buy_dev_pct": -0.6,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.111
+    }
+   ]
+  },
+  "thr_0.007_persist_1": {
+   "trades": 3,
+   "mean_net_pct": -1.083,
+   "wins": 0,
+   "sum_net_pct": -3.25,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:35:22Z",
+     "buy_dev_pct": -0.748,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.423
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:48:57Z",
+     "buy_dev_pct": -0.704,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.991
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:49:29Z",
+     "buy_dev_pct": -0.901,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.836
+    }
+   ]
+  },
+  "thr_0.007_persist_3": {
+   "trades": 2,
+   "mean_net_pct": -1.207,
+   "wins": 0,
+   "sum_net_pct": -2.41,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:35:27Z",
+     "buy_dev_pct": -0.824,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.423
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T03:49:02Z",
+     "buy_dev_pct": -0.704,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.991
+    }
+   ]
+  },
+  "thr_0.008_persist_1": {
+   "trades": 3,
+   "mean_net_pct": -1.061,
+   "wins": 0,
+   "sum_net_pct": -3.18,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:35:27Z",
+     "buy_dev_pct": -0.824,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.423
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:01:32Z",
+     "buy_dev_pct": -0.902,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.924
+    },
+    {
+     "symbol": "BNBTMN",
+     "entry_utc": "2026-10-22T04:49:29Z",
+     "buy_dev_pct": -0.901,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -0.836
+    }
+   ]
+  },
+  "thr_0.008_persist_3": {
+   "trades": 1,
+   "mean_net_pct": -1.423,
+   "wins": 0,
+   "sum_net_pct": -1.42,
+   "list": [
+    {
+     "symbol": "ARBTMN",
+     "entry_utc": "2026-10-21T20:35:32Z",
+     "buy_dev_pct": -0.874,
+     "exit": "time",
+     "minutes": 25.0,
+     "net_pct": -1.423
+    }
+   ]
+  },
+  "thr_0.010_persist_1": {
+   "trades": 0,
+   "mean_net_pct": null,
+   "wins": 0,
+   "sum_net_pct": 0.0,
+   "list": []
+  },
+  "thr_0.010_persist_3": {
+   "trades": 0,
+   "mean_net_pct": null,
+   "wins": 0,
+   "sum_net_pct": 0.0,
+   "list": []
+  }
+ }
+}

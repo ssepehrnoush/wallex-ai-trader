@@ -19,6 +19,7 @@ class RiskState:
     cooldown_until: dict = field(default_factory=dict) # symbol -> ISO time
     open_symbols: set = field(default_factory=set)
     exposure: float = 0.0                              # toman currently in positions
+    closed_since_mark: bool = False                    # a trade closed after the last equity mark
 
     @property
     def drawdown(self) -> float:
@@ -40,6 +41,7 @@ class RiskManager:
 
     def mark(self, st: RiskState, equity: float, now: datetime) -> None:
         st.equity = equity
+        st.closed_since_mark = False
         st.peak_equity = max(st.peak_equity, equity)
         day = now.astimezone(TEHRAN).date().isoformat()
         if day != st.day:
@@ -98,6 +100,24 @@ class RiskManager:
             notional, _ = cap_pos, why.append(f"capped at {self.p['max_position_pct']:.0%} of equity per position")
         if notional > cap_exp:
             notional, _ = max(cap_exp, 0.0), why.append("capped by total exposure limit")
+        # Gain guard: once the account is ahead of its start capital, a new trade may only risk a share of the
+        # gain, so the worst case of everything open cannot turn the contest result negative. The gain is the
+        # marked equity, so it is contest-wide and survives a restart; after a close the bot waits for the next
+        # mark (the engine marks within seconds) instead of sizing on a stale value. Open positions count at
+        # their marked value and their worst case is worst x entry exposure, which holds while none is up by
+        # more than that (target exits take profit near +0.65%).
+        share = self.p.get("protect_gain_share", 0.0)
+        if share:
+            if st.closed_since_mark:
+                return 0.0, why + ["a trade just closed: waiting for a fresh account value"]
+            gain = st.equity - st.start_equity
+            if gain >= self.p["protect_gain_min_toman"]:
+                worst = self.p["protect_gain_worst_loss"]
+                room = (gain - worst * st.exposure) * share / worst
+                if room < self.p["min_notional"] * 1.05:      # LiveExecutor.buy skips orders under 1.05 x minimum
+                    return 0.0, why + [f"protecting a {gain:,.0f} toman gain: no new risk"]
+                if notional > room:
+                    notional, _ = room, why.append(f"capped so a {worst:.0%} loss uses at most {share:.0%} of the {gain:,.0f} toman gain")
         if notional < self.p["min_notional"]:
             return 0.0, why + [f"size {notional:,.0f} below exchange minimum {self.p['min_notional']:,}"]
         why.append(f"risking {risk_toman:,.0f} toman ({self.risk_fraction(st) * factor:.2%} of equity) over a {cand.stop_pct:.2%} stop")
@@ -105,5 +125,6 @@ class RiskManager:
 
     def on_exit(self, st: RiskState, symbol: str, pnl: float, now: datetime) -> None:
         st.open_symbols.discard(symbol)
+        st.closed_since_mark = True
         if pnl < 0:
             st.cooldown_until[symbol] = (now + timedelta(minutes=self.p["cooldown_min_after_loss"])).isoformat()

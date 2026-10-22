@@ -396,7 +396,8 @@ class Engine:
                 break
             try:
                 self.step(loop_t, loop_t >= warm_until)
-                if loop_t - last_mark >= 60:
+                # mark every minute, and a few seconds after a close so the gain guard sizes on a fresh value
+                if loop_t - last_mark >= 60 or (self.state and self.state.closed_since_mark and loop_t - last_mark >= 5):
                     self.mark(loop_t)
                     last_mark = loop_t
                 if self.supervisor and loop_t >= warm_until and loop_t - self._last_review >= fv["review_minutes"] * 60:

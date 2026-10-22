@@ -65,7 +65,10 @@
     "breakeven_lock_pct": 0.0055,
     "min_notional": 60000,
     "no_new_entries_min_before_end": 150,
-    "flatten_min_before_end": 75
+    "flatten_min_before_end": 75,
+    "protect_gain_share": 0.5,
+    "protect_gain_worst_loss": 0.04,
+    "protect_gain_min_toman": 100
   },
   "ai": {
     "enabled": true,
