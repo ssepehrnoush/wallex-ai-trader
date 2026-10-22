@@ -1,5 +1,5 @@
 {
- "t": "2026-10-21T18:55:01+00:00",
+ "t": "2026-10-22T17:13:49+00:00",
  "mode": "live",
  "equity_tmn": 5000000,
  "return_pct": 0.0,
@@ -12,83 +12,103 @@
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "نقدشوندگی خوب است اما برای حفظ سرمایه اندازه و زمان نگهداری را کمی کمتر کردم."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "عمق و اسپرد مناسب‌اند، اما زیان ورود با تأخیر احتیاط بیشتر را ایجاب می‌کند."
   },
   "ETHTMN": {
    "enabled": true,
-   "entry_dev": 0.008,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "اسپرد نسبتاً پهن است، پس ورود سخت‌تر و اندازه کمتر شد."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "مشکل ساختاری دیده نمی‌شود و زمان نگهداری برای محدودکردن ریسک کوتاه شد."
   },
   "SOLTMN": {
    "enabled": true,
-   "entry_dev": 0.007,
+   "entry_dev": 0.008,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "وضعیت عادی است و فقط برای کنترل ریسک کمی محافظه‌کارتر شد."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "اسپرد و زیان ورود با تأخیر، آستانهٔ بالاتر را توجیه می‌کنند."
   },
   "XRPTMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "عمق مناسب است اما برای کاهش ریسک اندازه و مهلت نگهداری را کم کردم."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "عمق کافی است، ولی شواهد بک‌تست برای پذیرش ریسک بیشتر اندک است."
   },
   "DOGETMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "اسپرد قابل‌قبول است و فقط سیاست را کمی سخت‌گیرانه‌تر کردم."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "اسپرد کم است، اما زیان ورود با تأخیر محدودیت سخت‌تر را می‌طلبد."
   },
   "PEPETMN": {
    "enabled": true,
    "entry_dev": 0.008,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
-   "max_hold_min": 20.0,
-   "size_factor": 0.3,
-   "reason": "اسپرد و نوسان بالاتر است، پس ورود سخت‌تر و اندازه کمتر شد."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "اسپرد و عمق محدود، ورود محتاطانه‌تر را توجیه می‌کنند."
   },
   "BNBTMN": {
-   "enabled": false,
-   "entry_dev": 0.007,
+   "enabled": true,
+   "entry_dev": 0.008,
    "exit_slack": 0.0005,
-   "stop_pct": 0.009,
-   "max_hold_min": 25.0,
-   "size_factor": 0.4,
-   "reason": "اسپرد پهن و عمق پایین است، بنابراین همچنان غیرفعال می‌ماند."
+   "stop_pct": 0.007,
+   "max_hold_min": 15.0,
+   "size_factor": 0.2,
+   "reason": "بازار روشن می‌ماند، اما بازده منفی ورود با تأخیر آستانهٔ بالاتر را توجیه می‌کند."
   },
   "ARBTMN": {
    "enabled": true,
    "entry_dev": 0.008,
    "exit_slack": 0.0005,
-   "stop_pct": 0.008,
+   "stop_pct": 0.007,
    "max_hold_min": 15.0,
-   "size_factor": 0.3,
-   "reason": "اسپرد بالاست، پس ورود سخت و اندازه معامله کوچک‌تر شد."
+   "size_factor": 0.2,
+   "reason": "اسپرد و زیان ورود با تأخیر، ورود و نگهداری محتاطانه‌تر را می‌طلبند."
+  },
+  "POLTMN": {
+   "enabled": false,
+   "entry_dev": 0.01,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.2,
+   "reason": "اسپرد ۰٫۷۲۸٪ از سقف مجاز فراتر است و بازار غیرفعال می‌ماند."
+  },
+  "SANDTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 20.0,
+   "size_factor": 0.2,
+   "reason": "عمق ۹۸٬۸۰۴ تومانی سر دفتر برای اجرای مطمئن کافی نیست."
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.094,
-  "ETHTMN": -0.102,
-  "SOLTMN": -0.029,
-  "XRPTMN": -0.014,
-  "DOGETMN": -0.033,
-  "PEPETMN": -0.116,
-  "BNBTMN": 0.182,
-  "ARBTMN": -0.127
+  "BTCTMN": -0.014,
+  "ETHTMN": -0.037,
+  "SOLTMN": 0.015,
+  "XRPTMN": -0.036,
+  "DOGETMN": 0.023,
+  "PEPETMN": -0.154,
+  "BNBTMN": 0.277,
+  "ARBTMN": 0.018,
+  "POLTMN": 0.227,
+  "SANDTMN": -0.037
  }
 }
