@@ -1,0 +1,231 @@
+{
+ "note": "bt_fairvalue trades from fv_ai_policy_30d replayed on one 5,000,000 toman account with wallexbot/risk.py and config.json risk (stop 0.80%). 'instant' = entry at the signal minute (trades.csv), 'next_minute' = entry at the next traded minute (trades_next_minute.csv); the live engine polls the real order book every few seconds, so it sits between them. Equity moves only when a trade closes, every order fills in full, the window-end phases are off. '_no_kill_switch' raises the drawdown kill switch to 100% to show what it saved. Weeks start on the window's first Tehran day.",
+ "params": {
+  "run": "fv_ai_policy_30d",
+  "equity_toman": 5000000,
+  "stop": 0.008,
+  "window_utc": [
+   "2026-09-22T07:00:00Z",
+   "2026-10-22T07:00:00Z"
+  ],
+  "risk": {
+   "risk_per_trade": 0.006,
+   "max_position_pct": 0.35,
+   "max_positions": 3,
+   "max_exposure_pct": 0.7,
+   "daily_loss_limit": 0.015,
+   "kill_switch_dd": 0.03,
+   "cooldown_min_after_loss": 120,
+   "min_edge_after_fees": 0.004,
+   "min_reward_risk": 1.2,
+   "profit_lock_at": 0.03,
+   "profit_lock_factor": 0.5,
+   "breakeven_trigger_pct": 0.009,
+   "breakeven_lock_pct": 0.0055,
+   "min_notional": 60000,
+   "no_new_entries_min_before_end": 150,
+   "flatten_min_before_end": 75
+  },
+  "fees": {
+   "maker": 0.0025,
+   "taker": 0.003
+  }
+ },
+ "scenarios": {
+  "instant_size0.5": {
+   "trades_taken": 195,
+   "trades_skipped": {
+    "<market> cooling down": 65,
+    "max 3 positions open": 2
+   },
+   "mean_order_toman": 840917,
+   "final_equity_toman": 5334463,
+   "pnl_toman": 334463,
+   "return_pct": 6.69,
+   "max_drawdown_pct": 2.94,
+   "kill_switch_at_utc": null,
+   "days_up": 20,
+   "days_down": 9,
+   "best_day_toman": 135381,
+   "worst_day_toman": -46365,
+   "by_market_toman": {
+    "ARBTMN": 36990,
+    "BNBTMN": 37523,
+    "BTCTMN": 66351,
+    "DOGETMN": 29895,
+    "ETHTMN": 37283,
+    "PEPETMN": 50973,
+    "SOLTMN": 55451,
+    "XRPTMN": 19996
+   },
+   "by_week_toman": {
+    "2026-09-22": -17804,
+    "2026-09-29": 76166,
+    "2026-10-06": 145629,
+    "2026-10-13": 94721,
+    "2026-10-20": 35751
+   }
+  },
+  "next_minute_size0.5": {
+   "trades_taken": 29,
+   "trades_skipped": {
+    "<market> cooling down": 16,
+    "kill switch": 211
+   },
+   "mean_order_toman": 1095832,
+   "final_equity_toman": 4844636,
+   "pnl_toman": -155364,
+   "return_pct": -3.11,
+   "max_drawdown_pct": 3.11,
+   "kill_switch_at_utc": "2026-09-27T16:44:00+00:00",
+   "days_up": 0,
+   "days_down": 5,
+   "best_day_toman": -3906,
+   "worst_day_toman": -47683,
+   "by_market_toman": {
+    "ARBTMN": -31515,
+    "BTCTMN": -6252,
+    "DOGETMN": -34513,
+    "ETHTMN": -12821,
+    "PEPETMN": -56821,
+    "XRPTMN": -13443
+   },
+   "by_week_toman": {
+    "2026-09-22": -155364
+   }
+  },
+  "next_minute_size0.5_no_kill_switch": {
+   "trades_taken": 167,
+   "trades_skipped": {
+    "<market> cooling down": 76,
+    "max 3 positions open": 2,
+    "daily loss limit hit (-1.66%)": 9,
+    "daily loss limit hit (-1.56%)": 2
+   },
+   "mean_order_toman": 1020240,
+   "final_equity_toman": 4176556,
+   "pnl_toman": -823444,
+   "return_pct": -16.47,
+   "max_drawdown_pct": 16.47,
+   "kill_switch_at_utc": null,
+   "days_up": 2,
+   "days_down": 26,
+   "best_day_toman": 56174,
+   "worst_day_toman": -82072,
+   "by_market_toman": {
+    "ARBTMN": -309685,
+    "BNBTMN": -44874,
+    "BTCTMN": -70878,
+    "DOGETMN": -105331,
+    "ETHTMN": -49321,
+    "PEPETMN": -201909,
+    "SOLTMN": -36530,
+    "XRPTMN": -4915
+   },
+   "by_week_toman": {
+    "2026-09-22": -220092,
+    "2026-09-29": -190082,
+    "2026-10-06": -110861,
+    "2026-10-13": -206035,
+    "2026-10-20": -96374
+   }
+  },
+  "instant_size0.3": {
+   "trades_taken": 195,
+   "trades_skipped": {
+    "<market> cooling down": 65,
+    "max 3 positions open": 2
+   },
+   "mean_order_toman": 569212,
+   "final_equity_toman": 5227011,
+   "pnl_toman": 227011,
+   "return_pct": 4.54,
+   "max_drawdown_pct": 1.78,
+   "kill_switch_at_utc": null,
+   "days_up": 20,
+   "days_down": 9,
+   "best_day_toman": 82429,
+   "worst_day_toman": -27775,
+   "by_market_toman": {
+    "ARBTMN": 26061,
+    "BNBTMN": 22237,
+    "BTCTMN": 46350,
+    "DOGETMN": 18025,
+    "ETHTMN": 22974,
+    "PEPETMN": 41292,
+    "SOLTMN": 38076,
+    "XRPTMN": 11996
+   },
+   "by_week_toman": {
+    "2026-09-22": -10578,
+    "2026-09-29": 45737,
+    "2026-10-06": 104669,
+    "2026-10-13": 66125,
+    "2026-10-20": 21058
+   }
+  },
+  "next_minute_size0.3": {
+   "trades_taken": 44,
+   "trades_skipped": {
+    "<market> cooling down": 29,
+    "kill switch": 183
+   },
+   "mean_order_toman": 657840,
+   "final_equity_toman": 4849175,
+   "pnl_toman": -150825,
+   "return_pct": -3.02,
+   "max_drawdown_pct": 3.02,
+   "kill_switch_at_utc": "2026-09-29T02:25:00+00:00",
+   "days_up": 0,
+   "days_down": 7,
+   "best_day_toman": -2356,
+   "worst_day_toman": -36017,
+   "by_market_toman": {
+    "ARBTMN": -43662,
+    "BTCTMN": -3762,
+    "DOGETMN": -20788,
+    "ETHTMN": -7738,
+    "PEPETMN": -61196,
+    "XRPTMN": -13680
+   },
+   "by_week_toman": {
+    "2026-09-22": -133096,
+    "2026-09-29": -17729
+   }
+  },
+  "next_minute_size0.3_no_kill_switch": {
+   "trades_taken": 171,
+   "trades_skipped": {
+    "<market> cooling down": 83,
+    "max 3 positions open": 2
+   },
+   "mean_order_toman": 633049,
+   "final_equity_toman": 4484561,
+   "pnl_toman": -515439,
+   "return_pct": -10.31,
+   "max_drawdown_pct": 10.31,
+   "kill_switch_at_utc": null,
+   "days_up": 2,
+   "days_down": 26,
+   "best_day_toman": 35046,
+   "worst_day_toman": -61742,
+   "by_market_toman": {
+    "ARBTMN": -202162,
+    "BNBTMN": -28492,
+    "BTCTMN": -43914,
+    "DOGETMN": -65900,
+    "ETHTMN": -30485,
+    "PEPETMN": -115587,
+    "SOLTMN": -26293,
+    "XRPTMN": -2605
+   },
+   "by_week_toman": {
+    "2026-09-22": -133096,
+    "2026-09-29": -116967,
+    "2026-10-06": -63305,
+    "2026-10-13": -140339,
+    "2026-10-20": -61732
+   }
+  }
+ }
+}

@@ -2,6 +2,9 @@
 
     python research/fetch_candles.py                       # defaults below
     python research/fetch_candles.py --symbols BTCTMN,ETHTMN --days-1m 3
+    python research/fetch_candles.py --days-1m 30 --days-15m 0 --days-60m 0 --end 2026-10-22T07:00:00Z \
+        --symbols USDTTMN,BTCTMN,ETHTMN,SOLTMN,XRPTMN,DOGETMN,PEPETMN,BNBTMN,ARBTMN,POLTMN,SANDTMN \
+        --out-dir research/candles_30d                    # the 30-day backtest data (RESULTS.md 2.6)
 
 Output: research/candles/<SYMBOL>_<RES>.csv  with columns ts,open,high,low,close,volume
         (ts = bar OPEN time, unix seconds UTC; volume = base-asset volume as the API reports it)
@@ -105,14 +108,15 @@ def main() -> None:
     ap.add_argument("--days-15m", type=float, default=60)
     ap.add_argument("--days-60m", type=float, default=60)
     ap.add_argument("--out-dir", default=str(HERE / "candles"))
+    ap.add_argument("--end", default="", help="fixed window end, ISO UTC (default: now)")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    now = int(time.time())
+    now = int(datetime.fromisoformat(args.end.replace("Z", "+00:00")).timestamp()) if args.end else int(time.time())
     jobs = [("1", args.days_1m), ("15", args.days_15m), ("60", args.days_60m)]
     manifest = {"fetched_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                "endpoint": wx.BASE + "/v1/udf/history", "files": {}}
+                "endpoint": wx.BASE + "/v1/udf/history", "end_utc": args.end or None, "files": {}}
 
     for sym in [s.strip().upper() for s in args.symbols.split(",") if s.strip()]:
         for res, days in jobs:

@@ -18,4 +18,6 @@ dashboard/*.html
 # never commit them
 runs/backtests/rerun_*/
 research/live_spreads_check.json
+research/live_spreads_watch_check.json
+research/candles_30d_check/
 docs/*_check.json

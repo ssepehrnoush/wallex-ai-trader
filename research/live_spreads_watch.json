@@ -1,0 +1,25 @@
+{
+ "note": "Median live spread (ask / bid - 1, fraction) of the watch markets from the live run's ticks before the cutoff. The live bot records them from its first tick (watch markets start disabled). share_at_or_below_max_spread = fraction of those ticks the engine's spread cap would let it buy in.",
+ "spreads": {
+  "POLTMN": 0.022028,
+  "SANDTMN": 0.006118
+ },
+ "samples": {
+  "POLTMN": 2464,
+  "SANDTMN": 2464
+ },
+ "max_spread": 0.006,
+ "share_at_or_below_max_spread": {
+  "POLTMN": 0.0154,
+  "SANDTMN": 0.4809
+ },
+ "first_utc": {
+  "POLTMN": "2026-10-22T06:12:15Z",
+  "SANDTMN": "2026-10-22T06:12:15Z"
+ },
+ "source": {
+  "file": "MAIN/runs/live_main/ticks.csv",
+  "cutoff_utc": "2026-10-22T08:00:00Z"
+ },
+ "how": "python research/live_spreads_watch.py --main ../wallex-bot --cutoff 2026-10-22T08:00:00Z"
+}

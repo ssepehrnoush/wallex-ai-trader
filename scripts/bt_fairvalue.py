@@ -7,10 +7,12 @@ Fair value = Binance 1m close (x Wallex USDTTMN 1m close for toman markets). Bas
 median premium, known before the minute. Only minutes in which Wallex actually traded are used.
 
 Data (this script never calls the Wallex API; a missing candle file is an error):
-  Wallex   research/candles/<SYM>_1.csv, else research/premium/wallex_<SYM>_1m.csv (here, then the live bot's
-           copy, read only; USDT-quoted markets exist only there). The committed candles end
+  Wallex   <--candle-dir>/<SYM>_1.csv (default research/candles), else research/premium/wallex_<SYM>_1m.csv (here,
+           then the live bot's copy, read only; USDT-quoted markets exist only there). The committed candles end
            2026-10-21 14:04 UTC (the default --end). research/candles/ARBTMN_1.csv is a copy of the live bot's
            research/premium/wallex_ARBTMN_1m.csv (fetched 2026-10-21 15:53 UTC; it starts 2026-10-14 15:51).
+           research/candles_30d/ holds 30 days of 1m candles up to 2026-10-22 07:00 UTC for the 8 toman markets,
+           POLTMN, SANDTMN and USDTTMN (research/fetch_candles.py --end; RESULTS.md 2.6).
   Binance  research/premium/binance_<BASE>USDT_1m.csv here, else the live bot's copy (read only); when neither
            covers the window the public Binance klines are fetched and cached here.
 
@@ -63,6 +65,7 @@ ap.add_argument("--live-exit", action="store_true", help="the live engine's exit
 ap.add_argument("--max-drop", type=float, default=0.0, help="skip entries when Binance fell more than this in the minute")
 ap.add_argument("--out", default="runs/backtests/fairvalue")
 ap.add_argument("--symbols", default="", help="comma list; default = config fairvalue.symbols")
+ap.add_argument("--candle-dir", default="", help="Wallex 1m candles <SYM>_1.csv; default research/candles")
 a = ap.parse_args()
 at_root = lambda p: Path(p) if Path(p).is_absolute() else ROOT / p
 
@@ -88,11 +91,12 @@ iso = lambda x: utc(x).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def wallex_1m(sym: str) -> pd.DataFrame:
-    for p in (CANDLE_DIR / f"{sym}_1.csv", PREM / f"wallex_{sym}_1m.csv", MAIN_PREM / f"wallex_{sym}_1m.csv"):
+    cdir = at_root(a.candle_dir) if a.candle_dir else CANDLE_DIR
+    for p in (cdir / f"{sym}_1.csv", PREM / f"wallex_{sym}_1m.csv", MAIN_PREM / f"wallex_{sym}_1m.csv"):
         if p.exists():
             raw = pd.read_csv(p)
             return _frame(raw["ts"], raw["open"], raw["high"], raw["low"], raw["close"], raw["volume"])
-    raise SystemExit(f"no Wallex 1m candles for {sym}: expected research/candles/{sym}_1.csv or "
+    raise SystemExit(f"no Wallex 1m candles for {sym}: expected {cdir}/{sym}_1.csv or "
                      f"research/premium/wallex_{sym}_1m.csv here or in {MAIN_PREM} (this script never fetches from Wallex)")
 
 

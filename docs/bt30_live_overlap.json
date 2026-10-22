@@ -1,0 +1,58 @@
+{
+ "note": "Backtest entries inside the live recording, against the live order book around the same minute. live_ticks_meeting_rule counts ticks with buy_dev <= -max(policy entry_dev, fee floor) and spread <= max_spread 0.6%; the engine also needs the market enabled by the policy in force.",
+ "run": "fv_live_rule_30d",
+ "live_ticks_utc": [
+  "2026-10-21T16:45:30.299999952+00:00",
+  "2026-10-22T08:55:45.680000067+00:00"
+ ],
+ "entries": [
+  {
+   "symbol": "PEPETMN",
+   "minute_utc": "2026-10-21 17:18:00+00:00",
+   "backtest_ret_pct": 0.205,
+   "backtest_exit": "target",
+   "backtest_entry_dev_pct": -0.807,
+   "ticks": 71,
+   "live_min_buy_dev_pct": -0.307,
+   "live_median_spread_pct": 0.743,
+   "live_ticks_meeting_rule": 0,
+   "policy": {
+    "enabled": false,
+    "entry_dev": 0.007,
+    "from": "policy_review"
+   }
+  },
+  {
+   "symbol": "BNBTMN",
+   "minute_utc": "2026-10-22 04:02:00+00:00",
+   "backtest_ret_pct": -0.256,
+   "backtest_exit": "time",
+   "backtest_entry_dev_pct": -0.744,
+   "ticks": 71,
+   "live_min_buy_dev_pct": -0.902,
+   "live_median_spread_pct": 0.76,
+   "live_ticks_meeting_rule": 1,
+   "policy": {
+    "enabled": false,
+    "entry_dev": 0.008,
+    "from": "policy_review"
+   }
+  },
+  {
+   "symbol": "BNBTMN",
+   "minute_utc": "2026-10-22 04:50:00+00:00",
+   "backtest_ret_pct": -0.561,
+   "backtest_exit": "time",
+   "backtest_entry_dev_pct": -0.755,
+   "ticks": 72,
+   "live_min_buy_dev_pct": -0.901,
+   "live_median_spread_pct": 0.26,
+   "live_ticks_meeting_rule": 1,
+   "policy": {
+    "enabled": false,
+    "entry_dev": 0.009,
+    "from": "policy_review"
+   }
+  }
+ ]
+}

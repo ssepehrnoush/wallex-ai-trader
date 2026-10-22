@@ -1,0 +1,213 @@
+{
+ "note": "Backtest of the fair-value rule on Wallex 1-minute last-trade candles, 2026-09-22T07:00 to 2026-10-22T07:00 UTC (30 days), markets BTCTMN, ETHTMN, SOLTMN, XRPTMN, DOGETMN, PEPETMN, BNBTMN, ARBTMN. Fair value = Binance 1m close x Wallex USDTTMN close; entry when the modelled ask is at least 0.70% (toman) below fair value after the market's 180-minute median baseline, skipped when Binance fell more than 0.4% in that minute; exits as the live engine: target when sell_dev >= -0.05% AND the bid clears both taker fees + 0.05%, stop -0.9%, time 25 min; net = (1 - taker)^2 x bid / ask - 1. Wallex history has no order book: fills are modelled at the signal minute's close +/- half the measured median spread (research/live_spreads_shadow_v1.json). Overall 361 trades, mean +0.136% per trade, win 61.5%, sum +48.92 percentage points. Caveats: most signals are single-minute last-trade prints that are gone by the next traded minute; entering one traded minute later (same rule, next traded minute's close) turns the mean to -0.487% per trade over 353 trades. The live engine polls the real order book every 2.5 s, so only a real ask that far below fair counts. 97 of the 361 trades came when Wallex USDTTMN had not traded for over 5 minutes (mostly at night, about 20:00 to 05:30 UTC in this data), so their fair value uses a stale USDT/TMN price; their mean is +0.030% against +0.174% for the rest. Each market's row carries the same checks for that market: next_minute_mean_ret_pct (entry one traded minute later) and stale_usdt_trades / stale_usdt_mean_ret_pct; read mean_ret_pct only together with next_minute_mean_ret_pct. Treat these numbers as an optimistic upper bound, not a forecast; markets with few trades say little.",
+ "params": {
+  "ticks": "runs/shadow_v1/ticks.csv",
+  "spreads_json": "research/live_spreads_shadow_v1.json",
+  "entry_tmn": 0.007,
+  "entry_usdt": 0.005,
+  "slack": 0.0005,
+  "stop": 0.009,
+  "hold": 25,
+  "days": 30.0,
+  "end": "2026-10-22T07:00:00Z",
+  "live_exit": true,
+  "max_drop": 0.004,
+  "out": "runs/backtests/fv_live_rule_30d",
+  "symbols": "BTCTMN,ETHTMN,SOLTMN,XRPTMN,DOGETMN,PEPETMN,BNBTMN,ARBTMN",
+  "candle_dir": "research/candles_30d",
+  "window_utc": [
+   "2026-09-22T07:00:00Z",
+   "2026-10-22T07:00:00Z"
+  ],
+  "fees_taker": {
+   "TMN": 0.003,
+   "USDT": 0.0013
+  }
+ },
+ "spreads_pct": {
+  "BTCTMN": 0.059,
+  "ETHTMN": 0.185,
+  "SOLTMN": 0.268,
+  "XRPTMN": 0.327,
+  "DOGETMN": 0.162,
+  "PEPETMN": 0.089,
+  "BNBTMN": 0.131,
+  "ARBTMN": 0.434
+ },
+ "spreads_from_live": {
+  "BTCTMN": 0.059,
+  "ETHTMN": 0.185,
+  "SOLTMN": 0.268,
+  "XRPTMN": 0.327,
+  "DOGETMN": 0.162,
+  "PEPETMN": 0.089,
+  "BNBTMN": 0.131,
+  "ARBTMN": 0.434
+ },
+ "overall": {
+  "trades": 361,
+  "mean_ret_pct": 0.136,
+  "win_pct": 61.5,
+  "sum_ret_pct": 48.92,
+  "exits": {
+   "target": 190,
+   "time": 150,
+   "stop": 21
+  }
+ },
+ "robustness": {
+  "next_minute_entry_mean_ret_pct": -0.487,
+  "trades": 353
+ },
+ "stale_usdt_rate": {
+  "trades": 97,
+  "mean_ret_pct": 0.03,
+  "rest_mean_ret_pct": 0.174
+ },
+ "markets": {
+  "BTCTMN": {
+   "trades": 26,
+   "mean_ret_pct": 0.099,
+   "win_pct": 65.4,
+   "sum_ret_pct": 2.57,
+   "exits": {
+    "target": 12,
+    "time": 11,
+    "stop": 3
+   },
+   "next_minute_trades": 22,
+   "next_minute_mean_ret_pct": -0.484,
+   "stale_usdt_trades": 13,
+   "stale_usdt_mean_ret_pct": -0.382,
+   "half_spread_pct": 0.03,
+   "minutes_traded": 29243,
+   "first_minute": "2026-09-22T07:00:00Z"
+  },
+  "ETHTMN": {
+   "trades": 15,
+   "mean_ret_pct": 0.545,
+   "win_pct": 86.7,
+   "sum_ret_pct": 8.18,
+   "exits": {
+    "target": 13,
+    "time": 2,
+    "stop": 0
+   },
+   "next_minute_trades": 15,
+   "next_minute_mean_ret_pct": -0.401,
+   "stale_usdt_trades": 3,
+   "stale_usdt_mean_ret_pct": 0.126,
+   "half_spread_pct": 0.093,
+   "minutes_traded": 19291,
+   "first_minute": "2026-09-22T07:03:00Z"
+  },
+  "SOLTMN": {
+   "trades": 9,
+   "mean_ret_pct": 0.738,
+   "win_pct": 77.8,
+   "sum_ret_pct": 6.64,
+   "exits": {
+    "target": 6,
+    "time": 3,
+    "stop": 0
+   },
+   "next_minute_trades": 9,
+   "next_minute_mean_ret_pct": -0.717,
+   "stale_usdt_trades": 1,
+   "stale_usdt_mean_ret_pct": -0.605,
+   "half_spread_pct": 0.134,
+   "minutes_traded": 14351,
+   "first_minute": "2026-09-22T07:01:00Z"
+  },
+  "XRPTMN": {
+   "trades": 15,
+   "mean_ret_pct": 0.129,
+   "win_pct": 46.7,
+   "sum_ret_pct": 1.93,
+   "exits": {
+    "target": 7,
+    "time": 7,
+    "stop": 1
+   },
+   "next_minute_trades": 16,
+   "next_minute_mean_ret_pct": -0.353,
+   "stale_usdt_trades": 2,
+   "stale_usdt_mean_ret_pct": 0.512,
+   "half_spread_pct": 0.164,
+   "minutes_traded": 19487,
+   "first_minute": "2026-09-22T07:03:00Z"
+  },
+  "DOGETMN": {
+   "trades": 21,
+   "mean_ret_pct": 0.203,
+   "win_pct": 81.0,
+   "sum_ret_pct": 4.26,
+   "exits": {
+    "target": 16,
+    "time": 5,
+    "stop": 0
+   },
+   "next_minute_trades": 19,
+   "next_minute_mean_ret_pct": -0.653,
+   "stale_usdt_trades": 7,
+   "stale_usdt_mean_ret_pct": -0.362,
+   "half_spread_pct": 0.081,
+   "minutes_traded": 14567,
+   "first_minute": "2026-09-22T07:00:00Z"
+  },
+  "PEPETMN": {
+   "trades": 155,
+   "mean_ret_pct": 0.079,
+   "win_pct": 60.6,
+   "sum_ret_pct": 12.22,
+   "exits": {
+    "target": 83,
+    "time": 64,
+    "stop": 8
+   },
+   "next_minute_trades": 150,
+   "next_minute_mean_ret_pct": -0.308,
+   "stale_usdt_trades": 30,
+   "stale_usdt_mean_ret_pct": 0.017,
+   "half_spread_pct": 0.044,
+   "minutes_traded": 23051,
+   "first_minute": "2026-09-22T07:00:00Z"
+  },
+  "BNBTMN": {
+   "trades": 17,
+   "mean_ret_pct": 0.363,
+   "win_pct": 64.7,
+   "sum_ret_pct": 6.17,
+   "exits": {
+    "target": 10,
+    "time": 7,
+    "stop": 0
+   },
+   "next_minute_trades": 17,
+   "next_minute_mean_ret_pct": -0.245,
+   "stale_usdt_trades": 10,
+   "stale_usdt_mean_ret_pct": 0.288,
+   "half_spread_pct": 0.066,
+   "minutes_traded": 11099,
+   "first_minute": "2026-09-22T07:00:00Z"
+  },
+  "ARBTMN": {
+   "trades": 103,
+   "mean_ret_pct": 0.067,
+   "win_pct": 54.4,
+   "sum_ret_pct": 6.93,
+   "exits": {
+    "target": 43,
+    "time": 51,
+    "stop": 9
+   },
+   "next_minute_trades": 105,
+   "next_minute_mean_ret_pct": -0.765,
+   "stale_usdt_trades": 31,
+   "stale_usdt_mean_ret_pct": 0.2,
+   "half_spread_pct": 0.217,
+   "minutes_traded": 16408,
+   "first_minute": "2026-09-22T07:00:00Z"
+  }
+ }
+}

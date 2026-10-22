@@ -1,0 +1,93 @@
+{
+ "note": "Backtest of the fair-value rule on Wallex 1-minute last-trade candles, 2026-09-22T07:00 to 2026-10-22T07:00 UTC (30 days), markets POLTMN, SANDTMN. Fair value = Binance 1m close x Wallex USDTTMN close; entry when the modelled ask is at least 0.70% (toman) below fair value after the market's 180-minute median baseline, skipped when Binance fell more than 0.4% in that minute; exits as the live engine: target when sell_dev >= -0.05% AND the bid clears both taker fees + 0.05%, stop -0.9%, time 25 min; net = (1 - taker)^2 x bid / ask - 1. Wallex history has no order book: fills are modelled at the signal minute's close +/- half the measured median spread (research/live_spreads_watch.json). Overall 0 trades, mean n/a per trade, win None%, sum +0.00 percentage points. Caveats: most signals are single-minute last-trade prints that are gone by the next traded minute; entering one traded minute later (same rule, next traded minute's close) turns the mean to n/a per trade over 0 trades. The live engine polls the real order book every 2.5 s, so only a real ask that far below fair counts. 0 of the 0 trades came when Wallex USDTTMN had not traded for over 5 minutes (mostly at night, about 20:00 to 05:30 UTC in this data), so their fair value uses a stale USDT/TMN price; their mean is n/a against n/a for the rest. Each market's row carries the same checks for that market: next_minute_mean_ret_pct (entry one traded minute later) and stale_usdt_trades / stale_usdt_mean_ret_pct; read mean_ret_pct only together with next_minute_mean_ret_pct. Treat these numbers as an optimistic upper bound, not a forecast; markets with few trades say little.",
+ "params": {
+  "ticks": "runs/shadow_v1/ticks.csv",
+  "spreads_json": "research/live_spreads_watch.json",
+  "entry_tmn": 0.007,
+  "entry_usdt": 0.005,
+  "slack": 0.0005,
+  "stop": 0.009,
+  "hold": 25,
+  "days": 30.0,
+  "end": "2026-10-22T07:00:00Z",
+  "live_exit": true,
+  "max_drop": 0.004,
+  "out": "runs/backtests/fv_watch_30d",
+  "symbols": "POLTMN,SANDTMN",
+  "candle_dir": "research/candles_30d",
+  "window_utc": [
+   "2026-09-22T07:00:00Z",
+   "2026-10-22T07:00:00Z"
+  ],
+  "fees_taker": {
+   "TMN": 0.003,
+   "USDT": 0.0013
+  }
+ },
+ "spreads_pct": {
+  "POLTMN": 2.203,
+  "SANDTMN": 0.612
+ },
+ "spreads_from_live": {
+  "POLTMN": 2.203,
+  "SANDTMN": 0.612
+ },
+ "overall": {
+  "trades": 0,
+  "mean_ret_pct": null,
+  "win_pct": null,
+  "sum_ret_pct": 0,
+  "exits": {
+   "target": 0,
+   "time": 0,
+   "stop": 0
+  }
+ },
+ "robustness": {
+  "next_minute_entry_mean_ret_pct": null,
+  "trades": 0
+ },
+ "stale_usdt_rate": {
+  "trades": 0,
+  "mean_ret_pct": null,
+  "rest_mean_ret_pct": null
+ },
+ "markets": {
+  "POLTMN": {
+   "trades": 0,
+   "mean_ret_pct": null,
+   "win_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {
+    "target": 0,
+    "time": 0,
+    "stop": 0
+   },
+   "next_minute_trades": 0,
+   "next_minute_mean_ret_pct": null,
+   "stale_usdt_trades": 0,
+   "stale_usdt_mean_ret_pct": null,
+   "half_spread_pct": 1.101,
+   "minutes_traded": 6575,
+   "first_minute": "2026-09-22T07:07:00Z"
+  },
+  "SANDTMN": {
+   "trades": 0,
+   "mean_ret_pct": null,
+   "win_pct": null,
+   "sum_ret_pct": 0,
+   "exits": {
+    "target": 0,
+    "time": 0,
+    "stop": 0
+   },
+   "next_minute_trades": 0,
+   "next_minute_mean_ret_pct": null,
+   "stale_usdt_trades": 0,
+   "stale_usdt_mean_ret_pct": null,
+   "half_spread_pct": 0.306,
+   "minutes_traded": 4947,
+   "first_minute": "2026-09-22T07:59:00Z"
+  }
+ }
+}
