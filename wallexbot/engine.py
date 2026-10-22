@@ -202,7 +202,12 @@ class Engine:
         self.global_feed = GlobalFeed(sorted({base_of(s) for s in self.symbols}))
         self.fees_q = {"TMN": cfg["fees"], "USDT": cfg["fees_usdt"]}
         self.trackers = {s: PremiumTracker(fv["baseline_window_min"], fv["baseline_min_samples"]) for s in self.symbols}
-        self.policies = {s: Policy(**fv["default_policy"][quote_of(s)]) for s in self.symbols}
+        # watch markets are recorded from the first tick but start off; the supervisor's live-evidence gate
+        # is the only way to switch one on
+        self.watch = set(fv.get("watch_symbols", [])) & set(self.symbols)
+        off = {"enabled": False, "reason": "watch: off until its live replay is profitable"}
+        self.policies = {s: Policy(**{**fv["default_policy"][quote_of(s)], **(off if s in self.watch else {})})
+                         for s in self.symbols}
         self.gl_hist = {b: deque(maxlen=200) for b in self.global_feed.bases}
         self.positions: dict[str, Position] = {}
         self._last_bid: dict[str, float] = {}
@@ -214,7 +219,7 @@ class Engine:
         self.window_end = datetime.fromisoformat(cfg["window"]["end_utc"].replace("Z", "+00:00"))
         self.risk = RiskManager(cfg["risk"], self.window_end, cfg["fees"])
         committee = AICommittee(cfg["ai"], self.secrets, RUNS / "ai_cache_live")
-        self.supervisor = Supervisor(committee, self.fees_q) if cfg["ai"].get("enabled", True) else None
+        self.supervisor = Supervisor(committee, self.fees_q, self.watch) if cfg["ai"].get("enabled", True) else None
         self._review_lock = threading.Lock()
         self._last_review = 0.0
         self._ticks_f = open(self.run_dir / "ticks.csv", "a", newline="", encoding="utf-8")
@@ -383,7 +388,7 @@ class Engine:
         fv, poll = self.fv, self.fv["poll_seconds"]
         t_end = time.time() + minutes * 60 if minutes else None
         last_mark = 0.0
-        self.j.log("start", mode=self.mode, symbols=self.symbols, policy=self.fv["default_policy"])
+        self.j.log("start", mode=self.mode, symbols=self.symbols, watch=sorted(self.watch), policy=self.fv["default_policy"])
         warm_until = time.time() + fv["warmup_minutes"] * 60
         while True:
             loop_t = time.time()

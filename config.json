@@ -143,7 +143,13 @@
       "DOGETMN",
       "PEPETMN",
       "BNBTMN",
-      "ARBTMN"
+      "ARBTMN",
+      "POLTMN",
+      "SANDTMN"
+    ],
+    "watch_symbols": [
+      "POLTMN",
+      "SANDTMN"
     ]
   },
   "shadow": {

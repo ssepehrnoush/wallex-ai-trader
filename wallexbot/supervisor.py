@@ -20,6 +20,14 @@ from .fairvalue import Policy, quote_of
 BOUNDS = {"entry_dev": (0.0025, 0.02), "exit_slack": (0.0, 0.002), "stop_pct": (0.004, 0.015),
           "max_hold_min": (5.0, 45.0), "size_factor": (0.0, 1.0)}
 
+# Watch markets: their 7-day backtest profit depended on one-minute prints, so they start switched off and trade
+# only while their OWN recorded live order-book ticks replay at a profit with the policy just set.
+WATCH_EVIDENCE_MIN = 480
+WATCH_RULE = ("Markets in watch_markets start switched off. The code switches one on only while simulate_threshold on "
+              "its own recorded live ticks (last 8 hours) shows at least one trade and a positive total at the policy "
+              "you set; otherwise it stays off whatever you propose. Run simulate_threshold for each watch market and "
+              "propose enabled=true when its replay is profitable.")
+
 ANALYST = """You are the quant analyst supervising a fair-value reversion trading engine on the Iranian exchange Wallex.
 The engine buys a coin on Wallex when its ASK is below the global fair price (Binance price, times Wallex USDT/TMN
 for toman markets) by more than `entry_dev` beyond that market's normal premium, and sells when the BID is back
@@ -61,16 +69,26 @@ def min_entry(symbol: str, fees_by_quote: dict) -> float:
 
 
 class Supervisor:
-    def __init__(self, committee, fees: dict):
+    def __init__(self, committee, fees: dict, watch=()):
         self.ai = committee            # AICommittee instance: provides the cached _ask()
         self.fees = fees
+        self.watch = set(watch)
         self.last: dict = {}
+
+    def _live_evidence(self, s: str, p: Policy) -> dict:
+        from .tools import simulate_threshold      # imported here: tools imports this module
+        try:
+            return simulate_threshold(s, p.entry_dev, p.exit_slack, p.stop_pct, p.max_hold_min, WATCH_EVIDENCE_MIN)
+        except Exception as e:
+            return {"error": str(e)[:200]}
 
     def review(self, data: dict, current: dict[str, Policy]) -> tuple[dict[str, Policy], dict]:
         """data: {"markets": {sym: stats}, "context": {...}, "recent_trades": [...]}.
         Returns new policies and a log record. On any AI failure keeps the current policies
         but switches to defensive sizing (fail safe)."""
         trace, analyst_model = [], None
+        watch_note = {"watch_markets": sorted(self.watch), "watch_rule": WATCH_RULE} if self.watch else {}
+        data = {**data, **watch_note}
         try:
             if self.ai.cfg.get("agentic", True):
                 try:
@@ -79,7 +97,7 @@ class Supervisor:
                     from .agent import analyst_with_tools
                     brief = {"task": "Review and set the trading policy of every market below.",
                              "current_policies": {s: p.to_dict() for s, p in current.items()},
-                             "context": data.get("context", {})}
+                             "context": data.get("context", {}), **watch_note}
                     prop, trace, analyst_model = analyst_with_tools(self.ai, brief)
                 except Exception as e:
                     trace = [{"agent_error": str(e)[:300]}]
@@ -115,8 +133,18 @@ class Supervisor:
                             stop_pct=_clamp("stop_pct", stop), max_hold_min=_clamp("max_hold_min", hold),
                             size_factor=_clamp("size_factor", size),
                             reason=str(o.get("reason_fa") or a.get("reason") or "")[:200])
+        # the watch gate is code, not prompt: no model output can switch a watch market on without live proof
+        evidence = {}
+        for s in sorted(self.watch & new.keys()):
+            p = new[s]
+            if not p.enabled:
+                continue
+            ev = evidence[s] = self._live_evidence(s, p)
+            if not (ev.get("trades", 0) >= 1 and (ev.get("sum_ret_pct") or 0) > 0):
+                new[s] = Policy(**{**p.to_dict(), "enabled": False,
+                                   "reason": f"watch: live replay not profitable yet ({ev.get('trades', 0)} trades)"})
         rec = {"risk_mode": mode, "summary_fa": final.get("summary_fa", ""), "analyst_summary": prop.get("summary", ""),
-               "analyst_model": analyst_model, "analyst_tool_calls": trace,
+               "analyst_model": analyst_model, "analyst_tool_calls": trace, "watch_evidence": evidence,
                "policies": {s: p.to_dict() for s, p in new.items()}}
         self.last = rec
         return new, rec
