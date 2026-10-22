@@ -1,0 +1,17 @@
+BTCTMN 453 superset minutes 0.3 s
+BTCTMN done 4.2 s 39840
+ETHTMN 811 superset minutes 4.5 s
+ETHTMN done 5.7 s 91200
+SOLTMN 1517 superset minutes 6.0 s
+SOLTMN done 7.6 s 157680
+XRPTMN 2157 superset minutes 7.9 s
+XRPTMN done 9.6 s 224400
+DOGETMN 2170 superset minutes 9.9 s
+DOGETMN done 11.5 s 294480
+PEPETMN 6031 superset minutes 12.1 s
+PEPETMN done 14.7 s 379680
+BNBTMN 265 superset minutes 14.9 s
+BNBTMN done 15.5 s 407520
+ARBTMN 6774 superset minutes 16.2 s
+ARBTMN done 19.1 s 493680
+saved 493680 19.8 s

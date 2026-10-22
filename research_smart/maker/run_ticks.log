@@ -1,0 +1,48 @@
+tick done {'H1': 0, 'H2': 0, 'of': 78}
+trade done {'H1': 14, 'H2': 0, 'of': 78}
+strict done {'H1': 12, 'H2': 0, 'of': 78}
+
+===== tick ['2026-10-21 16:45:30.299999952', '2026-10-22 10:58:44.740000010'] split 2026-10-22 01:52:07.519999981 positive configs {'H1': 0, 'H2': 0, 'of': 78}
+select a: a d1=0.3% m=0.4% T2=30 guard=on
+   H1: n=10 mean=-0.271% win=0.5 ts=0.6 worst=-1.889 toman=-18972 /h=1.1 gross?
+   H2: n=22 mean=-0.2876% win=0.273 ts=0.636 worst=-1.059 toman=-44287 /h=2.41 gross?
+   H2 wide (POL/SAND, flagged): n=9 mean=0.6151 toman=38754
+select b: b s=0.6% T2=30 guard=off
+   H1: n=12 mean=-0.0953% win=0.417 ts=0.75 worst=-1.22 toman=-8005 /h=1.32 gross?
+   H2: n=15 mean=-0.3671% win=0.267 ts=0.8 worst=-1.911 toman=-38542 /h=1.65 gross?
+   H2 wide (POL/SAND, flagged): n=17 mean=0.9279 toman=110420
+select any: b s=0.6% T2=30 guard=off
+   H1: n=12 mean=-0.0953% win=0.417 ts=0.75 worst=-1.22 toman=-8005 /h=1.32 gross?
+   H2: n=15 mean=-0.3671% win=0.267 ts=0.8 worst=-1.911 toman=-38542 /h=1.65 gross?
+   H2 wide (POL/SAND, flagged): n=17 mean=0.9279 toman=110420
+hindsight best H2: a d1=0.5% m=0.2% T2=60 guard=off {'entries': 8, 'mean_net_pct': -0.1846, 'toman': -10338, 'win_rate': 0.5, 'timestop_share': 0.5}
+
+===== trade ['2026-10-21 16:45:30.299999952', '2026-10-22 06:58:19.240000010'] split 2026-10-21 23:51:54.769999981 positive configs {'H1': 14, 'H2': 0, 'of': 78}
+select a: a d1=0.2% m=0.1% T2=60 guard=off
+   H1: n=14 mean=-0.24% win=0.571 ts=0.429 worst=-1.463 toman=-23516 /h=1.97 gross?
+   H2: n=7 mean=-0.7338% win=0.143 ts=0.714 worst=-1.577 toman=-35957 /h=0.98 gross?
+   H2 wide (POL/SAND, flagged): n=0 mean=None toman=0.0
+select b: b s=0.4% T2=30 guard=off
+   H1: n=10 mean=-0.3031% win=0.2 ts=1.0 worst=-1.087 toman=-21220 /h=1.41 gross?
+   H2: n=14 mean=-0.6848% win=0.143 ts=0.857 worst=-1.538 toman=-67114 /h=1.97 gross?
+   H2 wide (POL/SAND, flagged): n=0 mean=None toman=0.0
+select any: b s=0.4% T2=30 guard=off
+   H1: n=10 mean=-0.3031% win=0.2 ts=1.0 worst=-1.087 toman=-21220 /h=1.41 gross?
+   H2: n=14 mean=-0.6848% win=0.143 ts=0.857 worst=-1.538 toman=-67114 /h=1.97 gross?
+   H2 wide (POL/SAND, flagged): n=0 mean=None toman=0.0
+hindsight best H2: a d1=0.5% m=0.1% T2=60 guard=off {'entries': 1, 'mean_net_pct': -0.7629, 'toman': -5340, 'win_rate': 0.0, 'timestop_share': 1.0}
+
+===== strict ['2026-10-21 16:45:30.299999952', '2026-10-22 10:58:44.740000010'] split 2026-10-22 01:52:07.519999981 positive configs {'H1': 12, 'H2': 0, 'of': 78}
+select a: a d1=0.2% m=0.1% T2=10 guard=on
+   H1: n=10 mean=-0.4808% win=0.0 ts=1.0 worst=-0.791 toman=-33659 /h=1.1 gross?
+   H2: n=11 mean=-0.4034% win=0.182 ts=0.818 worst=-0.693 toman=-31062 /h=1.21 gross?
+   H2 wide (POL/SAND, flagged): n=2 mean=-2.0993 toman=-29391
+select b: b s=0.3% T2=60 guard=off
+   H1: n=12 mean=-0.3336% win=0.333 ts=0.833 worst=-1.199 toman=-28027 /h=1.32 gross?
+   H2: n=17 mean=-0.4973% win=0.235 ts=0.882 worst=-1.639 toman=-59179 /h=1.87 gross?
+   H2 wide (POL/SAND, flagged): n=4 mean=-1.157 toman=-32396
+select any: b s=0.3% T2=60 guard=off
+   H1: n=12 mean=-0.3336% win=0.333 ts=0.833 worst=-1.199 toman=-28027 /h=1.32 gross?
+   H2: n=17 mean=-0.4973% win=0.235 ts=0.882 worst=-1.639 toman=-59179 /h=1.87 gross?
+   H2 wide (POL/SAND, flagged): n=4 mean=-1.157 toman=-32396
+hindsight best H2: a d1=0.5% m=0.1% T2=30 guard=off {'entries': 1, 'mean_net_pct': -0.5268, 'toman': -3688, 'win_rate': 0.0, 'timestop_share': 1.0}

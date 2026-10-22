@@ -1,0 +1,2977 @@
+{
+ "family": "Wallex-local demand surges (premium momentum / pump continuation), long only",
+ "verdict": "NOT VIABLE",
+ "setup": {
+  "markets": [
+   "BTCTMN",
+   "ETHTMN",
+   "SOLTMN",
+   "XRPTMN",
+   "DOGETMN",
+   "PEPETMN",
+   "BNBTMN",
+   "ARBTMN"
+  ],
+  "skipped_spread_gt_0.6pct": [
+   "POLTMN",
+   "SANDTMN"
+  ],
+  "half_spread_h": {
+   "BTCTMN": 0.000296,
+   "ETHTMN": 0.000928,
+   "SOLTMN": 0.001342,
+   "XRPTMN": 0.001637,
+   "DOGETMN": 0.00081,
+   "PEPETMN": 0.000443,
+   "BNBTMN": 0.000656,
+   "ARBTMN": 0.002168
+  },
+  "fees": "taker 0.3% each side; net = 0.997^2 * sell/buy - 1; buy = close*(1+h), sell = close*(1-h)",
+  "in_sample": "2026-09-22 13:00 .. 10-12 07:00 UTC (first 6 h = volume-baseline warm-up)",
+  "out_of_sample": "2026-10-12 07:00 .. 10-22 07:00 UTC",
+  "variants": {
+   "A": "premium (close/fair-1) up >= Y over k min, Wallex k-min return > 0, premium above its trailing-24h median",
+   "B": "Wallex k-min return >= X and (Wallex - global) k-min return >= X/2",
+   "C": "B and global k-min return > 0",
+   "all": "k-bar toman volume >= Z x trailing-24h median of k-bar volume (floor 0.25 x mean), bar i traded, >= 2 traded bars in window"
+  },
+  "grid": {
+   "k": [
+    3,
+    5,
+    15
+   ],
+   "Y": [
+    0.005,
+    0.01,
+    0.015
+   ],
+   "X": [
+    0.01,
+    0.02,
+    0.03
+   ],
+   "Z": [
+    3.0,
+    5.0
+   ],
+   "exits": [
+    [
+     "fixed",
+     15
+    ],
+    [
+     "fixed",
+     30
+    ],
+    [
+     "fixed",
+     60
+    ],
+    [
+     "fixed",
+     120
+    ],
+    [
+     "prem_half",
+     30
+    ],
+    [
+     "prem_half",
+     60
+    ],
+    [
+     "prem_half",
+     120
+    ],
+    [
+     "trail15",
+     30
+    ],
+    [
+     "trail15",
+     60
+    ],
+    [
+     "trail15",
+     120
+    ]
+   ],
+   "stop_for_conditional_exits": -0.02
+  },
+  "n_configs": 1080,
+  "portfolio": "5M toman, 1M fixed per trade (no compounding), max 3 positions, 1 per market",
+  "selection_rule": "lag=1 (next-minute entry), IS trades >= 20, highest IS account return",
+  "note_on_returns": "account returns are fixed-1M-per-trade sums; values below -100% mean the account would have been wiped out"
+ },
+ "event_study": {
+  "pooled_by_variant_dedup60": {
+   "A": {
+    "H5": {
+     "gross_wallex_pct": -0.315,
+     "global_pct": 0.026,
+     "premium_change_pct": -0.343,
+     "net_instant_pct": -1.148,
+     "net_next_min_pct": -0.997,
+     "share_gross_above_0.6pct": 1.3
+    },
+    "H10": {
+     "gross_wallex_pct": -0.351,
+     "global_pct": 0.007,
+     "premium_change_pct": -0.36,
+     "net_instant_pct": -1.183,
+     "net_next_min_pct": -1.032,
+     "share_gross_above_0.6pct": 3.0
+    },
+    "H15": {
+     "gross_wallex_pct": -0.354,
+     "global_pct": 0.033,
+     "premium_change_pct": -0.39,
+     "net_instant_pct": -1.187,
+     "net_next_min_pct": -1.015,
+     "share_gross_above_0.6pct": 4.9
+    },
+    "H30": {
+     "gross_wallex_pct": -0.371,
+     "global_pct": 0.044,
+     "premium_change_pct": -0.417,
+     "net_instant_pct": -1.203,
+     "net_next_min_pct": -1.033,
+     "share_gross_above_0.6pct": 8.3
+    },
+    "H60": {
+     "gross_wallex_pct": -0.375,
+     "global_pct": 0.054,
+     "premium_change_pct": -0.432,
+     "net_instant_pct": -1.207,
+     "net_next_min_pct": -1.036,
+     "share_gross_above_0.6pct": 13.7
+    },
+    "H120": {
+     "gross_wallex_pct": -0.318,
+     "global_pct": 0.119,
+     "premium_change_pct": -0.439,
+     "net_instant_pct": -1.151,
+     "net_next_min_pct": -0.993,
+     "share_gross_above_0.6pct": 20.9
+    },
+    "n_event_rows": 4478,
+    "mean_surge_size_pct": {
+     "dp": 0.868,
+     "r": 0.807,
+     "g": -0.065
+    }
+   },
+   "B": {
+    "H5": {
+     "gross_wallex_pct": -0.349,
+     "global_pct": -0.034,
+     "premium_change_pct": -0.321,
+     "net_instant_pct": -1.196,
+     "net_next_min_pct": -1.045,
+     "share_gross_above_0.6pct": 3.1
+    },
+    "H10": {
+     "gross_wallex_pct": -0.362,
+     "global_pct": -0.054,
+     "premium_change_pct": -0.313,
+     "net_instant_pct": -1.209,
+     "net_next_min_pct": -1.056,
+     "share_gross_above_0.6pct": 9.3
+    },
+    "H15": {
+     "gross_wallex_pct": -0.371,
+     "global_pct": -0.033,
+     "premium_change_pct": -0.344,
+     "net_instant_pct": -1.218,
+     "net_next_min_pct": -1.02,
+     "share_gross_above_0.6pct": 11.8
+    },
+    "H30": {
+     "gross_wallex_pct": -0.375,
+     "global_pct": -0.046,
+     "premium_change_pct": -0.334,
+     "net_instant_pct": -1.222,
+     "net_next_min_pct": -1.042,
+     "share_gross_above_0.6pct": 12.6
+    },
+    "H60": {
+     "gross_wallex_pct": -0.322,
+     "global_pct": 0.011,
+     "premium_change_pct": -0.339,
+     "net_instant_pct": -1.17,
+     "net_next_min_pct": -0.992,
+     "share_gross_above_0.6pct": 18.8
+    },
+    "H120": {
+     "gross_wallex_pct": -0.251,
+     "global_pct": 0.1,
+     "premium_change_pct": -0.355,
+     "net_instant_pct": -1.1,
+     "net_next_min_pct": -0.921,
+     "share_gross_above_0.6pct": 23.3
+    },
+    "n_event_rows": 1242,
+    "mean_surge_size_pct": {
+     "dp": 1.15,
+     "r": 1.745,
+     "g": 0.575
+    }
+   },
+   "C": {
+    "H5": {
+     "gross_wallex_pct": -0.306,
+     "global_pct": -0.038,
+     "premium_change_pct": -0.272,
+     "net_instant_pct": -1.158,
+     "net_next_min_pct": -1.043,
+     "share_gross_above_0.6pct": 3.4
+    },
+    "H10": {
+     "gross_wallex_pct": -0.29,
+     "global_pct": -0.036,
+     "premium_change_pct": -0.258,
+     "net_instant_pct": -1.143,
+     "net_next_min_pct": -1.04,
+     "share_gross_above_0.6pct": 10.4
+    },
+    "H15": {
+     "gross_wallex_pct": -0.321,
+     "global_pct": -0.037,
+     "premium_change_pct": -0.288,
+     "net_instant_pct": -1.174,
+     "net_next_min_pct": -0.99,
+     "share_gross_above_0.6pct": 12.5
+    },
+    "H30": {
+     "gross_wallex_pct": -0.31,
+     "global_pct": -0.04,
+     "premium_change_pct": -0.274,
+     "net_instant_pct": -1.163,
+     "net_next_min_pct": -1.026,
+     "share_gross_above_0.6pct": 14.1
+    },
+    "H60": {
+     "gross_wallex_pct": -0.252,
+     "global_pct": -0.007,
+     "premium_change_pct": -0.249,
+     "net_instant_pct": -1.105,
+     "net_next_min_pct": -0.983,
+     "share_gross_above_0.6pct": 20.6
+    },
+    "H120": {
+     "gross_wallex_pct": -0.179,
+     "global_pct": 0.085,
+     "premium_change_pct": -0.266,
+     "net_instant_pct": -1.033,
+     "net_next_min_pct": -0.911,
+     "share_gross_above_0.6pct": 25.1
+    },
+    "n_event_rows": 1106,
+    "mean_surge_size_pct": {
+     "dp": 1.071,
+     "r": 1.794,
+     "g": 0.702
+    }
+   }
+  },
+  "unconditional_baseline_net_pct_by_market": {
+   "BTCTMN": {
+    "net5": -0.656,
+    "gross5": 0.002,
+    "net10": -0.653,
+    "gross10": 0.005,
+    "net15": -0.651,
+    "gross15": 0.007,
+    "net30": -0.646,
+    "gross30": 0.012,
+    "net60": -0.634,
+    "gross60": 0.024,
+    "net120": -0.618,
+    "gross120": 0.04
+   },
+   "ETHTMN": {
+    "net5": -0.785,
+    "gross5": -0.002,
+    "net10": -0.787,
+    "gross10": -0.003,
+    "net15": -0.786,
+    "gross15": -0.002,
+    "net30": -0.785,
+    "gross30": -0.001,
+    "net60": -0.778,
+    "gross60": 0.006,
+    "net120": -0.771,
+    "gross120": 0.013
+   },
+   "SOLTMN": {
+    "net5": -0.875,
+    "gross5": -0.009,
+    "net10": -0.876,
+    "gross10": -0.011,
+    "net15": -0.877,
+    "gross15": -0.012,
+    "net30": -0.874,
+    "gross30": -0.009,
+    "net60": -0.872,
+    "gross60": -0.006,
+    "net120": -0.861,
+    "gross120": 0.004
+   },
+   "XRPTMN": {
+    "net5": -0.929,
+    "gross5": -0.005,
+    "net10": -0.933,
+    "gross10": -0.009,
+    "net15": -0.934,
+    "gross15": -0.01,
+    "net30": -0.94,
+    "gross30": -0.016,
+    "net60": -0.938,
+    "gross60": -0.014,
+    "net120": -0.938,
+    "gross120": -0.015
+   },
+   "DOGETMN": {
+    "net5": -0.772,
+    "gross5": -0.013,
+    "net10": -0.775,
+    "gross10": -0.015,
+    "net15": -0.778,
+    "gross15": -0.018,
+    "net30": -0.78,
+    "gross30": -0.02,
+    "net60": -0.784,
+    "gross60": -0.025,
+    "net120": -0.786,
+    "gross120": -0.026
+   },
+   "PEPETMN": {
+    "net5": -0.691,
+    "gross5": -0.004,
+    "net10": -0.692,
+    "gross10": -0.004,
+    "net15": -0.689,
+    "gross15": -0.002,
+    "net30": -0.694,
+    "gross30": -0.007,
+    "net60": -0.691,
+    "gross60": -0.004,
+    "net120": -0.685,
+    "gross120": 0.002
+   },
+   "BNBTMN": {
+    "net5": -0.735,
+    "gross5": -0.005,
+    "net10": -0.736,
+    "gross10": -0.006,
+    "net15": -0.738,
+    "gross15": -0.008,
+    "net30": -0.736,
+    "gross30": -0.007,
+    "net60": -0.734,
+    "gross60": -0.004,
+    "net120": -0.734,
+    "gross120": -0.004
+   },
+   "ARBTMN": {
+    "net5": -1.031,
+    "gross5": -0.001,
+    "net10": -1.032,
+    "gross10": -0.002,
+    "net15": -1.034,
+    "gross15": -0.005,
+    "net30": -1.026,
+    "gross30": 0.003,
+    "net60": -1.015,
+    "gross60": 0.015,
+    "net120": -1.0,
+    "gross120": 0.029
+   }
+  },
+  "grid_summary_csv": "event_study_summary.csv",
+  "finding": "After a local surge the Wallex price falls back: premium change is negative at every horizon and swamps the small positive global drift. No grid cell has positive IS net at any horizon; gross continuation is below the 0.6% fee hurdle in every IS cell."
+ },
+ "walk_forward": {
+  "grid_csv": "walkforward_grid.csv",
+  "configs_positive_IS": {
+   "lag0": 0,
+   "lag1": 0,
+   "of": 540
+  },
+  "configs_positive_OOS": {
+   "lag0": 19,
+   "lag1": 55,
+   "of": 540
+  },
+  "median_mean_net_pct_per_trade": {
+   "IS_lag1": -1.291,
+   "OOS_lag1": -1.028
+  },
+  "selected": {
+   "entry": {
+    "variant": "C",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0
+   },
+   "exit": {
+    "kind": "fixed",
+    "H_min": 60
+   },
+   "next_minute_lag1": {
+    "IS": {
+     "n": 20,
+     "per_day": 1.01,
+     "win_pct": 15.0,
+     "mean_net_pct": -0.954,
+     "sum_net_pct": -19.09,
+     "worst_pct": -4.42,
+     "best_pct": 0.78,
+     "best_trade_share_of_sum": null,
+     "acct_ret_pct": -3.818,
+     "max_dd_pct": -4.04,
+     "per_market": {
+      "ARBTMN": {
+       "n": 6,
+       "mean_pct": -1.166,
+       "sum_pct": -7.0
+      },
+      "BTCTMN": {
+       "n": 1,
+       "mean_pct": -0.365,
+       "sum_pct": -0.36
+      },
+      "DOGETMN": {
+       "n": 1,
+       "mean_pct": -0.18,
+       "sum_pct": -0.18
+      },
+      "ETHTMN": {
+       "n": 1,
+       "mean_pct": -0.319,
+       "sum_pct": -0.32
+      },
+      "PEPETMN": {
+       "n": 7,
+       "mean_pct": -0.905,
+       "sum_pct": -6.34
+      },
+      "SOLTMN": {
+       "n": 3,
+       "mean_pct": -1.213,
+       "sum_pct": -3.64
+      },
+      "XRPTMN": {
+       "n": 1,
+       "mean_pct": -1.253,
+       "sum_pct": -1.25
+      }
+     }
+    },
+    "OOS": {
+     "n": 11,
+     "per_day": 1.1,
+     "win_pct": 72.7,
+     "mean_net_pct": 0.347,
+     "sum_net_pct": 3.81,
+     "worst_pct": -2.96,
+     "best_pct": 1.98,
+     "best_trade_share_of_sum": 0.52,
+     "acct_ret_pct": 0.762,
+     "max_dd_pct": -1.013,
+     "win31h": {
+      "n": 210,
+      "share_pos": 0.4,
+      "share_zero": 0.329,
+      "share_neg": 0.271,
+      "median_pct": 0.0,
+      "worst_pct": -0.791,
+      "best_pct": 1.0
+     },
+     "per_market": {
+      "ARBTMN": {
+       "n": 4,
+       "mean_pct": 0.534,
+       "sum_pct": 2.13
+      },
+      "BNBTMN": {
+       "n": 1,
+       "mean_pct": -2.956,
+       "sum_pct": -2.96
+      },
+      "PEPETMN": {
+       "n": 5,
+       "mean_pct": 0.691,
+       "sum_pct": 3.46
+      },
+      "SOLTMN": {
+       "n": 1,
+       "mean_pct": 1.177,
+       "sum_pct": 1.18
+      }
+     },
+     "trades": [
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 01:02:00+00:00",
+       "net": 1.177
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 01:06:00+00:00",
+       "net": 1.25
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 01:06:00+00:00",
+       "net": 1.092
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 02:39:00+00:00",
+       "net": -0.649
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 13:40:00+00:00",
+       "net": 1.716
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 14:10:00+00:00",
+       "net": 1.979
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 09:09:00+00:00",
+       "net": 0.742
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 22:10:00+00:00",
+       "net": 0.293
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 22:12:00+00:00",
+       "net": 0.232
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 01:43:00+00:00",
+       "net": -1.063
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 06:49:00+00:00",
+       "net": -2.956
+      }
+     ],
+     "sum_without_best_trade_pct": 1.83
+    }
+   },
+   "instant_lag0": {
+    "IS": {
+     "n": 20,
+     "per_day": 1.01,
+     "win_pct": 20.0,
+     "mean_net_pct": -1.156,
+     "sum_net_pct": -23.12,
+     "worst_pct": -4.39,
+     "best_pct": 0.78,
+     "best_trade_share_of_sum": null,
+     "acct_ret_pct": -4.624,
+     "max_dd_pct": -4.769,
+     "per_market": {
+      "ARBTMN": {
+       "n": 6,
+       "mean_pct": -1.279,
+       "sum_pct": -7.68
+      },
+      "BTCTMN": {
+       "n": 1,
+       "mean_pct": -0.386,
+       "sum_pct": -0.39
+      },
+      "DOGETMN": {
+       "n": 1,
+       "mean_pct": -0.413,
+       "sum_pct": -0.41
+      },
+      "ETHTMN": {
+       "n": 1,
+       "mean_pct": -0.322,
+       "sum_pct": -0.32
+      },
+      "PEPETMN": {
+       "n": 7,
+       "mean_pct": -1.303,
+       "sum_pct": -9.12
+      },
+      "SOLTMN": {
+       "n": 3,
+       "mean_pct": -1.134,
+       "sum_pct": -3.4
+      },
+      "XRPTMN": {
+       "n": 1,
+       "mean_pct": -1.802,
+       "sum_pct": -1.8
+      }
+     }
+    },
+    "OOS": {
+     "n": 11,
+     "per_day": 1.1,
+     "win_pct": 54.5,
+     "mean_net_pct": -0.459,
+     "sum_net_pct": -5.05,
+     "worst_pct": -3.37,
+     "best_pct": 1.94,
+     "best_trade_share_of_sum": null,
+     "acct_ret_pct": -1.01,
+     "max_dd_pct": -1.585,
+     "win31h": {
+      "n": 210,
+      "share_pos": 0.152,
+      "share_zero": 0.329,
+      "share_neg": 0.519,
+      "median_pct": -0.125,
+      "worst_pct": -0.903,
+      "best_pct": 0.999
+     },
+     "per_market": {
+      "ARBTMN": {
+       "n": 4,
+       "mean_pct": 0.136,
+       "sum_pct": 0.54
+      },
+      "BNBTMN": {
+       "n": 1,
+       "mean_pct": -2.776,
+       "sum_pct": -2.78
+      },
+      "PEPETMN": {
+       "n": 5,
+       "mean_pct": 0.11,
+       "sum_pct": 0.55
+      },
+      "SOLTMN": {
+       "n": 1,
+       "mean_pct": -3.366,
+       "sum_pct": -3.37
+      }
+     },
+     "trades": [
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 01:02:00+00:00",
+       "net": -3.366
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 01:06:00+00:00",
+       "net": 1.386
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 01:06:00+00:00",
+       "net": 1.052
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 02:39:00+00:00",
+       "net": -2.012
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 13:40:00+00:00",
+       "net": 0.505
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 14:10:00+00:00",
+       "net": 1.941
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 09:09:00+00:00",
+       "net": -0.716
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 22:10:00+00:00",
+       "net": 0.283
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 22:12:00+00:00",
+       "net": 0.232
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 01:43:00+00:00",
+       "net": -1.58
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 06:49:00+00:00",
+       "net": -2.776
+      }
+     ]
+    }
+   }
+  },
+  "canonical_simple_rule": {
+   "entry": {
+    "variant": "A",
+    "k": 5,
+    "thr": 0.005,
+    "Z": 3.0
+   },
+   "exit": {
+    "kind": "fixed",
+    "H_min": 30
+   },
+   "next_minute_lag1": {
+    "IS": {
+     "n": 504,
+     "per_day": 25.52,
+     "win_pct": 6.0,
+     "mean_net_pct": -1.043,
+     "sum_net_pct": -525.48,
+     "worst_pct": -6.26,
+     "best_pct": 3.88,
+     "best_trade_share_of_sum": null,
+     "acct_ret_pct": -105.097,
+     "max_dd_pct": -105.209,
+     "per_market": {
+      "ARBTMN": {
+       "n": 120,
+       "mean_pct": -1.308,
+       "sum_pct": -157.02
+      },
+      "BNBTMN": {
+       "n": 38,
+       "mean_pct": -1.17,
+       "sum_pct": -44.48
+      },
+      "BTCTMN": {
+       "n": 13,
+       "mean_pct": -0.317,
+       "sum_pct": -4.12
+      },
+      "DOGETMN": {
+       "n": 60,
+       "mean_pct": -1.079,
+       "sum_pct": -64.75
+      },
+      "ETHTMN": {
+       "n": 28,
+       "mean_pct": -0.915,
+       "sum_pct": -25.62
+      },
+      "PEPETMN": {
+       "n": 121,
+       "mean_pct": -0.76,
+       "sum_pct": -92.02
+      },
+      "SOLTMN": {
+       "n": 62,
+       "mean_pct": -0.979,
+       "sum_pct": -60.69
+      },
+      "XRPTMN": {
+       "n": 62,
+       "mean_pct": -1.239,
+       "sum_pct": -76.79
+      }
+     },
+     "trades": null
+    },
+    "OOS": {
+     "n": 335,
+     "per_day": 33.5,
+     "win_pct": 7.5,
+     "mean_net_pct": -0.981,
+     "sum_net_pct": -328.71,
+     "worst_pct": -5.31,
+     "best_pct": 5.38,
+     "best_trade_share_of_sum": null,
+     "acct_ret_pct": -65.742,
+     "max_dd_pct": -65.742,
+     "win31h": {
+      "n": 210,
+      "share_pos": 0.0,
+      "share_zero": 0.0,
+      "share_neg": 1.0,
+      "median_pct": -12.023,
+      "worst_pct": -21.756,
+      "best_pct": -6.524
+     },
+     "per_market": {
+      "ARBTMN": {
+       "n": 85,
+       "mean_pct": -1.207,
+       "sum_pct": -102.6
+      },
+      "BNBTMN": {
+       "n": 29,
+       "mean_pct": -1.062,
+       "sum_pct": -30.79
+      },
+      "BTCTMN": {
+       "n": 10,
+       "mean_pct": -0.778,
+       "sum_pct": -7.78
+      },
+      "DOGETMN": {
+       "n": 34,
+       "mean_pct": -0.86,
+       "sum_pct": -29.24
+      },
+      "ETHTMN": {
+       "n": 23,
+       "mean_pct": -0.958,
+       "sum_pct": -22.04
+      },
+      "PEPETMN": {
+       "n": 90,
+       "mean_pct": -0.772,
+       "sum_pct": -69.44
+      },
+      "SOLTMN": {
+       "n": 29,
+       "mean_pct": -1.148,
+       "sum_pct": -33.29
+      },
+      "XRPTMN": {
+       "n": 35,
+       "mean_pct": -0.958,
+       "sum_pct": -33.53
+      }
+     },
+     "trades": [
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 07:11:00+00:00",
+       "net": -0.874
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-12 08:04:00+00:00",
+       "net": -0.938
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 09:25:00+00:00",
+       "net": -1.247
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 11:37:00+00:00",
+       "net": -1.419
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 12:15:00+00:00",
+       "net": -2.466
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 12:57:00+00:00",
+       "net": -1.292
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 13:56:00+00:00",
+       "net": -2.321
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-12 14:02:00+00:00",
+       "net": -1.581
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-12 14:13:00+00:00",
+       "net": -1.334
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 14:57:00+00:00",
+       "net": -0.888
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 14:58:00+00:00",
+       "net": -0.826
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 16:30:00+00:00",
+       "net": -1.163
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 16:40:00+00:00",
+       "net": -3.087
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-12 16:56:00+00:00",
+       "net": -0.433
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-12 17:04:00+00:00",
+       "net": -0.781
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 17:17:00+00:00",
+       "net": -1.662
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 17:50:00+00:00",
+       "net": -1.551
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 17:55:00+00:00",
+       "net": -1.406
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-12 18:13:00+00:00",
+       "net": -0.866
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-12 18:52:00+00:00",
+       "net": -1.58
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 19:31:00+00:00",
+       "net": -0.64
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-12 20:30:00+00:00",
+       "net": -1.361
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-12 20:52:00+00:00",
+       "net": -1.439
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-12 20:58:00+00:00",
+       "net": -1.34
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-12 21:06:00+00:00",
+       "net": -0.962
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-12 21:56:00+00:00",
+       "net": -0.492
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-12 21:59:00+00:00",
+       "net": -0.872
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-12 23:10:00+00:00",
+       "net": -1.959
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-12 23:48:00+00:00",
+       "net": -1.459
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 00:15:00+00:00",
+       "net": -2.108
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 00:20:00+00:00",
+       "net": -5.305
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 00:28:00+00:00",
+       "net": -1.768
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 00:56:00+00:00",
+       "net": 1.564
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 00:56:00+00:00",
+       "net": 1.135
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 01:19:00+00:00",
+       "net": -0.057
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 01:50:00+00:00",
+       "net": -0.624
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 01:50:00+00:00",
+       "net": -0.096
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 02:16:00+00:00",
+       "net": -1.229
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 03:32:00+00:00",
+       "net": -0.908
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 03:36:00+00:00",
+       "net": -0.687
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 04:58:00+00:00",
+       "net": -1.029
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 05:26:00+00:00",
+       "net": -2.163
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 05:30:00+00:00",
+       "net": -2.266
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 05:50:00+00:00",
+       "net": -1.747
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 07:05:00+00:00",
+       "net": -1.105
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 07:42:00+00:00",
+       "net": -1.35
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 07:49:00+00:00",
+       "net": -0.797
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 09:33:00+00:00",
+       "net": -1.27
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 11:00:00+00:00",
+       "net": -1.05
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 11:12:00+00:00",
+       "net": -0.859
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 11:15:00+00:00",
+       "net": -0.727
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 11:42:00+00:00",
+       "net": -2.303
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 12:58:00+00:00",
+       "net": -0.957
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 13:02:00+00:00",
+       "net": -1.703
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 13:02:00+00:00",
+       "net": -0.537
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-13 14:09:00+00:00",
+       "net": -0.711
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 14:16:00+00:00",
+       "net": -0.766
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 14:33:00+00:00",
+       "net": -0.691
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-13 14:50:00+00:00",
+       "net": -0.911
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 15:26:00+00:00",
+       "net": -1.143
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-13 15:28:00+00:00",
+       "net": -0.872
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 16:12:00+00:00",
+       "net": -0.098
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 16:25:00+00:00",
+       "net": -0.678
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-13 17:13:00+00:00",
+       "net": -1.449
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-13 17:22:00+00:00",
+       "net": -1.742
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-13 17:32:00+00:00",
+       "net": -1.308
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 17:49:00+00:00",
+       "net": -0.88
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-13 18:08:00+00:00",
+       "net": -1.249
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-13 18:09:00+00:00",
+       "net": -1.284
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-13 20:48:00+00:00",
+       "net": -1.339
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 00:32:00+00:00",
+       "net": -1.9
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 01:32:00+00:00",
+       "net": -0.999
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-14 05:43:00+00:00",
+       "net": -0.922
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 06:28:00+00:00",
+       "net": 0.465
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-14 06:58:00+00:00",
+       "net": -0.634
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 08:11:00+00:00",
+       "net": -1.987
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 10:19:00+00:00",
+       "net": -0.341
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-14 10:54:00+00:00",
+       "net": -0.798
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 11:27:00+00:00",
+       "net": -0.678
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 11:37:00+00:00",
+       "net": -1.027
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 12:04:00+00:00",
+       "net": -1.928
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-14 12:32:00+00:00",
+       "net": -0.646
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 12:35:00+00:00",
+       "net": -1.543
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-14 12:40:00+00:00",
+       "net": -1.502
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 13:13:00+00:00",
+       "net": 0.465
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-14 13:35:00+00:00",
+       "net": -2.121
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-14 14:36:00+00:00",
+       "net": -0.83
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 15:05:00+00:00",
+       "net": -0.306
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 15:22:00+00:00",
+       "net": -0.538
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 15:37:00+00:00",
+       "net": -0.618
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-14 16:12:00+00:00",
+       "net": -0.642
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-14 16:48:00+00:00",
+       "net": -0.194
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-14 16:49:00+00:00",
+       "net": -0.833
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-14 16:49:00+00:00",
+       "net": -0.816
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-14 18:20:00+00:00",
+       "net": -1.358
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-14 20:08:00+00:00",
+       "net": -1.41
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-14 21:51:00+00:00",
+       "net": -1.171
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-14 21:53:00+00:00",
+       "net": -1.881
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 01:11:00+00:00",
+       "net": -0.807
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 02:06:00+00:00",
+       "net": -2.697
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 02:34:00+00:00",
+       "net": -1.027
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 02:38:00+00:00",
+       "net": -1.228
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 02:38:00+00:00",
+       "net": -2.182
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 03:14:00+00:00",
+       "net": -1.24
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 03:19:00+00:00",
+       "net": -0.76
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 03:20:00+00:00",
+       "net": -1.733
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 03:47:00+00:00",
+       "net": -1.193
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 04:06:00+00:00",
+       "net": 1.717
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 04:07:00+00:00",
+       "net": 0.551
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 04:22:00+00:00",
+       "net": 0.695
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-15 04:49:00+00:00",
+       "net": -1.377
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 04:54:00+00:00",
+       "net": -3.164
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-15 05:41:00+00:00",
+       "net": -1.238
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 06:00:00+00:00",
+       "net": 0.059
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 06:07:00+00:00",
+       "net": -0.877
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 06:11:00+00:00",
+       "net": -0.115
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 06:37:00+00:00",
+       "net": -0.859
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-15 06:47:00+00:00",
+       "net": -0.729
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 08:02:00+00:00",
+       "net": 0.1
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 08:27:00+00:00",
+       "net": -0.987
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 08:53:00+00:00",
+       "net": -2.261
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 11:10:00+00:00",
+       "net": -1.559
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-15 13:09:00+00:00",
+       "net": -0.564
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 13:33:00+00:00",
+       "net": -1.896
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 14:07:00+00:00",
+       "net": 0.157
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 14:14:00+00:00",
+       "net": 0.532
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-15 14:14:00+00:00",
+       "net": -0.153
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-15 14:44:00+00:00",
+       "net": 0.533
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 15:07:00+00:00",
+       "net": -0.833
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 15:08:00+00:00",
+       "net": 0.464
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-15 15:30:00+00:00",
+       "net": -0.579
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-15 15:40:00+00:00",
+       "net": -0.877
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 15:40:00+00:00",
+       "net": -0.559
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 16:05:00+00:00",
+       "net": -1.689
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-15 16:18:00+00:00",
+       "net": -0.685
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-15 17:07:00+00:00",
+       "net": -0.696
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 18:04:00+00:00",
+       "net": -1.385
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-15 19:30:00+00:00",
+       "net": -1.444
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-15 19:51:00+00:00",
+       "net": -1.707
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 20:01:00+00:00",
+       "net": -0.78
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-15 21:47:00+00:00",
+       "net": -1.237
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 03:03:00+00:00",
+       "net": -1.56
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-16 03:56:00+00:00",
+       "net": -1.046
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-16 04:00:00+00:00",
+       "net": -0.656
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 04:25:00+00:00",
+       "net": -0.783
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-16 05:11:00+00:00",
+       "net": -1.41
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-16 05:43:00+00:00",
+       "net": -1.123
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 06:34:00+00:00",
+       "net": -0.283
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 07:17:00+00:00",
+       "net": -1.925
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 10:43:00+00:00",
+       "net": -1.029
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 11:17:00+00:00",
+       "net": -0.32
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-16 11:42:00+00:00",
+       "net": -1.271
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-16 13:15:00+00:00",
+       "net": -1.062
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-16 14:00:00+00:00",
+       "net": 0.016
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-16 14:24:00+00:00",
+       "net": -0.917
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 14:27:00+00:00",
+       "net": -1.342
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 14:48:00+00:00",
+       "net": -3.084
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 15:15:00+00:00",
+       "net": -0.329
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-16 15:45:00+00:00",
+       "net": -1.727
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 15:46:00+00:00",
+       "net": -2.237
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 16:20:00+00:00",
+       "net": -1.841
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-16 16:26:00+00:00",
+       "net": -1.223
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 16:44:00+00:00",
+       "net": -2.143
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-16 17:26:00+00:00",
+       "net": -0.134
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-16 17:28:00+00:00",
+       "net": -0.674
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-16 17:32:00+00:00",
+       "net": -0.244
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 17:57:00+00:00",
+       "net": -0.289
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 19:02:00+00:00",
+       "net": -0.599
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-16 19:07:00+00:00",
+       "net": -0.527
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-16 19:16:00+00:00",
+       "net": -0.926
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 20:20:00+00:00",
+       "net": -0.979
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-16 21:25:00+00:00",
+       "net": -1.498
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-16 21:29:00+00:00",
+       "net": -0.687
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-16 22:22:00+00:00",
+       "net": -0.866
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-17 00:07:00+00:00",
+       "net": -1.792
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-17 03:46:00+00:00",
+       "net": -1.428
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-17 04:15:00+00:00",
+       "net": -0.641
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-17 05:42:00+00:00",
+       "net": -2.937
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-17 05:43:00+00:00",
+       "net": -0.781
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-17 06:30:00+00:00",
+       "net": -0.363
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-17 06:39:00+00:00",
+       "net": -0.676
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-17 07:00:00+00:00",
+       "net": -0.731
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-17 16:06:00+00:00",
+       "net": -0.803
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-17 17:19:00+00:00",
+       "net": -0.6
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-17 18:11:00+00:00",
+       "net": -1.592
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-17 19:47:00+00:00",
+       "net": -1.403
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-17 21:09:00+00:00",
+       "net": -2.909
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-17 21:37:00+00:00",
+       "net": -0.012
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-17 21:48:00+00:00",
+       "net": -0.616
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-17 21:49:00+00:00",
+       "net": 0.078
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-17 23:35:00+00:00",
+       "net": -0.811
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 01:51:00+00:00",
+       "net": -0.716
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-18 03:41:00+00:00",
+       "net": -1.268
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-18 05:18:00+00:00",
+       "net": -2.361
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-18 06:35:00+00:00",
+       "net": -1.011
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 06:40:00+00:00",
+       "net": -1.045
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-18 07:29:00+00:00",
+       "net": -1.447
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 08:00:00+00:00",
+       "net": -2.223
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 08:11:00+00:00",
+       "net": -1.304
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 08:36:00+00:00",
+       "net": -0.973
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 08:45:00+00:00",
+       "net": 0.905
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-18 09:11:00+00:00",
+       "net": -0.403
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 09:14:00+00:00",
+       "net": -0.776
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 09:15:00+00:00",
+       "net": -0.31
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 09:55:00+00:00",
+       "net": -1.505
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 10:32:00+00:00",
+       "net": -1.709
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 12:07:00+00:00",
+       "net": -0.774
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 12:51:00+00:00",
+       "net": -1.574
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 13:51:00+00:00",
+       "net": -1.808
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 14:38:00+00:00",
+       "net": -0.123
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 14:38:00+00:00",
+       "net": 0.244
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-18 14:44:00+00:00",
+       "net": -0.84
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-18 15:40:00+00:00",
+       "net": -1.214
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 16:26:00+00:00",
+       "net": -1.503
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 16:29:00+00:00",
+       "net": -0.451
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-18 17:03:00+00:00",
+       "net": -1.234
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 17:39:00+00:00",
+       "net": -0.707
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 19:45:00+00:00",
+       "net": -1.271
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-18 19:46:00+00:00",
+       "net": -0.319
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-18 19:52:00+00:00",
+       "net": -0.823
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 20:44:00+00:00",
+       "net": -0.753
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 21:05:00+00:00",
+       "net": -0.237
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-18 21:07:00+00:00",
+       "net": -0.527
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-18 21:16:00+00:00",
+       "net": -0.224
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-18 22:03:00+00:00",
+       "net": -0.694
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-18 22:05:00+00:00",
+       "net": -0.008
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 22:16:00+00:00",
+       "net": -0.783
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-18 22:46:00+00:00",
+       "net": -0.828
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-18 22:55:00+00:00",
+       "net": -0.701
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-19 00:47:00+00:00",
+       "net": -0.2
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 01:43:00+00:00",
+       "net": -2.107
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-19 02:18:00+00:00",
+       "net": -0.64
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 02:30:00+00:00",
+       "net": -0.249
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-19 02:52:00+00:00",
+       "net": -0.532
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 04:53:00+00:00",
+       "net": -1.092
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-19 05:08:00+00:00",
+       "net": -1.129
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-19 05:57:00+00:00",
+       "net": -1.024
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-19 06:16:00+00:00",
+       "net": -0.859
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 06:24:00+00:00",
+       "net": -2.341
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 07:08:00+00:00",
+       "net": -0.441
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 07:39:00+00:00",
+       "net": -0.623
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-19 07:40:00+00:00",
+       "net": -0.64
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-19 07:42:00+00:00",
+       "net": -1.6
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-19 08:16:00+00:00",
+       "net": -0.637
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 08:25:00+00:00",
+       "net": -1.304
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 10:34:00+00:00",
+       "net": -1.241
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-19 10:43:00+00:00",
+       "net": -0.771
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-19 10:59:00+00:00",
+       "net": -0.822
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-19 11:14:00+00:00",
+       "net": -0.407
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 11:48:00+00:00",
+       "net": -0.124
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-19 14:50:00+00:00",
+       "net": -0.207
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-19 16:15:00+00:00",
+       "net": -1.211
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 16:46:00+00:00",
+       "net": -1.517
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-19 18:11:00+00:00",
+       "net": -1.833
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-19 18:45:00+00:00",
+       "net": -1.033
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 18:59:00+00:00",
+       "net": -1.464
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-19 21:35:00+00:00",
+       "net": -1.111
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-19 22:18:00+00:00",
+       "net": -1.452
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 01:13:00+00:00",
+       "net": 0.767
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 02:51:00+00:00",
+       "net": -2.624
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 03:51:00+00:00",
+       "net": -1.16
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-20 04:04:00+00:00",
+       "net": -1.247
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 06:35:00+00:00",
+       "net": 1.005
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-20 06:50:00+00:00",
+       "net": -0.671
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 06:54:00+00:00",
+       "net": -0.687
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-20 07:24:00+00:00",
+       "net": -1.096
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-20 08:59:00+00:00",
+       "net": -0.72
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 09:04:00+00:00",
+       "net": -0.905
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 11:03:00+00:00",
+       "net": -1.262
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 11:33:00+00:00",
+       "net": -1.664
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 12:26:00+00:00",
+       "net": -1.604
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 13:53:00+00:00",
+       "net": 5.377
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-20 14:12:00+00:00",
+       "net": -0.733
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-20 14:15:00+00:00",
+       "net": -1.104
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 14:25:00+00:00",
+       "net": -1.268
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 15:00:00+00:00",
+       "net": -5.116
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-20 15:20:00+00:00",
+       "net": -0.873
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 15:23:00+00:00",
+       "net": -0.218
+      },
+      {
+       "market": "BTCTMN",
+       "t": "2026-10-20 15:30:00+00:00",
+       "net": -0.178
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 15:54:00+00:00",
+       "net": -2.116
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 16:08:00+00:00",
+       "net": -0.578
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 16:32:00+00:00",
+       "net": -1.547
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 17:16:00+00:00",
+       "net": -0.803
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 17:18:00+00:00",
+       "net": -0.802
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-20 17:51:00+00:00",
+       "net": -1.209
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 17:55:00+00:00",
+       "net": -0.186
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 18:02:00+00:00",
+       "net": -0.33
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 18:31:00+00:00",
+       "net": -2.258
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 18:32:00+00:00",
+       "net": -1.714
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 19:04:00+00:00",
+       "net": 0.366
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 19:38:00+00:00",
+       "net": -0.943
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-20 19:52:00+00:00",
+       "net": -1.343
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-20 20:27:00+00:00",
+       "net": -0.044
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-20 21:12:00+00:00",
+       "net": -1.083
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 21:21:00+00:00",
+       "net": -1.407
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-20 21:51:00+00:00",
+       "net": -1.017
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 01:32:00+00:00",
+       "net": 0.45
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-21 02:15:00+00:00",
+       "net": -0.729
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 02:19:00+00:00",
+       "net": -1.837
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-21 04:52:00+00:00",
+       "net": -0.335
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 05:56:00+00:00",
+       "net": -1.298
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-21 06:39:00+00:00",
+       "net": -0.783
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-21 06:39:00+00:00",
+       "net": -0.866
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-21 07:06:00+00:00",
+       "net": -1.059
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 07:33:00+00:00",
+       "net": -0.796
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-21 07:34:00+00:00",
+       "net": 0.075
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 08:04:00+00:00",
+       "net": -0.945
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-21 08:06:00+00:00",
+       "net": -0.704
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 08:51:00+00:00",
+       "net": -0.233
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 10:28:00+00:00",
+       "net": -0.63
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-21 11:54:00+00:00",
+       "net": -1.013
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 12:34:00+00:00",
+       "net": 0.344
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 13:09:00+00:00",
+       "net": -1.642
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-21 13:09:00+00:00",
+       "net": -1.824
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 14:29:00+00:00",
+       "net": 0.181
+      },
+      {
+       "market": "DOGETMN",
+       "t": "2026-10-21 14:52:00+00:00",
+       "net": -0.475
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 15:00:00+00:00",
+       "net": -1.901
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-21 15:15:00+00:00",
+       "net": -0.828
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-21 15:26:00+00:00",
+       "net": -0.087
+      },
+      {
+       "market": "ETHTMN",
+       "t": "2026-10-21 16:01:00+00:00",
+       "net": -0.566
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 16:12:00+00:00",
+       "net": -0.823
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 17:23:00+00:00",
+       "net": -0.438
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-21 17:37:00+00:00",
+       "net": -1.918
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-21 18:08:00+00:00",
+       "net": -1.014
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 18:20:00+00:00",
+       "net": -1.971
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-21 18:58:00+00:00",
+       "net": -0.148
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-21 19:20:00+00:00",
+       "net": -0.374
+      },
+      {
+       "market": "SOLTMN",
+       "t": "2026-10-21 19:59:00+00:00",
+       "net": -1.601
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-21 21:34:00+00:00",
+       "net": -0.729
+      },
+      {
+       "market": "BNBTMN",
+       "t": "2026-10-22 01:35:00+00:00",
+       "net": -1.023
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-22 01:47:00+00:00",
+       "net": -2.443
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-22 04:42:00+00:00",
+       "net": -1.192
+      },
+      {
+       "market": "XRPTMN",
+       "t": "2026-10-22 05:05:00+00:00",
+       "net": -1.037
+      },
+      {
+       "market": "PEPETMN",
+       "t": "2026-10-22 05:21:00+00:00",
+       "net": -0.803
+      },
+      {
+       "market": "ARBTMN",
+       "t": "2026-10-22 05:37:00+00:00",
+       "net": -1.743
+      }
+     ]
+    }
+   }
+  },
+  "top5_by_IS_lag1": [
+   {
+    "variant": "C",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0,
+    "exit": "fixed",
+    "H": 60,
+    "IS_n": 20,
+    "IS_acct_ret_pct": -3.818,
+    "OOS_n": 11,
+    "OOS_mean_net_pct": 0.347,
+    "OOS_acct_ret_pct": 0.762,
+    "OOS_max_dd_pct": -1.013,
+    "OOS_win31h_pos": 0.4
+   },
+   {
+    "variant": "B",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0,
+    "exit": "fixed",
+    "H": 60,
+    "IS_n": 21,
+    "IS_acct_ret_pct": -3.91,
+    "OOS_n": 12,
+    "OOS_mean_net_pct": 0.1,
+    "OOS_acct_ret_pct": 0.241,
+    "OOS_max_dd_pct": -1.601,
+    "OOS_win31h_pos": 0.262
+   },
+   {
+    "variant": "C",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0,
+    "exit": "fixed",
+    "H": 15,
+    "IS_n": 21,
+    "IS_acct_ret_pct": -4.093,
+    "OOS_n": 13,
+    "OOS_mean_net_pct": -0.554,
+    "OOS_acct_ret_pct": -1.442,
+    "OOS_max_dd_pct": -2.514,
+    "OOS_win31h_pos": 0.114
+   },
+   {
+    "variant": "B",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0,
+    "exit": "fixed",
+    "H": 15,
+    "IS_n": 22,
+    "IS_acct_ret_pct": -4.25,
+    "OOS_n": 15,
+    "OOS_mean_net_pct": -1.008,
+    "OOS_acct_ret_pct": -3.025,
+    "OOS_max_dd_pct": -4.406,
+    "OOS_win31h_pos": 0.052
+   },
+   {
+    "variant": "C",
+    "k": 15,
+    "thr": 0.02,
+    "Z": 3.0,
+    "exit": "fixed",
+    "H": 30,
+    "IS_n": 21,
+    "IS_acct_ret_pct": -4.442,
+    "OOS_n": 12,
+    "OOS_mean_net_pct": -0.325,
+    "OOS_acct_ret_pct": -0.779,
+    "OOS_max_dd_pct": -1.75,
+    "OOS_win31h_pos": 0.176
+   }
+  ]
+ },
+ "live_ticks": {
+  "tick_span_utc": [
+   "2026-10-21 16:45:30.299999952+00:00",
+   "2026-10-22 10:46:36.109999895+00:00"
+  ],
+  "candle_overlap_end_utc": "2026-10-22 07:00:00+00:00",
+  "median_spread_ticks": {
+   "ARBTMN": 0.004152342693808153,
+   "BNBTMN": 0.0029508854427213738,
+   "BTCTMN": 0.0006840610516523071,
+   "DOGETMN": 0.0017872260370614956,
+   "ETHTMN": 0.0012275174154827706,
+   "PEPETMN": 0.0012377258849740613,
+   "SOLTMN": 0.0026788239245731926,
+   "XRPTMN": 0.0019399139314959513
+  },
+  "part1": [
+   {
+    "cfg": "A-k15-0.01-Z3.0",
+    "lag": 0,
+    "H": 15,
+    "n": 1,
+    "mean_net_tick_pct": -1.136,
+    "mean_net_candle_model_pct": -1.266,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k15-0.01-Z3.0",
+    "lag": 0,
+    "H": 60,
+    "n": 1,
+    "mean_net_tick_pct": -1.186,
+    "mean_net_candle_model_pct": -1.315,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k15-0.01-Z3.0",
+    "lag": 1,
+    "H": 15,
+    "n": 1,
+    "mean_net_tick_pct": -1.136,
+    "mean_net_candle_model_pct": -1.266,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k15-0.01-Z3.0",
+    "lag": 1,
+    "H": 60,
+    "n": 1,
+    "mean_net_tick_pct": -1.186,
+    "mean_net_candle_model_pct": -1.315,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k5-0.005-Z3.0",
+    "lag": 0,
+    "H": 15,
+    "n": 12,
+    "mean_net_tick_pct": -0.92,
+    "mean_net_candle_model_pct": -1.176,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k5-0.005-Z3.0",
+    "lag": 0,
+    "H": 60,
+    "n": 12,
+    "mean_net_tick_pct": -0.939,
+    "mean_net_candle_model_pct": -1.167,
+    "win_pct": 25.0
+   },
+   {
+    "cfg": "A-k5-0.005-Z3.0",
+    "lag": 1,
+    "H": 15,
+    "n": 12,
+    "mean_net_tick_pct": -0.906,
+    "mean_net_candle_model_pct": -1.067,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "A-k5-0.005-Z3.0",
+    "lag": 1,
+    "H": 60,
+    "n": 12,
+    "mean_net_tick_pct": -0.983,
+    "mean_net_candle_model_pct": -1.047,
+    "win_pct": 25.0
+   },
+   {
+    "cfg": "B-k5-0.01-Z3.0",
+    "lag": 0,
+    "H": 15,
+    "n": 2,
+    "mean_net_tick_pct": -0.905,
+    "mean_net_candle_model_pct": -1.167,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "B-k5-0.01-Z3.0",
+    "lag": 0,
+    "H": 60,
+    "n": 2,
+    "mean_net_tick_pct": -1.065,
+    "mean_net_candle_model_pct": -1.323,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "B-k5-0.01-Z3.0",
+    "lag": 1,
+    "H": 15,
+    "n": 2,
+    "mean_net_tick_pct": -0.835,
+    "mean_net_candle_model_pct": -1.167,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "B-k5-0.01-Z3.0",
+    "lag": 1,
+    "H": 60,
+    "n": 2,
+    "mean_net_tick_pct": -1.038,
+    "mean_net_candle_model_pct": -1.388,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "C-k5-0.01-Z3.0",
+    "lag": 0,
+    "H": 15,
+    "n": 2,
+    "mean_net_tick_pct": -0.905,
+    "mean_net_candle_model_pct": -1.167,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "C-k5-0.01-Z3.0",
+    "lag": 0,
+    "H": 60,
+    "n": 2,
+    "mean_net_tick_pct": -1.065,
+    "mean_net_candle_model_pct": -1.323,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "C-k5-0.01-Z3.0",
+    "lag": 1,
+    "H": 15,
+    "n": 2,
+    "mean_net_tick_pct": -0.835,
+    "mean_net_candle_model_pct": -1.167,
+    "win_pct": 0.0
+   },
+   {
+    "cfg": "C-k5-0.01-Z3.0",
+    "lag": 1,
+    "H": 60,
+    "n": 2,
+    "mean_net_tick_pct": -1.038,
+    "mean_net_candle_model_pct": -1.388,
+    "win_pct": 0.0
+   }
+  ],
+  "part2": [
+   {
+    "rule": "A'-k15-0.005",
+    "lag": 0,
+    "H": 15,
+    "n": 17,
+    "mean_net_pct": -1.133,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.105
+   },
+   {
+    "rule": "A'-k15-0.005",
+    "lag": 0,
+    "H": 60,
+    "n": 17,
+    "mean_net_pct": -1.489,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.483
+   },
+   {
+    "rule": "A'-k15-0.005",
+    "lag": 1,
+    "H": 15,
+    "n": 17,
+    "mean_net_pct": -1.13,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.084
+   },
+   {
+    "rule": "A'-k15-0.005",
+    "lag": 1,
+    "H": 60,
+    "n": 17,
+    "mean_net_pct": -1.447,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.428
+   },
+   {
+    "rule": "A'-k15-0.01",
+    "lag": 0,
+    "H": 15,
+    "n": 2,
+    "mean_net_pct": -1.982,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.665
+   },
+   {
+    "rule": "A'-k15-0.01",
+    "lag": 0,
+    "H": 60,
+    "n": 2,
+    "mean_net_pct": -2.251,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -1.052
+   },
+   {
+    "rule": "A'-k15-0.01",
+    "lag": 1,
+    "H": 15,
+    "n": 2,
+    "mean_net_pct": -0.789,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": 0.18
+   },
+   {
+    "rule": "A'-k15-0.01",
+    "lag": 1,
+    "H": 60,
+    "n": 2,
+    "mean_net_pct": -1.204,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.361
+   },
+   {
+    "rule": "A'-k5-0.005",
+    "lag": 0,
+    "H": 15,
+    "n": 15,
+    "mean_net_pct": -1.547,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.372
+   },
+   {
+    "rule": "A'-k5-0.005",
+    "lag": 0,
+    "H": 60,
+    "n": 15,
+    "mean_net_pct": -1.822,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.731
+   },
+   {
+    "rule": "A'-k5-0.005",
+    "lag": 1,
+    "H": 15,
+    "n": 15,
+    "mean_net_pct": -1.508,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.343
+   },
+   {
+    "rule": "A'-k5-0.005",
+    "lag": 1,
+    "H": 60,
+    "n": 15,
+    "mean_net_pct": -1.862,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.717
+   },
+   {
+    "rule": "A'-k5-0.01",
+    "lag": 0,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -2.819,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.779
+   },
+   {
+    "rule": "A'-k5-0.01",
+    "lag": 1,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -0.831,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": 0.012
+   },
+   {
+    "rule": "B'-k5-0.01",
+    "lag": 0,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -2.16,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.864
+   },
+   {
+    "rule": "B'-k5-0.01",
+    "lag": 0,
+    "H": 60,
+    "n": 1,
+    "mean_net_pct": -2.368,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.977
+   },
+   {
+    "rule": "B'-k5-0.01",
+    "lag": 1,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -1.079,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.292
+   },
+   {
+    "rule": "B'-k5-0.01",
+    "lag": 1,
+    "H": 60,
+    "n": 1,
+    "mean_net_pct": -1.706,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.608
+   },
+   {
+    "rule": "C'-k5-0.01",
+    "lag": 0,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -2.16,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.864
+   },
+   {
+    "rule": "C'-k5-0.01",
+    "lag": 0,
+    "H": 60,
+    "n": 1,
+    "mean_net_pct": -2.368,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.977
+   },
+   {
+    "rule": "C'-k5-0.01",
+    "lag": 1,
+    "H": 15,
+    "n": 1,
+    "mean_net_pct": -1.079,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.292
+   },
+   {
+    "rule": "C'-k5-0.01",
+    "lag": 1,
+    "H": 60,
+    "n": 1,
+    "mean_net_pct": -1.706,
+    "win_pct": 0.0,
+    "mean_mid_move_pct": -0.608
+   }
+  ]
+ },
+ "by_product": "Local surges are reliably followed by give-back (premium falls ~0.3-0.5% within 15-60 min on average). Useful for other strategies only as a SELL-into-surge exit / do-not-buy filter, not as an entry."
+}

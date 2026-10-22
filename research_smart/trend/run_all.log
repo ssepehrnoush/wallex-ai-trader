@@ -1,0 +1,36 @@
+A:f=4,s=12,k=2.0,reg=0 IS 88 -15.697 OOS 33 -3.663
+A:f=4,s=12,k=2.0,reg=1 IS 63 -13.102 OOS 33 -4.789
+A:f=4,s=12,k=3.0,reg=0 IS 84 -13.981 OOS 32 -3.239
+A:f=4,s=12,k=3.0,reg=1 IS 60 -11.533 OOS 33 -4.947
+A:f=6,s=24,k=2.0,reg=0 IS 78 -14.231 OOS 26 -3.693
+A:f=6,s=24,k=2.0,reg=1 IS 61 -13.419 OOS 28 -3.451
+A:f=6,s=24,k=3.0,reg=0 IS 69 -10.353 OOS 25 -3.131
+A:f=6,s=24,k=3.0,reg=1 IS 53 -11.411 OOS 27 -2.678
+A:f=12,s=48,k=2.0,reg=0 IS 53 -10.215 OOS 20 -2.835
+A:f=12,s=48,k=2.0,reg=1 IS 52 -12.682 OOS 22 -3.226
+A:f=12,s=48,k=3.0,reg=0 IS 44 -5.862 OOS 19 -2.33
+A:f=12,s=48,k=3.0,reg=1 IS 43 -9.273 OOS 21 -2.282
+B:N=12,m=1.0,reg=0 IS 59 -13.741 OOS 26 -0.94
+B:N=12,m=1.0,reg=1 IS 47 -12.285 OOS 23 -3.774
+B:N=12,m=2.0,reg=0 IS 55 -15.594 OOS 15 1.921
+B:N=12,m=2.0,reg=1 IS 44 -13.64 OOS 14 -1.37
+B:N=24,m=1.0,reg=0 IS 40 -11.149 OOS 19 -2.4
+B:N=24,m=1.0,reg=1 IS 34 -10.633 OOS 18 -4.427
+B:N=24,m=2.0,reg=0 IS 36 -11.369 OOS 14 -1.249
+B:N=24,m=2.0,reg=1 IS 31 -9.896 OOS 14 -3.67
+B:N=48,m=1.0,reg=0 IS 25 -4.612 OOS 11 0.945
+B:N=48,m=1.0,reg=1 IS 23 -8.679 OOS 12 -2.263
+B:N=48,m=2.0,reg=0 IS 25 -4.224 OOS 10 1.392
+B:N=48,m=2.0,reg=1 IS 23 -7.322 OOS 10 -1.964
+C:L=12,K=1,reg=0 IS 42 -8.059 OOS 22 -2.247
+C:L=12,K=1,reg=1 IS 25 -5.885 OOS 19 -3.866
+C:L=12,K=2,reg=0 IS 73 -13.717 OOS 31 -5.932
+C:L=12,K=2,reg=1 IS 47 -10.694 OOS 30 -6.903
+C:L=24,K=1,reg=0 IS 43 -6.99 OOS 11 -0.575
+C:L=24,K=1,reg=1 IS 33 -7.011 OOS 12 -2.953
+C:L=24,K=2,reg=0 IS 53 -8.193 OOS 22 -3.639
+C:L=24,K=2,reg=1 IS 49 -10.929 OOS 24 -5.899
+CHOSEN A A:f=12,s=48,k=3.0,reg=0 {'trades': 19, 'trades_per_day': 1.9, 'mean_net_pct': np.float64(-0.613), 'median_net_pct': -0.833, 'win_rate': 0.368, 'sum_net_pct': np.float64(-11.65), 'pnl_toman': -116489, 'account_return_pct': np.float64(-2.33), 'max_dd_pct': 4.758, 'avg_hold_h': 16.5, 'mean_usdt_chg_pct': 0.709, 'mean_global_chg_pct': -0.447} {'n_windows': 210, 'share_positive': 0.229, 'share_negative': 0.671, 'share_flat': 0.1, 'mean_ret_pct': -0.357, 'median_ret_pct': -0.31, 'worst_ret_pct': -2.6, 'best_ret_pct': 1.951, 'mean_trades': 2.95, 'worst_dd_pct': 2.6} {'actual_mean_pct': np.float64(-0.613), 'random_mean_pct': np.float64(-0.496), 'random_p05_pct': np.float64(-1.652), 'random_p95_pct': np.float64(0.702), 'share_random_ge_actual': 0.559}
+CHOSEN B B:N=48,m=2.0,reg=0 {'trades': 10, 'trades_per_day': 1.0, 'mean_net_pct': np.float64(0.696), 'median_net_pct': 0.415, 'win_rate': 0.6, 'sum_net_pct': np.float64(6.96), 'pnl_toman': 69614, 'account_return_pct': np.float64(1.392), 'max_dd_pct': 1.754, 'avg_hold_h': 19.5, 'mean_usdt_chg_pct': 0.618, 'mean_global_chg_pct': 1.03} {'n_windows': 210, 'share_positive': 0.386, 'share_negative': 0.305, 'share_flat': 0.31, 'mean_ret_pct': 0.168, 'median_ret_pct': 0.0, 'worst_ret_pct': -0.799, 'best_ret_pct': 3.524, 'mean_trades': 1.38, 'worst_dd_pct': 1.69} {'actual_mean_pct': np.float64(0.696), 'random_mean_pct': np.float64(-0.252), 'random_p05_pct': np.float64(-1.99), 'random_p95_pct': np.float64(1.669), 'share_random_ge_actual': 0.202}
+CHOSEN C C:L=12,K=1,reg=1 {'trades': 19, 'trades_per_day': 1.9, 'mean_net_pct': np.float64(-1.017), 'median_net_pct': -0.491, 'win_rate': 0.316, 'sum_net_pct': np.float64(-19.33), 'pnl_toman': -193283, 'account_return_pct': np.float64(-3.866), 'max_dd_pct': 3.92, 'avg_hold_h': 5.9, 'mean_usdt_chg_pct': 0.109, 'mean_global_chg_pct': -0.26} {'n_windows': 210, 'share_positive': 0.348, 'share_negative': 0.6, 'share_flat': 0.052, 'mean_ret_pct': -0.364, 'median_ret_pct': -0.382, 'worst_ret_pct': -1.333, 'best_ret_pct': 0.579, 'mean_trades': 2.23, 'worst_dd_pct': 1.377} {'actual_mean_pct': np.float64(-1.017), 'random_mean_pct': np.float64(-0.717), 'random_p05_pct': np.float64(-1.585), 'random_p95_pct': np.float64(0.23), 'share_random_ge_actual': 0.703}
+saved
