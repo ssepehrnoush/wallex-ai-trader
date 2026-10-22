@@ -692,8 +692,25 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
                 + (f'، {_n(n_restart)} بار راه‌اندازی دوباره' if n_restart else "") + ')</h3></summary>'
                 + (f'<ul class="runs">{"".join(srows[-40:])}</ul>' if srows else '<div class="empty">رویداد شروعی در این اجرا ثبت نشده است.</div>') + "</details>")
 
+    # trade agent (trader.py): the model decides each entry once a start says it is on
+    decs = by("trade_decision")
+    agent_on = bool(decs) or any(s.get("trade_agent") for s in starts[-1:])
+    act_fa = {"buy": "خرید شد", "skip": "خرید نشد", "expired": "جواب دیر رسید", "candidate gone": "فرصت تا جواب گذشته بود"}
+    drows = "".join(
+        f'<tr><td><b>{_n(_hm(d["t"]))}</b><small>{_e(_day(d["t"]))}</small></td><td dir="ltr">{_e(d.get("symbol", ""))}</td>'
+        f'<td>{"بخر" if d.get("decision") == "buy" else "نخر"}</td><td>{_e(act_fa.get(d.get("action"), d.get("action", "")))}</td>'
+        f'<td>{_n(_pct(d["buy_dev_pct_asked"], 2, False)) if d.get("buy_dev_pct_asked") is not None else "-"}</td>'
+        f'<td>{_n(format(d["latency_s"], ".1f")) if d.get("latency_s") is not None else "-"}</td>'
+        f'<td>{_e(d.get("reason_fa") or d.get("error") or "")}</td></tr>' for d in reversed(decs[-60:]))
+    n_buy = sum(1 for d in decs if d.get("action") == "buy")
+    agent_html = ((f'<div class="mix">{_n(len(decs))} فرصت به مدل رسید؛ مدل {_n(sum(1 for d in decs if d.get("decision") == "buy"))} بار گفت بخر و '
+                   f'{_n(n_buy)} خرید انجام شد.</div><div class="scroll"><table><thead><tr><th>زمان</th><th>بازار</th><th>تصمیم مدل</th>'
+                   f'<th>نتیجه</th><th>ارزانی</th><th>زمان پاسخ (ثانیه)</th><th>دلیل مدل</th></tr></thead><tbody>{drows}</tbody></table></div>')
+                  if decs else '<div class="empty">عامل معامله روشن است؛ هنوز فرصتی به آستانه نرسیده که مدل درباره‌اش تصمیم بگیرد.</div>')
+    role = ("<b>مدل زبانی سیاست هر بازار را تعیین می‌کند و هر خرید را هم خودش تصمیم می‌گیرد؛ سفارش را کد ثبت می‌کند</b>"
+            if agent_on else "<b>مدل زبانی فقط سیاست هر بازار را تعیین می‌کند؛ همه سفارش‌ها را کد ثبت می‌کند</b>")
     foot = (f'<footer><p>ساخته‌شده در {_e(_when(now, True))} به وقت تهران · منبع: <span dir="ltr">runs/{_e(run_dir.name)}</span> · '
-            f'{_n(len(ev))} رویداد در لاگ تصمیم‌ها</p><p><b>مدل زبانی فقط سیاست هر بازار را تعیین می‌کند؛ همه سفارش‌ها را کد ثبت می‌کند</b>، '
+            f'{_n(len(ev))} رویداد در لاگ تصمیم‌ها</p><p>{role}، '
             f'در چارچوب قوانین سخت ریسک که هوش مصنوعی نمی‌تواند دورشان بزند.</p></footer>')
 
     title = f"داشبورد ربات والکس · {run_dir.name}"
@@ -711,7 +728,12 @@ def build(run_dir: Path, out: Path | None = None) -> Path:
                        "ربات فقط در بازارهای فعال، و فقط وقتی می‌خرد که خط وارد ناحیه سبز شود. بازارهای خاموش آخر فهرست و کم‌رنگ آمده‌اند.")
             + _section("ai", "نقش هوش مصنوعی: بازبینی سیاست با دو سرور MCP", ai_html,
                        "ایجنت تحلیلگر با دو سرور MCP داده جمع می‌کند و برای هر بازار سیاست پیشنهاد می‌دهد؛ افسر ریسک فقط می‌تواند سخت‌گیرتر کند "
-                       "و کد هر عدد را به بازه مجاز می‌بندد. ورود و خروج در چند ثانیه را موتور انجام می‌دهد، نه مدل زبانی.")
+                       "و کد هر عدد را به بازه مجاز می‌بندد. "
+                       + ("هر خرید را عامل معامله (بخش بعد) تصمیم می‌گیرد و خروج‌ها با موتور است." if agent_on
+                          else "ورود و خروج در چند ثانیه را موتور انجام می‌دهد، نه مدل زبانی."))
+            + (_section("agent", "عامل معامله: مدل هر خرید را تصمیم می‌گیرد", agent_html,
+                        "موتور هر ۲٫۵ ثانیه فرصت پیدا می‌کند و یک پرونده از همان لحظه برای مدل می‌فرستد؛ مدل می‌گوید بخرد یا نه و چرا. "
+                        "خرید فقط با جواب «بخر» تازه و وقتی فرصت هنوز هست انجام می‌شود. جدیدترین در بالا.") if agent_on else "")
             + _section("log", "رویدادها", log_html)
             + f"{foot}</div><script>{JS}</script></body></html>")
     out.parent.mkdir(parents=True, exist_ok=True)

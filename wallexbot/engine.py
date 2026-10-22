@@ -397,7 +397,8 @@ class Engine:
         fv, poll = self.fv, self.fv["poll_seconds"]
         t_end = time.time() + minutes * 60 if minutes else None
         last_mark = 0.0
-        self.j.log("start", mode=self.mode, symbols=self.symbols, watch=sorted(self.watch), policy=self.fv["default_policy"])
+        self.j.log("start", mode=self.mode, symbols=self.symbols, watch=sorted(self.watch), policy=self.fv["default_policy"],
+                   trade_agent=bool(self.trader))
         warm_until = time.time() + fv["warmup_minutes"] * 60
         while True:
             loop_t = time.time()

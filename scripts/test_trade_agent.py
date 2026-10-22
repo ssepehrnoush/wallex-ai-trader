@@ -211,7 +211,7 @@ try:
 
     eng = engine(None)
     tick(eng, CHEAP, now)
-    check("BTCTMN" in eng.positions and eng.trader is None, "agent off (default): the engine enters by itself, as before")
+    check("BTCTMN" in eng.positions and eng.trader is None, "agent off: the engine enters by itself, as before")
 finally:
     for f, data in saved.items():
         (RUN / f).write_bytes(data)
