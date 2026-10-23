@@ -43,7 +43,7 @@ STATIC = Path(__file__).resolve().parent / "static"
 IMAGES = ROOT / "docs" / "img"
 TOKEN = pysecrets.token_urlsafe(24)          # handed only to the page this server serves; required for every POST
 CONFIRM = "تأیید"
-PUBLIC_WHY = ("این نسخهٔ عمومی فقط نمایش است و هیچ کنترلی ندارد. ربات روی کامپیوتر تیم اجرا می‌شود و هر دقیقه وضعیتش را اینجا "
+PUBLIC_WHY = ("این نسخهٔ عمومی فقط نمایش است و هیچ کنترلی ندارد. خود ربات هم روی لیارا (اپ جدا) اجرا می‌شود و هر دقیقه وضعیتش را اینجا "
               "می‌فرستد. در نسخهٔ محلی هم کنترل‌ها روی حساب پول واقعی همیشه قفل‌اند، چون قانون چالش معاملهٔ دستی را ممنوع کرده.")
 ASK_PER_IP_HOUR, ASK_PER_DAY, ASK_REUSE_S = 20, 400, 600     # public mode: model calls a visitor and the day may spend
 BLOCKS = {"kpis", "equity_chart", "brakes", "markets", "market_distance", "reviews", "review_tools", "trade_decisions",

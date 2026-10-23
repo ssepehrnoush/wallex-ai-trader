@@ -612,7 +612,7 @@ try { const t = localStorage.getItem("theme"); if (t) document.documentElement.d
   const runs = await api("/api/runs");
   if (PUBLIC || STATIC) {
     $(".brand div").textContent = "هکاتون Agentic AI استارکوچ · چالش ۸ · نسخهٔ عمومی";
-    $(".foot").innerHTML = (PUBLIC ? "نسخهٔ عمومی روی لیارا: ربات روی کامپیوتر تیم با پول واقعی اجرا می‌شود و هر دقیقه وضعیتش را اینجا می‌فرستد. "
+    $(".foot").innerHTML = (PUBLIC ? "نسخهٔ عمومی روی لیارا: خود ربات هم روی لیارا با پول واقعی اجرا می‌شود و هر دقیقه وضعیتش را اینجا می‌فرستد. "
       : "نسخهٔ عمومی روی GitHub Pages: عکس فوری از لاگ ربات. ") + "فقط نمایش و بدون کنترل · کد: " + `<a href="https://github.com/ssepehrnoush/wallex-ai-trader">github.com/ssepehrnoush/wallex-ai-trader</a>`;
   }
   $("#run").hidden = $("#run").previousElementSibling.hidden = runs.length < 2;
