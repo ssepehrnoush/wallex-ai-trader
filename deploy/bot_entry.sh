@@ -22,6 +22,10 @@ if [ -n "$PUSH_URL" ]; then
   python ui/push_live.py --live-dir "runs/$RUN" --url "$PUSH_URL" &
 fi
 if [ "$MODE" = "live" ]; then
+  # Liara keeps the previous container running for 30 to 50 s after a new release is READY. A live engine cancels
+  # every open order and adopts the balances when it starts, so two of them must never overlap: wait it out.
+  echo "live: waiting ${LIVE_START_DELAY:-120} s so the previous container is gone before real orders start"
+  sleep "${LIVE_START_DELAY:-120}"
   exec python -m wallexbot live --i-understand-real-money --run "$RUN"
 fi
 exec python -m wallexbot shadow --run "$RUN"
