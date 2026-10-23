@@ -1,114 +1,114 @@
 {
- "t": "2026-10-22T17:13:49+00:00",
+ "t": "2026-10-23T15:51:40+00:00",
  "mode": "live",
- "equity_tmn": 5000000,
- "return_pct": 0.0,
- "drawdown_pct": 0.0,
+ "equity_tmn": 4996224,
+ "return_pct": -0.076,
+ "drawdown_pct": 0.076,
  "halted": "",
  "positions": {},
- "trades": 0,
+ "trades": 3,
  "policies": {
   "BTCTMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "عمق و اسپرد مناسب‌اند، اما زیان ورود با تأخیر احتیاط بیشتر را ایجاب می‌کند."
+   "reason": "آستانهٔ محافظ کارمزد و اندازهٔ حداقلی حفظ می‌شود."
   },
   "ETHTMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "مشکل ساختاری دیده نمی‌شود و زمان نگهداری برای محدودکردن ریسک کوتاه شد."
+   "reason": "نبود فرصت اخیر به‌تنهایی دلیل توقف بازار نیست."
   },
   "SOLTMN": {
    "enabled": true,
-   "entry_dev": 0.008,
+   "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "اسپرد و زیان ورود با تأخیر، آستانهٔ بالاتر را توجیه می‌کنند."
+   "reason": "با توجه به ضعف آزمون ورود تأخیری، اندازه حداقلی می‌ماند."
   },
   "XRPTMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "عمق کافی است، ولی شواهد بک‌تست برای پذیرش ریسک بیشتر اندک است."
+   "reason": "مشکل ساختاری محرز نیست و اندازه حداقلی حفظ می‌شود."
   },
   "DOGETMN": {
    "enabled": true,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "اسپرد کم است، اما زیان ورود با تأخیر محدودیت سخت‌تر را می‌طلبد."
+   "reason": "عمق محدود است، اما حداقل سفارش برای احراز مشکل ساختاری مشخص نیست."
   },
   "PEPETMN": {
    "enabled": true,
    "entry_dev": 0.008,
    "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.2,
-   "reason": "اسپرد و عمق محدود، ورود محتاطانه‌تر را توجیه می‌کنند."
-  },
-  "BNBTMN": {
-   "enabled": true,
-   "entry_dev": 0.008,
-   "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.2,
-   "reason": "بازار روشن می‌ماند، اما بازده منفی ورود با تأخیر آستانهٔ بالاتر را توجیه می‌کند."
-  },
-  "ARBTMN": {
-   "enabled": true,
-   "entry_dev": 0.008,
-   "exit_slack": 0.0005,
-   "stop_pct": 0.007,
-   "max_hold_min": 15.0,
-   "size_factor": 0.2,
-   "reason": "اسپرد و زیان ورود با تأخیر، ورود و نگهداری محتاطانه‌تر را می‌طلبند."
-  },
-  "POLTMN": {
-   "enabled": false,
-   "entry_dev": 0.01,
-   "exit_slack": 0.0005,
    "stop_pct": 0.008,
    "max_hold_min": 20.0,
    "size_factor": 0.2,
-   "reason": "اسپرد ۰٫۷۲۸٪ از سقف مجاز فراتر است و بازار غیرفعال می‌ماند."
+   "reason": "پس از زیان اخیر، محدودیت‌های سخت‌گیرانه‌تر فعلی حفظ می‌شود."
+  },
+  "BNBTMN": {
+   "enabled": true,
+   "entry_dev": 0.009,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
+   "size_factor": 0.2,
+   "reason": "آستانهٔ ورود محافظه‌کارانهٔ فعلی کاهش نمی‌یابد."
+  },
+  "ARBTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.009,
+   "max_hold_min": 25.0,
+   "size_factor": 0.2,
+   "reason": "عمق بالای دفتر، حدود ۱۲٫۵ هزار تومان، برای ورود قابل اتکا نیست."
+  },
+  "POLTMN": {
+   "enabled": false,
+   "entry_dev": 0.007,
+   "exit_slack": 0.0005,
+   "stop_pct": 0.008,
+   "max_hold_min": 25.0,
+   "size_factor": 0.2,
+   "reason": "اسپرد نزدیک چهار درصد، مانع ساختاری معامله است."
   },
   "SANDTMN": {
    "enabled": false,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
    "stop_pct": 0.008,
-   "max_hold_min": 20.0,
+   "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "عمق ۹۸٬۸۰۴ تومانی سر دفتر برای اجرای مطمئن کافی نیست."
+   "reason": "اسپرد اندازه‌گیری‌شدهٔ ۰٫۶۹۴٪ بالاتر از سقف اعلام‌شدهٔ ۰٫۶٪ است."
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.014,
-  "ETHTMN": -0.037,
-  "SOLTMN": 0.015,
-  "XRPTMN": -0.036,
-  "DOGETMN": 0.023,
+  "BTCTMN": -0.035,
+  "ETHTMN": -0.074,
+  "SOLTMN": -0.034,
+  "XRPTMN": -0.006,
+  "DOGETMN": 0.003,
   "PEPETMN": -0.154,
-  "BNBTMN": 0.277,
-  "ARBTMN": 0.018,
-  "POLTMN": 0.227,
-  "SANDTMN": -0.037
+  "BNBTMN": 0.376,
+  "ARBTMN": 0.254,
+  "POLTMN": 2.766,
+  "SANDTMN": -0.072
  }
 }
