@@ -10,217 +10,340 @@
 /* Look and feel from wallex.ir: primary #007AFF, text #171D26, neutrals #F5F6F7 / #EBEDEF / #D7DADF, buy #039874, sell #F65555.
    Wallex's own font is IRANSansX (commercial, not shipped here): used when installed, otherwise the free Vazirmatn. */
 :root, [data-theme="light"] {
-  --bg: #F5F6F7; --bg2: #F5F6F7; --card: #FFFFFF; --card2: #FFFFFF; --line: #EBEDEF; --line2: #D7DADF; --ink: #171D26; --muted: #6B7380; --ink2: #2E3A4D;
-  --accent: #007AFF; --accent2: #4C9AFF; --tint: #E5F2FF; --green: #039874; --gtint: #F2FBF9; --red: #F65555; --rtint: #FEEEEE;
-  --blue: #007AFF; --violet: #007AFF; --amber: #D99A0B; --atint: #FCF2D8; --engine: #2E3A4D;
-  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 16px rgba(23,29,38,.05); --r: 12px;
+  --bg: #F5F6F7; --bg2: #EEF0F2; --card: #FFFFFF; --line: #EBEDEF; --line2: #D7DADF; --ink: #171D26; --muted: #5F6875; --ink2: #2E3A4D;
+  --accent: #007AFF; --tint: #E5F2FF; --green: #039874; --gtint: #E8F7F3; --red: #E5484D; --rtint: #FEEEEE;
+  --amber: #B7791F; --atint: #FCF2D8; --engine: #2E3A4D;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(23,29,38,.05); --r: 14px; --gap: 14px;
 }
 [data-theme="dark"] {
-  --bg: #171D26; --bg2: #11161D; --card: #1D2430; --card2: #222B38; --line: #2E3A4D; --line2: #3A475C; --ink: #F5F6F7; --muted: #9AA4B2; --ink2: #D7DADF;
-  --accent: #4C9AFF; --accent2: #7DB5FF; --tint: rgba(0,122,255,.14); --green: #22C39A; --gtint: rgba(3,152,116,.16); --red: #FF6B6B; --rtint: rgba(246,85,85,.16);
-  --blue: #4C9AFF; --violet: #4C9AFF; --amber: #F2C14E; --atint: rgba(242,193,78,.14); --engine: #9AA4B2;
-  --shadow: 0 1px 2px rgba(0,0,0,.2), 0 6px 20px rgba(0,0,0,.25);
+  --bg: #11161D; --bg2: #1A212B; --card: #1D2430; --line: #2A3442; --line2: #3A475C; --ink: #F5F6F7; --muted: #9AA4B2; --ink2: #D7DADF;
+  --accent: #4C9AFF; --tint: rgba(0,122,255,.16); --green: #22C39A; --gtint: rgba(3,152,116,.18); --red: #FF6B6B; --rtint: rgba(246,85,85,.16);
+  --amber: #F2C14E; --atint: rgba(242,193,78,.14); --engine: #9AA4B2;
+  --shadow: 0 1px 2px rgba(0,0,0,.25), 0 6px 18px rgba(0,0,0,.25);
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IRANSansX", "IRANSansXV", V, Tahoma, sans-serif; line-height: 1.75; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IRANSansX", "IRANSansXV", V, Tahoma, sans-serif; line-height: 1.6; font-size: 15px; }
 a { color: var(--accent); }
-.wrap { max-width: 1280px; margin: 0 auto; padding: 18px 20px 60px; }
+button, input, select { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ic { width: 18px; height: 18px; flex: none; }
+.num { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+.g { color: var(--green); } .r { color: var(--red); }
+.mini { color: var(--muted); font-size: 12.5px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 14px 20px 28px; }
+
 /* header */
-.top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 6px 0 18px; }
-.logo { width: 44px; height: 44px; border-radius: 10px; background: var(--accent); display: grid; place-items: center; }
-.logo svg { width: 26px; height: 26px; }
-.brand h1 { margin: 0; font-size: 22px; font-weight: 900; letter-spacing: -.2px; }
-.brand div { color: var(--muted); font-size: 13px; }
+.top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.logo { width: 40px; height: 40px; border-radius: 11px; background: var(--accent); color: #fff; display: grid; place-items: center; flex: none; }
+.logo .ic { width: 24px; height: 24px; }
+.brand h1 { margin: 0; font-size: 19px; font-weight: 900; line-height: 1.3; }
+.brand div { color: var(--muted); font-size: 12.5px; }
 .sp { flex: 1; }
-.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 8px; background: var(--card); border: 1px solid var(--line); font-size: 13.5px; white-space: nowrap; }
-.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 0 rgba(246,85,85,.6); animation: pulse 1.8s infinite; }
-.dot.shadow { background: var(--blue); animation: none; }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(246,85,85,.55); } 70% { box-shadow: 0 0 0 10px rgba(246,85,85,0); } 100% { box-shadow: 0 0 0 0 rgba(246,85,85,0); } }
-select, .btn, input, textarea { font-family: inherit; }
-select { background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; font-size: 13.5px; }
-.btn { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 8px; padding: 9px 16px; cursor: pointer; font-size: 14px; }
+.pill { display: inline-flex; align-items: center; gap: 7px; height: 36px; padding: 0 12px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); font-size: 13px; white-space: nowrap; }
+.pill.stale { border-color: var(--amber); color: var(--amber); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); animation: pulse 1.8s infinite; }
+.dot.shadow { background: var(--accent); animation: none; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(229,72,77,.5); } 70% { box-shadow: 0 0 0 9px rgba(229,72,77,0); } 100% { box-shadow: 0 0 0 0 rgba(229,72,77,0); } }
+select { height: 36px; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 0 10px; font-size: 13px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; height: 36px; border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 10px; padding: 0 12px; cursor: pointer; font-size: 13px; }
 .btn:hover { border-color: var(--accent); }
-.clocks { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px; }
-.clock { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 8px 14px; font-size: 13px; color: var(--muted); }
-.clock b { color: var(--ink); font-size: 15px; display: block; }
-/* composer */
-.ask { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; box-shadow: var(--shadow); position: relative; overflow: hidden; border-top: 3px solid var(--accent); }
-.ask h2 { margin: 0 0 4px; font-size: 20px; }
-.ask p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
-.row { display: flex; gap: 10px; }
-.row input { flex: 1; background: var(--bg2); border: 1px solid var(--line2); color: var(--ink); border-radius: 10px; padding: 15px 18px; font-size: 16px; outline: none; }
-.row input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--tint); }
-.go { background: var(--accent); color: #fff; border: 0; border-radius: 10px; padding: 0 22px; font-size: 16px; font-weight: 800; cursor: pointer; }
+.btn.icon { width: 36px; padding: 0; justify-content: center; }
+
+/* cards */
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); min-width: 0; }
+.panel { display: flex; flex-direction: column; }
+.ch { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 11px 16px; border-bottom: 1px solid var(--line); }
+.ch h2 { margin: 0; font-size: 15px; font-weight: 800; display: flex; align-items: center; gap: 7px; }
+.ch h2 .ic { color: var(--accent); }
+.ch small { color: var(--muted); font-size: 12px; }
+.cb { padding: 8px 16px 14px; overflow: auto; flex: 1; min-height: 0; }
+
+/* row 1: status + numbers */
+.rowa { display: grid; grid-template-columns: minmax(0, 2.3fr) repeat(4, minmax(0, 1fr)); gap: var(--gap); }
+.now { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-inline-start: 4px solid var(--green); }
+.now .ib { width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; flex: none; background: var(--gtint); color: var(--green); }
+.now.info { border-inline-start-color: var(--accent); } .now.info .ib { background: var(--tint); color: var(--accent); }
+.now.warn { border-inline-start-color: var(--amber); } .now.warn .ib { background: var(--atint); color: var(--amber); }
+.now.bad { border-inline-start-color: var(--red); } .now.bad .ib { background: var(--rtint); color: var(--red); }
+.now.idle { border-inline-start-color: var(--line2); } .now.idle .ib { background: var(--bg); color: var(--muted); }
+.now b { display: block; font-size: 16px; line-height: 1.45; }
+.now .s { color: var(--muted); font-size: 13px; margin-top: 2px; }
+.now .t { font-size: 12.5px; margin-top: 6px; color: var(--ink2); display: flex; align-items: flex-start; gap: 6px; }
+.now .t .ic { width: 16px; height: 16px; margin-top: 2px; }
+.tile { padding: 12px 14px; }
+.tile .l { color: var(--muted); font-size: 12.5px; }
+.tile .v { font-size: 23px; font-weight: 900; line-height: 1.35; margin-top: 2px; letter-spacing: -.3px; white-space: nowrap; }
+.tile .v small { font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: 0; }
+.tile .s { color: var(--muted); font-size: 12px; }
+
+/* ask */
+.ask { margin-top: var(--gap); padding: 12px 14px; }
+.askrow { display: flex; gap: 8px; align-items: center; }
+.aico { width: 40px; height: 40px; border-radius: 11px; background: var(--tint); color: var(--accent); display: grid; place-items: center; flex: none; }
+.askrow input { flex: 1; min-width: 0; height: 44px; background: var(--bg); border: 1px solid var(--line2); color: var(--ink); border-radius: 11px; padding: 0 14px; font-size: 15px; outline: none; }
+.askrow input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--tint); }
+.go { height: 44px; background: var(--accent); color: #fff; border: 0; border-radius: 11px; padding: 0 22px; font-size: 15px; font-weight: 800; cursor: pointer; flex: none; }
 .go:disabled { opacity: .55; cursor: wait; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.chip { background: var(--tint); border: 1px solid transparent; border-radius: 8px; padding: 6px 13px; font-size: 13.5px; cursor: pointer; color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; align-items: center; }
+.chip { background: var(--tint); border: 1px solid transparent; border-radius: 8px; padding: 0 11px; min-height: 32px; font-size: 12.5px; cursor: pointer; color: var(--accent); }
 .chip:hover { border-color: var(--accent); }
-/* generated answers */
-.answers { display: flex; flex-direction: column; gap: 18px; margin-top: 18px; }
-.answer { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; box-shadow: var(--shadow); animation: rise .45s ease both; }
-.answer .q { color: var(--muted); font-size: 13.5px; margin-bottom: 4px; }
-.answer h3 { margin: 0 0 6px; font-size: 21px; }
-.answer .a { font-size: 15.5px; margin: 0 0 14px; }
-.answer .meta { color: var(--muted); font-size: 12px; margin-top: 12px; display: flex; gap: 8px; align-items: center; }
-.gen { display: inline-flex; align-items: center; gap: 6px; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 700; }
-.blocks { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 14px; }
-.blk { min-width: 0; grid-column: span 12; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; animation: rise .5s ease both; }
-.blk.half { grid-column: span 6; }
-@media (max-width: 900px) { .blk.half { grid-column: span 12; } }
-.blk h4 { margin: 0 0 10px; font-size: 15px; color: var(--muted); font-weight: 700; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px) scale(.985); } to { opacity: 1; transform: none; } }
-.skel { height: 14px; border-radius: 8px; background: linear-gradient(90deg, var(--bg2), var(--line), var(--bg2)); background-size: 200% 100%; animation: sh 1.2s linear infinite; margin: 8px 0; }
-@keyframes sh { from { background-position: 200% 0; } to { background-position: -200% 0; } }
-.thinking { color: var(--muted); font-size: 14px; display: flex; gap: 10px; align-items: center; }
+
+/* grid of panels */
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap); }
+.wide { grid-column: span 2; }
+.tall { height: 430px; }
+
+/* chart */
+.chart svg { width: 100%; height: auto; display: block; }
+
+/* brakes */
+.brk { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.brk:last-child { border-bottom: 0; }
+.bh { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.bh b { font-size: 14px; }
+.bm { display: flex; align-items: center; gap: 10px; margin: 5px 0 2px; }
+.bm .bv { font-size: 12px; white-space: nowrap; color: var(--ink2); }
+.meter { height: 7px; background: var(--bg2); border-radius: 999px; overflow: hidden; flex: 1; }
+.meter i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(to left, var(--green), var(--amber), var(--red)); }
+.bd { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* status labels */
+.state { font-size: 12px; font-weight: 800; border-radius: 6px; padding: 1px 8px; white-space: nowrap; }
+.ok { background: var(--gtint); color: var(--green); } .bad { background: var(--rtint); color: var(--red); }
+.warn { background: var(--atint); color: var(--amber); } .idle { background: var(--bg2); color: var(--muted); }
+
+/* markets list */
+.mrow { border-bottom: 1px solid var(--line); }
+.mrow:last-child { border-bottom: 0; }
+.mrow summary { list-style: none; display: grid; grid-template-columns: 9px minmax(78px, 1fr) minmax(60px, 1.3fr) 54px; gap: 10px; align-items: center; padding: 7px 4px; cursor: pointer; border-radius: 8px; }
+.mrow summary::-webkit-details-marker { display: none; }
+.mrow summary:hover { background: var(--bg); }
+.mdot { width: 9px; height: 9px; border-radius: 50%; background: var(--line2); }
+.mrow.on .mdot { background: var(--green); } .mrow.watch .mdot { background: var(--amber); }
+.mrow.off summary, .mrow.watch summary { opacity: .7; }
+.mname b { display: block; font-size: 14px; line-height: 1.3; unicode-bidi: isolate; }
+.mname small { display: block; color: var(--muted); font-size: 12px; line-height: 1.3; }
+.mbar { height: 8px; background: var(--bg2); border-radius: 999px; overflow: hidden; }
+.mbar i { display: block; height: 100%; border-radius: 999px; background: var(--accent); }
+.mbar i.hot { background: var(--amber); }
+.mrow.off .mbar i, .mrow.watch .mbar i { background: var(--line2); }
+.mval { font-size: 12.5px; font-weight: 700; color: var(--muted); text-align: left; }
+.mdet { padding: 0 23px 10px 4px; font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 14px; }
+.mdet p { margin: 2px 0 0; flex-basis: 100%; color: var(--ink2); }
+.mdet svg { flex-basis: 100%; }
+
+/* lists: trades, decisions, reviews */
+.li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.li:last-child { border-bottom: 0; }
+.l1 { display: flex; align-items: center; gap: 8px; }
+.l1 b { font-size: 14px; unicode-bidi: isolate; }
+.l1 .end { margin-inline-start: auto; font-weight: 800; font-size: 14px; }
+.l2 { color: var(--muted); font-size: 12px; margin-top: 1px; }
+.l3 { font-size: 13px; margin-top: 3px; color: var(--ink2); }
+.li.open { background: var(--tint); border-radius: 10px; padding: 9px 10px; border-bottom: 0; margin-bottom: 6px; }
+.clamp { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden; }
+.clamp2 { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.tabs { display: flex; gap: 3px; background: var(--bg2); border-radius: 9px; padding: 3px; margin-inline-start: auto; }
+.tabs button { border: 0; background: transparent; color: var(--muted); font-size: 12.5px; padding: 0 10px; min-height: 30px; border-radius: 7px; cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); font-weight: 700; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.empty { color: var(--muted); font-size: 13.5px; padding: 16px; text-align: center; border: 1px dashed var(--line2); border-radius: 12px; margin-top: 6px; }
+
+/* AI review */
+.aitop { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.sum { font-size: 14px; margin: 8px 0; }
+.split { display: flex; height: 7px; border-radius: 999px; overflow: hidden; background: var(--bg2); }
+.split i:first-child { background: var(--accent); } .split i:last-child { background: var(--engine); opacity: .45; }
+.minis { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.minis span { font-size: 11.5px; border-radius: 6px; padding: 1px 8px; background: var(--bg2); unicode-bidi: isolate; }
+.minis .on { color: var(--green); background: var(--gtint); } .minis .off { color: var(--muted); text-decoration: line-through; }
+details.more { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+details.more summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--accent); min-height: 30px; display: flex; align-items: center; }
+.tools .t { display: grid; grid-template-columns: minmax(0, 1fr) 90px 26px; gap: 8px; align-items: center; font-size: 12.5px; margin: 5px 0; }
+.tools code { direction: ltr; font-size: 11.5px; overflow-wrap: anywhere; text-align: right; }
+.tools .bar { height: 8px; border-radius: 999px; background: var(--bg2); overflow: hidden; }
+.tools .bar i { display: block; height: 100%; border-radius: 999px; }
+
+/* AI answers drawer */
+.scrim { position: fixed; inset: 0; background: rgba(10,14,20,.38); opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 25; }
+.scrim.show { opacity: 1; pointer-events: auto; }
+.drawer { position: fixed; top: 0; bottom: 0; left: 0; width: min(660px, 100vw); background: var(--bg); box-shadow: 0 0 40px rgba(0,0,0,.2); transform: translateX(-104%); transition: transform .25s ease; z-index: 30; display: flex; flex-direction: column; visibility: hidden; }
+.drawer.open { transform: none; visibility: visible; }
+.dh { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--card); border-bottom: 1px solid var(--line); }
+.dh b { font-size: 16px; }
+.db { flex: 1; overflow: auto; padding: 14px 16px 30px; }
+.answer { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; margin-bottom: 14px; box-shadow: var(--shadow); }
+.answer .q { color: var(--muted); font-size: 13px; }
+.answer h3 { margin: 2px 0 6px; font-size: 19px; }
+.answer .a { font-size: 15px; margin: 0 0 12px; }
+.answer .meta { color: var(--muted); font-size: 12px; margin-top: 10px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.gen { display: inline-flex; align-items: center; gap: 5px; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 700; }
+.gen .ic { width: 14px; height: 14px; }
+.blocks { display: grid; gap: 12px; }
+.blk { min-width: 0; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.blk h4 { margin: 0 0 8px; font-size: 14px; color: var(--muted); font-weight: 700; }
+.blk .tile { background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.thinking { color: var(--muted); font-size: 14px; display: flex; gap: 10px; align-items: center; margin-top: 6px; }
 .spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: rot .8s linear infinite; }
 @keyframes rot { to { transform: rotate(360deg); } }
-/* components */
-.kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 10px; }
-.kpi { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; }
-.kpi .l { color: var(--muted); font-size: 12.5px; }
-.kpi .v { font-size: 26px; font-weight: 900; direction: ltr; text-align: right; letter-spacing: -.5px; }
-.kpi .s { color: var(--muted); font-size: 12px; }
-.g { color: var(--green); } .r { color: var(--red); } .o { color: var(--accent); } .b { color: var(--blue); } .v2 { color: var(--violet); }
-.brake { display: grid; grid-template-columns: 1fr 200px 70px; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
-.brake:last-child { border-bottom: 0; }
-.brake .n { font-weight: 800; } .brake .d { color: var(--muted); font-size: 12.5px; }
-.meter { height: 10px; background: var(--bg2); border-radius: 999px; overflow: hidden; direction: ltr; }
-.meter i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--green), var(--amber), var(--red)); }
-.state { font-size: 12.5px; font-weight: 800; text-align: center; border-radius: 6px; padding: 3px 8px; }
-.ok { background: var(--gtint); color: var(--green); } .bad { background: var(--rtint); color: var(--red); } .idle { background: var(--bg); color: var(--muted); }
-.mgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 12px; }
-.mk { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; }
-.mk.off { opacity: .62; border-style: dashed; }
-.mk .h { display: flex; justify-content: space-between; align-items: center; }
-.mk .sym { font-weight: 900; direction: ltr; } .mk .nm { color: var(--muted); font-size: 12.5px; }
-.tag { font-size: 11.5px; font-weight: 800; border-radius: 6px; padding: 2px 9px; }
-.mk .nums { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
-.mk .nums b { color: var(--ink); direction: ltr; display: inline-block; }
-.mk .why { font-size: 12.5px; color: var(--muted); margin-top: 6px; min-height: 2.6em; }
-.dist { display: grid; grid-template-columns: 150px 1fr 120px; gap: 12px; align-items: center; margin: 8px 0; font-size: 13.5px; }
-.dist .track { position: relative; height: 16px; background: var(--bg2); border-radius: 999px; direction: ltr; }
-.dist .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; background: var(--accent); }
-.dist .fill.hot { background: var(--amber); }
-.dist .thr { position: absolute; right: 0; top: -4px; bottom: -4px; width: 3px; background: var(--red); border-radius: 2px; }
-.rev { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; margin-bottom: 10px; }
-.rev .h { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
-.rev .h b { color: var(--ink); font-size: 14.5px; }
-.rev .s { margin: 8px 0; font-size: 14px; }
-.split { display: flex; height: 8px; border-radius: 999px; overflow: hidden; direction: ltr; margin: 6px 0; }
-.split i:first-child { background: var(--accent); } .split i:last-child { background: var(--engine); opacity: .55; }
-.mini { font-size: 12px; color: var(--muted); }
-.minis { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.minis span { font-size: 11.5px; border-radius: 6px; padding: 2px 9px; background: var(--bg2); border: 1px solid var(--line); direction: ltr; }
-.tools .t { display: grid; grid-template-columns: 1fr 160px 34px; gap: 10px; align-items: center; font-size: 13px; margin: 6px 0; }
-.tools code { direction: ltr; font-size: 12px; color: var(--ink); }
-.tools .bar { height: 10px; border-radius: 999px; direction: ltr; background: var(--bg2); overflow: hidden; }
-.tools .bar i { display: block; height: 100%; }
-.empty { color: var(--muted); font-size: 14px; padding: 18px; text-align: center; background: var(--card); border: 1px dashed var(--line2); border-radius: var(--r); }
-.call { border-radius: var(--r); padding: 14px 16px; font-size: 15px; border: 1px solid var(--line); }
+.skel { height: 13px; border-radius: 8px; background: linear-gradient(90deg, var(--bg2), var(--line), var(--bg2)); background-size: 200% 100%; animation: sh 1.2s linear infinite; margin: 8px 0; }
+@keyframes sh { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.call { border-radius: 12px; padding: 12px 14px; font-size: 14.5px; border: 1px solid var(--line); }
 .call.info { background: var(--tint); } .call.good { background: var(--gtint); } .call.warn { background: var(--atint); } .call.bad { background: var(--rtint); }
 .steps { counter-reset: s; display: grid; gap: 8px; }
-.steps div { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 10px 14px 10px 14px; position: relative; padding-right: 52px; font-size: 14.5px; }
-.steps div::before { content: counter(s); position: absolute; right: 12px; top: 9px; width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 14px; }
-.img img { width: 100%; border-radius: var(--r); display: block; }
-.tbl { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-td, th { padding: 8px; border-bottom: 1px solid var(--line); text-align: right; }
-.chart svg { width: 100%; height: auto; display: block; }
-/* sections */
-.sec { margin-top: 26px; }
-.sec > h2 { font-size: 18px; margin: 0 0 12px; display: flex; gap: 10px; align-items: center; }
-.sec > h2 small { color: var(--muted); font-weight: 400; font-size: 13px; }
-/* controls */
-.ctl { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
-.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
-.switch input { display: none; }
-.switch span { width: 50px; height: 28px; border-radius: 999px; background: var(--line2); position: relative; transition: .2s; }
-.switch span::after { content: ""; position: absolute; top: 3px; right: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: .2s; }
-.switch input:checked + span { background: var(--accent); } .switch input:checked + span::after { right: 25px; }
-.lock { margin-top: 14px; border-radius: var(--r); padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start; font-size: 14.5px; }
-.lock.on { background: var(--rtint); border: 1px solid var(--red); } .lock.open { background: var(--atint); border: 1px solid var(--amber); }
-.cbtns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-.cbtn { border-radius: 10px; padding: 12px 18px; font-weight: 800; border: 1px solid var(--line); background: var(--card2); color: var(--ink); cursor: pointer; font-family: inherit; font-size: 14.5px; }
+.steps div { counter-increment: s; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 9px 50px 9px 14px; position: relative; font-size: 14px; }
+.steps div::before { content: counter(s); position: absolute; right: 12px; top: 8px; width: 26px; height: 26px; border-radius: 8px; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 13px; }
+.img img { width: 100%; border-radius: 12px; display: block; }
+
+/* controls dialog */
+.modal { position: fixed; inset: 0; background: rgba(10,14,20,.5); display: none; align-items: center; justify-content: center; z-index: 40; padding: 16px; }
+.modal.top { z-index: 50; }
+.modal.show { display: flex; }
+.box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; max-width: 480px; width: 100%; box-shadow: var(--shadow); }
+.box h3 { margin: 0 0 4px; font-size: 18px; display: flex; align-items: center; gap: 8px; }
+.box input[type=text] { width: 100%; margin: 12px 0; background: var(--bg); border: 1px solid var(--line2); color: var(--ink); border-radius: 10px; padding: 11px 12px; font-size: 16px; }
+.switch { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; margin-top: 12px; }
+.switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.switch span { width: 46px; height: 26px; border-radius: 999px; background: var(--line2); position: relative; transition: .2s; flex: none; }
+.switch span::after { content: ""; position: absolute; top: 3px; right: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: .2s; }
+.switch input:checked + span { background: var(--accent); } .switch input:checked + span::after { right: 23px; }
+.switch input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lock { margin-top: 12px; border-radius: 12px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+.lock.on { background: var(--rtint); color: var(--ink); } .lock.on .ic { color: var(--red); }
+.lock.open { background: var(--atint); } .lock.open .ic { color: var(--amber); }
+.cbtns { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.cbtn { display: inline-flex; align-items: center; gap: 6px; border-radius: 10px; padding: 0 14px; min-height: 42px; font-weight: 800; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; font-size: 14px; }
 .cbtn.danger { border-color: var(--red); color: var(--red); }
 .cbtn:disabled { opacity: .4; cursor: not-allowed; }
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; z-index: 20; padding: 16px; }
-.modal.show { display: flex; }
-.box { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; max-width: 460px; width: 100%; box-shadow: var(--shadow); }
-.box input { width: 100%; margin: 12px 0; background: var(--bg2); border: 1px solid var(--line2); color: var(--ink); border-radius: 10px; padding: 12px; font-size: 16px; }
-.foot { margin-top: 36px; color: var(--muted); font-size: 12.5px; text-align: center; }
-@media (max-width: 640px) {
-  .wrap { padding: 12px 12px 48px; }
-  .brand h1 { font-size: 18px; } .brand div { font-size: 12px; }
-  .top { gap: 10px; } .pill, select { font-size: 12.5px; padding: 5px 10px; }
-  .ask { padding: 16px; } .row { flex-direction: column; } .go { padding: 12px; }
-  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); } .kpi .v { font-size: 22px; }
-  .brake { grid-template-columns: minmax(0, 1fr) 80px 64px; gap: 8px; }
-  .dist { grid-template-columns: 82px minmax(0, 1fr) 70px; gap: 8px; font-size: 12px; }
-  .tools .t { grid-template-columns: minmax(0, 1fr) 70px 24px; }
-  .tools code { font-size: 10.5px; overflow-wrap: anywhere; }
-  .clock { flex: 1 1 140px; }
+.foot { margin-top: 18px; color: var(--muted); font-size: 12px; text-align: center; }
+
+@media (max-width: 1150px) {
+  .rowa { grid-template-columns: repeat(4, minmax(0, 1fr)); } .now { grid-column: 1 / -1; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .wide { grid-column: 1 / -1; }
 }
+@media (max-width: 720px) {
+  .wrap { padding: 10px 12px 24px; }
+  .brand h1 { font-size: 17px; } .brand div { display: none; }
+  .rowa { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tile .v { font-size: 20px; }
+  .grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .tall { height: auto; } .tall .cb { max-height: 440px; }
+  .askrow .aico { display: none; } .go { padding: 0 16px; }
+  .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: -14px; padding-inline: 14px; } .chip { white-space: nowrap; flex: none; }
+  .btn .lbl { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="top">
-    <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/></svg></div>
-    <div class="brand"><h1>اتاق کنترل ربات والکس</h1><div>هکاتون Agentic AI استارکوچ · چالش ۸ · رابط هوشمند</div></div>
+  <header class="top">
+    <div class="logo" id="logo"></div>
+    <div class="brand"><h1>اتاق کنترل ربات والکس</h1><div>هکاتون Agentic AI استارکوچ · چالش ۸</div></div>
     <div class="sp"></div>
     <span class="pill" id="live"><i class="dot"></i><span>…</span></span>
     <span class="pill" id="upd">…</span>
-    <select id="run" title="اجرا"></select>
-    <button class="btn" id="theme" title="روشن / تیره">◐</button>
-  </div>
-  <div class="clocks" id="clocks"></div>
+    <label class="sr" for="run">اجرا</label><select id="run"></select>
+    <button class="btn" id="ctlbtn" type="button"></button>
+    <button class="btn icon" id="theme" type="button" aria-label="روشن یا تیره"></button>
+  </header>
 
-  <div class="ask">
-    <h2>از ربات بپرس</h2>
-    <p>هوش مصنوعی (از BoxAPI، اسپانسر هکاتون) جواب را به‌شکل صفحه می‌سازد: کارت، نمودار و جدول. همهٔ عددها مستقیم از لاگ و وضعیت خود ربات می‌آیند، نه از مدل.</p>
-    <div class="row"><input id="q" placeholder="مثلاً: چرا امروز معامله نکرد؟" autocomplete="off"><button class="go" id="go">بساز</button></div>
+  <section class="rowa" id="rowa"></section>
+
+  <section class="card ask">
+    <form class="askrow" id="askf">
+      <span class="aico" id="aico"></span>
+      <label class="sr" for="q">پرسش از ربات</label>
+      <input id="q" placeholder="از ربات بپرس… مثلاً: چرا امروز معامله نکرد؟" autocomplete="off">
+      <button class="go" id="go" type="submit">بپرس</button>
+      <button class="btn" id="openans" type="button" hidden></button>
+    </form>
     <div class="chips" id="chips"></div>
-  </div>
-  <div class="answers" id="answers"></div>
+  </section>
 
-  <div class="sec"><h2>خلاصهٔ زنده <small id="ovsub">از لاگ ربات، هر ۳۰ ثانیه تازه می‌شود</small></h2><div class="blocks" id="overview"></div></div>
-
-  <div class="sec"><h2>کنترل‌ها <small>پرریسک · فقط به خواست کاربر</small></h2>
-    <div class="ctl">
-      <label class="switch"><input type="checkbox" id="cmode"><span></span><b>حالت کنترل</b></label>
-      <div class="mini" style="margin-top:6px">پیش‌فرض خاموش است. دکمه‌ها فقط وقتی کار می‌کنند که این حالت روشن باشد، اجرا «سایه» باشد و فرمان را با نوشتن «تأیید» تأیید کنید.</div>
-      <div id="lockbox"></div>
-      <div class="cbtns">
-        <button class="cbtn" data-a="stop" disabled>⏸ توقف خرید تازه</button>
-        <button class="cbtn" data-a="resume" disabled>▶ ادامهٔ خرید</button>
-        <button class="cbtn danger" data-a="flatten" disabled>⏏ فروش همه به تومان</button>
-      </div>
-    </div>
-  </div>
-  <div class="foot">رابط فقط می‌خواند؛ کلیدها روی سرور محلی می‌مانند و به مرورگر نمی‌رسند · کد: github.com/ssepehrnoush/wallex-ai-trader</div>
+  <main class="grid" id="main">
+    <article class="card panel wide"><div class="ch"><h2 id="h-eq">ارزش حساب</h2><small>خط‌چین: سرمایهٔ اول، ۵ میلیون تومان</small></div><div class="cb chart" id="eq"></div></article>
+    <article class="card panel"><div class="ch"><h2 id="h-br">ترمزهای ریسک</h2><small>هر کدام برسد، خرید قطع می‌شود</small></div><div class="cb" id="brakes"></div></article>
+    <article class="card panel tall"><div class="ch"><h2 id="h-mk">بازارها</h2><small>نوار: چقدر به خرید نزدیک شد (۶ ساعت اخیر)</small></div><div class="cb" id="markets" data-scroll></div></article>
+    <article class="card panel tall"><div class="ch"><h2 id="h-ai">آخرین تصمیم هوش مصنوعی</h2></div><div class="cb" id="ai" data-scroll></div></article>
+    <article class="card panel tall"><div class="ch"><h2 id="h-tr">معامله‌ها</h2><div class="tabs" role="tablist" id="tabs"></div></div><div class="cb" id="trades" data-scroll></div></article>
+  </main>
+  <div class="foot">رابط فقط می‌خواند و چیزی در ربات عوض نمی‌کند · کلیدها روی سرور محلی می‌مانند · کد: <a href="https://github.com/ssepehrnoush/wallex-ai-trader">github.com/ssepehrnoush/wallex-ai-trader</a></div>
 </div>
 
-<div class="modal" id="modal"><div class="box">
-  <h3 id="mt" style="margin:0 0 6px"></h3><div class="mini" id="md"></div>
-  <input id="mi" placeholder="تأیید" autocomplete="off">
-  <div style="display:flex;gap:10px;justify-content:flex-start"><button class="cbtn danger" id="mok">اجرا</button><button class="cbtn" id="mcancel">انصراف</button></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="جواب‌های هوش مصنوعی">
+  <div class="dh"><span class="aico" id="dico"></span><b>جواب هوش مصنوعی</b><div class="sp"></div><button class="btn icon" id="dclose" type="button" aria-label="بستن"></button></div>
+  <div class="db" id="answers"></div>
+</aside>
+
+<div class="modal" id="ctlm" role="dialog" aria-modal="true" aria-labelledby="ctlt"><div class="box">
+  <h3 id="ctlt"></h3>
+  <div class="mini">توقف خرید، ادامه، و فروش همه. پیش‌فرض خاموش است و فقط وقتی کار می‌کند که «حالت کنترل» روشن باشد، اجرا «سایه» (بدون پول) باشد و فرمان را با نوشتن «تأیید» تأیید کنید.</div>
+  <label class="switch"><input type="checkbox" id="cmode"><span></span><b>حالت کنترل</b></label>
+  <div id="lockbox"></div>
+  <div class="cbtns" id="cbtns"></div>
+  <div style="margin-top:14px"><button class="btn" id="ctlclose" type="button">بستن</button></div>
+</div></div>
+
+<div class="modal top" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="box">
+  <h3 id="mt"></h3><div class="mini" id="md"></div>
+  <label class="sr" for="mi">تأیید</label><input type="text" id="mi" placeholder="تأیید" autocomplete="off">
+  <div style="display:flex;gap:8px"><button class="cbtn danger" id="mok" type="button">اجرا</button><button class="cbtn" id="mcancel" type="button">انصراف</button></div>
   <div class="mini" id="merr" style="color:var(--red);margin-top:8px"></div>
 </div></div>
 
 <script>
 const TOKEN = "__UI_TOKEN__";
 const STATIC = TOKEN.startsWith("__");          // opened as a plain page (GitHub Pages): no server, no model, no controls
+const PUBLIC = "__UI_PUBLIC__" === "1";         // the hosted copy on Liara: live data pushed by the bot's machine, no controls
 let STATIC_DATA = null;
 const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const fa = (s) => String(s).replace(/[0-9]/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]).replace(/\./g, "٫").replace(/-/g, "−");
 const money = (n) => fa(Math.round(n).toLocaleString("en-US")).replace(/,/g, "٬");
 const pct = (v, d = 2, sign = true) => v == null ? "–" : (sign && v > 0 ? "+" : "") + fa(Number(v).toFixed(d)) + "٪";
-const hm = (iso) => iso ? new Date(iso).toLocaleTimeString("fa-IR", {timeZone: "Asia/Tehran", hour: "2-digit", minute: "2-digit"}) : "–";
-const day = (iso) => new Date(iso).toLocaleDateString("fa-IR-u-ca-persian", {timeZone: "Asia/Tehran", day: "numeric", month: "long"});
-const ago = (iso) => { const m = Math.max(0, Math.round((Date.now() - new Date(iso)) / 60000)); return m < 1 ? "همین الان" : m < 60 ? fa(m) + " دقیقه پیش" : fa(Math.round(m / 60)) + " ساعت پیش"; };
-const MODE = {normal: ["عادی", "ok"], defensive: ["دفاعی", "idle"], halt: ["توقف", "bad"]};
-let SNAP = null, RUN = "live_main";
+const num = (t, c = "") => `<span class="num ${c}">${t}</span>`;
+const tone = (v) => v > 0 ? "g" : v < 0 ? "r" : "";
+const TZ = {timeZone: "Asia/Tehran"};
+const hm = (iso) => iso ? new Date(iso).toLocaleTimeString("fa-IR", {...TZ, hour: "2-digit", minute: "2-digit"}) : "–";
+const day = (iso) => new Date(iso).toLocaleDateString("fa-IR-u-ca-persian", {...TZ, day: "numeric", month: "long"});
+const wd = (iso) => new Date(iso).toLocaleDateString("fa-IR", {...TZ, weekday: "long"});
+const mins = (iso) => Math.round((Date.now() - new Date(iso)) / 60000);
+const ago = (iso) => { const m = Math.max(0, mins(iso)); return m < 1 ? "همین الان" : m < 60 ? fa(m) + " دقیقه پیش" : m < 1440 ? fa(Math.round(m / 60)) + " ساعت پیش" : fa(Math.round(m / 1440)) + " روز پیش"; };
+const left = (iso) => { const m = -mins(iso); if (m <= 0) return "گذشت"; const d = Math.floor(m / 1440), h = Math.floor(m % 1440 / 60), n = m % 60;
+  return d ? `${fa(d)} روز و ${fa(h)} ساعت` : h ? `${fa(h)} ساعت و ${fa(n)} دقیقه` : `${fa(n)} دقیقه`; };
+const held = (s) => s == null ? "" : s < 90 ? fa(Math.round(s)) + " ثانیه" : fa(Math.round(s / 60)) + " دقیقه";
+const coin = (sym) => String(sym).endsWith("USDT") ? sym.slice(0, -4) + "/USDT" : String(sym).replace(/TMN$/, "");
+const near = (m) => m.dev_min_pct == null || !m.threshold_pct ? 0 : Math.max(0, Math.min(1, -m.dev_min_pct / m.threshold_pct));
+const empty = (t) => `<div class="empty">${t}</div>`;
+const MODE = {normal: ["عادی", "ok"], defensive: ["دفاعی", "warn"], halt: ["توقف", "bad"]};
+const EXIT = {target: ["به سود رسید", "ok"], stop: ["حد ضرر", "bad"], time: ["پایان زمان نگه‌داری", "idle"], flatten: ["فروش پایان مسابقه", "idle"]};
+const svg = (p) => `<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
+const I = {
+  logo: svg('<path d="M3 17l5-5 4 3 8-8"/><path d="M15 7h5v5"/>'),
+  spark: svg('<path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>'),
+  lock: svg('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
+  unlock: svg('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 7.5-2"/>'),
+  theme: svg('<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/>'),
+  close: svg('<path d="M6 6l12 12M18 6L6 18"/>'),
+  check: svg('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>'),
+  alert: svg('<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/>'),
+  pause: svg('<circle cx="12" cy="12" r="9"/><path d="M10 9v6M14 9v6"/>'),
+  pulse: svg('<path d="M3 12h4l2-5 4 10 2-5h6"/>'),
+  clock: svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+  chart: svg('<path d="M4 19V5M4 19h16"/><path d="M7 15l4-4 3 2 5-6"/>'),
+  shield: svg('<path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/>'),
+  grid: svg('<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>'),
+  swap: svg('<path d="M7 7h12l-3-3M17 17H5l3 3"/>'),
+  play: svg('<path d="M8 5l11 7-11 7z"/>'),
+  stop: svg('<rect x="6" y="6" width="12" height="12" rx="2"/>'),
+  eject: svg('<path d="M12 5l7 9H5z"/><path d="M5 19h14"/>'),
+};
+let SNAP = null, RUN = "live_main", TAB = "trades";
 
 async function api(path, body) {
   if (STATIC) return staticApi(path, body);
@@ -244,177 +367,255 @@ async function staticApi(path, body) {
 
 /* ---------------- components: each takes its numbers from the snapshot ---------------- */
 const KPI = {
-  equity: (k) => ["ارزش حساب", money(k.equity), "تومان · سرمایهٔ اول " + money(k.start_equity)],
-  return: (k) => ["بازده", pct(k.return_pct), "نسبت به سرمایهٔ اول", k.return_pct > 0 ? "g" : k.return_pct < 0 ? "r" : ""],
-  drawdown: (k) => ["بیشترین افت", pct(k.max_drawdown_pct, 2, false), "کلید قطع در ۳٪"],
-  trades: (k) => ["معامله‌های بسته‌شده", fa(k.trades), k.open_positions ? fa(k.open_positions) + " موقعیت باز" : "موقعیت باز ندارد"],
-  reviews: (k) => ["بازبینی هوش مصنوعی", fa(k.reviews), "هر ۳۰ دقیقه", "v2"],
-  tool_calls: (k) => ["فراخوانی ابزار MCP", fa(k.tool_calls), "رسمی والکس " + fa(k.tool_calls_official) + " · موتور " + fa(k.tool_calls - k.tool_calls_official), "b"],
-  errors: (k) => ["خطاها", fa(k.errors), k.errors ? "در لاگ" : "بدون خطا", k.errors ? "r" : "g"],
-  decisions: (k) => ["تصمیم‌های عامل معامله", fa(k.decisions), "بخر یا نخر، با دلیل"],
+  equity: (k) => ["ارزش حساب", money(k.equity), "تومان", "سرمایهٔ اول " + money(k.start_equity)],
+  return: (k) => ["بازده", pct(k.return_pct), "", "بیشترین افت " + pct(k.max_drawdown_pct, 2, false), tone(k.return_pct)],
+  drawdown: (k) => ["بیشترین افت", pct(k.max_drawdown_pct, 2, false), "", "کلید قطع در ۳٪"],
+  trades: (k) => ["معامله‌های بسته‌شده", fa(k.trades), "", k.open_positions ? fa(k.open_positions) + " موقعیت باز" : "موقعیت باز ندارد"],
+  reviews: (k) => ["بازبینی هوش مصنوعی", fa(k.reviews), "", "هر ۳۰ دقیقه یک بار"],
+  tool_calls: (k) => ["فراخوانی ابزار MCP", fa(k.tool_calls), "", "رسمی والکس " + fa(k.tool_calls_official) + " · موتور " + fa(k.tool_calls - k.tool_calls_official)],
+  errors: (k) => ["خطاها", fa(k.errors), "", k.errors ? "در لاگ" : "بدون خطا", k.errors ? "r" : "g"],
+  decisions: (k) => ["تصمیم‌های عامل معامله", fa(k.decisions), "", "بخر یا نخر، با دلیل"],
 };
+const tile = ([l, v, unit, sub, c], cls = "") => `<div class="tile ${cls}"><div class="l">${l}</div><div class="v">${num(v, c || "")}${unit ? ` <small>${unit}</small>` : ""}</div><div class="s">${esc(sub)}</div></div>`;
 function cKpis(b, s) {
   const keys = (b.keys && b.keys.length ? b.keys : Object.keys(KPI)).filter(k => KPI[k]);
-  return `<div class="kpis">${keys.map(k => { const [l, v, sub, c] = KPI[k](s.kpis); return `<div class="kpi"><div class="l">${l}</div><div class="v ${c || ""}">${v}</div><div class="s">${esc(sub)}</div></div>`; }).join("")}</div>`;
+  return `<div class="tiles">${keys.map(k => tile(KPI[k](s.kpis))).join("")}</div>`;
 }
 function cEquity(b, s) {
   const pts = s.equity.map(([t, v]) => [new Date(t).getTime(), v]);
-  if (pts.length < 2) return `<div class="empty">هنوز دادهٔ کافی برای نمودار نیست.</div>`;
-  const W = 900, H = 240, L = 70, R = 14, T = 14, B = 34;
+  if (pts.length < 2) return empty("هنوز دادهٔ کافی برای نمودار نیست.");
+  const W = 900, H = b.h || 250, L = 62, R = 12, T = 12, B = 30;
   const t0 = pts[0][0], t1 = pts[pts.length - 1][0], base = s.kpis.start_equity;
   let lo = Math.min(...pts.map(p => p[1]), base), hi = Math.max(...pts.map(p => p[1]), base);
   const pad = Math.max((hi - lo) * .2, base * .004); lo -= pad; hi += pad;
   const X = t => L + (t - t0) / Math.max(1, t1 - t0) * (W - L - R), Y = v => T + (hi - v) / (hi - lo) * (H - T - B);
   const line = pts.map(p => `${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join(" ");
   const area = `${line} ${X(t1).toFixed(1)},${Y(base).toFixed(1)} ${X(t0).toFixed(1)},${Y(base).toFixed(1)}`;
-  const ticks = [lo + pad, base, hi - pad].map(v => `<text x="${L - 8}" y="${Y(v) + 4}" font-size="12" fill="var(--muted)" text-anchor="end">${fa((v / 1e6).toFixed(3))}م</text>`).join("");
-  const xt = [.06, .28, .5, .72, .94].map(f => { const t = t0 + f * (t1 - t0); return `<text x="${X(t)}" y="${H - 10}" font-size="12" fill="var(--muted)" text-anchor="middle" style="direction:rtl">${day(new Date(t).toISOString())} ${hm(new Date(t).toISOString())}</text>`; }).join("");
-  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" style="direction:ltr"><defs><linearGradient id="eg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
+  const lastV = pts[pts.length - 1][1], yv = Math.abs(Y(lastV) - Y(base)) > 16 ? [base, lastV] : [base];
+  const ticks = yv.map(v => `<text x="${L - 8}" y="${Y(v) + 4}" font-size="12" fill="var(--muted)" text-anchor="end">${fa((v / 1e6).toFixed(3))}م</text>`).join("");
+  const xt = [.06, .28, .5, .72, .94].map(f => { const t = new Date(t0 + f * (t1 - t0)).toISOString(); return `<text x="${X(t0 + f * (t1 - t0))}" y="${H - 8}" font-size="12" fill="var(--muted)" text-anchor="middle" style="direction:rtl">${day(t)} ${hm(t)}</text>`; }).join("");
+  const last = pts[pts.length - 1];
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" style="direction:ltr" role="img" aria-label="نمودار ارزش حساب"><defs><linearGradient id="eg${b.uid || ""}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></linearGradient></defs>
     <line x1="${L}" x2="${W - R}" y1="${Y(base)}" y2="${Y(base)}" stroke="var(--muted)" stroke-dasharray="4 5"/>${ticks}${xt}
-    <polygon points="${area}" fill="url(#eg)"/><polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/></svg></div>`;
+    <polygon points="${area}" fill="url(#eg${b.uid || ""})"/><polyline points="${line}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="${X(last[0])}" cy="${Y(last[1])}" r="4.5" fill="var(--accent)" stroke="var(--card)" stroke-width="2"/></svg></div>`;
 }
 function cBrakes(b, s) {
   return s.brakes.map(k => {
     const ratio = k.limit ? Math.max(0, Math.min(1, k.value / k.limit)) : (k.active ? 1 : 0);
     const st = k.tripped ? ["فعال شد", "bad"] : k.key === "gain" ? (k.active ? ["روشن", "ok"] : ["منتظر سود", "idle"]) : ["عادی", "ok"];
-    const val = k.key === "gain" ? pct(k.value) : fa(Math.max(0, k.value).toFixed(2)) + "٪ از " + fa(k.limit.toFixed(1)) + "٪";
-    return `<div class="brake"><div><div class="n">${k.name}</div><div class="d">${esc(k.rule)} · <span style="white-space:nowrap">الان ${val}</span></div></div><div class="meter"><i style="width:${(ratio * 100).toFixed(1)}%"></i></div><div class="state ${st[1]}">${st[0]}</div></div>`;
+    const val = k.key === "gain" ? "بازده " + num(pct(k.value)) : "الان " + num(fa(Math.max(0, k.value).toFixed(2)) + "٪") + " از " + num(fa(k.limit.toFixed(1)) + "٪");
+    return `<div class="brk"><div class="bh"><b>${k.name}</b><span class="state ${st[1]}">${st[0]}</span></div><div class="bm"><div class="meter"><i style="width:${(ratio * 100).toFixed(1)}%"></i></div><span class="bv">${val}</span></div><div class="bd" title="${esc(k.rule)}">${esc(k.rule)}</div></div>`;
   }).join("");
 }
 function spark(m) {
   const d = m.spark || []; if (d.length < 2) return "";
-  const W = 220, H = 54, lo = Math.min(...d, -m.threshold_pct - .15), hi = Math.max(...d, .4);
+  const W = 260, H = 46, lo = Math.min(...d, -m.threshold_pct - .15), hi = Math.max(...d, .4);
   const X = i => i / (d.length - 1) * W, Y = v => (hi - v) / (hi - lo) * H;
-  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:54px;direction:ltr;margin-top:6px"><rect x="0" y="${Y(-m.threshold_pct)}" width="${W}" height="${H - Y(-m.threshold_pct)}" fill="var(--green)" opacity=".10"/><line x1="0" x2="${W}" y1="${Y(-m.threshold_pct)}" y2="${Y(-m.threshold_pct)}" stroke="var(--green)" stroke-dasharray="3 3"/><polyline points="${d.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ")}" fill="none" stroke="${m.enabled ? "var(--accent)" : "var(--muted)"}" stroke-width="2"/></svg>`;
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:46px;direction:ltr;margin:4px 0" aria-hidden="true"><rect x="0" y="${Y(-m.threshold_pct)}" width="${W}" height="${H - Y(-m.threshold_pct)}" fill="var(--green)" opacity=".1"/><line x1="0" x2="${W}" y1="${Y(-m.threshold_pct)}" y2="${Y(-m.threshold_pct)}" stroke="var(--green)" stroke-dasharray="3 3"/><polyline points="${d.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(" ")}" fill="none" stroke="${m.enabled ? "var(--accent)" : "var(--muted)"}" stroke-width="1.8"/></svg>`;
 }
 function cMarkets(b, s) {
   const want = (b.symbols || []).filter(Boolean);
-  const ms = s.markets.filter(m => !want.length || want.includes(m.symbol));
-  return `<div class="mgrid">${ms.map(m => `<div class="mk ${m.enabled ? "" : "off"}"><div class="h"><div><div class="sym">${m.symbol}</div><div class="nm">${m.name}</div></div>
-    <span class="tag ${m.enabled ? "ok" : m.watch ? "idle" : "bad"}">${m.enabled ? "فعال" : m.watch ? "تماشا" : "خاموش"}</span></div>${spark(m)}
-    <div class="nums"><span>آستانه <b>−${fa(m.threshold_pct.toFixed(2))}٪</b></span><span>الان <b>${pct(m.dev_now_pct)}</b></span><span>کمترین <b>${pct(m.dev_min_pct)}</b></span></div>
-    <div class="why">${esc(m.reason_fa)}</div></div>`).join("")}</div>`;
+  const ms = s.markets.filter(m => !want.length || want.includes(m.symbol)).slice().sort((x, y) => (y.enabled - x.enabled) || (near(y) - near(x)));
+  if (!ms.length) return empty("برای این اجرا بازاری ثبت نشده.");
+  return ms.map(m => {
+    const r = near(m), st = m.enabled ? "on" : m.watch ? "watch" : "off";
+    const val = !m.enabled ? (m.watch ? "تماشا" : "خاموش") : m.dev_min_pct == null ? "–" : r >= 1 ? "رسید" : fa(Math.round(r * 100)) + "٪";
+    return `<details class="mrow ${st}" data-k="m:${esc(m.symbol)}"><summary><span class="mdot"></span><span class="mname"><b>${esc(coin(m.symbol))}</b><small>${esc(m.name)}</small></span><span class="mbar"><i class="${r >= .85 ? "hot" : ""}" style="width:${(r * 100).toFixed(1)}%"></i></span><span class="mval">${val}</span></summary>
+      <div class="mdet">${spark(m)}<span>آستانهٔ خرید ${num("−" + fa(m.threshold_pct.toFixed(2)) + "٪")}</span><span>الان ${num(pct(m.dev_now_pct))}</span><span>کمترین ${num(pct(m.dev_min_pct))}</span>${m.spread_pct != null ? `<span>اسپرد ${num(fa(m.spread_pct.toFixed(2)) + "٪")}</span>` : ""}${m.reason_fa ? `<p>${esc(m.reason_fa)}</p>` : ""}</div></details>`;
+  }).join("");
 }
-function cDistance(b, s) {
-  const want = (b.symbols || []).filter(Boolean);
-  const ms = s.markets.filter(m => (!want.length || want.includes(m.symbol)) && m.dev_min_pct != null);
-  if (!ms.length) return `<div class="empty">برای این اجرا دادهٔ دفتر سفارش نیست.</div>`;
-  return ms.map(m => { const r = Math.max(0, Math.min(1, -m.dev_min_pct / m.threshold_pct));
-    return `<div class="dist"><div><b style="direction:ltr;display:inline-block">${m.symbol}</b> <span class="mini">${m.enabled ? "" : "· خاموش"}</span></div>
-      <div class="track"><div class="fill ${r > .85 ? "hot" : ""}" style="width:${(r * 100).toFixed(1)}%"></div><div class="thr"></div></div>
-      <div class="mini">${r >= 1 ? "از آستانه رد شد" : fa(Math.round(r * 100)) + "٪ تا خرید"}</div></div>`; }).join("") +
-    `<div class="mini" style="margin-top:6px">نوار = عمیق‌ترین ارزانیِ ۶ ساعت اخیر نسبت به آستانهٔ خرید همان بازار؛ خط قرمز = آستانه.</div>`;
+function revItem(r) {
+  const m = MODE[r.risk_mode] || [r.risk_mode || "–", "idle"];
+  return `<div class="li"><div class="l1"><span class="state ${m[1]}">${m[0]}</span><b>${day(r.t)}، ${hm(r.t)}</b><span class="end mini">${fa(r.calls)} ابزار</span></div><div class="l3 clamp2">${esc(r.summary_fa)}</div></div>`;
 }
 function cReviews(b, s) {
   const rs = s.reviews.slice(0, Math.max(1, Math.min(5, b.n || 2)));
-  if (!rs.length) return `<div class="empty">هنوز بازبینی‌ای ثبت نشده.</div>`;
-  return rs.map(r => { const m = MODE[r.risk_mode] || [r.risk_mode, "idle"];
-    return `<div class="rev"><div class="h"><b>${day(r.t)}، ${hm(r.t)}</b><span class="state ${m[1]}">${m[0]}</span><span>${fa(r.calls)} ابزار: والکس ${fa(r.official)} · موتور ${fa(r.calls - r.official)}</span><span class="mini" style="direction:ltr">${esc(r.model || "")}</span></div>
-      <div class="split"><i style="width:${r.calls ? r.official / r.calls * 100 : 0}%"></i><i style="flex:1"></i></div>
-      <div class="s">${esc(r.summary_fa)}</div>
-      <div class="minis">${r.on.map(x => `<span style="color:var(--green)">${x}</span>`).join("")}${r.off.map(x => `<span style="color:var(--muted);text-decoration:line-through">${x}</span>`).join("")}</div></div>`; }).join("");
+  return rs.length ? rs.map(revItem).join("") : empty("هنوز بازبینی‌ای ثبت نشده.");
+}
+function tools(r) {
+  const mx = Math.max(...r.tools.map(t => t.n), 1);
+  return `<div class="tools">${r.tools.map(t => `<div class="t"><code>${esc(t.tool)}</code><div class="bar"><i style="width:${t.n / mx * 100}%;background:${t.server === "wallex-official" ? "var(--accent)" : "var(--engine)"}"></i></div><b>${num(fa(t.n))}</b></div>`).join("")}</div><div class="mini">آبی: MCP رسمی والکس · خاکستری: MCP موتور ربات</div>`;
 }
 function cTools(b, s) {
-  const r = s.reviews[Math.max(0, Math.min(s.reviews.length - 1, b.index || 0))]; if (!r) return `<div class="empty">بازبینی‌ای نیست.</div>`;
-  const mx = Math.max(...r.tools.map(t => t.n), 1);
-  return `<div class="tools"><div class="mini" style="margin-bottom:6px">بازبینی ${hm(r.t)} · آبی = MCP رسمی والکس، خاکستری = MCP موتور</div>${r.tools.map(t => `<div class="t"><code>${esc(t.tool)}</code><div class="bar"><i style="width:${t.n / mx * 100}%;background:${t.server === "wallex-official" ? "var(--accent)" : "var(--engine)"}"></i></div><b>${fa(t.n)}</b></div>`).join("")}</div>`;
+  const r = s.reviews[Math.max(0, Math.min(s.reviews.length - 1, b.index || 0))];
+  return r ? `<div class="mini" style="margin-bottom:4px">بازبینی ${hm(r.t)}</div>${tools(r)}` : empty("بازبینی‌ای نیست.");
+}
+function cAI(s) {
+  const r = s.reviews[0];
+  if (!r) return empty("هنوز بازبینی‌ای ثبت نشده. هوش مصنوعی هر ۳۰ دقیقه بازارها را بازبینی می‌کند.");
+  const m = MODE[r.risk_mode] || [r.risk_mode || "–", "idle"];
+  return `<div class="aitop"><span class="state ${m[1]}">حالت ${m[0]}</span><span class="mini">${ago(r.t)} · ${hm(r.t)}</span><span class="mini num">${esc(r.model || "")}</span></div>
+    <p class="sum">${esc(r.summary_fa)}</p>
+    <div class="split"><i style="width:${r.calls ? r.official / r.calls * 100 : 0}%"></i><i style="flex:1"></i></div>
+    <div class="mini" style="margin-top:4px">${fa(r.calls)} فراخوانی ابزار MCP: ${fa(r.official)} از MCP رسمی والکس، ${fa(r.calls - r.official)} از موتور ربات</div>
+    <div class="minis">${r.on.map(x => `<span class="on">${esc(coin(x))}</span>`).join("")}${r.off.map(x => `<span class="off">${esc(coin(x))}</span>`).join("")}</div>
+    <details class="more" data-k="ai:tools"><summary>کدام ابزارها را صدا زد</summary>${tools(r)}</details>
+    ${s.reviews.length > 1 ? `<details class="more" data-k="ai:prev"><summary>بازبینی‌های قبلی (${fa(s.reviews.length - 1)})</summary>${s.reviews.slice(1).map(revItem).join("")}</details>` : ""}`;
 }
 function cDecisions(b, s) {
-  const ds = s.decisions.slice(0, b.n || 8);
-  if (!ds.length) return `<div class="empty">عامل معامله روشن است؛ هنوز فرصتی به آستانه نرسیده که مدل دربارهٔ آن تصمیم بگیرد.</div>`;
-  return `<div class="tbl"><table><tr><th>زمان</th><th>بازار</th><th>تصمیم</th><th>ارزانی</th><th>دلیل مدل</th></tr>${ds.map(d => `<tr><td>${hm(d.t)}</td><td style="direction:ltr">${d.symbol}</td><td><span class="state ${d.decision === "buy" ? "ok" : "idle"}">${d.decision === "buy" ? "بخر" : "نخر"}</span></td><td>${pct(d.buy_dev_pct_asked)}</td><td>${esc(d.reason_fa)}</td></tr>`).join("")}</table></div>`;
+  const ds = s.decisions.slice(0, b.n || 20);
+  if (!ds.length) return empty("هنوز فرصتی به آستانه نرسیده که عامل معامله دربارهٔ آن تصمیم بگیرد.");
+  return ds.map(d => `<div class="li"><div class="l1"><b>${esc(coin(d.symbol))}</b><span class="state ${d.decision === "buy" ? "ok" : "idle"}">${d.decision === "buy" ? "بخر" : "نخر"}</span><span class="end mini">ارزانی ${num(pct(d.buy_dev_pct_asked))}</span></div>
+    <div class="l2">${day(d.t)}، ${hm(d.t)}${d.latency_s != null ? " · جواب در " + fa(Number(d.latency_s).toFixed(1)) + " ثانیه" : ""}</div>${d.reason_fa ? `<div class="l3">${esc(d.reason_fa)}</div>` : ""}</div>`).join("");
 }
 function cTrades(b, s) {
-  if (!s.trades.length) return `<div class="empty">هنوز معامله‌ای بسته نشده است.</div>`;
-  return `<div class="tbl"><table><tr><th>بازار</th><th>بازده</th><th>دلیل خروج</th></tr>${s.trades.map(t => `<tr><td style="direction:ltr">${esc(t.symbol)}</td><td>${pct(t.ret_pct ?? t.return_pct)}</td><td>${esc(t.why || t.reason || "")}</td></tr>`).join("")}</table></div>`;
+  const open = Object.entries(s.positions || {}).map(([sym, p]) => `<div class="li open"><div class="l1"><b>${esc(coin(sym))}</b><span class="state warn">موقعیت باز</span>${p && p.entry ? `<span class="end mini">ورود ${num(fa(p.entry))}</span>` : ""}</div><div class="l2">ربات منتظر فروش است (سود، حد ضرر یا پایان زمان)</div></div>`).join("");
+  if (!s.trades.length) return open + empty("هنوز معامله‌ای بسته نشده است.");
+  return open + s.trades.map(t => { const e = EXIT[t.reason] || [t.reason || "–", "idle"]; const v = t.ret_pct ?? t.return_pct;
+    return `<div class="li"><div class="l1"><b>${esc(coin(t.symbol))}</b><span class="state ${e[1]}">${e[0]}</span><span class="end">${num(pct(v), tone(v))}</span></div>
+      <div class="l2">${t.t ? day(t.t) + "، " + hm(t.t) : ""}${t.held_s != null ? " · " + held(t.held_s) + " نگه داشت" : ""}${t.pnl_tmn != null ? " · " + num(money(t.pnl_tmn)) + " تومان" : ""}</div></div>`; }).join("");
 }
 function cRestarts(b, s) { return `<div class="minis">${s.starts.map(x => `<span>${day(x.t)} ${hm(x.t)}${x.trade_agent ? " · عامل معامله" : ""}</span>`).join("")}</div>`; }
 const IMG = {month_equity: ["img/month_equity.png", "اگر ربات یک ماه گذشته روشن بود (بک‌تست ۳۰ روزه)"], ideas: ["img/ideas.png", "میانگین سود خالص هر معامله در همهٔ ایده‌هایی که سنجیدیم"]};
 const COMP = {
   kpis: [cKpis, "شاخص‌ها"], equity_chart: [cEquity, "ارزش حساب"], brakes: [cBrakes, "ترمزهای ریسک"], markets: [cMarkets, "بازارها"],
-  market_distance: [cDistance, "فاصله تا خرید"], reviews: [cReviews, "تصمیم‌های هوش مصنوعی"], review_tools: [cTools, "ابزارهایی که ایجنت صدا زد"],
+  market_distance: [cMarkets, "فاصله تا خرید"], reviews: [cReviews, "تصمیم‌های هوش مصنوعی"], review_tools: [cTools, "ابزارهایی که ایجنت صدا زد"],
   trade_decisions: [cDecisions, "عامل معامله"], trades: [cTrades, "معامله‌ها"], restarts: [cRestarts, "راه‌اندازی‌ها"],
-  image: [(b) => { const i = IMG[b.src] || IMG.month_equity; return `<div class="img"><img src="${i[0]}" alt=""></div>`; }, null],
+  image: [(b) => { const i = IMG[b.src] || IMG.month_equity; return `<div class="img"><img src="${i[0]}" alt="${esc(i[1])}"></div>`; }, null],
   callout: [(b) => `<div class="call ${["info", "good", "warn", "bad"].includes(b.tone) ? b.tone : "info"}">${esc(b.text)}</div>`, null],
   steps: [(b) => `<div class="steps">${(b.items || []).map(x => `<div>${esc(x)}</div>`).join("")}</div>`, null],
-  text: [(b) => `<div style="font-size:15px">${esc(b.text)}</div>`, null],
+  text: [(b) => `<div style="font-size:14.5px">${esc(b.text)}</div>`, null],
 };
-const HALF = new Set(["brakes", "review_tools", "market_distance", "restarts"]);
+let UID = 0;
 function renderBlocks(blocks, s) {
-  blocks = blocks.filter(b => COMP[b.type]);
-  // a half-width block only stays half when the next one pairs with it, so no row is left half empty
-  const half = blocks.map(() => false);
-  for (let i = 0; i + 1 < blocks.length; i++) if (HALF.has(blocks[i].type) && HALF.has(blocks[i + 1].type)) { half[i] = half[i + 1] = true; i++; }
-  return blocks.map((b, i) => { const c = COMP[b.type];
+  const seen = new Set();     // "markets" and "market_distance" draw the same list now: show it once
+  blocks = blocks.filter(b => { if (!COMP[b.type]) return false;
+    const k = (b.type === "market_distance" ? "markets" : b.type) + JSON.stringify(b.symbols || b.keys || b.src || b.text || b.items || "");
+    if (seen.has(k)) return false; seen.add(k); return true; });
+  return blocks.map(b => { const c = COMP[b.type];
     const title = b.type === "image" ? (IMG[b.src] || IMG.month_equity)[1] : c[1];
-    return `<div class="blk ${half[i] ? "half" : ""}" style="animation-delay:${i * 90}ms">${title ? `<h4>${title}</h4>` : ""}${c[0](b, s)}</div>`; }).join("");
+    return `<div class="blk">${title ? `<h4>${title}</h4>` : ""}${c[0]({...b, uid: ++UID, h: 220}, s)}</div>`; }).join("");
 }
 
-/* ---------------- page ---------------- */
+/* ---------------- dashboard ---------------- */
+function nowCard(s) {
+  const k = s.kpis, open = Object.keys(s.positions || {}), on = s.markets.filter(m => m.enabled);
+  const best = on.filter(m => m.dev_min_pct != null).sort((a, b) => near(b) - near(a))[0];
+  const rev = s.reviews[0], mode = rev ? (MODE[rev.risk_mode] || [rev.risk_mode])[0] : null;
+  const c = s.contest, ended = Date.now() > new Date(c.end);
+  let t, ic, msg, sub = `${fa(on.length)} بازار فعال` + (mode ? ` · حالت ریسک: ${mode}` : "") + (best ? ` · نزدیک‌ترین به خرید: ${best.name}` : "");
+  if (s.updated && mins(s.updated) > 5 && !ended) [t, ic, msg, sub] = ["warn", I.alert, "از ربات دادهٔ تازه نمی‌رسد", "آخرین داده " + ago(s.updated) + ". اگر پنجرهٔ ربات بسته شده، دوباره روشنش کنید."];
+  else if (ended) [t, ic, msg] = ["idle", I.check, "مسابقه تمام شده است"];
+  else if (k.halted) [t, ic, msg, sub] = ["bad", I.pause, "خرید تازه متوقف است", k.halted];
+  else if (open.length) [t, ic, msg] = ["info", I.pulse, "موقعیت باز در " + open.map(coin).join("، ") + "؛ منتظر فروش"];
+  else [t, ic, msg] = ["ok", I.check, "ربات روشن است و منتظر فرصت خرید"];
+  const end = ended ? "" : `<div class="t">${I.clock}<span title="فروش همه ${hm(c.flatten)}">پایان مسابقه ${wd(c.end)} ${hm(c.end)} · ${left(c.end)} مانده · خرید تازه تا ${hm(c.no_new_entries)}</span></div>`;
+  return `<div class="card now ${t}"><span class="ib">${ic}</span><div><b>${esc(msg)}</b><div class="s">${esc(sub)}</div>${end}</div></div>`;
+}
+function rowA(s) {
+  const k = s.kpis;
+  return nowCard(s) + [KPI.equity(k), KPI.return(k), KPI.trades(k),
+    ["هوش مصنوعی", fa(k.reviews), "بازبینی", fa(k.tool_calls) + " فراخوانی MCP · " + fa(k.tool_calls_official) + " از والکس رسمی"]].map(x => tile(x, "card")).join("");
+}
 function header(s) {
   const live = s.kind === "live";
   $("#live").innerHTML = `<i class="dot ${live ? "" : "shadow"}"></i><span>${live ? "زنده · پول واقعی" : s.kind === "shadow" ? "سایه · بدون پول" : "اجرا"}</span>`;
   $("#upd").textContent = "آخرین داده: " + (s.updated ? ago(s.updated) : "–");
-  const c = s.contest, now = Date.now();
-  const left = (iso) => { const m = Math.round((new Date(iso) - now) / 60000); return m <= 0 ? "گذشت" : (m >= 60 ? fa(Math.floor(m / 60)) + " ساعت و " : "") + fa(m % 60) + " دقیقه"; };
-  $("#clocks").innerHTML = [["قطع خرید تازه", c.no_new_entries], ["فروش همه به تومان", c.flatten], ["پایان مسابقه", c.end]]
-    .map(([l, t]) => `<div class="clock">${l} · ${hm(t)}<b>${left(t)}</b></div>`).join("");
+  $("#upd").classList.toggle("stale", !!s.updated && mins(s.updated) > 5);
+}
+function tabs(s) {
+  $("#tabs").innerHTML = [["trades", "بسته‌شده", s.kpis.trades], ["dec", "تصمیم‌های عامل", s.decisions.length]]
+    .map(([k, l, n]) => `<button type="button" role="tab" data-t="${k}" aria-selected="${TAB === k}">${l} ${num(fa(n))}</button>`).join("");
+  $("#trades").innerHTML = TAB === "trades" ? cTrades({}, s) : cDecisions({}, s);
+}
+$("#tabs").onclick = (e) => { const b = e.target.closest("button[data-t]"); if (b && SNAP) { TAB = b.dataset.t; tabs(SNAP); } };
+function render(s) {
+  const keep = {open: $$("#main details[open][data-k]").map(d => d.dataset.k), scroll: $$("#main [data-scroll]").map(e => [e.id, e.scrollTop])};
+  header(s);
+  $("#rowa").innerHTML = rowA(s);
+  $("#eq").innerHTML = cEquity({h: 300}, s);
+  $("#brakes").innerHTML = cBrakes({}, s);
+  $("#markets").innerHTML = cMarkets({}, s);
+  $("#ai").innerHTML = cAI(s);
+  tabs(s);
+  keep.open.forEach(k => $$("#main details[data-k]").forEach(d => { if (d.dataset.k === k) d.open = true; }));
+  keep.scroll.forEach(([id, top]) => { const e = document.getElementById(id); if (e) e.scrollTop = top; });
 }
 async function refresh() {
-  try {
-    SNAP = await api("/api/snapshot?run=" + encodeURIComponent(RUN));
-    header(SNAP);
-    $("#overview").innerHTML = renderBlocks([{type: "kpis"}, {type: "equity_chart"}, {type: "brakes"}, {type: "market_distance"}, {type: "markets"}, {type: "reviews", n: 2}, {type: "review_tools", index: 0}, {type: "trade_decisions", n: 6}], SNAP);
-    controls();
-  } catch (e) { $("#overview").innerHTML = `<div class="empty">خواندن داده نشد: ${esc(e.message)}</div>`; }
+  try { SNAP = await api("/api/snapshot?run=" + encodeURIComponent(RUN)); render(SNAP); controls(); }
+  catch (e) { $("#rowa").innerHTML = `<div class="card now bad"><span class="ib">${I.alert}</span><div><b>خواندن داده نشد</b><div class="s">${esc(e.message)}</div></div></div>`; }
 }
+
+/* ---------------- ask: the AI builds an answer page in the side drawer ---------------- */
 const SUGG = ["چرا امروز معامله نکرد؟", "ریسک الان چطور است؟", "هوش مصنوعی آخرین بار چه تصمیمی گرفت و با کدام ابزارها؟", "کدام بازار به خرید نزدیک‌تر است؟", "اگر ربات یک ماه پیش روشن بود چه می‌شد؟", "ربات چطور تصمیم می‌گیرد بخرد؟"];
-$("#chips").innerHTML = SUGG.map(x => `<span class="chip">${x}</span>`).join("");
-$("#chips").onclick = (e) => { if (e.target.classList.contains("chip")) { $("#q").value = e.target.textContent; ask(); } };
+$("#chips").innerHTML = SUGG.map(x => `<button type="button" class="chip">${x}</button>`).join("");
+$("#chips").onclick = (e) => { const c = e.target.closest(".chip"); if (c) { $("#q").value = c.textContent; ask(); } };
+let NANS = 0, LAST_FOCUS = null;
+function drawer(open) {
+  if (open) LAST_FOCUS = document.activeElement;
+  $("#drawer").classList.toggle("open", open); $("#scrim").classList.toggle("show", open);
+  if (open) $("#dclose").focus(); else if (LAST_FOCUS) LAST_FOCUS.focus();
+}
 async function ask() {
   const q = $("#q").value.trim(); if (!q) return;
-  $("#go").disabled = true;
+  $("#go").disabled = true; drawer(true);
   const card = document.createElement("div"); card.className = "answer";
   card.innerHTML = `<div class="q">${esc(q)}</div><div class="thinking"><span class="spin"></span><span>هوش مصنوعی دارد از دادهٔ واقعی ربات صفحه می‌سازد…</span></div><div class="skel" style="width:70%"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:55%"></div>`;
-  $("#answers").prepend(card);
+  $("#answers").prepend(card); $("#answers").scrollTop = 0;
   try {
     const r = await api("/api/ask", {run: RUN, question: q});
     const p = r.page;
     card.innerHTML = `<div class="q">${esc(q)}</div><h3>${esc(p.title)}</h3><p class="a">${esc(p.answer)}</p><div class="blocks">${renderBlocks(p.blocks, r.snapshot)}</div>
-      <div class="meta"><span class="gen">✦ رابط ساخته‌شده با هوش مصنوعی</span><span style="direction:ltr">${esc(r.model)}</span><span>· ${fa(r.latency_s)} ثانیه</span>${r.t ? `<span>· ساخته‌شده در ${day(r.t)} ${hm(r.t)}</span>` : ""}</div>`;
-  } catch (e) { card.innerHTML = `<div class="q">${esc(q)}</div><div class="call bad">${esc(e.message)}</div>`; }
-  $("#go").disabled = false;
+      <div class="meta"><span class="gen">${I.spark} ساخته‌شده با هوش مصنوعی</span><span class="num">${esc(r.model)}</span><span>· ${fa(r.latency_s)} ثانیه</span>${r.t ? `<span>· ${day(r.t)} ${hm(r.t)}</span>` : ""}</div>`;
+  } catch (e) { card.innerHTML = `<div class="q">${esc(q)}</div><div class="call bad" style="margin-top:6px">${esc(e.message)}</div>`; }
+  $("#go").disabled = false; NANS++;
+  $("#openans").hidden = false; $("#openans").innerHTML = `${I.spark}<span class="lbl">جواب‌ها ${fa(NANS)}</span>`;
 }
-$("#go").onclick = ask; $("#q").onkeydown = (e) => { if (e.key === "Enter") ask(); };
+$("#askf").onsubmit = (e) => { e.preventDefault(); ask(); };
+$("#openans").onclick = () => drawer(true);
+$("#dclose").onclick = $("#scrim").onclick = () => drawer(false);
 
 /* ---------------- high-risk controls: off by default, locked on real money ---------------- */
 let CTL = null, ACT = null;
-const ACTN = {stop: "توقف خرید تازه", resume: "ادامهٔ خرید", flatten: "فروش همه به تومان"};
+const ACTN = {stop: ["توقف خرید تازه", I.stop], resume: ["ادامهٔ خرید", I.play], flatten: ["فروش همه به تومان", I.eject]};
+$("#cbtns").innerHTML = Object.entries(ACTN).map(([k, [l, ic]]) => `<button type="button" class="cbtn ${k === "flatten" ? "danger" : ""}" data-a="${k}" disabled>${ic}${l}</button>`).join("");
 async function controls() {
   try { CTL = await api("/api/controls?run=" + encodeURIComponent(RUN)); } catch (e) { return; }
+  $("#ctlbtn").innerHTML = `${CTL.locked ? I.lock : I.unlock}<span class="lbl">${CTL.locked ? "کنترل‌ها: قفل" : "کنترل‌ها"}</span>`;
+  $("#ctlbtn").setAttribute("aria-label", CTL.locked ? "کنترل‌ها (قفل)" : "کنترل‌ها");
+  $("#ctlt").innerHTML = `${CTL.locked ? I.lock : I.unlock} کنترل‌های پرریسک`;
   const on = $("#cmode").checked;
-  $("#lockbox").innerHTML = !on ? "" : CTL.locked
-    ? `<div class="lock on"><span style="font-size:22px">🔒</span><div><b>قفل است.</b> ${esc(CTL.why)}</div></div>`
-    : `<div class="lock open"><span style="font-size:22px">⚠️</span><div>${esc(CTL.why)} وضعیت فعلی: ${CTL.stop ? "خرید متوقف است" : "خرید آزاد است"}${CTL.flatten ? " · فرمان فروش همه ثبت شده" : ""}.</div></div>`;
-  document.querySelectorAll(".cbtn[data-a]").forEach(b => b.disabled = !on || CTL.locked);
+  $("#lockbox").innerHTML = CTL.locked
+    ? `<div class="lock on">${I.lock}<div><b>قفل است.</b> ${esc(CTL.why)}</div></div>`
+    : on ? `<div class="lock open">${I.alert}<div>${esc(CTL.why)} وضعیت فعلی: ${CTL.stop ? "خرید متوقف است" : "خرید آزاد است"}${CTL.flatten ? " · فرمان فروش همه ثبت شده" : ""}.</div></div>` : "";
+  $$(".cbtn[data-a]").forEach(b => b.disabled = !on || CTL.locked);
 }
 $("#cmode").onchange = controls;
-document.querySelectorAll(".cbtn[data-a]").forEach(b => b.onclick = () => {
-  ACT = b.dataset.a; $("#mt").textContent = ACTN[ACT] + "؟";
+$("#ctlbtn").onclick = () => { $("#ctlm").classList.add("show"); $("#ctlclose").focus(); };
+$("#ctlclose").onclick = () => { $("#ctlm").classList.remove("show"); $("#ctlbtn").focus(); };
+$("#cbtns").onclick = (e) => {
+  const b = e.target.closest(".cbtn[data-a]"); if (!b || b.disabled) return;
+  ACT = b.dataset.a; $("#mt").textContent = ACTN[ACT][0] + "؟";
   $("#md").textContent = `این فرمان روی اجرای «${RUN}» اثر می‌گذارد. برای ادامه بنویسید: تأیید`; $("#mi").value = ""; $("#merr").textContent = "";
   $("#modal").classList.add("show"); $("#mi").focus();
-});
+};
 $("#mcancel").onclick = () => $("#modal").classList.remove("show");
 $("#mok").onclick = async () => {
   try { await api("/api/control", {run: RUN, action: ACT, confirm: $("#mi").value.trim()}); $("#modal").classList.remove("show"); controls(); }
   catch (e) { $("#merr").textContent = e.message; }
 };
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if ($("#modal").classList.contains("show")) $("#modal").classList.remove("show");
+  else if ($("#ctlm").classList.contains("show")) $("#ctlclose").click();
+  else if ($("#drawer").classList.contains("open")) drawer(false);
+});
 
 /* ---------------- boot ---------------- */
+$("#logo").innerHTML = I.logo; $("#aico").innerHTML = I.spark; $("#dico").innerHTML = I.spark; $("#dclose").innerHTML = I.close; $("#theme").innerHTML = I.theme;
+[["h-eq", I.chart], ["h-br", I.shield], ["h-mk", I.grid], ["h-ai", I.spark], ["h-tr", I.swap]].forEach(([id, ic]) => $("#" + id).insertAdjacentHTML("afterbegin", ic));
+$("#ctlbtn").innerHTML = `${I.lock}<span class="lbl">کنترل‌ها</span>`;
 $("#theme").onclick = () => { const h = document.documentElement; h.dataset.theme = h.dataset.theme === "dark" ? "light" : "dark"; try { localStorage.setItem("theme", h.dataset.theme); } catch (e) {} };
-try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; else if (matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.dataset.theme = "dark"; } catch (e) {}
 (async () => {
   const runs = await api("/api/runs");
+  if (PUBLIC || STATIC) {
+    $(".brand div").textContent = "هکاتون Agentic AI استارکوچ · چالش ۸ · نسخهٔ عمومی";
+    $(".foot").innerHTML = (PUBLIC ? "نسخهٔ عمومی روی لیارا: ربات روی کامپیوتر تیم با پول واقعی اجرا می‌شود و هر دقیقه وضعیتش را اینجا می‌فرستد. "
+      : "نسخهٔ عمومی روی GitHub Pages: عکس فوری از لاگ ربات. ") + "فقط نمایش و بدون کنترل · کد: " + `<a href="https://github.com/ssepehrnoush/wallex-ai-trader">github.com/ssepehrnoush/wallex-ai-trader</a>`;
+  }
+  $("#run").hidden = $("#run").previousElementSibling.hidden = runs.length < 2;
   $("#run").innerHTML = runs.map(r => `<option value="${r.run}">${r.run}${r.kind === "live" ? " · زنده" : r.kind === "shadow" ? " · سایه" : ""}</option>`).join("");
   RUN = runs.find(r => r.run === "live_main") ? "live_main" : runs[0].run; $("#run").value = RUN;
   $("#run").onchange = () => { RUN = $("#run").value; $("#cmode").checked = false; refresh(); };

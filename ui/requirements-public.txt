@@ -1,4 +1,6 @@
 # Only what the public control room imports (ui/server.py --public); the bot's full list is ../requirements.txt.
+# socksio lets httpx (and so the OpenAI client) use the SOCKS tunnel that deploy/start.sh opens.
 openai==3.35.1
 httpx==0.28.1
+socksio==1.0.0
 python-dotenv==1.2.4

@@ -5,7 +5,7 @@
     python -I deploy/deploy_liara.py             # pack, upload, set envs, release, follow the build
     python -I deploy/deploy_liara.py --scale 0   # stop the app (1 starts it again)
 
-Secrets (LIARA_API_TOKEN, BOXAPI_KEY, PUSH_TOKEN) come from agentic-hackathon/.env and are never printed. PUSH_TOKEN is
+Secrets (LIARA_API_TOKEN, BOXAPI_KEY, OPENAI_API_KEY, PUSH_TOKEN, TUNNEL_*) come from agentic-hackathon/.env and are never printed. PUSH_TOKEN is
 created there on the first deploy; ui/push_live.py reads the same line. Only files tracked by git are packed, so
 nothing local (runs, keys, caches) can travel with the image.
 """
@@ -33,7 +33,7 @@ PLAN = os.environ.get("LIARA_PLAN", "small-g2")
 BUNDLE = os.environ.get("LIARA_BUNDLE", "standard")
 PORT = 8000
 TEAM = os.environ.get("LIARA_TEAM_ID", "6ad4685525646e1982f75717")  # the hackathon credit sits on the team
-INCLUDE = ["Dockerfile", "liara.json", "config.json", "wallexbot/", "ui/", "docs/img/", "docs/app/data.json"]
+INCLUDE = ["Dockerfile", "liara.json", "config.json", "wallexbot/", "ui/", "deploy/start.sh", "docs/img/", "docs/app/data.json"]
 
 
 def env() -> dict:
@@ -114,6 +114,10 @@ def multipart(field: str, filename: str, payload: bytes) -> tuple[bytes, str]:
 def set_envs() -> None:
     variables = [{"key": "BOXAPI_KEY", "value": ENV.get("BOXAPI_KEY", "")},
                  {"key": "PUSH_TOKEN", "value": ENV["PUSH_TOKEN"]}]
+    # OpenAI is the fallback when BoxAPI is out of credit; from Liara it goes through the tunnel in deploy/start.sh
+    for k in ("OPENAI_API_KEY", "TUNNEL_KEY_B64", "TUNNEL_HOST", "TUNNEL_PORT", "TUNNEL_USER"):
+        if ENV.get(k):
+            variables.append({"key": k, "value": ENV[k]})
     st, d = call("POST", "/v1/projects/update-envs", {"project": APP, "variables": variables})
     print("envs:", st, "ok" if st == 200 else (d.get("message") if isinstance(d, dict) else str(d))[:120])
 

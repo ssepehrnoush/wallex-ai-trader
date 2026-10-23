@@ -215,6 +215,18 @@ class App:
         return {**out, "snapshot": snap}
 
 
+def tunnel_up() -> bool | None:
+    """On Liara: is the SOCKS tunnel of deploy/start.sh listening? None where no tunnel is configured."""
+    if "socks5" not in os.environ.get("HTTPS_PROXY", ""):
+        return None
+    import socket
+    try:
+        socket.create_connection(("127.0.0.1", 1080), timeout=1).close()
+        return True
+    except OSError:
+        return False
+
+
 def handler(app: App):
     class H(BaseHTTPRequestHandler):
         def log_message(self, *a):
@@ -248,7 +260,8 @@ def handler(app: App):
                     return self.send(200, f.read_bytes(), ct)
                 return self.send(404, {"error": "not found"})
             if u.path == "/api/health":
-                return self.send(200, {"ok": True, "public": app.public, "updated": (app.pushed or {}).get("updated")})
+                return self.send(200, {"ok": True, "public": app.public, "updated": (app.pushed or {}).get("updated"),
+                                       "tunnel": tunnel_up()})
             if u.path == "/api/runs" and app.public:
                 return self.send(200, [{"run": "live_main", "kind": "live", "updated": (app.pushed or {}).get("updated")}])
             if u.path == "/api/runs":
