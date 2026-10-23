@@ -5,7 +5,7 @@ gzipped, to <url>/api/push. Nothing in runs/ is written. The token is PUSH_TOKEN
 value is set on the Liara app by deploy/deploy_liara.py. liara.run is an Iranian host, so this goes direct and never
 through the local VPN proxy.
 
-  python ui/push_live.py --live-dir runs/live_main --url https://wallex-ai-trader.liara.run
+  python ui/push_live.py --live-dir runs/live_main --url https://wallex-ai-trader-live.liara.run
 """
 import argparse
 import gzip
@@ -28,7 +28,7 @@ from wallexbot.config import ENV_FILE  # noqa: E402
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--live-dir", required=True)
-    ap.add_argument("--url", default="https://wallex-ai-trader.liara.run")
+    ap.add_argument("--url", default="https://wallex-ai-trader-live.liara.run")
     ap.add_argument("--every", type=int, default=60, help="seconds between pushes")
     ap.add_argument("--once", action="store_true")
     a = ap.parse_args(argv)

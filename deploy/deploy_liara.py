@@ -28,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent      # wallex-bot/
 ENV_FILE = ROOT.parent / ".env"                     # agentic-hackathon/.env (never in git)
 API = "https://api.iran.liara.ir"
-APP = os.environ.get("LIARA_APP", "wallex-ai-trader")
+APP = os.environ.get("LIARA_APP", "wallex-ai-trader-live")
 PLAN = os.environ.get("LIARA_PLAN", "small-g2")
 BUNDLE = os.environ.get("LIARA_BUNDLE", "standard")
 PORT = 8000

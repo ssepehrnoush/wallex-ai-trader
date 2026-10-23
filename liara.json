@@ -1,5 +1,5 @@
 {
-  "app": "wallex-ai-trader",
+  "app": "wallex-ai-trader-live",
   "platform": "docker",
   "port": 8000,
   "healthCheck": {
