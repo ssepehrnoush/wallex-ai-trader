@@ -1,0 +1,15 @@
+# The bot itself on Liara (packed as the Dockerfile of the bot app by deploy/deploy_liara.py --bot).
+# One container: the engine (python -m wallexbot), a read-only public page of its run, and optionally the push to the
+# public control room. runs/ is a Liara disk, so state, decision log and ticks survive restarts and redeploys.
+# deploy/start.sh opens the SSH tunnel for Binance, OKX and OpenAI (Liara's IP is Iranian); Wallex and BoxAPI go direct.
+FROM python:3.14-slim
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+RUN apt-get update && apt-get install -y --no-install-recommends openssh-client && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt socksio==1.0.0
+COPY . .
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=60s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=4)"
+ENTRYPOINT ["sh", "deploy/start.sh"]
+CMD ["sh", "deploy/bot_entry.sh"]

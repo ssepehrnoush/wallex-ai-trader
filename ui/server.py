@@ -134,6 +134,8 @@ class App:
         self.public = bool(getattr(a, "public", False))
         self.runs = {"live_main": None} if self.public else runs_index(Path(a.runs), Path(a.live_dir).resolve() if a.live_dir else None)
         self.pushed = None                    # public mode: the latest snapshot pushed by ui/push_live.py
+        # public mode inside the bot's own container: read its run folder directly instead of waiting for pushes
+        self.own = Path(a.live_dir).resolve() if self.public and a.live_dir else None
         self.push_token = os.environ.get("PUSH_TOKEN", "")
         self.asked: dict[str, list[float]] = {}          # visitor ip -> ask times; "" -> every ask
         self.answers: dict[str, tuple[float, dict]] = {}  # question -> (time, answer), reused for ASK_REUSE_S
@@ -148,9 +150,19 @@ class App:
     def snap(self, run: str) -> dict:
         if not self.public:
             return snapshot(self.runs[run])
+        if self.own:
+            return snapshot(self.own)
         if not self.pushed:
             raise RuntimeError("هنوز داده‌ای از ربات نرسیده است.")
         return self.pushed
+
+    def status(self) -> dict:
+        """Public mode: what /api/runs and /api/health report, without building a whole snapshot."""
+        if self.own:
+            st = _state(self.own / "state.json")
+            return {"kind": kind_of(self.own, st), "updated": st.get("t"), "open_positions": len(st.get("positions") or {}),
+                    "trades": st.get("trades"), "halted": st.get("halted") or ""}
+        return {"kind": "live", "updated": (self.pushed or {}).get("updated")}
 
     def allow(self, ip: str) -> None:
         now = time.time()
@@ -260,10 +272,11 @@ def handler(app: App):
                     return self.send(200, f.read_bytes(), ct)
                 return self.send(404, {"error": "not found"})
             if u.path == "/api/health":
-                return self.send(200, {"ok": True, "public": app.public, "updated": (app.pushed or {}).get("updated"),
+                return self.send(200, {"ok": True, "public": app.public, **(app.status() if app.public else {}),
                                        "tunnel": tunnel_up()})
             if u.path == "/api/runs" and app.public:
-                return self.send(200, [{"run": "live_main", "kind": "live", "updated": (app.pushed or {}).get("updated")}])
+                st = app.status()
+                return self.send(200, [{"run": app.own.name if app.own else "live_main", "kind": st["kind"], "updated": st["updated"]}])
             if u.path == "/api/runs":
                 out = []
                 for name, d in app.runs.items():
