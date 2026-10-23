@@ -8,6 +8,16 @@
 # (committed backtest summaries the AI reads, and recent ticks so the bot never starts on a cold baseline).
 set -e
 mkdir -p runs
+# A new seed of the live run (deploy_liara.py --seed-live writes a fresh SEED_ID) replaces the disk's copy once.
+# The replaced folder is archived under runs/_archive, never deleted.
+if [ -f seed_runs/live_main/SEED_ID ] && ! cmp -s seed_runs/live_main/SEED_ID runs/live_main/SEED_ID; then
+  if [ -d runs/live_main ]; then
+    mkdir -p runs/_archive
+    mv runs/live_main "runs/_archive/live_main_$(date -u +%Y%m%d_%H%M%S)"
+  fi
+  cp -r seed_runs/live_main runs/live_main
+  echo "live run restored from seed $(cat seed_runs/live_main/SEED_ID)"
+fi
 cp -rn seed_runs/. runs/ 2>/dev/null || true
 MODE="${BOT_MODE:-shadow}"
 RUN="${BOT_RUN:-shadow_liara}"

@@ -140,6 +140,8 @@ def pack(bot: bool = False, seed_ticks: Path | None = None, seed_live: Path | No
                 for name in ("state.json", "decisions.jsonl"):
                     tar.add(seed_live / name, arcname=f"seed_runs/live_main/{name}")
                 add_bytes(tar, "seed_runs/live_main/ticks.csv", recent_ticks(seed_live / "ticks.csv", SEED_HOURS))
+                # a fresh id makes bot_entry.sh replace the disk's live run with this seed once (old copy archived)
+                add_bytes(tar, "seed_runs/live_main/SEED_ID", f"{int(time.time())}\n".encode())
             print(f"seed: {len(backtests)} backtest files, ticks: {bool(seed_ticks)}, live run: {seed_live or 'no'}")
     print(f"packed {len(files)} tracked files")
     return buf.getvalue()
@@ -200,6 +202,7 @@ def main() -> None:
     ap.add_argument("--live", action="store_true", help="--bot only: real orders (see the docstring first)")
     ap.add_argument("--seed-ticks", default=str(ROOT.parent / "wallex-bot" / "runs" / "live_main" / "ticks.csv"))
     ap.add_argument("--seed-live", default=None, help="--bot --live: the stopped live run folder to continue from")
+    ap.add_argument("--keep-envs", action="store_true", help="do not touch the app's env variables")
     a = ap.parse_args()
     global APP
     if a.bot:
@@ -230,7 +233,10 @@ def main() -> None:
         if a.bot:
             st, d = call("POST", f"/v1/projects/{APP}/disks", {"name": BOT_DISK["name"], "size": BOT_DISK["size"]})
             print("disk:", st, "ok" if st in (200, 201) else d)
-    set_envs(a.bot, a.live)
+    # Liara applies an env change by restarting the CURRENT release. For the bot that could start a live engine from
+    # an older image, so its envs change only after the new release is up (and never with --keep-envs).
+    if not a.bot and not a.keep_envs:
+        set_envs(a.bot, a.live)
     blob = pack(a.bot, Path(a.seed_ticks) if a.bot else None, Path(a.seed_live) if a.seed_live else None)
     print(f"source: {len(blob) / 1048576:.1f} MB")
     body, ctype = multipart("file", "source.tar.gz", blob)
@@ -244,7 +250,12 @@ def main() -> None:
     if st not in (200, 201) or not isinstance(d, dict) or not d.get("releaseID"):
         sys.exit(f"release failed: {st} {str(d)[:300]}")
     print("release:", d["releaseID"])
-    follow(d["releaseID"])
+    state = follow(d["releaseID"])
+    if a.bot and state in ("READY", "DEPLOYED", "SUCCEEDED"):
+        if not a.keep_envs:
+            set_envs(a.bot, a.live)
+        st, _ = call("POST", f"/v1/projects/{APP}/actions/scale", {"scale": 1})
+        print("scale 1 ->", st)
     print(f"url: https://{APP}.liara.run")
 
 
