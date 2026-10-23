@@ -39,6 +39,10 @@ check(snap["kind"] == "live" and {"kpis", "equity", "brakes", "markets", "review
 check(snap["kpis"]["reviews"] > 0 and snap["kpis"]["tool_calls"] > 0 and len(snap["brakes"]) == 4,
       f"live snapshot counts AI reviews ({snap['kpis']['reviews']}) and tool calls ({snap['kpis']['tool_calls']})")
 
+snap3 = snapshot(ROOT / "runs" / "shadow_v3")      # state.json keeps only the count of closed trades; the list comes from the log
+check(snap3["kpis"]["trades"] == 1 and len(snap3["trades"]) == 1 and snap3["trades"][0]["symbol"] and snap3["trades"][0]["reason"],
+      "a run with a closed trade: the snapshot counts it and lists it from the exit events")
+
 tmp = Path(tempfile.mkdtemp())
 for name in ("live_main", "shadow_v6"):
     shutil.copytree(ROOT / "runs" / name, tmp / name, ignore=shutil.ignore_patterns("ticks.csv", "STOP", "FLATTEN", "ui_controls.jsonl"))

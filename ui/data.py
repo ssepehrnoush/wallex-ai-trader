@@ -50,6 +50,7 @@ def snapshot(run_dir: Path, tick_hours: float = 6.0) -> dict:
     reviews = [e for e in ev if e.get("event") == "policy_review"]
     equity = [(e["t"], e.get("equity_tmn")) for e in ev if e.get("event") == "equity" and e.get("equity_tmn")]
     decisions = [e for e in ev if e.get("event") == "trade_decision"]
+    exits = [e for e in ev if e.get("event") == "exit"]     # closed trades; state.json only keeps their count
     errors = [e for e in ev if "error" in str(e.get("event", ""))]
     calls = [c for r in reviews for c in (r.get("analyst_tool_calls") or [])]
     official = sum(1 for c in calls if c.get("server") == "wallex-official")
@@ -124,7 +125,7 @@ def snapshot(run_dir: Path, tick_hours: float = 6.0) -> dict:
         "run": run_dir.name, "kind": kind_of(run_dir, st), "now": now.isoformat(), "updated": st.get("t") or (ev[-1]["t"] if ev else None),
         "contest": {"end": end.isoformat(), "no_new_entries": no_new_at.isoformat(), "flatten": flatten_at.isoformat()},
         "kpis": {"equity": round(eq_now), "start_equity": round(start_eq), "return_pct": round(ret, 3), "max_drawdown_pct": round(max_dd, 3),
-                 "trades": len(st.get("trades") or []), "open_positions": len(st.get("positions") or {}), "reviews": len(reviews),
+                 "trades": st["trades"] if isinstance(st.get("trades"), int) else len(exits), "open_positions": len(st.get("positions") or {}), "reviews": len(reviews),
                  "tool_calls": len(calls), "tool_calls_official": official, "errors": len(errors), "decisions": len(decisions),
                  "halted": st.get("halted") or ""},
         "equity": [[t, v] for t, v in _thin(equity)],
@@ -133,7 +134,7 @@ def snapshot(run_dir: Path, tick_hours: float = 6.0) -> dict:
         "reviews": [review_out(r) for r in reviews[-8:]][::-1],
         "decisions": [{k: d.get(k) for k in ("t", "symbol", "decision", "action", "buy_dev_pct_asked", "latency_s", "reason_fa", "size_factor")}
                       for d in decisions[-20:]][::-1],
-        "trades": (st.get("trades") or [])[-20:][::-1],
+        "trades": [{k: x.get(k) for k in ("t", "symbol", "reason", "ret_pct", "pnl_tmn", "held_s")} for x in exits[-20:]][::-1],
         "positions": st.get("positions") or {},
         "starts": [{"t": s["t"], "mode": s.get("mode"), "trade_agent": s.get("trade_agent")} for s in starts],
     }
