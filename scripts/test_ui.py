@@ -82,6 +82,51 @@ check(status == 403 and not (tmp / "shadow_v6" / "STOP").exists(), "a POST witho
 html = urllib.request.urlopen(url + "/", timeout=10).read().decode("utf-8")
 check(S.TOKEN in html and "__UI_TOKEN__" not in html, "the page served by this process carries its token")
 srv.shutdown()
+
+# public mode (the hosted copy): no runs, no controls, only a snapshot pushed with PUSH_TOKEN, capped questions
+import gzip, os  # noqa: E401,E402
+os.environ["PUSH_TOKEN"] = "test-push-token"
+pub = S.App(SimpleNamespace(runs=str(tmp), live_dir=None, public=True, seed=None))
+srv = ThreadingHTTPServer(("127.0.0.1", 0), S.handler(pub))
+threading.Thread(target=srv.serve_forever, daemon=True).start()
+url = f"http://127.0.0.1:{srv.server_address[1]}"
+
+
+def post(path, data, headers):
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url + path, data=data, headers=headers), timeout=10) as r:
+            return r.status
+    except urllib.error.HTTPError as e:
+        return e.code
+
+
+def get_status(path):
+    try:
+        return urllib.request.urlopen(url + path, timeout=10).status
+    except urllib.error.HTTPError as e:
+        return e.code
+
+
+body = gzip.compress(json.dumps(snap, ensure_ascii=False).encode())
+check(get_status("/api/snapshot") == 503, "public: no snapshot before the first push")
+check(post("/api/push", body, {"Content-Encoding": "gzip", "X-Push-Token": "wrong"}) == 403, "public: a push with the wrong token is refused")
+check(post("/api/push", b"{}", {"X-Push-Token": "test-push-token"}) == 400, "public: a push that is not a snapshot is refused")
+check(post("/api/push", body, {"Content-Encoding": "gzip", "X-Push-Token": "test-push-token"}) == 200
+      and json.loads(urllib.request.urlopen(url + "/api/snapshot", timeout=10).read())["kpis"] == json.loads(json.dumps(snap["kpis"])),
+      "public: the pushed snapshot is what the page reads")
+ctl = json.loads(urllib.request.urlopen(url + "/api/controls", timeout=10).read())
+code, _ = pub.control("live_main", "stop", S.CONFIRM)
+check(ctl["locked"] and code == 403 and post("/api/push", body, {"X-Push-Token": ""}) == 403,
+      "public: controls are always locked")
+for _ in range(S.ASK_PER_IP_HOUR):
+    pub.allow("1.2.3.4")
+try:
+    pub.allow("1.2.3.4")
+    limited = False
+except S.Limited:
+    limited = True
+check(limited, f"public: a visitor gets at most {S.ASK_PER_IP_HOUR} free questions an hour")
+srv.shutdown()
 shutil.rmtree(tmp, ignore_errors=True)
 
 print("all passed" if not fails else f"{fails} failed")

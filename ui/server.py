@@ -10,14 +10,21 @@ they need the "control mode" switch, a typed confirmation, a per-process token, 
 (shadow) runs. On a real-money run they are always locked, because the hackathon rules forbid manual trading.
 
   python ui/server.py --live-dir ../wallex-bot/runs/live_main          # then open http://127.0.0.1:8765
+
+Public mode (--public, the copy on Liara): no run folder and no controls at all. The machine that runs the bot pushes
+the same snapshot once a minute (ui/push_live.py, guarded by PUSH_TOKEN), questions to the AI are capped per visitor
+and per day, and the answer to the same question is reused for 10 minutes.
 """
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
+import os
 import secrets as pysecrets
 import sys
 import threading
+import time
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -36,6 +43,9 @@ STATIC = Path(__file__).resolve().parent / "static"
 IMAGES = ROOT / "docs" / "img"
 TOKEN = pysecrets.token_urlsafe(24)          # handed only to the page this server serves; required for every POST
 CONFIRM = "تأیید"
+PUBLIC_WHY = ("این نسخهٔ عمومی فقط نمایش است و هیچ کنترلی ندارد. ربات روی کامپیوتر تیم اجرا می‌شود و هر دقیقه وضعیتش را اینجا "
+              "می‌فرستد. در نسخهٔ محلی هم کنترل‌ها روی حساب پول واقعی همیشه قفل‌اند، چون قانون چالش معاملهٔ دستی را ممنوع کرده.")
+ASK_PER_IP_HOUR, ASK_PER_DAY, ASK_REUSE_S = 20, 400, 600     # public mode: model calls a visitor and the day may spend
 BLOCKS = {"kpis", "equity_chart", "brakes", "markets", "market_distance", "reviews", "review_tools", "trade_decisions",
           "trades", "restarts", "callout", "steps", "image", "text"}
 
@@ -114,16 +124,48 @@ def clean_page(resp: dict) -> dict:
     return {"title": str(resp.get("title") or "")[:120], "answer": str(resp.get("answer") or "")[:900], "blocks": blocks[:7]}
 
 
+class Limited(Exception):
+    """Public mode: this question would go over the visitor's or the day's cap."""
+
+
 class App:
     def __init__(self, a):
         self.cfg = load_config().raw
-        self.runs = runs_index(Path(a.runs), Path(a.live_dir).resolve() if a.live_dir else None)
+        self.public = bool(getattr(a, "public", False))
+        self.runs = {"live_main": None} if self.public else runs_index(Path(a.runs), Path(a.live_dir).resolve() if a.live_dir else None)
+        self.pushed = None                    # public mode: the latest snapshot pushed by ui/push_live.py
+        self.push_token = os.environ.get("PUSH_TOKEN", "")
+        self.asked: dict[str, list[float]] = {}          # visitor ip -> ask times; "" -> every ask
+        self.answers: dict[str, tuple[float, dict]] = {}  # question -> (time, answer), reused for ASK_REUSE_S
+        seed = getattr(a, "seed", None)
+        if self.public and seed and Path(seed).is_file():  # shown until the first push arrives
+            self.pushed = json.loads(Path(seed).read_text(encoding="utf-8")).get("snapshot")
         cache = RUNS / "ai_cache_ui"
         cache.mkdir(parents=True, exist_ok=True)
         self.ai = AICommittee(self.cfg["ai"], load_secrets(), cache)
         self.lock = threading.Lock()
 
+    def snap(self, run: str) -> dict:
+        if not self.public:
+            return snapshot(self.runs[run])
+        if not self.pushed:
+            raise RuntimeError("هنوز داده‌ای از ربات نرسیده است.")
+        return self.pushed
+
+    def allow(self, ip: str) -> None:
+        now = time.time()
+        with self.lock:
+            mine = [t for t in self.asked.get(ip, []) if now - t < 3600]
+            day = [t for t in self.asked.get("", []) if now - t < 86400]
+            if len(mine) >= ASK_PER_IP_HOUR:
+                raise Limited("سقف پرسش آزاد برای هر بازدیدکننده ۲۰ پرسش در ساعت است. پرسش‌های آماده همیشه جواب می‌دهند.")
+            if len(day) >= ASK_PER_DAY:
+                raise Limited("سقف روزانهٔ پرسش آزاد پر شده است. پرسش‌های آماده همیشه جواب می‌دهند.")
+            self.asked[ip], self.asked[""] = mine + [now], day + [now]
+
     def control_status(self, run: str) -> dict:
+        if self.public:
+            return {"run": run, "kind": "live", "locked": True, "why": PUBLIC_WHY, "stop": False, "flatten": False}
         d = self.runs[run]
         kind = kind_of(d, _state(d / "state.json"))
         locked = kind != "shadow"
@@ -154,14 +196,23 @@ class App:
             fh.write(json.dumps({"t": datetime.now(timezone.utc).isoformat(), "action": action, "by": "ui"}, ensure_ascii=False) + "\n")
         return 200, {"ok": True, **self.control_status(run)}
 
-    def ask(self, run: str, question: str) -> dict:
-        snap = snapshot(self.runs[run])
-        payload = {"question": question[:400], "snapshot": compact(snap), "facts": FACTS}
+    def ask(self, run: str, question: str, ip: str = "") -> dict:
+        question = question[:400]
+        if self.public:
+            hit = self.answers.get(question)
+            if hit and time.time() - hit[0] < ASK_REUSE_S:
+                return {**hit[1], "snapshot": self.snap(run)}
+            self.allow(ip)
+        snap = self.snap(run)
+        payload = {"question": question, "snapshot": compact(snap), "facts": FACTS}
         resp, model, latency = self.ai.ask_fast("ui_designer", SYSTEM, payload, timeout_s=75)
         page = clean_page(resp if isinstance(resp, dict) else {})
         if not page["blocks"]:
             page["blocks"] = [{"type": "kpis", "keys": ["equity", "return", "drawdown", "trades"]}, {"type": "brakes"}]
-        return {"page": page, "model": model, "latency_s": round(latency, 1), "snapshot": snap}
+        out = {"page": page, "model": model, "latency_s": round(latency, 1), "t": datetime.now(timezone.utc).isoformat()}
+        if self.public:
+            self.answers[question] = (time.time(), out)
+        return {**out, "snapshot": snap}
 
 
 def handler(app: App):
@@ -186,7 +237,8 @@ def handler(app: App):
             u = urlparse(self.path)
             q = parse_qs(u.query)
             if u.path in ("/", "/index.html"):
-                html = (STATIC / "index.html").read_text(encoding="utf-8").replace("__UI_TOKEN__", TOKEN)
+                html = (STATIC / "index.html").read_text(encoding="utf-8").replace("__UI_TOKEN__", TOKEN) \
+                    .replace("__UI_PUBLIC__", "1" if app.public else "0")
                 return self.send(200, html.encode("utf-8"), "text/html; charset=utf-8")
             if u.path.startswith("/fonts/") or u.path.startswith("/img/"):
                 base = STATIC / "fonts" if u.path.startswith("/fonts/") else IMAGES
@@ -195,6 +247,10 @@ def handler(app: App):
                     ct = "font/woff2" if f.suffix == ".woff2" else "image/png" if f.suffix == ".png" else "image/jpeg"
                     return self.send(200, f.read_bytes(), ct)
                 return self.send(404, {"error": "not found"})
+            if u.path == "/api/health":
+                return self.send(200, {"ok": True, "public": app.public, "updated": (app.pushed or {}).get("updated")})
+            if u.path == "/api/runs" and app.public:
+                return self.send(200, [{"run": "live_main", "kind": "live", "updated": (app.pushed or {}).get("updated")}])
             if u.path == "/api/runs":
                 out = []
                 for name, d in app.runs.items():
@@ -205,12 +261,17 @@ def handler(app: App):
             if run is None:
                 return self.send(404, {"error": "no runs"})
             if u.path == "/api/snapshot":
-                return self.send(200, snapshot(app.runs[run]))
+                try:
+                    return self.send(200, app.snap(run))
+                except RuntimeError as e:
+                    return self.send(503, {"error": str(e)})
             if u.path == "/api/controls":
                 return self.send(200, app.control_status(run))
             return self.send(404, {"error": "not found"})
 
         def do_POST(self):
+            if urlparse(self.path).path == "/api/push":
+                return self.push()
             if self.headers.get("X-UI-Token") != TOKEN:
                 return self.send(403, {"error": "bad token"})
             body = json.loads(self.rfile.read(int(self.headers.get("Content-Length") or 0)) or b"{}")
@@ -220,13 +281,34 @@ def handler(app: App):
             u = urlparse(self.path)
             if u.path == "/api/ask":
                 try:
-                    return self.send(200, app.ask(run, str(body.get("question") or "")))
+                    ip = (self.headers.get("X-Forwarded-For") or self.client_address[0]).split(",")[0].strip()
+                    return self.send(200, app.ask(run, str(body.get("question") or ""), ip))
+                except Limited as e:
+                    return self.send(429, {"error": str(e)})
                 except Exception as e:      # the model or the network failed: the page says so
                     return self.send(502, {"error": f"هوش مصنوعی جواب نداد: {type(e).__name__}"})
             if u.path == "/api/control":
                 code, out = app.control(run, str(body.get("action")), str(body.get("confirm") or ""))
                 return self.send(code, out)
             return self.send(404, {"error": "not found"})
+
+        def push(self):
+            """Public mode: the bot's machine replaces the snapshot (ui/push_live.py)."""
+            n = int(self.headers.get("Content-Length") or 0)
+            if n > 8_000_000:
+                return self.send(413, {"error": "too large"})
+            raw = self.rfile.read(n)            # read before refusing, or the client sees a reset instead of the 403
+            if not app.public or not app.push_token or \
+                    not pysecrets.compare_digest(self.headers.get("X-Push-Token", ""), app.push_token):
+                return self.send(403, {"error": "bad push token"})
+            try:
+                snap = json.loads(gzip.decompress(raw) if self.headers.get("Content-Encoding") == "gzip" else raw)
+            except (OSError, ValueError):
+                return self.send(400, {"error": "not a snapshot"})
+            if not isinstance(snap, dict) or not {"kpis", "markets", "brakes", "contest", "equity"} <= set(snap):
+                return self.send(400, {"error": "not a snapshot"})
+            app.pushed = snap
+            return self.send(200, {"ok": True, "updated": snap.get("updated")})
     return H
 
 
@@ -235,10 +317,13 @@ def main(argv=None):
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--runs", default=str(RUNS), help="folder of runs (default: this repo's runs/)")
     ap.add_argument("--live-dir", default=None, help="the live bot's run folder, read only, shown as live_main")
+    ap.add_argument("--public", action="store_true", help="hosted copy: pushed snapshot only, no controls, capped questions")
+    ap.add_argument("--seed", default=None, help="public mode: a data.json (ui/export_static.py) shown until the first push")
+    ap.add_argument("--host", default="127.0.0.1")
     a = ap.parse_args(argv)
     app = App(a)
-    srv = ThreadingHTTPServer(("127.0.0.1", a.port), handler(app))
-    print(f"control room: http://127.0.0.1:{a.port}  runs: {', '.join(app.runs)}", flush=True)
+    srv = ThreadingHTTPServer((a.host, a.port), handler(app))
+    print(f"control room: http://{a.host}:{a.port}  {'public' if app.public else 'runs: ' + ', '.join(app.runs)}", flush=True)
     srv.serve_forever()
 
 
