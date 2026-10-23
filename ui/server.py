@@ -71,7 +71,7 @@ FACTS = [
     "every buy (BUY or SKIP with a reason); answers older than 20 s are ignored. Orders are placed by code.",
     "Risk: 0.6% of capital per trade x AI size factor, max 3 positions and 70% of capital, daily loss limit 1.5%, "
     "kill switch at 3% drawdown, contest loss budget 0.4%, gain guard when ahead; no new buys 150 min before the end, "
-    "everything sold 75 min before the end (contest ends Friday 1 Aban 23:50 Tehran).",
+    "everything sold 75 min before the end (trading runs to Monday 4 Aban 19:20 Tehran: Wallex counts profit to the end of Monday; code and video were due Friday 1 Aban 23:50).",
     "30-day backtest on a 5,000,000 toman account: buying at the signal minute +360,109 toman (+7.2%), one minute "
     "later -166,993 toman with the kill switch on day 4. Live order-book replay (16 h, all markets on): 3 entries, all losses.",
     "Rejected after measuring: 3 technical strategies (-0.64% per trade), trend following, following Binance jumps, "

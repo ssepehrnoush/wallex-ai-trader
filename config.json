@@ -13,7 +13,7 @@
   },
   "slippage": 0.0008,
   "window": {
-    "end_utc": "2026-10-23T20:20:00Z"
+    "end_utc": "2026-10-26T15:50:00Z"
   },
   "strategy": {
     "trade_symbols": [
