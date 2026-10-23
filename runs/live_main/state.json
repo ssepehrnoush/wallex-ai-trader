@@ -1,5 +1,5 @@
 {
- "t": "2026-10-23T15:51:40+00:00",
+ "t": "2026-10-23T16:51:44+00:00",
  "mode": "live",
  "equity_tmn": 4996224,
  "return_pct": -0.076,
@@ -15,7 +15,7 @@
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "آستانهٔ محافظ کارمزد و اندازهٔ حداقلی حفظ می‌شود."
+   "reason": "اسپرد کم است و آستانهٔ امن کارمزد حفظ می‌شود."
   },
   "ETHTMN": {
    "enabled": true,
@@ -24,25 +24,25 @@
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "نبود فرصت اخیر به‌تنهایی دلیل توقف بازار نیست."
+   "reason": "نبود معاملهٔ اخیر به‌تنهایی دلیل توقف نیست."
   },
   "SOLTMN": {
-   "enabled": true,
+   "enabled": false,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "با توجه به ضعف آزمون ورود تأخیری، اندازه حداقلی می‌ماند."
+   "reason": "اسپرد ۰٫۶۷۸٪ از سقف ۰٫۶٪ فراتر است."
   },
   "XRPTMN": {
-   "enabled": true,
+   "enabled": false,
    "entry_dev": 0.007,
    "exit_slack": 0.0005,
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "مشکل ساختاری محرز نیست و اندازه حداقلی حفظ می‌شود."
+   "reason": "اسپرد ۰٫۷۱۳٪ از سقف ۰٫۶٪ فراتر است."
   },
   "DOGETMN": {
    "enabled": true,
@@ -51,7 +51,7 @@
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "عمق محدود است، اما حداقل سفارش برای احراز مشکل ساختاری مشخص نیست."
+   "reason": "بازار با اندازهٔ حداقلی و آستانهٔ امن باز می‌ماند."
   },
   "PEPETMN": {
    "enabled": true,
@@ -60,7 +60,7 @@
    "stop_pct": 0.008,
    "max_hold_min": 20.0,
    "size_factor": 0.2,
-   "reason": "پس از زیان اخیر، محدودیت‌های سخت‌گیرانه‌تر فعلی حفظ می‌شود."
+   "reason": "با وجود بازپخش مثبت، زیان اخیر افزایش اندازه را توجیه نمی‌کند."
   },
   "BNBTMN": {
    "enabled": true,
@@ -69,7 +69,7 @@
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "آستانهٔ ورود محافظه‌کارانهٔ فعلی کاهش نمی‌یابد."
+   "reason": "آستانهٔ محافظه‌کارانه و اندازهٔ حداقلی حفظ می‌شود."
   },
   "ARBTMN": {
    "enabled": false,
@@ -78,37 +78,37 @@
    "stop_pct": 0.009,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "عمق بالای دفتر، حدود ۱۲٫۵ هزار تومان، برای ورود قابل اتکا نیست."
+   "reason": "عمق ثبت‌شدهٔ سر دفتر، حدود ۵۰ هزار تومان، بسیار کم است."
   },
   "POLTMN": {
    "enabled": false,
-   "entry_dev": 0.007,
+   "entry_dev": 0.009,
    "exit_slack": 0.0005,
    "stop_pct": 0.008,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "اسپرد نزدیک چهار درصد، مانع ساختاری معامله است."
+   "reason": "اسپرد ۲٫۶۶۶٪ مانع ساختاری معامله است."
   },
   "SANDTMN": {
    "enabled": false,
-   "entry_dev": 0.007,
+   "entry_dev": 0.008,
    "exit_slack": 0.0005,
    "stop_pct": 0.008,
    "max_hold_min": 25.0,
    "size_factor": 0.2,
-   "reason": "اسپرد اندازه‌گیری‌شدهٔ ۰٫۶۹۴٪ بالاتر از سقف اعلام‌شدهٔ ۰٫۶٪ است."
+   "reason": "اسپرد ۰٫۸۵۵٪ از سقف مجاز فراتر است."
   }
  },
  "baselines_pct": {
-  "BTCTMN": -0.035,
-  "ETHTMN": -0.074,
-  "SOLTMN": -0.034,
-  "XRPTMN": -0.006,
-  "DOGETMN": 0.003,
-  "PEPETMN": -0.154,
-  "BNBTMN": 0.376,
-  "ARBTMN": 0.254,
-  "POLTMN": 2.766,
-  "SANDTMN": -0.072
+  "BTCTMN": -0.048,
+  "ETHTMN": -0.067,
+  "SOLTMN": -0.038,
+  "XRPTMN": -0.02,
+  "DOGETMN": 0.002,
+  "PEPETMN": -0.148,
+  "BNBTMN": 0.372,
+  "ARBTMN": 0.256,
+  "POLTMN": 3.259,
+  "SANDTMN": -0.03
  }
 }
